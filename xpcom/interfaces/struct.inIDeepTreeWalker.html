@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `inIDeepTreeWalker` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, inIDeepTreeWalker">
+
+    <title>xpcom::interfaces::inIDeepTreeWalker - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct inIDeepTreeWalker</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetShowAnonymousContent">GetShowAnonymousContent</a><a href="#method.SetShowAnonymousContent">SetShowAnonymousContent</a><a href="#method.GetShowSubDocuments">GetShowSubDocuments</a><a href="#method.SetShowSubDocuments">SetShowSubDocuments</a><a href="#method.GetShowDocumentsAsNodes">GetShowDocumentsAsNodes</a><a href="#method.SetShowDocumentsAsNodes">SetShowDocumentsAsNodes</a><a href="#method.Init">Init</a><a href="#method.GetRoot">GetRoot</a><a href="#method.GetWhatToShow">GetWhatToShow</a><a href="#method.GetFilter">GetFilter</a><a href="#method.GetCurrentNode">GetCurrentNode</a><a href="#method.SetCurrentNode">SetCurrentNode</a><a href="#method.ParentNode">ParentNode</a><a href="#method.FirstChild">FirstChild</a><a href="#method.LastChild">LastChild</a><a href="#method.PreviousSibling">PreviousSibling</a><a href="#method.NextSibling">NextSibling</a><a href="#method.PreviousNode">PreviousNode</a><a href="#method.NextNode">NextNode</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'inIDeepTreeWalker', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>inIDeepTreeWalker</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct inIDeepTreeWalker { /* fields omitted */ }</pre><div class='docblock'><p><code>interface inIDeepTreeWalker : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.inIDeepTreeWalker.html" title="struct xpcom::interfaces::inIDeepTreeWalker">inIDeepTreeWalker</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;inIDeepTreeWalkerCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>inIDeepTreeWalker</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.inIDeepTreeWalker.html" title="struct xpcom::interfaces::inIDeepTreeWalker">inIDeepTreeWalker</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#168-322' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetShowAnonymousContent' class="method"><span id='GetShowAnonymousContent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetShowAnonymousContent' class='fnname'>GetShowAnonymousContent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aShowAnonymousContent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#173-175' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean showAnonymousContent;</code></p>
+</div><h4 id='method.SetShowAnonymousContent' class="method"><span id='SetShowAnonymousContent.v' class='invisible'><code>pub unsafe fn <a href='#method.SetShowAnonymousContent' class='fnname'>SetShowAnonymousContent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aShowAnonymousContent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#181-183' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean showAnonymousContent;</code></p>
+</div><h4 id='method.GetShowSubDocuments' class="method"><span id='GetShowSubDocuments.v' class='invisible'><code>pub unsafe fn <a href='#method.GetShowSubDocuments' class='fnname'>GetShowSubDocuments</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aShowSubDocuments: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#189-191' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean showSubDocuments;</code></p>
+</div><h4 id='method.SetShowSubDocuments' class="method"><span id='SetShowSubDocuments.v' class='invisible'><code>pub unsafe fn <a href='#method.SetShowSubDocuments' class='fnname'>SetShowSubDocuments</a>(&amp;self, aShowSubDocuments: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#197-199' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean showSubDocuments;</code></p>
+</div><h4 id='method.GetShowDocumentsAsNodes' class="method"><span id='GetShowDocumentsAsNodes.v' class='invisible'><code>pub unsafe fn <a href='#method.GetShowDocumentsAsNodes' class='fnname'>GetShowDocumentsAsNodes</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aShowDocumentsAsNodes: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#205-207' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean showDocumentsAsNodes;</code></p>
+</div><h4 id='method.SetShowDocumentsAsNodes' class="method"><span id='SetShowDocumentsAsNodes.v' class='invisible'><code>pub unsafe fn <a href='#method.SetShowDocumentsAsNodes' class='fnname'>SetShowDocumentsAsNodes</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aShowDocumentsAsNodes: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#213-215' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean showDocumentsAsNodes;</code></p>
+</div><h4 id='method.Init' class="method"><span id='Init.v' class='invisible'><code>pub unsafe fn <a href='#method.Init' class='fnname'>Init</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRoot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWhatToShow: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#221-223' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void init (in nsIDOMNode aRoot, in unsigned long aWhatToShow);</code></p>
+</div><h4 id='method.GetRoot' class="method"><span id='GetRoot.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRoot' class='fnname'>GetRoot</a>(&amp;self, aRoot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#229-231' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute nsIDOMNode root;</code></p>
+</div><h4 id='method.GetWhatToShow' class="method"><span id='GetWhatToShow.v' class='invisible'><code>pub unsafe fn <a href='#method.GetWhatToShow' class='fnname'>GetWhatToShow</a>(&amp;self, aWhatToShow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#237-239' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute unsigned long whatToShow;</code></p>
+</div><h4 id='method.GetFilter' class="method"><span id='GetFilter.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFilter' class='fnname'>GetFilter</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFilter: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNodeFilter.html" title="struct xpcom::interfaces::nsIDOMNodeFilter">nsIDOMNodeFilter</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#245-247' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute nsIDOMNodeFilter filter;</code></p>
+</div><h4 id='method.GetCurrentNode' class="method"><span id='GetCurrentNode.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCurrentNode' class='fnname'>GetCurrentNode</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCurrentNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#253-255' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIDOMNode currentNode;</code></p>
+</div><h4 id='method.SetCurrentNode' class="method"><span id='SetCurrentNode.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCurrentNode' class='fnname'>SetCurrentNode</a>(&amp;self, aCurrentNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#261-263' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIDOMNode currentNode;</code></p>
+</div><h4 id='method.ParentNode' class="method"><span id='ParentNode.v' class='invisible'><code>pub unsafe fn <a href='#method.ParentNode' class='fnname'>ParentNode</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#269-271' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>nsIDOMNode parentNode ();</code></p>
+</div><h4 id='method.FirstChild' class="method"><span id='FirstChild.v' class='invisible'><code>pub unsafe fn <a href='#method.FirstChild' class='fnname'>FirstChild</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#277-279' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>nsIDOMNode firstChild ();</code></p>
+</div><h4 id='method.LastChild' class="method"><span id='LastChild.v' class='invisible'><code>pub unsafe fn <a href='#method.LastChild' class='fnname'>LastChild</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#285-287' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>nsIDOMNode lastChild ();</code></p>
+</div><h4 id='method.PreviousSibling' class="method"><span id='PreviousSibling.v' class='invisible'><code>pub unsafe fn <a href='#method.PreviousSibling' class='fnname'>PreviousSibling</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#293-295' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>nsIDOMNode previousSibling ();</code></p>
+</div><h4 id='method.NextSibling' class="method"><span id='NextSibling.v' class='invisible'><code>pub unsafe fn <a href='#method.NextSibling' class='fnname'>NextSibling</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#301-303' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>nsIDOMNode nextSibling ();</code></p>
+</div><h4 id='method.PreviousNode' class="method"><span id='PreviousNode.v' class='invisible'><code>pub unsafe fn <a href='#method.PreviousNode' class='fnname'>PreviousNode</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#309-311' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>nsIDOMNode previousNode ();</code></p>
+</div><h4 id='method.NextNode' class="method"><span id='NextNode.v' class='invisible'><code>pub unsafe fn <a href='#method.NextNode' class='fnname'>NextNode</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#317-319' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>nsIDOMNode nextNode ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.inIDeepTreeWalker.html" title="struct xpcom::interfaces::inIDeepTreeWalker">inIDeepTreeWalker</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1717037291</span>, <span class="number">46662</span>, <span class="number">18663</span>, [<span class="number">153</span>, <span class="number">62</span>, <span class="number">207</span>, <span class="number">166</span>, <span class="number">233</span>, <span class="number">100</span>, <span class="number">21</span>, <span class="number">180</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.inIDeepTreeWalker.html" title="struct xpcom::interfaces::inIDeepTreeWalker">inIDeepTreeWalker</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.inIDeepTreeWalker.html" title="struct xpcom::interfaces::inIDeepTreeWalker">inIDeepTreeWalker</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/inIDeepTreeWalker.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

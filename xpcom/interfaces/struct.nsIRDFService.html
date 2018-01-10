@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIRDFService` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIRDFService">
+
+    <title>xpcom::interfaces::nsIRDFService - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIRDFService</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetResource">GetResource</a><a href="#method.GetUnicodeResource">GetUnicodeResource</a><a href="#method.GetAnonymousResource">GetAnonymousResource</a><a href="#method.GetLiteral">GetLiteral</a><a href="#method.GetDateLiteral">GetDateLiteral</a><a href="#method.GetIntLiteral">GetIntLiteral</a><a href="#method.IsAnonymousResource">IsAnonymousResource</a><a href="#method.RegisterResource">RegisterResource</a><a href="#method.UnregisterResource">UnregisterResource</a><a href="#method.RegisterDataSource">RegisterDataSource</a><a href="#method.UnregisterDataSource">UnregisterDataSource</a><a href="#method.GetDataSource">GetDataSource</a><a href="#method.GetDataSourceBlocking">GetDataSourceBlocking</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIRDFService', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIRDFService</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#22-31' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIRDFService { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIRDFService : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * The RDF service interface. This is a singleton object which should be
+ * obtained from the &lt;code&gt;nsServiceManager&lt;/code&gt;.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIRDFService.html" title="struct xpcom::interfaces::nsIRDFService">nsIRDFService</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#71-77' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIRDFServiceCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#74-76' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIRDFService</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIRDFService.html" title="struct xpcom::interfaces::nsIRDFService">nsIRDFService</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#161-401' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetResource' class="method"><span id='GetResource.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResource' class='fnname'>GetResource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFResource.html" title="struct xpcom::interfaces::nsIRDFResource">nsIRDFResource</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#175-177' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Construct an RDF resource from a single-byte URI. &lt;code&gt;nsIRDFService&lt;/code&gt;
+     * caches resources that are in-use, so multiple calls to &lt;code&gt;GetResource()&lt;/code&gt;
+     * for the same &lt;code&gt;uri&lt;/code&gt; will return identical pointers. FindResource
+     * is used to find out whether there already exists a resource corresponding to that url.
+     */
+</code></pre>
+
+<p><code>nsIRDFResource GetResource (in AUTF8String aURI);</code></p>
+</div><h4 id='method.GetUnicodeResource' class="method"><span id='GetUnicodeResource.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUnicodeResource' class='fnname'>GetUnicodeResource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFResource.html" title="struct xpcom::interfaces::nsIRDFResource">nsIRDFResource</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#192-194' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Construct an RDF resource from a Unicode URI. This is provided
+     * as a convenience method, allowing automatic, in-line C++
+     * conversion from &lt;code&gt;nsString&lt;/code&gt; objects. The &lt;code&gt;uri&lt;/code&gt; will
+     * be converted to a single-byte representation internally.
+     */
+</code></pre>
+
+<p><code>nsIRDFResource GetUnicodeResource (in AString aURI);</code></p>
+</div><h4 id='method.GetAnonymousResource' class="method"><span id='GetAnonymousResource.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAnonymousResource' class='fnname'>GetAnonymousResource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFResource.html" title="struct xpcom::interfaces::nsIRDFResource">nsIRDFResource</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#200-202' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>nsIRDFResource GetAnonymousResource ();</code></p>
+</div><h4 id='method.GetLiteral' class="method"><span id='GetLiteral.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLiteral' class='fnname'>GetLiteral</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aValue: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFLiteral.html" title="struct xpcom::interfaces::nsIRDFLiteral">nsIRDFLiteral</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#214-216' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Construct an RDF literal from a Unicode string.
+     */
+</code></pre>
+
+<p><code>nsIRDFLiteral GetLiteral (in wstring aValue);</code></p>
+</div><h4 id='method.GetDateLiteral' class="method"><span id='GetDateLiteral.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDateLiteral' class='fnname'>GetDateLiteral</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aValue: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFDate.html" title="struct xpcom::interfaces::nsIRDFDate">nsIRDFDate</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#228-230' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Construct an RDF literal from a PRTime.
+     */
+</code></pre>
+
+<p><code>nsIRDFDate GetDateLiteral (in PRTime aValue);</code></p>
+</div><h4 id='method.GetIntLiteral' class="method"><span id='GetIntLiteral.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIntLiteral' class='fnname'>GetIntLiteral</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aValue: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFInt.html" title="struct xpcom::interfaces::nsIRDFInt">nsIRDFInt</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#242-244' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Construct an RDF literal from an int.
+     */
+</code></pre>
+
+<p><code>nsIRDFInt GetIntLiteral (in long aValue);</code></p>
+</div><h4 id='method.IsAnonymousResource' class="method"><span id='IsAnonymousResource.v' class='invisible'><code>pub unsafe fn <a href='#method.IsAnonymousResource' class='fnname'>IsAnonymousResource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResource: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFResource.html" title="struct xpcom::interfaces::nsIRDFResource">nsIRDFResource</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#260-262' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>boolean IsAnonymousResource (in nsIRDFResource aResource);</code></p>
+</div><h4 id='method.RegisterResource' class="method"><span id='RegisterResource.v' class='invisible'><code>pub unsafe fn <a href='#method.RegisterResource' class='fnname'>RegisterResource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResource: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFResource.html" title="struct xpcom::interfaces::nsIRDFResource">nsIRDFResource</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReplace: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#295-297' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Registers a resource with the RDF system, making it unique w.r.t.
+     * GetResource.
+     *
+     * An implementation of nsIRDFResource should call this in its
+     * Init() method if it wishes the resource to be globally unique
+     * (which is usually the case).
+     *
+     * @note that the resource will &lt;i&gt;not&lt;/i&gt; be ref-counted by the
+     * RDF service: the assumption is that the resource implementation
+     * will call nsIRDFService::UnregisterResource() when the last
+     * reference to the resource is released.
+     *
+     * @note that the nsIRDFService implementation may choose to
+     * maintain a reference to the resource&#39;s URI; therefore, the
+     * resource implementation should ensure that the resource&#39;s URI
+     * (accessible via nsIRDFResource::GetValue(const char* *aURI)) is
+     * valid before calling RegisterResource(). Furthermore, the
+     * resource implementation should ensure that this pointer
+     * &lt;i&gt;remains&lt;/i&gt; valid for the lifetime of the resource. (The
+     * implementation of the resource cache in nsIRDFService uses the
+     * URI maintained &quot;internally&quot; in the resource as a key into the
+     * cache rather than copying the resource URI itself.)
+     */
+</code></pre>
+
+<p><code>void RegisterResource (in nsIRDFResource aResource, in boolean aReplace);</code></p>
+</div><h4 id='method.UnregisterResource' class="method"><span id='UnregisterResource.v' class='invisible'><code>pub unsafe fn <a href='#method.UnregisterResource' class='fnname'>UnregisterResource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResource: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFResource.html" title="struct xpcom::interfaces::nsIRDFResource">nsIRDFResource</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#319-321' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Called to notify the resource manager that a resource is no
+     * longer in use. This method should only be called from the
+     * destructor of a &quot;custom&quot; resource implementation to notify the
+     * RDF service that the last reference to the resource has been
+     * released, so the resource is no longer valid.
+     *
+     * @note As mentioned in nsIRDFResourceFactory::CreateResource(),
+     * the RDF service will use the result of
+     * nsIRDFResource::GetValue() as a key into its cache. For this
+     * reason, you must always un-cache the resource &lt;b&gt;before&lt;/b&gt;
+     * releasing the storage for the &lt;code&gt;const char*&lt;/code&gt; URI.
+     */
+</code></pre>
+
+<p><code>void UnregisterResource (in nsIRDFResource aResource);</code></p>
+</div><h4 id='method.RegisterDataSource' class="method"><span id='RegisterDataSource.v' class='invisible'><code>pub unsafe fn <a href='#method.RegisterDataSource' class='fnname'>RegisterDataSource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDataSource: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFDataSource.html" title="struct xpcom::interfaces::nsIRDFDataSource">nsIRDFDataSource</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReplace: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#341-343' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Register a &lt;i&gt;named data source&lt;/i&gt;. The RDF service will call
+     * &lt;code&gt;nsIRDFDataSource::GetURI()&lt;/code&gt; to determine the URI under
+     * which to register the data source.
+     *
+     * @note that the data source will &lt;i&gt;not&lt;/i&gt; be refcounted by the
+     * RDF service! The assumption is that an RDF data source
+     * registers with the service once it is initialized (via
+     * &lt;code&gt;nsIRDFDataSource::Init()&lt;/code&gt;), and unregisters when the
+     * last reference to the data source is released.
+     */
+</code></pre>
+
+<p><code>void RegisterDataSource (in nsIRDFDataSource aDataSource, in boolean aReplace);</code></p>
+</div><h4 id='method.UnregisterDataSource' class="method"><span id='UnregisterDataSource.v' class='invisible'><code>pub unsafe fn <a href='#method.UnregisterDataSource' class='fnname'>UnregisterDataSource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDataSource: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFDataSource.html" title="struct xpcom::interfaces::nsIRDFDataSource">nsIRDFDataSource</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#357-359' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Unregister a &lt;i&gt;named data source&lt;/i&gt;. The RDF service will call
+     * &lt;code&gt;nsIRDFDataSource::GetURI()&lt;/code&gt; to determine the URI under which the
+     * data source was registered.
+     */
+</code></pre>
+
+<p><code>void UnregisterDataSource (in nsIRDFDataSource aDataSource);</code></p>
+</div><h4 id='method.GetDataSource' class="method"><span id='GetDataSource.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDataSource' class='fnname'>GetDataSource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFDataSource.html" title="struct xpcom::interfaces::nsIRDFDataSource">nsIRDFDataSource</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#380-382' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the &lt;i&gt;named data source&lt;/i&gt; corresponding to the URI. If a data
+     * source has been registered via &lt;code&gt;RegisterDataSource()&lt;/code&gt;, that
+     * data source will be returned.
+     *
+     * If no data source is currently
+     * registered for the specified URI, and a data source &lt;i&gt;constructor&lt;/i&gt;
+     * function has been registered via &lt;code&gt;RegisterDatasourceConstructor()&lt;/code&gt;,
+     * the RDF service will call the constructor to attempt to construct a
+     * new data source. If construction is successful, the data source will
+     * be initialized via &lt;code&gt;nsIRDFDataSource::Init()&lt;/code&gt;.
+     */
+</code></pre>
+
+<p><code>nsIRDFDataSource GetDataSource (in string aURI);</code></p>
+</div><h4 id='method.GetDataSourceBlocking' class="method"><span id='GetDataSourceBlocking.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDataSourceBlocking' class='fnname'>GetDataSourceBlocking</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRDFDataSource.html" title="struct xpcom::interfaces::nsIRDFDataSource">nsIRDFDataSource</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#396-398' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Same as GetDataSource, but if a remote/XML data source needs to be
+     * constructed, then this method will issue a &lt;b&gt;blocking&lt;/b&gt; Refresh
+     * call on that data source.
+     */
+</code></pre>
+
+<p><code>nsIRDFDataSource GetDataSourceBlocking (in string aURI);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIRDFService.html" title="struct xpcom::interfaces::nsIRDFService">nsIRDFService</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#36-39' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3218100833</span>, <span class="number">33612</span>, <span class="number">4562</span>, [<span class="number">142</span>, <span class="number">172</span>, <span class="number">0</span>, <span class="number">128</span>, <span class="number">95</span>, <span class="number">41</span>, <span class="number">243</span>, <span class="number">112</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIRDFService.html" title="struct xpcom::interfaces::nsIRDFService">nsIRDFService</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#43-52' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#45-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#49-51' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIRDFService.html" title="struct xpcom::interfaces::nsIRDFService">nsIRDFService</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#83-91' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIRDFService.rs.html#86-90' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

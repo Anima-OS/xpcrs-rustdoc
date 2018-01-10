@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIPermissionManager` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIPermissionManager">
+
+    <title>xpcom::interfaces::nsIPermissionManager - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIPermissionManager</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.Add">Add</a><a href="#method.GetAllForURI">GetAllForURI</a><a href="#method.AddFromPrincipal">AddFromPrincipal</a><a href="#method.Remove">Remove</a><a href="#method.RemoveFromPrincipal">RemoveFromPrincipal</a><a href="#method.RemovePermission">RemovePermission</a><a href="#method.RemoveAll">RemoveAll</a><a href="#method.RemoveAllSince">RemoveAllSince</a><a href="#method.TestPermission">TestPermission</a><a href="#method.TestPermissionFromPrincipal">TestPermissionFromPrincipal</a><a href="#method.TestPermissionFromWindow">TestPermissionFromWindow</a><a href="#method.TestExactPermission">TestExactPermission</a><a href="#method.TestExactPermissionFromPrincipal">TestExactPermissionFromPrincipal</a><a href="#method.TestExactPermanentPermission">TestExactPermanentPermission</a><a href="#method.GetPermissionObjectForURI">GetPermissionObjectForURI</a><a href="#method.GetPermissionObject">GetPermissionObject</a><a href="#method.GetEnumerator">GetEnumerator</a><a href="#method.RemovePermissionsWithAttributes">RemovePermissionsWithAttributes</a><a href="#method.UpdateExpireTime">UpdateExpireTime</a><a href="#method.BroadcastPermissionsForPrincipalToAllContentProcesses">BroadcastPermissionsForPrincipalToAllContentProcesses</a><a href="#method.WhenPermissionsAvailable">WhenPermissionsAvailable</a><a href="#method.GetHasPreloadPermissions">GetHasPreloadPermissions</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIPermissionManager', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIPermissionManager</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIPermissionManager { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIPermissionManager : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIPermissionManager.html" title="struct xpcom::interfaces::nsIPermissionManager">nsIPermissionManager</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIPermissionManagerCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIPermissionManager</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIPermissionManager.html" title="struct xpcom::interfaces::nsIPermissionManager">nsIPermissionManager</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#185-707' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.UNKNOWN_ACTION' class="associatedconstant"><span id='UNKNOWN_ACTION.v' class='invisible'><code>pub const <a href='#associatedconstant.UNKNOWN_ACTION' class="constant"><b>UNKNOWN_ACTION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">UNKNOWN_ACTION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Predefined return values for the testPermission method and for
+   * the permission param of the add method
+   * NOTE: UNKNOWN_ACTION (0) is reserved to represent the
+   * default permission when no entry is found for a host, and
+   * should not be used by consumers to indicate otherwise.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.ALLOW_ACTION' class="associatedconstant"><span id='ALLOW_ACTION.v' class='invisible'><code>pub const <a href='#associatedconstant.ALLOW_ACTION' class="constant"><b>ALLOW_ACTION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ALLOW_ACTION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.DENY_ACTION' class="associatedconstant"><span id='DENY_ACTION.v' class='invisible'><code>pub const <a href='#associatedconstant.DENY_ACTION' class="constant"><b>DENY_ACTION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DENY_ACTION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.PROMPT_ACTION' class="associatedconstant"><span id='PROMPT_ACTION.v' class='invisible'><code>pub const <a href='#associatedconstant.PROMPT_ACTION' class="constant"><b>PROMPT_ACTION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PROMPT_ACTION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.EXPIRE_NEVER' class="associatedconstant"><span id='EXPIRE_NEVER.v' class='invisible'><code>pub const <a href='#associatedconstant.EXPIRE_NEVER' class="constant"><b>EXPIRE_NEVER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">EXPIRE_NEVER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Predefined expiration types for permissions.  Permissions can be permanent
+   * (never expire), expire at the end of the session, or expire at a specified
+   * time. Permissions that expire at the end of a session may also have a
+   * specified expiration time.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.EXPIRE_SESSION' class="associatedconstant"><span id='EXPIRE_SESSION.v' class='invisible'><code>pub const <a href='#associatedconstant.EXPIRE_SESSION' class="constant"><b>EXPIRE_SESSION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">EXPIRE_SESSION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.EXPIRE_TIME' class="associatedconstant"><span id='EXPIRE_TIME.v' class='invisible'><code>pub const <a href='#associatedconstant.EXPIRE_TIME' class="constant"><b>EXPIRE_TIME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">EXPIRE_TIME</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.Add' class="method"><span id='Add.v' class='invisible'><code>pub unsafe fn <a href='#method.Add' class='fnname'>Add</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;permission: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;expireType: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;expireTime: <a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#257-259' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Add permission information for a given URI and permission type. This
+   * operation will cause the type string to be registered if it does not
+   * currently exist. If a permission already exists for a given type, it
+   * will be modified.
+   *
+   * @param uri         the uri to add the permission for
+   * @param type        a case-sensitive ASCII string, identifying the consumer.
+   *                    Consumers should choose this string to be unique, with
+   *                    respect to other consumers.
+   * @param permission  an integer representing the desired action (e.g. allow
+   *                    or deny). The interpretation of this number is up to the
+   *                    consumer, and may represent different actions for different
+   *                    types. Consumers may use one of the enumerated permission
+   *                    actions defined above, for convenience.
+   *                    NOTE: UNKNOWN_ACTION (0) is reserved to represent the
+   *                    default permission when no entry is found for a host, and
+   *                    should not be used by consumers to indicate otherwise.
+   * @param expiretype  a constant defining whether this permission should
+   *                    never expire (EXPIRE_NEVER), expire at the end of the
+   *                    session (EXPIRE_SESSION), or expire at a specified time
+   *                    (EXPIRE_TIME).
+   * @param expiretime  an integer representation of when this permission
+   *                    should be forgotten (milliseconds since Jan 1 1970 0:00:00).
+   */
+</code></pre>
+
+<p><code>void add (in nsIURI uri, in string type, in uint32_t permission, [optional] in uint32_t expireType, [optional] in int64_t expireTime);</code></p>
+</div><h4 id='method.GetAllForURI' class="method"><span id='GetAllForURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAllForURI' class='fnname'>GetAllForURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISimpleEnumerator.html" title="struct xpcom::interfaces::nsISimpleEnumerator">nsISimpleEnumerator</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#275-277' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get all custom permissions for a given URI. This will return
+   * an enumerator of all permissions which are not set to default
+   * and which belong to the matching prinicpal of the given URI.
+   *
+   * @param uri  the URI to get all permissions for
+   */
+</code></pre>
+
+<p><code>nsISimpleEnumerator getAllForURI (in nsIURI uri);</code></p>
+</div><h4 id='method.AddFromPrincipal' class="method"><span id='AddFromPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.AddFromPrincipal' class='fnname'>AddFromPrincipal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;principal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;typed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;permission: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;expireType: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;expireTime: <a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#293-295' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Add permission information for a given principal.
+   * It is internally calling the other add() method using the nsIURI from the
+   * principal.
+   * Passing a system principal will be a no-op because they will always be
+   * granted permissions.
+   */
+</code></pre>
+
+<p><code>void addFromPrincipal (in nsIPrincipal principal, in string typed, in uint32_t permission, [optional] in uint32_t expireType, [optional] in int64_t expireTime);</code></p>
+</div><h4 id='method.Remove' class="method"><span id='Remove.v' class='invisible'><code>pub unsafe fn <a href='#method.Remove' class='fnname'>Remove</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#314-316' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Remove permission information for a given URI and permission type. This will
+   * remove the permission for the entire host described by the uri, acting as the
+   * opposite operation to the add() method.
+   *
+   * @param uri    the uri to remove the permission for
+   * @param type   a case-sensitive ASCII string, identifying the consumer.
+   *               The type must have been previously registered using the
+   *               add() method.
+   */
+</code></pre>
+
+<p><code>void remove (in nsIURI uri, in string type);</code></p>
+</div><h4 id='method.RemoveFromPrincipal' class="method"><span id='RemoveFromPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveFromPrincipal' class='fnname'>RemoveFromPrincipal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;principal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#331-333' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Remove permission information for a given principal.
+   * This is internally calling remove() with the host from the principal&#39;s URI.
+   * Passing system principal will be a no-op because we never add them to the
+   * database.
+   */
+</code></pre>
+
+<p><code>void removeFromPrincipal (in nsIPrincipal principal, in string type);</code></p>
+</div><h4 id='method.RemovePermission' class="method"><span id='RemovePermission.v' class='invisible'><code>pub unsafe fn <a href='#method.RemovePermission' class='fnname'>RemovePermission</a>(&amp;self, perm: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPermission.html" title="struct xpcom::interfaces::nsIPermission">nsIPermission</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#347-349' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Remove the given permission from the permission manager.
+   *
+   * @param perm   a permission obtained from the permission manager.
+   */
+</code></pre>
+
+<p><code>void removePermission (in nsIPermission perm);</code></p>
+</div><h4 id='method.RemoveAll' class="method"><span id='RemoveAll.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveAll' class='fnname'>RemoveAll</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#361-363' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Clear permission information for all websites.
+   */
+</code></pre>
+
+<p><code>void removeAll ();</code></p>
+</div><h4 id='method.RemoveAllSince' class="method"><span id='RemoveAllSince.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveAllSince' class='fnname'>RemoveAllSince</a>(&amp;self, since: <a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#375-377' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Clear all permission information added since the specified time.
+   */
+</code></pre>
+
+<p><code>void removeAllSince (in int64_t since);</code></p>
+</div><h4 id='method.TestPermission' class="method"><span id='TestPermission.v' class='invisible'><code>pub unsafe fn <a href='#method.TestPermission' class='fnname'>TestPermission</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#395-397' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Test whether a website has permission to perform the given action.
+   * This function will perform a pref lookup to permissions.default.&lt;type&gt;
+   * if the specific permission type is part of the whitelist for that functionality.
+   * @param uri     the uri to be tested
+   * @param type    a case-sensitive ASCII string, identifying the consumer
+   * @param return  see add(), param permission. returns UNKNOWN_ACTION when
+   *                there is no stored permission for this uri and / or type.
+   */
+</code></pre>
+
+<p><code>uint32_t testPermission (in nsIURI uri, in string type);</code></p>
+</div><h4 id='method.TestPermissionFromPrincipal' class="method"><span id='TestPermissionFromPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.TestPermissionFromPrincipal' class='fnname'>TestPermissionFromPrincipal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;principal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#412-414' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Test whether the principal has the permission to perform a given action.
+   * System principals will always have permissions granted.
+   * This function will perform a pref lookup to permissions.default.&lt;type&gt;
+   * if the specific permission type is part of the whitelist for that functionality.
+   */
+</code></pre>
+
+<p><code>uint32_t testPermissionFromPrincipal (in nsIPrincipal principal, in string type);</code></p>
+</div><h4 id='method.TestPermissionFromWindow' class="method"><span id='TestPermissionFromWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.TestPermissionFromWindow' class='fnname'>TestPermissionFromWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;window: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindow.html" title="struct xpcom::interfaces::mozIDOMWindow">mozIDOMWindow</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#430-432' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Test whether the principal associated with the window&#39;s document has the
+   * permission to perform a given action.  System principals will always
+   * have permissions granted.
+   * This function will perform a pref lookup to permissions.default.&lt;type&gt;
+   * if the specific permission type is part of the whitelist for that functionality.
+   */
+</code></pre>
+
+<p><code>uint32_t testPermissionFromWindow (in mozIDOMWindow window, in string type);</code></p>
+</div><h4 id='method.TestExactPermission' class="method"><span id='TestExactPermission.v' class='invisible'><code>pub unsafe fn <a href='#method.TestExactPermission' class='fnname'>TestExactPermission</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#451-453' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Test whether a website has permission to perform the given action.
+   * This requires an exact hostname match, subdomains are not a match.
+   * This function will perform a pref lookup to permissions.default.&lt;type&gt;
+   * if the specific permission type is part of the whitelist for that functionality.
+   * @param uri     the uri to be tested
+   * @param type    a case-sensitive ASCII string, identifying the consumer
+   * @param return  see add(), param permission. returns UNKNOWN_ACTION when
+   *                there is no stored permission for this uri and / or type.
+   */
+</code></pre>
+
+<p><code>uint32_t testExactPermission (in nsIURI uri, in string type);</code></p>
+</div><h4 id='method.TestExactPermissionFromPrincipal' class="method"><span id='TestExactPermissionFromPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.TestExactPermissionFromPrincipal' class='fnname'>TestExactPermissionFromPrincipal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;principal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#468-470' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * See testExactPermission() above.
+   * System principals will always have permissions granted.
+   * This function will perform a pref lookup to permissions.default.&lt;type&gt;
+   * if the specific permission type is part of the whitelist for that functionality.
+   */
+</code></pre>
+
+<p><code>uint32_t testExactPermissionFromPrincipal (in nsIPrincipal principal, in string type);</code></p>
+</div><h4 id='method.TestExactPermanentPermission' class="method"><span id='TestExactPermanentPermission.v' class='invisible'><code>pub unsafe fn <a href='#method.TestExactPermanentPermission' class='fnname'>TestExactPermanentPermission</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;principal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#491-493' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Test whether a website has permission to perform the given action
+   * ignoring active sessions.
+   * System principals will always have permissions granted.
+   * This function will perform a pref lookup to permissions.default.&lt;type&gt;
+   * if the specific permission type is part of the whitelist for that functionality.
+   *
+   * @param principal the principal
+   * @param type      a case-sensitive ASCII string, identifying the consumer
+   * @param return    see add(), param permission. returns UNKNOWN_ACTION when
+   *                  there is no stored permission for this uri and / or type.
+   */
+</code></pre>
+
+<p><code>uint32_t testExactPermanentPermission (in nsIPrincipal principal, in string type);</code></p>
+</div><h4 id='method.GetPermissionObjectForURI' class="method"><span id='GetPermissionObjectForURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPermissionObjectForURI' class='fnname'>GetPermissionObjectForURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;exactHost: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPermission.html" title="struct xpcom::interfaces::nsIPermission">nsIPermission</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#515-517' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the permission object associated with the given URI and action.
+   * @param uri The URI
+   * @param type      A case-sensitive ASCII string identifying the consumer
+   * @param exactHost If true, only the specific host will be matched,
+   *                  @see testExactPermission. If false, subdomains will
+   *                  also be searched, @see testPermission.
+   * @returns The matching permission object, or null if no matching object
+   *          was found. No matching object is equivalent to UNKNOWN_ACTION.
+   * @note Clients in general should prefer the test* methods unless they
+   *       need to know the specific stored details.
+   * @note This method will always return null for the system principal.
+   */
+</code></pre>
+
+<p><code>nsIPermission getPermissionObjectForURI (in nsIURI uri, in string type, in boolean exactHost);</code></p>
+</div><h4 id='method.GetPermissionObject' class="method"><span id='GetPermissionObject.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPermissionObject' class='fnname'>GetPermissionObject</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;principal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;exactHost: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPermission.html" title="struct xpcom::interfaces::nsIPermission">nsIPermission</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#539-541' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the permission object associated with the given principal and action.
+   * @param principal The principal
+   * @param type      A case-sensitive ASCII string identifying the consumer
+   * @param exactHost If true, only the specific host will be matched,
+   *                  @see testExactPermission. If false, subdomains will
+   *                  also be searched, @see testPermission.
+   * @returns The matching permission object, or null if no matching object
+   *          was found. No matching object is equivalent to UNKNOWN_ACTION.
+   * @note Clients in general should prefer the test* methods unless they
+   *       need to know the specific stored details.
+   * @note This method will always return null for the system principal.
+   */
+</code></pre>
+
+<p><code>nsIPermission getPermissionObject (in nsIPrincipal principal, in string type, in boolean exactHost);</code></p>
+</div><h4 id='method.GetEnumerator' class="method"><span id='GetEnumerator.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEnumerator' class='fnname'>GetEnumerator</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEnumerator: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISimpleEnumerator.html" title="struct xpcom::interfaces::nsISimpleEnumerator">nsISimpleEnumerator</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#555-557' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Allows enumeration of all stored permissions
+   * @return an nsISimpleEnumerator interface that allows access to
+   *         nsIPermission objects
+   */
+</code></pre>
+
+<p><code>readonly attribute nsISimpleEnumerator enumerator;</code></p>
+</div><h4 id='method.RemovePermissionsWithAttributes' class="method"><span id='RemovePermissionsWithAttributes.v' class='invisible'><code>pub unsafe fn <a href='#method.RemovePermissionsWithAttributes' class='fnname'>RemovePermissionsWithAttributes</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;patternAsJSON: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#569-571' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Remove all permissions that will match the origin pattern.
+   */
+</code></pre>
+
+<p><code>void removePermissionsWithAttributes (in DOMString patternAsJSON);</code></p>
+</div><h4 id='method.UpdateExpireTime' class="method"><span id='UpdateExpireTime.v' class='invisible'><code>pub unsafe fn <a href='#method.UpdateExpireTime' class='fnname'>UpdateExpireTime</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;principal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;exactHost: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;sessionExpireTime: <a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;persistentExpireTime: <a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#594-596' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If the current permission is set to expire, reset the expiration time. If
+   * there is no permission or the current permission does not expire, this
+   * method will silently return.
+   *
+   * @param sessionExpiretime  an integer representation of when this permission
+   *                           should be forgotten (milliseconds since
+   *                           Jan 1 1970 0:00:00), if it is currently
+   *                           EXPIRE_SESSION.
+   * @param sessionExpiretime  an integer representation of when this permission
+   *                           should be forgotten (milliseconds since
+   *                           Jan 1 1970 0:00:00), if it is currently
+   *                           EXPIRE_TIME.
+   */
+</code></pre>
+
+<p><code>void updateExpireTime (in nsIPrincipal principal, in string type, in boolean exactHost, in uint64_t sessionExpireTime, in uint64_t persistentExpireTime);</code></p>
+</div><h4 id='method.BroadcastPermissionsForPrincipalToAllContentProcesses' class="method"><span id='BroadcastPermissionsForPrincipalToAllContentProcesses.v' class='invisible'><code>pub unsafe fn <a href='#method.BroadcastPermissionsForPrincipalToAllContentProcesses' class='fnname'>BroadcastPermissionsForPrincipalToAllContentProcesses</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#658-660' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Broadcasts permissions for the given principal to all content processes.
+   *
+   * DO NOT USE THIS METHOD if you can avoid it. It was added in bug XXX to
+   * handle the current temporary implementation of ServiceWorker debugging. It
+   * will be removed when service worker debugging is fixed.
+   *
+   * @param aPrincipal The principal to broadcast permissions for.
+   */
+</code></pre>
+
+<p><code>void broadcastPermissionsForPrincipalToAllContentProcesses (in nsIPrincipal aPrincipal);</code></p>
+</div><h4 id='method.WhenPermissionsAvailable' class="method"><span id='WhenPermissionsAvailable.v' class='invisible'><code>pub unsafe fn <a href='#method.WhenPermissionsAvailable' class='fnname'>WhenPermissionsAvailable</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRunnable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRunnable.html" title="struct xpcom::interfaces::nsIRunnable">nsIRunnable</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#684-686' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Add a callback which should be run when all permissions are available for
+   * the given nsIPrincipal. This method invokes the callback runnable
+   * synchronously when the permissions are already available. Otherwise the
+   * callback will be run asynchronously in SystemGroup when all permissions
+   * are available in the future.
+   *
+   * NOTE: This method will not request the permissions be sent by the parent
+   * process. This should only be used to wait for permissions which may not
+   * have arrived yet in order to ensure they are present.
+   *
+   * @param aPrincipal The principal to wait for permissions to be available for.
+   * @param aRunnable  The runnable to run when permissions are available for the
+   *                   given principal.
+   */
+</code></pre>
+
+<p><code>void whenPermissionsAvailable (in nsIPrincipal aPrincipal, in nsIRunnable aRunnable);</code></p>
+</div><h4 id='method.GetHasPreloadPermissions' class="method"><span id='GetHasPreloadPermissions.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHasPreloadPermissions' class='fnname'>GetHasPreloadPermissions</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#699-704' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if any &quot;preload&quot; permissions are present. This is used to avoid making
+   * potentially expensive permissions checks in nsContentBlocker.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean hasPreloadPermissions;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIPermissionManager.html" title="struct xpcom::interfaces::nsIPermissionManager">nsIPermissionManager</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1305163857</span>, <span class="number">60322</span>, <span class="number">20034</span>, [<span class="number">178</span>, <span class="number">54</span>, <span class="number">130</span>, <span class="number">210</span>, <span class="number">89</span>, <span class="number">111</span>, <span class="number">202</span>, <span class="number">34</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIPermissionManager.html" title="struct xpcom::interfaces::nsIPermissionManager">nsIPermissionManager</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIPermissionManager.html" title="struct xpcom::interfaces::nsIPermissionManager">nsIPermissionManager</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

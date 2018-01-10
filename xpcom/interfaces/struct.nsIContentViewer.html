@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIContentViewer` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIContentViewer">
+
+    <title>xpcom::interfaces::nsIContentViewer - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIContentViewer</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetContainer">GetContainer</a><a href="#method.SetContainer">SetContainer</a><a href="#method.LoadComplete">LoadComplete</a><a href="#method.GetLoadCompleted">GetLoadCompleted</a><a href="#method.GetIsStopped">GetIsStopped</a><a href="#method.PermitUnload">PermitUnload</a><a href="#method.GetInPermitUnload">GetInPermitUnload</a><a href="#method.GetBeforeUnloadFiring">GetBeforeUnloadFiring</a><a href="#method.PageHide">PageHide</a><a href="#method.Close">Close</a><a href="#method.Destroy">Destroy</a><a href="#method.Stop">Stop</a><a href="#method.GetDOMDocument">GetDOMDocument</a><a href="#method.SetDOMDocument">SetDOMDocument</a><a href="#method.GetDocument">GetDocument</a><a href="#method.GetPreviousViewer">GetPreviousViewer</a><a href="#method.SetPreviousViewer">SetPreviousViewer</a><a href="#method.Move">Move</a><a href="#method.Show">Show</a><a href="#method.Hide">Hide</a><a href="#method.GetSticky">GetSticky</a><a href="#method.SetSticky">SetSticky</a><a href="#method.RequestWindowClose">RequestWindowClose</a><a href="#method.Open">Open</a><a href="#method.ClearHistoryEntry">ClearHistoryEntry</a><a href="#method.SetPageMode">SetPageMode</a><a href="#method.GetHistoryEntry">GetHistoryEntry</a><a href="#method.GetIsTabModalPromptAllowed">GetIsTabModalPromptAllowed</a><a href="#method.GetIsHidden">GetIsHidden</a><a href="#method.SetIsHidden">SetIsHidden</a><a href="#method.SetDocumentInternal">SetDocumentInternal</a><a href="#method.ScrollToNode">ScrollToNode</a><a href="#method.GetTextZoom">GetTextZoom</a><a href="#method.SetTextZoom">SetTextZoom</a><a href="#method.GetEffectiveTextZoom">GetEffectiveTextZoom</a><a href="#method.GetFullZoom">GetFullZoom</a><a href="#method.SetFullZoom">SetFullZoom</a><a href="#method.GetDeviceFullZoom">GetDeviceFullZoom</a><a href="#method.GetOverrideDPPX">GetOverrideDPPX</a><a href="#method.SetOverrideDPPX">SetOverrideDPPX</a><a href="#method.GetAuthorStyleDisabled">GetAuthorStyleDisabled</a><a href="#method.SetAuthorStyleDisabled">SetAuthorStyleDisabled</a><a href="#method.GetForceCharacterSet">GetForceCharacterSet</a><a href="#method.SetForceCharacterSet">SetForceCharacterSet</a><a href="#method.GetHintCharacterSet">GetHintCharacterSet</a><a href="#method.SetHintCharacterSet">SetHintCharacterSet</a><a href="#method.GetHintCharacterSetSource">GetHintCharacterSetSource</a><a href="#method.SetHintCharacterSetSource">SetHintCharacterSetSource</a><a href="#method.GetContentSize">GetContentSize</a><a href="#method.GetContentSizeConstrained">GetContentSizeConstrained</a><a href="#method.GetMinFontSize">GetMinFontSize</a><a href="#method.SetMinFontSize">SetMinFontSize</a><a href="#method.PausePainting">PausePainting</a><a href="#method.ResumePainting">ResumePainting</a><a href="#method.EmulateMedium">EmulateMedium</a><a href="#method.StopEmulatingMedium">StopEmulatingMedium</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIContentViewer', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIContentViewer</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIContentViewer { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIContentViewer : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIContentViewerCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIContentViewer</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#339-1169' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.ePrompt' class="associatedconstant"><span id='ePrompt.v' class='invisible'><code>pub const <a href='#associatedconstant.ePrompt' class="constant"><b>ePrompt</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ePrompt</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * aPermitUnloadFlags are passed to PermitUnload to indicate what action to take
+   * if a beforeunload handler wants to prompt the user.  It is also used by
+   * permitUnloadInternal to ensure we only prompt once.
+   *
+   * ePrompt: Prompt and return the user&#39;s choice (default).
+   * eDontPromptAndDontUnload: Don&#39;t prompt and return false (unload not permitted)
+   *                           if the document (or its children) asks us to prompt.
+   * eDontPromptAndUnload: Don&#39;t prompt and return true (unload permitted) no matter what.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.eDontPromptAndDontUnload' class="associatedconstant"><span id='eDontPromptAndDontUnload.v' class='invisible'><code>pub const <a href='#associatedconstant.eDontPromptAndDontUnload' class="constant"><b>eDontPromptAndDontUnload</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eDontPromptAndDontUnload</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.eDontPromptAndUnload' class="associatedconstant"><span id='eDontPromptAndUnload.v' class='invisible'><code>pub const <a href='#associatedconstant.eDontPromptAndUnload' class="constant"><b>eDontPromptAndUnload</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eDontPromptAndUnload</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.eDelayResize' class="associatedconstant"><span id='eDelayResize.v' class='invisible'><code>pub const <a href='#associatedconstant.eDelayResize' class="constant"><b>eDelayResize</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eDelayResize</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * The &#39;aFlags&#39; argument to setBoundsWithFlags is a set of these bits.
+   */
+</code></pre>
+</div><h4 id='method.GetContainer' class="method"><span id='GetContainer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContainer' class='fnname'>GetContainer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContainer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocShell.html" title="struct xpcom::interfaces::nsIDocShell">nsIDocShell</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#378-380' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIDocShell container;</code></p>
+</div><h4 id='method.SetContainer' class="method"><span id='SetContainer.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContainer' class='fnname'>SetContainer</a>(&amp;self, aContainer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocShell.html" title="struct xpcom::interfaces::nsIDocShell">nsIDocShell</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#386-388' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIDocShell container;</code></p>
+</div><h4 id='method.LoadComplete' class="method"><span id='LoadComplete.v' class='invisible'><code>pub unsafe fn <a href='#method.LoadComplete' class='fnname'>LoadComplete</a>(&amp;self, aStatus: <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#398-400' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void loadComplete (in nsresult aStatus);</code></p>
+</div><h4 id='method.GetLoadCompleted' class="method"><span id='GetLoadCompleted.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadCompleted' class='fnname'>GetLoadCompleted</a>(&amp;self, aLoadCompleted: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#406-408' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript] readonly attribute boolean loadCompleted;</code></p>
+</div><h4 id='method.GetIsStopped' class="method"><span id='GetIsStopped.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsStopped' class='fnname'>GetIsStopped</a>(&amp;self, aIsStopped: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#414-416' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript] readonly attribute boolean isStopped;</code></p>
+</div><h4 id='method.PermitUnload' class="method"><span id='PermitUnload.v' class='invisible'><code>pub unsafe fn <a href='#method.PermitUnload' class='fnname'>PermitUnload</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPermitUnloadFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#434-436' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Overload PermitUnload method for C++ consumers with no aPermitUnloadFlags
+   * argument.
+   */
+/**
+   * Checks if the document wants to prevent unloading by firing beforeunload on
+   * the document, and if it does, takes action directed by aPermitUnloadFlags.
+   * The result is returned.
+   */
+</code></pre>
+
+<p><code>boolean permitUnload ([optional] in unsigned long aPermitUnloadFlags);</code></p>
+</div><h4 id='method.GetInPermitUnload' class="method"><span id='GetInPermitUnload.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInPermitUnload' class='fnname'>GetInPermitUnload</a>(&amp;self, aInPermitUnload: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#448-450' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Exposes whether we&#39;re blocked in a call to permitUnload.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean inPermitUnload;</code></p>
+</div><h4 id='method.GetBeforeUnloadFiring' class="method"><span id='GetBeforeUnloadFiring.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBeforeUnloadFiring' class='fnname'>GetBeforeUnloadFiring</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBeforeUnloadFiring: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#475-477' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Exposes whether we&#39;re in the process of firing the beforeunload event.
+   * In this case, the corresponding docshell will not allow navigation.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean beforeUnloadFiring;</code></p>
+</div><h4 id='method.PageHide' class="method"><span id='PageHide.v' class='invisible'><code>pub unsafe fn <a href='#method.PageHide' class='fnname'>PageHide</a>(&amp;self, isUnload: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#483-485' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void pageHide (in boolean isUnload);</code></p>
+</div><h4 id='method.Close' class="method"><span id='Close.v' class='invisible'><code>pub unsafe fn <a href='#method.Close' class='fnname'>Close</a>(&amp;self, historyEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#515-517' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * All users of a content viewer are responsible for calling both
+   * close() and destroy(), in that order.
+   *
+   * close() should be called when the load of a new page for the next
+   * content viewer begins, and destroy() should be called when the next
+   * content viewer replaces this one.
+   *
+   * |historyEntry| sets the session history entry for the content viewer.  If
+   * this is null, then Destroy() will be called on the document by close().
+   * If it is non-null, the document will not be destroyed, and the following
+   * actions will happen when destroy() is called (*):
+   *  - Sanitize() will be called on the viewer&#39;s document
+   *  - The content viewer will set the contentViewer property on the
+   *    history entry, and release its reference (ownership reversal).
+   *  - hide() will be called, and no further destruction will happen.
+   *
+   *  (*) unless the document is currently being printed, in which case
+   *      it will never be saved in session history.
+   *
+   */
+</code></pre>
+
+<p><code>void close (in nsISHEntry historyEntry);</code></p>
+</div><h4 id='method.Destroy' class="method"><span id='Destroy.v' class='invisible'><code>pub unsafe fn <a href='#method.Destroy' class='fnname'>Destroy</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#523-525' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void destroy ();</code></p>
+</div><h4 id='method.Stop' class="method"><span id='Stop.v' class='invisible'><code>pub unsafe fn <a href='#method.Stop' class='fnname'>Stop</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#531-533' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void stop ();</code></p>
+</div><h4 id='method.GetDOMDocument' class="method"><span id='GetDOMDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDOMDocument' class='fnname'>GetDOMDocument</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDOMDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMDocument.html" title="struct xpcom::interfaces::nsIDOMDocument">nsIDOMDocument</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#539-541' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIDOMDocument DOMDocument;</code></p>
+</div><h4 id='method.SetDOMDocument' class="method"><span id='SetDOMDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDOMDocument' class='fnname'>SetDOMDocument</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDOMDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMDocument.html" title="struct xpcom::interfaces::nsIDOMDocument">nsIDOMDocument</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#547-549' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIDOMDocument DOMDocument;</code></p>
+</div><h4 id='method.GetDocument' class="method"><span id='GetDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDocument' class='fnname'>GetDocument</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocument.html" title="struct xpcom::interfaces::nsIDocument">nsIDocument</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#561-563' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns DOMDocument as nsIDocument and without addrefing.
+   */
+</code></pre>
+
+<p><code>[noscript,notxpcom] nsIDocument getDocument ();</code></p>
+</div><h4 id='method.GetPreviousViewer' class="method"><span id='GetPreviousViewer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPreviousViewer' class='fnname'>GetPreviousViewer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPreviousViewer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#588-590' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The previous content viewer, which has been |close|d but not
+   * |destroy|ed.
+   */
+</code></pre>
+
+<p><code>[noscript] attribute nsIContentViewer previousViewer;</code></p>
+</div><h4 id='method.SetPreviousViewer' class="method"><span id='SetPreviousViewer.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPreviousViewer' class='fnname'>SetPreviousViewer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPreviousViewer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#603-605' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The previous content viewer, which has been |close|d but not
+   * |destroy|ed.
+   */
+</code></pre>
+
+<p><code>[noscript] attribute nsIContentViewer previousViewer;</code></p>
+</div><h4 id='method.Move' class="method"><span id='Move.v' class='invisible'><code>pub unsafe fn <a href='#method.Move' class='fnname'>Move</a>(&amp;self, aX: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, aY: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#611-613' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void move (in long aX, in long aY);</code></p>
+</div><h4 id='method.Show' class="method"><span id='Show.v' class='invisible'><code>pub unsafe fn <a href='#method.Show' class='fnname'>Show</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#619-621' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void show ();</code></p>
+</div><h4 id='method.Hide' class="method"><span id='Hide.v' class='invisible'><code>pub unsafe fn <a href='#method.Hide' class='fnname'>Hide</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#627-629' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void hide ();</code></p>
+</div><h4 id='method.GetSticky' class="method"><span id='GetSticky.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSticky' class='fnname'>GetSticky</a>(&amp;self, aSticky: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#635-637' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean sticky;</code></p>
+</div><h4 id='method.SetSticky' class="method"><span id='SetSticky.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSticky' class='fnname'>SetSticky</a>(&amp;self, aSticky: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#643-645' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean sticky;</code></p>
+</div><h4 id='method.RequestWindowClose' class="method"><span id='RequestWindowClose.v' class='invisible'><code>pub unsafe fn <a href='#method.RequestWindowClose' class='fnname'>RequestWindowClose</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#651-653' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>boolean requestWindowClose ();</code></p>
+</div><h4 id='method.Open' class="method"><span id='Open.v' class='invisible'><code>pub unsafe fn <a href='#method.Open' class='fnname'>Open</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSHEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#670-672' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Attach the content viewer to its DOM window and docshell.
+   * @param aState A state object that might be useful in attaching the DOM
+   *               window.
+   * @param aSHEntry The history entry that the content viewer was stored in.
+   *                 The entry must have the docshells for all of the child
+   *                 documents stored in its child shell list.
+   */
+</code></pre>
+
+<p><code>void open (in nsISupports aState, in nsISHEntry aSHEntry);</code></p>
+</div><h4 id='method.ClearHistoryEntry' class="method"><span id='ClearHistoryEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.ClearHistoryEntry' class='fnname'>ClearHistoryEntry</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#685-687' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Clears the current history entry.  This is used if we need to clear out
+   * the saved presentation state.
+   */
+</code></pre>
+
+<p><code>void clearHistoryEntry ();</code></p>
+</div><h4 id='method.SetPageMode' class="method"><span id='SetPageMode.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPageMode' class='fnname'>SetPageMode</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPageMode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrintSettings: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrintSettings.html" title="struct xpcom::interfaces::nsIPrintSettings">nsIPrintSettings</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#700-702' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Change the layout to view the document with page layout (like print preview), but
+   * dynamic and editable (like Galley layout).
+   */
+</code></pre>
+
+<p><code>void setPageMode (in boolean aPageMode, in nsIPrintSettings aPrintSettings);</code></p>
+</div><h4 id='method.GetHistoryEntry' class="method"><span id='GetHistoryEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHistoryEntry' class='fnname'>GetHistoryEntry</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHistoryEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#715-717' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the history entry that this viewer will save itself into when
+   * destroyed.  Can return null
+   */
+</code></pre>
+
+<p><code>readonly attribute nsISHEntry historyEntry;</code></p>
+</div><h4 id='method.GetIsTabModalPromptAllowed' class="method"><span id='GetIsTabModalPromptAllowed.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsTabModalPromptAllowed' class='fnname'>GetIsTabModalPromptAllowed</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsTabModalPromptAllowed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#733-735' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicates when we&#39;re in a state where content shouldn&#39;t be allowed to
+   * trigger a tab-modal prompt (as opposed to a window-modal prompt) because
+   * we&#39;re part way through some operation (eg beforeunload) that shouldn&#39;t be
+   * rentrant if the user closes the tab while the prompt is showing.
+   * See bug 613800.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean isTabModalPromptAllowed;</code></p>
+</div><h4 id='method.GetIsHidden' class="method"><span id='GetIsHidden.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsHidden' class='fnname'>GetIsHidden</a>(&amp;self, aIsHidden: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#749-751' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns whether this content viewer is in a hidden state.
+   *
+   * @note Only Gecko internal code should set the attribute!
+   */
+</code></pre>
+
+<p><code>attribute boolean isHidden;</code></p>
+</div><h4 id='method.SetIsHidden' class="method"><span id='SetIsHidden.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIsHidden' class='fnname'>SetIsHidden</a>(&amp;self, aIsHidden: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#765-767' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns whether this content viewer is in a hidden state.
+   *
+   * @note Only Gecko internal code should set the attribute!
+   */
+</code></pre>
+
+<p><code>attribute boolean isHidden;</code></p>
+</div><h4 id='method.SetDocumentInternal' class="method"><span id='SetDocumentInternal.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDocumentInternal' class='fnname'>SetDocumentInternal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocument.html" title="struct xpcom::interfaces::nsIDocument">nsIDocument</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aForceReuseInnerWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#781-783' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript] void setDocumentInternal (in nsIDocument aDocument, in boolean aForceReuseInnerWindow);</code></p>
+</div><h4 id='method.ScrollToNode' class="method"><span id='ScrollToNode.v' class='invisible'><code>pub unsafe fn <a href='#method.ScrollToNode' class='fnname'>ScrollToNode</a>(&amp;self, node: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#812-814' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void scrollToNode (in nsIDOMNode node);</code></p>
+</div><h4 id='method.GetTextZoom' class="method"><span id='GetTextZoom.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTextZoom' class='fnname'>GetTextZoom</a>(&amp;self, aTextZoom: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#824-826' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** The amount by which to scale all text. Default is 1.0. */
+</code></pre>
+
+<p><code>attribute float textZoom;</code></p>
+</div><h4 id='method.SetTextZoom' class="method"><span id='SetTextZoom.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTextZoom' class='fnname'>SetTextZoom</a>(&amp;self, aTextZoom: <a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#836-838' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** The amount by which to scale all text. Default is 1.0. */
+</code></pre>
+
+<p><code>attribute float textZoom;</code></p>
+</div><h4 id='method.GetEffectiveTextZoom' class="method"><span id='GetEffectiveTextZoom.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEffectiveTextZoom' class='fnname'>GetEffectiveTextZoom</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEffectiveTextZoom: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#848-850' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** The actual text zoom in effect, as modified by the system font scale. */
+</code></pre>
+
+<p><code>readonly attribute float effectiveTextZoom;</code></p>
+</div><h4 id='method.GetFullZoom' class="method"><span id='GetFullZoom.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFullZoom' class='fnname'>GetFullZoom</a>(&amp;self, aFullZoom: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#860-862' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** The amount by which to scale all lengths. Default is 1.0. */
+</code></pre>
+
+<p><code>attribute float fullZoom;</code></p>
+</div><h4 id='method.SetFullZoom' class="method"><span id='SetFullZoom.v' class='invisible'><code>pub unsafe fn <a href='#method.SetFullZoom' class='fnname'>SetFullZoom</a>(&amp;self, aFullZoom: <a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#872-874' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** The amount by which to scale all lengths. Default is 1.0. */
+</code></pre>
+
+<p><code>attribute float fullZoom;</code></p>
+</div><h4 id='method.GetDeviceFullZoom' class="method"><span id='GetDeviceFullZoom.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDeviceFullZoom' class='fnname'>GetDeviceFullZoom</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDeviceFullZoom: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#893-895' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The actual full zoom in effect, as modified by the device context.
+   * For a requested full zoom, the device context may choose a slightly
+   * different effectiveFullZoom to accomodate integer rounding of app units
+   * per dev pixel. This property returns the actual zoom amount in use,
+   * though it may not be good user experience to report that a requested zoom
+   * of 90% is actually 89.1%, for example. This value is provided primarily to
+   * support media queries of dppx values, because those queries are matched
+   * against the actual native device pixel ratio and the actual full zoom.
+   */
+</code></pre>
+
+<p><code>readonly attribute float deviceFullZoom;</code></p>
+</div><h4 id='method.GetOverrideDPPX' class="method"><span id='GetOverrideDPPX.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOverrideDPPX' class='fnname'>GetOverrideDPPX</a>(&amp;self, aOverrideDPPX: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#909-911' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The value used to override devicePixelRatio and media queries dppx.
+   * Default is 0.0, that means no overriding is done (only a positive value
+   * is applied).
+   */
+</code></pre>
+
+<p><code>attribute float overrideDPPX;</code></p>
+</div><h4 id='method.SetOverrideDPPX' class="method"><span id='SetOverrideDPPX.v' class='invisible'><code>pub unsafe fn <a href='#method.SetOverrideDPPX' class='fnname'>SetOverrideDPPX</a>(&amp;self, aOverrideDPPX: <a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#925-927' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The value used to override devicePixelRatio and media queries dppx.
+   * Default is 0.0, that means no overriding is done (only a positive value
+   * is applied).
+   */
+</code></pre>
+
+<p><code>attribute float overrideDPPX;</code></p>
+</div><h4 id='method.GetAuthorStyleDisabled' class="method"><span id='GetAuthorStyleDisabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAuthorStyleDisabled' class='fnname'>GetAuthorStyleDisabled</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAuthorStyleDisabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#937-939' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Disable entire author style level (including HTML presentation hints) */
+</code></pre>
+
+<p><code>attribute boolean authorStyleDisabled;</code></p>
+</div><h4 id='method.SetAuthorStyleDisabled' class="method"><span id='SetAuthorStyleDisabled.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAuthorStyleDisabled' class='fnname'>SetAuthorStyleDisabled</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAuthorStyleDisabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#949-951' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Disable entire author style level (including HTML presentation hints) */
+</code></pre>
+
+<p><code>attribute boolean authorStyleDisabled;</code></p>
+</div><h4 id='method.GetForceCharacterSet' class="method"><span id='GetForceCharacterSet.v' class='invisible'><code>pub unsafe fn <a href='#method.GetForceCharacterSet' class='fnname'>GetForceCharacterSet</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aForceCharacterSet: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#964-966' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * XXX comm-central only: bug 829543. Not the Character Encoding menu in
+   * browser!
+   */
+</code></pre>
+
+<p><code>attribute ACString forceCharacterSet;</code></p>
+</div><h4 id='method.SetForceCharacterSet' class="method"><span id='SetForceCharacterSet.v' class='invisible'><code>pub unsafe fn <a href='#method.SetForceCharacterSet' class='fnname'>SetForceCharacterSet</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aForceCharacterSet: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#979-981' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * XXX comm-central only: bug 829543. Not the Character Encoding menu in
+   * browser!
+   */
+</code></pre>
+
+<p><code>attribute ACString forceCharacterSet;</code></p>
+</div><h4 id='method.GetHintCharacterSet' class="method"><span id='GetHintCharacterSet.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHintCharacterSet' class='fnname'>GetHintCharacterSet</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHintCharacterSet: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#993-995' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * XXX comm-central only: bug 829543.
+   */
+</code></pre>
+
+<p><code>attribute ACString hintCharacterSet;</code></p>
+</div><h4 id='method.SetHintCharacterSet' class="method"><span id='SetHintCharacterSet.v' class='invisible'><code>pub unsafe fn <a href='#method.SetHintCharacterSet' class='fnname'>SetHintCharacterSet</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHintCharacterSet: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1007-1009' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * XXX comm-central only: bug 829543.
+   */
+</code></pre>
+
+<p><code>attribute ACString hintCharacterSet;</code></p>
+</div><h4 id='method.GetHintCharacterSetSource' class="method"><span id='GetHintCharacterSetSource.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHintCharacterSetSource' class='fnname'>GetHintCharacterSetSource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHintCharacterSetSource: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1021-1023' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * XXX comm-central only: bug 829543.
+   */
+</code></pre>
+
+<p><code>attribute int32_t hintCharacterSetSource;</code></p>
+</div><h4 id='method.SetHintCharacterSetSource' class="method"><span id='SetHintCharacterSetSource.v' class='invisible'><code>pub unsafe fn <a href='#method.SetHintCharacterSetSource' class='fnname'>SetHintCharacterSetSource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHintCharacterSetSource: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1035-1037' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * XXX comm-central only: bug 829543.
+   */
+</code></pre>
+
+<p><code>attribute int32_t hintCharacterSetSource;</code></p>
+</div><h4 id='method.GetContentSize' class="method"><span id='GetContentSize.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentSize' class='fnname'>GetContentSize</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;width: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;height: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1049-1051' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Requests the size of the content to the container.
+   */
+</code></pre>
+
+<p><code>void getContentSize (out long width, out long height);</code></p>
+</div><h4 id='method.GetContentSizeConstrained' class="method"><span id='GetContentSizeConstrained.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentSizeConstrained' class='fnname'>GetContentSizeConstrained</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;maxWidth: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;maxHeight: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;width: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;height: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1067-1069' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the preferred width and height of the content, constrained to the
+   * given maximum values. If either maxWidth or maxHeight is less than zero,
+   * that dimension is not constrained.
+   *
+   * All input and output values are in device pixels, rather than CSS pixels.
+   */
+</code></pre>
+
+<p><code>void getContentSizeConstrained (in long maxWidth, in long maxHeight, out long width, out long height);</code></p>
+</div><h4 id='method.GetMinFontSize' class="method"><span id='GetMinFontSize.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMinFontSize' class='fnname'>GetMinFontSize</a>(&amp;self, aMinFontSize: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1079-1081' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** The minimum font size  */
+</code></pre>
+
+<p><code>attribute long minFontSize;</code></p>
+</div><h4 id='method.SetMinFontSize' class="method"><span id='SetMinFontSize.v' class='invisible'><code>pub unsafe fn <a href='#method.SetMinFontSize' class='fnname'>SetMinFontSize</a>(&amp;self, aMinFontSize: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1091-1093' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** The minimum font size  */
+</code></pre>
+
+<p><code>attribute long minFontSize;</code></p>
+</div><h4 id='method.PausePainting' class="method"><span id='PausePainting.v' class='invisible'><code>pub unsafe fn <a href='#method.PausePainting' class='fnname'>PausePainting</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1117-1119' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Instruct the refresh driver to discontinue painting until further
+   * notice.
+   */
+</code></pre>
+
+<p><code>void pausePainting ();</code></p>
+</div><h4 id='method.ResumePainting' class="method"><span id='ResumePainting.v' class='invisible'><code>pub unsafe fn <a href='#method.ResumePainting' class='fnname'>ResumePainting</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1132-1134' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Instruct the refresh driver to resume painting after a previous call to
+   * pausePainting().
+   */
+</code></pre>
+
+<p><code>void resumePainting ();</code></p>
+</div><h4 id='method.EmulateMedium' class="method"><span id='EmulateMedium.v' class='invisible'><code>pub unsafe fn <a href='#method.EmulateMedium' class='fnname'>EmulateMedium</a>(&amp;self, aMediaType: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1140-1142' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void emulateMedium (in AString aMediaType);</code></p>
+</div><h4 id='method.StopEmulatingMedium' class="method"><span id='StopEmulatingMedium.v' class='invisible'><code>pub unsafe fn <a href='#method.StopEmulatingMedium' class='fnname'>StopEmulatingMedium</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#1148-1150' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void stopEmulatingMedium ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">765554710</span>, <span class="number">30801</span>, <span class="number">19013</span>, [<span class="number">167</span>, <span class="number">168</span>, <span class="number">0</span>, <span class="number">179</span>, <span class="number">96</span>, <span class="number">224</span>, <span class="number">21</span>, <span class="number">149</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentViewer.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

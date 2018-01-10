@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsINavBookmarksService` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsINavBookmarksService">
+
+    <title>xpcom::interfaces::nsINavBookmarksService - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsINavBookmarksService</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetPlacesRoot">GetPlacesRoot</a><a href="#method.GetBookmarksMenuFolder">GetBookmarksMenuFolder</a><a href="#method.GetTagsFolder">GetTagsFolder</a><a href="#method.GetUnfiledBookmarksFolder">GetUnfiledBookmarksFolder</a><a href="#method.GetToolbarFolder">GetToolbarFolder</a><a href="#method.GetMobileFolder">GetMobileFolder</a><a href="#method.InsertBookmark">InsertBookmark</a><a href="#method.RemoveItem">RemoveItem</a><a href="#method.CreateFolder">CreateFolder</a><a href="#method.GetRemoveFolderTransaction">GetRemoveFolderTransaction</a><a href="#method.RemoveFolderChildren">RemoveFolderChildren</a><a href="#method.MoveItem">MoveItem</a><a href="#method.InsertSeparator">InsertSeparator</a><a href="#method.GetIdForItemAt">GetIdForItemAt</a><a href="#method.SetItemTitle">SetItemTitle</a><a href="#method.GetItemTitle">GetItemTitle</a><a href="#method.SetItemDateAdded">SetItemDateAdded</a><a href="#method.GetItemDateAdded">GetItemDateAdded</a><a href="#method.SetItemLastModified">SetItemLastModified</a><a href="#method.GetItemLastModified">GetItemLastModified</a><a href="#method.GetBookmarkURI">GetBookmarkURI</a><a href="#method.GetItemIndex">GetItemIndex</a><a href="#method.SetItemIndex">SetItemIndex</a><a href="#method.GetItemType">GetItemType</a><a href="#method.ChangeBookmarkURI">ChangeBookmarkURI</a><a href="#method.GetFolderIdForItem">GetFolderIdForItem</a><a href="#method.GetBookmarkIdsForURI">GetBookmarkIdsForURI</a><a href="#method.SetKeywordForBookmark">SetKeywordForBookmark</a><a href="#method.GetKeywordForBookmark">GetKeywordForBookmark</a><a href="#method.AddObserver">AddObserver</a><a href="#method.RemoveObserver">RemoveObserver</a><a href="#method.GetObservers">GetObservers</a><a href="#method.RunInBatchMode">RunInBatchMode</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsINavBookmarksService', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsINavBookmarksService</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#434-443' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsINavBookmarksService { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsINavBookmarksService : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * The BookmarksService interface provides methods for managing bookmarked
+ * history items.  Bookmarks consist of a set of user-customizable
+ * folders.  A URI in history can be contained in one or more such folders.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINavBookmarksService.html" title="struct xpcom::interfaces::nsINavBookmarksService">nsINavBookmarksService</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#483-489' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsINavBookmarksServiceCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#486-488' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsINavBookmarksService</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINavBookmarksService.html" title="struct xpcom::interfaces::nsINavBookmarksService">nsINavBookmarksService</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#629-1330' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.DEFAULT_INDEX' class="associatedconstant"><span id='DEFAULT_INDEX.v' class='invisible'><code>pub const <a href='#associatedconstant.DEFAULT_INDEX' class="constant"><b>DEFAULT_INDEX</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DEFAULT_INDEX</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * This value should be used for APIs that allow passing in an index
+   * where an index is not known, or not required to be specified.
+   * e.g.: When appending an item to a folder.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_BOOKMARK' class="associatedconstant"><span id='TYPE_BOOKMARK.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_BOOKMARK' class="constant"><b>TYPE_BOOKMARK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_BOOKMARK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.TYPE_FOLDER' class="associatedconstant"><span id='TYPE_FOLDER.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_FOLDER' class="constant"><b>TYPE_FOLDER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_FOLDER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.TYPE_SEPARATOR' class="associatedconstant"><span id='TYPE_SEPARATOR.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_SEPARATOR' class="constant"><b>TYPE_SEPARATOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_SEPARATOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.TYPE_DYNAMIC_CONTAINER' class="associatedconstant"><span id='TYPE_DYNAMIC_CONTAINER.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_DYNAMIC_CONTAINER' class="constant"><b>TYPE_DYNAMIC_CONTAINER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_DYNAMIC_CONTAINER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.SOURCE_DEFAULT' class="associatedconstant"><span id='SOURCE_DEFAULT.v' class='invisible'><code>pub const <a href='#associatedconstant.SOURCE_DEFAULT' class="constant"><b>SOURCE_DEFAULT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SOURCE_DEFAULT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.SOURCE_SYNC' class="associatedconstant"><span id='SOURCE_SYNC.v' class='invisible'><code>pub const <a href='#associatedconstant.SOURCE_SYNC' class="constant"><b>SOURCE_SYNC</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SOURCE_SYNC</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SOURCE_IMPORT' class="associatedconstant"><span id='SOURCE_IMPORT.v' class='invisible'><code>pub const <a href='#associatedconstant.SOURCE_IMPORT' class="constant"><b>SOURCE_IMPORT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SOURCE_IMPORT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.SOURCE_IMPORT_REPLACE' class="associatedconstant"><span id='SOURCE_IMPORT_REPLACE.v' class='invisible'><code>pub const <a href='#associatedconstant.SOURCE_IMPORT_REPLACE' class="constant"><b>SOURCE_IMPORT_REPLACE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SOURCE_IMPORT_REPLACE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.SOURCE_SYNC_REPARENT_REMOVED_FOLDER_CHILDREN' class="associatedconstant"><span id='SOURCE_SYNC_REPARENT_REMOVED_FOLDER_CHILDREN.v' class='invisible'><code>pub const <a href='#associatedconstant.SOURCE_SYNC_REPARENT_REMOVED_FOLDER_CHILDREN' class="constant"><b>SOURCE_SYNC_REPARENT_REMOVED_FOLDER_CHILDREN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SOURCE_SYNC_REPARENT_REMOVED_FOLDER_CHILDREN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.SYNC_STATUS_UNKNOWN' class="associatedconstant"><span id='SYNC_STATUS_UNKNOWN.v' class='invisible'><code>pub const <a href='#associatedconstant.SYNC_STATUS_UNKNOWN' class="constant"><b>SYNC_STATUS_UNKNOWN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SYNC_STATUS_UNKNOWN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Sync status flags.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SYNC_STATUS_NEW' class="associatedconstant"><span id='SYNC_STATUS_NEW.v' class='invisible'><code>pub const <a href='#associatedconstant.SYNC_STATUS_NEW' class="constant"><b>SYNC_STATUS_NEW</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SYNC_STATUS_NEW</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SYNC_STATUS_NORMAL' class="associatedconstant"><span id='SYNC_STATUS_NORMAL.v' class='invisible'><code>pub const <a href='#associatedconstant.SYNC_STATUS_NORMAL' class="constant"><b>SYNC_STATUS_NORMAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SYNC_STATUS_NORMAL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.GetPlacesRoot' class="method"><span id='GetPlacesRoot.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPlacesRoot' class='fnname'>GetPlacesRoot</a>(&amp;self, aPlacesRoot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#692-694' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The item ID of the Places root.
+   */
+</code></pre>
+
+<p><code>readonly attribute long long placesRoot;</code></p>
+</div><h4 id='method.GetBookmarksMenuFolder' class="method"><span id='GetBookmarksMenuFolder.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBookmarksMenuFolder' class='fnname'>GetBookmarksMenuFolder</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBookmarksMenuFolder: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#706-708' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The item ID of the bookmarks menu folder.
+   */
+</code></pre>
+
+<p><code>readonly attribute long long bookmarksMenuFolder;</code></p>
+</div><h4 id='method.GetTagsFolder' class="method"><span id='GetTagsFolder.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTagsFolder' class='fnname'>GetTagsFolder</a>(&amp;self, aTagsFolder: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#720-722' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The item ID of the top-level folder that contain the tag &quot;folders&quot;.
+   */
+</code></pre>
+
+<p><code>readonly attribute long long tagsFolder;</code></p>
+</div><h4 id='method.GetUnfiledBookmarksFolder' class="method"><span id='GetUnfiledBookmarksFolder.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUnfiledBookmarksFolder' class='fnname'>GetUnfiledBookmarksFolder</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUnfiledBookmarksFolder: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#734-736' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * The item ID of the unfiled-bookmarks folder.
+  */
+</code></pre>
+
+<p><code>readonly attribute long long unfiledBookmarksFolder;</code></p>
+</div><h4 id='method.GetToolbarFolder' class="method"><span id='GetToolbarFolder.v' class='invisible'><code>pub unsafe fn <a href='#method.GetToolbarFolder' class='fnname'>GetToolbarFolder</a>(&amp;self, aToolbarFolder: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#748-750' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The item ID of the personal toolbar folder.
+   */
+</code></pre>
+
+<p><code>readonly attribute long long toolbarFolder;</code></p>
+</div><h4 id='method.GetMobileFolder' class="method"><span id='GetMobileFolder.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMobileFolder' class='fnname'>GetMobileFolder</a>(&amp;self, aMobileFolder: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#762-764' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The item ID of the mobile bookmarks folder.
+   */
+</code></pre>
+
+<p><code>readonly attribute long long mobileFolder;</code></p>
+</div><h4 id='method.InsertBookmark' class="method"><span id='InsertBookmark.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertBookmark' class='fnname'>InsertBookmark</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aParentId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTitle: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aGuid: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#798-800' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Inserts a child bookmark into the given folder.
+   *
+   *  @param aParentId
+   *         The id of the parent folder
+   *  @param aURI
+   *         The URI to insert
+   *  @param aIndex
+   *         The index to insert at, or DEFAULT_INDEX to append
+   *  @param aTitle
+   *         The title for the new bookmark
+   *  @param [optional] aGuid
+   *         The GUID to be set for the new item.  If not set, a new GUID is
+   *         generated.  Unless you&#39;ve a very sound reason, such as an undo
+   *         manager implementation, do not pass this argument.
+   *  @param [optional] aSource
+   *         The change source. This is forwarded to all bookmark observers,
+   *         allowing them to distinguish between insertions from different
+   *         callers. Defaults to SOURCE_DEFAULT if omitted.
+   *  @return The ID of the newly-created bookmark.
+   *
+   *  @note aTitle will be truncated to TITLE_LENGTH_MAX and
+   *        aURI will be truncated to URI_LENGTH_MAX.
+   *  @throws if aGuid is malformed.
+   */
+</code></pre>
+
+<p><code>long long insertBookmark (in long long aParentId, in nsIURI aURI, in long aIndex, in AUTF8String aTitle, [optional] in ACString aGuid, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.RemoveItem' class="method"><span id='RemoveItem.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveItem' class='fnname'>RemoveItem</a>(&amp;self, aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#817-819' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes a child item. Used to delete a bookmark or separator.
+   *  @param aItemId
+   *         The child item to remove
+   *  @param [optional] aSource
+   *         The change source, forwarded to all bookmark observers. Defaults
+   *         to SOURCE_DEFAULT.
+   */
+</code></pre>
+
+<p><code>void removeItem (in long long aItemId, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.CreateFolder' class="method"><span id='CreateFolder.v' class='invisible'><code>pub unsafe fn <a href='#method.CreateFolder' class='fnname'>CreateFolder</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aParentFolder: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;index: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aGuid: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#846-848' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Creates a new child folder and inserts it under the given parent.
+   *  @param aParentFolder
+   *         The id of the parent folder
+   *  @param aName
+   *         The name of the new folder
+   *  @param aIndex
+   *         The index to insert at, or DEFAULT_INDEX to append
+   *  @param [optional] aGuid
+   *         The GUID to be set for the new item.  If not set, a new GUID is
+   *         generated.  Unless you&#39;ve a very sound reason, such as an undo
+   *         manager implementation, do not pass this argument.
+   *  @param [optional] aSource
+   *         The change source, forwarded to all bookmark observers. Defaults
+   *         to SOURCE_DEFAULT.
+   *  @return The ID of the newly-inserted folder.
+   *  @throws if aGuid is malformed.
+   */
+</code></pre>
+
+<p><code>long long createFolder (in long long aParentFolder, in AUTF8String name, in long index, [optional] in ACString aGuid, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.GetRemoveFolderTransaction' class="method"><span id='GetRemoveFolderTransaction.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRemoveFolderTransaction' class='fnname'>GetRemoveFolderTransaction</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITransaction.html" title="struct xpcom::interfaces::nsITransaction">nsITransaction</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#876-878' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets an undo-able transaction for removing a folder from the bookmarks
+   * tree.
+   *  @param aItemId
+   *         The id of the folder to remove.
+   *  @param [optional] aSource
+   *         The change source, forwarded to all bookmark observers. Defaults
+   *         to SOURCE_DEFAULT.
+   *  @return An object implementing nsITransaction that can be used to undo
+   *          or redo the action.
+   *
+   * This method exists because complex delete-&gt;undo operations rely on
+   * recreated folders to have the same ID they had before they were deleted,
+   * so that any other items deleted in different transactions can be
+   * re-inserted correctly. This provides a safe encapsulation of this
+   * functionality without exposing the ability to recreate folders with
+   * specific IDs (potentially dangerous if abused by other code!) in the
+   * public API.
+   */
+</code></pre>
+
+<p><code>nsITransaction getRemoveFolderTransaction (in long long aItemId, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.RemoveFolderChildren' class="method"><span id='RemoveFolderChildren.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveFolderChildren' class='fnname'>RemoveFolderChildren</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#896-898' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Convenience function for container services.  Removes
+   * all children of the given folder.
+   *  @param aItemId
+   *         The id of the folder to remove children from.
+   *  @param [optional] aSource
+   *         The change source, forwarded to all bookmark observers. Defaults
+   *         to SOURCE_DEFAULT.
+   */
+</code></pre>
+
+<p><code>void removeFolderChildren (in long long aItemId, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.MoveItem' class="method"><span id='MoveItem.v' class='invisible'><code>pub unsafe fn <a href='#method.MoveItem' class='fnname'>MoveItem</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewParentId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#923-925' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Moves an item to a different container, preserving its contents.
+   *  @param aItemId
+   *         The id of the item to move
+   *  @param aNewParentId
+   *         The id of the new parent
+   *  @param aIndex
+   *         The index under aNewParent, or DEFAULT_INDEX to append
+   *  @param [optional] aSource
+   *         The change source, forwarded to all bookmark observers. Defaults
+   *         to SOURCE_DEFAULT.
+   *
+   * NOTE: When moving down in the same container we take into account the
+   * removal of the original item. If you want to move from index X to
+   * index Y &gt; X you must use moveItem(id, folder, Y + 1)
+   */
+</code></pre>
+
+<p><code>void moveItem (in long long aItemId, in long long aNewParentId, in long aIndex, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.InsertSeparator' class="method"><span id='InsertSeparator.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertSeparator' class='fnname'>InsertSeparator</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aParentId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aGuid: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#951-953' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Inserts a bookmark separator into the given folder at the given index.
+   * The separator can be removed using removeChildAt().
+   *  @param aParentId
+   *         The id of the parent folder
+   *  @param aIndex
+   *         The separator&#39;s index under folder, or DEFAULT_INDEX to append
+   *  @param [optional] aGuid
+   *         The GUID to be set for the new item.  If not set, a new GUID is
+   *         generated.  Unless you&#39;ve a very sound reason, such as an undo
+   *         manager implementation, do not pass this argument.
+   *  @param [optional] aSource
+   *         The change source, forwarded to all bookmark observers. Defaults
+   *         to SOURCE_DEFAULT.
+   *  @return The ID of the new separator.
+   *  @throws if aGuid is malformed.
+   */
+</code></pre>
+
+<p><code>long long insertSeparator (in long long aParentId, in long aIndex, [optional] in ACString aGuid, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.GetIdForItemAt' class="method"><span id='GetIdForItemAt.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIdForItemAt' class='fnname'>GetIdForItemAt</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aParentId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#971-973' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the itemId given the containing folder and the index.
+   *  @param aParentId
+   *         The id of the diret parent folder of the item
+   *  @param aIndex
+   *         The index of the item within the parent folder.
+   *         Pass DEFAULT_INDEX for the last item.
+   *  @return The ID of the found item, -1 if the item does not exists.
+   */
+</code></pre>
+
+<p><code>long long getIdForItemAt (in long long aParentId, in long aIndex);</code></p>
+</div><h4 id='method.SetItemTitle' class="method"><span id='SetItemTitle.v' class='invisible'><code>pub unsafe fn <a href='#method.SetItemTitle' class='fnname'>SetItemTitle</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTitle: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#994-996' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the title for an item.
+   *  @param aItemId
+   *         The id of the item whose title should be updated.
+   *  @param aTitle
+   *         The new title for the bookmark.
+   *  @param [optional] aSource
+   *         The change source, forwarded to all bookmark observers. Defaults
+   *         to SOURCE_DEFAULT.
+   *
+   *  @note  aTitle will be truncated to TITLE_LENGTH_MAX.
+   */
+</code></pre>
+
+<p><code>void setItemTitle (in long long aItemId, in AUTF8String aTitle, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.GetItemTitle' class="method"><span id='GetItemTitle.v' class='invisible'><code>pub unsafe fn <a href='#method.GetItemTitle' class='fnname'>GetItemTitle</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1014-1016' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the title for an item.
+   *
+   * If no item title is available it will return a void string (null in JS).
+   *
+   *  @param aItemId
+   *         The id of the item whose title should be retrieved
+   *  @return The title of the item.
+   */
+</code></pre>
+
+<p><code>AUTF8String getItemTitle (in long long aItemId);</code></p>
+</div><h4 id='method.SetItemDateAdded' class="method"><span id='SetItemDateAdded.v' class='invisible'><code>pub unsafe fn <a href='#method.SetItemDateAdded' class='fnname'>SetItemDateAdded</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDateAdded: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1037-1039' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the date added time for an item.
+   *
+   * @param aItemId
+   *        the id of the item whose date added time should be updated.
+   * @param aDateAdded
+   *        the new date added value in microseconds.  Note that it is rounded
+   *        down to milliseconds precision.
+   *  @param [optional] aSource
+   *         The change source, forwarded to all bookmark observers. Defaults
+   *         to SOURCE_DEFAULT.
+   */
+</code></pre>
+
+<p><code>void setItemDateAdded (in long long aItemId, in PRTime aDateAdded, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.GetItemDateAdded' class="method"><span id='GetItemDateAdded.v' class='invisible'><code>pub unsafe fn <a href='#method.GetItemDateAdded' class='fnname'>GetItemDateAdded</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1056-1058' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the date added time for an item.
+   *
+   * @param aItemId
+   *        the id of the item whose date added time should be retrieved.
+   *
+   * @return the date added value in microseconds.
+   */
+</code></pre>
+
+<p><code>PRTime getItemDateAdded (in long long aItemId);</code></p>
+</div><h4 id='method.SetItemLastModified' class="method"><span id='SetItemLastModified.v' class='invisible'><code>pub unsafe fn <a href='#method.SetItemLastModified' class='fnname'>SetItemLastModified</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLastModified: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1084-1086' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the last modified time for an item.
+   *
+   * @param aItemId
+   *        the id of the item whose last modified time should be updated.
+   * @param aLastModified
+   *        the new last modified value in microseconds.  Note that it is
+   *        rounded down to milliseconds precision.
+   * @param [optional] aSource
+   *        The change source, forwarded to all bookmark observers. Defaults
+   *        to SOURCE_DEFAULT.
+   *
+   * @note This is the only method that will send an itemChanged notification
+   *       for the property.  lastModified will still be updated in
+   *       any other method that changes an item property, but we will send
+   *       the corresponding itemChanged notification instead.
+   */
+</code></pre>
+
+<p><code>void setItemLastModified (in long long aItemId, in PRTime aLastModified, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.GetItemLastModified' class="method"><span id='GetItemLastModified.v' class='invisible'><code>pub unsafe fn <a href='#method.GetItemLastModified' class='fnname'>GetItemLastModified</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1106-1108' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the last modified time for an item.
+   *
+   * @param aItemId
+   *        the id of the item whose last modified time should be retrieved.
+   *
+   * @return the date added value in microseconds.
+   *
+   * @note When an item is added lastModified is set to the same value as
+   *       dateAdded.
+   */
+</code></pre>
+
+<p><code>PRTime getItemLastModified (in long long aItemId);</code></p>
+</div><h4 id='method.GetBookmarkURI' class="method"><span id='GetBookmarkURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBookmarkURI' class='fnname'>GetBookmarkURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1120-1122' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the URI for a bookmark item.
+   */
+</code></pre>
+
+<p><code>nsIURI getBookmarkURI (in long long aItemId);</code></p>
+</div><h4 id='method.GetItemIndex' class="method"><span id='GetItemIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.GetItemIndex' class='fnname'>GetItemIndex</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1134-1136' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the index for an item.
+   */
+</code></pre>
+
+<p><code>long getItemIndex (in long long aItemId);</code></p>
+</div><h4 id='method.SetItemIndex' class="method"><span id='SetItemIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.SetItemIndex' class='fnname'>SetItemIndex</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1162-1164' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Changes the index for a item. This method does not change the indices of
+   * any other items in the same folder, so ensure that the new index does not
+   * already exist, or change the index of other items accordingly, otherwise
+   * the indices will become corrupted.
+   *
+   * WARNING: This is API is intended for scenarios such as folder sorting,
+   *          where the caller manages the indices of *all* items in the folder.
+   *          You must always ensure each index is unique after a reordering.
+   *
+   *  @param aItemId    The id of the item to modify
+   *  @param aNewIndex  The new index
+   *  @param aSource    The optional change source, forwarded to all bookmark
+   *                    observers. Defaults to SOURCE_DEFAULT.
+   *
+   *  @throws If aNewIndex is out of bounds.
+   */
+</code></pre>
+
+<p><code>void setItemIndex (in long long aItemId, in long aNewIndex, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.GetItemType' class="method"><span id='GetItemType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetItemType' class='fnname'>GetItemType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1177-1179' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get an item&#39;s type (bookmark, separator, folder).
+   * The type is one of the TYPE_* constants defined above.
+   */
+</code></pre>
+
+<p><code>unsigned short getItemType (in long long aItemId);</code></p>
+</div><h4 id='method.ChangeBookmarkURI' class="method"><span id='ChangeBookmarkURI.v' class='invisible'><code>pub unsafe fn <a href='#method.ChangeBookmarkURI' class='fnname'>ChangeBookmarkURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1193-1195' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Change the bookmarked URI for a bookmark.
+   * This changes which &quot;place&quot; the bookmark points at,
+   * which means all annotations, etc are carried along.
+   */
+</code></pre>
+
+<p><code>void changeBookmarkURI (in long long aItemId, in nsIURI aNewURI, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.GetFolderIdForItem' class="method"><span id='GetFolderIdForItem.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFolderIdForItem' class='fnname'>GetFolderIdForItem</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1207-1209' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the parent folder&#39;s id for an item.
+   */
+</code></pre>
+
+<p><code>long long getFolderIdForItem (in long long aItemId);</code></p>
+</div><h4 id='method.GetBookmarkIdsForURI' class="method"><span id='GetBookmarkIdsForURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBookmarkIdsForURI' class='fnname'>GetBookmarkIdsForURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;count: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;bookmarks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1221-1223' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the list of bookmark ids that contain the given URI.
+   */
+</code></pre>
+
+<p><code>void getBookmarkIdsForURI (in nsIURI aURI, [optional] out unsigned long count, [array, size_is (count), retval] out long long bookmarks);</code></p>
+</div><h4 id='method.SetKeywordForBookmark' class="method"><span id='SetKeywordForBookmark.v' class='invisible'><code>pub unsafe fn <a href='#method.SetKeywordForBookmark' class='fnname'>SetKeywordForBookmark</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aKeyword: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1240-1242' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Associates the given keyword with the given bookmark.
+   *
+   * Use an empty keyword to clear the keyword associated with the URI.
+   * In both of these cases, succeeds but does nothing if the URL/keyword is not found.
+   *
+   * @deprecated Use PlacesUtils.keywords.insert() API instead.
+   */
+</code></pre>
+
+<p><code>void setKeywordForBookmark (in long long aItemId, in AString aKeyword, [optional] in unsigned short aSource);</code></p>
+</div><h4 id='method.GetKeywordForBookmark' class="method"><span id='GetKeywordForBookmark.v' class='invisible'><code>pub unsafe fn <a href='#method.GetKeywordForBookmark' class='fnname'>GetKeywordForBookmark</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItemId: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1257-1259' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Retrieves the keyword for the given bookmark. Will be void string
+   * (null in JS) if no such keyword is found.
+   *
+   * @deprecated Use PlacesUtils.keywords.fetch() API instead.
+   */
+</code></pre>
+
+<p><code>AString getKeywordForBookmark (in long long aItemId);</code></p>
+</div><h4 id='method.AddObserver' class="method"><span id='AddObserver.v' class='invisible'><code>pub unsafe fn <a href='#method.AddObserver' class='fnname'>AddObserver</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;observer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavBookmarkObserver.html" title="struct xpcom::interfaces::nsINavBookmarkObserver">nsINavBookmarkObserver</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;ownsWeak: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1274-1276' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Adds a bookmark observer. If ownsWeak is false, the bookmark service will
+   * keep an owning reference to the observer.  If ownsWeak is true, then
+   * aObserver must implement nsISupportsWeakReference, and the bookmark
+   * service will keep a weak reference to the observer.
+   */
+</code></pre>
+
+<p><code>void addObserver (in nsINavBookmarkObserver observer, [optional] in boolean ownsWeak);</code></p>
+</div><h4 id='method.RemoveObserver' class="method"><span id='RemoveObserver.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveObserver' class='fnname'>RemoveObserver</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;observer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavBookmarkObserver.html" title="struct xpcom::interfaces::nsINavBookmarkObserver">nsINavBookmarkObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1288-1290' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes a bookmark observer.
+   */
+</code></pre>
+
+<p><code>void removeObserver (in nsINavBookmarkObserver observer);</code></p>
+</div><h4 id='method.GetObservers' class="method"><span id='GetObservers.v' class='invisible'><code>pub unsafe fn <a href='#method.GetObservers' class='fnname'>GetObservers</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;count: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;observers: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavBookmarkObserver.html" title="struct xpcom::interfaces::nsINavBookmarkObserver">nsINavBookmarkObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1302-1304' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets an array of registered nsINavBookmarkObserver objects.
+   */
+</code></pre>
+
+<p><code>void getObservers ([optional] out unsigned long count, [array, size_is (count), retval] out nsINavBookmarkObserver observers);</code></p>
+</div><h4 id='method.RunInBatchMode' class="method"><span id='RunInBatchMode.v' class='invisible'><code>pub unsafe fn <a href='#method.RunInBatchMode' class='fnname'>RunInBatchMode</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryBatchCallback.html" title="struct xpcom::interfaces::nsINavHistoryBatchCallback">nsINavHistoryBatchCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUserData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#1325-1327' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Runs the passed callback inside of a database transaction.
+   * Use this when a lot of things are about to change, for example
+   * adding or deleting a large number of bookmark items. Calls can
+   * be nested. Observers are notified when batches begin and end, via
+   * nsINavBookmarkObserver.onBeginUpdateBatch/onEndUpdateBatch.
+   *
+   * @param aCallback
+   *        nsINavHistoryBatchCallback interface to call.
+   * @param aUserData
+   *        Opaque parameter passed to nsINavBookmarksBatchCallback
+   */
+</code></pre>
+
+<p><code>void runInBatchMode (in nsINavHistoryBatchCallback aCallback, in nsISupports aUserData);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavBookmarksService.html" title="struct xpcom::interfaces::nsINavBookmarksService">nsINavBookmarksService</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#448-451' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">609433745</span>, <span class="number">44966</span>, <span class="number">18019</span>, [<span class="number">183</span>, <span class="number">45</span>, <span class="number">49</span>, <span class="number">67</span>, <span class="number">208</span>, <span class="number">63</span>, <span class="number">27</span>, <span class="number">4</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavBookmarksService.html" title="struct xpcom::interfaces::nsINavBookmarksService">nsINavBookmarksService</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#455-464' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#457-459' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#461-463' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavBookmarksService.html" title="struct xpcom::interfaces::nsINavBookmarksService">nsINavBookmarksService</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#495-503' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavBookmarksService.rs.html#498-502' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

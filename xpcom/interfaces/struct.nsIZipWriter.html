@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIZipWriter` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIZipWriter">
+
+    <title>xpcom::interfaces::nsIZipWriter - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIZipWriter</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetComment">GetComment</a><a href="#method.SetComment">SetComment</a><a href="#method.GetInQueue">GetInQueue</a><a href="#method.GetFile">GetFile</a><a href="#method.Open">Open</a><a href="#method.GetEntry">GetEntry</a><a href="#method.HasEntry">HasEntry</a><a href="#method.AddEntryDirectory">AddEntryDirectory</a><a href="#method.AddEntryFile">AddEntryFile</a><a href="#method.AddEntryChannel">AddEntryChannel</a><a href="#method.AddEntryStream">AddEntryStream</a><a href="#method.RemoveEntry">RemoveEntry</a><a href="#method.ProcessQueue">ProcessQueue</a><a href="#method.Close">Close</a><a href="#method.AlignStoredFiles">AlignStoredFiles</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIZipWriter', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIZipWriter</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#44-53' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIZipWriter { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIZipWriter : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * nsIZipWriter
+ *
+ * An interface for a zip archiver that can be used from script.
+ *
+ * The interface supports both a synchronous method of archiving data and a
+ * queueing system to allow operations to be prepared then run in sequence
+ * with notification after completion.
+ *
+ * Operations added to the queue do not get performed until performQueue is
+ * called at which point they will be performed in the order that they were
+ * added to the queue.
+ *
+ * Operations performed on the queue will throw any errors out to the
+ * observer.
+ *
+ * An attempt to perform a synchronous operation while the background queue
+ * is in progress will throw NS_ERROR_IN_PROGRESS.
+ *
+ * Entry names should use /&#39;s as path separators and should not start with
+ * a /.
+ *
+ * It is not generally necessary to add directory entries in order to add file
+ * entries within them, however it is possible that some zip programs may
+ * experience problems what that.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIZipWriter.html" title="struct xpcom::interfaces::nsIZipWriter">nsIZipWriter</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#93-99' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIZipWriterCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#96-98' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIZipWriter</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIZipWriter.html" title="struct xpcom::interfaces::nsIZipWriter">nsIZipWriter</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#185-510' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.COMPRESSION_NONE' class="associatedconstant"><span id='COMPRESSION_NONE.v' class='invisible'><code>pub const <a href='#associatedconstant.COMPRESSION_NONE' class="constant"><b>COMPRESSION_NONE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">COMPRESSION_NONE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Some predefined compression levels
+   */
+</code></pre>
+</div><h4 id='associatedconstant.COMPRESSION_FASTEST' class="associatedconstant"><span id='COMPRESSION_FASTEST.v' class='invisible'><code>pub const <a href='#associatedconstant.COMPRESSION_FASTEST' class="constant"><b>COMPRESSION_FASTEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">COMPRESSION_FASTEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.COMPRESSION_DEFAULT' class="associatedconstant"><span id='COMPRESSION_DEFAULT.v' class='invisible'><code>pub const <a href='#associatedconstant.COMPRESSION_DEFAULT' class="constant"><b>COMPRESSION_DEFAULT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">COMPRESSION_DEFAULT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.COMPRESSION_BEST' class="associatedconstant"><span id='COMPRESSION_BEST.v' class='invisible'><code>pub const <a href='#associatedconstant.COMPRESSION_BEST' class="constant"><b>COMPRESSION_BEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">COMPRESSION_BEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+</div><h4 id='method.GetComment' class="method"><span id='GetComment.v' class='invisible'><code>pub unsafe fn <a href='#method.GetComment' class='fnname'>GetComment</a>(&amp;self, aComment: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#215-217' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets or sets the comment associated with the open zip file.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if no zip file has been opened
+   */
+</code></pre>
+
+<p><code>attribute ACString comment;</code></p>
+</div><h4 id='method.SetComment' class="method"><span id='SetComment.v' class='invisible'><code>pub unsafe fn <a href='#method.SetComment' class='fnname'>SetComment</a>(&amp;self, aComment: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#231-233' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets or sets the comment associated with the open zip file.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if no zip file has been opened
+   */
+</code></pre>
+
+<p><code>attribute ACString comment;</code></p>
+</div><h4 id='method.GetInQueue' class="method"><span id='GetInQueue.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInQueue' class='fnname'>GetInQueue</a>(&amp;self, aInQueue: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#245-247' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicates that operations on the background queue are being performed.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean inQueue;</code></p>
+</div><h4 id='method.GetFile' class="method"><span id='GetFile.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFile' class='fnname'>GetFile</a>(&amp;self, aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#259-261' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The file that the zipwriter is writing to.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIFile file;</code></p>
+</div><h4 id='method.Open' class="method"><span id='Open.v' class='invisible'><code>pub unsafe fn <a href='#method.Open' class='fnname'>Open</a>(&amp;self, aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>, aIoFlags: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#284-286' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Opens a zip file.
+   *
+   * @param aFile the zip file to open
+   * @param aIoFlags the open flags for the zip file from prio.h
+   *
+   * @throws NS_ERROR_ALREADY_INITIALIZED if a zip file is already open
+   * @throws NS_ERROR_INVALID_ARG if aFile is null
+   * @throws NS_ERROR_FILE_NOT_FOUND if aFile does not exist and flags did
+   *  not allow for creation
+   * @throws NS_ERROR_FILE_CORRUPTED if the file does not contain zip markers
+   * @throws &lt;other-error&gt; on failure to open zip file (most likely corrupt
+   *  or unsupported form)
+   */
+</code></pre>
+
+<p><code>void open (in nsIFile aFile, in int32_t aIoFlags);</code></p>
+</div><h4 id='method.GetEntry' class="method"><span id='GetEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEntry' class='fnname'>GetEntry</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aZipEntry: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIZipEntry.html" title="struct xpcom::interfaces::nsIZipEntry">nsIZipEntry</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#301-303' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns a nsIZipEntry describing a specified zip entry or null if there
+   * is no such entry in the zip file
+   *
+   * @param aZipEntry the path of the entry
+   */
+</code></pre>
+
+<p><code>nsIZipEntry getEntry (in AUTF8String aZipEntry);</code></p>
+</div><h4 id='method.HasEntry' class="method"><span id='HasEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.HasEntry' class='fnname'>HasEntry</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aZipEntry: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#317-319' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Checks whether the zipfile contains an entry specified by zipEntry.
+   *
+   * @param aZipEntry the path of the entry
+   */
+</code></pre>
+
+<p><code>boolean hasEntry (in AUTF8String aZipEntry);</code></p>
+</div><h4 id='method.AddEntryDirectory' class="method"><span id='AddEntryDirectory.v' class='invisible'><code>pub unsafe fn <a href='#method.AddEntryDirectory' class='fnname'>AddEntryDirectory</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aZipEntry: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aModTime: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aQueue: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#342-344' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Adds a new directory entry to the zip file. If aZipEntry does not end with
+   * &quot;/&quot; then it will be added.
+   *
+   * @param aZipEntry the path of the directory entry
+   * @param aModTime the modification time of the entry in microseconds
+   * @param aQueue adds the operation to the background queue. Will be
+   *        performed when processQueue is called.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if no zip file has been opened
+   * @throws NS_ERROR_FILE_ALREADY_EXISTS if the path already exists in the
+   *  file
+   * @throws NS_ERROR_IN_PROGRESS if another operation is currently in progress
+   */
+</code></pre>
+
+<p><code>void addEntryDirectory (in AUTF8String aZipEntry, in PRTime aModTime, in boolean aQueue);</code></p>
+</div><h4 id='method.AddEntryFile' class="method"><span id='AddEntryFile.v' class='invisible'><code>pub unsafe fn <a href='#method.AddEntryFile' class='fnname'>AddEntryFile</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aZipEntry: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCompression: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aQueue: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#369-371' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Adds a new file or directory to the zip file. If the specified file is
+   * a directory then this will be equivalent to a call to
+   * addEntryDirectory(aZipEntry, aFile.lastModifiedTime, aQueue)
+   *
+   * @param aZipEntry the path of the file entry
+   * @param aCompression the compression level, 0 is no compression, 9 is best
+   * @param aFile the file to get the data and modification time from
+   * @param aQueue adds the operation to the background queue. Will be
+   *        performed when processQueue is called.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if no zip file has been opened
+   * @throws NS_ERROR_FILE_ALREADY_EXISTS if the path already exists in the zip
+   * @throws NS_ERROR_IN_PROGRESS if another operation is currently in progress
+   * @throws NS_ERROR_FILE_NOT_FOUND if file does not exist
+   */
+</code></pre>
+
+<p><code>void addEntryFile (in AUTF8String aZipEntry, in int32_t aCompression, in nsIFile aFile, in boolean aQueue);</code></p>
+</div><h4 id='method.AddEntryChannel' class="method"><span id='AddEntryChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.AddEntryChannel' class='fnname'>AddEntryChannel</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aZipEntry: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aModTime: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCompression: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aChannel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aQueue: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#396-398' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Adds data from a channel to the zip file. If the operation is performed
+   * on the queue then the channel will be opened asynchronously, otherwise
+   * the channel must support being opened synchronously.
+   *
+   * @param aZipEntry the path of the file entry
+   * @param aModTime the modification time of the entry in microseconds
+   * @param aCompression the compression level, 0 is no compression, 9 is best
+   * @param aChannel the channel to get the data from
+   * @param aQueue adds the operation to the background queue. Will be
+   *        performed when processQueue is called.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if no zip file has been opened
+   * @throws NS_ERROR_FILE_ALREADY_EXISTS if the path already exists in the zip
+   * @throws NS_ERROR_IN_PROGRESS if another operation is currently in progress
+   */
+</code></pre>
+
+<p><code>void addEntryChannel (in AUTF8String aZipEntry, in PRTime aModTime, in int32_t aCompression, in nsIChannel aChannel, in boolean aQueue);</code></p>
+</div><h4 id='method.AddEntryStream' class="method"><span id='AddEntryStream.v' class='invisible'><code>pub unsafe fn <a href='#method.AddEntryStream' class='fnname'>AddEntryStream</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aZipEntry: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aModTime: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCompression: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStream: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aQueue: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#421-423' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Adds data from an input stream to the zip file.
+   *
+   * @param aZipEntry the path of the file entry
+   * @param aModTime the modification time of the entry in microseconds
+   * @param aCompression the compression level, 0 is no compression, 9 is best
+   * @param aStream the input stream to get the data from
+   * @param aQueue adds the operation to the background queue. Will be
+   *        performed when processQueue is called.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if no zip file has been opened
+   * @throws NS_ERROR_FILE_ALREADY_EXISTS if the path already exists in the zip
+   * @throws NS_ERROR_IN_PROGRESS if another operation is currently in progress
+   */
+</code></pre>
+
+<p><code>void addEntryStream (in AUTF8String aZipEntry, in PRTime aModTime, in int32_t aCompression, in nsIInputStream aStream, in boolean aQueue);</code></p>
+</div><h4 id='method.RemoveEntry' class="method"><span id='RemoveEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveEntry' class='fnname'>RemoveEntry</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aZipEntry: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aQueue: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#444-446' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes an existing entry from the zip file.
+   *
+   * @param aZipEntry the path of the entry to be removed
+   * @param aQueue adds the operation to the background queue. Will be
+   *        performed when processQueue is called.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if no zip file has been opened
+   * @throws NS_ERROR_IN_PROGRESS if another operation is currently in progress
+   * @throws NS_ERROR_FILE_NOT_FOUND if no entry with the given path exists
+   * @throws &lt;other-error&gt; on failure to update the zip file
+   */
+</code></pre>
+
+<p><code>void removeEntry (in AUTF8String aZipEntry, in boolean aQueue);</code></p>
+</div><h4 id='method.ProcessQueue' class="method"><span id='ProcessQueue.v' class='invisible'><code>pub unsafe fn <a href='#method.ProcessQueue' class='fnname'>ProcessQueue</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObserver: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRequestObserver.html" title="struct xpcom::interfaces::nsIRequestObserver">nsIRequestObserver</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContext: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#467-469' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Processes all queued items until complete or some error occurs. The
+   * observer will be notified when the first operation starts and when the
+   * last operation completes. Any failures will be passed to the observer.
+   * The zip writer will be busy until the queue is complete or some error
+   * halted processing of the queue early. In the event of an early failure,
+   * remaining items will stay in the queue and calling processQueue will
+   * continue.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if no zip file has been opened
+   * @throws NS_ERROR_IN_PROGRESS if the queue is already in progress
+   */
+</code></pre>
+
+<p><code>void processQueue (in nsIRequestObserver aObserver, in nsISupports aContext);</code></p>
+</div><h4 id='method.Close' class="method"><span id='Close.v' class='invisible'><code>pub unsafe fn <a href='#method.Close' class='fnname'>Close</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#485-487' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Closes the zip file.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if no zip file has been opened
+   * @throws NS_ERROR_IN_PROGRESS if another operation is currently in progress
+   * @throws &lt;other-error&gt; on failure to complete the zip file
+   */
+</code></pre>
+
+<p><code>void close ();</code></p>
+</div><h4 id='method.AlignStoredFiles' class="method"><span id='AlignStoredFiles.v' class='invisible'><code>pub unsafe fn <a href='#method.AlignStoredFiles' class='fnname'>AlignStoredFiles</a>(&amp;self, aAlignSize: <a class="type" href="../../xpcom/interfaces/type.uint16_t.html" title="type xpcom::interfaces::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#505-507' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Make all stored(uncompressed) files align to given alignment size.
+   *
+   * @param aAlignSize is the alignment size, valid values from 2 to 32768, and
+            must be power of 2.
+   *
+   * @throws NS_ERROR_INVALID_ARG if aAlignSize is invalid
+   * @throws &lt;other-error&gt; on failure to update the zip file
+   */
+</code></pre>
+
+<p><code>void alignStoredFiles (in uint16_t aAlignSize);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIZipWriter.html" title="struct xpcom::interfaces::nsIZipWriter">nsIZipWriter</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#58-61' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1017186128</span>, <span class="number">31102</span>, <span class="number">18978</span>, [<span class="number">188</span>, <span class="number">254</span>, <span class="number">102</span>, <span class="number">23</span>, <span class="number">11</span>, <span class="number">94</span>, <span class="number">150</span>, <span class="number">221</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIZipWriter.html" title="struct xpcom::interfaces::nsIZipWriter">nsIZipWriter</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#65-74' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#71-73' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIZipWriter.html" title="struct xpcom::interfaces::nsIZipWriter">nsIZipWriter</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#105-113' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIZipWriter.rs.html#108-112' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

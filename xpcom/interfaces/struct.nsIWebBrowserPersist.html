@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIWebBrowserPersist` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIWebBrowserPersist">
+
+    <title>xpcom::interfaces::nsIWebBrowserPersist - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIWebBrowserPersist</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetPersistFlags">GetPersistFlags</a><a href="#method.SetPersistFlags">SetPersistFlags</a><a href="#method.GetCurrentState">GetCurrentState</a><a href="#method.GetResult">GetResult</a><a href="#method.GetProgressListener">GetProgressListener</a><a href="#method.SetProgressListener">SetProgressListener</a><a href="#method.SaveURI">SaveURI</a><a href="#method.SavePrivacyAwareURI">SavePrivacyAwareURI</a><a href="#method.SaveChannel">SaveChannel</a><a href="#method.SaveDocument">SaveDocument</a><a href="#method.CancelSave">CancelSave</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsICancelable&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.Cancel">Cancel</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIWebBrowserPersist', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIWebBrowserPersist</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#21-30' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIWebBrowserPersist { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIWebBrowserPersist : nsICancelable</code></p>
+
+<pre><code class="language-text">/**
+ * Interface for persisting DOM documents and URIs to local or remote storage.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIWebBrowserPersist.html" title="struct xpcom::interfaces::nsIWebBrowserPersist">nsIWebBrowserPersist</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#70-76' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIWebBrowserPersistCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#73-75' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIWebBrowserPersist</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIWebBrowserPersist.html" title="struct xpcom::interfaces::nsIWebBrowserPersist">nsIWebBrowserPersist</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#150-667' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.PERSIST_FLAGS_NONE' class="associatedconstant"><span id='PERSIST_FLAGS_NONE.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_NONE' class="constant"><b>PERSIST_FLAGS_NONE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_NONE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/** No special persistence behaviour. */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_FROM_CACHE' class="associatedconstant"><span id='PERSIST_FLAGS_FROM_CACHE.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_FROM_CACHE' class="constant"><b>PERSIST_FLAGS_FROM_CACHE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_FROM_CACHE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/** Use cached data if present (skipping validation), else load from network */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_BYPASS_CACHE' class="associatedconstant"><span id='PERSIST_FLAGS_BYPASS_CACHE.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_BYPASS_CACHE' class="constant"><b>PERSIST_FLAGS_BYPASS_CACHE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_BYPASS_CACHE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/** Bypass the cached data. */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_IGNORE_REDIRECTED_DATA' class="associatedconstant"><span id='PERSIST_FLAGS_IGNORE_REDIRECTED_DATA.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_IGNORE_REDIRECTED_DATA' class="constant"><b>PERSIST_FLAGS_IGNORE_REDIRECTED_DATA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_IGNORE_REDIRECTED_DATA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/** Ignore any redirected data (usually adverts). */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_IGNORE_IFRAMES' class="associatedconstant"><span id='PERSIST_FLAGS_IGNORE_IFRAMES.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_IGNORE_IFRAMES' class="constant"><b>PERSIST_FLAGS_IGNORE_IFRAMES</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_IGNORE_IFRAMES</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/** Ignore IFRAME content (usually adverts). */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_NO_CONVERSION' class="associatedconstant"><span id='PERSIST_FLAGS_NO_CONVERSION.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_NO_CONVERSION' class="constant"><b>PERSIST_FLAGS_NO_CONVERSION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_NO_CONVERSION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+<pre><code class="language-text">/** Do not run the incoming data through a content converter e.g. to decompress it */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_REPLACE_EXISTING_FILES' class="associatedconstant"><span id='PERSIST_FLAGS_REPLACE_EXISTING_FILES.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_REPLACE_EXISTING_FILES' class="constant"><b>PERSIST_FLAGS_REPLACE_EXISTING_FILES</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_REPLACE_EXISTING_FILES</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+<pre><code class="language-text">/** Replace existing files on the disk (use with due diligence!) */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_NO_BASE_TAG_MODIFICATIONS' class="associatedconstant"><span id='PERSIST_FLAGS_NO_BASE_TAG_MODIFICATIONS.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_NO_BASE_TAG_MODIFICATIONS' class="constant"><b>PERSIST_FLAGS_NO_BASE_TAG_MODIFICATIONS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_NO_BASE_TAG_MODIFICATIONS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">64</span></pre>
+<pre><code class="language-text">/** Don&#39;t modify or add base tags */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_FIXUP_ORIGINAL_DOM' class="associatedconstant"><span id='PERSIST_FLAGS_FIXUP_ORIGINAL_DOM.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_FIXUP_ORIGINAL_DOM' class="constant"><b>PERSIST_FLAGS_FIXUP_ORIGINAL_DOM</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_FIXUP_ORIGINAL_DOM</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">128</span></pre>
+<pre><code class="language-text">/** Make changes to original dom rather than cloning nodes */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_FIXUP_LINKS_TO_DESTINATION' class="associatedconstant"><span id='PERSIST_FLAGS_FIXUP_LINKS_TO_DESTINATION.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_FIXUP_LINKS_TO_DESTINATION' class="constant"><b>PERSIST_FLAGS_FIXUP_LINKS_TO_DESTINATION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_FIXUP_LINKS_TO_DESTINATION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">256</span></pre>
+<pre><code class="language-text">/** Fix links relative to destination location (not origin) */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_DONT_FIXUP_LINKS' class="associatedconstant"><span id='PERSIST_FLAGS_DONT_FIXUP_LINKS.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_DONT_FIXUP_LINKS' class="constant"><b>PERSIST_FLAGS_DONT_FIXUP_LINKS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_DONT_FIXUP_LINKS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">512</span></pre>
+<pre><code class="language-text">/** Don&#39;t make any adjustments to links */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_SERIALIZE_OUTPUT' class="associatedconstant"><span id='PERSIST_FLAGS_SERIALIZE_OUTPUT.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_SERIALIZE_OUTPUT' class="constant"><b>PERSIST_FLAGS_SERIALIZE_OUTPUT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_SERIALIZE_OUTPUT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1024</span></pre>
+<pre><code class="language-text">/** Force serialization of output (one file at a time; not concurrent) */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_DONT_CHANGE_FILENAMES' class="associatedconstant"><span id='PERSIST_FLAGS_DONT_CHANGE_FILENAMES.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_DONT_CHANGE_FILENAMES' class="constant"><b>PERSIST_FLAGS_DONT_CHANGE_FILENAMES</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_DONT_CHANGE_FILENAMES</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2048</span></pre>
+<pre><code class="language-text">/** Don&#39;t make any adjustments to filenames */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_FAIL_ON_BROKEN_LINKS' class="associatedconstant"><span id='PERSIST_FLAGS_FAIL_ON_BROKEN_LINKS.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_FAIL_ON_BROKEN_LINKS' class="constant"><b>PERSIST_FLAGS_FAIL_ON_BROKEN_LINKS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_FAIL_ON_BROKEN_LINKS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4096</span></pre>
+<pre><code class="language-text">/** Fail on broken inline links */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_CLEANUP_ON_FAILURE' class="associatedconstant"><span id='PERSIST_FLAGS_CLEANUP_ON_FAILURE.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_CLEANUP_ON_FAILURE' class="constant"><b>PERSIST_FLAGS_CLEANUP_ON_FAILURE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_CLEANUP_ON_FAILURE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8192</span></pre>
+<pre><code class="language-text">/**
+   * Automatically cleanup after a failed or cancelled operation, deleting all
+   * created files and directories. This flag does nothing for failed upload
+   * operations to remote servers.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_AUTODETECT_APPLY_CONVERSION' class="associatedconstant"><span id='PERSIST_FLAGS_AUTODETECT_APPLY_CONVERSION.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_AUTODETECT_APPLY_CONVERSION' class="constant"><b>PERSIST_FLAGS_AUTODETECT_APPLY_CONVERSION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_AUTODETECT_APPLY_CONVERSION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16384</span></pre>
+<pre><code class="language-text">/**
+   * Let the WebBrowserPersist decide whether the incoming data is encoded
+   * and whether it needs to go through a content converter e.g. to
+   * decompress it.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_APPEND_TO_FILE' class="associatedconstant"><span id='PERSIST_FLAGS_APPEND_TO_FILE.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_APPEND_TO_FILE' class="constant"><b>PERSIST_FLAGS_APPEND_TO_FILE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_APPEND_TO_FILE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32768</span></pre>
+<pre><code class="language-text">/**
+   * Append the downloaded data to the target file.
+   * This can only be used when persisting to a local file.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_FLAGS_FORCE_ALLOW_COOKIES' class="associatedconstant"><span id='PERSIST_FLAGS_FORCE_ALLOW_COOKIES.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_FLAGS_FORCE_ALLOW_COOKIES' class="constant"><b>PERSIST_FLAGS_FORCE_ALLOW_COOKIES</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_FLAGS_FORCE_ALLOW_COOKIES</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">65536</span></pre>
+<pre><code class="language-text">/**
+   * Force relevant cookies to be sent with this load even if normally they
+   * wouldn&#39;t be.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_STATE_READY' class="associatedconstant"><span id='PERSIST_STATE_READY.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_STATE_READY' class="constant"><b>PERSIST_STATE_READY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_STATE_READY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/** Persister is ready to save data */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_STATE_SAVING' class="associatedconstant"><span id='PERSIST_STATE_SAVING.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_STATE_SAVING' class="constant"><b>PERSIST_STATE_SAVING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_STATE_SAVING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/** Persister is saving data */
+</code></pre>
+</div><h4 id='associatedconstant.PERSIST_STATE_FINISHED' class="associatedconstant"><span id='PERSIST_STATE_FINISHED.v' class='invisible'><code>pub const <a href='#associatedconstant.PERSIST_STATE_FINISHED' class="constant"><b>PERSIST_STATE_FINISHED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERSIST_STATE_FINISHED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+<pre><code class="language-text">/** Persister has finished saving data */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_SELECTION_ONLY' class="associatedconstant"><span id='ENCODE_FLAGS_SELECTION_ONLY.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_SELECTION_ONLY' class="constant"><b>ENCODE_FLAGS_SELECTION_ONLY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_SELECTION_ONLY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/** Output only the current selection as opposed to the whole document. */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_FORMATTED' class="associatedconstant"><span id='ENCODE_FLAGS_FORMATTED.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_FORMATTED' class="constant"><b>ENCODE_FLAGS_FORMATTED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_FORMATTED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/**
+   * For plaintext output. Convert html to plaintext that looks like the html.
+   * Implies wrap (except inside &amp;lt;pre&amp;gt;), since html wraps.
+   * HTML output: always do prettyprinting, ignoring existing formatting.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_RAW' class="associatedconstant"><span id='ENCODE_FLAGS_RAW.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_RAW' class="constant"><b>ENCODE_FLAGS_RAW</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_RAW</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * Output without formatting or wrapping the content. This flag
+   * may be used to preserve the original formatting as much as possible.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_BODY_ONLY' class="associatedconstant"><span id='ENCODE_FLAGS_BODY_ONLY.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_BODY_ONLY' class="constant"><b>ENCODE_FLAGS_BODY_ONLY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_BODY_ONLY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/** Output only the body section, no HTML tags. */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_PREFORMATTED' class="associatedconstant"><span id='ENCODE_FLAGS_PREFORMATTED.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_PREFORMATTED' class="constant"><b>ENCODE_FLAGS_PREFORMATTED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_PREFORMATTED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+<pre><code class="language-text">/** Wrap even if when not doing formatted output (e.g. for text fields). */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_WRAP' class="associatedconstant"><span id='ENCODE_FLAGS_WRAP.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_WRAP' class="constant"><b>ENCODE_FLAGS_WRAP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_WRAP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+<pre><code class="language-text">/** Wrap documents at the specified column. */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_FORMAT_FLOWED' class="associatedconstant"><span id='ENCODE_FLAGS_FORMAT_FLOWED.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_FORMAT_FLOWED' class="constant"><b>ENCODE_FLAGS_FORMAT_FLOWED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_FORMAT_FLOWED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">64</span></pre>
+<pre><code class="language-text">/**
+   * For plaintext output. Output for format flowed (RFC 2646). This is used
+   * when converting to text for mail sending. This differs just slightly
+   * but in an important way from normal formatted, and that is that
+   * lines are space stuffed. This can&#39;t (correctly) be done later.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_ABSOLUTE_LINKS' class="associatedconstant"><span id='ENCODE_FLAGS_ABSOLUTE_LINKS.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_ABSOLUTE_LINKS' class="constant"><b>ENCODE_FLAGS_ABSOLUTE_LINKS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_ABSOLUTE_LINKS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">128</span></pre>
+<pre><code class="language-text">/** Convert links to absolute links where possible. */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_CR_LINEBREAKS' class="associatedconstant"><span id='ENCODE_FLAGS_CR_LINEBREAKS.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_CR_LINEBREAKS' class="constant"><b>ENCODE_FLAGS_CR_LINEBREAKS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_CR_LINEBREAKS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">512</span></pre>
+<pre><code class="language-text">/**
+   * Output with carriage return line breaks. May also be combined with
+   * ENCODE_FLAGS_LF_LINEBREAKS and if neither is specified, the platform
+   * default format is used.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_LF_LINEBREAKS' class="associatedconstant"><span id='ENCODE_FLAGS_LF_LINEBREAKS.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_LF_LINEBREAKS' class="constant"><b>ENCODE_FLAGS_LF_LINEBREAKS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_LF_LINEBREAKS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1024</span></pre>
+<pre><code class="language-text">/**
+   * Output with linefeed line breaks. May also be combined with
+   * ENCODE_FLAGS_CR_LINEBREAKS and if neither is specified, the platform
+   * default format is used.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_NOSCRIPT_CONTENT' class="associatedconstant"><span id='ENCODE_FLAGS_NOSCRIPT_CONTENT.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_NOSCRIPT_CONTENT' class="constant"><b>ENCODE_FLAGS_NOSCRIPT_CONTENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_NOSCRIPT_CONTENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2048</span></pre>
+<pre><code class="language-text">/** For plaintext output. Output the content of noscript elements. */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_NOFRAMES_CONTENT' class="associatedconstant"><span id='ENCODE_FLAGS_NOFRAMES_CONTENT.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_NOFRAMES_CONTENT' class="constant"><b>ENCODE_FLAGS_NOFRAMES_CONTENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_NOFRAMES_CONTENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4096</span></pre>
+<pre><code class="language-text">/** For plaintext output. Output the content of noframes elements. */
+</code></pre>
+</div><h4 id='associatedconstant.ENCODE_FLAGS_ENCODE_BASIC_ENTITIES' class="associatedconstant"><span id='ENCODE_FLAGS_ENCODE_BASIC_ENTITIES.v' class='invisible'><code>pub const <a href='#associatedconstant.ENCODE_FLAGS_ENCODE_BASIC_ENTITIES' class="constant"><b>ENCODE_FLAGS_ENCODE_BASIC_ENTITIES</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ENCODE_FLAGS_ENCODE_BASIC_ENTITIES</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8192</span></pre>
+<pre><code class="language-text">/**
+   * Encode basic entities, e.g. output &amp;nbsp; instead of character code 0xa0.
+   * The basic set is just &amp;nbsp; &amp;amp; &amp;lt; &amp;gt; &amp;quot; for interoperability
+   * with older products that don&#39;t support &amp;alpha; and friends.
+   */
+</code></pre>
+</div><h4 id='method.GetPersistFlags' class="method"><span id='GetPersistFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPersistFlags' class='fnname'>GetPersistFlags</a>(&amp;self, aPersistFlags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#438-440' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Flags governing how data is fetched and saved from the network.
+   * It is best to set this value explicitly unless you are prepared
+   * to accept the default values.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long persistFlags;</code></p>
+</div><h4 id='method.SetPersistFlags' class="method"><span id='SetPersistFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPersistFlags' class='fnname'>SetPersistFlags</a>(&amp;self, aPersistFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#454-456' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Flags governing how data is fetched and saved from the network.
+   * It is best to set this value explicitly unless you are prepared
+   * to accept the default values.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long persistFlags;</code></p>
+</div><h4 id='method.GetCurrentState' class="method"><span id='GetCurrentState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCurrentState' class='fnname'>GetCurrentState</a>(&amp;self, aCurrentState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#468-470' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Current state of the persister object.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long currentState;</code></p>
+</div><h4 id='method.GetResult' class="method"><span id='GetResult.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResult' class='fnname'>GetResult</a>(&amp;self, aResult: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#486-488' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Value indicating the success or failure of the persist
+   * operation.
+   *
+   * @throws NS_BINDING_ABORTED Operation cancelled.
+   * @throws NS_ERROR_FAILURE Non-specific failure.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsresult result;</code></p>
+</div><h4 id='method.GetProgressListener' class="method"><span id='GetProgressListener.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProgressListener' class='fnname'>GetProgressListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProgressListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIWebProgressListener.html" title="struct xpcom::interfaces::nsIWebProgressListener">nsIWebProgressListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#506-508' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Callback listener for progress notifications. The object that the
+   * embbedder supplies may also implement nsIInterfaceRequestor and be
+   * prepared to return nsIAuthPrompt or other interfaces that may be required
+   * to download data.
+   *
+   * @see nsIAuthPrompt
+   * @see nsIInterfaceRequestor
+   */
+</code></pre>
+
+<p><code>attribute nsIWebProgressListener progressListener;</code></p>
+</div><h4 id='method.SetProgressListener' class="method"><span id='SetProgressListener.v' class='invisible'><code>pub unsafe fn <a href='#method.SetProgressListener' class='fnname'>SetProgressListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProgressListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIWebProgressListener.html" title="struct xpcom::interfaces::nsIWebProgressListener">nsIWebProgressListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#526-528' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Callback listener for progress notifications. The object that the
+   * embbedder supplies may also implement nsIInterfaceRequestor and be
+   * prepared to return nsIAuthPrompt or other interfaces that may be required
+   * to download data.
+   *
+   * @see nsIAuthPrompt
+   * @see nsIInterfaceRequestor
+   */
+</code></pre>
+
+<p><code>attribute nsIWebProgressListener progressListener;</code></p>
+</div><h4 id='method.SaveURI' class="method"><span id='SaveURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SaveURI' class='fnname'>SaveURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCacheKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReferrer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReferrerPolicy: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPostData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExtraHeaders: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrivacyContext: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#572-574' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Save the specified URI to file.
+   *
+   * @param aURI       URI to save to file. Some implementations of this interface
+   *                   may also support &lt;CODE&gt;nullptr&lt;/CODE&gt; to imply the currently
+   *                   loaded URI.
+   * @param aCacheKey  An object representing the URI in the cache or
+   *                   &lt;CODE&gt;nullptr&lt;/CODE&gt;.  This can be a necko cache key,
+   *                   an nsIWebPageDescriptor, or the currentDescriptor of an
+   *                   nsIWebPageDescriptor.
+   * @param aReferrer  The referrer URI to pass with an HTTP request or
+   *                   &lt;CODE&gt;nullptr&lt;/CODE&gt;.
+   * @param aReferrerPolicy  The referrer policy for when and what to send via
+   *                   HTTP Referer header.  Ignored if aReferrer is
+   *                   &lt;CODE&gt;nullptr&lt;/CODE&gt;.  Taken from REFERRER_POLICY
+   *                   constants in nsIHttpChannel.
+   * @param aPostData  Post data to pass with an HTTP request or
+   *                   &lt;CODE&gt;nullptr&lt;/CODE&gt;.
+   * @param aExtraHeaders Additional headers to supply with an HTTP request
+   *                   or &lt;CODE&gt;nullptr&lt;/CODE&gt;.
+   * @param aFile      Target file. This may be a nsIFile object or an
+   *                   nsIURI object with a file scheme or a scheme that
+   *                   supports uploading (e.g. ftp).
+   * @param aPrivacyContext A context from which the privacy status of this
+   *                   save operation can be determined. Must only be null
+   *                   in situations in which no such context is available
+   *                   (eg. the operation has no logical association with any
+   *                   window or document)
+   *
+   * @see nsIFile
+   * @see nsIURI
+   * @see nsIInputStream
+   *
+   * @throws NS_ERROR_INVALID_ARG One or more arguments was invalid.
+   */
+</code></pre>
+
+<p><code>void saveURI (in nsIURI aURI, in nsISupports aCacheKey, in nsIURI aReferrer, in unsigned long aReferrerPolicy, in nsIInputStream aPostData, in string aExtraHeaders, in nsISupports aFile, in nsILoadContext aPrivacyContext);</code></p>
+</div><h4 id='method.SavePrivacyAwareURI' class="method"><span id='SavePrivacyAwareURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SavePrivacyAwareURI' class='fnname'>SavePrivacyAwareURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCacheKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReferrer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReferrerPolicy: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPostData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExtraHeaders: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsPrivate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#589-591' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * @param aIsPrivate Treat the save operation as private (ie. with
+   *                   regards to networking operations and persistence
+   *                   of intermediate data, etc.)
+   * @see saveURI for all other parameter descriptions
+   */
+</code></pre>
+
+<p><code>void savePrivacyAwareURI (in nsIURI aURI, in nsISupports aCacheKey, in nsIURI aReferrer, in unsigned long aReferrerPolicy, in nsIInputStream aPostData, in string aExtraHeaders, in nsISupports aFile, in boolean aIsPrivate);</code></p>
+</div><h4 id='method.SaveChannel' class="method"><span id='SaveChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.SaveChannel' class='fnname'>SaveChannel</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aChannel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#604-606' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Save a channel to a file. It must not be opened yet.
+   * @see saveURI
+   */
+</code></pre>
+
+<p><code>void saveChannel (in nsIChannel aChannel, in nsISupports aFile);</code></p>
+</div><h4 id='method.SaveDocument' class="method"><span id='SaveDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.SaveDocument' class='fnname'>SaveDocument</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDataPath: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOutputContentType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEncodingFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWrapColumn: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#646-648' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Save the specified DOM document to file and optionally all linked files
+   * (e.g. images, CSS, JS &amp; subframes). Do not call this method until the
+   * document has finished loading!
+   *
+   * @param aDocument          Document to save to file. Some implementations of
+   *                           this interface may also support &lt;CODE&gt;nullptr&lt;/CODE&gt;
+   *                           to imply the currently loaded document.  Can be an
+   *                           nsIWebBrowserPersistDocument or nsIDOMDocument.
+   * @param aFile              Target local file. This may be a nsIFile object or an
+   *                           nsIURI object with a file scheme or a scheme that
+   *                           supports uploading (e.g. ftp).
+   * @param aDataPath          Path to directory where URIs linked to the document
+   *                           are saved or nullptr if no linked URIs should be saved.
+   *                           This may be a nsIFile object or an nsIURI object
+   *                           with a file scheme.
+   * @param aOutputContentType The desired MIME type format to save the
+   *                           document and all subdocuments into or nullptr to use
+   *                           the default behaviour.
+   * @param aEncodingFlags     Flags to pass to the encoder.
+   * @param aWrapColumn        For text documents, indicates the desired width to
+   *                           wrap text at. Parameter is ignored if wrapping is not
+   *                           specified by the encoding flags.
+   *
+   * @see nsIWebBrowserPersistDocument
+   * @see nsIWebBrowserPersistable
+   * @see nsIFile
+   * @see nsIURI
+   *
+   * @throws NS_ERROR_INVALID_ARG One or more arguments was invalid.
+   */
+</code></pre>
+
+<p><code>void saveDocument (in nsISupports aDocument, in nsISupports aFile, in nsISupports aDataPath, in string aOutputContentType, in unsigned long aEncodingFlags, in unsigned long aWrapColumn);</code></p>
+</div><h4 id='method.CancelSave' class="method"><span id='CancelSave.v' class='invisible'><code>pub unsafe fn <a href='#method.CancelSave' class='fnname'>CancelSave</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#662-664' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Cancels the current operation. The caller is responsible for cleaning up
+   * partially written files or directories. This has the same effect as calling
+   * cancel with an argument of NS_BINDING_ABORTED.
+   */
+</code></pre>
+
+<p><code>void cancelSave ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsICancelable.html" title="struct xpcom::interfaces::nsICancelable">nsICancelable</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsICancelableCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICancelable.rs.html#73-75' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsICancelable</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.Cancel' class="method"><span id='Cancel.v' class='invisible'><code>pub unsafe fn <a href='#method.Cancel' class='fnname'>Cancel</a>(&amp;self, aReason: <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICancelable.rs.html#136-138' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Call this method to request that this object abort whatever operation it
+   * may be performing.
+   *
+   * @param aReason
+   *        Pass a failure code to indicate the reason why this operation is
+   *        being canceled.  It is an error to pass a success code.
+   */
+</code></pre>
+
+<p><code>void cancel (in nsresult aReason);</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIWebBrowserPersist.html" title="struct xpcom::interfaces::nsIWebBrowserPersist">nsIWebBrowserPersist</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#35-38' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2362921636</span>, <span class="number">24753</span>, <span class="number">17091</span>, [<span class="number">168</span>, <span class="number">25</span>, <span class="number">101</span>, <span class="number">199</span>, <span class="number">161</span>, <span class="number">19</span>, <span class="number">138</span>, <span class="number">40</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIWebBrowserPersist.html" title="struct xpcom::interfaces::nsIWebBrowserPersist">nsIWebBrowserPersist</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#42-51' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#44-46' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#48-50' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIWebBrowserPersist.html" title="struct xpcom::interfaces::nsIWebBrowserPersist">nsIWebBrowserPersist</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#82-90' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsICancelable.html" title="struct xpcom::interfaces::nsICancelable">nsICancelable</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsICancelable.html" title="struct xpcom::interfaces::nsICancelable">nsICancelable</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebBrowserPersist.rs.html#85-89' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

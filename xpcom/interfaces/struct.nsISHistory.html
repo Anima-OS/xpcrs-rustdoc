@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsISHistory` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsISHistory">
+
+    <title>xpcom::interfaces::nsISHistory - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsISHistory</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetIsPartial">GetIsPartial</a><a href="#method.GetCount">GetCount</a><a href="#method.GetGlobalCount">GetGlobalCount</a><a href="#method.GetGlobalIndexOffset">GetGlobalIndexOffset</a><a href="#method.GetIndex">GetIndex</a><a href="#method.GetGlobalIndex">GetGlobalIndex</a><a href="#method.GetRequestedIndex">GetRequestedIndex</a><a href="#method.GetMaxLength">GetMaxLength</a><a href="#method.SetMaxLength">SetMaxLength</a><a href="#method.GetEntryAtIndex">GetEntryAtIndex</a><a href="#method.RestoreToEntryAtIndex">RestoreToEntryAtIndex</a><a href="#method.PurgeHistory">PurgeHistory</a><a href="#method.AddSHistoryListener">AddSHistoryListener</a><a href="#method.RemoveSHistoryListener">RemoveSHistoryListener</a><a href="#method.SetPartialSHistoryListener">SetPartialSHistoryListener</a><a href="#method.GetSHistoryEnumerator">GetSHistoryEnumerator</a><a href="#method.ReloadCurrentEntry">ReloadCurrentEntry</a><a href="#method.GetIndexOfEntry">GetIndexOfEntry</a><a href="#method.OnPartialSHistoryActive">OnPartialSHistoryActive</a><a href="#method.OnPartialSHistoryDeactive">OnPartialSHistoryDeactive</a><a href="#method.OnAttachGroupedSHistory">OnAttachGroupedSHistory</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsISHistory', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsISHistory</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#28-37' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsISHistory { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsISHistory : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * An interface to the primary properties of the Session History
+ * component. In an embedded browser environment, the nsIWebBrowser
+ * object creates an instance of session history for each open window.
+ * A handle to the session history object can be obtained from
+ * nsIWebNavigation. In a non-embedded situation, the  owner of the
+ * session history component must create a instance of it and set
+ * it in the nsIWebNavigation object.
+ * This interface is accessible from javascript.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISHistory.html" title="struct xpcom::interfaces::nsISHistory">nsISHistory</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#77-83' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsISHistoryCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#80-82' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISHistory</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISHistory.html" title="struct xpcom::interfaces::nsISHistory">nsISHistory</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#187-593' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.VIEWER_WINDOW' class="associatedconstant"><span id='VIEWER_WINDOW.v' class='invisible'><code>pub const <a href='#associatedconstant.VIEWER_WINDOW' class="constant"><b>VIEWER_WINDOW</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">VIEWER_WINDOW</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+<pre><code class="language-text">/**
+   * The size of the window of SHEntries which can have alive viewers in the
+   * bfcache around the currently active SHEntry.
+   *
+   * We try to keep viewers for SHEntries between index - VIEWER_WINDOW and
+   * index + VIEWER_WINDOW alive.
+   */
+</code></pre>
+</div><h4 id='method.GetIsPartial' class="method"><span id='GetIsPartial.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsPartial' class='fnname'>GetIsPartial</a>(&amp;self, aIsPartial: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#219-221' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * An attribute denoting whether the nsISHistory is associated to a grouped
+   * session history.
+   *
+   * The abstraction of grouped session history is implemented at
+   * nsIWebNavigation level, so those canGoBack / canGoForward / gotoIndex
+   * functions work transparently;
+   *
+   * On the other hand, nsISHistory works on partial session history directly.
+   * Unless otherwise specified, count / index attributes and parameters all
+   * indicate local count / index, so we won&#39;t mess up docshell.
+   */
+</code></pre>
+
+<p><code>readonly attribute bool isPartial;</code></p>
+</div><h4 id='method.GetCount' class="method"><span id='GetCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCount' class='fnname'>GetCount</a>(&amp;self, aCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#235-237' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A readonly property of the interface that returns
+   * the number of toplevel documents currently available
+   * in session history.
+   */
+</code></pre>
+
+<p><code>readonly attribute long count;</code></p>
+</div><h4 id='method.GetGlobalCount' class="method"><span id='GetGlobalCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetGlobalCount' class='fnname'>GetGlobalCount</a>(&amp;self, aGlobalCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#250-252' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If isPartial, globalCount denotes the total number of entries in the
+   * grouped session history; Otherwise it has the same value as count.
+   */
+</code></pre>
+
+<p><code>readonly attribute long globalCount;</code></p>
+</div><h4 id='method.GetGlobalIndexOffset' class="method"><span id='GetGlobalIndexOffset.v' class='invisible'><code>pub unsafe fn <a href='#method.GetGlobalIndexOffset' class='fnname'>GetGlobalIndexOffset</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aGlobalIndexOffset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#266-268' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A readonly property which represents the difference between global indices
+   * of grouped session history and local indices of this particular session
+   * history object.
+   */
+</code></pre>
+
+<p><code>readonly attribute long globalIndexOffset;</code></p>
+</div><h4 id='method.GetIndex' class="method"><span id='GetIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIndex' class='fnname'>GetIndex</a>(&amp;self, aIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#281-283' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A readonly property of the interface that returns
+   * the index of the current document in session history.
+   */
+</code></pre>
+
+<p><code>readonly attribute long index;</code></p>
+</div><h4 id='method.GetGlobalIndex' class="method"><span id='GetGlobalIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.GetGlobalIndex' class='fnname'>GetGlobalIndex</a>(&amp;self, aGlobalIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#295-297' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A readonly property which equals index + globalIndexOffset.
+   */
+</code></pre>
+
+<p><code>readonly attribute long globalIndex;</code></p>
+</div><h4 id='method.GetRequestedIndex' class="method"><span id='GetRequestedIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRequestedIndex' class='fnname'>GetRequestedIndex</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestedIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#312-314' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A readonly property of the interface that returns
+   * the index of the last document that started to load and
+   * didn&#39;t finished yet. When document finishes the loading
+   * value -1 is returned.
+   */
+</code></pre>
+
+<p><code>readonly attribute long requestedIndex;</code></p>
+</div><h4 id='method.GetMaxLength' class="method"><span id='GetMaxLength.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMaxLength' class='fnname'>GetMaxLength</a>(&amp;self, aMaxLength: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#328-330' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A read/write property of the interface, used to Get/Set
+   * the maximum number of toplevel documents, session history
+   * can hold for each instance.
+   */
+</code></pre>
+
+<p><code>attribute long maxLength;</code></p>
+</div><h4 id='method.SetMaxLength' class="method"><span id='SetMaxLength.v' class='invisible'><code>pub unsafe fn <a href='#method.SetMaxLength' class='fnname'>SetMaxLength</a>(&amp;self, aMaxLength: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#344-346' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A read/write property of the interface, used to Get/Set
+   * the maximum number of toplevel documents, session history
+   * can hold for each instance.
+   */
+</code></pre>
+
+<p><code>attribute long maxLength;</code></p>
+</div><h4 id='method.GetEntryAtIndex' class="method"><span id='GetEntryAtIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEntryAtIndex' class='fnname'>GetEntryAtIndex</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;index: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;modifyIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#370-372' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called to obtain handle to the history entry at a
+   * given index.
+   *
+   * @param index             The index value whose entry is requested.
+   *                          The oldest entry is located at index == 0.
+   * @param modifyIndex       A boolean flag that indicates if the current
+   *                          index of session history should be modified
+   *                          to the parameter index.
+   *
+   * @return                  &lt;code&gt;NS_OK&lt;/code&gt; history entry for
+   *                          the index is obtained successfully.
+   *                          &lt;code&gt;NS_ERROR_FAILURE&lt;/code&gt; Error in obtaining
+   *                          history entry for the given index.
+   */
+</code></pre>
+
+<p><code>nsISHEntry getEntryAtIndex (in long index, in boolean modifyIndex);</code></p>
+</div><h4 id='method.RestoreToEntryAtIndex' class="method"><span id='RestoreToEntryAtIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.RestoreToEntryAtIndex' class='fnname'>RestoreToEntryAtIndex</a>(&amp;self, index: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#387-389' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Load the entry at given index to root docshell directly in order to
+   * restore to an entry in grouped session history navigation or session
+   * restore case. This function will not notify nsISHistoryListener, as it&#39;s
+   * not considered a normal history navigation.
+   */
+</code></pre>
+
+<p><code>void restoreToEntryAtIndex (in long index);</code></p>
+</div><h4 id='method.PurgeHistory' class="method"><span id='PurgeHistory.v' class='invisible'><code>pub unsafe fn <a href='#method.PurgeHistory' class='fnname'>PurgeHistory</a>(&amp;self, numEntries: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#414-416' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called to purge older documents from history.
+   * Documents can be removed from session history for various
+   * reasons. For example to  control memory usage of the browser, to
+   * prevent users from loading documents from history, to erase evidence of
+   * prior page loads etc...
+   *
+   * @param numEntries        The number of toplevel documents to be
+   *                          purged from history. During purge operation,
+   *                          the latest documents are maintained and older
+   *                          &#39;numEntries&#39; documents are removed from history.
+   * @throws                  &lt;code&gt;NS_SUCCESS_LOSS_OF_INSIGNIFICANT_DATA&lt;/code&gt; Purge was vetod.
+   * @throws                  &lt;code&gt;NS_ERROR_FAILURE&lt;/code&gt; numEntries is
+   *                          invalid or out of bounds with the size of history.
+   *
+   */
+</code></pre>
+
+<p><code>void PurgeHistory (in long numEntries);</code></p>
+</div><h4 id='method.AddSHistoryListener' class="method"><span id='AddSHistoryListener.v' class='invisible'><code>pub unsafe fn <a href='#method.AddSHistoryListener' class='fnname'>AddSHistoryListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHistoryListener.html" title="struct xpcom::interfaces::nsISHistoryListener">nsISHistoryListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#438-440' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called to register a listener for the session history component.
+   * Listeners are notified when pages are loaded or purged from history.
+   *
+   * @param aListener         Listener object to be notified for all
+   *                          page loads that initiate in session history.
+   *
+   * @note                    A listener object must implement
+   *                          nsISHistoryListener and nsSupportsWeakReference
+   *
+   * @see nsISHistoryListener
+   * @see nsSupportsWeakReference
+   */
+</code></pre>
+
+<p><code>void addSHistoryListener (in nsISHistoryListener aListener);</code></p>
+</div><h4 id='method.RemoveSHistoryListener' class="method"><span id='RemoveSHistoryListener.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveSHistoryListener' class='fnname'>RemoveSHistoryListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHistoryListener.html" title="struct xpcom::interfaces::nsISHistoryListener">nsISHistoryListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#461-463' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called to remove a listener for the session history component.
+   * Listeners are notified when pages are loaded from history.
+   *
+   * @param aListener         Listener object to be removed from
+   *                          session history.
+   *
+   * @note                    A listener object must implement
+   *                          nsISHistoryListener and nsSupportsWeakReference
+   * @see nsISHistoryListener
+   * @see nsSupportsWeakReference
+   */
+</code></pre>
+
+<p><code>void removeSHistoryListener (in nsISHistoryListener aListener);</code></p>
+</div><h4 id='method.SetPartialSHistoryListener' class="method"><span id='SetPartialSHistoryListener.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPartialSHistoryListener' class='fnname'>SetPartialSHistoryListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPartialSHistoryListener.html" title="struct xpcom::interfaces::nsIPartialSHistoryListener">nsIPartialSHistoryListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#476-478' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the listener to handle cross nsISHistory navigation when it works
+   * in &quot;partial&quot; mode.
+   */
+</code></pre>
+
+<p><code>void setPartialSHistoryListener (in nsIPartialSHistoryListener aListener);</code></p>
+</div><h4 id='method.GetSHistoryEnumerator' class="method"><span id='GetSHistoryEnumerator.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSHistoryEnumerator' class='fnname'>GetSHistoryEnumerator</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSHistoryEnumerator: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISimpleEnumerator.html" title="struct xpcom::interfaces::nsISimpleEnumerator">nsISimpleEnumerator</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#508-510' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called to obtain a enumerator for all the  documents stored in
+   * session history. The enumerator object thus returned by this method
+   * can be traversed using nsISimpleEnumerator.
+   *
+   * @note  To access individual history entries of the enumerator, perform the
+   *        following steps:
+   *        1) Call nsISHistory-&gt;GetSHistoryEnumerator() to obtain handle
+   *           the nsISimpleEnumerator object.
+   *        2) Use nsISimpleEnumerator-&gt;GetNext() on the object returned
+   *           by step #1 to obtain handle to the next object in the list.
+   *           The object returned by this step is of type nsISupports.
+   *        3) Perform a QueryInterface on the object returned by step #2
+   *           to nsISHEntry.
+   *        4) Use nsISHEntry to access properties of each history entry.
+   *
+   * @see nsISimpleEnumerator
+   * @see nsISHEntry
+   * @see QueryInterface()
+   * @see do_QueryInterface()
+   */
+</code></pre>
+
+<p><code>readonly attribute nsISimpleEnumerator SHistoryEnumerator;</code></p>
+</div><h4 id='method.ReloadCurrentEntry' class="method"><span id='ReloadCurrentEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.ReloadCurrentEntry' class='fnname'>ReloadCurrentEntry</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#516-518' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void reloadCurrentEntry ();</code></p>
+</div><h4 id='method.GetIndexOfEntry' class="method"><span id='GetIndexOfEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIndexOfEntry' class='fnname'>GetIndexOfEntry</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#537-539' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called to obtain the index to a given history entry.
+   *
+   * @param aEntry            The entry to obtain the index of.
+   *
+   * @return                  &lt;code&gt;NS_OK&lt;/code&gt; index for the history entry
+   *                          is obtained successfully.
+   *                          &lt;code&gt;NS_ERROR_FAILURE&lt;/code&gt; Error in obtaining
+   *                          index for the given history entry.
+   */
+</code></pre>
+
+<p><code>long getIndexOfEntry (in nsISHEntry aEntry);</code></p>
+</div><h4 id='method.OnPartialSHistoryActive' class="method"><span id='OnPartialSHistoryActive.v' class='invisible'><code>pub unsafe fn <a href='#method.OnPartialSHistoryActive' class='fnname'>OnPartialSHistoryActive</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;globalLength: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;targetIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#556-558' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when this nsISHistory has became the active history of a grouped
+   * session history.
+   *
+   * @param globalLength      The up to date number of entries in the grouped
+   *                          session history.
+   * @param targetIndex       The local index to navigate to.
+   */
+</code></pre>
+
+<p><code>void onPartialSHistoryActive (in long globalLength, in long targetIndex);</code></p>
+</div><h4 id='method.OnPartialSHistoryDeactive' class="method"><span id='OnPartialSHistoryDeactive.v' class='invisible'><code>pub unsafe fn <a href='#method.OnPartialSHistoryDeactive' class='fnname'>OnPartialSHistoryDeactive</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#571-573' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when this nsISHistory has became inactive history of a grouped
+   * session history.
+   */
+</code></pre>
+
+<p><code>void onPartialSHistoryDeactive ();</code></p>
+</div><h4 id='method.OnAttachGroupedSHistory' class="method"><span id='OnAttachGroupedSHistory.v' class='invisible'><code>pub unsafe fn <a href='#method.OnAttachGroupedSHistory' class='fnname'>OnAttachGroupedSHistory</a>(&amp;self, offset: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#588-590' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when it&#39;s attached to a nsIGroupedSHistory instance.
+   *
+   * @param offset            The number of entries in the grouped session
+   *                          history before this session history object.
+   */
+</code></pre>
+
+<p><code>void onAttachGroupedSHistory (in long offset);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISHistory.html" title="struct xpcom::interfaces::nsISHistory">nsISHistory</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#42-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2072014913</span>, <span class="number">58890</span>, <span class="number">17284</span>, [<span class="number">147</span>, <span class="number">95</span>, <span class="number">175</span>, <span class="number">48</span>, <span class="number">97</span>, <span class="number">216</span>, <span class="number">184</span>, <span class="number">21</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISHistory.html" title="struct xpcom::interfaces::nsISHistory">nsISHistory</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#49-58' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#51-53' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#55-57' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISHistory.html" title="struct xpcom::interfaces::nsISHistory">nsISHistory</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#89-97' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHistory.rs.html#92-96' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

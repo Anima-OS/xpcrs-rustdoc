@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `mozIThirdPartyUtil` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, mozIThirdPartyUtil">
+
+    <title>xpcom::interfaces::mozIThirdPartyUtil - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct mozIThirdPartyUtil</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.IsThirdPartyURI">IsThirdPartyURI</a><a href="#method.IsThirdPartyWindow">IsThirdPartyWindow</a><a href="#method.IsThirdPartyChannel">IsThirdPartyChannel</a><a href="#method.GetBaseDomain">GetBaseDomain</a><a href="#method.GetURIFromWindow">GetURIFromWindow</a><a href="#method.GetTopWindowForChannel">GetTopWindowForChannel</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'mozIThirdPartyUtil', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>mozIThirdPartyUtil</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#22-31' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct mozIThirdPartyUtil { /* fields omitted */ }</pre><div class='docblock'><p><code>interface mozIThirdPartyUtil : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * Utility functions for determining whether a given URI, channel, or window
+ * hierarchy is third party with respect to a known URI.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.mozIThirdPartyUtil.html" title="struct xpcom::interfaces::mozIThirdPartyUtil">mozIThirdPartyUtil</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#71-77' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;mozIThirdPartyUtilCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#74-76' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>mozIThirdPartyUtil</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.mozIThirdPartyUtil.html" title="struct xpcom::interfaces::mozIThirdPartyUtil">mozIThirdPartyUtil</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#136-333' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.IsThirdPartyURI' class="method"><span id='IsThirdPartyURI.v' class='invisible'><code>pub unsafe fn <a href='#method.IsThirdPartyURI' class='fnname'>IsThirdPartyURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFirstURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSecondURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#164-166' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * isThirdPartyURI
+   *
+   * Determine whether two URIs are third party with respect to each other.
+   * This is determined by computing the base domain for both URIs. If they can
+   * be determined, and the base domains match, the request is defined as first
+   * party. If it cannot be determined because one or both URIs do not have a
+   * base domain (for instance, in the case of IP addresses, host aliases such
+   * as &#39;localhost&#39;, or a file:// URI), an exact string comparison on host is
+   * performed.
+   *
+   * For example, the URI &quot;http://mail.google.com/&quot; is not third party with
+   * respect to &quot;http://images.google.com/&quot;, but &quot;http://mail.yahoo.com/&quot; and
+   * &quot;http://192.168.1.1/&quot; are.
+   *
+   * @return true if aFirstURI is third party with respect to aSecondURI.
+   *
+   * @throws if either URI is null, has a malformed host, or has an empty host
+   *         and is not a file:// URI.
+   */
+</code></pre>
+
+<p><code>boolean isThirdPartyURI (in nsIURI aFirstURI, in nsIURI aSecondURI);</code></p>
+</div><h4 id='method.IsThirdPartyWindow' class="method"><span id='IsThirdPartyWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.IsThirdPartyWindow' class='fnname'>IsThirdPartyWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#213-215' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * isThirdPartyWindow
+   *
+   * Determine whether the given window hierarchy is third party. This is done
+   * as follows:
+   *
+   * 1) Obtain the URI of the principal associated with &#39;aWindow&#39;. Call this the
+   *    &#39;bottom URI&#39;.
+   * 2) If &#39;aURI&#39; is provided, determine if it is third party with respect to
+   *    the bottom URI. If so, return.
+   * 3) Find the same-type parent window, if there is one, and its URI.
+   *    Determine whether it is third party with respect to the bottom URI. If
+   *    so, return.
+   *
+   * Therefore, each level in the window hierarchy is tested. (This means that
+   * nested iframes with different base domains, even though the bottommost and
+   * topmost URIs might be equal, will be considered third party.)
+   *
+   * @param aWindow
+   *        The bottommost window in the hierarchy.
+   * @param aURI
+   *        A URI to test against. If null, the URI of the principal
+   *        associated with &#39;aWindow&#39; will be used.
+   *
+   * For example, if &#39;aURI&#39; is &quot;http://mail.google.com/&quot;, &#39;aWindow&#39; has a URI
+   * of &quot;http://google.com/&quot;, and its parent is the topmost content window with
+   * a URI of &quot;http://mozilla.com&quot;, the result will be true.
+   *
+   * @return true if &#39;aURI&#39; is third party with respect to any of the URIs
+   *         associated with aWindow and its same-type parents.
+   *
+   * @throws if aWindow is null; the same-type parent of any window in the
+   *         hierarchy cannot be determined; or the URI associated with any
+   *         window in the hierarchy is null, has a malformed host, or has an
+   *         empty host and is not a file:// URI.
+   *
+   * @see isThirdPartyURI
+   */
+</code></pre>
+
+<p><code>boolean isThirdPartyWindow (in mozIDOMWindowProxy aWindow, [optional] in nsIURI aURI);</code></p>
+</div><h4 id='method.IsThirdPartyChannel' class="method"><span id='IsThirdPartyChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.IsThirdPartyChannel' class='fnname'>IsThirdPartyChannel</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aChannel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#268-270' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * isThirdPartyChannel
+   *
+   * Determine whether the given channel and its content window hierarchy is
+   * third party. This is done as follows:
+   *
+   * 1) If &#39;aChannel&#39; is an nsIHttpChannel and has the
+   *    &#39;forceAllowThirdPartyCookie&#39; property set, then:
+   *    a) If &#39;aURI&#39; is null, return false.
+   *    b) Otherwise, find the URI of the channel, determine whether it is
+   *       foreign with respect to &#39;aURI&#39;, and return.
+   * 2) Find the URI of the channel and determine whether it is third party with
+   *    respect to the URI of the channel. If so, return.
+   * 3) Obtain the bottommost nsIDOMWindow, and its same-type parent if it
+   *    exists, from the channel&#39;s notification callbacks. Then:
+   *    a) If the parent is the same as the bottommost window, and the channel
+   *       has the LOAD_DOCUMENT_URI flag set, return false. This represents the
+   *       case where a toplevel load is occurring and the window&#39;s URI has not
+   *       yet been updated. (We have already checked that &#39;aURI&#39; is not foreign
+   *       with respect to the channel URI.)
+   *    b) Otherwise, return the result of isThirdPartyWindow with arguments
+   *       of the channel&#39;s bottommost window and the channel URI, respectively.
+   *
+   * Therefore, both the channel&#39;s URI and each level in the window hierarchy
+   * associated with the channel is tested.
+   *
+   * @param aChannel
+   *        The channel associated with the load.
+   * @param aURI
+   *        A URI to test against. If null, the URI of the channel will be used.
+   *
+   * For example, if &#39;aURI&#39; is &quot;http://mail.google.com/&quot;, &#39;aChannel&#39; has a URI
+   * of &quot;http://google.com/&quot;, and its parent is the topmost content window with
+   * a URI of &quot;http://mozilla.com&quot;, the result will be true.
+   *
+   * @return true if aURI is third party with respect to the channel URI or any
+   *         of the URIs associated with the same-type window hierarchy of the
+   *         channel.
+   *
+   * @throws if &#39;aChannel&#39; is null; the channel has no notification callbacks or
+   *         an associated window; or isThirdPartyWindow throws.
+   *
+   * @see isThirdPartyWindow
+   */
+</code></pre>
+
+<p><code>boolean isThirdPartyChannel (in nsIChannel aChannel, [optional] in nsIURI aURI);</code></p>
+</div><h4 id='method.GetBaseDomain' class="method"><span id='GetBaseDomain.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBaseDomain' class='fnname'>GetBaseDomain</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHostURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#295-297' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getBaseDomain
+   *
+   * Get the base domain for aHostURI; e.g. for &quot;www.bbc.co.uk&quot;, this would be
+   * &quot;bbc.co.uk&quot;. Only properly-formed URI&#39;s are tolerated, though a trailing
+   * dot may be present. If aHostURI is an IP address, an alias such as
+   * &#39;localhost&#39;, an eTLD such as &#39;co.uk&#39;, or the empty string, aBaseDomain will
+   * be the exact host. The result of this function should only be used in exact
+   * string comparisons, since substring comparisons will not be valid for the
+   * special cases elided above.
+   *
+   * @param aHostURI
+   *        The URI to analyze.
+   *
+   * @return the base domain.
+   */
+</code></pre>
+
+<p><code>AUTF8String getBaseDomain (in nsIURI aHostURI);</code></p>
+</div><h4 id='method.GetURIFromWindow' class="method"><span id='GetURIFromWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.GetURIFromWindow' class='fnname'>GetURIFromWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#312-314' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getURIFromWindow
+   *
+   * Returns the URI associated with the script object principal for the
+   * window.
+   */
+</code></pre>
+
+<p><code>nsIURI getURIFromWindow (in mozIDOMWindowProxy aWindow);</code></p>
+</div><h4 id='method.GetTopWindowForChannel' class="method"><span id='GetTopWindowForChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTopWindowForChannel' class='fnname'>GetTopWindowForChannel</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aChannel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#328-330' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getTopWindowForChannel
+   *
+   * Returns the top-level window associated with the given channel.
+   */
+</code></pre>
+
+<p><code>mozIDOMWindowProxy getTopWindowForChannel (in nsIChannel aChannel);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIThirdPartyUtil.html" title="struct xpcom::interfaces::mozIThirdPartyUtil">mozIThirdPartyUtil</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#36-39' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">4253184014</span>, <span class="number">65460</span>, <span class="number">18738</span>, [<span class="number">183</span>, <span class="number">214</span>, <span class="number">8</span>, <span class="number">240</span>, <span class="number">181</span>, <span class="number">105</span>, <span class="number">125</span>, <span class="number">218</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIThirdPartyUtil.html" title="struct xpcom::interfaces::mozIThirdPartyUtil">mozIThirdPartyUtil</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#43-52' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#45-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#49-51' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIThirdPartyUtil.html" title="struct xpcom::interfaces::mozIThirdPartyUtil">mozIThirdPartyUtil</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#83-91' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIThirdPartyUtil.rs.html#86-90' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

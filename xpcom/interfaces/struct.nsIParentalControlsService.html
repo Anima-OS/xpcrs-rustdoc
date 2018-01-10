@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIParentalControlsService` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIParentalControlsService">
+
+    <title>xpcom::interfaces::nsIParentalControlsService - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIParentalControlsService</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetParentalControlsEnabled">GetParentalControlsEnabled</a><a href="#method.GetBlockFileDownloadsEnabled">GetBlockFileDownloadsEnabled</a><a href="#method.IsAllowed">IsAllowed</a><a href="#method.RequestURIOverride">RequestURIOverride</a><a href="#method.RequestURIOverrides">RequestURIOverrides</a><a href="#method.GetLoggingEnabled">GetLoggingEnabled</a><a href="#method.Log">Log</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIParentalControlsService', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIParentalControlsService</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIParentalControlsService { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIParentalControlsService : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIParentalControlsService.html" title="struct xpcom::interfaces::nsIParentalControlsService">nsIParentalControlsService</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIParentalControlsServiceCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIParentalControlsService</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIParentalControlsService.html" title="struct xpcom::interfaces::nsIParentalControlsService">nsIParentalControlsService</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#132-334' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.DOWNLOAD' class="associatedconstant"><span id='DOWNLOAD.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD' class="constant"><b>DOWNLOAD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * Action types that can be blocked for users.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.INSTALL_EXTENSION' class="associatedconstant"><span id='INSTALL_EXTENSION.v' class='invisible'><code>pub const <a href='#associatedconstant.INSTALL_EXTENSION' class="constant"><b>INSTALL_EXTENSION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">INSTALL_EXTENSION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.INSTALL_APP' class="associatedconstant"><span id='INSTALL_APP.v' class='invisible'><code>pub const <a href='#associatedconstant.INSTALL_APP' class="constant"><b>INSTALL_APP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">INSTALL_APP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.BROWSE' class="associatedconstant"><span id='BROWSE.v' class='invisible'><code>pub const <a href='#associatedconstant.BROWSE' class="constant"><b>BROWSE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">BROWSE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.SHARE' class="associatedconstant"><span id='SHARE.v' class='invisible'><code>pub const <a href='#associatedconstant.SHARE' class="constant"><b>SHARE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SHARE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.BOOKMARK' class="associatedconstant"><span id='BOOKMARK.v' class='invisible'><code>pub const <a href='#associatedconstant.BOOKMARK' class="constant"><b>BOOKMARK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">BOOKMARK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.ADD_CONTACT' class="associatedconstant"><span id='ADD_CONTACT.v' class='invisible'><code>pub const <a href='#associatedconstant.ADD_CONTACT' class="constant"><b>ADD_CONTACT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ADD_CONTACT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+</div><h4 id='associatedconstant.SET_IMAGE' class="associatedconstant"><span id='SET_IMAGE.v' class='invisible'><code>pub const <a href='#associatedconstant.SET_IMAGE' class="constant"><b>SET_IMAGE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SET_IMAGE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='associatedconstant.MODIFY_ACCOUNTS' class="associatedconstant"><span id='MODIFY_ACCOUNTS.v' class='invisible'><code>pub const <a href='#associatedconstant.MODIFY_ACCOUNTS' class="constant"><b>MODIFY_ACCOUNTS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MODIFY_ACCOUNTS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+</div><h4 id='associatedconstant.REMOTE_DEBUGGING' class="associatedconstant"><span id='REMOTE_DEBUGGING.v' class='invisible'><code>pub const <a href='#associatedconstant.REMOTE_DEBUGGING' class="constant"><b>REMOTE_DEBUGGING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REMOTE_DEBUGGING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">10</span></pre>
+</div><h4 id='associatedconstant.IMPORT_SETTINGS' class="associatedconstant"><span id='IMPORT_SETTINGS.v' class='invisible'><code>pub const <a href='#associatedconstant.IMPORT_SETTINGS' class="constant"><b>IMPORT_SETTINGS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IMPORT_SETTINGS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">11</span></pre>
+</div><h4 id='associatedconstant.PRIVATE_BROWSING' class="associatedconstant"><span id='PRIVATE_BROWSING.v' class='invisible'><code>pub const <a href='#associatedconstant.PRIVATE_BROWSING' class="constant"><b>PRIVATE_BROWSING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PRIVATE_BROWSING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">12</span></pre>
+</div><h4 id='associatedconstant.DATA_CHOICES' class="associatedconstant"><span id='DATA_CHOICES.v' class='invisible'><code>pub const <a href='#associatedconstant.DATA_CHOICES' class="constant"><b>DATA_CHOICES</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DATA_CHOICES</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">13</span></pre>
+</div><h4 id='associatedconstant.CLEAR_HISTORY' class="associatedconstant"><span id='CLEAR_HISTORY.v' class='invisible'><code>pub const <a href='#associatedconstant.CLEAR_HISTORY' class="constant"><b>CLEAR_HISTORY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CLEAR_HISTORY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">14</span></pre>
+</div><h4 id='associatedconstant.MASTER_PASSWORD' class="associatedconstant"><span id='MASTER_PASSWORD.v' class='invisible'><code>pub const <a href='#associatedconstant.MASTER_PASSWORD' class="constant"><b>MASTER_PASSWORD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MASTER_PASSWORD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">15</span></pre>
+</div><h4 id='associatedconstant.GUEST_BROWSING' class="associatedconstant"><span id='GUEST_BROWSING.v' class='invisible'><code>pub const <a href='#associatedconstant.GUEST_BROWSING' class="constant"><b>GUEST_BROWSING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">GUEST_BROWSING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+</div><h4 id='associatedconstant.ADVANCED_SETTINGS' class="associatedconstant"><span id='ADVANCED_SETTINGS.v' class='invisible'><code>pub const <a href='#associatedconstant.ADVANCED_SETTINGS' class="constant"><b>ADVANCED_SETTINGS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ADVANCED_SETTINGS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">17</span></pre>
+</div><h4 id='associatedconstant.CAMERA_MICROPHONE' class="associatedconstant"><span id='CAMERA_MICROPHONE.v' class='invisible'><code>pub const <a href='#associatedconstant.CAMERA_MICROPHONE' class="constant"><b>CAMERA_MICROPHONE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CAMERA_MICROPHONE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">18</span></pre>
+</div><h4 id='associatedconstant.BLOCK_LIST' class="associatedconstant"><span id='BLOCK_LIST.v' class='invisible'><code>pub const <a href='#associatedconstant.BLOCK_LIST' class="constant"><b>BLOCK_LIST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">BLOCK_LIST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">19</span></pre>
+</div><h4 id='associatedconstant.TELEMETRY' class="associatedconstant"><span id='TELEMETRY.v' class='invisible'><code>pub const <a href='#associatedconstant.TELEMETRY' class="constant"><b>TELEMETRY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TELEMETRY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">20</span></pre>
+</div><h4 id='associatedconstant.HEALTH_REPORT' class="associatedconstant"><span id='HEALTH_REPORT.v' class='invisible'><code>pub const <a href='#associatedconstant.HEALTH_REPORT' class="constant"><b>HEALTH_REPORT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">HEALTH_REPORT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">21</span></pre>
+</div><h4 id='associatedconstant.DEFAULT_THEME' class="associatedconstant"><span id='DEFAULT_THEME.v' class='invisible'><code>pub const <a href='#associatedconstant.DEFAULT_THEME' class="constant"><b>DEFAULT_THEME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DEFAULT_THEME</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">22</span></pre>
+</div><h4 id='associatedconstant.ePCLog_URIVisit' class="associatedconstant"><span id='ePCLog_URIVisit.v' class='invisible'><code>pub const <a href='#associatedconstant.ePCLog_URIVisit' class="constant"><b>ePCLog_URIVisit</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ePCLog_URIVisit</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * Log entry types. Additional types can be defined and implemented
+   * as needed. Other possible event types might include email events,
+   * media related events, and IM events.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.ePCLog_FileDownload' class="associatedconstant"><span id='ePCLog_FileDownload.v' class='invisible'><code>pub const <a href='#associatedconstant.ePCLog_FileDownload' class="constant"><b>ePCLog_FileDownload</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ePCLog_FileDownload</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.GetParentalControlsEnabled' class="method"><span id='GetParentalControlsEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetParentalControlsEnabled' class='fnname'>GetParentalControlsEnabled</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aParentalControlsEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#229-231' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * @returns true if the current user account has parental controls
+   * restrictions enabled.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean parentalControlsEnabled;</code></p>
+</div><h4 id='method.GetBlockFileDownloadsEnabled' class="method"><span id='GetBlockFileDownloadsEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBlockFileDownloadsEnabled' class='fnname'>GetBlockFileDownloadsEnabled</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBlockFileDownloadsEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#244-246' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * @returns true if the current user account parental controls
+   * restrictions include the blocking of all file downloads.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean blockFileDownloadsEnabled;</code></p>
+</div><h4 id='method.IsAllowed' class="method"><span id='IsAllowed.v' class='invisible'><code>pub unsafe fn <a href='#method.IsAllowed' class='fnname'>IsAllowed</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAction: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#262-264' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Check if the user can do the prescibed action for this uri.
+   *
+   * @param aAction             Action being performed
+   * @param aUri                The uri requesting this action
+   * @param aWindow             The window generating this event.
+   */
+</code></pre>
+
+<p><code>boolean isAllowed (in short aAction, [optional] in nsIURI aUri);</code></p>
+</div><h4 id='method.RequestURIOverride' class="method"><span id='RequestURIOverride.v' class='invisible'><code>pub unsafe fn <a href='#method.RequestURIOverride' class='fnname'>RequestURIOverride</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindowContext: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#283-285' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Request that blocked URI(s) be allowed through parental
+   * control filters. Returns true if the URI was successfully
+   * overriden. Note, may block while native UI is shown.
+   *
+   * @param aTarget(s)          URI to be overridden. In the case of
+   *                            multiple URI, the first URI in the array
+   *                            should be the root URI of the site.
+   * @param window              Window that generates the event.
+   */
+</code></pre>
+
+<p><code>boolean requestURIOverride (in nsIURI aTarget, [optional] in nsIInterfaceRequestor aWindowContext);</code></p>
+</div><h4 id='method.RequestURIOverrides' class="method"><span id='RequestURIOverrides.v' class='invisible'><code>pub unsafe fn <a href='#method.RequestURIOverrides' class='fnname'>RequestURIOverrides</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTargets: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindowContext: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#291-293' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>boolean requestURIOverrides (in nsIArray aTargets, [optional] in nsIInterfaceRequestor aWindowContext);</code></p>
+</div><h4 id='method.GetLoggingEnabled' class="method"><span id='GetLoggingEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoggingEnabled' class='fnname'>GetLoggingEnabled</a>(&amp;self, aLoggingEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#307-309' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * @returns true if the current user account has parental controls
+   * logging enabled. If true, applications should log relevent events
+   * using &#39;log&#39;.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean loggingEnabled;</code></p>
+</div><h4 id='method.Log' class="method"><span id='Log.v' class='invisible'><code>pub unsafe fn <a href='#method.Log' class='fnname'>Log</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEntryType: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlag: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#329-331' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Log an application specific parental controls
+   * event.
+   *
+   * @param aEntryType       Constant defining the type of event.
+   * @param aFlag            A flag indicating if the subject content
+   *                         was blocked.
+   * @param aSource          The URI source of the subject content.
+   * @param aTarget          The location the content was saved to if
+   *                         no blocking occurred.
+   */
+</code></pre>
+
+<p><code>void log (in short aEntryType, in boolean aFlag, in nsIURI aSource, [optional] in nsIFile aTarget);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIParentalControlsService.html" title="struct xpcom::interfaces::nsIParentalControlsService">nsIParentalControlsService</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">781706717</span>, <span class="number">18043</span>, <span class="number">19178</span>, [<span class="number">161</span>, <span class="number">187</span>, <span class="number">103</span>, <span class="number">115</span>, <span class="number">192</span>, <span class="number">242</span>, <span class="number">190</span>, <span class="number">176</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIParentalControlsService.html" title="struct xpcom::interfaces::nsIParentalControlsService">nsIParentalControlsService</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIParentalControlsService.html" title="struct xpcom::interfaces::nsIParentalControlsService">nsIParentalControlsService</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIParentalControlsService.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

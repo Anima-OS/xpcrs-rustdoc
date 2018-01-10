@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsStringLike` trait in crate `nsstring`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsStringLike">
+
+    <title>nsstring::nsStringLike - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc trait">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Trait nsStringLike</p><div class="block items"><a class="sidebar-title" href="#required-methods">Required Methods</a><div class="sidebar-links"><a href="#tymethod.adapt">adapt</a></div><a class="sidebar-title" href="#foreign-impls">Implementations on Foreign Types</a><div class="sidebar-links"><a href="#impl-nsStringLike">&amp;&#39;a T</a><a href="#impl-nsStringLike">Cow&lt;&#39;a, T&gt;</a><a href="#impl-nsStringLike">[u16]</a><a href="#impl-nsStringLike">Vec&lt;u16&gt;</a><a href="#impl-nsStringLike">Box&lt;[u16]&gt;</a></div><a class="sidebar-title" href="#implementors">Implementors</a></div><p class='location'><a href='index.html'>nsstring</a></p><script>window.sidebarCurrent = {name: 'nsStringLike', ty: 'trait', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Trait <a href='index.html'>nsstring</a>::<wbr><a class="trait" href=''>nsStringLike</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../src/nsstring/lib.rs.html#730-732' title='goto source code'>[src]</a></span></h1>
+<pre class='rust trait'>pub trait nsStringLike {
+    fn <a href='#tymethod.adapt' class='fnname'>adapt</a>(&amp;self) -&gt; <a class="enum" href="../nsstring/enum.nsStringAdapter.html" title="enum nsstring::nsStringAdapter">nsStringAdapter</a>;
+}</pre><div class='docblock'><p>This trait is implemented on types which are <code>ns[C]String</code>-like, in
+that they can at very low cost be converted to a borrowed
+<code>&amp;nsA[C]String</code>. Unfortunately, the intermediate type
+<code>ns[C]StringAdapter</code> is required as well due to types like <code>&amp;[u8]</code>
+needing to be (cheaply) wrapped in a <code>nsCString</code> on the stack to
+create the <code>&amp;nsACString</code>.</p>
+
+<p>This trait is used to DWIM when calling the methods on
+<code>nsA[C]String</code>.</p>
+</div>
+            <h2 id='required-methods' class='small-section-header'>
+              Required Methods<a href='#required-methods' class='anchor'></a>
+            </h2>
+            <div class='methods'>
+        <h3 id='tymethod.adapt' class='method'><span id='adapt.v' class='invisible'><code>fn <a href='#tymethod.adapt' class='fnname'>adapt</a>(&amp;self) -&gt; <a class="enum" href="../nsstring/enum.nsStringAdapter.html" title="enum nsstring::nsStringAdapter">nsStringAdapter</a></code></span></h3></div>
+                <h2 id='foreign-impls' class='small-section-header'>
+                  Implementations on Foreign Types<a href='#foreign-impls' class='anchor'></a>
+                </h2>
+            <h3 id='impl-nsStringLike' class='impl'><span class='in-band'><code>impl&lt;'a, T:&nbsp;<a class="trait" href="../nsstring/trait.nsStringLike.html" title="trait nsstring::nsStringLike">nsStringLike</a> + ?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>&gt; <a class="trait" href="../nsstring/trait.nsStringLike.html" title="trait nsstring::nsStringLike">nsStringLike</a> for <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;'a </a>T</code><a href='#impl-nsStringLike' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#734-738' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.adapt' class="method"><span id='adapt.v-1' class='invisible'><code>fn <a href='#method.adapt' class='fnname'>adapt</a>(&amp;self) -&gt; <a class="enum" href="../nsstring/enum.nsStringAdapter.html" title="enum nsstring::nsStringAdapter">nsStringAdapter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#735-737' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-nsStringLike-1' class='impl'><span class='in-band'><code>impl&lt;'a, T:&nbsp;?<a class="trait" href="https://doc.rust-lang.org/nightly/core/marker/trait.Sized.html" title="trait core::marker::Sized">Sized</a>&gt; <a class="trait" href="../nsstring/trait.nsStringLike.html" title="trait nsstring::nsStringLike">nsStringLike</a> for <a class="enum" href="https://doc.rust-lang.org/nightly/alloc/borrow/enum.Cow.html" title="enum alloc::borrow::Cow">Cow</a>&lt;'a, T&gt; <span class="where fmt-newline">where<br>&nbsp;&nbsp;&nbsp;&nbsp;T: <a class="trait" href="../nsstring/trait.nsStringLike.html" title="trait nsstring::nsStringLike">nsStringLike</a> + <a class="trait" href="https://doc.rust-lang.org/nightly/alloc/borrow/trait.ToOwned.html" title="trait alloc::borrow::ToOwned">ToOwned</a>,&nbsp;</span></code><a href='#impl-nsStringLike-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#740-745' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.adapt-1' class="method"><span id='adapt.v-2' class='invisible'><code>fn <a href='#method.adapt' class='fnname'>adapt</a>(&amp;self) -&gt; <a class="enum" href="../nsstring/enum.nsStringAdapter.html" title="enum nsstring::nsStringAdapter">nsStringAdapter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#742-744' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-nsStringLike-2' class='impl'><span class='in-band'><code>impl <a class="trait" href="../nsstring/trait.nsStringLike.html" title="trait nsstring::nsStringLike">nsStringLike</a> for <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a></code><a href='#impl-nsStringLike-2' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#765-769' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.adapt-2' class="method"><span id='adapt.v-3' class='invisible'><code>fn <a href='#method.adapt' class='fnname'>adapt</a>(&amp;self) -&gt; <a class="enum" href="../nsstring/enum.nsStringAdapter.html" title="enum nsstring::nsStringAdapter">nsStringAdapter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#766-768' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-nsStringLike-3' class='impl'><span class='in-band'><code>impl <a class="trait" href="../nsstring/trait.nsStringLike.html" title="trait nsstring::nsStringLike">nsStringLike</a> for <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/vec/struct.Vec.html" title="struct alloc::vec::Vec">Vec</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a>&gt;</code><a href='#impl-nsStringLike-3' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#771-775' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.adapt-3' class="method"><span id='adapt.v-4' class='invisible'><code>fn <a href='#method.adapt' class='fnname'>adapt</a>(&amp;self) -&gt; <a class="enum" href="../nsstring/enum.nsStringAdapter.html" title="enum nsstring::nsStringAdapter">nsStringAdapter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#772-774' title='goto source code'>[src]</a></span></h4>
+</div></span><h3 id='impl-nsStringLike-4' class='impl'><span class='in-band'><code>impl <a class="trait" href="../nsstring/trait.nsStringLike.html" title="trait nsstring::nsStringLike">nsStringLike</a> for <a class="struct" href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html" title="struct alloc::boxed::Box">Box</a>&lt;<a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">[</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u16.html">u16</a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.slice.html">]</a>&gt;</code><a href='#impl-nsStringLike-4' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#777-781' title='goto source code'>[src]</a></span></h3>
+<span class='docblock autohide'><div class='impl-items'><h4 id='method.adapt-4' class="method"><span id='adapt.v-5' class='invisible'><code>fn <a href='#method.adapt' class='fnname'>adapt</a>(&amp;self) -&gt; <a class="enum" href="../nsstring/enum.nsStringAdapter.html" title="enum nsstring::nsStringAdapter">nsStringAdapter</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../src/nsstring/lib.rs.html#778-780' title='goto source code'>[src]</a></span></h4>
+</div></span>
+        <h2 id='implementors' class='small-section-header'>
+          Implementors<a href='#implementors' class='anchor'></a>
+        </h2>
+        <ul class='item-list' id='implementors-list'>
+    <li><div class='out-of-band'><a class='srclink' href='../src/nsstring/lib.rs.html#747-751' title='goto source code'>[src]</a></div><code>impl nsStringLike for <a class="struct" href="../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a></code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/nsstring/lib.rs.html#753-757' title='goto source code'>[src]</a></div><code>impl&lt;'a&gt; nsStringLike for <a class="struct" href="../nsstring/struct.nsStr.html" title="struct nsstring::nsStr">nsStr</a>&lt;'a&gt;</code></li>
+<li><div class='out-of-band'><a class='srclink' href='../src/nsstring/lib.rs.html#759-763' title='goto source code'>[src]</a></div><code>impl nsStringLike for <a class="struct" href="../nsstring/struct.nsString.html" title="struct nsstring::nsString">nsString</a></code></li>
+</ul><script type="text/javascript" async
+                         src="../implementors/nsstring/trait.nsStringLike.js">
+                 </script></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../";
+        window.currentCrate = "nsstring";
+    </script>
+    <script src="../main.js"></script>
+    <script defer src="../search-index.js"></script>
+</body>
+</html>

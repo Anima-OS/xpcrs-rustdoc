@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIThreadPool` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIThreadPool">
+
+    <title>xpcom::interfaces::nsIThreadPool - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIThreadPool</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.Shutdown">Shutdown</a><a href="#method.GetThreadLimit">GetThreadLimit</a><a href="#method.SetThreadLimit">SetThreadLimit</a><a href="#method.GetIdleThreadLimit">GetIdleThreadLimit</a><a href="#method.SetIdleThreadLimit">SetIdleThreadLimit</a><a href="#method.GetIdleThreadTimeout">GetIdleThreadTimeout</a><a href="#method.SetIdleThreadTimeout">SetIdleThreadTimeout</a><a href="#method.GetThreadStackSize">GetThreadStackSize</a><a href="#method.SetThreadStackSize">SetThreadStackSize</a><a href="#method.GetListener">GetListener</a><a href="#method.SetListener">SetListener</a><a href="#method.SetName">SetName</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIEventTarget&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.IsOnCurrentThreadInfallible">IsOnCurrentThreadInfallible</a><a href="#method.IsOnCurrentThread">IsOnCurrentThread</a><a href="#method.DispatchFromScript">DispatchFromScript</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIThreadPool', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIThreadPool</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#169-178' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIThreadPool { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIThreadPool : nsIEventTarget</code></p>
+
+<pre><code class="language-text">/**
+ * An interface to a thread pool.  A thread pool creates a limited number of
+ * anonymous (unnamed) worker threads.  An event dispatched to the thread pool
+ * will be run on the next available worker thread.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIThreadPool.html" title="struct xpcom::interfaces::nsIThreadPool">nsIThreadPool</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#218-224' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIThreadPoolCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#221-223' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIThreadPool</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIThreadPool.html" title="struct xpcom::interfaces::nsIThreadPool">nsIThreadPool</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#301-506' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.Shutdown' class="method"><span id='Shutdown.v' class='invisible'><code>pub unsafe fn <a href='#method.Shutdown' class='fnname'>Shutdown</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#318-320' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Shutdown the thread pool.  This method may not be executed from any thread
+   * in the thread pool.  Instead, it is meant to be executed from another
+   * thread (usually the thread that created this thread pool).  When this
+   * function returns, the thread pool and all of its threads will be shutdown,
+   * and it will no longer be possible to dispatch tasks to the thread pool.
+   *
+   * As a side effect, events on the current thread will be processed.
+   */
+</code></pre>
+
+<p><code>void shutdown ();</code></p>
+</div><h4 id='method.GetThreadLimit' class="method"><span id='GetThreadLimit.v' class='invisible'><code>pub unsafe fn <a href='#method.GetThreadLimit' class='fnname'>GetThreadLimit</a>(&amp;self, aThreadLimit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#332-334' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get/set the maximum number of threads allowed at one time in this pool.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long threadLimit;</code></p>
+</div><h4 id='method.SetThreadLimit' class="method"><span id='SetThreadLimit.v' class='invisible'><code>pub unsafe fn <a href='#method.SetThreadLimit' class='fnname'>SetThreadLimit</a>(&amp;self, aThreadLimit: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#346-348' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get/set the maximum number of threads allowed at one time in this pool.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long threadLimit;</code></p>
+</div><h4 id='method.GetIdleThreadLimit' class="method"><span id='GetIdleThreadLimit.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIdleThreadLimit' class='fnname'>GetIdleThreadLimit</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIdleThreadLimit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#360-362' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get/set the maximum number of idle threads kept alive.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long idleThreadLimit;</code></p>
+</div><h4 id='method.SetIdleThreadLimit' class="method"><span id='SetIdleThreadLimit.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIdleThreadLimit' class='fnname'>SetIdleThreadLimit</a>(&amp;self, aIdleThreadLimit: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#374-376' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get/set the maximum number of idle threads kept alive.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long idleThreadLimit;</code></p>
+</div><h4 id='method.GetIdleThreadTimeout' class="method"><span id='GetIdleThreadTimeout.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIdleThreadTimeout' class='fnname'>GetIdleThreadTimeout</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIdleThreadTimeout: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#389-391' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get/set the amount of time in milliseconds before an idle thread is
+   * destroyed.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long idleThreadTimeout;</code></p>
+</div><h4 id='method.SetIdleThreadTimeout' class="method"><span id='SetIdleThreadTimeout.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIdleThreadTimeout' class='fnname'>SetIdleThreadTimeout</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIdleThreadTimeout: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#404-406' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get/set the amount of time in milliseconds before an idle thread is
+   * destroyed.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long idleThreadTimeout;</code></p>
+</div><h4 id='method.GetThreadStackSize' class="method"><span id='GetThreadStackSize.v' class='invisible'><code>pub unsafe fn <a href='#method.GetThreadStackSize' class='fnname'>GetThreadStackSize</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aThreadStackSize: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#419-421' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get/set the number of bytes reserved for the stack of all threads in
+   * the pool. By default this is nsIThreadManager::DEFAULT_STACK_SIZE.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long threadStackSize;</code></p>
+</div><h4 id='method.SetThreadStackSize' class="method"><span id='SetThreadStackSize.v' class='invisible'><code>pub unsafe fn <a href='#method.SetThreadStackSize' class='fnname'>SetThreadStackSize</a>(&amp;self, aThreadStackSize: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#434-436' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get/set the number of bytes reserved for the stack of all threads in
+   * the pool. By default this is nsIThreadManager::DEFAULT_STACK_SIZE.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long threadStackSize;</code></p>
+</div><h4 id='method.GetListener' class="method"><span id='GetListener.v' class='invisible'><code>pub unsafe fn <a href='#method.GetListener' class='fnname'>GetListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIThreadPoolListener.html" title="struct xpcom::interfaces::nsIThreadPoolListener">nsIThreadPoolListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#460-462' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * An optional listener that will be notified when a thread is created or
+   * destroyed in the course of the thread pool&#39;s operation.
+   *
+   * A listener will only receive notifications about threads created after the
+   * listener is set so it is recommended that the consumer set the listener
+   * before dispatching the first event. A listener that receives an
+   * onThreadCreated() notification is guaranteed to always receive the
+   * corresponding onThreadShuttingDown() notification.
+   *
+   * The thread pool takes ownership of the listener and releases it when the
+   * shutdown() method is called. Threads created after the listener is set will
+   * also take ownership of the listener so that the listener will be kept alive
+   * long enough to receive the guaranteed onThreadShuttingDown() notification.
+   */
+</code></pre>
+
+<p><code>attribute nsIThreadPoolListener listener;</code></p>
+</div><h4 id='method.SetListener' class="method"><span id='SetListener.v' class='invisible'><code>pub unsafe fn <a href='#method.SetListener' class='fnname'>SetListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIThreadPoolListener.html" title="struct xpcom::interfaces::nsIThreadPoolListener">nsIThreadPoolListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#486-488' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * An optional listener that will be notified when a thread is created or
+   * destroyed in the course of the thread pool&#39;s operation.
+   *
+   * A listener will only receive notifications about threads created after the
+   * listener is set so it is recommended that the consumer set the listener
+   * before dispatching the first event. A listener that receives an
+   * onThreadCreated() notification is guaranteed to always receive the
+   * corresponding onThreadShuttingDown() notification.
+   *
+   * The thread pool takes ownership of the listener and releases it when the
+   * shutdown() method is called. Threads created after the listener is set will
+   * also take ownership of the listener so that the listener will be kept alive
+   * long enough to receive the guaranteed onThreadShuttingDown() notification.
+   */
+</code></pre>
+
+<p><code>attribute nsIThreadPoolListener listener;</code></p>
+</div><h4 id='method.SetName' class="method"><span id='SetName.v' class='invisible'><code>pub unsafe fn <a href='#method.SetName' class='fnname'>SetName</a>(&amp;self, aName: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#501-503' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the label for threads in the pool. All threads will be named
+   * &quot;&lt;aName&gt; #&lt;n&gt;&quot;, where &lt;n&gt; is a serial number.
+   */
+</code></pre>
+
+<p><code>void setName (in ACString aName);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIEventTargetCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEventTarget.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIEventTarget</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.DISPATCH_NORMAL' class="associatedconstant"><span id='DISPATCH_NORMAL.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPATCH_NORMAL' class="constant"><b>DISPATCH_NORMAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISPATCH_SYNC' class="associatedconstant"><span id='DISPATCH_SYNC.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPATCH_SYNC' class="constant"><b>DISPATCH_SYNC</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISPATCH_AT_END' class="associatedconstant"><span id='DISPATCH_AT_END.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPATCH_AT_END' class="constant"><b>DISPATCH_AT_END</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='method.IsOnCurrentThreadInfallible' class="method"><span id='IsOnCurrentThreadInfallible.v' class='invisible'><code>pub unsafe fn <a href='#method.IsOnCurrentThreadInfallible' class='fnname'>IsOnCurrentThreadInfallible</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEventTarget.rs.html#202-204' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * IsOnCurrentThread() should return true if events dispatched to this target
+   * can possibly run on the current thread, and false otherwise. In the case
+   * of an nsIEventTarget for a thread pool, it should return true on all
+   * threads in the pool. In the case of a non-thread nsIEventTarget such as
+   * ThrottledEventQueue, it should return true on the thread where events are
+   * expected to be processed, even if no events from the queue are actually
+   * being processed right now.
+   *
+   * When called on an nsISerialEventTarget, IsOnCurrentThread can be used to
+   * ensure that no other thread has &quot;ownership&quot; of the event target. As such,
+   * it&#39;s useful for asserting that an object is only used on a particular
+   * thread. IsOnCurrentThread can&#39;t guarantee that the current event has been
+   * dispatched through a particular event target.
+   *
+   * The infallible version of IsOnCurrentThread() is optimized to avoid a
+   * virtual call for non-thread event targets. Thread targets should set
+   * mVirtualThread to their virtual PRThread. Non-thread targets should leave
+   * mVirtualThread null and implement IsOnCurrentThreadInfallible() to
+   * return the correct answer.
+   *
+   * The fallible version of IsOnCurrentThread may return errors, such as during
+   * shutdown. If it does not return an error, it should return the same result
+   * as the infallible version. The infallible method should return the correct
+   * result regardless of whether the fallible method returns an error.
+   */
+</code></pre>
+
+<p><code>[noscript,notxpcom] boolean isOnCurrentThreadInfallible ();</code></p>
+</div><h4 id='method.IsOnCurrentThread' class="method"><span id='IsOnCurrentThread.v' class='invisible'><code>pub unsafe fn <a href='#method.IsOnCurrentThread' class='fnname'>IsOnCurrentThread</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEventTarget.rs.html#210-212' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>boolean isOnCurrentThread ();</code></p>
+</div><h4 id='method.DispatchFromScript' class="method"><span id='DispatchFromScript.v' class='invisible'><code>pub unsafe fn <a href='#method.DispatchFromScript' class='fnname'>DispatchFromScript</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;event: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRunnable.html" title="struct xpcom::interfaces::nsIRunnable">nsIRunnable</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;flags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEventTarget.rs.html#261-263' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Version of Dispatch to expose to JS, which doesn&#39;t require an alreadyAddRefed&lt;&gt;
+   * (it will be converted to that internally)
+   *
+   * @param event
+   *   The (raw) event to dispatch.
+   * @param flags
+   *   The flags modifying event dispatch.  The flags are described in detail
+   *   below.
+   *
+   * @throws NS_ERROR_INVALID_ARG
+   *   Indicates that event is null.
+   * @throws NS_ERROR_UNEXPECTED
+   *   Indicates that the thread is shutting down and has finished processing
+   * events, so this event would never run and has not been dispatched.
+   */
+</code></pre>
+
+<p><code>[binaryname(DispatchFromScript)] void dispatch (in nsIRunnable event, in unsigned long flags);</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIThreadPool.html" title="struct xpcom::interfaces::nsIThreadPool">nsIThreadPool</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#183-186' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1993251273</span>, <span class="number">36419</span>, <span class="number">18586</span>, [<span class="number">151</span>, <span class="number">137</span>, <span class="number">242</span>, <span class="number">124</span>, <span class="number">196</span>, <span class="number">66</span>, <span class="number">73</span>, <span class="number">101</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIThreadPool.html" title="struct xpcom::interfaces::nsIThreadPool">nsIThreadPool</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#190-199' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#192-194' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#196-198' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIThreadPool.html" title="struct xpcom::interfaces::nsIThreadPool">nsIThreadPool</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#230-238' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIThreadPool.rs.html#233-237' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

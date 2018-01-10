@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIXULRuntime` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIXULRuntime">
+
+    <title>xpcom::interfaces::nsIXULRuntime - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIXULRuntime</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetInSafeMode">GetInSafeMode</a><a href="#method.GetLogConsoleErrors">GetLogConsoleErrors</a><a href="#method.SetLogConsoleErrors">SetLogConsoleErrors</a><a href="#method.GetOS">GetOS</a><a href="#method.GetXPCOMABI">GetXPCOMABI</a><a href="#method.GetWidgetToolkit">GetWidgetToolkit</a><a href="#method.GetProcessType">GetProcessType</a><a href="#method.GetProcessID">GetProcessID</a><a href="#method.GetUniqueProcessID">GetUniqueProcessID</a><a href="#method.GetRemoteType">GetRemoteType</a><a href="#method.GetBrowserTabsRemoteAutostart">GetBrowserTabsRemoteAutostart</a><a href="#method.GetMaxWebProcessCount">GetMaxWebProcessCount</a><a href="#method.GetAccessibilityEnabled">GetAccessibilityEnabled</a><a href="#method.GetAccessibleHandlerUsed">GetAccessibleHandlerUsed</a><a href="#method.GetAccessibilityInstantiator">GetAccessibilityInstantiator</a><a href="#method.GetShouldBlockIncompatJaws">GetShouldBlockIncompatJaws</a><a href="#method.GetIs64Bit">GetIs64Bit</a><a href="#method.InvalidateCachesOnRestart">InvalidateCachesOnRestart</a><a href="#method.EnsureContentProcess">EnsureContentProcess</a><a href="#method.GetReplacedLockTime">GetReplacedLockTime</a><a href="#method.GetIsReleaseOrBeta">GetIsReleaseOrBeta</a><a href="#method.GetIsOfficialBranding">GetIsOfficialBranding</a><a href="#method.GetDefaultUpdateChannel">GetDefaultUpdateChannel</a><a href="#method.GetDistributionID">GetDistributionID</a><a href="#method.GetWindowsDLLBlocklistStatus">GetWindowsDLLBlocklistStatus</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIXULRuntime', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIXULRuntime</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#24-33' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIXULRuntime { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIXULRuntime : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * Provides information about the XUL runtime.
+ * @status UNSTABLE - This interface is not frozen and will probably change in
+ *                    future releases. If you need this functionality to be
+ *                    stable/frozen, please contact Benjamin Smedberg.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIXULRuntime.html" title="struct xpcom::interfaces::nsIXULRuntime">nsIXULRuntime</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#73-79' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIXULRuntimeCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#76-78' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIXULRuntime</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIXULRuntime.html" title="struct xpcom::interfaces::nsIXULRuntime">nsIXULRuntime</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#195-616' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.PROCESS_TYPE_DEFAULT' class="associatedconstant"><span id='PROCESS_TYPE_DEFAULT.v' class='invisible'><code>pub const <a href='#associatedconstant.PROCESS_TYPE_DEFAULT' class="constant"><b>PROCESS_TYPE_DEFAULT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PROCESS_TYPE_DEFAULT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * The legal values of processType.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.PROCESS_TYPE_PLUGIN' class="associatedconstant"><span id='PROCESS_TYPE_PLUGIN.v' class='invisible'><code>pub const <a href='#associatedconstant.PROCESS_TYPE_PLUGIN' class="constant"><b>PROCESS_TYPE_PLUGIN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PROCESS_TYPE_PLUGIN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.PROCESS_TYPE_CONTENT' class="associatedconstant"><span id='PROCESS_TYPE_CONTENT.v' class='invisible'><code>pub const <a href='#associatedconstant.PROCESS_TYPE_CONTENT' class="constant"><b>PROCESS_TYPE_CONTENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PROCESS_TYPE_CONTENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.PROCESS_TYPE_IPDLUNITTEST' class="associatedconstant"><span id='PROCESS_TYPE_IPDLUNITTEST.v' class='invisible'><code>pub const <a href='#associatedconstant.PROCESS_TYPE_IPDLUNITTEST' class="constant"><b>PROCESS_TYPE_IPDLUNITTEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PROCESS_TYPE_IPDLUNITTEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.PROCESS_TYPE_GMPLUGIN' class="associatedconstant"><span id='PROCESS_TYPE_GMPLUGIN.v' class='invisible'><code>pub const <a href='#associatedconstant.PROCESS_TYPE_GMPLUGIN' class="constant"><b>PROCESS_TYPE_GMPLUGIN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PROCESS_TYPE_GMPLUGIN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.PROCESS_TYPE_GPU' class="associatedconstant"><span id='PROCESS_TYPE_GPU.v' class='invisible'><code>pub const <a href='#associatedconstant.PROCESS_TYPE_GPU' class="constant"><b>PROCESS_TYPE_GPU</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PROCESS_TYPE_GPU</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.PROCESS_TYPE_PDFIUM' class="associatedconstant"><span id='PROCESS_TYPE_PDFIUM.v' class='invisible'><code>pub const <a href='#associatedconstant.PROCESS_TYPE_PDFIUM' class="constant"><b>PROCESS_TYPE_PDFIUM</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PROCESS_TYPE_PDFIUM</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.E10S_MULTI_EXPERIMENT' class="associatedconstant"><span id='E10S_MULTI_EXPERIMENT.v' class='invisible'><code>pub const <a href='#associatedconstant.E10S_MULTI_EXPERIMENT' class="constant"><b>E10S_MULTI_EXPERIMENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">E10S_MULTI_EXPERIMENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * The current e10s-multi experiment number. Set dom.ipc.multiOptOut to (at
+   * least) this to disable it until the next experiment.
+   */
+</code></pre>
+</div><h4 id='method.GetInSafeMode' class="method"><span id='GetInSafeMode.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInSafeMode' class='fnname'>GetInSafeMode</a>(&amp;self, aInSafeMode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#242-244' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether the application was launched in safe mode.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean inSafeMode;</code></p>
+</div><h4 id='method.GetLogConsoleErrors' class="method"><span id='GetLogConsoleErrors.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLogConsoleErrors' class='fnname'>GetLogConsoleErrors</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLogConsoleErrors: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#258-260' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether to write console errors to a log file. If a component
+   * encounters startup errors that might prevent the app from showing
+   * proper UI, it should set this flag to &quot;true&quot;.
+   */
+</code></pre>
+
+<p><code>attribute boolean logConsoleErrors;</code></p>
+</div><h4 id='method.SetLogConsoleErrors' class="method"><span id='SetLogConsoleErrors.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLogConsoleErrors' class='fnname'>SetLogConsoleErrors</a>(&amp;self, aLogConsoleErrors: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#274-276' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether to write console errors to a log file. If a component
+   * encounters startup errors that might prevent the app from showing
+   * proper UI, it should set this flag to &quot;true&quot;.
+   */
+</code></pre>
+
+<p><code>attribute boolean logConsoleErrors;</code></p>
+</div><h4 id='method.GetOS' class="method"><span id='GetOS.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOS' class='fnname'>GetOS</a>(&amp;self, aOS: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#289-291' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A string tag identifying the current operating system. This is taken
+   * from the OS_TARGET configure variable. It will always be available.
+   */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String OS;</code></p>
+</div><h4 id='method.GetXPCOMABI' class="method"><span id='GetXPCOMABI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetXPCOMABI' class='fnname'>GetXPCOMABI</a>(&amp;self, aXPCOMABI: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#314-316' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A string tag identifying the binary ABI of the current processor and
+   * compiler vtable. This is taken from the TARGET_XPCOM_ABI configure
+   * variable. It may not be available on all platforms, especially
+   * unusual processor or compiler combinations.
+   *
+   * The result takes the form &lt;processor&gt;-&lt;compilerABI&gt;, for example:
+   *   x86-msvc
+   *   ppc-gcc3
+   *
+   * This value should almost always be used in combination with &quot;OS&quot;.
+   *
+   * @throw NS_ERROR_NOT_AVAILABLE if not available.
+   */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String XPCOMABI;</code></p>
+</div><h4 id='method.GetWidgetToolkit' class="method"><span id='GetWidgetToolkit.v' class='invisible'><code>pub unsafe fn <a href='#method.GetWidgetToolkit' class='fnname'>GetWidgetToolkit</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWidgetToolkit: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#329-331' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A string tag identifying the target widget toolkit in use.
+   * This is taken from the MOZ_WIDGET_TOOLKIT configure variable.
+   */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String widgetToolkit;</code></p>
+</div><h4 id='method.GetProcessType' class="method"><span id='GetProcessType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProcessType' class='fnname'>GetProcessType</a>(&amp;self, aProcessType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#343-345' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The type of the caller&#39;s process.  Returns one of the values above.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long processType;</code></p>
+</div><h4 id='method.GetProcessID' class="method"><span id='GetProcessID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProcessID' class='fnname'>GetProcessID</a>(&amp;self, aProcessID: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#357-359' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The system process ID of the caller&#39;s process.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long processID;</code></p>
+</div><h4 id='method.GetUniqueProcessID' class="method"><span id='GetUniqueProcessID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUniqueProcessID' class='fnname'>GetUniqueProcessID</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUniqueProcessID: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#371-373' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A globally unique and non-recycled ID of the caller&#39;s process.
+   */
+</code></pre>
+
+<p><code>readonly attribute uint64_t uniqueProcessID;</code></p>
+</div><h4 id='method.GetRemoteType' class="method"><span id='GetRemoteType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRemoteType' class='fnname'>GetRemoteType</a>(&amp;self, aRemoteType: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#386-388' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The type of remote content process we&#39;re running in.
+   * null if we&#39;re in the parent/chrome process.
+   */
+</code></pre>
+
+<p><code>readonly attribute DOMString remoteType;</code></p>
+</div><h4 id='method.GetBrowserTabsRemoteAutostart' class="method"><span id='GetBrowserTabsRemoteAutostart.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBrowserTabsRemoteAutostart' class='fnname'>GetBrowserTabsRemoteAutostart</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBrowserTabsRemoteAutostart: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#401-403' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, browser tabs may be opened by default in a different process
+   * from the main browser UI.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean browserTabsRemoteAutostart;</code></p>
+</div><h4 id='method.GetMaxWebProcessCount' class="method"><span id='GetMaxWebProcessCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMaxWebProcessCount' class='fnname'>GetMaxWebProcessCount</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMaxWebProcessCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#419-421' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the number of content processes to use for normal web pages. If
+   * this value is &gt; 1, then e10s-multi should be considered to be &quot;on&quot;.
+   *
+   * NB: If browserTabsRemoteAutostart is false, then this value has no
+   * meaning and e10s should be considered to be &quot;off&quot;!
+   */
+</code></pre>
+
+<p><code>readonly attribute uint32_t maxWebProcessCount;</code></p>
+</div><h4 id='method.GetAccessibilityEnabled' class="method"><span id='GetAccessibilityEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAccessibilityEnabled' class='fnname'>GetAccessibilityEnabled</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAccessibilityEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#433-435' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, the accessibility service is running.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean accessibilityEnabled;</code></p>
+</div><h4 id='method.GetAccessibleHandlerUsed' class="method"><span id='GetAccessibleHandlerUsed.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAccessibleHandlerUsed' class='fnname'>GetAccessibleHandlerUsed</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAccessibleHandlerUsed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#447-449' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, the AccessibleHandler dll is used.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean accessibleHandlerUsed;</code></p>
+</div><h4 id='method.GetAccessibilityInstantiator' class="method"><span id='GetAccessibilityInstantiator.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAccessibilityInstantiator' class='fnname'>GetAccessibilityInstantiator</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAccessibilityInstantiator: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#461-463' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Executable of Windows service that activated accessibility.
+   */
+</code></pre>
+
+<p><code>readonly attribute DOMString accessibilityInstantiator;</code></p>
+</div><h4 id='method.GetShouldBlockIncompatJaws' class="method"><span id='GetShouldBlockIncompatJaws.v' class='invisible'><code>pub unsafe fn <a href='#method.GetShouldBlockIncompatJaws' class='fnname'>GetShouldBlockIncompatJaws</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aShouldBlockIncompatJaws: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#476-478' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Temporary, do not use. Indicates if an incompat version of JAWS
+   * screen reader software is loaded in our process space.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean shouldBlockIncompatJaws;</code></p>
+</div><h4 id='method.GetIs64Bit' class="method"><span id='GetIs64Bit.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIs64Bit' class='fnname'>GetIs64Bit</a>(&amp;self, aIs64Bit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#490-492' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicates whether the current Firefox build is 64-bit.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean is64Bit;</code></p>
+</div><h4 id='method.InvalidateCachesOnRestart' class="method"><span id='InvalidateCachesOnRestart.v' class='invisible'><code>pub unsafe fn <a href='#method.InvalidateCachesOnRestart' class='fnname'>InvalidateCachesOnRestart</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#506-508' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Signal the apprunner to invalidate caches on the next restart.
+   * This will cause components to be autoregistered and all
+   * fastload data to be re-created.
+   */
+</code></pre>
+
+<p><code>void invalidateCachesOnRestart ();</code></p>
+</div><h4 id='method.EnsureContentProcess' class="method"><span id='EnsureContentProcess.v' class='invisible'><code>pub unsafe fn <a href='#method.EnsureContentProcess' class='fnname'>EnsureContentProcess</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#524-526' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Starts a child process. This method is intented to pre-start a
+   * content child process so that when it is actually needed, it is
+   * ready to go.
+   *
+   * @throw NS_ERROR_NOT_AVAILABLE if not available.
+   */
+</code></pre>
+
+<p><code>void ensureContentProcess ();</code></p>
+</div><h4 id='method.GetReplacedLockTime' class="method"><span id='GetReplacedLockTime.v' class='invisible'><code>pub unsafe fn <a href='#method.GetReplacedLockTime' class='fnname'>GetReplacedLockTime</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReplacedLockTime: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#540-542' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Modification time of the profile lock before the profile was locked on
+   * this startup. Used to know the last time the profile was used and not
+   * closed cleanly. This is set to 0 if there was no existing profile lock.
+   */
+</code></pre>
+
+<p><code>readonly attribute PRTime replacedLockTime;</code></p>
+</div><h4 id='method.GetIsReleaseOrBeta' class="method"><span id='GetIsReleaseOrBeta.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsReleaseOrBeta' class='fnname'>GetIsReleaseOrBeta</a>(&amp;self, aIsReleaseOrBeta: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#554-556' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if this is RELEASE_OR_BETA.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean isReleaseOrBeta;</code></p>
+</div><h4 id='method.GetIsOfficialBranding' class="method"><span id='GetIsOfficialBranding.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsOfficialBranding' class='fnname'>GetIsOfficialBranding</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsOfficialBranding: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#568-570' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if this build uses official branding (MOZ_OFFICIAL_BRANDING).
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean isOfficialBranding;</code></p>
+</div><h4 id='method.GetDefaultUpdateChannel' class="method"><span id='GetDefaultUpdateChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDefaultUpdateChannel' class='fnname'>GetDefaultUpdateChannel</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDefaultUpdateChannel: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#582-584' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The default update channel (MOZ_UPDATE_CHANNEL).
+   */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String defaultUpdateChannel;</code></p>
+</div><h4 id='method.GetDistributionID' class="method"><span id='GetDistributionID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDistributionID' class='fnname'>GetDistributionID</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDistributionID: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#596-598' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The distribution ID for this build (MOZ_DISTRIBUTION_ID).
+   */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String distributionID;</code></p>
+</div><h4 id='method.GetWindowsDLLBlocklistStatus' class="method"><span id='GetWindowsDLLBlocklistStatus.v' class='invisible'><code>pub unsafe fn <a href='#method.GetWindowsDLLBlocklistStatus' class='fnname'>GetWindowsDLLBlocklistStatus</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindowsDLLBlocklistStatus: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#611-613' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if Windows DLL blocklist initialized correctly. This is
+   * primarily for automated testing purposes.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean windowsDLLBlocklistStatus;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIXULRuntime.html" title="struct xpcom::interfaces::nsIXULRuntime">nsIXULRuntime</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#38-41' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">56635308</span>, <span class="number">64063</span>, <span class="number">19024</span>, [<span class="number">155</span>, <span class="number">170</span>, <span class="number">184</span>, <span class="number">132</span>, <span class="number">86</span>, <span class="number">251</span>, <span class="number">74</span>, <span class="number">15</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIXULRuntime.html" title="struct xpcom::interfaces::nsIXULRuntime">nsIXULRuntime</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#45-54' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#47-49' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#51-53' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIXULRuntime.html" title="struct xpcom::interfaces::nsIXULRuntime">nsIXULRuntime</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#85-93' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULRuntime.rs.html#88-92' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

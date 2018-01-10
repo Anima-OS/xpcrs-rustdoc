@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIBrowserSearchService` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIBrowserSearchService">
+
+    <title>xpcom::interfaces::nsIBrowserSearchService - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIBrowserSearchService</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.Init">Init</a><a href="#method.GetIsInitialized">GetIsInitialized</a><a href="#method.ResetToOriginalDefaultEngine">ResetToOriginalDefaultEngine</a><a href="#method.AddEngine">AddEngine</a><a href="#method.RestoreDefaultEngines">RestoreDefaultEngines</a><a href="#method.GetEngineByAlias">GetEngineByAlias</a><a href="#method.GetEngineByName">GetEngineByName</a><a href="#method.GetEngines">GetEngines</a><a href="#method.GetVisibleEngines">GetVisibleEngines</a><a href="#method.GetDefaultEngines">GetDefaultEngines</a><a href="#method.GetEnginesByExtensionID">GetEnginesByExtensionID</a><a href="#method.MoveEngine">MoveEngine</a><a href="#method.RemoveEngine">RemoveEngine</a><a href="#method.GetOriginalDefaultEngine">GetOriginalDefaultEngine</a><a href="#method.GetDefaultEngine">GetDefaultEngine</a><a href="#method.SetDefaultEngine">SetDefaultEngine</a><a href="#method.GetCurrentEngine">GetCurrentEngine</a><a href="#method.SetCurrentEngine">SetCurrentEngine</a><a href="#method.ParseSubmissionURL">ParseSubmissionURL</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIBrowserSearchService', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIBrowserSearchService</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1082-1091' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIBrowserSearchService { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIBrowserSearchService : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIBrowserSearchService.html" title="struct xpcom::interfaces::nsIBrowserSearchService">nsIBrowserSearchService</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1131-1137' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIBrowserSearchServiceCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1134-1136' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIBrowserSearchService</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIBrowserSearchService.html" title="struct xpcom::interfaces::nsIBrowserSearchService">nsIBrowserSearchService</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1247-1708' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.Init' class="method"><span id='Init.v' class='invisible'><code>pub unsafe fn <a href='#method.Init' class='fnname'>Init</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObserver: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIBrowserSearchInitObserver.html" title="struct xpcom::interfaces::nsIBrowserSearchInitObserver">nsIBrowserSearchInitObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1264-1266' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Start asynchronous initialization.
+   *
+   * The callback is triggered once initialization is complete, which may be
+   * immediately, if initialization has already been completed by some previous
+   * call to this method. The callback is always invoked asynchronously.
+   *
+   * @param aObserver An optional object observing the end of initialization.
+   */
+</code></pre>
+
+<p><code>void init ([optional] in nsIBrowserSearchInitObserver aObserver);</code></p>
+</div><h4 id='method.GetIsInitialized' class="method"><span id='GetIsInitialized.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsInitialized' class='fnname'>GetIsInitialized</a>(&amp;self, aIsInitialized: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1287-1289' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Determine whether initialization has been completed.
+   *
+   * Clients of the service can use this attribute to quickly determine whether
+   * initialization is complete, and decide to trigger some immediate treatment,
+   * to launch asynchronous initialization or to bailout.
+   *
+   * Note that this attribute does not indicate that initialization has succeeded.
+   *
+   * @return |true| if the search service is now initialized, |false| if
+   * initialization has not been triggered yet.
+   */
+</code></pre>
+
+<p><code>readonly attribute bool isInitialized;</code></p>
+</div><h4 id='method.ResetToOriginalDefaultEngine' class="method"><span id='ResetToOriginalDefaultEngine.v' class='invisible'><code>pub unsafe fn <a href='#method.ResetToOriginalDefaultEngine' class='fnname'>ResetToOriginalDefaultEngine</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1301-1303' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Resets the default engine to its original value.
+   */
+</code></pre>
+
+<p><code>void resetToOriginalDefaultEngine ();</code></p>
+</div><h4 id='method.AddEngine' class="method"><span id='AddEngine.v' class='invisible'><code>pub unsafe fn <a href='#method.AddEngine' class='fnname'>AddEngine</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;engineURL: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;dataType: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;iconURL: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;confirm: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchInstallCallback.html" title="struct xpcom::interfaces::nsISearchInstallCallback">nsISearchInstallCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;extensionID: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1368-1370' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Adds a new search engine from the file at the supplied URI, optionally
+   * asking the user for confirmation first.  If a confirmation dialog is
+   * shown, it will offer the option to begin using the newly added engine
+   * right away.
+   *
+   * @param engineURL
+   *        The URL to the search engine&#39;s description file.
+   *
+   * @param dataType
+   *        Obsolete, the value is ignored.
+   *
+   * @param iconURL
+   *        A URL string to an icon file to be used as the search engine&#39;s
+   *        icon. This value may be overridden by an icon specified in the
+   *        engine description file.
+   *
+   * @param confirm
+   *        A boolean value indicating whether the user should be asked for
+   *        confirmation before this engine is added to the list.  If this
+   *        value is false, the engine will be added to the list upon successful
+   *        load, but it will not be selected as the current engine.
+   *
+   * @param callback
+   *        A nsISearchInstallCallback that will be notified when the
+   *        addition is complete, or if the addition fails. It will not be
+   *        called if addEngine throws an exception.
+   *
+   * @param extensionID [optional]
+   *        Optional: The correct extensionID if called by an add-on.
+   *
+   * @throws NS_ERROR_FAILURE if the description file cannot be successfully
+   *         loaded.
+   */
+</code></pre>
+
+<p><code>void addEngine (in AString engineURL, in long dataType, in AString iconURL, in boolean confirm, [optional] in nsISearchInstallCallback callback, [optional] in AString extensionID);</code></p>
+</div><h4 id='method.RestoreDefaultEngines' class="method"><span id='RestoreDefaultEngines.v' class='invisible'><code>pub unsafe fn <a href='#method.RestoreDefaultEngines' class='fnname'>RestoreDefaultEngines</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1437-1439' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Un-hides all engines in the set of engines returned by getDefaultEngines.
+   */
+</code></pre>
+
+<p><code>void restoreDefaultEngines ();</code></p>
+</div><h4 id='method.GetEngineByAlias' class="method"><span id='GetEngineByAlias.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEngineByAlias' class='fnname'>GetEngineByAlias</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;alias: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1456-1458' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns an engine with the specified alias.
+   *
+   * @param   alias
+   *          The search engine&#39;s alias.
+   * @returns The corresponding nsISearchEngine object, or null if it doesn&#39;t
+   *          exist.
+   */
+</code></pre>
+
+<p><code>nsISearchEngine getEngineByAlias (in AString alias);</code></p>
+</div><h4 id='method.GetEngineByName' class="method"><span id='GetEngineByName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEngineByName' class='fnname'>GetEngineByName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEngineName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1475-1477' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns an engine with the specified name.
+   *
+   * @param   aEngineName
+   *          The name of the engine.
+   * @returns The corresponding nsISearchEngine object, or null if it doesn&#39;t
+   *          exist.
+   */
+</code></pre>
+
+<p><code>nsISearchEngine getEngineByName (in AString aEngineName);</code></p>
+</div><h4 id='method.GetEngines' class="method"><span id='GetEngines.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEngines' class='fnname'>GetEngines</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;engineCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;engines: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1491-1493' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns an array of all installed search engines.
+   *
+   * @returns an array of nsISearchEngine objects.
+   */
+</code></pre>
+
+<p><code>void getEngines ([optional] out unsigned long engineCount, [array, size_is (engineCount), retval] out nsISearchEngine engines);</code></p>
+</div><h4 id='method.GetVisibleEngines' class="method"><span id='GetVisibleEngines.v' class='invisible'><code>pub unsafe fn <a href='#method.GetVisibleEngines' class='fnname'>GetVisibleEngines</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;engineCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;engines: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1508-1510' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns an array of all installed search engines whose hidden attribute is
+   * false.
+   *
+   * @returns an array of nsISearchEngine objects.
+   */
+</code></pre>
+
+<p><code>void getVisibleEngines ([optional] out unsigned long engineCount, [array, size_is (engineCount), retval] out nsISearchEngine engines);</code></p>
+</div><h4 id='method.GetDefaultEngines' class="method"><span id='GetDefaultEngines.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDefaultEngines' class='fnname'>GetDefaultEngines</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;engineCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;engines: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1526-1528' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns an array of all default search engines. This includes all loaded
+   * engines that aren&#39;t in the user&#39;s profile directory
+   * (NS_APP_USER_SEARCH_DIR).
+   *
+   * @returns an array of nsISearchEngine objects.
+   */
+</code></pre>
+
+<p><code>void getDefaultEngines ([optional] out unsigned long engineCount, [array, size_is (engineCount), retval] out nsISearchEngine engines);</code></p>
+</div><h4 id='method.GetEnginesByExtensionID' class="method"><span id='GetEnginesByExtensionID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEnginesByExtensionID' class='fnname'>GetEnginesByExtensionID</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;extensionID: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;engineCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;engines: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1542-1544' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns an array of search engines installed by a given extension.
+   *
+   * @returns an array of nsISearchEngine objects.
+   */
+</code></pre>
+
+<p><code>void getEnginesByExtensionID (in AString extensionID, [optional] out unsigned long engineCount, [array, size_is (engineCount), retval] out nsISearchEngine engines);</code></p>
+</div><h4 id='method.MoveEngine' class="method"><span id='MoveEngine.v' class='invisible'><code>pub unsafe fn <a href='#method.MoveEngine' class='fnname'>MoveEngine</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;engine: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;newIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1564-1566' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Moves a visible search engine.
+   *
+   * @param  engine
+   *         The engine to move.
+   * @param  newIndex
+   *         The engine&#39;s new index in the set of visible engines.
+   *
+   * @throws NS_ERROR_FAILURE if newIndex is out of bounds, or if engine is
+   *         hidden.
+   */
+</code></pre>
+
+<p><code>void moveEngine (in nsISearchEngine engine, in long newIndex);</code></p>
+</div><h4 id='method.RemoveEngine' class="method"><span id='RemoveEngine.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveEngine' class='fnname'>RemoveEngine</a>(&amp;self, engine: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1583-1585' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes the search engine. If the search engine is installed in a global
+   * location, this will just hide the engine. If the engine is in the user&#39;s
+   * profile directory, it will be removed from disk.
+   *
+   * @param  engine
+   *         The engine to remove.
+   */
+</code></pre>
+
+<p><code>void removeEngine (in nsISearchEngine engine);</code></p>
+</div><h4 id='method.GetOriginalDefaultEngine' class="method"><span id='GetOriginalDefaultEngine.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOriginalDefaultEngine' class='fnname'>GetOriginalDefaultEngine</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOriginalDefaultEngine: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1598-1600' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The original Engine object that is the default for this region,
+   * ignoring changes the user may have subsequently made.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsISearchEngine originalDefaultEngine;</code></p>
+</div><h4 id='method.GetDefaultEngine' class="method"><span id='GetDefaultEngine.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDefaultEngine' class='fnname'>GetDefaultEngine</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDefaultEngine: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1612-1614' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Alias for the currentEngine attribute, kept for add-on compatibility.
+   */
+</code></pre>
+
+<p><code>attribute nsISearchEngine defaultEngine;</code></p>
+</div><h4 id='method.SetDefaultEngine' class="method"><span id='SetDefaultEngine.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDefaultEngine' class='fnname'>SetDefaultEngine</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDefaultEngine: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1626-1628' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Alias for the currentEngine attribute, kept for add-on compatibility.
+   */
+</code></pre>
+
+<p><code>attribute nsISearchEngine defaultEngine;</code></p>
+</div><h4 id='method.GetCurrentEngine' class="method"><span id='GetCurrentEngine.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCurrentEngine' class='fnname'>GetCurrentEngine</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCurrentEngine: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1645-1647' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The currently active search engine.
+   * Unless the application doesn&#39;t ship any search plugin, this should never
+   * be null. If the currently active engine is removed, this attribute will
+   * fallback first to the original default engine if it&#39;s not hidden, then to
+   * the first visible engine, and as a last resort it will unhide the original
+   * default engine.
+   */
+</code></pre>
+
+<p><code>attribute nsISearchEngine currentEngine;</code></p>
+</div><h4 id='method.SetCurrentEngine' class="method"><span id='SetCurrentEngine.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCurrentEngine' class='fnname'>SetCurrentEngine</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCurrentEngine: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchEngine.html" title="struct xpcom::interfaces::nsISearchEngine">nsISearchEngine</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1664-1666' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The currently active search engine.
+   * Unless the application doesn&#39;t ship any search plugin, this should never
+   * be null. If the currently active engine is removed, this attribute will
+   * fallback first to the original default engine if it&#39;s not hidden, then to
+   * the first visible engine, and as a last resort it will unhide the original
+   * default engine.
+   */
+</code></pre>
+
+<p><code>attribute nsISearchEngine currentEngine;</code></p>
+</div><h4 id='method.ParseSubmissionURL' class="method"><span id='ParseSubmissionURL.v' class='invisible'><code>pub unsafe fn <a href='#method.ParseSubmissionURL' class='fnname'>ParseSubmissionURL</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;url: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISearchParseSubmissionResult.html" title="struct xpcom::interfaces::nsISearchParseSubmissionResult">nsISearchParseSubmissionResult</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1703-1705' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Determines if the provided URL represents results from a search engine, and
+   * provides details about the match.
+   *
+   * The lookup mechanism checks whether the domain name and path of the
+   * provided HTTP or HTTPS URL matches one of the known values for the visible
+   * search engines.  The match does not depend on which of the schemes is used.
+   * The expected URI parameter for the search terms must exist in the query
+   * string, but other parameters are ignored.
+   *
+   * @param url
+   *        String containing the URL to parse, for example
+   *        &quot;https://www.google.com/search?q=terms&quot;.
+   */
+</code></pre>
+
+<p><code>nsISearchParseSubmissionResult parseSubmissionURL (in AString url);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIBrowserSearchService.html" title="struct xpcom::interfaces::nsIBrowserSearchService">nsIBrowserSearchService</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1096-1099' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">353302304</span>, <span class="number">48098</span>, <span class="number">16745</span>, [<span class="number">185</span>, <span class="number">243</span>, <span class="number">239</span>, <span class="number">126</span>, <span class="number">192</span>, <span class="number">101</span>, <span class="number">76</span>, <span class="number">237</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIBrowserSearchService.html" title="struct xpcom::interfaces::nsIBrowserSearchService">nsIBrowserSearchService</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1103-1112' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1105-1107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1109-1111' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIBrowserSearchService.html" title="struct xpcom::interfaces::nsIBrowserSearchService">nsIBrowserSearchService</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1143-1151' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBrowserSearchService.rs.html#1146-1150' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

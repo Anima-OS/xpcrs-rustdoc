@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsICacheInfoChannel` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsICacheInfoChannel">
+
+    <title>xpcom::interfaces::nsICacheInfoChannel - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsICacheInfoChannel</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetCacheTokenFetchCount">GetCacheTokenFetchCount</a><a href="#method.GetCacheTokenExpirationTime">GetCacheTokenExpirationTime</a><a href="#method.GetCacheTokenCachedCharset">GetCacheTokenCachedCharset</a><a href="#method.SetCacheTokenCachedCharset">SetCacheTokenCachedCharset</a><a href="#method.IsFromCache">IsFromCache</a><a href="#method.GetCacheEntryId">GetCacheEntryId</a><a href="#method.GetCacheKey">GetCacheKey</a><a href="#method.SetCacheKey">SetCacheKey</a><a href="#method.GetAllowStaleCacheContent">GetAllowStaleCacheContent</a><a href="#method.SetAllowStaleCacheContent">SetAllowStaleCacheContent</a><a href="#method.PreferAlternativeDataType">PreferAlternativeDataType</a><a href="#method.GetPreferredAlternativeDataType">GetPreferredAlternativeDataType</a><a href="#method.GetAlternativeDataType">GetAlternativeDataType</a><a href="#method.OpenAlternativeOutputStream">OpenAlternativeOutputStream</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsICacheInfoChannel', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsICacheInfoChannel</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsICacheInfoChannel { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsICacheInfoChannel : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsICacheInfoChannel.html" title="struct xpcom::interfaces::nsICacheInfoChannel">nsICacheInfoChannel</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsICacheInfoChannelCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsICacheInfoChannel</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsICacheInfoChannel.html" title="struct xpcom::interfaces::nsICacheInfoChannel">nsICacheInfoChannel</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#153-415' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetCacheTokenFetchCount' class="method"><span id='GetCacheTokenFetchCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCacheTokenFetchCount' class='fnname'>GetCacheTokenFetchCount</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCacheTokenFetchCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#168-170' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the number of times the cache entry has been opened. This attribute is
+   * equivalent to nsICachingChannel.cacheToken.fetchCount.
+   *
+   * @throws NS_ERROR_NOT_AVAILABLE if the cache entry or the alternate data
+   *         cache entry cannot be read.
+   */
+</code></pre>
+
+<p><code>readonly attribute int32_t cacheTokenFetchCount;</code></p>
+</div><h4 id='method.GetCacheTokenExpirationTime' class="method"><span id='GetCacheTokenExpirationTime.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCacheTokenExpirationTime' class='fnname'>GetCacheTokenExpirationTime</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCacheTokenExpirationTime: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#183-185' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get expiration time from cache token. This attribute is equivalent to
+   * nsICachingChannel.cacheToken.expirationTime.
+   */
+</code></pre>
+
+<p><code>readonly attribute uint32_t cacheTokenExpirationTime;</code></p>
+</div><h4 id='method.GetCacheTokenCachedCharset' class="method"><span id='GetCacheTokenCachedCharset.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCacheTokenCachedCharset' class='fnname'>GetCacheTokenCachedCharset</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCacheTokenCachedCharset: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#199-201' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set/get charset of cache entry. Accessing this attribute is equivalent to
+   * calling nsICachingChannel.cacheToken.getMetaDataElement(&quot;charset&quot;) and
+   * nsICachingChannel.cacheToken.setMetaDataElement(&quot;charset&quot;).
+   */
+</code></pre>
+
+<p><code>attribute ACString cacheTokenCachedCharset;</code></p>
+</div><h4 id='method.SetCacheTokenCachedCharset' class="method"><span id='SetCacheTokenCachedCharset.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCacheTokenCachedCharset' class='fnname'>SetCacheTokenCachedCharset</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCacheTokenCachedCharset: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#215-217' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set/get charset of cache entry. Accessing this attribute is equivalent to
+   * calling nsICachingChannel.cacheToken.getMetaDataElement(&quot;charset&quot;) and
+   * nsICachingChannel.cacheToken.setMetaDataElement(&quot;charset&quot;).
+   */
+</code></pre>
+
+<p><code>attribute ACString cacheTokenCachedCharset;</code></p>
+</div><h4 id='method.IsFromCache' class="method"><span id='IsFromCache.v' class='invisible'><code>pub unsafe fn <a href='#method.IsFromCache' class='fnname'>IsFromCache</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#231-233' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * TRUE if this channel&#39;s data is being loaded from the cache.  This value
+   * is undefined before the channel fires its OnStartRequest notification
+   * and after the channel fires its OnStopRequest notification.
+   */
+</code></pre>
+
+<p><code>boolean isFromCache ();</code></p>
+</div><h4 id='method.GetCacheEntryId' class="method"><span id='GetCacheEntryId.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCacheEntryId' class='fnname'>GetCacheEntryId</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#252-254' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The unique ID of the corresponding nsICacheEntry from which the response is
+   * retrieved. By comparing the returned value, we can judge whether the data
+   * of two distinct nsICacheInfoChannels is from the same nsICacheEntry. This
+   * scenario could be useful when verifying whether the alternative data from
+   * one nsICacheInfochannel matches the main data from another one.
+   *
+   * Note: NS_ERROR_NOT_AVAILABLE is thrown when a nsICacheInfoChannel has no
+   * valid corresponding nsICacheEntry.
+   */
+</code></pre>
+
+<p><code>uint64_t getCacheEntryId ();</code></p>
+</div><h4 id='method.GetCacheKey' class="method"><span id='GetCacheKey.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCacheKey' class='fnname'>GetCacheKey</a>(&amp;self, aCacheKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#280-282' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set/get the cache key... uniquely identifies the data in the cache
+   * for this channel.  Holding a reference to this key does NOT prevent
+   * the cached data from being removed.
+   *
+   * A cache key retrieved from a particular instance of nsICacheInfoChannel
+   * could be set on another instance of nsICacheInfoChannel provided the
+   * underlying implementations are compatible and provided the new
+   * channel instance was created with the same URI.  The implementation of
+   * nsICacheInfoChannel would be expected to use the cache entry identified
+   * by the cache token.  Depending on the value of nsIRequest::loadFlags,
+   * the cache entry may be validated, overwritten, or simply read.
+   *
+   * The cache key may be NULL indicating that the URI of the channel is
+   * sufficient to locate the same cache entry.  Setting a NULL cache key
+   * is likewise valid.
+   */
+</code></pre>
+
+<p><code>attribute nsISupports cacheKey;</code></p>
+</div><h4 id='method.SetCacheKey' class="method"><span id='SetCacheKey.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCacheKey' class='fnname'>SetCacheKey</a>(&amp;self, aCacheKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#308-310' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set/get the cache key... uniquely identifies the data in the cache
+   * for this channel.  Holding a reference to this key does NOT prevent
+   * the cached data from being removed.
+   *
+   * A cache key retrieved from a particular instance of nsICacheInfoChannel
+   * could be set on another instance of nsICacheInfoChannel provided the
+   * underlying implementations are compatible and provided the new
+   * channel instance was created with the same URI.  The implementation of
+   * nsICacheInfoChannel would be expected to use the cache entry identified
+   * by the cache token.  Depending on the value of nsIRequest::loadFlags,
+   * the cache entry may be validated, overwritten, or simply read.
+   *
+   * The cache key may be NULL indicating that the URI of the channel is
+   * sufficient to locate the same cache entry.  Setting a NULL cache key
+   * is likewise valid.
+   */
+</code></pre>
+
+<p><code>attribute nsISupports cacheKey;</code></p>
+</div><h4 id='method.GetAllowStaleCacheContent' class="method"><span id='GetAllowStaleCacheContent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAllowStaleCacheContent' class='fnname'>GetAllowStaleCacheContent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAllowStaleCacheContent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#324-326' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Tells the channel to behave as if the LOAD_FROM_CACHE flag has been set,
+   * but without affecting the loads for the entire loadGroup in case of this
+   * channel being the default load group&#39;s channel.
+   */
+</code></pre>
+
+<p><code>attribute boolean allowStaleCacheContent;</code></p>
+</div><h4 id='method.SetAllowStaleCacheContent' class="method"><span id='SetAllowStaleCacheContent.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAllowStaleCacheContent' class='fnname'>SetAllowStaleCacheContent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAllowStaleCacheContent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#340-342' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Tells the channel to behave as if the LOAD_FROM_CACHE flag has been set,
+   * but without affecting the loads for the entire loadGroup in case of this
+   * channel being the default load group&#39;s channel.
+   */
+</code></pre>
+
+<p><code>attribute boolean allowStaleCacheContent;</code></p>
+</div><h4 id='method.PreferAlternativeDataType' class="method"><span id='PreferAlternativeDataType.v' class='invisible'><code>pub unsafe fn <a href='#method.PreferAlternativeDataType' class='fnname'>PreferAlternativeDataType</a>(&amp;self, type_: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#357-359' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Calling this method instructs the channel to serve the alternative data
+   * if that was previously saved in the cache, otherwise it will serve the
+   * real data.
+   * Must be called before AsyncOpen.
+   */
+</code></pre>
+
+<p><code>void preferAlternativeDataType (in ACString type);</code></p>
+</div><h4 id='method.GetPreferredAlternativeDataType' class="method"><span id='GetPreferredAlternativeDataType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPreferredAlternativeDataType' class='fnname'>GetPreferredAlternativeDataType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPreferredAlternativeDataType: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#373-375' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the preferred alternative data type set by preferAlternativeDataType().
+   * This attribute stands for the desired data type instead of the type of the
+   * information retrieved from the network stack.
+   */
+</code></pre>
+
+<p><code>readonly attribute ACString preferredAlternativeDataType;</code></p>
+</div><h4 id='method.GetAlternativeDataType' class="method"><span id='GetAlternativeDataType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAlternativeDataType' class='fnname'>GetAlternativeDataType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAlternativeDataType: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#391-393' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Holds the type of the alternative data representation that the channel
+   * is returning.
+   * Is empty string if no alternative data representation was requested, or
+   * if the requested representation wasn&#39;t found in the cache.
+   * Can only be called during or after OnStartRequest.
+   */
+</code></pre>
+
+<p><code>readonly attribute ACString alternativeDataType;</code></p>
+</div><h4 id='method.OpenAlternativeOutputStream' class="method"><span id='OpenAlternativeOutputStream.v' class='invisible'><code>pub unsafe fn <a href='#method.OpenAlternativeOutputStream' class='fnname'>OpenAlternativeOutputStream</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIOutputStream.html" title="struct xpcom::interfaces::nsIOutputStream">nsIOutputStream</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#410-412' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Opens and returns an output stream that a consumer may use to save an
+   * alternate representation of the data.
+   * Must be called after the OnStopRequest that delivered the real data.
+   * The consumer may choose to replace the saved alt representation.
+   * Opening the output stream will fail if there are any open input streams
+   * reading the already saved alt representation.
+   */
+</code></pre>
+
+<p><code>nsIOutputStream openAlternativeOutputStream (in ACString type);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsICacheInfoChannel.html" title="struct xpcom::interfaces::nsICacheInfoChannel">nsICacheInfoChannel</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1925399573</span>, <span class="number">50923</span>, <span class="number">18607</span>, [<span class="number">133</span>, <span class="number">31</span>, <span class="number">119</span>, <span class="number">47</span>, <span class="number">169</span>, <span class="number">238</span>, <span class="number">89</span>, <span class="number">114</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsICacheInfoChannel.html" title="struct xpcom::interfaces::nsICacheInfoChannel">nsICacheInfoChannel</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsICacheInfoChannel.html" title="struct xpcom::interfaces::nsICacheInfoChannel">nsICacheInfoChannel</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICacheInfoChannel.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

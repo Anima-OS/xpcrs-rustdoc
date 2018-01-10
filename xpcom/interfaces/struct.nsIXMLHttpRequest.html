@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIXMLHttpRequest` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIXMLHttpRequest">
+
+    <title>xpcom::interfaces::nsIXMLHttpRequest - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIXMLHttpRequest</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetChannel">GetChannel</a><a href="#method.GetResponseXML">GetResponseXML</a><a href="#method.GetResponseText">GetResponseText</a><a href="#method.GetResponseType">GetResponseType</a><a href="#method.SetResponseType">SetResponseType</a><a href="#method.GetStatus">GetStatus</a><a href="#method.GetStatusText">GetStatusText</a><a href="#method.SlowAbort">SlowAbort</a><a href="#method.GetAllResponseHeaders">GetAllResponseHeaders</a><a href="#method.GetResponseHeader">GetResponseHeader</a><a href="#method.Send">Send</a><a href="#method.SetRequestHeader">SetRequestHeader</a><a href="#method.GetTimeout">GetTimeout</a><a href="#method.SetTimeout">SetTimeout</a><a href="#method.GetReadyState">GetReadyState</a><a href="#method.SlowOverrideMimeType">SlowOverrideMimeType</a><a href="#method.GetMozBackgroundRequest">GetMozBackgroundRequest</a><a href="#method.SetMozBackgroundRequest">SetMozBackgroundRequest</a><a href="#method.GetWithCredentials">GetWithCredentials</a><a href="#method.SetWithCredentials">SetWithCredentials</a><a href="#method.Init">Init</a><a href="#method.GetUpload">GetUpload</a><a href="#method.GetMozAnon">GetMozAnon</a><a href="#method.GetMozSystem">GetMozSystem</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIXMLHttpRequest', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIXMLHttpRequest</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#275-284' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIXMLHttpRequest { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIXMLHttpRequest : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * Mozilla&#39;s XMLHttpRequest is modelled after Microsoft&#39;s IXMLHttpRequest
+ * object. The goal has been to make Mozilla&#39;s version match Microsoft&#39;s
+ * version as closely as possible, but there are bound to be some differences.
+ *
+ * In general, Microsoft&#39;s documentation for IXMLHttpRequest can be used.
+ * Mozilla&#39;s interface definitions provide some additional documentation. The
+ * web page to look at is http://www.mozilla.org/xmlextras/
+ *
+ * Mozilla&#39;s XMLHttpRequest object can be created in JavaScript like this:
+ *   new XMLHttpRequest()
+ * compare to Internet Explorer:
+ *   new ActiveXObject(&quot;Msxml2.XMLHTTP&quot;)
+ *
+ * From native code, the way to set up onload and onerror handlers is a bit
+ * different. Here is a comment from Johnny Stenback &lt;jst@netscape.com&gt;:
+ *
+ *   The mozilla implementation of nsIXMLHttpRequest implements the interface
+ *   nsIDOMEventTarget and that&#39;s how you&#39;re supported to add event listeners.
+ *   Try something like this:
+ *
+ *   nsCOMPtr&lt;nsIDOMEventTarget&gt; target(do_QueryInterface(myxmlhttpreq));
+ *
+ *   target-&gt;AddEventListener(NS_LITERAL_STRING(&quot;load&quot;), mylistener,
+ *                            PR_FALSE)
+ *
+ *   where mylistener is your event listener object that implements the
+ *   interface nsIDOMEventListener.
+ *
+ * Conclusion: Do not use event listeners on XMLHttpRequest from C++, unless
+ * you&#39;re aware of all the security implications.  And then think twice about
+ * it.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIXMLHttpRequest.html" title="struct xpcom::interfaces::nsIXMLHttpRequest">nsIXMLHttpRequest</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#324-330' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIXMLHttpRequestCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#327-329' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIXMLHttpRequest</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIXMLHttpRequest.html" title="struct xpcom::interfaces::nsIXMLHttpRequest">nsIXMLHttpRequest</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#451-946' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.UNSENT' class="associatedconstant"><span id='UNSENT.v' class='invisible'><code>pub const <a href='#associatedconstant.UNSENT' class="constant"><b>UNSENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">UNSENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * The state of the request.
+   *
+   * Possible values:
+   *   0 UNSENT   open() has not been called yet.
+   *   1 OPENED   send() has not been called yet.
+   *   2 HEADERS_RECEIVED
+   *              send() has been called, headers and status are available.
+   *   3 LOADING  Downloading, responseText holds the partial data.
+   *   4 DONE     Finished with all operations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OPENED' class="associatedconstant"><span id='OPENED.v' class='invisible'><code>pub const <a href='#associatedconstant.OPENED' class="constant"><b>OPENED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OPENED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.HEADERS_RECEIVED' class="associatedconstant"><span id='HEADERS_RECEIVED.v' class='invisible'><code>pub const <a href='#associatedconstant.HEADERS_RECEIVED' class="constant"><b>HEADERS_RECEIVED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">HEADERS_RECEIVED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.LOADING' class="associatedconstant"><span id='LOADING.v' class='invisible'><code>pub const <a href='#associatedconstant.LOADING' class="constant"><b>LOADING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">LOADING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.DONE' class="associatedconstant"><span id='DONE.v' class='invisible'><code>pub const <a href='#associatedconstant.DONE' class="constant"><b>DONE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DONE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='method.GetChannel' class="method"><span id='GetChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.GetChannel' class='fnname'>GetChannel</a>(&amp;self, aChannel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#495-497' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The request uses a channel in order to perform the
+   * request.  This attribute represents the channel used
+   * for the request.  NULL if the channel has not yet been
+   * created.
+   *
+   * Mozilla only. Requires elevated privileges to access.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIChannel channel;</code></p>
+</div><h4 id='method.GetResponseXML' class="method"><span id='GetResponseXML.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResponseXML' class='fnname'>GetResponseXML</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResponseXML: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMDocument.html" title="struct xpcom::interfaces::nsIDOMDocument">nsIDOMDocument</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#512-514' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The response to the request is parsed as if it were a
+   * text/xml stream. This attributes represents the response as
+   * a DOM Document object. NULL if the request is unsuccessful or
+   * has not yet been sent.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIDOMDocument responseXML;</code></p>
+</div><h4 id='method.GetResponseText' class="method"><span id='GetResponseText.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResponseText' class='fnname'>GetResponseText</a>(&amp;self, aResponseText: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#528-530' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The response to the request as text.
+   * NULL if the request is unsuccessful or
+   * has not yet been sent.
+   */
+</code></pre>
+
+<p><code>readonly attribute AString responseText;</code></p>
+</div><h4 id='method.GetResponseType' class="method"><span id='GetResponseType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResponseType' class='fnname'>GetResponseType</a>(&amp;self, aResponseType: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#546-548' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Determine a response format which response attribute returns.
+   * empty string (initial value) or &quot;text&quot;: as text.
+   * &quot;arraybuffer&quot;: as a typed array ArrayBuffer.
+   * &quot;blob&quot;: as a File API Blob.
+   * &quot;document&quot;: as a DOM Document object.
+   */
+</code></pre>
+
+<p><code>attribute AString responseType;</code></p>
+</div><h4 id='method.SetResponseType' class="method"><span id='SetResponseType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetResponseType' class='fnname'>SetResponseType</a>(&amp;self, aResponseType: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#564-566' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Determine a response format which response attribute returns.
+   * empty string (initial value) or &quot;text&quot;: as text.
+   * &quot;arraybuffer&quot;: as a typed array ArrayBuffer.
+   * &quot;blob&quot;: as a File API Blob.
+   * &quot;document&quot;: as a DOM Document object.
+   */
+</code></pre>
+
+<p><code>attribute AString responseType;</code></p>
+</div><h4 id='method.GetStatus' class="method"><span id='GetStatus.v' class='invisible'><code>pub unsafe fn <a href='#method.GetStatus' class='fnname'>GetStatus</a>(&amp;self, aStatus: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#590-592' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The status of the response to the request for HTTP requests.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long status;</code></p>
+</div><h4 id='method.GetStatusText' class="method"><span id='GetStatusText.v' class='invisible'><code>pub unsafe fn <a href='#method.GetStatusText' class='fnname'>GetStatusText</a>(&amp;self, aStatusText: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#605-607' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The string representing the status of the response for
+   * HTTP requests.
+   */
+</code></pre>
+
+<p><code>readonly attribute ACString statusText;</code></p>
+</div><h4 id='method.SlowAbort' class="method"><span id='SlowAbort.v' class='invisible'><code>pub unsafe fn <a href='#method.SlowAbort' class='fnname'>SlowAbort</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#620-622' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If the request has been sent already, this method will
+   * abort the request.
+   */
+</code></pre>
+
+<p><code>[binaryname(SlowAbort)] void abort ();</code></p>
+</div><h4 id='method.GetAllResponseHeaders' class="method"><span id='GetAllResponseHeaders.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAllResponseHeaders' class='fnname'>GetAllResponseHeaders</a>(&amp;self, _retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#638-640' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns all of the response headers as a string for HTTP
+   * requests.
+   *
+   * @returns A string containing all of the response headers.
+   *          The empty string if the response has not yet been received.
+   */
+</code></pre>
+
+<p><code>ACString getAllResponseHeaders ();</code></p>
+</div><h4 id='method.GetResponseHeader' class="method"><span id='GetResponseHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResponseHeader' class='fnname'>GetResponseHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;header: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#658-660' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the text of the header with the specified name for
+   * HTTP requests.
+   *
+   * @param header The name of the header to retrieve
+   * @returns A string containing the text of the header specified.
+   *          NULL if the response has not yet been received or the
+   *          header does not exist in the response.
+   */
+</code></pre>
+
+<p><code>ACString getResponseHeader (in ACString header);</code></p>
+</div><h4 id='method.Send' class="method"><span id='Send.v' class='invisible'><code>pub unsafe fn <a href='#method.Send' class='fnname'>Send</a>(&amp;self, body: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIVariant.html" title="struct xpcom::interfaces::nsIVariant">nsIVariant</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#721-723' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sends the request. If the request is asynchronous, returns
+   * immediately after sending the request. If it is synchronous
+   * returns only after the response has been received.
+   *
+   * All event listeners must be set before calling send().
+   *
+   * After the initial response, all event listeners will be cleared.
+   * // XXXbz what does that mean, exactly?
+   *
+   * @param body Either an instance of nsIDOMDocument, nsIInputStream
+   *             or a string (nsISupportsString in the native calling
+   *             case). This is used to populate the body of the
+   *             HTTP request if the HTTP request method is &quot;POST&quot;.
+   *             If the parameter is a nsIDOMDocument, it is serialized.
+   *             If the parameter is a nsIInputStream, then it must be
+   *             compatible with nsIUploadChannel.setUploadStream, and a
+   *             Content-Length header will be added to the HTTP request
+   *             with a value given by nsIInputStream.available.  Any
+   *             headers included at the top of the stream will be
+   *             treated as part of the message body.  The MIME type of
+   *             the stream should be specified by setting the Content-
+   *             Type header via the setRequestHeader method before
+   *             calling send.
+   */
+</code></pre>
+
+<p><code>void send ([optional] in nsIVariant body);</code></p>
+</div><h4 id='method.SetRequestHeader' class="method"><span id='SetRequestHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRequestHeader' class='fnname'>SetRequestHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;header: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;value: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#739-741' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sets a HTTP request header for HTTP requests. You must call open
+   * before setting the request headers.
+   *
+   * @param header The name of the header to set in the request.
+   * @param value The body of the header.
+   */
+</code></pre>
+
+<p><code>void setRequestHeader (in ACString header, in ACString value);</code></p>
+</div><h4 id='method.GetTimeout' class="method"><span id='GetTimeout.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTimeout' class='fnname'>GetTimeout</a>(&amp;self, aTimeout: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#754-756' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The amount of milliseconds a request can take before being terminated.
+   * Initially zero. Zero means there is no timeout.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long timeout;</code></p>
+</div><h4 id='method.SetTimeout' class="method"><span id='SetTimeout.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTimeout' class='fnname'>SetTimeout</a>(&amp;self, aTimeout: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#769-771' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The amount of milliseconds a request can take before being terminated.
+   * Initially zero. Zero means there is no timeout.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long timeout;</code></p>
+</div><h4 id='method.GetReadyState' class="method"><span id='GetReadyState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetReadyState' class='fnname'>GetReadyState</a>(&amp;self, aReadyState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#777-779' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute unsigned short readyState;</code></p>
+</div><h4 id='method.SlowOverrideMimeType' class="method"><span id='SlowOverrideMimeType.v' class='invisible'><code>pub unsafe fn <a href='#method.SlowOverrideMimeType' class='fnname'>SlowOverrideMimeType</a>(&amp;self, mimetype: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#797-799' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Override the mime type returned by the server (if any). This may
+   * be used, for example, to force a stream to be treated and parsed
+   * as text/xml, even if the server does not report it as such. This
+   * must be done before the &lt;code&gt;send&lt;/code&gt; method is invoked.
+   *
+   * @param mimetype The type used to override that returned by the server
+   *                 (if any).
+   */
+</code></pre>
+
+<p><code>[binaryname(SlowOverrideMimeType)] void overrideMimeType (in DOMString mimetype);</code></p>
+</div><h4 id='method.GetMozBackgroundRequest' class="method"><span id='GetMozBackgroundRequest.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMozBackgroundRequest' class='fnname'>GetMozBackgroundRequest</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMozBackgroundRequest: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#815-817' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set to true if this is a background service request. This will
+   * prevent a load group being associated with the request, and
+   * suppress any security dialogs from being shown * to the user.
+   * In the cases where one of those dialogs would be shown, the request
+   * will simply fail instead.
+   */
+</code></pre>
+
+<p><code>attribute boolean mozBackgroundRequest;</code></p>
+</div><h4 id='method.SetMozBackgroundRequest' class="method"><span id='SetMozBackgroundRequest.v' class='invisible'><code>pub unsafe fn <a href='#method.SetMozBackgroundRequest' class='fnname'>SetMozBackgroundRequest</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMozBackgroundRequest: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#833-835' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set to true if this is a background service request. This will
+   * prevent a load group being associated with the request, and
+   * suppress any security dialogs from being shown * to the user.
+   * In the cases where one of those dialogs would be shown, the request
+   * will simply fail instead.
+   */
+</code></pre>
+
+<p><code>attribute boolean mozBackgroundRequest;</code></p>
+</div><h4 id='method.GetWithCredentials' class="method"><span id='GetWithCredentials.v' class='invisible'><code>pub unsafe fn <a href='#method.GetWithCredentials' class='fnname'>GetWithCredentials</a>(&amp;self, aWithCredentials: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#852-854' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When set to true attempts to make cross-site Access-Control requests
+   * with credentials such as cookies and authorization headers.
+   *
+   * Never affects same-site requests.
+   *
+   * Defaults to false.
+   */
+</code></pre>
+
+<p><code>attribute boolean withCredentials;</code></p>
+</div><h4 id='method.SetWithCredentials' class="method"><span id='SetWithCredentials.v' class='invisible'><code>pub unsafe fn <a href='#method.SetWithCredentials' class='fnname'>SetWithCredentials</a>(&amp;self, aWithCredentials: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#871-873' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When set to true attempts to make cross-site Access-Control requests
+   * with credentials such as cookies and authorization headers.
+   *
+   * Never affects same-site requests.
+   *
+   * Defaults to false.
+   */
+</code></pre>
+
+<p><code>attribute boolean withCredentials;</code></p>
+</div><h4 id='method.Init' class="method"><span id='Init.v' class='invisible'><code>pub unsafe fn <a href='#method.Init' class='fnname'>Init</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;principal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;globalObject: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIGlobalObject.html" title="struct xpcom::interfaces::nsIGlobalObject">nsIGlobalObject</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;baseURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;loadGroup: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadGroup.html" title="struct xpcom::interfaces::nsILoadGroup">nsILoadGroup</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#898-900' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Initialize the object for use from C++ code with the principal, script
+   * context, and owner window that should be used.
+   *
+   * @param principal The principal to use for the request. This must not be
+   *                  null.
+   * @param globalObject The associated global for the request. Can be the
+   *                     outer window, a sandbox, or a backstage pass.
+   *                     May be null, but then the request cannot create a
+   *                     document.
+   * @param baseURI The base URI to use when resolving relative URIs. May be
+   *                null.
+   * @param loadGroup An optional load group to use when performing the request.
+   *                  This will be used even if the global has a window with a
+   *                  load group.
+   */
+</code></pre>
+
+<p><code>[noscript] void init (in nsIPrincipal principal, in nsIGlobalObject globalObject, in nsIURI baseURI, [optional] in nsILoadGroup loadGroup);</code></p>
+</div><h4 id='method.GetUpload' class="method"><span id='GetUpload.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUpload' class='fnname'>GetUpload</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUpload: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIXMLHttpRequestUpload.html" title="struct xpcom::interfaces::nsIXMLHttpRequestUpload">nsIXMLHttpRequestUpload</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#912-914' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Upload process can be tracked by adding event listener to |upload|.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIXMLHttpRequestUpload upload;</code></p>
+</div><h4 id='method.GetMozAnon' class="method"><span id='GetMozAnon.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMozAnon' class='fnname'>GetMozAnon</a>(&amp;self, aMozAnon: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#927-929' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, the request will be sent without cookie and authentication
+   * headers.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean mozAnon;</code></p>
+</div><h4 id='method.GetMozSystem' class="method"><span id='GetMozSystem.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMozSystem' class='fnname'>GetMozSystem</a>(&amp;self, aMozSystem: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#941-943' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, the same origin policy will not be enforced on the request.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean mozSystem;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIXMLHttpRequest.html" title="struct xpcom::interfaces::nsIXMLHttpRequest">nsIXMLHttpRequest</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#289-292' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1867784524</span>, <span class="number">29045</span>, <span class="number">18829</span>, [<span class="number">157</span>, <span class="number">45</span>, <span class="number">4</span>, <span class="number">41</span>, <span class="number">227</span>, <span class="number">140</span>, <span class="number">40</span>, <span class="number">105</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIXMLHttpRequest.html" title="struct xpcom::interfaces::nsIXMLHttpRequest">nsIXMLHttpRequest</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#296-305' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#298-300' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#302-304' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIXMLHttpRequest.html" title="struct xpcom::interfaces::nsIXMLHttpRequest">nsIXMLHttpRequest</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#336-344' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXMLHttpRequest.rs.html#339-343' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

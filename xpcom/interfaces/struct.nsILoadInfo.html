@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsILoadInfo` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsILoadInfo">
+
+    <title>xpcom::interfaces::nsILoadInfo - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsILoadInfo</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetLoadingPrincipal">GetLoadingPrincipal</a><a href="#method.GetTriggeringPrincipal">GetTriggeringPrincipal</a><a href="#method.GetPrincipalToInherit">GetPrincipalToInherit</a><a href="#method.SetPrincipalToInherit">SetPrincipalToInherit</a><a href="#method.GetLoadingDocument">GetLoadingDocument</a><a href="#method.GetSecurityFlags">GetSecurityFlags</a><a href="#method.GetSecurityMode">GetSecurityMode</a><a href="#method.GetIsInThirdPartyContext">GetIsInThirdPartyContext</a><a href="#method.GetCookiePolicy">GetCookiePolicy</a><a href="#method.GetForceInheritPrincipal">GetForceInheritPrincipal</a><a href="#method.GetForceInheritPrincipalOverruleOwner">GetForceInheritPrincipalOverruleOwner</a><a href="#method.GetLoadingSandboxed">GetLoadingSandboxed</a><a href="#method.GetAboutBlankInherits">GetAboutBlankInherits</a><a href="#method.GetAllowChrome">GetAllowChrome</a><a href="#method.GetDisallowScript">GetDisallowScript</a><a href="#method.GetDontFollowRedirects">GetDontFollowRedirects</a><a href="#method.GetLoadErrorPage">GetLoadErrorPage</a><a href="#method.GetExternalContentPolicyType">GetExternalContentPolicyType</a><a href="#method.InternalContentPolicyType">InternalContentPolicyType</a><a href="#method.GetUpgradeInsecureRequests">GetUpgradeInsecureRequests</a><a href="#method.GetVerifySignedContent">GetVerifySignedContent</a><a href="#method.SetVerifySignedContent">SetVerifySignedContent</a><a href="#method.GetEnforceSRI">GetEnforceSRI</a><a href="#method.SetEnforceSRI">SetEnforceSRI</a><a href="#method.GetForceAllowDataURI">GetForceAllowDataURI</a><a href="#method.SetForceAllowDataURI">SetForceAllowDataURI</a><a href="#method.GetForceInheritPrincipalDropped">GetForceInheritPrincipalDropped</a><a href="#method.GetInnerWindowID">GetInnerWindowID</a><a href="#method.GetOuterWindowID">GetOuterWindowID</a><a href="#method.GetParentOuterWindowID">GetParentOuterWindowID</a><a href="#method.GetTopOuterWindowID">GetTopOuterWindowID</a><a href="#method.GetFrameOuterWindowID">GetFrameOuterWindowID</a><a href="#method.ResetPrincipalToInheritToNullPrincipal">ResetPrincipalToInheritToNullPrincipal</a><a href="#method.GetEnforceSecurity">GetEnforceSecurity</a><a href="#method.SetEnforceSecurity">SetEnforceSecurity</a><a href="#method.GetInitialSecurityCheckDone">GetInitialSecurityCheckDone</a><a href="#method.SetInitialSecurityCheckDone">SetInitialSecurityCheckDone</a><a href="#method.GetLoadTriggeredFromExternal">GetLoadTriggeredFromExternal</a><a href="#method.SetLoadTriggeredFromExternal">SetLoadTriggeredFromExternal</a><a href="#method.GetServiceWorkerTaintingSynthesized">GetServiceWorkerTaintingSynthesized</a><a href="#method.AppendRedirectHistoryEntry">AppendRedirectHistoryEntry</a><a href="#method.GetForcePreflight">GetForcePreflight</a><a href="#method.GetIsPreflight">GetIsPreflight</a><a href="#method.GetForceHSTSPriming">GetForceHSTSPriming</a><a href="#method.GetMixedContentWouldBlock">GetMixedContentWouldBlock</a><a href="#method.GetIsHSTSPriming">GetIsHSTSPriming</a><a href="#method.SetIsHSTSPriming">SetIsHSTSPriming</a><a href="#method.GetIsHSTSPrimingUpgrade">GetIsHSTSPrimingUpgrade</a><a href="#method.SetIsHSTSPrimingUpgrade">SetIsHSTSPrimingUpgrade</a><a href="#method.GetTainting">GetTainting</a><a href="#method.MaybeIncreaseTainting">MaybeIncreaseTainting</a><a href="#method.GetIsTopLevelLoad">GetIsTopLevelLoad</a><a href="#method.GetResultPrincipalURI">GetResultPrincipalURI</a><a href="#method.SetResultPrincipalURI">SetResultPrincipalURI</a><a href="#method.GetSandboxedLoadingPrincipal">GetSandboxedLoadingPrincipal</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsILoadInfo', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsILoadInfo</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#34-43' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsILoadInfo { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsILoadInfo : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * The LoadInfo object contains information about a network load, why it
+ * was started, and how we plan on using the resulting response.
+ * If a network request is redirected, the new channel will receive a new
+ * LoadInfo object. The new object will contain mostly the same
+ * information as the pre-redirect one, but updated as appropriate.
+ * For detailed information about what parts of LoadInfo are updated on
+ * redirect, see documentation on individual properties.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsILoadInfo.html" title="struct xpcom::interfaces::nsILoadInfo">nsILoadInfo</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#83-89' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsILoadInfoCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#86-88' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsILoadInfo</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsILoadInfo.html" title="struct xpcom::interfaces::nsILoadInfo">nsILoadInfo</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#419-2125' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.SEC_NORMAL' class="associatedconstant"><span id='SEC_NORMAL.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_NORMAL' class="constant"><b>SEC_NORMAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_NORMAL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * *** DEPRECATED ***
+   * No LoadInfo created within Gecko should contain this security flag.
+   * Please use any of the five security flags defined underneath.
+   * We only keep this security flag to provide backwards compatibilty.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_REQUIRE_SAME_ORIGIN_DATA_INHERITS' class="associatedconstant"><span id='SEC_REQUIRE_SAME_ORIGIN_DATA_INHERITS.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_REQUIRE_SAME_ORIGIN_DATA_INHERITS' class="constant"><b>SEC_REQUIRE_SAME_ORIGIN_DATA_INHERITS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_REQUIRE_SAME_ORIGIN_DATA_INHERITS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * The following five flags determine the security mode and hence what kind of
+   * security checks should be performed throughout the lifetime of the channel.
+   *
+   *    * SEC_REQUIRE_SAME_ORIGIN_DATA_INHERITS
+   *    * SEC_REQUIRE_SAME_ORIGIN_DATA_IS_BLOCKED
+   *    * SEC_ALLOW_CROSS_ORIGIN_DATA_INHERITS
+   *    * SEC_ALLOW_CROSS_ORIGIN_DATA_IS_NULL
+   *    * SEC_REQUIRE_CORS_DATA_INHERITS
+   *
+   * Exactly one of these flags are required to be set in order to allow
+   * the channel to perform the correct security checks (SOP, CORS, ...) and
+   * return the correct result principal. If none or more than one of these
+   * flags are set AsyncOpen2 will fail.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_REQUIRE_SAME_ORIGIN_DATA_IS_BLOCKED' class="associatedconstant"><span id='SEC_REQUIRE_SAME_ORIGIN_DATA_IS_BLOCKED.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_REQUIRE_SAME_ORIGIN_DATA_IS_BLOCKED' class="constant"><b>SEC_REQUIRE_SAME_ORIGIN_DATA_IS_BLOCKED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_REQUIRE_SAME_ORIGIN_DATA_IS_BLOCKED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.SEC_ALLOW_CROSS_ORIGIN_DATA_INHERITS' class="associatedconstant"><span id='SEC_ALLOW_CROSS_ORIGIN_DATA_INHERITS.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_ALLOW_CROSS_ORIGIN_DATA_INHERITS' class="constant"><b>SEC_ALLOW_CROSS_ORIGIN_DATA_INHERITS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_ALLOW_CROSS_ORIGIN_DATA_INHERITS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * Allow loads from other origins. Loads from data: will inherit the
+   * principal.  See the documentation for principalToInherit, which describes
+   * exactly what principal is inherited.
+   *
+   * Commonly used by plain &lt;img&gt;, &lt;video&gt;, &lt;link rel=stylesheet&gt; etc.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_ALLOW_CROSS_ORIGIN_DATA_IS_NULL' class="associatedconstant"><span id='SEC_ALLOW_CROSS_ORIGIN_DATA_IS_NULL.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_ALLOW_CROSS_ORIGIN_DATA_IS_NULL' class="constant"><b>SEC_ALLOW_CROSS_ORIGIN_DATA_IS_NULL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_ALLOW_CROSS_ORIGIN_DATA_IS_NULL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/**
+   * Allow loads from other origins. Loads from data: will be allowed,
+   * but the resulting resource will get a null principal.
+   * Used in blink/webkit for &lt;iframe&gt;s. Likely also the mode
+   * that should be used by most Chrome code.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_REQUIRE_CORS_DATA_INHERITS' class="associatedconstant"><span id='SEC_REQUIRE_CORS_DATA_INHERITS.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_REQUIRE_CORS_DATA_INHERITS' class="constant"><b>SEC_REQUIRE_CORS_DATA_INHERITS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_REQUIRE_CORS_DATA_INHERITS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+<pre><code class="language-text">/**
+   * Allow loads from any origin, but require CORS for cross-origin loads.
+   * Loads from data: are allowed and the result will inherit the principal.
+   * See the documentation for principalToInherit, which describes exactly what
+   * principal is inherited.
+   *
+   * Commonly used by &lt;img crossorigin&gt;, &lt;video crossorigin&gt;,
+   * XHR, fetch(), etc.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_COOKIES_DEFAULT' class="associatedconstant"><span id='SEC_COOKIES_DEFAULT.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_COOKIES_DEFAULT' class="constant"><b>SEC_COOKIES_DEFAULT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_COOKIES_DEFAULT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Choose cookie policy. The default policy is equivalent to &quot;INCLUDE&quot; for
+   * SEC_REQUIRE_SAME_ORIGIN_* and SEC_ALLOW_CROSS_ORIGIN_* modes, and
+   * equivalent to &quot;SAME_ORIGIN&quot; for SEC_REQUIRE_CORS_DATA_INHERITS mode.
+   *
+   * This means that if you want to perform a CORS load with credentials, pass
+   * SEC_COOKIES_INCLUDE.
+   *
+   * Note that these flags are still subject to the user&#39;s cookie policies.
+   * For example, if the user is blocking 3rd party cookies, those cookies
+   * will be blocked no matter which of these flags are set.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_COOKIES_INCLUDE' class="associatedconstant"><span id='SEC_COOKIES_INCLUDE.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_COOKIES_INCLUDE' class="constant"><b>SEC_COOKIES_INCLUDE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_COOKIES_INCLUDE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+</div><h4 id='associatedconstant.SEC_COOKIES_SAME_ORIGIN' class="associatedconstant"><span id='SEC_COOKIES_SAME_ORIGIN.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_COOKIES_SAME_ORIGIN' class="constant"><b>SEC_COOKIES_SAME_ORIGIN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_COOKIES_SAME_ORIGIN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">64</span></pre>
+</div><h4 id='associatedconstant.SEC_COOKIES_OMIT' class="associatedconstant"><span id='SEC_COOKIES_OMIT.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_COOKIES_OMIT' class="constant"><b>SEC_COOKIES_OMIT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_COOKIES_OMIT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">96</span></pre>
+</div><h4 id='associatedconstant.SEC_FORCE_INHERIT_PRINCIPAL' class="associatedconstant"><span id='SEC_FORCE_INHERIT_PRINCIPAL.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_FORCE_INHERIT_PRINCIPAL' class="constant"><b>SEC_FORCE_INHERIT_PRINCIPAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_FORCE_INHERIT_PRINCIPAL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">128</span></pre>
+<pre><code class="language-text">/**
+   * Force inheriting of the principal.  See the documentation for
+   * principalToInherit, which describes exactly what principal is inherited.
+   *
+   * Setting this flag will cause GetChannelResultPrincipal to return the
+   * principal to be inherited as the channel principal.
+   *
+   * This will happen independently of the scheme of the URI that the
+   * channel is loading.
+   *
+   * So if the principal that gets inherited is &quot;http://a.com/&quot;, and the channel
+   * is loading the URI &quot;http://b.com/whatever&quot;, GetChannelResultPrincipal
+   * will return a principal from &quot;http://a.com/&quot;.
+   *
+   * This flag can not be used together with SEC_SANDBOXED.  If both are passed
+   * to the LoadInfo constructor then this flag will be dropped.  If you need
+   * to know whether this flag would have been present but was dropped due to
+   * sandboxing, check for the forceInheritPrincipalDropped flag.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_SANDBOXED' class="associatedconstant"><span id='SEC_SANDBOXED.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_SANDBOXED' class="constant"><b>SEC_SANDBOXED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_SANDBOXED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">256</span></pre>
+<pre><code class="language-text">/**
+   * Sandbox the load. The resulting resource will use a freshly created
+   * null principal. So GetChannelResultPrincipal will always return a
+   * null principal whenever this flag is set.
+   *
+   * This will happen independently of the scheme of the URI that the
+   * channel is loading.
+   *
+   * This flag can not be used together with SEC_FORCE_INHERIT_PRINCIPAL.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_ABOUT_BLANK_INHERITS' class="associatedconstant"><span id='SEC_ABOUT_BLANK_INHERITS.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_ABOUT_BLANK_INHERITS' class="constant"><b>SEC_ABOUT_BLANK_INHERITS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_ABOUT_BLANK_INHERITS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">512</span></pre>
+<pre><code class="language-text">/**
+   * Inherit the Principal for about:blank.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_ALLOW_CHROME' class="associatedconstant"><span id='SEC_ALLOW_CHROME.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_ALLOW_CHROME' class="constant"><b>SEC_ALLOW_CHROME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_ALLOW_CHROME</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1024</span></pre>
+<pre><code class="language-text">/**
+   * Allow access to chrome: packages that are content accessible.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_DISALLOW_SCRIPT' class="associatedconstant"><span id='SEC_DISALLOW_SCRIPT.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_DISALLOW_SCRIPT' class="constant"><b>SEC_DISALLOW_SCRIPT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_DISALLOW_SCRIPT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2048</span></pre>
+<pre><code class="language-text">/**
+   * Disallow access to javascript: uris.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_DONT_FOLLOW_REDIRECTS' class="associatedconstant"><span id='SEC_DONT_FOLLOW_REDIRECTS.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_DONT_FOLLOW_REDIRECTS' class="constant"><b>SEC_DONT_FOLLOW_REDIRECTS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_DONT_FOLLOW_REDIRECTS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4096</span></pre>
+<pre><code class="language-text">/**
+   * Don&#39;t follow redirects. Instead the redirect response is returned
+   * as a successful response for the channel.
+   *
+   * Redirects not initiated by a server response, i.e. REDIRECT_INTERNAL and
+   * REDIRECT_STS_UPGRADE, are still followed.
+   *
+   * Note: If this flag is set and the channel response is a redirect, then
+   * the response body might not be available.
+   * This can happen if the redirect was cached.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_LOAD_ERROR_PAGE' class="associatedconstant"><span id='SEC_LOAD_ERROR_PAGE.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_LOAD_ERROR_PAGE' class="constant"><b>SEC_LOAD_ERROR_PAGE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_LOAD_ERROR_PAGE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8192</span></pre>
+<pre><code class="language-text">/**
+   * Load an error page, it should be one of following : about:neterror,
+   * about:certerror, about:blocked, or about:tabcrashed.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SEC_FORCE_INHERIT_PRINCIPAL_OVERRULE_OWNER' class="associatedconstant"><span id='SEC_FORCE_INHERIT_PRINCIPAL_OVERRULE_OWNER.v' class='invisible'><code>pub const <a href='#associatedconstant.SEC_FORCE_INHERIT_PRINCIPAL_OVERRULE_OWNER' class="constant"><b>SEC_FORCE_INHERIT_PRINCIPAL_OVERRULE_OWNER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SEC_FORCE_INHERIT_PRINCIPAL_OVERRULE_OWNER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16384</span></pre>
+<pre><code class="language-text">/**
+   * Force inheriting of the principal, overruling any owner that might be set
+   * on the channel. (Please note that channel.owner is deprecated and will be
+   * removed within Bug 1286838).  See the documentation for principalToInherit,
+   * which describes exactly what principal is inherited.
+   *
+   * Setting this flag will cause GetChannelResultPrincipal to return the
+   * principal to be inherited as the channel principal.
+   *
+   * This will happen independently of the scheme of the URI that the
+   * channel is loading.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TAINTING_BASIC' class="associatedconstant"><span id='TAINTING_BASIC.v' class='invisible'><code>pub const <a href='#associatedconstant.TAINTING_BASIC' class="constant"><b>TAINTING_BASIC</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TAINTING_BASIC</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+  * Constants reflecting the channel tainting.  These are mainly defined here
+  * for script.  Internal C++ code should use the enum defined in LoadTainting.h.
+  * See LoadTainting.h for documentation.
+  */
+</code></pre>
+</div><h4 id='associatedconstant.TAINTING_CORS' class="associatedconstant"><span id='TAINTING_CORS.v' class='invisible'><code>pub const <a href='#associatedconstant.TAINTING_CORS' class="constant"><b>TAINTING_CORS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TAINTING_CORS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.TAINTING_OPAQUE' class="associatedconstant"><span id='TAINTING_OPAQUE.v' class='invisible'><code>pub const <a href='#associatedconstant.TAINTING_OPAQUE' class="constant"><b>TAINTING_OPAQUE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TAINTING_OPAQUE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.GetLoadingPrincipal' class="method"><span id='GetLoadingPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadingPrincipal' class='fnname'>GetLoadingPrincipal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLoadingPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#691-693' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is the principal of the network request&#39;s caller/requester where
+   * the resulting resource will be used. I.e. it is the principal which
+   * will get access to the result of the request. (Where &quot;get access to&quot;
+   * might simply mean &quot;embed&quot; depending on the type of resource that is
+   * loaded).
+   *
+   * For example for an image, it is the principal of the document where
+   * the image is rendered. For a stylesheet it is the principal of the
+   * document where the stylesheet will be applied.
+   *
+   * So if document at http://a.com/page.html loads an image from
+   * http://b.com/pic.jpg, then loadingPrincipal will be
+   * http://a.com/page.html.
+   *
+   * For &lt;iframe&gt; and &lt;frame&gt; loads, the LoadingPrincipal is the
+   * principal of the parent document. For top-level loads, the
+   * LoadingPrincipal is null. For all loads except top-level loads
+   * the LoadingPrincipal is never null.
+   *
+   * If the loadingPrincipal is the system principal, no security checks
+   * will be done at all. There will be no security checks on the initial
+   * load or any subsequent redirects. This means there will be no
+   * nsIContentPolicy checks or any CheckLoadURI checks. Because of
+   * this, never set the loadingPrincipal to the system principal when
+   * the URI to be loaded is controlled by a webpage.
+   * If the loadingPrincipal and triggeringPrincipal are both
+   * codebase-principals, then we will always call into
+   * nsIContentPolicies and CheckLoadURI. The call to nsIContentPolicies
+   * and CheckLoadURI happen even if the URI to be loaded is same-origin
+   * with the loadingPrincipal or triggeringPrincipal.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIPrincipal loadingPrincipal;</code></p>
+</div><h4 id='method.GetTriggeringPrincipal' class="method"><span id='GetTriggeringPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTriggeringPrincipal' class='fnname'>GetTriggeringPrincipal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTriggeringPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#745-747' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is the principal which caused the network load to start. I.e.
+   * this is the principal which provided the URL to be loaded. This is
+   * often the same as the LoadingPrincipal, but there are a few cases
+   * where that&#39;s not true.
+   *
+   * For example for loads into an &lt;iframe&gt;, the LoadingPrincipal is always
+   * the principal of the parent document. However the triggeringPrincipal
+   * is the principal of the document which provided the URL that the
+   * &lt;iframe&gt; is navigating to. This could be the previous document inside
+   * the &lt;iframe&gt; which set document.location. Or a document elsewhere in
+   * the frame tree which contained a &lt;a target=&quot;...&quot;&gt; which targetted the
+   * &lt;iframe&gt;.
+   *
+   * If a stylesheet links to a sub-resource, like an @imported stylesheet,
+   * or a background image, then the triggeringPrincipal is the principal
+   * of the stylesheet, while the LoadingPrincipal is the principal of the
+   * document being styled.
+   *
+   * The triggeringPrincipal is never null.
+   *
+   * If the triggeringPrincipal is the system principal, no security checks
+   * will be done at all. There will be no security checks on the initial
+   * load or any subsequent redirects. This means there will be no
+   * nsIContentPolicy checks or any CheckLoadURI checks. Because of
+   * this, never set the triggeringPrincipal to the system principal when
+   * the URI to be loaded is controlled by a webpage.
+   * If the loadingPrincipal and triggeringPrincipal are both
+   * codebase-principals, then we will always call into
+   * nsIContentPolicies and CheckLoadURI. The call to nsIContentPolicies
+   * and CheckLoadURI happen even if the URI to be loaded is same-origin
+   * with the loadingPrincipal or triggeringPrincipal.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIPrincipal triggeringPrincipal;</code></p>
+</div><h4 id='method.GetPrincipalToInherit' class="method"><span id='GetPrincipalToInherit.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPrincipalToInherit' class='fnname'>GetPrincipalToInherit</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrincipalToInherit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#774-776' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * For non-document loads the principalToInherit is always null. For
+   * loads of type TYPE_DOCUMENT or TYPE_SUBDOCUMENT the principalToInherit
+   * might be null. If it&#39;s non null, then this is the principal that is
+   * inherited if a principal needs to be inherited. If the principalToInherit
+   * is null but the inherit flag is set, then the triggeringPrincipal is
+   * the principal that is inherited.
+   */
+</code></pre>
+
+<p><code>attribute nsIPrincipal principalToInherit;</code></p>
+</div><h4 id='method.SetPrincipalToInherit' class="method"><span id='SetPrincipalToInherit.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPrincipalToInherit' class='fnname'>SetPrincipalToInherit</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrincipalToInherit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#793-795' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * For non-document loads the principalToInherit is always null. For
+   * loads of type TYPE_DOCUMENT or TYPE_SUBDOCUMENT the principalToInherit
+   * might be null. If it&#39;s non null, then this is the principal that is
+   * inherited if a principal needs to be inherited. If the principalToInherit
+   * is null but the inherit flag is set, then the triggeringPrincipal is
+   * the principal that is inherited.
+   */
+</code></pre>
+
+<p><code>attribute nsIPrincipal principalToInherit;</code></p>
+</div><h4 id='method.GetLoadingDocument' class="method"><span id='GetLoadingDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadingDocument' class='fnname'>GetLoadingDocument</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLoadingDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMDocument.html" title="struct xpcom::interfaces::nsIDOMDocument">nsIDOMDocument</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#834-836' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is the ownerDocument of the LoadingNode. Unless the LoadingNode
+   * is a Document, in which case the LoadingDocument is the same as the
+   * LoadingNode.
+   *
+   * For top-level loads, and for loads originating from workers, the
+   * LoadingDocument is null. When the LoadingDocument is not null, the
+   * LoadingPrincipal is set to the principal of the LoadingDocument.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIDOMDocument loadingDocument;</code></p>
+</div><h4 id='method.GetSecurityFlags' class="method"><span id='GetSecurityFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSecurityFlags' class='fnname'>GetSecurityFlags</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSecurityFlags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.nsSecurityFlags.html" title="type xpcom::interfaces::nsSecurityFlags">nsSecurityFlags</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#889-891' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The securityFlags of that channel.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsSecurityFlags securityFlags;</code></p>
+</div><h4 id='method.GetSecurityMode' class="method"><span id='GetSecurityMode.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSecurityMode' class='fnname'>GetSecurityMode</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#903-908' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Allows to query only the security mode bits from above.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute unsigned long securityMode;</code></p>
+</div><h4 id='method.GetIsInThirdPartyContext' class="method"><span id='GetIsInThirdPartyContext.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsInThirdPartyContext' class='fnname'>GetIsInThirdPartyContext</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#923-928' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if this request is embedded in a context that can&#39;t be third-party
+   * (i.e. an iframe embedded in a cross-origin parent window). If this is
+   * false, then this request may be third-party if it&#39;s a third-party to
+   * loadingPrincipal.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean isInThirdPartyContext;</code></p>
+</div><h4 id='method.GetCookiePolicy' class="method"><span id='GetCookiePolicy.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCookiePolicy' class='fnname'>GetCookiePolicy</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#943-948' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * See the SEC_COOKIES_* flags above. This attribute will never return
+   * SEC_COOKIES_DEFAULT, but will instead return what the policy resolves to.
+   * I.e. SEC_COOKIES_SAME_ORIGIN for CORS mode, and SEC_COOKIES_INCLUDE
+   * otherwise.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute unsigned long cookiePolicy;</code></p>
+</div><h4 id='method.GetForceInheritPrincipal' class="method"><span id='GetForceInheritPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.GetForceInheritPrincipal' class='fnname'>GetForceInheritPrincipal</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#967-972' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If forceInheritPrincipal is true, the data coming from the channel should
+   * inherit its principal, even when the data is loaded over http:// or another
+   * protocol that would normally use a URI-based principal.
+   *
+   * See the documentation for principalToInherit, which describes exactly what
+   * principal is inherited.
+   *
+   * This attribute will never be true when loadingSandboxed is true.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean forceInheritPrincipal;</code></p>
+</div><h4 id='method.GetForceInheritPrincipalOverruleOwner' class="method"><span id='GetForceInheritPrincipalOverruleOwner.v' class='invisible'><code>pub unsafe fn <a href='#method.GetForceInheritPrincipalOverruleOwner' class='fnname'>GetForceInheritPrincipalOverruleOwner</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#992-997' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If forceInheritPrincipalOverruleOwner is true, the data coming from the
+   * channel should inherit the principal, even when the data is loaded over
+   * http:// or another protocol that would normally use a URI-based principal
+   * and even if the channel&#39;s .owner is not null.  This last is the difference
+   * between forceInheritPrincipalOverruleOwner and forceInheritPrincipal: the
+   * latter does _not_ overrule the .owner setting.
+   *
+   * See the documentation for principalToInherit, which describes exactly what
+   * principal is inherited.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean forceInheritPrincipalOverruleOwner;</code></p>
+</div><h4 id='method.GetLoadingSandboxed' class="method"><span id='GetLoadingSandboxed.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadingSandboxed' class='fnname'>GetLoadingSandboxed</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1011-1016' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If loadingSandboxed is true, the data coming from the channel is
+   * being loaded sandboxed, so it should have a nonce origin and
+   * hence should use a NullPrincipal.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean loadingSandboxed;</code></p>
+</div><h4 id='method.GetAboutBlankInherits' class="method"><span id='GetAboutBlankInherits.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAboutBlankInherits' class='fnname'>GetAboutBlankInherits</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1029-1034' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If aboutBlankInherits is true, then about:blank should inherit
+   * the principal.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean aboutBlankInherits;</code></p>
+</div><h4 id='method.GetAllowChrome' class="method"><span id='GetAllowChrome.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAllowChrome' class='fnname'>GetAllowChrome</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1047-1052' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If allowChrome is true, then use nsIScriptSecurityManager::ALLOW_CHROME
+   * when calling CheckLoadURIWithPrincipal().
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean allowChrome;</code></p>
+</div><h4 id='method.GetDisallowScript' class="method"><span id='GetDisallowScript.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDisallowScript' class='fnname'>GetDisallowScript</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1065-1070' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If disallowScript is true, then use nsIScriptSecurityManager::DISALLOW_SCRIPT
+   * when calling CheckLoadURIWithPrincipal().
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean disallowScript;</code></p>
+</div><h4 id='method.GetDontFollowRedirects' class="method"><span id='GetDontFollowRedirects.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDontFollowRedirects' class='fnname'>GetDontFollowRedirects</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1082-1087' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns true if SEC_DONT_FOLLOW_REDIRECTS is set.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean dontFollowRedirects;</code></p>
+</div><h4 id='method.GetLoadErrorPage' class="method"><span id='GetLoadErrorPage.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadErrorPage' class='fnname'>GetLoadErrorPage</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1099-1104' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns true if SEC_LOAD_ERROR_PAGE is set.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean loadErrorPage;</code></p>
+</div><h4 id='method.GetExternalContentPolicyType' class="method"><span id='GetExternalContentPolicyType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetExternalContentPolicyType' class='fnname'>GetExternalContentPolicyType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExternalContentPolicyType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.nsContentPolicyType.html" title="type xpcom::interfaces::nsContentPolicyType">nsContentPolicyType</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1120-1122' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The external contentPolicyType of the channel, used for security checks
+   * like Mixed Content Blocking and Content Security Policy.
+   *
+   * Specifically, content policy types with _INTERNAL_ in their name will
+   * never get returned from this attribute.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsContentPolicyType externalContentPolicyType;</code></p>
+</div><h4 id='method.InternalContentPolicyType' class="method"><span id='InternalContentPolicyType.v' class='invisible'><code>pub unsafe fn <a href='#method.InternalContentPolicyType' class='fnname'>InternalContentPolicyType</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsContentPolicyType.html" title="type xpcom::interfaces::nsContentPolicyType">nsContentPolicyType</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1141-1143' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The internal contentPolicyType of the channel, used for constructing
+   * RequestContext values when creating a fetch event for an intercepted
+   * channel.
+   *
+   * This should not be used for the purposes of security checks, since
+   * the content policy implementations cannot be expected to deal with
+   * _INTERNAL_ values.  Please use the contentPolicyType attribute above
+   * for that purpose.
+   */
+</code></pre>
+
+<p><code>[noscript,notxpcom] nsContentPolicyType internalContentPolicyType ();</code></p>
+</div><h4 id='method.GetUpgradeInsecureRequests' class="method"><span id='GetUpgradeInsecureRequests.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUpgradeInsecureRequests' class='fnname'>GetUpgradeInsecureRequests</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1161-1166' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns true if document or any of the documents ancestors
+   * up to the toplevel document make use of the CSP directive
+   * &#39;upgrade-insecure-requests&#39;. Used to identify upgrade
+   * requests in e10s where the loadingDocument is not available.
+   *
+   * Warning: If the loadingDocument is null, then the
+   * upgradeInsecureRequests is false.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean upgradeInsecureRequests;</code></p>
+</div><h4 id='method.GetVerifySignedContent' class="method"><span id='GetVerifySignedContent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetVerifySignedContent' class='fnname'>GetVerifySignedContent</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1184-1189' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, the content of the channel is queued up and checked
+   * if it matches a content signature. Note, setting this flag
+   * to true will negatively impact performance since the preloader
+   * can not start until all of the content is fetched from the
+   * netwerk.
+   *
+   * Only use that in combination with TYPE_DOCUMENT.
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean verifySignedContent;</code></p>
+</div><h4 id='method.SetVerifySignedContent' class="method"><span id='SetVerifySignedContent.v' class='invisible'><code>pub unsafe fn <a href='#method.SetVerifySignedContent' class='fnname'>SetVerifySignedContent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aVerifySignedContent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1207-1209' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, the content of the channel is queued up and checked
+   * if it matches a content signature. Note, setting this flag
+   * to true will negatively impact performance since the preloader
+   * can not start until all of the content is fetched from the
+   * netwerk.
+   *
+   * Only use that in combination with TYPE_DOCUMENT.
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean verifySignedContent;</code></p>
+</div><h4 id='method.GetEnforceSRI' class="method"><span id='GetEnforceSRI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEnforceSRI' class='fnname'>GetEnforceSRI</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1221-1226' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, this load will fail if it has no SRI integrity
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean enforceSRI;</code></p>
+</div><h4 id='method.SetEnforceSRI' class="method"><span id='SetEnforceSRI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetEnforceSRI' class='fnname'>SetEnforceSRI</a>(&amp;self, aEnforceSRI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1238-1240' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, this load will fail if it has no SRI integrity
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean enforceSRI;</code></p>
+</div><h4 id='method.GetForceAllowDataURI' class="method"><span id='GetForceAllowDataURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetForceAllowDataURI' class='fnname'>GetForceAllowDataURI</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1252-1257' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, toplevel data: URI navigation is allowed
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean forceAllowDataURI;</code></p>
+</div><h4 id='method.SetForceAllowDataURI' class="method"><span id='SetForceAllowDataURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetForceAllowDataURI' class='fnname'>SetForceAllowDataURI</a>(&amp;self, aForceAllowDataURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1269-1271' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If true, toplevel data: URI navigation is allowed
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean forceAllowDataURI;</code></p>
+</div><h4 id='method.GetForceInheritPrincipalDropped' class="method"><span id='GetForceInheritPrincipalDropped.v' class='invisible'><code>pub unsafe fn <a href='#method.GetForceInheritPrincipalDropped' class='fnname'>GetForceInheritPrincipalDropped</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1286-1291' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The SEC_FORCE_INHERIT_PRINCIPAL flag may be dropped when a load info
+   * object is created.  Specifically, it will be dropped if the SEC_SANDBOXED
+   * flag is also present.  This flag is set if SEC_FORCE_INHERIT_PRINCIPAL was
+   * dropped.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean forceInheritPrincipalDropped;</code></p>
+</div><h4 id='method.GetInnerWindowID' class="method"><span id='GetInnerWindowID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInnerWindowID' class='fnname'>GetInnerWindowID</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1310-1315' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * These are the window IDs of the window in which the element being
+   * loaded lives. parentOuterWindowID is the window ID of this window&#39;s
+   * parent. topOuterWindowID is the ID of the top-level window of the same
+   * docShell type.
+   *
+   * Note that these window IDs can be 0 if the window is not
+   * available. parentOuterWindowID and topOuterWindowID will be the same as
+   * outerWindowID if the window has no parent.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute unsigned long long innerWindowID;</code></p>
+</div><h4 id='method.GetOuterWindowID' class="method"><span id='GetOuterWindowID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOuterWindowID' class='fnname'>GetOuterWindowID</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1321-1326' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[infallible] readonly attribute unsigned long long outerWindowID;</code></p>
+</div><h4 id='method.GetParentOuterWindowID' class="method"><span id='GetParentOuterWindowID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetParentOuterWindowID' class='fnname'>GetParentOuterWindowID</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1332-1337' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[infallible] readonly attribute unsigned long long parentOuterWindowID;</code></p>
+</div><h4 id='method.GetTopOuterWindowID' class="method"><span id='GetTopOuterWindowID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTopOuterWindowID' class='fnname'>GetTopOuterWindowID</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1343-1348' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[infallible] readonly attribute unsigned long long topOuterWindowID;</code></p>
+</div><h4 id='method.GetFrameOuterWindowID' class="method"><span id='GetFrameOuterWindowID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFrameOuterWindowID' class='fnname'>GetFrameOuterWindowID</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1365-1370' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Only when the element being loaded is &lt;frame src=&quot;foo.html&quot;&gt;
+   * (or, more generally, if the element QIs to nsIFrameLoaderOwner),
+   * the frameOuterWindowID is the outer window containing the
+   * foo.html document.
+   *
+   * Note: For other cases, frameOuterWindowID is 0.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute unsigned long long frameOuterWindowID;</code></p>
+</div><h4 id='method.ResetPrincipalToInheritToNullPrincipal' class="method"><span id='ResetPrincipalToInheritToNullPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.ResetPrincipalToInheritToNullPrincipal' class='fnname'>ResetPrincipalToInheritToNullPrincipal</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1386-1388' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Resets the PrincipalToInherit to a freshly created NullPrincipal
+   * which inherits the origin attributes from the loadInfo.
+   *
+   * WARNING: Please only use that function if you know exactly what
+   * you are doing!!!
+   */
+</code></pre>
+
+<p><code>void resetPrincipalToInheritToNullPrincipal ();</code></p>
+</div><h4 id='method.GetEnforceSecurity' class="method"><span id='GetEnforceSecurity.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEnforceSecurity' class='fnname'>GetEnforceSecurity</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1447-1452' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whenever a channel is openend by asyncOpen2() [or also open2()],
+   * lets set this flag so that redirects of such channels are also
+   * openend using asyncOpen2() [open2()].
+   *
+   * Please note, once the flag is set to true it must remain true
+   * throughout the lifetime of the channel. Trying to set it
+   * to anything else than true will be discareded.
+   *
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean enforceSecurity;</code></p>
+</div><h4 id='method.SetEnforceSecurity' class="method"><span id='SetEnforceSecurity.v' class='invisible'><code>pub unsafe fn <a href='#method.SetEnforceSecurity' class='fnname'>SetEnforceSecurity</a>(&amp;self, aEnforceSecurity: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1471-1473' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whenever a channel is openend by asyncOpen2() [or also open2()],
+   * lets set this flag so that redirects of such channels are also
+   * openend using asyncOpen2() [open2()].
+   *
+   * Please note, once the flag is set to true it must remain true
+   * throughout the lifetime of the channel. Trying to set it
+   * to anything else than true will be discareded.
+   *
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean enforceSecurity;</code></p>
+</div><h4 id='method.GetInitialSecurityCheckDone' class="method"><span id='GetInitialSecurityCheckDone.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInitialSecurityCheckDone' class='fnname'>GetInitialSecurityCheckDone</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1498-1503' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whenever a channel is evaluated by the ContentSecurityManager
+   * the first time, we set this flag to true to indicate that
+   * subsequent calls of AsyncOpen2() do not have to enforce all
+   * security checks again. E.g., after a redirect there is no
+   * need to set up CORS again. We need this separate flag
+   * because the redirectChain might also contain internal
+   * redirects which might pollute the redirectChain so we can&#39;t
+   * rely on the size of the redirectChain-array to query whether
+   * a channel got redirected or not.
+   *
+   * Please note, once the flag is set to true it must remain true
+   * throughout the lifetime of the channel. Trying to set it
+   * to anything else than true will be discarded.
+   *
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean initialSecurityCheckDone;</code></p>
+</div><h4 id='method.SetInitialSecurityCheckDone' class="method"><span id='SetInitialSecurityCheckDone.v' class='invisible'><code>pub unsafe fn <a href='#method.SetInitialSecurityCheckDone' class='fnname'>SetInitialSecurityCheckDone</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aInitialSecurityCheckDone: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1528-1530' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whenever a channel is evaluated by the ContentSecurityManager
+   * the first time, we set this flag to true to indicate that
+   * subsequent calls of AsyncOpen2() do not have to enforce all
+   * security checks again. E.g., after a redirect there is no
+   * need to set up CORS again. We need this separate flag
+   * because the redirectChain might also contain internal
+   * redirects which might pollute the redirectChain so we can&#39;t
+   * rely on the size of the redirectChain-array to query whether
+   * a channel got redirected or not.
+   *
+   * Please note, once the flag is set to true it must remain true
+   * throughout the lifetime of the channel. Trying to set it
+   * to anything else than true will be discarded.
+   *
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean initialSecurityCheckDone;</code></p>
+</div><h4 id='method.GetLoadTriggeredFromExternal' class="method"><span id='GetLoadTriggeredFromExternal.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadTriggeredFromExternal' class='fnname'>GetLoadTriggeredFromExternal</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1544-1549' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns true if the load was triggered from an external application
+   * (e.g. Thunderbird). Please note that this flag will only ever be true
+   * if the load is of TYPE_DOCUMENT.
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean loadTriggeredFromExternal;</code></p>
+</div><h4 id='method.SetLoadTriggeredFromExternal' class="method"><span id='SetLoadTriggeredFromExternal.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLoadTriggeredFromExternal' class='fnname'>SetLoadTriggeredFromExternal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLoadTriggeredFromExternal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1563-1565' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns true if the load was triggered from an external application
+   * (e.g. Thunderbird). Please note that this flag will only ever be true
+   * if the load is of TYPE_DOCUMENT.
+   */
+</code></pre>
+
+<p><code>[infallible] attribute boolean loadTriggeredFromExternal;</code></p>
+</div><h4 id='method.GetServiceWorkerTaintingSynthesized' class="method"><span id='GetServiceWorkerTaintingSynthesized.v' class='invisible'><code>pub unsafe fn <a href='#method.GetServiceWorkerTaintingSynthesized' class='fnname'>GetServiceWorkerTaintingSynthesized</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1577-1582' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if the tainting has been set by the service worker.
+   */
+</code></pre>
+
+<p><code>[infallible,noscript] readonly attribute boolean serviceWorkerTaintingSynthesized;</code></p>
+</div><h4 id='method.AppendRedirectHistoryEntry' class="method"><span id='AppendRedirectHistoryEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.AppendRedirectHistoryEntry' class='fnname'>AppendRedirectHistoryEntry</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;entry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIRedirectHistoryEntry.html" title="struct xpcom::interfaces::nsIRedirectHistoryEntry">nsIRedirectHistoryEntry</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;isInternalRedirect: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1602-1604' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whenever a channel gets redirected, append the redirect history entry of
+   * the channel which contains principal referrer and remote address [before
+   * the channels got redirected] to the loadinfo, so that at every point this
+   * array provides us information about all the redirects this channel went
+   * through.
+   * @param entry, the nsIRedirectHistoryEntry before the channel
+   *         got redirected.
+   * @param aIsInternalRedirect should be true if the channel is going
+   *        through an internal redirect, otherwise false.
+   */
+</code></pre>
+
+<p><code>void appendRedirectHistoryEntry (in nsIRedirectHistoryEntry entry, in boolean isInternalRedirect);</code></p>
+</div><h4 id='method.GetForcePreflight' class="method"><span id='GetForcePreflight.v' class='invisible'><code>pub unsafe fn <a href='#method.GetForcePreflight' class='fnname'>GetForcePreflight</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1728-1733' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns value set through setCorsPreflightInfo.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean forcePreflight;</code></p>
+</div><h4 id='method.GetIsPreflight' class="method"><span id='GetIsPreflight.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsPreflight' class='fnname'>GetIsPreflight</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1745-1750' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A C++ friendly getter for the forcePreflight flag.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean isPreflight;</code></p>
+</div><h4 id='method.GetForceHSTSPriming' class="method"><span id='GetForceHSTSPriming.v' class='invisible'><code>pub unsafe fn <a href='#method.GetForceHSTSPriming' class='fnname'>GetForceHSTSPriming</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1767-1772' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When this request would be mixed-content and we do not have an
+   * entry in the HSTS cache, we send an HSTS priming request to
+   * determine if it is ok to upgrade the request to HTTPS.
+   */
+/**
+   * True if this is a mixed-content load and HSTS priming request will be sent.
+   */
+</code></pre>
+
+<p><code>[infallible,noscript] readonly attribute boolean forceHSTSPriming;</code></p>
+</div><h4 id='method.GetMixedContentWouldBlock' class="method"><span id='GetMixedContentWouldBlock.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMixedContentWouldBlock' class='fnname'>GetMixedContentWouldBlock</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1785-1790' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Carry the decision whether this load would be blocked by mixed content so
+   * that if HSTS priming fails, the correct decision can be made.
+   */
+</code></pre>
+
+<p><code>[infallible,noscript] readonly attribute boolean mixedContentWouldBlock;</code></p>
+</div><h4 id='method.GetIsHSTSPriming' class="method"><span id='GetIsHSTSPriming.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsHSTSPriming' class='fnname'>GetIsHSTSPriming</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1802-1807' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if this load is an HSTS priming request.
+   */
+</code></pre>
+
+<p><code>[infallible,noscript] attribute boolean isHSTSPriming;</code></p>
+</div><h4 id='method.SetIsHSTSPriming' class="method"><span id='SetIsHSTSPriming.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIsHSTSPriming' class='fnname'>SetIsHSTSPriming</a>(&amp;self, aIsHSTSPriming: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1819-1821' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if this load is an HSTS priming request.
+   */
+</code></pre>
+
+<p><code>[infallible,noscript] attribute boolean isHSTSPriming;</code></p>
+</div><h4 id='method.GetIsHSTSPrimingUpgrade' class="method"><span id='GetIsHSTSPrimingUpgrade.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsHSTSPrimingUpgrade' class='fnname'>GetIsHSTSPrimingUpgrade</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1833-1838' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if this load was upgraded from HSTS priming
+   */
+</code></pre>
+
+<p><code>[infallible,noscript] attribute boolean isHSTSPrimingUpgrade;</code></p>
+</div><h4 id='method.SetIsHSTSPrimingUpgrade' class="method"><span id='SetIsHSTSPrimingUpgrade.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIsHSTSPrimingUpgrade' class='fnname'>SetIsHSTSPrimingUpgrade</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsHSTSPrimingUpgrade: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1850-1852' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if this load was upgraded from HSTS priming
+   */
+</code></pre>
+
+<p><code>[infallible,noscript] attribute boolean isHSTSPrimingUpgrade;</code></p>
+</div><h4 id='method.GetTainting' class="method"><span id='GetTainting.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTainting' class='fnname'>GetTainting</a>(&amp;self, aTainting: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1883-1885' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Determine the associated channel&#39;s current tainting.  Note, this can
+   * change due to a service worker intercept, so it should be checked after
+   * OnStartRequest() fires.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long tainting;</code></p>
+</div><h4 id='method.MaybeIncreaseTainting' class="method"><span id='MaybeIncreaseTainting.v' class='invisible'><code>pub unsafe fn <a href='#method.MaybeIncreaseTainting' class='fnname'>MaybeIncreaseTainting</a>(&amp;self, aTainting: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1900-1902' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Note a new tainting level and possibly increase the current tainting
+   * to match.  If the tainting level is already greater than the given
+   * value, then there is no effect.  It is not possible to reduce the tainting
+   * level on an existing channel/loadinfo.
+   */
+</code></pre>
+
+<p><code>void maybeIncreaseTainting (in unsigned long aTainting);</code></p>
+</div><h4 id='method.GetIsTopLevelLoad' class="method"><span id='GetIsTopLevelLoad.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsTopLevelLoad' class='fnname'>GetIsTopLevelLoad</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1919-1924' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Various helper code to provide more convenient C++ access to the tainting
+   * attribute and maybeIncreaseTainting().
+   */
+/**
+   * Returns true if this load is for top level document.
+   * Note that the load for a sub-frame&#39;s document will return false here.
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean isTopLevelLoad;</code></p>
+</div><h4 id='method.GetResultPrincipalURI' class="method"><span id='GetResultPrincipalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResultPrincipalURI' class='fnname'>GetResultPrincipalURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResultPrincipalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1939-1941' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If this is non-null, this property represents two things: (1) the
+   * URI to be used for the principal if the channel with this loadinfo
+   * gets a principal based on URI and (2) the URI to use for a document
+   * created from the channel with this loadinfo.
+   */
+</code></pre>
+
+<p><code>attribute nsIURI resultPrincipalURI;</code></p>
+</div><h4 id='method.SetResultPrincipalURI' class="method"><span id='SetResultPrincipalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetResultPrincipalURI' class='fnname'>SetResultPrincipalURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResultPrincipalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1956-1958' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If this is non-null, this property represents two things: (1) the
+   * URI to be used for the principal if the channel with this loadinfo
+   * gets a principal based on URI and (2) the URI to use for a document
+   * created from the channel with this loadinfo.
+   */
+</code></pre>
+
+<p><code>attribute nsIURI resultPrincipalURI;</code></p>
+</div><h4 id='method.GetSandboxedLoadingPrincipal' class="method"><span id='GetSandboxedLoadingPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSandboxedLoadingPrincipal' class='fnname'>GetSandboxedLoadingPrincipal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSandboxedLoadingPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#1973-1975' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the null principal of the resulting resource if the SEC_SANDBOXED
+   * flag is set.  Otherwise returns null.  This is used by
+   * GetChannelResultPrincipal() to ensure that the same null principal object
+   * is returned every time.
+   */
+</code></pre>
+
+<p><code>[noscript] readonly attribute nsIPrincipal sandboxedLoadingPrincipal;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsILoadInfo.html" title="struct xpcom::interfaces::nsILoadInfo">nsILoadInfo</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#48-51' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3720764409</span>, <span class="number">12128</span>, <span class="number">16811</span>, [<span class="number">178</span>, <span class="number">42</span>, <span class="number">79</span>, <span class="number">26</span>, <span class="number">233</span>, <span class="number">239</span>, <span class="number">205</span>, <span class="number">54</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsILoadInfo.html" title="struct xpcom::interfaces::nsILoadInfo">nsILoadInfo</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#55-64' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#57-59' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#61-63' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsILoadInfo.html" title="struct xpcom::interfaces::nsILoadInfo">nsILoadInfo</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#95-103' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsILoadInfo.rs.html#98-102' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

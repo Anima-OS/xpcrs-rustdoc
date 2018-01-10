@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsISHEntry` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsISHEntry">
+
+    <title>xpcom::interfaces::nsISHEntry - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsISHEntry</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetURI">GetURI</a><a href="#method.GetOriginalURI">GetOriginalURI</a><a href="#method.SetOriginalURI">SetOriginalURI</a><a href="#method.GetResultPrincipalURI">GetResultPrincipalURI</a><a href="#method.SetResultPrincipalURI">SetResultPrincipalURI</a><a href="#method.GetLoadReplace">GetLoadReplace</a><a href="#method.SetLoadReplace">SetLoadReplace</a><a href="#method.GetTitle">GetTitle</a><a href="#method.GetIsSubFrame">GetIsSubFrame</a><a href="#method.SetURI">SetURI</a><a href="#method.GetReferrerURI">GetReferrerURI</a><a href="#method.SetReferrerURI">SetReferrerURI</a><a href="#method.GetReferrerPolicy">GetReferrerPolicy</a><a href="#method.SetReferrerPolicy">SetReferrerPolicy</a><a href="#method.GetContentViewer">GetContentViewer</a><a href="#method.SetContentViewer">SetContentViewer</a><a href="#method.GetSticky">GetSticky</a><a href="#method.SetSticky">SetSticky</a><a href="#method.GetWindowState">GetWindowState</a><a href="#method.SetWindowState">SetWindowState</a><a href="#method.AddChildShell">AddChildShell</a><a href="#method.ChildShellAt">ChildShellAt</a><a href="#method.ClearChildShells">ClearChildShells</a><a href="#method.GetRefreshURIList">GetRefreshURIList</a><a href="#method.SetRefreshURIList">SetRefreshURIList</a><a href="#method.SyncPresentationState">SyncPresentationState</a><a href="#method.SetTitle">SetTitle</a><a href="#method.GetPostData">GetPostData</a><a href="#method.SetPostData">SetPostData</a><a href="#method.GetLayoutHistoryState">GetLayoutHistoryState</a><a href="#method.SetLayoutHistoryState">SetLayoutHistoryState</a><a href="#method.InitLayoutHistoryState">InitLayoutHistoryState</a><a href="#method.GetParent">GetParent</a><a href="#method.SetParent">SetParent</a><a href="#method.GetLoadType">GetLoadType</a><a href="#method.SetLoadType">SetLoadType</a><a href="#method.GetID">GetID</a><a href="#method.SetID">SetID</a><a href="#method.GetCacheKey">GetCacheKey</a><a href="#method.SetCacheKey">SetCacheKey</a><a href="#method.GetSaveLayoutStateFlag">GetSaveLayoutStateFlag</a><a href="#method.SetSaveLayoutStateFlag">SetSaveLayoutStateFlag</a><a href="#method.GetExpirationStatus">GetExpirationStatus</a><a href="#method.SetExpirationStatus">SetExpirationStatus</a><a href="#method.GetContentType">GetContentType</a><a href="#method.SetContentType">SetContentType</a><a href="#method.GetURIWasModified">GetURIWasModified</a><a href="#method.SetURIWasModified">SetURIWasModified</a><a href="#method.SetScrollPosition">SetScrollPosition</a><a href="#method.GetScrollPosition">GetScrollPosition</a><a href="#method.Create">Create</a><a href="#method.Clone">Clone</a><a href="#method.SetIsSubFrame">SetIsSubFrame</a><a href="#method.GetAnyContentViewer">GetAnyContentViewer</a><a href="#method.GetTriggeringPrincipal">GetTriggeringPrincipal</a><a href="#method.SetTriggeringPrincipal">SetTriggeringPrincipal</a><a href="#method.GetPrincipalToInherit">GetPrincipalToInherit</a><a href="#method.SetPrincipalToInherit">SetPrincipalToInherit</a><a href="#method.GetStateData">GetStateData</a><a href="#method.SetStateData">SetStateData</a><a href="#method.HasDetachedEditor">HasDetachedEditor</a><a href="#method.IsDynamicallyAdded">IsDynamicallyAdded</a><a href="#method.HasDynamicallyAddedChild">HasDynamicallyAddedChild</a><a href="#method.GetDocshellID">GetDocshellID</a><a href="#method.SetDocshellID">SetDocshellID</a><a href="#method.DocshellID">DocshellID</a><a href="#method.GetBFCacheEntry">GetBFCacheEntry</a><a href="#method.HasBFCacheEntry">HasBFCacheEntry</a><a href="#method.AdoptBFCacheEntry">AdoptBFCacheEntry</a><a href="#method.AbandonBFCacheEntry">AbandonBFCacheEntry</a><a href="#method.SharesDocumentWith">SharesDocumentWith</a><a href="#method.GetIsSrcdocEntry">GetIsSrcdocEntry</a><a href="#method.GetSrcdocData">GetSrcdocData</a><a href="#method.SetSrcdocData">SetSrcdocData</a><a href="#method.GetBaseURI">GetBaseURI</a><a href="#method.SetBaseURI">SetBaseURI</a><a href="#method.GetScrollRestorationIsManual">GetScrollRestorationIsManual</a><a href="#method.SetScrollRestorationIsManual">SetScrollRestorationIsManual</a><a href="#method.GetLoadedInThisProcess">GetLoadedInThisProcess</a><a href="#method.GetSHistory">GetSHistory</a><a href="#method.SetSHistory">SetSHistory</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsISHEntry', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsISHEntry</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsISHEntry { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsISHEntry : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsISHEntryCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISHEntry</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#370-1553' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetURI' class="method"><span id='GetURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetURI' class='fnname'>GetURI</a>(&amp;self, aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#383-385' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * A readonly property that returns the URI
+     * of the current entry. The object returned is
+     * of type nsIURI
+     */
+</code></pre>
+
+<p><code>readonly attribute nsIURI URI;</code></p>
+</div><h4 id='method.GetOriginalURI' class="method"><span id='GetOriginalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOriginalURI' class='fnname'>GetOriginalURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOriginalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#399-401' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * A readonly property that returns the original URI of the current entry.
+     * If an entry is the result of a redirect this attribute holds original
+     * URI. The object returned is of type nsIURI
+     */
+</code></pre>
+
+<p><code>attribute nsIURI originalURI;</code></p>
+</div><h4 id='method.SetOriginalURI' class="method"><span id='SetOriginalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetOriginalURI' class='fnname'>SetOriginalURI</a>(&amp;self, aOriginalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#415-417' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * A readonly property that returns the original URI of the current entry.
+     * If an entry is the result of a redirect this attribute holds original
+     * URI. The object returned is of type nsIURI
+     */
+</code></pre>
+
+<p><code>attribute nsIURI originalURI;</code></p>
+</div><h4 id='method.GetResultPrincipalURI' class="method"><span id='GetResultPrincipalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResultPrincipalURI' class='fnname'>GetResultPrincipalURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResultPrincipalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#430-432' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * URL as stored from nsILoadInfo.resultPrincipalURI.  See nsILoadInfo
+     * for more details.
+     */
+</code></pre>
+
+<p><code>attribute nsIURI resultPrincipalURI;</code></p>
+</div><h4 id='method.SetResultPrincipalURI' class="method"><span id='SetResultPrincipalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetResultPrincipalURI' class='fnname'>SetResultPrincipalURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResultPrincipalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#445-447' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * URL as stored from nsILoadInfo.resultPrincipalURI.  See nsILoadInfo
+     * for more details.
+     */
+</code></pre>
+
+<p><code>attribute nsIURI resultPrincipalURI;</code></p>
+</div><h4 id='method.GetLoadReplace' class="method"><span id='GetLoadReplace.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadReplace' class='fnname'>GetLoadReplace</a>(&amp;self, aLoadReplace: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#459-461' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     *  This flag remembers whether channel has LOAD_REPLACE set.
+     */
+</code></pre>
+
+<p><code>attribute boolean loadReplace;</code></p>
+</div><h4 id='method.SetLoadReplace' class="method"><span id='SetLoadReplace.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLoadReplace' class='fnname'>SetLoadReplace</a>(&amp;self, aLoadReplace: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#473-475' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     *  This flag remembers whether channel has LOAD_REPLACE set.
+     */
+</code></pre>
+
+<p><code>attribute boolean loadReplace;</code></p>
+</div><h4 id='method.GetTitle' class="method"><span id='GetTitle.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTitle' class='fnname'>GetTitle</a>(&amp;self, aTitle: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#489-491' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * A readonly property that returns the title
+     * of the current entry.  The object returned
+     * is a encoded string
+     */
+</code></pre>
+
+<p><code>readonly attribute wstring title;</code></p>
+</div><h4 id='method.GetIsSubFrame' class="method"><span id='GetIsSubFrame.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsSubFrame' class='fnname'>GetIsSubFrame</a>(&amp;self, aIsSubFrame: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#509-511' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * A readonly property that returns a boolean
+     * flag which indicates if the entry was created as a
+     * result of a subframe navigation. This flag will be
+     * &#39;false&#39; when a frameset page is visited for
+     * the first time. This flag will be &#39;true&#39; for all
+     * history entries created as a result of a subframe
+     * navigation.
+     */
+</code></pre>
+
+<p><code>readonly attribute boolean isSubFrame;</code></p>
+</div><h4 id='method.SetURI' class="method"><span id='SetURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetURI' class='fnname'>SetURI</a>(&amp;self, aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#521-523' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** URI for the document */
+</code></pre>
+
+<p><code>void setURI (in nsIURI aURI);</code></p>
+</div><h4 id='method.GetReferrerURI' class="method"><span id='GetReferrerURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetReferrerURI' class='fnname'>GetReferrerURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReferrerURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#533-535' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Referrer URI */
+</code></pre>
+
+<p><code>attribute nsIURI referrerURI;</code></p>
+</div><h4 id='method.SetReferrerURI' class="method"><span id='SetReferrerURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetReferrerURI' class='fnname'>SetReferrerURI</a>(&amp;self, aReferrerURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#545-547' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Referrer URI */
+</code></pre>
+
+<p><code>attribute nsIURI referrerURI;</code></p>
+</div><h4 id='method.GetReferrerPolicy' class="method"><span id='GetReferrerPolicy.v' class='invisible'><code>pub unsafe fn <a href='#method.GetReferrerPolicy' class='fnname'>GetReferrerPolicy</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReferrerPolicy: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#559-561' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Referrer policy, holding one of the values (REFERRER_POLICY_*)
+     *  defined in nsIHttpChannel.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long referrerPolicy;</code></p>
+</div><h4 id='method.SetReferrerPolicy' class="method"><span id='SetReferrerPolicy.v' class='invisible'><code>pub unsafe fn <a href='#method.SetReferrerPolicy' class='fnname'>SetReferrerPolicy</a>(&amp;self, aReferrerPolicy: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#573-575' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Referrer policy, holding one of the values (REFERRER_POLICY_*)
+     *  defined in nsIHttpChannel.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long referrerPolicy;</code></p>
+</div><h4 id='method.GetContentViewer' class="method"><span id='GetContentViewer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentViewer' class='fnname'>GetContentViewer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentViewer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#585-587' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Content viewer, for fast restoration of presentation */
+</code></pre>
+
+<p><code>attribute nsIContentViewer contentViewer;</code></p>
+</div><h4 id='method.SetContentViewer' class="method"><span id='SetContentViewer.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentViewer' class='fnname'>SetContentViewer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentViewer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#597-599' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Content viewer, for fast restoration of presentation */
+</code></pre>
+
+<p><code>attribute nsIContentViewer contentViewer;</code></p>
+</div><h4 id='method.GetSticky' class="method"><span id='GetSticky.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSticky' class='fnname'>GetSticky</a>(&amp;self, aSticky: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#609-611' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Whether the content viewer is marked &quot;sticky&quot; */
+</code></pre>
+
+<p><code>attribute boolean sticky;</code></p>
+</div><h4 id='method.SetSticky' class="method"><span id='SetSticky.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSticky' class='fnname'>SetSticky</a>(&amp;self, aSticky: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#621-623' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Whether the content viewer is marked &quot;sticky&quot; */
+</code></pre>
+
+<p><code>attribute boolean sticky;</code></p>
+</div><h4 id='method.GetWindowState' class="method"><span id='GetWindowState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetWindowState' class='fnname'>GetWindowState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindowState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#633-635' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Saved state of the global window object */
+</code></pre>
+
+<p><code>attribute nsISupports windowState;</code></p>
+</div><h4 id='method.SetWindowState' class="method"><span id='SetWindowState.v' class='invisible'><code>pub unsafe fn <a href='#method.SetWindowState' class='fnname'>SetWindowState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindowState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#645-647' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Saved state of the global window object */
+</code></pre>
+
+<p><code>attribute nsISupports windowState;</code></p>
+</div><h4 id='method.AddChildShell' class="method"><span id='AddChildShell.v' class='invisible'><code>pub unsafe fn <a href='#method.AddChildShell' class='fnname'>AddChildShell</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;shell: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocShellTreeItem.html" title="struct xpcom::interfaces::nsIDocShellTreeItem">nsIDocShellTreeItem</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#678-680' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Saved child docshells corresponding to contentViewer.  The child shells
+     * are restored as children of the parent docshell, in this order, when the
+     * parent docshell restores a saved presentation.
+     */
+/** Append a child shell to the end of our list. */
+</code></pre>
+
+<p><code>void addChildShell (in nsIDocShellTreeItem shell);</code></p>
+</div><h4 id='method.ChildShellAt' class="method"><span id='ChildShellAt.v' class='invisible'><code>pub unsafe fn <a href='#method.ChildShellAt' class='fnname'>ChildShellAt</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;index: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocShellTreeItem.html" title="struct xpcom::interfaces::nsIDocShellTreeItem">nsIDocShellTreeItem</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#692-694' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the child shell at |index|; returns null if |index| is out of bounds.
+     */
+</code></pre>
+
+<p><code>nsIDocShellTreeItem childShellAt (in long index);</code></p>
+</div><h4 id='method.ClearChildShells' class="method"><span id='ClearChildShells.v' class='invisible'><code>pub unsafe fn <a href='#method.ClearChildShells' class='fnname'>ClearChildShells</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#706-708' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Clear the child shell list.
+     */
+</code></pre>
+
+<p><code>void clearChildShells ();</code></p>
+</div><h4 id='method.GetRefreshURIList' class="method"><span id='GetRefreshURIList.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRefreshURIList' class='fnname'>GetRefreshURIList</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRefreshURIList: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIMutableArray.html" title="struct xpcom::interfaces::nsIMutableArray">nsIMutableArray</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#718-720' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Saved refresh URI list for the content viewer */
+</code></pre>
+
+<p><code>attribute nsIMutableArray refreshURIList;</code></p>
+</div><h4 id='method.SetRefreshURIList' class="method"><span id='SetRefreshURIList.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRefreshURIList' class='fnname'>SetRefreshURIList</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRefreshURIList: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIMutableArray.html" title="struct xpcom::interfaces::nsIMutableArray">nsIMutableArray</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#730-732' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Saved refresh URI list for the content viewer */
+</code></pre>
+
+<p><code>attribute nsIMutableArray refreshURIList;</code></p>
+</div><h4 id='method.SyncPresentationState' class="method"><span id='SyncPresentationState.v' class='invisible'><code>pub unsafe fn <a href='#method.SyncPresentationState' class='fnname'>SyncPresentationState</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#748-750' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Ensure that the cached presentation members are self-consistent.
+     * If either |contentViewer| or |windowState| are null, then all of the
+     * following members are cleared/reset:
+     *  contentViewer, sticky, windowState, viewerBounds, childShells,
+     *  refreshURIList.
+     */
+</code></pre>
+
+<p><code>void syncPresentationState ();</code></p>
+</div><h4 id='method.SetTitle' class="method"><span id='SetTitle.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTitle' class='fnname'>SetTitle</a>(&amp;self, aTitle: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#760-762' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Title for the document */
+</code></pre>
+
+<p><code>void setTitle (in AString aTitle);</code></p>
+</div><h4 id='method.GetPostData' class="method"><span id='GetPostData.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPostData' class='fnname'>GetPostData</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPostData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#772-774' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Post Data for the document */
+</code></pre>
+
+<p><code>attribute nsIInputStream postData;</code></p>
+</div><h4 id='method.SetPostData' class="method"><span id='SetPostData.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPostData' class='fnname'>SetPostData</a>(&amp;self, aPostData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#784-786' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Post Data for the document */
+</code></pre>
+
+<p><code>attribute nsIInputStream postData;</code></p>
+</div><h4 id='method.GetLayoutHistoryState' class="method"><span id='GetLayoutHistoryState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLayoutHistoryState' class='fnname'>GetLayoutHistoryState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLayoutHistoryState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILayoutHistoryState.html" title="struct xpcom::interfaces::nsILayoutHistoryState">nsILayoutHistoryState</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#796-798' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** LayoutHistoryState for scroll position and form values */
+</code></pre>
+
+<p><code>attribute nsILayoutHistoryState layoutHistoryState;</code></p>
+</div><h4 id='method.SetLayoutHistoryState' class="method"><span id='SetLayoutHistoryState.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLayoutHistoryState' class='fnname'>SetLayoutHistoryState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLayoutHistoryState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILayoutHistoryState.html" title="struct xpcom::interfaces::nsILayoutHistoryState">nsILayoutHistoryState</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#808-810' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** LayoutHistoryState for scroll position and form values */
+</code></pre>
+
+<p><code>attribute nsILayoutHistoryState layoutHistoryState;</code></p>
+</div><h4 id='method.InitLayoutHistoryState' class="method"><span id='InitLayoutHistoryState.v' class='invisible'><code>pub unsafe fn <a href='#method.InitLayoutHistoryState' class='fnname'>InitLayoutHistoryState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILayoutHistoryState.html" title="struct xpcom::interfaces::nsILayoutHistoryState">nsILayoutHistoryState</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#823-825' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Initialises the LayoutHistoryState if it doesn&#39;t already exist
+     * and returns a reference to it.
+     */
+</code></pre>
+
+<p><code>nsILayoutHistoryState initLayoutHistoryState ();</code></p>
+</div><h4 id='method.GetParent' class="method"><span id='GetParent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetParent' class='fnname'>GetParent</a>(&amp;self, aParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#835-837' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** parent of this entry */
+</code></pre>
+
+<p><code>attribute nsISHEntry parent;</code></p>
+</div><h4 id='method.SetParent' class="method"><span id='SetParent.v' class='invisible'><code>pub unsafe fn <a href='#method.SetParent' class='fnname'>SetParent</a>(&amp;self, aParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#847-849' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** parent of this entry */
+</code></pre>
+
+<p><code>attribute nsISHEntry parent;</code></p>
+</div><h4 id='method.GetLoadType' class="method"><span id='GetLoadType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadType' class='fnname'>GetLoadType</a>(&amp;self, aLoadType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#862-864' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The loadType for this entry. This is typically loadHistory except
+     * when reload is pressed, it has the appropriate reload flag
+     */
+</code></pre>
+
+<p><code>attribute unsigned long loadType;</code></p>
+</div><h4 id='method.SetLoadType' class="method"><span id='SetLoadType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLoadType' class='fnname'>SetLoadType</a>(&amp;self, aLoadType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#877-879' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The loadType for this entry. This is typically loadHistory except
+     * when reload is pressed, it has the appropriate reload flag
+     */
+</code></pre>
+
+<p><code>attribute unsigned long loadType;</code></p>
+</div><h4 id='method.GetID' class="method"><span id='GetID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetID' class='fnname'>GetID</a>(&amp;self, aID: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#892-894' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * An ID to help identify this entry from others during
+     * subframe navigation
+     */
+</code></pre>
+
+<p><code>attribute unsigned long ID;</code></p>
+</div><h4 id='method.SetID' class="method"><span id='SetID.v' class='invisible'><code>pub unsafe fn <a href='#method.SetID' class='fnname'>SetID</a>(&amp;self, aID: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#907-909' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * An ID to help identify this entry from others during
+     * subframe navigation
+     */
+</code></pre>
+
+<p><code>attribute unsigned long ID;</code></p>
+</div><h4 id='method.GetCacheKey' class="method"><span id='GetCacheKey.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCacheKey' class='fnname'>GetCacheKey</a>(&amp;self, aCacheKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#919-921' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** attribute to set and get the cache key for the entry */
+</code></pre>
+
+<p><code>attribute nsISupports cacheKey;</code></p>
+</div><h4 id='method.SetCacheKey' class="method"><span id='SetCacheKey.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCacheKey' class='fnname'>SetCacheKey</a>(&amp;self, aCacheKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#931-933' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** attribute to set and get the cache key for the entry */
+</code></pre>
+
+<p><code>attribute nsISupports cacheKey;</code></p>
+</div><h4 id='method.GetSaveLayoutStateFlag' class="method"><span id='GetSaveLayoutStateFlag.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSaveLayoutStateFlag' class='fnname'>GetSaveLayoutStateFlag</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSaveLayoutStateFlag: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#943-945' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** attribute to indicate whether layoutHistoryState should be saved */
+</code></pre>
+
+<p><code>attribute boolean saveLayoutStateFlag;</code></p>
+</div><h4 id='method.SetSaveLayoutStateFlag' class="method"><span id='SetSaveLayoutStateFlag.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSaveLayoutStateFlag' class='fnname'>SetSaveLayoutStateFlag</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSaveLayoutStateFlag: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#955-957' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** attribute to indicate whether layoutHistoryState should be saved */
+</code></pre>
+
+<p><code>attribute boolean saveLayoutStateFlag;</code></p>
+</div><h4 id='method.GetExpirationStatus' class="method"><span id='GetExpirationStatus.v' class='invisible'><code>pub unsafe fn <a href='#method.GetExpirationStatus' class='fnname'>GetExpirationStatus</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExpirationStatus: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#967-969' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** attribute to indicate whether the page is already expired in cache */
+</code></pre>
+
+<p><code>attribute boolean expirationStatus;</code></p>
+</div><h4 id='method.SetExpirationStatus' class="method"><span id='SetExpirationStatus.v' class='invisible'><code>pub unsafe fn <a href='#method.SetExpirationStatus' class='fnname'>SetExpirationStatus</a>(&amp;self, aExpirationStatus: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#979-981' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** attribute to indicate whether the page is already expired in cache */
+</code></pre>
+
+<p><code>attribute boolean expirationStatus;</code></p>
+</div><h4 id='method.GetContentType' class="method"><span id='GetContentType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentType' class='fnname'>GetContentType</a>(&amp;self, aContentType: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#994-996' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * attribute to indicate the content-type of the document that this
+     * is a session history entry for
+     */
+</code></pre>
+
+<p><code>attribute ACString contentType;</code></p>
+</div><h4 id='method.SetContentType' class="method"><span id='SetContentType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentType' class='fnname'>SetContentType</a>(&amp;self, aContentType: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1009-1011' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * attribute to indicate the content-type of the document that this
+     * is a session history entry for
+     */
+</code></pre>
+
+<p><code>attribute ACString contentType;</code></p>
+</div><h4 id='method.GetURIWasModified' class="method"><span id='GetURIWasModified.v' class='invisible'><code>pub unsafe fn <a href='#method.GetURIWasModified' class='fnname'>GetURIWasModified</a>(&amp;self, aURIWasModified: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1031-1033' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * If we created this SHEntry via history.pushState or modified it via
+     * history.replaceState, and if we changed the SHEntry&#39;s URI via the
+     * push/replaceState call, and if the SHEntry&#39;s new URI differs from its
+     * old URI by more than just the hash, then we set this field to true.
+     *
+     * Additionally, if this SHEntry was created by calling pushState from a
+     * SHEntry whose URI was modified, this SHEntry&#39;s URIWasModified field is
+     * true.
+     *
+     */
+</code></pre>
+
+<p><code>attribute boolean URIWasModified;</code></p>
+</div><h4 id='method.SetURIWasModified' class="method"><span id='SetURIWasModified.v' class='invisible'><code>pub unsafe fn <a href='#method.SetURIWasModified' class='fnname'>SetURIWasModified</a>(&amp;self, aURIWasModified: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1053-1055' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * If we created this SHEntry via history.pushState or modified it via
+     * history.replaceState, and if we changed the SHEntry&#39;s URI via the
+     * push/replaceState call, and if the SHEntry&#39;s new URI differs from its
+     * old URI by more than just the hash, then we set this field to true.
+     *
+     * Additionally, if this SHEntry was created by calling pushState from a
+     * SHEntry whose URI was modified, this SHEntry&#39;s URIWasModified field is
+     * true.
+     *
+     */
+</code></pre>
+
+<p><code>attribute boolean URIWasModified;</code></p>
+</div><h4 id='method.SetScrollPosition' class="method"><span id='SetScrollPosition.v' class='invisible'><code>pub unsafe fn <a href='#method.SetScrollPosition' class='fnname'>SetScrollPosition</a>(&amp;self, x: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, y: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1065-1067' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Set/Get scrollers&#39; positon in anchored pages */
+</code></pre>
+
+<p><code>void setScrollPosition (in long x, in long y);</code></p>
+</div><h4 id='method.GetScrollPosition' class="method"><span id='GetScrollPosition.v' class='invisible'><code>pub unsafe fn <a href='#method.GetScrollPosition' class='fnname'>GetScrollPosition</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;x: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;y: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1073-1075' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void getScrollPosition (out long x, out long y);</code></p>
+</div><h4 id='method.Create' class="method"><span id='Create.v' class='invisible'><code>pub unsafe fn <a href='#method.Create' class='fnname'>Create</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;URI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;title: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;inputStream: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;layoutHistoryState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILayoutHistoryState.html" title="struct xpcom::interfaces::nsILayoutHistoryState">nsILayoutHistoryState</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;cacheKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;contentType: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;triggeringPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;principalToInherit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;docshellID: &amp;<a class="struct" href="../../xpcom/struct.nsID.html" title="struct xpcom::nsID">nsID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;dynamicCreation: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1085-1087' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Additional ways to create an entry */
+</code></pre>
+
+<p><code>[noscript] void create (in nsIURI URI, in AString title, in nsIInputStream inputStream, in nsILayoutHistoryState layoutHistoryState, in nsISupports cacheKey, in ACString contentType, in nsIPrincipal triggeringPrincipal, in nsIPrincipal principalToInherit, in nsIDRef docshellID, in boolean dynamicCreation);</code></p>
+</div><h4 id='method.Clone' class="method"><span id='Clone.v' class='invisible'><code>pub unsafe fn <a href='#method.Clone' class='fnname'>Clone</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1093-1095' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>nsISHEntry clone ();</code></p>
+</div><h4 id='method.SetIsSubFrame' class="method"><span id='SetIsSubFrame.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIsSubFrame' class='fnname'>SetIsSubFrame</a>(&amp;self, aFlag: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1105-1107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Attribute that indicates if this entry is for a subframe navigation */
+</code></pre>
+
+<p><code>void setIsSubFrame (in boolean aFlag);</code></p>
+</div><h4 id='method.GetAnyContentViewer' class="method"><span id='GetAnyContentViewer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAnyContentViewer' class='fnname'>GetAnyContentViewer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;ownerEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentViewer.html" title="struct xpcom::interfaces::nsIContentViewer">nsIContentViewer</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1119-1121' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Return any content viewer present in or below this node in the
+        nsSHEntry tree.  This will differ from contentViewer in the case
+        where a child nsSHEntry has the content viewer for this tree. */
+</code></pre>
+
+<p><code>nsIContentViewer getAnyContentViewer (out nsISHEntry ownerEntry);</code></p>
+</div><h4 id='method.GetTriggeringPrincipal' class="method"><span id='GetTriggeringPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTriggeringPrincipal' class='fnname'>GetTriggeringPrincipal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTriggeringPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1135-1137' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the principal, if any, that was associated with the channel
+     * that the document that was loaded to create this history entry
+     * came from.
+     */
+</code></pre>
+
+<p><code>attribute nsIPrincipal triggeringPrincipal;</code></p>
+</div><h4 id='method.SetTriggeringPrincipal' class="method"><span id='SetTriggeringPrincipal.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTriggeringPrincipal' class='fnname'>SetTriggeringPrincipal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTriggeringPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1151-1153' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the principal, if any, that was associated with the channel
+     * that the document that was loaded to create this history entry
+     * came from.
+     */
+</code></pre>
+
+<p><code>attribute nsIPrincipal triggeringPrincipal;</code></p>
+</div><h4 id='method.GetPrincipalToInherit' class="method"><span id='GetPrincipalToInherit.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPrincipalToInherit' class='fnname'>GetPrincipalToInherit</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrincipalToInherit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1166-1168' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the principal, if any, that is used when the inherit flag
+     * is set.
+     */
+</code></pre>
+
+<p><code>attribute nsIPrincipal principalToInherit;</code></p>
+</div><h4 id='method.SetPrincipalToInherit' class="method"><span id='SetPrincipalToInherit.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPrincipalToInherit' class='fnname'>SetPrincipalToInherit</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrincipalToInherit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1181-1183' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the principal, if any, that is used when the inherit flag
+     * is set.
+     */
+</code></pre>
+
+<p><code>attribute nsIPrincipal principalToInherit;</code></p>
+</div><h4 id='method.GetStateData' class="method"><span id='GetStateData.v' class='invisible'><code>pub unsafe fn <a href='#method.GetStateData' class='fnname'>GetStateData</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStateData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIStructuredCloneContainer.html" title="struct xpcom::interfaces::nsIStructuredCloneContainer">nsIStructuredCloneContainer</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1196-1198' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get/set data associated with this history state via a pushState() call,
+     * serialized using structured clone.
+     **/
+</code></pre>
+
+<p><code>attribute nsIStructuredCloneContainer stateData;</code></p>
+</div><h4 id='method.SetStateData' class="method"><span id='SetStateData.v' class='invisible'><code>pub unsafe fn <a href='#method.SetStateData' class='fnname'>SetStateData</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStateData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIStructuredCloneContainer.html" title="struct xpcom::interfaces::nsIStructuredCloneContainer">nsIStructuredCloneContainer</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1211-1213' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get/set data associated with this history state via a pushState() call,
+     * serialized using structured clone.
+     **/
+</code></pre>
+
+<p><code>attribute nsIStructuredCloneContainer stateData;</code></p>
+</div><h4 id='method.HasDetachedEditor' class="method"><span id='HasDetachedEditor.v' class='invisible'><code>pub unsafe fn <a href='#method.HasDetachedEditor' class='fnname'>HasDetachedEditor</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1247-1249' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Returns true if this shistory entry is storing a detached editor. */
+</code></pre>
+
+<p><code>[noscript,notxpcom] boolean hasDetachedEditor ();</code></p>
+</div><h4 id='method.IsDynamicallyAdded' class="method"><span id='IsDynamicallyAdded.v' class='invisible'><code>pub unsafe fn <a href='#method.IsDynamicallyAdded' class='fnname'>IsDynamicallyAdded</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1262-1264' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns true if the related docshell was added because of
+     * dynamic addition of an iframe/frame.
+     */
+</code></pre>
+
+<p><code>boolean isDynamicallyAdded ();</code></p>
+</div><h4 id='method.HasDynamicallyAddedChild' class="method"><span id='HasDynamicallyAddedChild.v' class='invisible'><code>pub unsafe fn <a href='#method.HasDynamicallyAddedChild' class='fnname'>HasDynamicallyAddedChild</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1277-1279' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns true if any of the child entries returns true
+     * when isDynamicallyAdded is called on it.
+     */
+</code></pre>
+
+<p><code>boolean hasDynamicallyAddedChild ();</code></p>
+</div><h4 id='method.GetDocshellID' class="method"><span id='GetDocshellID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDocshellID' class='fnname'>GetDocshellID</a>(&amp;self, aDocshellID: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="struct" href="../../xpcom/struct.nsID.html" title="struct xpcom::nsID">nsID</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1291-1293' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The history ID of the docshell.
+     */
+</code></pre>
+
+<p><code>attribute nsIDPtr docshellID;</code></p>
+</div><h4 id='method.SetDocshellID' class="method"><span id='SetDocshellID.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDocshellID' class='fnname'>SetDocshellID</a>(&amp;self, aDocshellID: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/struct.nsID.html" title="struct xpcom::nsID">nsID</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1305-1307' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The history ID of the docshell.
+     */
+</code></pre>
+
+<p><code>attribute nsIDPtr docshellID;</code></p>
+</div><h4 id='method.DocshellID' class="method"><span id='DocshellID.v' class='invisible'><code>pub unsafe fn <a href='#method.DocshellID' class='fnname'>DocshellID</a>(&amp;self) -&gt; <a class="struct" href="../../xpcom/struct.nsID.html" title="struct xpcom::nsID">nsID</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1319-1321' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Helper method for accessing this value from C++
+     */
+</code></pre>
+
+<p><code>[noscript,notxpcom] nsID DocshellID ();</code></p>
+</div><h4 id='method.GetBFCacheEntry' class="method"><span id='GetBFCacheEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBFCacheEntry' class='fnname'>GetBFCacheEntry</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBFCacheEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIBFCacheEntry.html" title="struct xpcom::interfaces::nsIBFCacheEntry">nsIBFCacheEntry</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1327-1329' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute nsIBFCacheEntry BFCacheEntry;</code></p>
+</div><h4 id='method.HasBFCacheEntry' class="method"><span id='HasBFCacheEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.HasBFCacheEntry' class='fnname'>HasBFCacheEntry</a>(&amp;self, aEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIBFCacheEntry.html" title="struct xpcom::interfaces::nsIBFCacheEntry">nsIBFCacheEntry</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1343-1345' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Does this SHEntry point to the given BFCache entry?  If so, evicting
+     * the BFCache entry will evict the SHEntry, since the two entries
+     * correspond to the same document.
+     */
+</code></pre>
+
+<p><code>[noscript,notxpcom] boolean hasBFCacheEntry (in nsIBFCacheEntry aEntry);</code></p>
+</div><h4 id='method.AdoptBFCacheEntry' class="method"><span id='AdoptBFCacheEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.AdoptBFCacheEntry' class='fnname'>AdoptBFCacheEntry</a>(&amp;self, aEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1358-1360' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Adopt aEntry&#39;s BFCacheEntry, so now both this and aEntry point to
+     * aEntry&#39;s BFCacheEntry.
+     */
+</code></pre>
+
+<p><code>void adoptBFCacheEntry (in nsISHEntry aEntry);</code></p>
+</div><h4 id='method.AbandonBFCacheEntry' class="method"><span id='AbandonBFCacheEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.AbandonBFCacheEntry' class='fnname'>AbandonBFCacheEntry</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1373-1375' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Create a new BFCache entry and drop our reference to our old one.  This
+     * call unlinks this SHEntry from any other SHEntries for its document.
+     */
+</code></pre>
+
+<p><code>void abandonBFCacheEntry ();</code></p>
+</div><h4 id='method.SharesDocumentWith' class="method"><span id='SharesDocumentWith.v' class='invisible'><code>pub unsafe fn <a href='#method.SharesDocumentWith' class='fnname'>SharesDocumentWith</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1390-1392' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Does this SHEntry correspond to the same document as aEntry?  This is
+     * true iff the two SHEntries have the same BFCacheEntry.  So in
+     * particular, sharesDocumentWith(aEntry) is guaranteed to return true if
+     * it&#39;s preceeded by a call to adoptBFCacheEntry(aEntry).
+     */
+</code></pre>
+
+<p><code>boolean sharesDocumentWith (in nsISHEntry aEntry);</code></p>
+</div><h4 id='method.GetIsSrcdocEntry' class="method"><span id='GetIsSrcdocEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsSrcdocEntry' class='fnname'>GetIsSrcdocEntry</a>(&amp;self, aIsSrcdocEntry: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1405-1407' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * True if this SHEntry corresponds to a document created by a srcdoc iframe.
+     * Set when a value is assigned to  srcdocData.
+     */
+</code></pre>
+
+<p><code>readonly attribute boolean isSrcdocEntry;</code></p>
+</div><h4 id='method.GetSrcdocData' class="method"><span id='GetSrcdocData.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSrcdocData' class='fnname'>GetSrcdocData</a>(&amp;self, aSrcdocData: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1422-1424' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Contents of the srcdoc attribute in a srcdoc iframe to be loaded instead
+     * of the URI.  Similar to a Data URI, this information is needed to
+     * recreate the document at a later stage.
+     * Setting this sets isSrcdocEntry to true
+     */
+</code></pre>
+
+<p><code>attribute AString srcdocData;</code></p>
+</div><h4 id='method.SetSrcdocData' class="method"><span id='SetSrcdocData.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSrcdocData' class='fnname'>SetSrcdocData</a>(&amp;self, aSrcdocData: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1439-1441' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Contents of the srcdoc attribute in a srcdoc iframe to be loaded instead
+     * of the URI.  Similar to a Data URI, this information is needed to
+     * recreate the document at a later stage.
+     * Setting this sets isSrcdocEntry to true
+     */
+</code></pre>
+
+<p><code>attribute AString srcdocData;</code></p>
+</div><h4 id='method.GetBaseURI' class="method"><span id='GetBaseURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBaseURI' class='fnname'>GetBaseURI</a>(&amp;self, aBaseURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1455-1457' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * When isSrcdocEntry is true, this contains the baseURI of the srcdoc
+     * document for use in situations where it cannot otherwise be determined,
+     * for example with view-source.
+     */
+</code></pre>
+
+<p><code>attribute nsIURI baseURI;</code></p>
+</div><h4 id='method.SetBaseURI' class="method"><span id='SetBaseURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetBaseURI' class='fnname'>SetBaseURI</a>(&amp;self, aBaseURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1471-1473' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * When isSrcdocEntry is true, this contains the baseURI of the srcdoc
+     * document for use in situations where it cannot otherwise be determined,
+     * for example with view-source.
+     */
+</code></pre>
+
+<p><code>attribute nsIURI baseURI;</code></p>
+</div><h4 id='method.GetScrollRestorationIsManual' class="method"><span id='GetScrollRestorationIsManual.v' class='invisible'><code>pub unsafe fn <a href='#method.GetScrollRestorationIsManual' class='fnname'>GetScrollRestorationIsManual</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aScrollRestorationIsManual: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1486-1488' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Sets/gets the current scroll restoration state,
+     * if true == &quot;manual&quot;, false == &quot;auto&quot;.
+     */
+</code></pre>
+
+<p><code>attribute boolean scrollRestorationIsManual;</code></p>
+</div><h4 id='method.SetScrollRestorationIsManual' class="method"><span id='SetScrollRestorationIsManual.v' class='invisible'><code>pub unsafe fn <a href='#method.SetScrollRestorationIsManual' class='fnname'>SetScrollRestorationIsManual</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aScrollRestorationIsManual: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1501-1503' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Sets/gets the current scroll restoration state,
+     * if true == &quot;manual&quot;, false == &quot;auto&quot;.
+     */
+</code></pre>
+
+<p><code>attribute boolean scrollRestorationIsManual;</code></p>
+</div><h4 id='method.GetLoadedInThisProcess' class="method"><span id='GetLoadedInThisProcess.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadedInThisProcess' class='fnname'>GetLoadedInThisProcess</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLoadedInThisProcess: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1516-1518' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Flag to indicate that the history entry was originally loaded in the
+     * current process. This flag does not survive a browser process switch.
+     */
+</code></pre>
+
+<p><code>readonly attribute boolean loadedInThisProcess;</code></p>
+</div><h4 id='method.GetSHistory' class="method"><span id='GetSHistory.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSHistory' class='fnname'>GetSHistory</a>(&amp;self, aSHistory: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHistory.html" title="struct xpcom::interfaces::nsISHistory">nsISHistory</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1532-1534' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The session history it belongs to. It&#39;s usually only set on root entries.
+     * SHEntry is strictly bound to the SHistory it belongs to; it should not be
+     * changed once set to a non-null value.
+     */
+</code></pre>
+
+<p><code>[noscript] attribute nsISHistory SHistory;</code></p>
+</div><h4 id='method.SetSHistory' class="method"><span id='SetSHistory.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSHistory' class='fnname'>SetSHistory</a>(&amp;self, aSHistory: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISHistory.html" title="struct xpcom::interfaces::nsISHistory">nsISHistory</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#1548-1550' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The session history it belongs to. It&#39;s usually only set on root entries.
+     * SHEntry is strictly bound to the SHistory it belongs to; it should not be
+     * changed once set to a non-null value.
+     */
+</code></pre>
+
+<p><code>[noscript] attribute nsISHistory SHistory;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">229451448</span>, <span class="number">41561</span>, <span class="number">17095</span>, [<span class="number">147</span>, <span class="number">241</span>, <span class="number">47</span>, <span class="number">167</span>, <span class="number">252</span>, <span class="number">7</span>, <span class="number">110</span>, <span class="number">69</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISHEntry.html" title="struct xpcom::interfaces::nsISHEntry">nsISHEntry</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISHEntry.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

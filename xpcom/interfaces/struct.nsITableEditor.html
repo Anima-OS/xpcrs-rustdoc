@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsITableEditor` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsITableEditor">
+
+    <title>xpcom::interfaces::nsITableEditor - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsITableEditor</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.InsertTableCell">InsertTableCell</a><a href="#method.InsertTableColumn">InsertTableColumn</a><a href="#method.InsertTableRow">InsertTableRow</a><a href="#method.DeleteTable">DeleteTable</a><a href="#method.DeleteTableCellContents">DeleteTableCellContents</a><a href="#method.DeleteTableCell">DeleteTableCell</a><a href="#method.DeleteTableColumn">DeleteTableColumn</a><a href="#method.DeleteTableRow">DeleteTableRow</a><a href="#method.SelectTableCell">SelectTableCell</a><a href="#method.SelectBlockOfCells">SelectBlockOfCells</a><a href="#method.SelectTableRow">SelectTableRow</a><a href="#method.SelectTableColumn">SelectTableColumn</a><a href="#method.SelectTable">SelectTable</a><a href="#method.SelectAllTableCells">SelectAllTableCells</a><a href="#method.SwitchTableCellHeaderType">SwitchTableCellHeaderType</a><a href="#method.JoinTableCells">JoinTableCells</a><a href="#method.SplitTableCell">SplitTableCell</a><a href="#method.NormalizeTable">NormalizeTable</a><a href="#method.GetCellIndexes">GetCellIndexes</a><a href="#method.GetTableSize">GetTableSize</a><a href="#method.GetCellAt">GetCellAt</a><a href="#method.GetCellDataAt">GetCellDataAt</a><a href="#method.GetFirstRow">GetFirstRow</a><a href="#method.GetNextRow">GetNextRow</a><a href="#method.GetSelectedOrParentTableElement">GetSelectedOrParentTableElement</a><a href="#method.GetSelectedCellsType">GetSelectedCellsType</a><a href="#method.GetFirstSelectedCell">GetFirstSelectedCell</a><a href="#method.GetFirstSelectedCellInTable">GetFirstSelectedCellInTable</a><a href="#method.GetNextSelectedCell">GetNextSelectedCell</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsITableEditor', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsITableEditor</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsITableEditor { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsITableEditor : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsITableEditor.html" title="struct xpcom::interfaces::nsITableEditor">nsITableEditor</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsITableEditorCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsITableEditor</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsITableEditor.html" title="struct xpcom::interfaces::nsITableEditor">nsITableEditor</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#198-735' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.eNoSearch' class="associatedconstant"><span id='eNoSearch.v' class='invisible'><code>pub const <a href='#associatedconstant.eNoSearch' class="constant"><b>eNoSearch</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eNoSearch</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.ePreviousColumn' class="associatedconstant"><span id='ePreviousColumn.v' class='invisible'><code>pub const <a href='#associatedconstant.ePreviousColumn' class="constant"><b>ePreviousColumn</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ePreviousColumn</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.ePreviousRow' class="associatedconstant"><span id='ePreviousRow.v' class='invisible'><code>pub const <a href='#associatedconstant.ePreviousRow' class="constant"><b>ePreviousRow</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ePreviousRow</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.InsertTableCell' class="method"><span id='InsertTableCell.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertTableCell' class='fnname'>InsertTableCell</a>(&amp;self, aNumber: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, aAfter: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#224-226' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Insert table methods
+    * Insert relative to the selected cell or the
+    *  cell enclosing the selection anchor
+    * The selection is collapsed and is left in the new cell
+    *  at the same row,col location as the original anchor cell
+    *
+    * @param aNumber    Number of items to insert
+    * @param aAfter     If TRUE, insert after the current cell,
+    *                     else insert before current cell
+    */
+</code></pre>
+
+<p><code>void insertTableCell (in long aNumber, in boolean aAfter);</code></p>
+</div><h4 id='method.InsertTableColumn' class="method"><span id='InsertTableColumn.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertTableColumn' class='fnname'>InsertTableColumn</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNumber: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAfter: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#232-234' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void insertTableColumn (in long aNumber, in boolean aAfter);</code></p>
+</div><h4 id='method.InsertTableRow' class="method"><span id='InsertTableRow.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertTableRow' class='fnname'>InsertTableRow</a>(&amp;self, aNumber: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, aAfter: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#240-242' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void insertTableRow (in long aNumber, in boolean aAfter);</code></p>
+</div><h4 id='method.DeleteTable' class="method"><span id='DeleteTable.v' class='invisible'><code>pub unsafe fn <a href='#method.DeleteTable' class='fnname'>DeleteTable</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#261-263' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Delete table methods
+    * Delete starting at the selected cell or the
+    *  cell (or table) enclosing the selection anchor
+    * The selection is collapsed and is left in the
+    *  cell at the same row,col location as
+    *  the previous selection anchor, if possible,
+    *  else in the closest neigboring cell
+    *
+    * @param aNumber    Number of items to insert/delete
+    */
+</code></pre>
+
+<p><code>void deleteTable ();</code></p>
+</div><h4 id='method.DeleteTableCellContents' class="method"><span id='DeleteTableCellContents.v' class='invisible'><code>pub unsafe fn <a href='#method.DeleteTableCellContents' class='fnname'>DeleteTableCellContents</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#276-278' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Delete just the cell contents
+    * This is what should happen when Delete key is used
+    *   for selected cells, to minimize upsetting the table layout
+    */
+</code></pre>
+
+<p><code>void deleteTableCellContents ();</code></p>
+</div><h4 id='method.DeleteTableCell' class="method"><span id='DeleteTableCell.v' class='invisible'><code>pub unsafe fn <a href='#method.DeleteTableCell' class='fnname'>DeleteTableCell</a>(&amp;self, aNumber: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#296-298' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Delete cell elements as well as contents
+    * @param aNumber   Number of contiguous cells, rows, or columns
+    *
+    * When there are more than 1 selected cells, aNumber is ignored.
+    * For Delete Rows or Columns, the complete columns or rows are
+    *  determined by the selected cells. E.g., to delete 2 complete rows,
+    *  user simply selects a cell in each, and they don&#39;t
+    *  have to be contiguous.
+    */
+</code></pre>
+
+<p><code>void deleteTableCell (in long aNumber);</code></p>
+</div><h4 id='method.DeleteTableColumn' class="method"><span id='DeleteTableColumn.v' class='invisible'><code>pub unsafe fn <a href='#method.DeleteTableColumn' class='fnname'>DeleteTableColumn</a>(&amp;self, aNumber: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#304-306' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void deleteTableColumn (in long aNumber);</code></p>
+</div><h4 id='method.DeleteTableRow' class="method"><span id='DeleteTableRow.v' class='invisible'><code>pub unsafe fn <a href='#method.DeleteTableRow' class='fnname'>DeleteTableRow</a>(&amp;self, aNumber: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#312-314' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void deleteTableRow (in long aNumber);</code></p>
+</div><h4 id='method.SelectTableCell' class="method"><span id='SelectTableCell.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectTableCell' class='fnname'>SelectTableCell</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#327-329' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Table Selection methods
+    * Selecting a row or column actually
+    * selects all cells (not TR in the case of rows)
+    */
+</code></pre>
+
+<p><code>void selectTableCell ();</code></p>
+</div><h4 id='method.SelectBlockOfCells' class="method"><span id='SelectBlockOfCells.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectBlockOfCells' class='fnname'>SelectBlockOfCells</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStartCell: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEndCell: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#346-348' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Select a rectangular block of cells:
+    *  all cells falling within the row/column index of aStartCell
+    *  to through the row/column index of the aEndCell
+    *  aStartCell can be any location relative to aEndCell,
+    *   as long as they are in the same table
+    *  @param aStartCell  starting cell in block
+    *  @param aEndCell    ending cell in block
+    */
+</code></pre>
+
+<p><code>void selectBlockOfCells (in nsIDOMElement aStartCell, in nsIDOMElement aEndCell);</code></p>
+</div><h4 id='method.SelectTableRow' class="method"><span id='SelectTableRow.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectTableRow' class='fnname'>SelectTableRow</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#354-356' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void selectTableRow ();</code></p>
+</div><h4 id='method.SelectTableColumn' class="method"><span id='SelectTableColumn.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectTableColumn' class='fnname'>SelectTableColumn</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#362-364' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void selectTableColumn ();</code></p>
+</div><h4 id='method.SelectTable' class="method"><span id='SelectTable.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectTable' class='fnname'>SelectTable</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#370-372' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void selectTable ();</code></p>
+</div><h4 id='method.SelectAllTableCells' class="method"><span id='SelectAllTableCells.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectAllTableCells' class='fnname'>SelectAllTableCells</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#378-380' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void selectAllTableCells ();</code></p>
+</div><h4 id='method.SwitchTableCellHeaderType' class="method"><span id='SwitchTableCellHeaderType.v' class='invisible'><code>pub unsafe fn <a href='#method.SwitchTableCellHeaderType' class='fnname'>SwitchTableCellHeaderType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSourceCell: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#397-399' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Create a new TD or TH element, the opposite type of the supplied aSourceCell
+    *   1. Copy all attributes from aSourceCell to the new cell
+    *   2. Move all contents of aSourceCell to the new cell
+    *   3. Replace aSourceCell in the table with the new cell
+    *
+    *  @param aSourceCell   The cell to be replaced
+    *  @return              The new cell that replaces aSourceCell
+    */
+</code></pre>
+
+<p><code>nsIDOMElement switchTableCellHeaderType (in nsIDOMElement aSourceCell);</code></p>
+</div><h4 id='method.JoinTableCells' class="method"><span id='JoinTableCells.v' class='invisible'><code>pub unsafe fn <a href='#method.JoinTableCells' class='fnname'>JoinTableCells</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMergeNonContiguousContents: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#428-430' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Merges contents of all selected cells
+    * for selected cells that are adjacent,
+    * this will result in a larger cell with appropriate
+    * rowspan and colspan, and original cells are deleted
+    * The resulting cell is in the location of the
+    *   cell at the upper-left corner of the adjacent
+    *   block of selected cells
+    *
+    * @param aMergeNonContiguousContents:
+    *       If true:
+    *         Non-contiguous cells are not deleted,
+    *         but their contents are still moved
+    *         to the upper-left cell
+    *       If false: contiguous cells are ignored
+    *
+    * If there are no selected cells,
+    *   and selection or caret is in a cell,
+    *   that cell and the one to the right
+    *   are merged
+    */
+</code></pre>
+
+<p><code>void joinTableCells (in boolean aMergeNonContiguousContents);</code></p>
+</div><h4 id='method.SplitTableCell' class="method"><span id='SplitTableCell.v' class='invisible'><code>pub unsafe fn <a href='#method.SplitTableCell' class='fnname'>SplitTableCell</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#445-447' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Split a cell that has rowspan and/or colspan &gt; 0
+    *   into cells such that all new cells have
+    *   rowspan = 1 and colspan = 1
+    *  All of the contents are not touched --
+    *   they will appear to be in the upper-left cell
+    */
+</code></pre>
+
+<p><code>void splitTableCell ();</code></p>
+</div><h4 id='method.NormalizeTable' class="method"><span id='NormalizeTable.v' class='invisible'><code>pub unsafe fn <a href='#method.NormalizeTable' class='fnname'>NormalizeTable</a>(&amp;self, aTable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#466-468' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Scan through all rows and add cells as needed so
+    *   all locations in the cellmap are occupied.
+    *   Used after inserting single cells or pasting
+    *   a collection of cells that extend past the
+    *   previous size of the table
+    * If aTable is null, it uses table enclosing the selection anchor
+    * This doesn&#39;t doesn&#39;t change the selection,
+    *   thus it can be used to fixup all tables
+    *   in a page independent of the selection
+    */
+</code></pre>
+
+<p><code>void normalizeTable (in nsIDOMElement aTable);</code></p>
+</div><h4 id='method.GetCellIndexes' class="method"><span id='GetCellIndexes.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCellIndexes' class='fnname'>GetCellIndexes</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCell: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRowIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aColIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#481-483' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Get the row an column index from the layout&#39;s cellmap
+    * If aCell is null, it will try to find enclosing table of selection anchor
+    *
+    */
+</code></pre>
+
+<p><code>void getCellIndexes (in nsIDOMElement aCell, out long aRowIndex, out long aColIndex);</code></p>
+</div><h4 id='method.GetTableSize' class="method"><span id='GetTableSize.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTableSize' class='fnname'>GetTableSize</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRowCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aColCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#497-499' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Get the number of rows and columns in a table from the layout&#39;s cellmap
+    * If aTable is null, it will try to find enclosing table of selection ancho
+    * Note that all rows in table will not have this many because of
+    * ROWSPAN effects or if table is not &quot;rectangular&quot; (has short rows)
+    */
+</code></pre>
+
+<p><code>void getTableSize (in nsIDOMElement aTable, out long aRowCount, out long aColCount);</code></p>
+</div><h4 id='method.GetCellAt' class="method"><span id='GetCellAt.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCellAt' class='fnname'>GetCellAt</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRowIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aColIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#522-524' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Get a cell element at cellmap grid coordinates
+    * A cell that spans across multiple cellmap locations will
+    *   be returned multiple times, once for each location it occupies
+    *
+    * @param aTable                   A table in the document
+    * @param aRowIndex, aColIndex     The 0-based cellmap indexes
+    *
+    * (in C++ returns: NS_EDITOR_ELEMENT_NOT_FOUND if an element is not found
+    *  passes NS_SUCCEEDED macro)
+    *
+    *   You can scan for all cells in a row or column
+    *   by iterating through the appropriate indexes
+    *   until the returned aCell is null
+    */
+</code></pre>
+
+<p><code>nsIDOMElement getCellAt (in nsIDOMElement aTable, in long aRowIndex, in long aColIndex);</code></p>
+</div><h4 id='method.GetCellDataAt' class="method"><span id='GetCellDataAt.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCellDataAt' class='fnname'>GetCellDataAt</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRowIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aColIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCell: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStartRowIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStartColIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRowSpan: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aColSpan: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aActualRowSpan: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aActualColSpan: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsSelected: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#558-560' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Get a cell at cellmap grid coordinates and associated data
+    * A cell that spans across multiple cellmap locations will
+    *   be returned multiple times, once for each location it occupies
+    * Examine the returned aStartRowIndex and aStartColIndex to see
+    *   if it is in the same layout column or layout row:
+    *   A &quot;layout row&quot; is all cells sharing the same top edge
+    *   A &quot;layout column&quot; is all cells sharing the same left edge
+    *   This is important to determine what to do when inserting or deleting a column or row
+    *
+    *  @param aTable                   A table in the document
+    *  @param aRowIndex, aColIndex     The 0-based cellmap indexes
+    * returns values:
+    *  @param aCell                    The cell at this cellmap location
+    *  @param aStartRowIndex           The row index where cell starts
+    *  @param aStartColIndex           The col index where cell starts
+    *  @param aRowSpan                 May be 0 (to span down entire table) or number of cells spanned
+    *  @param aColSpan                 May be 0 (to span across entire table) or number of cells spanned
+    *  @param aActualRowSpan           The actual number of cellmap locations (rows) spanned by the cell
+    *  @param aActualColSpan           The actual number of cellmap locations (columns) spanned by the cell
+    *  @param aIsSelected
+    *  @param
+    *
+    * (in C++ returns: NS_EDITOR_ELEMENT_NOT_FOUND if an element is not found
+    *  passes NS_SUCCEEDED macro)
+    */
+</code></pre>
+
+<p><code>void getCellDataAt (in nsIDOMElement aTable, in long aRowIndex, in long aColIndex, out nsIDOMElement aCell, out long aStartRowIndex, out long aStartColIndex, out long aRowSpan, out long aColSpan, out long aActualRowSpan, out long aActualColSpan, out boolean aIsSelected);</code></p>
+</div><h4 id='method.GetFirstRow' class="method"><span id='GetFirstRow.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFirstRow' class='fnname'>GetFirstRow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTableElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#576-578' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Get the first row element in a table
+    *
+    * @return            The row at the requested index
+    *                    Returns null if there are no rows in table
+    * (in C++ returns: NS_EDITOR_ELEMENT_NOT_FOUND if an element is not found
+    *  passes NS_SUCCEEDED macro)
+    */
+</code></pre>
+
+<p><code>nsIDOMNode getFirstRow (in nsIDOMElement aTableElement);</code></p>
+</div><h4 id='method.GetNextRow' class="method"><span id='GetNextRow.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNextRow' class='fnname'>GetNextRow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTableElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#597-599' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Get the next row element starting the search from aTableElement
+    *
+    * @param aTableElement Any TR or child-of-TR element in the document
+    *
+    * @return            The row to start search from
+    *                    and the row returned from the search
+    *                    Returns null if there isn&#39;t another row
+    * (in C++ returns: NS_EDITOR_ELEMENT_NOT_FOUND if an element is not found
+    *  passes NS_SUCCEEDED macro)
+    */
+</code></pre>
+
+<p><code>nsIDOMNode getNextRow (in nsIDOMNode aTableElement);</code></p>
+</div><h4 id='method.GetSelectedOrParentTableElement' class="method"><span id='GetSelectedOrParentTableElement.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelectedOrParentTableElement' class='fnname'>GetSelectedOrParentTableElement</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTagName: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#627-629' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Preferred direction to search for neighboring cell
+    * when trying to locate a cell to place caret in after
+    * a table editing action.
+    * Used for aDirection param in SetSelectionAfterTableEdit
+    */
+/** Examine the current selection and find
+    *   a selected TABLE, TD or TH, or TR element.
+    *   or return the parent TD or TH if selection is inside a table cell
+    *   Returns null if no table element is found.
+    *
+    * @param aTagName         The tagname of returned element
+    *                         Note that &quot;td&quot; will be returned if name
+    *                         is actually &quot;th&quot;
+    * @param aCount           How many table elements were selected
+    *                         This tells us if we have multiple cells selected
+    *                           (0 if element is a parent cell of selection)
+    * @return                 The table element (table, row, or first selected cell)
+    *
+    */
+</code></pre>
+
+<p><code>nsIDOMElement getSelectedOrParentTableElement (out AString aTagName, out long aCount);</code></p>
+</div><h4 id='method.GetSelectedCellsType' class="method"><span id='GetSelectedCellsType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelectedCellsType' class='fnname'>GetSelectedCellsType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#658-660' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Generally used after GetSelectedOrParentTableElement
+    *   to test if selected cells are complete rows or columns
+    *
+    * @param aElement           Any table or cell element or any element
+    *                           inside a table
+    *                           Used to get enclosing table.
+    *                           If null, selection&#39;s anchorNode is used
+    *
+    * @return
+    *     0                        aCellElement was not a cell
+    *                              (returned result = NS_ERROR_FAILURE)
+    *     TABLESELECTION_CELL      There are 1 or more cells selected but
+    *                              complete rows or columns are not selected
+    *     TABLESELECTION_ROW       All cells are in 1 or more rows
+    *                              and in each row, all cells selected
+    *                              Note: This is the value if all rows
+    *                              (thus all cells) are selected
+    *     TABLESELECTION_COLUMN    All cells are in 1 or more columns
+    *                              and in each column, all cells are selected
+    */
+</code></pre>
+
+<p><code>uint32_t getSelectedCellsType (in nsIDOMElement aElement);</code></p>
+</div><h4 id='method.GetFirstSelectedCell' class="method"><span id='GetFirstSelectedCell.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFirstSelectedCell' class='fnname'>GetFirstSelectedCell</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRange: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMRange.html" title="struct xpcom::interfaces::nsIDOMRange">nsIDOMRange</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#681-683' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Get first selected element from first selection range.
+    *   (If multiple cells were selected this is the first in the order they were selected)
+    * Assumes cell-selection model where each cell
+    * is in a separate range (selection parent node is table row)
+    * @param aCell     [OUT] Selected cell or null if ranges don&#39;t contain
+    *                  cell selections
+    * @param aRange    [OUT] Optional: if not null, return the selection range
+    *                     associated with the cell
+    * Returns the DOM cell element
+    *   (in C++: returns NS_EDITOR_ELEMENT_NOT_FOUND if an element is not found
+    *    passes NS_SUCCEEDED macro)
+    */
+</code></pre>
+
+<p><code>nsIDOMElement getFirstSelectedCell (out nsIDOMRange aRange);</code></p>
+</div><h4 id='method.GetFirstSelectedCellInTable' class="method"><span id='GetFirstSelectedCellInTable.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFirstSelectedCellInTable' class='fnname'>GetFirstSelectedCellInTable</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRowIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aColIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#706-708' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Get first selected element in the table
+    *   This is the upper-left-most selected cell in table,
+    *   ignoring the order that the user selected them (order in the selection ranges)
+    * Assumes cell-selection model where each cell
+    * is in a separate range (selection parent node is table row)
+    * @param aCell       Selected cell or null if ranges don&#39;t contain
+    *                    cell selections
+    * @param aRowIndex   Optional: if not null, return row index of 1st cell
+    * @param aColIndex   Optional: if not null, return column index of 1st cell
+    *
+    * Returns the DOM cell element
+    *   (in C++: returns NS_EDITOR_ELEMENT_NOT_FOUND if an element is not found
+    *    passes NS_SUCCEEDED macro)
+    */
+</code></pre>
+
+<p><code>nsIDOMElement getFirstSelectedCellInTable (out long aRowIndex, out long aColIndex);</code></p>
+</div><h4 id='method.GetNextSelectedCell' class="method"><span id='GetNextSelectedCell.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNextSelectedCell' class='fnname'>GetNextSelectedCell</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRange: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMRange.html" title="struct xpcom::interfaces::nsIDOMRange">nsIDOMRange</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#730-732' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Get next selected cell element from first selection range.
+    * Assumes cell-selection model where each cell
+    * is in a separate range (selection parent node is table row)
+    * Always call GetFirstSelectedCell() to initialize stored index of &quot;next&quot; cell
+    * @param aCell     Selected cell or null if no more selected cells
+    *                     or ranges don&#39;t contain cell selections
+    * @param aRange    Optional: if not null, return the selection range
+    *                     associated with the cell
+    *
+    * Returns the DOM cell element
+    *   (in C++: returns NS_EDITOR_ELEMENT_NOT_FOUND if an element is not found
+    *    passes NS_SUCCEEDED macro)
+    */
+</code></pre>
+
+<p><code>nsIDOMElement getNextSelectedCell (out nsIDOMRange aRange);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITableEditor.html" title="struct xpcom::interfaces::nsITableEditor">nsITableEditor</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1208346244</span>, <span class="number">18873</span>, <span class="number">4563</span>, [<span class="number">156</span>, <span class="number">228</span>, <span class="number">237</span>, <span class="number">96</span>, <span class="number">189</span>, <span class="number">108</span>, <span class="number">181</span>, <span class="number">188</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITableEditor.html" title="struct xpcom::interfaces::nsITableEditor">nsITableEditor</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITableEditor.html" title="struct xpcom::interfaces::nsITableEditor">nsITableEditor</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITableEditor.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `mozIAsyncFavicons` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, mozIAsyncFavicons">
+
+    <title>xpcom::interfaces::mozIAsyncFavicons - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct mozIAsyncFavicons</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.SetAndFetchFaviconForPage">SetAndFetchFaviconForPage</a><a href="#method.ReplaceFaviconData">ReplaceFaviconData</a><a href="#method.ReplaceFaviconDataFromDataURL">ReplaceFaviconDataFromDataURL</a><a href="#method.GetFaviconURLForPage">GetFaviconURLForPage</a><a href="#method.GetFaviconDataForPage">GetFaviconDataForPage</a><a href="#method.CopyFavicons">CopyFavicons</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'mozIAsyncFavicons', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>mozIAsyncFavicons</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct mozIAsyncFavicons { /* fields omitted */ }</pre><div class='docblock'><p><code>interface mozIAsyncFavicons : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.mozIAsyncFavicons.html" title="struct xpcom::interfaces::mozIAsyncFavicons">mozIAsyncFavicons</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;mozIAsyncFaviconsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>mozIAsyncFavicons</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.mozIAsyncFavicons.html" title="struct xpcom::interfaces::mozIAsyncFavicons">mozIAsyncFavicons</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#129-360' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.SetAndFetchFaviconForPage' class="method"><span id='SetAndFetchFaviconForPage.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAndFetchFaviconForPage' class='fnname'>SetAndFetchFaviconForPage</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPageURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFaviconURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aForceReload: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFaviconLoadType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFaviconDataCallback.html" title="struct xpcom::interfaces::nsIFaviconDataCallback">nsIFaviconDataCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLoadingPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestContextID: <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIPlacesPendingOperation.html" title="struct xpcom::interfaces::mozIPlacesPendingOperation">mozIPlacesPendingOperation</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#183-185' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Declares that a given page uses a favicon with the given URI and
+   * attempts to fetch and save the icon data by loading the favicon URI
+   * through an async network request.
+   *
+   * If the icon data already exists, we won&#39;t try to reload the icon unless
+   * aForceReload is true.  Similarly, if the icon is in the failed favicon
+   * cache we won&#39;t do anything unless aForceReload is true, in which case
+   * we&#39;ll try to reload the favicon.
+   *
+   * This function will only save favicons for pages that are already stored in
+   * the database, like visited pages or bookmarks.  For any other URIs, it
+   * will succeed but do nothing.  This function will also ignore the error
+   * page favicon URI (see FAVICON_ERRORPAGE_URL below).
+   *
+   * Icons that fail to load will automatically be added to the failed favicon
+   * cache, and this function will not save favicons for non-bookmarked URIs
+   * when history is disabled.
+   *
+   * @note This function is identical to
+   *       nsIFaviconService::setAndLoadFaviconForPage.
+   *
+   * @param aPageURI
+   *        URI of the page whose favicon is being set.
+   * @param aFaviconURI
+   *        URI of the favicon to associate with the page.
+   * @param aForceReload
+   *        If aForceReload is false, we try to reload the favicon only if we
+   *        don&#39;t have it or it has expired from the cache.  Setting
+   *        aForceReload to true causes us to reload the favicon even if we
+   *        have a usable copy.
+   * @param aFaviconLoadType
+   *        Set to FAVICON_LOAD_PRIVATE if the favicon is loaded from a private
+   *        browsing window.  Set to FAVICON_LOAD_NON_PRIVATE otherwise.
+   * @param [optional] aCallback
+   *        Once we&#39;re done setting and/or fetching the favicon, we invoke this
+   *        callback.
+   * @param [optional] aLoadingPrincipal
+   *        Principal of the page whose favicon is being set. If this argument
+   *        is omitted, the loadingPrincipal defaults to the nullPrincipal.
+   * @param [optional] aRequestContextID
+   *        used to inform Necko of how to link the
+   *        favicon request with other requests in the same tab.
+   *
+   * @see nsIFaviconDataCallback in nsIFaviconService.idl.
+   */
+</code></pre>
+
+<p><code>mozIPlacesPendingOperation setAndFetchFaviconForPage (in nsIURI aPageURI, in nsIURI aFaviconURI, in boolean aForceReload, in unsigned long aFaviconLoadType, [optional] in nsIFaviconDataCallback aCallback, [optional] in nsIPrincipal aLoadingPrincipal, [optional] in unsigned long long aRequestContextID);</code></p>
+</div><h4 id='method.ReplaceFaviconData' class="method"><span id='ReplaceFaviconData.v' class='invisible'><code>pub unsafe fn <a href='#method.ReplaceFaviconData' class='fnname'>ReplaceFaviconData</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFaviconURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aData: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDataLen: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMimeType: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExpiration: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#234-236' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sets the data for a given favicon URI either by replacing existing data in
+   * the database or taking the place of otherwise fetched icon data when
+   * calling setAndFetchFaviconForPage later.
+   *
+   * Favicon data for favicon URIs that are not associated with a page URI via
+   * setAndFetchFaviconForPage will be stored in memory, but may be expired at
+   * any time, so you should make an effort to associate favicon URIs with page
+   * URIs as soon as possible.
+   *
+   * It&#39;s better to not use this function for chrome: icon URIs since you can
+   * reference the chrome image yourself. getFaviconLinkForIcon/Page will ignore
+   * any associated data if the favicon URI is &quot;chrome:&quot; and just return the
+   * same chrome URI.
+   *
+   * This function does NOT send out notifications that the data has changed.
+   * Pages using this favicons that are visible in history or bookmarks views
+   * will keep the old icon until they have been refreshed by other means.
+   *
+   * This function tries to optimize the favicon size, if it is bigger
+   * than a defined limit we will try to convert it to a 16x16 png image.
+   * If the conversion fails and favicon is still bigger than our max accepted
+   * size it won&#39;t be saved.
+   *
+   * @param aFaviconURI
+   *        URI of the favicon whose data is being set.
+   * @param aData
+   *        Binary contents of the favicon to save
+   * @param aDataLength
+   *        Length of binary data
+   * @param aMimeType
+   *        MIME type of the data to store.  This is important so that we know
+   *        what to report when the favicon is used.  You should always set this
+   *        param unless you are clearing an icon.
+   * @param [optional] aExpiration
+   *        Time in microseconds since the epoch when this favicon expires.
+   *        Until this time, we won&#39;t try to load it again.
+   * @throws NS_ERROR_FAILURE
+   *         Thrown if the favicon is overbloated and won&#39;t be saved to the db.
+   */
+</code></pre>
+
+<p><code>void replaceFaviconData (in nsIURI aFaviconURI, [array, size_is (aDataLen), const] in octet aData, in unsigned long aDataLen, in AUTF8String aMimeType, [optional] in PRTime aExpiration);</code></p>
+</div><h4 id='method.ReplaceFaviconDataFromDataURL' class="method"><span id='ReplaceFaviconDataFromDataURL.v' class='invisible'><code>pub unsafe fn <a href='#method.ReplaceFaviconDataFromDataURL' class='fnname'>ReplaceFaviconDataFromDataURL</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFaviconURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDataURL: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExpiration: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLoadingPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#265-267' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Same as replaceFaviconData but the data is provided by a string
+   * containing a data URL.
+   *
+   * @see replaceFaviconData
+   *
+   * @param aFaviconURI
+   *        URI of the favicon whose data is being set.
+   * @param aDataURL
+   *        string containing a data URL that represents the contents of
+   *        the favicon to save
+   * @param [optional] aExpiration
+   *        Time in microseconds since the epoch when this favicon expires.
+   *        Until this time, we won&#39;t try to load it again.
+   * @param [optional] aLoadingPrincipal
+   *        Principal of the page whose favicon is being set. If this argument
+   *        is omitted, the loadingPrincipal defaults to the nullPrincipal.
+   * @throws NS_ERROR_FAILURE
+   *         Thrown if the favicon is overbloated and won&#39;t be saved to the db.
+   */
+</code></pre>
+
+<p><code>void replaceFaviconDataFromDataURL (in nsIURI aFaviconURI, in AString aDataURL, [optional] in PRTime aExpiration, [optional] in nsIPrincipal aLoadingPrincipal);</code></p>
+</div><h4 id='method.GetFaviconURLForPage' class="method"><span id='GetFaviconURLForPage.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFaviconURLForPage' class='fnname'>GetFaviconURLForPage</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPageURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFaviconDataCallback.html" title="struct xpcom::interfaces::nsIFaviconDataCallback">nsIFaviconDataCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPreferredWidth: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#296-298' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Retrieves the favicon URI associated to the given page, if any.
+   *
+   * @param aPageURI
+   *        URI of the page whose favicon URI we&#39;re looking up.
+   * @param aCallback
+   *        This callback is always invoked to notify the result of the lookup.
+   *        The aURI parameter will be the favicon URI, or null when no favicon
+   *        is associated with the page or an error occurred while fetching it.
+   *        aDataLen will be always 0, aData will be an empty array, and
+   *        aMimeType will be an empty string, regardless of whether a favicon
+   *        was found.
+   * @param [optional] aPreferredWidth
+   *        The preferred icon width, 0 for the biggest available.
+   *
+   * @note If a favicon specific to this page cannot be found, this will try to
+   *       fallback to the /favicon.ico for the root domain.
+   *
+   * @see nsIFaviconDataCallback in nsIFaviconService.idl.
+   */
+</code></pre>
+
+<p><code>void getFaviconURLForPage (in nsIURI aPageURI, in nsIFaviconDataCallback aCallback, [optional] in unsigned short aPreferredWidth);</code></p>
+</div><h4 id='method.GetFaviconDataForPage' class="method"><span id='GetFaviconDataForPage.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFaviconDataForPage' class='fnname'>GetFaviconDataForPage</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPageURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFaviconDataCallback.html" title="struct xpcom::interfaces::nsIFaviconDataCallback">nsIFaviconDataCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPreferredWidth: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#329-331' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Retrieves the favicon URI and data associated to the given page, if any.
+   * If the page icon is not available, it will try to return the root domain
+   * icon data, when it&#39;s known.
+   *
+   * @param aPageURI
+   *        URI of the page whose favicon URI and data we&#39;re looking up.
+   * @param aCallback
+   *        This callback is always invoked to notify the result of the lookup.  The aURI
+   *        parameter will be the favicon URI, or null when no favicon is
+   *        associated with the page or an error occurred while fetching it.  If
+   *        aURI is not null, the other parameters may contain the favicon data.
+   *        However, if no favicon data is currently associated with the favicon
+   *        URI, aDataLen will be 0, aData will be an empty array, and aMimeType
+   *        will be an empty string.
+   * @param [optional] aPreferredWidth
+   *        The preferred icon width, 0 for the biggest available.
+   * @note If a favicon specific to this page cannot be found, this will try to
+   *       fallback to the /favicon.ico for the root domain.
+   *
+   * @see nsIFaviconDataCallback in nsIFaviconService.idl.
+   */
+</code></pre>
+
+<p><code>void getFaviconDataForPage (in nsIURI aPageURI, in nsIFaviconDataCallback aCallback, [optional] in unsigned short aPreferredWidth);</code></p>
+</div><h4 id='method.CopyFavicons' class="method"><span id='CopyFavicons.v' class='invisible'><code>pub unsafe fn <a href='#method.CopyFavicons' class='fnname'>CopyFavicons</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFromPageURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aToPageURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFaviconLoadType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFaviconDataCallback.html" title="struct xpcom::interfaces::nsIFaviconDataCallback">nsIFaviconDataCallback</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#355-357' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Copies cached favicons from a page to another one.
+   *
+   * @param aFromPageURI
+   *        URI of the originating page.
+   * @param aToPageURI
+   *        URI of the destination page.
+   * @param aFaviconLoadType
+   *        Set to FAVICON_LOAD_PRIVATE if the copy is started from a private
+   *        browsing window.  Set to FAVICON_LOAD_NON_PRIVATE otherwise.
+   * @param [optional] aCallback
+   *        Once we&#39;re done copying the favicon, we invoke this callback.
+   *        If a copy has been done, the callback will report one of the
+   *        favicons uri as aFaviconURI, otherwise all the params will be null.
+   */
+</code></pre>
+
+<p><code>void copyFavicons (in nsIURI aFromPageURI, in nsIURI aToPageURI, in unsigned long aFaviconLoadType, [optional] in nsIFaviconDataCallback aCallback);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIAsyncFavicons.html" title="struct xpcom::interfaces::mozIAsyncFavicons">mozIAsyncFavicons</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2848462743</span>, <span class="number">37171</span>, <span class="number">18467</span>, [<span class="number">181</span>, <span class="number">95</span>, <span class="number">54</span>, <span class="number">70</span>, <span class="number">230</span>, <span class="number">124</span>, <span class="number">253</span>, <span class="number">65</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIAsyncFavicons.html" title="struct xpcom::interfaces::mozIAsyncFavicons">mozIAsyncFavicons</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIAsyncFavicons.html" title="struct xpcom::interfaces::mozIAsyncFavicons">mozIAsyncFavicons</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIAsyncFavicons.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIUpdate` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIUpdate">
+
+    <title>xpcom::interfaces::nsIUpdate - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIUpdate</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetType">GetType</a><a href="#method.SetType">SetType</a><a href="#method.GetName">GetName</a><a href="#method.SetName">SetName</a><a href="#method.GetDisplayVersion">GetDisplayVersion</a><a href="#method.SetDisplayVersion">SetDisplayVersion</a><a href="#method.GetAppVersion">GetAppVersion</a><a href="#method.SetAppVersion">SetAppVersion</a><a href="#method.GetPreviousAppVersion">GetPreviousAppVersion</a><a href="#method.SetPreviousAppVersion">SetPreviousAppVersion</a><a href="#method.GetBuildID">GetBuildID</a><a href="#method.SetBuildID">SetBuildID</a><a href="#method.GetDetailsURL">GetDetailsURL</a><a href="#method.SetDetailsURL">SetDetailsURL</a><a href="#method.GetServiceURL">GetServiceURL</a><a href="#method.SetServiceURL">SetServiceURL</a><a href="#method.GetChannel">GetChannel</a><a href="#method.SetChannel">SetChannel</a><a href="#method.GetUnsupported">GetUnsupported</a><a href="#method.SetUnsupported">SetUnsupported</a><a href="#method.GetPromptWaitTime">GetPromptWaitTime</a><a href="#method.SetPromptWaitTime">SetPromptWaitTime</a><a href="#method.GetIsCompleteUpdate">GetIsCompleteUpdate</a><a href="#method.SetIsCompleteUpdate">SetIsCompleteUpdate</a><a href="#method.GetInstallDate">GetInstallDate</a><a href="#method.SetInstallDate">SetInstallDate</a><a href="#method.GetStatusText">GetStatusText</a><a href="#method.SetStatusText">SetStatusText</a><a href="#method.GetSelectedPatch">GetSelectedPatch</a><a href="#method.GetState">GetState</a><a href="#method.SetState">SetState</a><a href="#method.GetErrorCode">GetErrorCode</a><a href="#method.SetErrorCode">SetErrorCode</a><a href="#method.GetElevationFailure">GetElevationFailure</a><a href="#method.SetElevationFailure">SetElevationFailure</a><a href="#method.GetPatchCount">GetPatchCount</a><a href="#method.GetPatchAt">GetPatchAt</a><a href="#method.Serialize">Serialize</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIUpdate', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIUpdate</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#420-429' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIUpdate { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIUpdate : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * An interface that describes an object representing an available update to
+ * the current application - this update may have several available patches
+ * from which one must be selected to download and install, for example we
+ * might select a binary difference patch first and attempt to apply that,
+ * then if the application process fails fall back to downloading a complete
+ * file-replace patch. This object also contains information about the update
+ * that the front end and other application services can use to learn more
+ * about what is going on.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIUpdate.html" title="struct xpcom::interfaces::nsIUpdate">nsIUpdate</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#469-475' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIUpdateCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#472-474' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIUpdate</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIUpdate.html" title="struct xpcom::interfaces::nsIUpdate">nsIUpdate</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#630-1224' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetType' class="method"><span id='GetType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetType' class='fnname'>GetType</a>(&amp;self, aType: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#643-645' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The type of update:
+   *   &quot;major&quot;  A major new version of the Application
+   *   &quot;minor&quot;  A minor update to the Application (e.g. security update)
+   */
+</code></pre>
+
+<p><code>attribute AString type;</code></p>
+</div><h4 id='method.SetType' class="method"><span id='SetType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetType' class='fnname'>SetType</a>(&amp;self, aType: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#659-661' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The type of update:
+   *   &quot;major&quot;  A major new version of the Application
+   *   &quot;minor&quot;  A minor update to the Application (e.g. security update)
+   */
+</code></pre>
+
+<p><code>attribute AString type;</code></p>
+</div><h4 id='method.GetName' class="method"><span id='GetName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetName' class='fnname'>GetName</a>(&amp;self, aName: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#673-675' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The name of the update, or &quot;&lt;Application Name&gt; &lt;Update Version&gt;&quot;
+   */
+</code></pre>
+
+<p><code>attribute AString name;</code></p>
+</div><h4 id='method.SetName' class="method"><span id='SetName.v' class='invisible'><code>pub unsafe fn <a href='#method.SetName' class='fnname'>SetName</a>(&amp;self, aName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#687-689' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The name of the update, or &quot;&lt;Application Name&gt; &lt;Update Version&gt;&quot;
+   */
+</code></pre>
+
+<p><code>attribute AString name;</code></p>
+</div><h4 id='method.GetDisplayVersion' class="method"><span id='GetDisplayVersion.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDisplayVersion' class='fnname'>GetDisplayVersion</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDisplayVersion: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#702-704' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The string to display in the user interface for the version. If you want
+   * a real version number use appVersion.
+   */
+</code></pre>
+
+<p><code>attribute AString displayVersion;</code></p>
+</div><h4 id='method.SetDisplayVersion' class="method"><span id='SetDisplayVersion.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDisplayVersion' class='fnname'>SetDisplayVersion</a>(&amp;self, aDisplayVersion: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#717-719' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The string to display in the user interface for the version. If you want
+   * a real version number use appVersion.
+   */
+</code></pre>
+
+<p><code>attribute AString displayVersion;</code></p>
+</div><h4 id='method.GetAppVersion' class="method"><span id='GetAppVersion.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAppVersion' class='fnname'>GetAppVersion</a>(&amp;self, aAppVersion: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#731-733' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The Application version of this update.
+   */
+</code></pre>
+
+<p><code>attribute AString appVersion;</code></p>
+</div><h4 id='method.SetAppVersion' class="method"><span id='SetAppVersion.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAppVersion' class='fnname'>SetAppVersion</a>(&amp;self, aAppVersion: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#745-747' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The Application version of this update.
+   */
+</code></pre>
+
+<p><code>attribute AString appVersion;</code></p>
+</div><h4 id='method.GetPreviousAppVersion' class="method"><span id='GetPreviousAppVersion.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPreviousAppVersion' class='fnname'>GetPreviousAppVersion</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPreviousAppVersion: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#759-761' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The Application version prior to the application being updated.
+   */
+</code></pre>
+
+<p><code>attribute AString previousAppVersion;</code></p>
+</div><h4 id='method.SetPreviousAppVersion' class="method"><span id='SetPreviousAppVersion.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPreviousAppVersion' class='fnname'>SetPreviousAppVersion</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPreviousAppVersion: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#773-775' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The Application version prior to the application being updated.
+   */
+</code></pre>
+
+<p><code>attribute AString previousAppVersion;</code></p>
+</div><h4 id='method.GetBuildID' class="method"><span id='GetBuildID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBuildID' class='fnname'>GetBuildID</a>(&amp;self, aBuildID: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#790-792' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The Build ID of this update. Used to determine a particular build, down
+   * to the hour, minute and second of its creation. This allows the system
+   * to differentiate between several nightly builds with the same |version|
+   * for example.
+   */
+</code></pre>
+
+<p><code>attribute AString buildID;</code></p>
+</div><h4 id='method.SetBuildID' class="method"><span id='SetBuildID.v' class='invisible'><code>pub unsafe fn <a href='#method.SetBuildID' class='fnname'>SetBuildID</a>(&amp;self, aBuildID: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#807-809' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The Build ID of this update. Used to determine a particular build, down
+   * to the hour, minute and second of its creation. This allows the system
+   * to differentiate between several nightly builds with the same |version|
+   * for example.
+   */
+</code></pre>
+
+<p><code>attribute AString buildID;</code></p>
+</div><h4 id='method.GetDetailsURL' class="method"><span id='GetDetailsURL.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDetailsURL' class='fnname'>GetDetailsURL</a>(&amp;self, aDetailsURL: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#824-826' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The URL to a page which offers details about the content of this
+   * update. Ideally, this page is not the release notes but some other page
+   * that summarizes the differences between this update and the previous,
+   * which also links to the release notes.
+   */
+</code></pre>
+
+<p><code>attribute AString detailsURL;</code></p>
+</div><h4 id='method.SetDetailsURL' class="method"><span id='SetDetailsURL.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDetailsURL' class='fnname'>SetDetailsURL</a>(&amp;self, aDetailsURL: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#841-843' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The URL to a page which offers details about the content of this
+   * update. Ideally, this page is not the release notes but some other page
+   * that summarizes the differences between this update and the previous,
+   * which also links to the release notes.
+   */
+</code></pre>
+
+<p><code>attribute AString detailsURL;</code></p>
+</div><h4 id='method.GetServiceURL' class="method"><span id='GetServiceURL.v' class='invisible'><code>pub unsafe fn <a href='#method.GetServiceURL' class='fnname'>GetServiceURL</a>(&amp;self, aServiceURL: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#855-857' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The URL to the Update Service that supplied this update.
+   */
+</code></pre>
+
+<p><code>attribute AString serviceURL;</code></p>
+</div><h4 id='method.SetServiceURL' class="method"><span id='SetServiceURL.v' class='invisible'><code>pub unsafe fn <a href='#method.SetServiceURL' class='fnname'>SetServiceURL</a>(&amp;self, aServiceURL: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#869-871' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The URL to the Update Service that supplied this update.
+   */
+</code></pre>
+
+<p><code>attribute AString serviceURL;</code></p>
+</div><h4 id='method.GetChannel' class="method"><span id='GetChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.GetChannel' class='fnname'>GetChannel</a>(&amp;self, aChannel: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#883-885' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The channel used to retrieve this update from the Update Service.
+   */
+</code></pre>
+
+<p><code>attribute AString channel;</code></p>
+</div><h4 id='method.SetChannel' class="method"><span id='SetChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.SetChannel' class='fnname'>SetChannel</a>(&amp;self, aChannel: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#897-899' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The channel used to retrieve this update from the Update Service.
+   */
+</code></pre>
+
+<p><code>attribute AString channel;</code></p>
+</div><h4 id='method.GetUnsupported' class="method"><span id='GetUnsupported.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUnsupported' class='fnname'>GetUnsupported</a>(&amp;self, aUnsupported: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#911-913' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether the update is no longer supported on this system.
+   */
+</code></pre>
+
+<p><code>attribute boolean unsupported;</code></p>
+</div><h4 id='method.SetUnsupported' class="method"><span id='SetUnsupported.v' class='invisible'><code>pub unsafe fn <a href='#method.SetUnsupported' class='fnname'>SetUnsupported</a>(&amp;self, aUnsupported: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#925-927' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether the update is no longer supported on this system.
+   */
+</code></pre>
+
+<p><code>attribute boolean unsupported;</code></p>
+</div><h4 id='method.GetPromptWaitTime' class="method"><span id='GetPromptWaitTime.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPromptWaitTime' class='fnname'>GetPromptWaitTime</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPromptWaitTime: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#941-943' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Allows overriding the default amount of time in seconds before prompting the
+   * user to apply an update. If not specified, the value of
+   * app.update.promptWaitTime will be used.
+   */
+</code></pre>
+
+<p><code>attribute long long promptWaitTime;</code></p>
+</div><h4 id='method.SetPromptWaitTime' class="method"><span id='SetPromptWaitTime.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPromptWaitTime' class='fnname'>SetPromptWaitTime</a>(&amp;self, aPromptWaitTime: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#957-959' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Allows overriding the default amount of time in seconds before prompting the
+   * user to apply an update. If not specified, the value of
+   * app.update.promptWaitTime will be used.
+   */
+</code></pre>
+
+<p><code>attribute long long promptWaitTime;</code></p>
+</div><h4 id='method.GetIsCompleteUpdate' class="method"><span id='GetIsCompleteUpdate.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsCompleteUpdate' class='fnname'>GetIsCompleteUpdate</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsCompleteUpdate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#973-975' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether or not the update being downloaded is a complete replacement of
+   * the user&#39;s existing installation or a patch representing the difference
+   * between the new version and the previous version.
+   */
+</code></pre>
+
+<p><code>attribute boolean isCompleteUpdate;</code></p>
+</div><h4 id='method.SetIsCompleteUpdate' class="method"><span id='SetIsCompleteUpdate.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIsCompleteUpdate' class='fnname'>SetIsCompleteUpdate</a>(&amp;self, aIsCompleteUpdate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#989-991' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether or not the update being downloaded is a complete replacement of
+   * the user&#39;s existing installation or a patch representing the difference
+   * between the new version and the previous version.
+   */
+</code></pre>
+
+<p><code>attribute boolean isCompleteUpdate;</code></p>
+</div><h4 id='method.GetInstallDate' class="method"><span id='GetInstallDate.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInstallDate' class='fnname'>GetInstallDate</a>(&amp;self, aInstallDate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1003-1005' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When the update was installed.
+   */
+</code></pre>
+
+<p><code>attribute long long installDate;</code></p>
+</div><h4 id='method.SetInstallDate' class="method"><span id='SetInstallDate.v' class='invisible'><code>pub unsafe fn <a href='#method.SetInstallDate' class='fnname'>SetInstallDate</a>(&amp;self, aInstallDate: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1017-1019' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When the update was installed.
+   */
+</code></pre>
+
+<p><code>attribute long long installDate;</code></p>
+</div><h4 id='method.GetStatusText' class="method"><span id='GetStatusText.v' class='invisible'><code>pub unsafe fn <a href='#method.GetStatusText' class='fnname'>GetStatusText</a>(&amp;self, aStatusText: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1031-1033' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A message associated with this update, if any.
+   */
+</code></pre>
+
+<p><code>attribute AString statusText;</code></p>
+</div><h4 id='method.SetStatusText' class="method"><span id='SetStatusText.v' class='invisible'><code>pub unsafe fn <a href='#method.SetStatusText' class='fnname'>SetStatusText</a>(&amp;self, aStatusText: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1045-1047' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A message associated with this update, if any.
+   */
+</code></pre>
+
+<p><code>attribute AString statusText;</code></p>
+</div><h4 id='method.GetSelectedPatch' class="method"><span id='GetSelectedPatch.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelectedPatch' class='fnname'>GetSelectedPatch</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSelectedPatch: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIUpdatePatch.html" title="struct xpcom::interfaces::nsIUpdatePatch">nsIUpdatePatch</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1059-1061' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The currently selected patch for this update.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIUpdatePatch selectedPatch;</code></p>
+</div><h4 id='method.GetState' class="method"><span id='GetState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetState' class='fnname'>GetState</a>(&amp;self, aState: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1084-1086' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The state of the selected patch:
+   *   &quot;downloading&quot;        The update is being downloaded.
+   *   &quot;pending&quot;            The update is ready to be applied.
+   *   &quot;pending-service&quot;    The update is ready to be applied with the service.
+   *   &quot;pending-elevate&quot;    The update is ready to be applied but requires elevation.
+   *   &quot;applying&quot;           The update is being applied.
+   *   &quot;applied&quot;            The update is ready to be switched to.
+   *   &quot;applied-os&quot;         The update is OS update and to be installed.
+   *   &quot;applied-service&quot;    The update is ready to be switched to with the service.
+   *   &quot;succeeded&quot;          The update was successfully applied.
+   *   &quot;download-failed&quot;    The update failed to be downloaded.
+   *   &quot;failed&quot;             The update failed to be applied.
+   */
+</code></pre>
+
+<p><code>attribute AString state;</code></p>
+</div><h4 id='method.SetState' class="method"><span id='SetState.v' class='invisible'><code>pub unsafe fn <a href='#method.SetState' class='fnname'>SetState</a>(&amp;self, aState: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1109-1111' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The state of the selected patch:
+   *   &quot;downloading&quot;        The update is being downloaded.
+   *   &quot;pending&quot;            The update is ready to be applied.
+   *   &quot;pending-service&quot;    The update is ready to be applied with the service.
+   *   &quot;pending-elevate&quot;    The update is ready to be applied but requires elevation.
+   *   &quot;applying&quot;           The update is being applied.
+   *   &quot;applied&quot;            The update is ready to be switched to.
+   *   &quot;applied-os&quot;         The update is OS update and to be installed.
+   *   &quot;applied-service&quot;    The update is ready to be switched to with the service.
+   *   &quot;succeeded&quot;          The update was successfully applied.
+   *   &quot;download-failed&quot;    The update failed to be downloaded.
+   *   &quot;failed&quot;             The update failed to be applied.
+   */
+</code></pre>
+
+<p><code>attribute AString state;</code></p>
+</div><h4 id='method.GetErrorCode' class="method"><span id='GetErrorCode.v' class='invisible'><code>pub unsafe fn <a href='#method.GetErrorCode' class='fnname'>GetErrorCode</a>(&amp;self, aErrorCode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1126-1128' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A numeric error code that conveys additional information about the state of
+   * a failed update. If the update is not in the &quot;failed&quot; state the value is
+   * zero. The possible values are located in common/errors.h and values between
+   * 80 and 99 are in nsUpdateService.js.
+   */
+</code></pre>
+
+<p><code>attribute long errorCode;</code></p>
+</div><h4 id='method.SetErrorCode' class="method"><span id='SetErrorCode.v' class='invisible'><code>pub unsafe fn <a href='#method.SetErrorCode' class='fnname'>SetErrorCode</a>(&amp;self, aErrorCode: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1143-1145' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A numeric error code that conveys additional information about the state of
+   * a failed update. If the update is not in the &quot;failed&quot; state the value is
+   * zero. The possible values are located in common/errors.h and values between
+   * 80 and 99 are in nsUpdateService.js.
+   */
+</code></pre>
+
+<p><code>attribute long errorCode;</code></p>
+</div><h4 id='method.GetElevationFailure' class="method"><span id='GetElevationFailure.v' class='invisible'><code>pub unsafe fn <a href='#method.GetElevationFailure' class='fnname'>GetElevationFailure</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElevationFailure: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1157-1159' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether an elevation failure has been encountered for this update.
+   */
+</code></pre>
+
+<p><code>attribute boolean elevationFailure;</code></p>
+</div><h4 id='method.SetElevationFailure' class="method"><span id='SetElevationFailure.v' class='invisible'><code>pub unsafe fn <a href='#method.SetElevationFailure' class='fnname'>SetElevationFailure</a>(&amp;self, aElevationFailure: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1171-1173' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether an elevation failure has been encountered for this update.
+   */
+</code></pre>
+
+<p><code>attribute boolean elevationFailure;</code></p>
+</div><h4 id='method.GetPatchCount' class="method"><span id='GetPatchCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPatchCount' class='fnname'>GetPatchCount</a>(&amp;self, aPatchCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1185-1187' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The number of patches supplied by this update.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long patchCount;</code></p>
+</div><h4 id='method.GetPatchAt' class="method"><span id='GetPatchAt.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPatchAt' class='fnname'>GetPatchAt</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;index: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIUpdatePatch.html" title="struct xpcom::interfaces::nsIUpdatePatch">nsIUpdatePatch</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1202-1204' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Retrieves a patch.
+   * @param   index
+   *          The index of the patch to retrieve.
+   * @returns The nsIUpdatePatch at the specified index.
+   */
+</code></pre>
+
+<p><code>nsIUpdatePatch getPatchAt (in unsigned long index);</code></p>
+</div><h4 id='method.Serialize' class="method"><span id='Serialize.v' class='invisible'><code>pub unsafe fn <a href='#method.Serialize' class='fnname'>Serialize</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;updates: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMDocument.html" title="struct xpcom::interfaces::nsIDOMDocument">nsIDOMDocument</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#1219-1221' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Serializes this update object into a DOM Element
+   * @param   updates
+   *          The document to serialize into
+   * @returns The DOM Element created by the serialization process
+   */
+</code></pre>
+
+<p><code>nsIDOMElement serialize (in nsIDOMDocument updates);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIUpdate.html" title="struct xpcom::interfaces::nsIUpdate">nsIUpdate</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#434-437' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3767844933</span>, <span class="number">62719</span>, <span class="number">16893</span>, [<span class="number">146</span>, <span class="number">218</span>, <span class="number">205</span>, <span class="number">46</span>, <span class="number">255</span>, <span class="number">210</span>, <span class="number">199</span>, <span class="number">201</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIUpdate.html" title="struct xpcom::interfaces::nsIUpdate">nsIUpdate</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#441-450' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#443-445' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#447-449' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIUpdate.html" title="struct xpcom::interfaces::nsIUpdate">nsIUpdate</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#481-489' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIUpdateService.rs.html#484-488' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

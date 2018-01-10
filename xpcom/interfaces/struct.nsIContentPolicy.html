@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIContentPolicy` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIContentPolicy">
+
+    <title>xpcom::interfaces::nsIContentPolicy - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIContentPolicy</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.ShouldLoad">ShouldLoad</a><a href="#method.ShouldProcess">ShouldProcess</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIContentPolicy', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIContentPolicy</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#39-48' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIContentPolicy { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIContentPolicy : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * Interface for content policy mechanism.  Implementations of this
+ * interface can be used to control loading of various types of out-of-line
+ * content, or processing of certain types of in-line content.
+ *
+ * WARNING: do not block the caller from shouldLoad or shouldProcess (e.g.,
+ * by launching a dialog to prompt the user for something).
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPolicy.html" title="struct xpcom::interfaces::nsIContentPolicy">nsIContentPolicy</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#88-94' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIContentPolicyCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#91-93' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIContentPolicy</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPolicy.html" title="struct xpcom::interfaces::nsIContentPolicy">nsIContentPolicy</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#141-816' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.TYPE_INVALID' class="associatedconstant"><span id='TYPE_INVALID.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INVALID' class="constant"><b>TYPE_INVALID</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INVALID</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a unset or bogus policy type.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_OTHER' class="associatedconstant"><span id='TYPE_OTHER.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_OTHER' class="constant"><b>TYPE_OTHER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_OTHER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * Gecko/Firefox developers: Avoid using TYPE_OTHER. Especially for
+   * requests that are coming from webpages. Or requests in general which
+   * you expect that security checks will be done on.
+   * Always use a more specific type if one is available. And do not hesitate
+   * to add more types as appropriate.
+   * But if you are fairly sure that no one would care about your more specific
+   * type, then it&#39;s ok to use TYPE_OTHER.
+   *
+   * Extension developers: Whenever it is reasonable, use one of the existing
+   * content types. If none of the existing content types are right for
+   * something you are doing, file a bug in the Core/DOM component that
+   * includes a patch that adds your new content type to the end of the list of
+   * TYPE_* constants here. But, don&#39;t start using your new content type until
+   * your patch has been accepted, because it will be uncertain what exact
+   * value and name your new content type will have; in that interim period,
+   * use TYPE_OTHER. In your patch, document your new content type in the style
+   * of the existing ones. In the bug you file, provide a more detailed
+   * description of the new type of content you want Gecko to support, so that
+   * the existing implementations of nsIContentPolicy can be properly modified
+   * to deal with that new type of content.
+   *
+   * Implementations of nsIContentPolicy should treat this the same way they
+   * treat unknown types, because existing users of TYPE_OTHER may be converted
+   * to use new content types.
+   *
+   * Note that the TYPE_INTERNAL_* constants are never passed to content
+   * policy implementations.  They are mapped to other TYPE_* constants, and
+   * are only intended for internal usage inside Gecko.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_SCRIPT' class="associatedconstant"><span id='TYPE_SCRIPT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_SCRIPT' class="constant"><b>TYPE_SCRIPT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_SCRIPT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an executable script (such as JavaScript).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_IMAGE' class="associatedconstant"><span id='TYPE_IMAGE.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_IMAGE' class="constant"><b>TYPE_IMAGE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_IMAGE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an image (e.g., IMG elements).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_STYLESHEET' class="associatedconstant"><span id='TYPE_STYLESHEET.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_STYLESHEET' class="constant"><b>TYPE_STYLESHEET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_STYLESHEET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a stylesheet (e.g., STYLE elements).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_OBJECT' class="associatedconstant"><span id='TYPE_OBJECT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_OBJECT' class="constant"><b>TYPE_OBJECT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_OBJECT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a generic object (plugin-handled content typically falls under
+   * this category).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_DOCUMENT' class="associatedconstant"><span id='TYPE_DOCUMENT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_DOCUMENT' class="constant"><b>TYPE_DOCUMENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_DOCUMENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a document at the top-level (i.e., in a browser).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_SUBDOCUMENT' class="associatedconstant"><span id='TYPE_SUBDOCUMENT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_SUBDOCUMENT' class="constant"><b>TYPE_SUBDOCUMENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_SUBDOCUMENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a document contained within another document (e.g., IFRAMEs,
+   * FRAMES, and OBJECTs).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_REFRESH' class="associatedconstant"><span id='TYPE_REFRESH.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_REFRESH' class="constant"><b>TYPE_REFRESH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_REFRESH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a timed refresh.
+   *
+   * shouldLoad will never get this, because it does not represent content
+   * to be loaded (the actual load triggered by the refresh will go through
+   * shouldLoad as expected).
+   *
+   * shouldProcess will get this for, e.g., META Refresh elements and HTTP
+   * Refresh headers.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_XBL' class="associatedconstant"><span id='TYPE_XBL.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_XBL' class="constant"><b>TYPE_XBL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_XBL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an XBL binding request, triggered either by -moz-binding CSS
+   * property.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_PING' class="associatedconstant"><span id='TYPE_PING.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_PING' class="constant"><b>TYPE_PING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_PING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">10</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a ping triggered by a click on &lt;A PING=&quot;...&quot;&gt; element.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_XMLHTTPREQUEST' class="associatedconstant"><span id='TYPE_XMLHTTPREQUEST.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_XMLHTTPREQUEST' class="constant"><b>TYPE_XMLHTTPREQUEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_XMLHTTPREQUEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">11</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an XMLHttpRequest. Also used for document.load and for EventSource.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_DATAREQUEST' class="associatedconstant"><span id='TYPE_DATAREQUEST.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_DATAREQUEST' class="constant"><b>TYPE_DATAREQUEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_DATAREQUEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">11</span></pre>
+</div><h4 id='associatedconstant.TYPE_OBJECT_SUBREQUEST' class="associatedconstant"><span id='TYPE_OBJECT_SUBREQUEST.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_OBJECT_SUBREQUEST' class="constant"><b>TYPE_OBJECT_SUBREQUEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_OBJECT_SUBREQUEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">12</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a request by a plugin.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_DTD' class="associatedconstant"><span id='TYPE_DTD.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_DTD' class="constant"><b>TYPE_DTD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_DTD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">13</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a DTD loaded by an XML document.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_FONT' class="associatedconstant"><span id='TYPE_FONT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_FONT' class="constant"><b>TYPE_FONT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_FONT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">14</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a font loaded via @font-face rule.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_MEDIA' class="associatedconstant"><span id='TYPE_MEDIA.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_MEDIA' class="constant"><b>TYPE_MEDIA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_MEDIA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">15</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a video or audio load.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_WEBSOCKET' class="associatedconstant"><span id='TYPE_WEBSOCKET.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_WEBSOCKET' class="constant"><b>TYPE_WEBSOCKET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_WEBSOCKET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a WebSocket load.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_CSP_REPORT' class="associatedconstant"><span id='TYPE_CSP_REPORT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_CSP_REPORT' class="constant"><b>TYPE_CSP_REPORT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_CSP_REPORT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">17</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a Content Security Policy report.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_XSLT' class="associatedconstant"><span id='TYPE_XSLT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_XSLT' class="constant"><b>TYPE_XSLT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_XSLT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">18</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a style sheet transformation.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_BEACON' class="associatedconstant"><span id='TYPE_BEACON.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_BEACON' class="constant"><b>TYPE_BEACON</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_BEACON</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">19</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a beacon post.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_FETCH' class="associatedconstant"><span id='TYPE_FETCH.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_FETCH' class="constant"><b>TYPE_FETCH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_FETCH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">20</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a load initiated by the fetch() function from the Fetch
+   * specification.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_IMAGESET' class="associatedconstant"><span id='TYPE_IMAGESET.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_IMAGESET' class="constant"><b>TYPE_IMAGESET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_IMAGESET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">21</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a &lt;img srcset&gt; or &lt;picture&gt; request.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_WEB_MANIFEST' class="associatedconstant"><span id='TYPE_WEB_MANIFEST.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_WEB_MANIFEST' class="constant"><b>TYPE_WEB_MANIFEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_WEB_MANIFEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">22</span></pre>
+<pre><code class="language-text">/**
+   * Indicates a web manifest.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_SAVEAS_DOWNLOAD' class="associatedconstant"><span id='TYPE_SAVEAS_DOWNLOAD.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_SAVEAS_DOWNLOAD' class="constant"><b>TYPE_SAVEAS_DOWNLOAD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_SAVEAS_DOWNLOAD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">43</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an save-as link download from the front-end code.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_SCRIPT' class="associatedconstant"><span id='TYPE_INTERNAL_SCRIPT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_SCRIPT' class="constant"><b>TYPE_INTERNAL_SCRIPT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_SCRIPT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">23</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for scripts loaded through script
+   * elements.
+   *
+   * This will be mapped to TYPE_SCRIPT before being passed to content policy
+   * implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_WORKER' class="associatedconstant"><span id='TYPE_INTERNAL_WORKER.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_WORKER' class="constant"><b>TYPE_INTERNAL_WORKER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_WORKER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">24</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for scripts loaded through a dedicated
+   * worker.
+   *
+   * This will be mapped to TYPE_SCRIPT before being passed to content policy
+   * implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_SHARED_WORKER' class="associatedconstant"><span id='TYPE_INTERNAL_SHARED_WORKER.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_SHARED_WORKER' class="constant"><b>TYPE_INTERNAL_SHARED_WORKER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_SHARED_WORKER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">25</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for scripts loaded through a shared
+   * worker.
+   *
+   * This will be mapped to TYPE_SCRIPT before being passed to content policy
+   * implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_EMBED' class="associatedconstant"><span id='TYPE_INTERNAL_EMBED.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_EMBED' class="constant"><b>TYPE_INTERNAL_EMBED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_EMBED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">26</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for content loaded from embed elements.
+   *
+   * This will be mapped to TYPE_OBJECT.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_OBJECT' class="associatedconstant"><span id='TYPE_INTERNAL_OBJECT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_OBJECT' class="constant"><b>TYPE_INTERNAL_OBJECT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_OBJECT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">27</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for content loaded from object elements.
+   *
+   * This will be mapped to TYPE_OBJECT.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_FRAME' class="associatedconstant"><span id='TYPE_INTERNAL_FRAME.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_FRAME' class="constant"><b>TYPE_INTERNAL_FRAME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_FRAME</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">28</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for content loaded from frame elements.
+   *
+   * This will be mapped to TYPE_SUBDOCUMENT.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_IFRAME' class="associatedconstant"><span id='TYPE_INTERNAL_IFRAME.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_IFRAME' class="constant"><b>TYPE_INTERNAL_IFRAME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_IFRAME</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">29</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for content loaded from iframe elements.
+   *
+   * This will be mapped to TYPE_SUBDOCUMENT.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_AUDIO' class="associatedconstant"><span id='TYPE_INTERNAL_AUDIO.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_AUDIO' class="constant"><b>TYPE_INTERNAL_AUDIO</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_AUDIO</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">30</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for content loaded from audio elements.
+   *
+   * This will be mapped to TYPE_MEDIA.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_VIDEO' class="associatedconstant"><span id='TYPE_INTERNAL_VIDEO.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_VIDEO' class="constant"><b>TYPE_INTERNAL_VIDEO</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_VIDEO</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">31</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for content loaded from video elements.
+   *
+   * This will be mapped to TYPE_MEDIA.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_TRACK' class="associatedconstant"><span id='TYPE_INTERNAL_TRACK.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_TRACK' class="constant"><b>TYPE_INTERNAL_TRACK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_TRACK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for content loaded from track elements.
+   *
+   * This will be mapped to TYPE_MEDIA.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_XMLHTTPREQUEST' class="associatedconstant"><span id='TYPE_INTERNAL_XMLHTTPREQUEST.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_XMLHTTPREQUEST' class="constant"><b>TYPE_INTERNAL_XMLHTTPREQUEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_XMLHTTPREQUEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">33</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for an XMLHttpRequest.
+   *
+   * This will be mapped to TYPE_XMLHTTPREQUEST.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_EVENTSOURCE' class="associatedconstant"><span id='TYPE_INTERNAL_EVENTSOURCE.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_EVENTSOURCE' class="constant"><b>TYPE_INTERNAL_EVENTSOURCE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_EVENTSOURCE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">34</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for EventSource.
+   *
+   * This will be mapped to TYPE_DATAREQUEST.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_SERVICE_WORKER' class="associatedconstant"><span id='TYPE_INTERNAL_SERVICE_WORKER.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_SERVICE_WORKER' class="constant"><b>TYPE_INTERNAL_SERVICE_WORKER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_SERVICE_WORKER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">35</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for scripts loaded through a service
+   * worker.
+   *
+   * This will be mapped to TYPE_SCRIPT before being passed to content policy
+   * implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_SCRIPT_PRELOAD' class="associatedconstant"><span id='TYPE_INTERNAL_SCRIPT_PRELOAD.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_SCRIPT_PRELOAD' class="constant"><b>TYPE_INTERNAL_SCRIPT_PRELOAD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_SCRIPT_PRELOAD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">36</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for *preloaded* scripts
+   * loaded through script elements.
+   *
+   * This will be mapped to TYPE_SCRIPT before being passed
+   * to content policy implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_IMAGE' class="associatedconstant"><span id='TYPE_INTERNAL_IMAGE.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_IMAGE' class="constant"><b>TYPE_INTERNAL_IMAGE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_IMAGE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">37</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for normal images.
+   *
+   * This will be mapped to TYPE_IMAGE before being passed
+   * to content policy implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_IMAGE_PRELOAD' class="associatedconstant"><span id='TYPE_INTERNAL_IMAGE_PRELOAD.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_IMAGE_PRELOAD' class="constant"><b>TYPE_INTERNAL_IMAGE_PRELOAD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_IMAGE_PRELOAD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">38</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for *preloaded* images.
+   *
+   * This will be mapped to TYPE_IMAGE before being passed
+   * to content policy implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_STYLESHEET' class="associatedconstant"><span id='TYPE_INTERNAL_STYLESHEET.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_STYLESHEET' class="constant"><b>TYPE_INTERNAL_STYLESHEET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_STYLESHEET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">39</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for normal stylesheets.
+   *
+   * This will be mapped to TYPE_STYLESHEET before being passed
+   * to content policy implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_STYLESHEET_PRELOAD' class="associatedconstant"><span id='TYPE_INTERNAL_STYLESHEET_PRELOAD.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_STYLESHEET_PRELOAD' class="constant"><b>TYPE_INTERNAL_STYLESHEET_PRELOAD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_STYLESHEET_PRELOAD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">40</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for *preloaded* stylesheets.
+   *
+   * This will be mapped to TYPE_STYLESHEET before being passed
+   * to content policy implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_IMAGE_FAVICON' class="associatedconstant"><span id='TYPE_INTERNAL_IMAGE_FAVICON.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_IMAGE_FAVICON' class="constant"><b>TYPE_INTERNAL_IMAGE_FAVICON</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_IMAGE_FAVICON</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">41</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an internal constant for favicon.
+   *
+   * This will be mapped to TYPE_IMAGE before being passed
+   * to content policy implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_INTERNAL_WORKER_IMPORT_SCRIPTS' class="associatedconstant"><span id='TYPE_INTERNAL_WORKER_IMPORT_SCRIPTS.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_INTERNAL_WORKER_IMPORT_SCRIPTS' class="constant"><b>TYPE_INTERNAL_WORKER_IMPORT_SCRIPTS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_INTERNAL_WORKER_IMPORT_SCRIPTS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">42</span></pre>
+<pre><code class="language-text">/**
+   * Indicates an importScripts() inside a worker script.
+   *
+   * This will be mapped to TYPE_SCRIPT before being passed to content policy
+   * implementations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.REJECT_REQUEST' class="associatedconstant"><span id='REJECT_REQUEST.v' class='invisible'><code>pub const <a href='#associatedconstant.REJECT_REQUEST' class="constant"><b>REJECT_REQUEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REJECT_REQUEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * Returned from shouldLoad or shouldProcess if the load or process request
+   * is rejected based on details of the request.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.REJECT_TYPE' class="associatedconstant"><span id='REJECT_TYPE.v' class='invisible'><code>pub const <a href='#associatedconstant.REJECT_TYPE' class="constant"><b>REJECT_TYPE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REJECT_TYPE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">2</span></pre>
+<pre><code class="language-text">/**
+   * Returned from shouldLoad or shouldProcess if the load/process is rejected
+   * based solely on its type (of the above flags).
+   *
+   * NOTE that it is not meant to stop future requests for this type--only the
+   * current request.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.REJECT_SERVER' class="associatedconstant"><span id='REJECT_SERVER.v' class='invisible'><code>pub const <a href='#associatedconstant.REJECT_SERVER' class="constant"><b>REJECT_SERVER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REJECT_SERVER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">3</span></pre>
+<pre><code class="language-text">/**
+   * Returned from shouldLoad or shouldProcess if the load/process is rejected
+   * based on the server it is hosted on or requested from (aContentLocation or
+   * aRequestOrigin), e.g., if you block an IMAGE because it is served from
+   * goatse.cx (even if you don&#39;t necessarily block other types from that
+   * server/domain).
+   *
+   * NOTE that it is not meant to stop future requests for this server--only the
+   * current request.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.REJECT_OTHER' class="associatedconstant"><span id='REJECT_OTHER.v' class='invisible'><code>pub const <a href='#associatedconstant.REJECT_OTHER' class="constant"><b>REJECT_OTHER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REJECT_OTHER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * Returned from shouldLoad or shouldProcess if the load/process is rejected
+   * based on some other criteria. Mozilla callers will handle this like
+   * REJECT_REQUEST; third-party implementors may, for example, use this to
+   * direct their own callers to consult the extra parameter for additional
+   * details.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.ACCEPT' class="associatedconstant"><span id='ACCEPT.v' class='invisible'><code>pub const <a href='#associatedconstant.ACCEPT' class="constant"><b>ACCEPT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ACCEPT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * Returned from shouldLoad or shouldProcess if the load or process request
+   * is not rejected.
+   */
+</code></pre>
+</div><h4 id='method.ShouldLoad' class="method"><span id='ShouldLoad.v' class='invisible'><code>pub unsafe fn <a href='#method.ShouldLoad' class='fnname'>ShouldLoad</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentType: <a class="type" href="../../xpcom/interfaces/type.nsContentPolicyType.html" title="type xpcom::interfaces::nsContentPolicyType">nsContentPolicyType</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentLocation: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestOrigin: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContext: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMimeTypeGuess: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExtra: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#765-767' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Should the resource at this location be loaded?
+   * ShouldLoad will be called before loading the resource at aContentLocation
+   * to determine whether to start the load at all.
+   *
+   * @param aContentType      the type of content being tested. This will be one
+   *                          one of the TYPE_* constants.
+   *
+   * @param aContentLocation  the location of the content being checked; must
+   *                          not be null
+   *
+   * @param aRequestOrigin    OPTIONAL. the location of the resource that
+   *                          that is loading the request. This will generally
+   *                          be the URI of the loading principal for the
+   *                          resulting request (as determined by its
+   *                          LoadInfo), but may vary depending on the
+   *                          caller. Can be null if inapplicable.
+   *
+   * @param aContext          OPTIONAL. the nsIDOMNode or nsIDOMWindow that
+   *                          initiated the request, or something that can QI
+   *                          to one of those; can be null if inapplicable.
+   *                          Note that for navigation events (new windows and
+   *                          link clicks), this is the NEW window.
+   *
+   * @param aMimeTypeGuess    OPTIONAL. a guess for the requested content&#39;s
+   *                          MIME type, based on information available to
+   *                          the request initiator (e.g., an OBJECT&#39;s type
+   *                          attribute); does not reliably reflect the
+   *                          actual MIME type of the requested content
+   *
+   * @param aExtra            an OPTIONAL argument, pass-through for non-Gecko
+   *                          callers to pass extra data to callees.
+   *
+   * @param aRequestPrincipal an OPTIONAL argument, defines the principal that
+   *                          caused the load. This is optional only for
+   *                          non-gecko code: all gecko code should set this
+   *                          argument. This should generally be the same as
+   *                          the triggering principal for the resulting
+   *                          request (as determined by its LoadInfo), but may
+   *                          vary depending on the caller. Sometimes it will
+   *                          be the loading principal or final channel
+   *                          principal instead.
+   *
+   * @return ACCEPT or REJECT_*
+   *
+   * @note shouldLoad can be called while the DOM and layout of the document
+   * involved is in an inconsistent state.  This means that implementors of
+   * this method MUST NOT do any of the following:
+   * 1)  Modify the DOM in any way (e.g. setting attributes is a no-no).
+   * 2)  Query any DOM properties that depend on layout (e.g. offset*
+   *     properties).
+   * 3)  Query any DOM properties that depend on style (e.g. computed style).
+   * 4)  Query any DOM properties that depend on the current state of the DOM
+   *     outside the &quot;context&quot; node (e.g. lengths of node lists).
+   * 5)  [JavaScript implementations only] Access properties of any sort on any
+   *     object without using XPCNativeWrapper (either explicitly or
+   *     implicitly).  Due to various DOM0 things, this leads to item 4.
+   * If you do any of these things in your shouldLoad implementation, expect
+   * unpredictable behavior, possibly including crashes, content not showing
+   * up, content showing up doubled, etc.  If you need to do any of the things
+   * above, do them off timeout or event.
+   */
+</code></pre>
+
+<p><code>short shouldLoad (in nsContentPolicyType aContentType, in nsIURI aContentLocation, in nsIURI aRequestOrigin, in nsISupports aContext, in ACString aMimeTypeGuess, in nsISupports aExtra, [optional] in nsIPrincipal aRequestPrincipal);</code></p>
+</div><h4 id='method.ShouldProcess' class="method"><span id='ShouldProcess.v' class='invisible'><code>pub unsafe fn <a href='#method.ShouldProcess' class='fnname'>ShouldProcess</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentType: <a class="type" href="../../xpcom/interfaces/type.nsContentPolicyType.html" title="type xpcom::interfaces::nsContentPolicyType">nsContentPolicyType</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentLocation: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestOrigin: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContext: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMimeType: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExtra: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestPrincipal: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPrincipal.html" title="struct xpcom::interfaces::nsIPrincipal">nsIPrincipal</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#811-813' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Should the resource be processed?
+   * ShouldProcess will be called once all the information passed to it has
+   * been determined about the resource, typically after part of the resource
+   * has been loaded.
+   *
+   * @param aContentType      the type of content being tested. This will be one
+   *                          one of the TYPE_* constants.
+   *
+   * @param aContentLocation  OPTIONAL; the location of the resource being
+   *                          requested: MAY be, e.g., a post-redirection URI
+   *                          for the resource.
+   *
+   * @param aRequestOrigin    OPTIONAL. the location of the resource that
+   *                          initiated this load request; can be null if
+   *                          inapplicable
+   *
+   * @param aContext          OPTIONAL. the nsIDOMNode or nsIDOMWindow that
+   *                          initiated the request, or something that can QI
+   *                          to one of those; can be null if inapplicable.
+   *
+   * @param aMimeType         the MIME type of the requested resource (e.g.,
+   *                          image/png), as reported by the networking library,
+   *                          if available (may be empty if inappropriate for
+   *                          the type, e.g., TYPE_REFRESH).
+   *
+   * @param aExtra            an OPTIONAL argument, pass-through for non-Gecko
+   *                          callers to pass extra data to callees.
+   *
+   * @return ACCEPT or REJECT_*
+   *
+   * @note shouldProcess can be called while the DOM and layout of the document
+   * involved is in an inconsistent state.  See the note on shouldLoad to see
+   * what this means for implementors of this method.
+   */
+</code></pre>
+
+<p><code>short shouldProcess (in nsContentPolicyType aContentType, in nsIURI aContentLocation, in nsIURI aRequestOrigin, in nsISupports aContext, in ACString aMimeType, in nsISupports aExtra, [optional] in nsIPrincipal aRequestPrincipal);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPolicy.html" title="struct xpcom::interfaces::nsIContentPolicy">nsIContentPolicy</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#53-56' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3400355615</span>, <span class="number">53319</span>, <span class="number">18092</span>, [<span class="number">174</span>, <span class="number">157</span>, <span class="number">220</span>, <span class="number">89</span>, <span class="number">142</span>, <span class="number">79</span>, <span class="number">185</span>, <span class="number">27</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPolicy.html" title="struct xpcom::interfaces::nsIContentPolicy">nsIContentPolicy</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#60-69' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#62-64' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#66-68' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPolicy.html" title="struct xpcom::interfaces::nsIContentPolicy">nsIContentPolicy</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#100-108' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPolicy.rs.html#103-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

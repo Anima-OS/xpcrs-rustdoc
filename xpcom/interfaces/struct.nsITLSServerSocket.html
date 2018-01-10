@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsITLSServerSocket` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsITLSServerSocket">
+
+    <title>xpcom::interfaces::nsITLSServerSocket - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsITLSServerSocket</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetServerCert">GetServerCert</a><a href="#method.SetServerCert">SetServerCert</a><a href="#method.SetSessionCache">SetSessionCache</a><a href="#method.SetSessionTickets">SetSessionTickets</a><a href="#method.SetRequestClientCertificate">SetRequestClientCertificate</a><a href="#method.SetCipherSuites">SetCipherSuites</a><a href="#method.SetVersionRange">SetVersionRange</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIServerSocket&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.Init">Init</a><a href="#method.InitSpecialConnection">InitSpecialConnection</a><a href="#method.InitWithFilename">InitWithFilename</a><a href="#method.Close">Close</a><a href="#method.AsyncListen">AsyncListen</a><a href="#method.GetPort">GetPort</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsITLSServerSocket', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsITLSServerSocket</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsITLSServerSocket { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsITLSServerSocket : nsIServerSocket</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsITLSServerSocket.html" title="struct xpcom::interfaces::nsITLSServerSocket">nsITLSServerSocket</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsITLSServerSocketCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsITLSServerSocket</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsITLSServerSocket.html" title="struct xpcom::interfaces::nsITLSServerSocket">nsITLSServerSocket</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#132-280' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.REQUEST_NEVER' class="associatedconstant"><span id='REQUEST_NEVER.v' class='invisible'><code>pub const <a href='#associatedconstant.REQUEST_NEVER' class="constant"><b>REQUEST_NEVER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REQUEST_NEVER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Values for setRequestClientCertificate
+   */
+</code></pre>
+</div><h4 id='associatedconstant.REQUEST_FIRST_HANDSHAKE' class="associatedconstant"><span id='REQUEST_FIRST_HANDSHAKE.v' class='invisible'><code>pub const <a href='#associatedconstant.REQUEST_FIRST_HANDSHAKE' class="constant"><b>REQUEST_FIRST_HANDSHAKE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REQUEST_FIRST_HANDSHAKE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.REQUEST_ALWAYS' class="associatedconstant"><span id='REQUEST_ALWAYS.v' class='invisible'><code>pub const <a href='#associatedconstant.REQUEST_ALWAYS' class="constant"><b>REQUEST_ALWAYS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REQUEST_ALWAYS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.REQUIRE_FIRST_HANDSHAKE' class="associatedconstant"><span id='REQUIRE_FIRST_HANDSHAKE.v' class='invisible'><code>pub const <a href='#associatedconstant.REQUIRE_FIRST_HANDSHAKE' class="constant"><b>REQUIRE_FIRST_HANDSHAKE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REQUIRE_FIRST_HANDSHAKE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.REQUIRE_ALWAYS' class="associatedconstant"><span id='REQUIRE_ALWAYS.v' class='invisible'><code>pub const <a href='#associatedconstant.REQUIRE_ALWAYS' class="constant"><b>REQUIRE_ALWAYS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REQUIRE_ALWAYS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='method.GetServerCert' class="method"><span id='GetServerCert.v' class='invisible'><code>pub unsafe fn <a href='#method.GetServerCert' class='fnname'>GetServerCert</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aServerCert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#166-168' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * serverCert
+   *
+   * The server&#39;s certificate that is presented to the client during the TLS
+   * handshake.  This is required to be set before calling |asyncListen|.
+   */
+</code></pre>
+
+<p><code>attribute nsIX509Cert serverCert;</code></p>
+</div><h4 id='method.SetServerCert' class="method"><span id='SetServerCert.v' class='invisible'><code>pub unsafe fn <a href='#method.SetServerCert' class='fnname'>SetServerCert</a>(&amp;self, aServerCert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#183-185' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * serverCert
+   *
+   * The server&#39;s certificate that is presented to the client during the TLS
+   * handshake.  This is required to be set before calling |asyncListen|.
+   */
+</code></pre>
+
+<p><code>attribute nsIX509Cert serverCert;</code></p>
+</div><h4 id='method.SetSessionCache' class="method"><span id='SetSessionCache.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSessionCache' class='fnname'>SetSessionCache</a>(&amp;self, aSessionCache: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#201-203' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * setSessionCache
+   *
+   * Whether the server should use a session cache.  Defaults to true.  This
+   * should be set before calling |asyncListen| if you wish to change the
+   * default.
+   */
+</code></pre>
+
+<p><code>void setSessionCache (in boolean aSessionCache);</code></p>
+</div><h4 id='method.SetSessionTickets' class="method"><span id='SetSessionTickets.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSessionTickets' class='fnname'>SetSessionTickets</a>(&amp;self, aSessionTickets: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#219-221' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * setSessionTickets
+   *
+   * Whether the server should support session tickets.  Defaults to true.  This
+   * should be set before calling |asyncListen| if you wish to change the
+   * default.
+   */
+</code></pre>
+
+<p><code>void setSessionTickets (in boolean aSessionTickets);</code></p>
+</div><h4 id='method.SetRequestClientCertificate' class="method"><span id='SetRequestClientCertificate.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRequestClientCertificate' class='fnname'>SetRequestClientCertificate</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestClientCert: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#238-240' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * setRequestClientCertificate
+   *
+   * Whether the server should request and/or require a client auth certificate
+   * from the client.  Defaults to REQUEST_NEVER.  See the possible options
+   * above.  This should be set before calling |asyncListen| if you wish to
+   * change the default.
+   */
+</code></pre>
+
+<p><code>void setRequestClientCertificate (in unsigned long aRequestClientCert);</code></p>
+</div><h4 id='method.SetCipherSuites' class="method"><span id='SetCipherSuites.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCipherSuites' class='fnname'>SetCipherSuites</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCipherSuites: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLength: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#255-257' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * setCipherSuites
+   *
+   * The server&#39;s cipher suites that is used by the TLS handshake.
+   * This is required to be set before calling |asyncListen|.
+   */
+</code></pre>
+
+<p><code>void setCipherSuites ([array, size_is (aLength)] in unsigned short aCipherSuites, in unsigned long aLength);</code></p>
+</div><h4 id='method.SetVersionRange' class="method"><span id='SetVersionRange.v' class='invisible'><code>pub unsafe fn <a href='#method.SetVersionRange' class='fnname'>SetVersionRange</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMinVersion: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMaxVersion: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#275-277' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * setVersionRange
+   *
+   * The server&#39;s TLS versions that is used by the TLS handshake.
+   * This is required to be set before calling |asyncListen|.
+   *
+   * aMinVersion and aMaxVersion is a TLS version value from
+   * |nsITLSClientStatus| constants.
+   */
+</code></pre>
+
+<p><code>void setVersionRange (in unsigned short aMinVersion, in unsigned short aMaxVersion);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIServerSocket.html" title="struct xpcom::interfaces::nsIServerSocket">nsIServerSocket</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIServerSocketCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIServerSocket.rs.html#82-84' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIServerSocket</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.LoopbackOnly' class="associatedconstant"><span id='LoopbackOnly.v' class='invisible'><code>pub const <a href='#associatedconstant.LoopbackOnly' class="constant"><b>LoopbackOnly</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.KeepWhenOffline' class="associatedconstant"><span id='KeepWhenOffline.v' class='invisible'><code>pub const <a href='#associatedconstant.KeepWhenOffline' class="constant"><b>KeepWhenOffline</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='method.Init' class="method"><span id='Init.v' class='invisible'><code>pub unsafe fn <a href='#method.Init' class='fnname'>Init</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPort: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLoopbackOnly: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBackLog: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIServerSocket.rs.html#192-194' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** @} */
+/**
+     * init
+     *
+     * This method initializes a server socket.
+     *
+     * @param aPort
+     *        The port of the server socket.  Pass -1 to indicate no preference,
+     *        and a port will be selected automatically.
+     * @param aLoopbackOnly
+     *        If true, the server socket will only respond to connections on the
+     *        local loopback interface.  Otherwise, it will accept connections
+     *        from any interface.  To specify a particular network interface,
+     *        use initWithAddress.
+     * @param aBackLog
+     *        The maximum length the queue of pending connections may grow to.
+     *        This parameter may be silently limited by the operating system.
+     *        Pass -1 to use the default value.
+     */
+</code></pre>
+
+<p><code>void init (in long aPort, in boolean aLoopbackOnly, in long aBackLog);</code></p>
+</div><h4 id='method.InitSpecialConnection' class="method"><span id='InitSpecialConnection.v' class='invisible'><code>pub unsafe fn <a href='#method.InitSpecialConnection' class='fnname'>InitSpecialConnection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPort: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../xpcom/interfaces/type.nsServerSocketFlag.html" title="type xpcom::interfaces::nsServerSocketFlag">nsServerSocketFlag</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBackLog: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIServerSocket.rs.html#219-221' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * initSpecialConnection
+     *
+     * This method initializes a server socket and offers the ability to have
+     * that socket not get terminated if Gecko is set offline.
+     *
+     * @param aPort
+     *        The port of the server socket.  Pass -1 to indicate no preference,
+     *        and a port will be selected automatically.
+     * @param aFlags
+     *        Flags for the socket.
+     * @param aBackLog
+     *        The maximum length the queue of pending connections may grow to.
+     *        This parameter may be silently limited by the operating system.
+     *        Pass -1 to use the default value.
+     */
+</code></pre>
+
+<p><code>void initSpecialConnection (in long aPort, in nsServerSocketFlag aFlags, in long aBackLog);</code></p>
+</div><h4 id='method.InitWithFilename' class="method"><span id='InitWithFilename.v' class='invisible'><code>pub unsafe fn <a href='#method.InitWithFilename' class='fnname'>InitWithFilename</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPath: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPermissions: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBacklog: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIServerSocket.rs.html#302-304' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * initWithFilename
+     *
+     * This method initializes a Unix domain or &quot;local&quot; server socket. Such
+     * a socket has a name in the filesystem, like an ordinary file. To
+     * connect, a client supplies the socket&#39;s filename, and the usual
+     * permission checks on socket apply.
+     *
+     * This makes Unix domain sockets useful for communication between the
+     * programs being run by a specific user on a single machine: the
+     * operating system takes care of authentication, and the user&#39;s home
+     * directory or profile directory provide natural per-user rendezvous
+     * points.
+     *
+     * Since Unix domain sockets are always local to the machine, they are
+     * not affected by the nsIIOService&#39;s &#39;offline&#39; flag.
+     *
+     * The system-level socket API may impose restrictions on the length of
+     * the filename that are stricter than those of the underlying
+     * filesystem. If the file name is too long, this returns
+     * NS_ERROR_FILE_NAME_TOO_LONG.
+     *
+     * All components of the path prefix of |aPath| must name directories;
+     * otherwise, this returns NS_ERROR_FILE_NOT_DIRECTORY.
+     *
+     * This call requires execute permission on all directories containing
+     * the one in which the socket is to be created, and write and execute
+     * permission on the directory itself. Otherwise, this returns
+     * NS_ERROR_CONNECTION_REFUSED.
+     *
+     * This call creates the socket&#39;s directory entry. There must not be
+     * any existing entry with the given name. If there is, this returns
+     * NS_ERROR_SOCKET_ADDRESS_IN_USE.
+     *
+     * On systems that don&#39;t support Unix domain sockets at all, this
+     * returns NS_ERROR_SOCKET_ADDRESS_NOT_SUPPORTED.
+     *
+     * @param aPath nsIFile
+     *        The file name at which the socket should be created.
+     *
+     * @param aPermissions unsigned long
+     *        Unix-style permission bits to be applied to the new socket.
+     *
+     * Note about permissions: Linux&#39;s unix(7) man page claims that some
+     * BSD-derived systems ignore permissions on UNIX-domain sockets;
+     * NetBSD&#39;s bind(2) man page agrees, but says it does check now (dated
+     * 2005). POSIX has required &#39;connect&#39; to fail if write permission on
+     * the socket itself is not granted since 2003 (Issue 6). NetBSD says
+     * that the permissions on the containing directory (execute) have
+     * always applied, so creating sockets in appropriately protected
+     * directories should be secure on both old and new systems.
+     */
+</code></pre>
+
+<p><code>void initWithFilename (in nsIFile aPath, in unsigned long aPermissions, in long aBacklog);</code></p>
+</div><h4 id='method.Close' class="method"><span id='Close.v' class='invisible'><code>pub unsafe fn <a href='#method.Close' class='fnname'>Close</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIServerSocket.rs.html#321-323' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * close
+     *
+     * This method closes a server socket.  This does not affect already
+     * connected client sockets (i.e., the nsISocketTransport instances
+     * created from this server socket).  This will cause the onStopListening
+     * event to asynchronously fire with a status of NS_BINDING_ABORTED.
+     */
+</code></pre>
+
+<p><code>void close ();</code></p>
+</div><h4 id='method.AsyncListen' class="method"><span id='AsyncListen.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncListen' class='fnname'>AsyncListen</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIServerSocketListener.html" title="struct xpcom::interfaces::nsIServerSocketListener">nsIServerSocketListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIServerSocket.rs.html#347-349' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * asyncListen
+     *
+     * This method puts the server socket in the listening state.  It will
+     * asynchronously listen for and accept client connections.  The listener
+     * will be notified once for each client connection that is accepted.  The
+     * listener&#39;s onSocketAccepted method will be called on the same thread
+     * that called asyncListen (the calling thread must have a nsIEventTarget).
+     *
+     * The listener will be passed a reference to an already connected socket
+     * transport (nsISocketTransport).  See below for more details.
+     *
+     * @param aListener
+     *        The listener to be notified when client connections are accepted.
+     */
+</code></pre>
+
+<p><code>void asyncListen (in nsIServerSocketListener aListener);</code></p>
+</div><h4 id='method.GetPort' class="method"><span id='GetPort.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPort' class='fnname'>GetPort</a>(&amp;self, aPort: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIServerSocket.rs.html#361-363' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns the port of this server socket.
+     */
+</code></pre>
+
+<p><code>readonly attribute long port;</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITLSServerSocket.html" title="struct xpcom::interfaces::nsITLSServerSocket">nsITLSServerSocket</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3425448185</span>, <span class="number">53162</span>, <span class="number">19338</span>, [<span class="number">189</span>, <span class="number">68</span>, <span class="number">194</span>, <span class="number">72</span>, <span class="number">129</span>, <span class="number">152</span>, <span class="number">27</span>, <span class="number">116</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITLSServerSocket.html" title="struct xpcom::interfaces::nsITLSServerSocket">nsITLSServerSocket</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITLSServerSocket.html" title="struct xpcom::interfaces::nsITLSServerSocket">nsITLSServerSocket</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIServerSocket.html" title="struct xpcom::interfaces::nsIServerSocket">nsIServerSocket</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIServerSocket.html" title="struct xpcom::interfaces::nsIServerSocket">nsIServerSocket</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITLSServerSocket.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

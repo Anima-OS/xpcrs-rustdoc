@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `mozIStorageError` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, mozIStorageError">
+
+    <title>xpcom::interfaces::mozIStorageError - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct mozIStorageError</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetResult">GetResult</a><a href="#method.GetMessage">GetMessage</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'mozIStorageError', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>mozIStorageError</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct mozIStorageError { /* fields omitted */ }</pre><div class='docblock'><p><code>interface mozIStorageError : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageError.html" title="struct xpcom::interfaces::mozIStorageError">mozIStorageError</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;mozIStorageErrorCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>mozIStorageError</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageError.html" title="struct xpcom::interfaces::mozIStorageError">mozIStorageError</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#117-363' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.ERROR' class="associatedconstant"><span id='ERROR.v' class='invisible'><code>pub const <a href='#associatedconstant.ERROR' class="constant"><b>ERROR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ERROR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * General SQL error or missing database.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.INTERNAL' class="associatedconstant"><span id='INTERNAL.v' class='invisible'><code>pub const <a href='#associatedconstant.INTERNAL' class="constant"><b>INTERNAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">INTERNAL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/**
+   * Internal logic error.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.PERM' class="associatedconstant"><span id='PERM.v' class='invisible'><code>pub const <a href='#associatedconstant.PERM' class="constant"><b>PERM</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PERM</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+<pre><code class="language-text">/**
+   * Access permission denied.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.ABORT' class="associatedconstant"><span id='ABORT.v' class='invisible'><code>pub const <a href='#associatedconstant.ABORT' class="constant"><b>ABORT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ABORT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * A callback routine requested an abort.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.BUSY' class="associatedconstant"><span id='BUSY.v' class='invisible'><code>pub const <a href='#associatedconstant.BUSY' class="constant"><b>BUSY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">BUSY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+<pre><code class="language-text">/**
+   * The database file is locked.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.LOCKED' class="associatedconstant"><span id='LOCKED.v' class='invisible'><code>pub const <a href='#associatedconstant.LOCKED' class="constant"><b>LOCKED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">LOCKED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+<pre><code class="language-text">/**
+   * A table in the database is locked.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.NOMEM' class="associatedconstant"><span id='NOMEM.v' class='invisible'><code>pub const <a href='#associatedconstant.NOMEM' class="constant"><b>NOMEM</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOMEM</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+<pre><code class="language-text">/**
+   * An allocation failed.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.READONLY' class="associatedconstant"><span id='READONLY.v' class='invisible'><code>pub const <a href='#associatedconstant.READONLY' class="constant"><b>READONLY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">READONLY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/**
+   * Attempt to write to a readonly database.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.INTERRUPT' class="associatedconstant"><span id='INTERRUPT.v' class='invisible'><code>pub const <a href='#associatedconstant.INTERRUPT' class="constant"><b>INTERRUPT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">INTERRUPT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+<pre><code class="language-text">/**
+   * Operation was terminated by an interrupt.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.IOERR' class="associatedconstant"><span id='IOERR.v' class='invisible'><code>pub const <a href='#associatedconstant.IOERR' class="constant"><b>IOERR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IOERR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">10</span></pre>
+<pre><code class="language-text">/**
+   * Some kind of disk I/O error occurred.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.CORRUPT' class="associatedconstant"><span id='CORRUPT.v' class='invisible'><code>pub const <a href='#associatedconstant.CORRUPT' class="constant"><b>CORRUPT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CORRUPT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">11</span></pre>
+<pre><code class="language-text">/**
+   * The database disk image is malformed.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FULL' class="associatedconstant"><span id='FULL.v' class='invisible'><code>pub const <a href='#associatedconstant.FULL' class="constant"><b>FULL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FULL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">13</span></pre>
+<pre><code class="language-text">/**
+   * An insertion failed because the database is full.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.CANTOPEN' class="associatedconstant"><span id='CANTOPEN.v' class='invisible'><code>pub const <a href='#associatedconstant.CANTOPEN' class="constant"><b>CANTOPEN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CANTOPEN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">14</span></pre>
+<pre><code class="language-text">/**
+   * Unable to open the database file.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.EMPTY' class="associatedconstant"><span id='EMPTY.v' class='invisible'><code>pub const <a href='#associatedconstant.EMPTY' class="constant"><b>EMPTY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">EMPTY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+<pre><code class="language-text">/**
+   * The database is empty.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SCHEMA' class="associatedconstant"><span id='SCHEMA.v' class='invisible'><code>pub const <a href='#associatedconstant.SCHEMA' class="constant"><b>SCHEMA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SCHEMA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">17</span></pre>
+<pre><code class="language-text">/**
+   * The database scheme changed.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TOOBIG' class="associatedconstant"><span id='TOOBIG.v' class='invisible'><code>pub const <a href='#associatedconstant.TOOBIG' class="constant"><b>TOOBIG</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TOOBIG</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">18</span></pre>
+<pre><code class="language-text">/**
+   * A string or blob exceeds the size limit.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.CONSTRAINT' class="associatedconstant"><span id='CONSTRAINT.v' class='invisible'><code>pub const <a href='#associatedconstant.CONSTRAINT' class="constant"><b>CONSTRAINT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CONSTRAINT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">19</span></pre>
+<pre><code class="language-text">/**
+   * Abort due to a constraint violation.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.MISMATCH' class="associatedconstant"><span id='MISMATCH.v' class='invisible'><code>pub const <a href='#associatedconstant.MISMATCH' class="constant"><b>MISMATCH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MISMATCH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">20</span></pre>
+<pre><code class="language-text">/**
+   * Data type mismatch.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.MISUSE' class="associatedconstant"><span id='MISUSE.v' class='invisible'><code>pub const <a href='#associatedconstant.MISUSE' class="constant"><b>MISUSE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MISUSE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">21</span></pre>
+<pre><code class="language-text">/**
+   * Library used incorrectly.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.NOLFS' class="associatedconstant"><span id='NOLFS.v' class='invisible'><code>pub const <a href='#associatedconstant.NOLFS' class="constant"><b>NOLFS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOLFS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">22</span></pre>
+<pre><code class="language-text">/**
+   * Uses OS features not supported on the host system.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.AUTH' class="associatedconstant"><span id='AUTH.v' class='invisible'><code>pub const <a href='#associatedconstant.AUTH' class="constant"><b>AUTH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">AUTH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">23</span></pre>
+<pre><code class="language-text">/**
+   * Authorization denied.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FORMAT' class="associatedconstant"><span id='FORMAT.v' class='invisible'><code>pub const <a href='#associatedconstant.FORMAT' class="constant"><b>FORMAT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FORMAT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">24</span></pre>
+<pre><code class="language-text">/**
+   * Auxiliary database format error.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RANGE' class="associatedconstant"><span id='RANGE.v' class='invisible'><code>pub const <a href='#associatedconstant.RANGE' class="constant"><b>RANGE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RANGE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">25</span></pre>
+<pre><code class="language-text">/**
+   * Attempt to bind a parameter using an out-of-range index or nonexistent
+   * named parameter name.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.NOTADB' class="associatedconstant"><span id='NOTADB.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTADB' class="constant"><b>NOTADB</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTADB</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">26</span></pre>
+<pre><code class="language-text">/**
+   * File opened that is not a database file.
+   */
+</code></pre>
+</div><h4 id='method.GetResult' class="method"><span id='GetResult.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResult' class='fnname'>GetResult</a>(&amp;self, aResult: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#344-346' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicates what type of error occurred.
+   */
+</code></pre>
+
+<p><code>readonly attribute long result;</code></p>
+</div><h4 id='method.GetMessage' class="method"><span id='GetMessage.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMessage' class='fnname'>GetMessage</a>(&amp;self, aMessage: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#358-360' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * An error string the gives more details, if available.
+   */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String message;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageError.html" title="struct xpcom::interfaces::mozIStorageError">mozIStorageError</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">523571094</span>, <span class="number">28707</span>, <span class="number">17226</span>, [<span class="number">136</span>, <span class="number">100</span>, <span class="number">64</span>, <span class="number">161</span>, <span class="number">196</span>, <span class="number">147</span>, <span class="number">170</span>, <span class="number">193</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageError.html" title="struct xpcom::interfaces::mozIStorageError">mozIStorageError</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageError.html" title="struct xpcom::interfaces::mozIStorageError">mozIStorageError</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageError.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

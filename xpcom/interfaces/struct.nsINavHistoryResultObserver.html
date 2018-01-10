@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsINavHistoryResultObserver` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsINavHistoryResultObserver">
+
+    <title>xpcom::interfaces::nsINavHistoryResultObserver - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsINavHistoryResultObserver</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.NodeInserted">NodeInserted</a><a href="#method.NodeRemoved">NodeRemoved</a><a href="#method.NodeMoved">NodeMoved</a><a href="#method.NodeTitleChanged">NodeTitleChanged</a><a href="#method.NodeURIChanged">NodeURIChanged</a><a href="#method.NodeIconChanged">NodeIconChanged</a><a href="#method.NodeHistoryDetailsChanged">NodeHistoryDetailsChanged</a><a href="#method.NodeTagsChanged">NodeTagsChanged</a><a href="#method.NodeKeywordChanged">NodeKeywordChanged</a><a href="#method.NodeAnnotationChanged">NodeAnnotationChanged</a><a href="#method.NodeDateAddedChanged">NodeDateAddedChanged</a><a href="#method.NodeLastModifiedChanged">NodeLastModifiedChanged</a><a href="#method.ContainerStateChanged">ContainerStateChanged</a><a href="#method.InvalidateContainer">InvalidateContainer</a><a href="#method.SortingChanged">SortingChanged</a><a href="#method.Batching">Batching</a><a href="#method.GetResult">GetResult</a><a href="#method.SetResult">SetResult</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsINavHistoryResultObserver', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsINavHistoryResultObserver</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#984-993' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsINavHistoryResultObserver { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsINavHistoryResultObserver : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * Allows clients to observe what is happening to a result as it updates itself
+ * according to history and bookmark system events. Register this observer on a
+ * result using nsINavHistoryResult::addObserver.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultObserver.html" title="struct xpcom::interfaces::nsINavHistoryResultObserver">nsINavHistoryResultObserver</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1033-1039' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsINavHistoryResultObserverCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1036-1038' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsINavHistoryResultObserver</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultObserver.html" title="struct xpcom::interfaces::nsINavHistoryResultObserver">nsINavHistoryResultObserver</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1134-1474' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.NodeInserted' class="method"><span id='NodeInserted.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeInserted' class='fnname'>NodeInserted</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryContainerResultNode.html" title="struct xpcom::interfaces::nsINavHistoryContainerResultNode">nsINavHistoryContainerResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewIndex: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1147-1149' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when &#39;aItem&#39; is inserted into &#39;aParent&#39; at index &#39;aNewIndex&#39;.
+   * The item previously at index (if any) and everything below it will have
+   * been shifted down by one. The item may be a container or a leaf.
+   */
+</code></pre>
+
+<p><code>void nodeInserted (in nsINavHistoryContainerResultNode aParent, in nsINavHistoryResultNode aNode, in unsigned long aNewIndex);</code></p>
+</div><h4 id='method.NodeRemoved' class="method"><span id='NodeRemoved.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeRemoved' class='fnname'>NodeRemoved</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryContainerResultNode.html" title="struct xpcom::interfaces::nsINavHistoryContainerResultNode">nsINavHistoryContainerResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aItem: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOldIndex: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1164-1166' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called whan &#39;aItem&#39; is removed from &#39;aParent&#39; at &#39;aOldIndex&#39;. The item
+   * may be a container or a leaf. This function will be called after the item
+   * has been removed from its parent list, but before anything else (including
+   * NULLing out the item&#39;s parent) has happened.
+   */
+</code></pre>
+
+<p><code>void nodeRemoved (in nsINavHistoryContainerResultNode aParent, in nsINavHistoryResultNode aItem, in unsigned long aOldIndex);</code></p>
+</div><h4 id='method.NodeMoved' class="method"><span id='NodeMoved.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeMoved' class='fnname'>NodeMoved</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOldParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryContainerResultNode.html" title="struct xpcom::interfaces::nsINavHistoryContainerResultNode">nsINavHistoryContainerResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOldIndex: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryContainerResultNode.html" title="struct xpcom::interfaces::nsINavHistoryContainerResultNode">nsINavHistoryContainerResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewIndex: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1184-1186' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called whan &#39;aItem&#39; is moved from &#39;aOldParent&#39; at &#39;aOldIndex&#39; to
+   * aNewParent at aNewIndex. The item may be a container or a leaf.
+   *
+   * XXX: at the moment, this method is called only when an item is moved
+   * within the same container. When an item is moved between containers,
+   * a new node is created for the item, and the itemRemoved/itemAdded methods
+   * are used.
+   */
+</code></pre>
+
+<p><code>void nodeMoved (in nsINavHistoryResultNode aNode, in nsINavHistoryContainerResultNode aOldParent, in unsigned long aOldIndex, in nsINavHistoryContainerResultNode aNewParent, in unsigned long aNewIndex);</code></p>
+</div><h4 id='method.NodeTitleChanged' class="method"><span id='NodeTitleChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeTitleChanged' class='fnname'>NodeTitleChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewTitle: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1203-1205' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called right after aNode&#39;s title has changed.
+   *
+   * @param aNode
+   *        a result node
+   * @param aNewTitle
+   *        the new title
+   */
+</code></pre>
+
+<p><code>void nodeTitleChanged (in nsINavHistoryResultNode aNode, in AUTF8String aNewTitle);</code></p>
+</div><h4 id='method.NodeURIChanged' class="method"><span id='NodeURIChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeURIChanged' class='fnname'>NodeURIChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOldURI: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1222-1224' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called right after aNode&#39;s uri property has changed.
+   *
+   * @param aNode
+   *        a result node
+   * @param aNewURI
+   *        the old uri
+   */
+</code></pre>
+
+<p><code>void nodeURIChanged (in nsINavHistoryResultNode aNode, in AUTF8String aOldURI);</code></p>
+</div><h4 id='method.NodeIconChanged' class="method"><span id='NodeIconChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeIconChanged' class='fnname'>NodeIconChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1241-1243' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called right after aNode&#39;s icon property has changed.
+   *
+   * @param aNode
+   *        a result node
+   *
+   * @note: The new icon is accessible through aNode.icon.
+   */
+</code></pre>
+
+<p><code>void nodeIconChanged (in nsINavHistoryResultNode aNode);</code></p>
+</div><h4 id='method.NodeHistoryDetailsChanged' class="method"><span id='NodeHistoryDetailsChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeHistoryDetailsChanged' class='fnname'>NodeHistoryDetailsChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOldVisitDate: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOldAccessCount: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1263-1265' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called right after aNode&#39;s time property or accessCount property, or both,
+   * have changed.
+   *
+   * @param aNode
+   *        a uri result node
+   * @param aOldVisitDate
+   *        the old visit date
+   * @param aOldAccessCount
+   *        the old access-count
+   */
+</code></pre>
+
+<p><code>void nodeHistoryDetailsChanged (in nsINavHistoryResultNode aNode, in PRTime aOldVisitDate, in unsigned long aOldAccessCount);</code></p>
+</div><h4 id='method.NodeTagsChanged' class="method"><span id='NodeTagsChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeTagsChanged' class='fnname'>NodeTagsChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1282-1284' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when the tags set on the uri represented by aNode have changed.
+   *
+   * @param aNode
+   *        a uri result node
+   *
+   * @note: The new tags list is accessible through aNode.tags.
+   */
+</code></pre>
+
+<p><code>void nodeTagsChanged (in nsINavHistoryResultNode aNode);</code></p>
+</div><h4 id='method.NodeKeywordChanged' class="method"><span id='NodeKeywordChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeKeywordChanged' class='fnname'>NodeKeywordChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewKeyword: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1301-1303' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called right after the aNode&#39;s keyword property has changed.
+   *
+   * @param aNode
+   *        a uri result node
+   * @param aNewKeyword
+   *        the new keyword
+   */
+</code></pre>
+
+<p><code>void nodeKeywordChanged (in nsINavHistoryResultNode aNode, in AUTF8String aNewKeyword);</code></p>
+</div><h4 id='method.NodeAnnotationChanged' class="method"><span id='NodeAnnotationChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeAnnotationChanged' class='fnname'>NodeAnnotationChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAnnoName: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1321-1323' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called right after an annotation of aNode&#39;s has changed (set, altered, or
+   * unset).
+   *
+   * @param aNode
+   *        a result node
+   * @param aAnnoName
+   *        the name of the annotation that changed
+   */
+</code></pre>
+
+<p><code>void nodeAnnotationChanged (in nsINavHistoryResultNode aNode, in AUTF8String aAnnoName);</code></p>
+</div><h4 id='method.NodeDateAddedChanged' class="method"><span id='NodeDateAddedChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeDateAddedChanged' class='fnname'>NodeDateAddedChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewValue: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1340-1342' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called right after aNode&#39;s dateAdded property has changed.
+   *
+   * @param aNode
+   *        a result node
+   * @param aNewValue
+   *        the new value of the dateAdded property
+   */
+</code></pre>
+
+<p><code>void nodeDateAddedChanged (in nsINavHistoryResultNode aNode, in PRTime aNewValue);</code></p>
+</div><h4 id='method.NodeLastModifiedChanged' class="method"><span id='NodeLastModifiedChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeLastModifiedChanged' class='fnname'>NodeLastModifiedChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultNode.html" title="struct xpcom::interfaces::nsINavHistoryResultNode">nsINavHistoryResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewValue: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1359-1361' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called right after aNode&#39;s dateModified property has changed.
+   *
+   * @param aNode
+   *        a result node
+   * @param aNewValue
+   *        the new value of the dateModified property
+   */
+</code></pre>
+
+<p><code>void nodeLastModifiedChanged (in nsINavHistoryResultNode aNode, in PRTime aNewValue);</code></p>
+</div><h4 id='method.ContainerStateChanged' class="method"><span id='ContainerStateChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.ContainerStateChanged' class='fnname'>ContainerStateChanged</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContainerNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryContainerResultNode.html" title="struct xpcom::interfaces::nsINavHistoryContainerResultNode">nsINavHistoryContainerResultNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOldState: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNewState: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1380-1382' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called after a container changes state.
+   *
+   * @param aContainerNode
+   *        The container that has changed state.
+   * @param aOldState
+   *        The state that aContainerNode has transitioned out of.
+   * @param aNewState
+   *        The state that aContainerNode has transitioned into.
+   */
+</code></pre>
+
+<p><code>void containerStateChanged (in nsINavHistoryContainerResultNode aContainerNode, in unsigned long aOldState, in unsigned long aNewState);</code></p>
+</div><h4 id='method.InvalidateContainer' class="method"><span id='InvalidateContainer.v' class='invisible'><code>pub unsafe fn <a href='#method.InvalidateContainer' class='fnname'>InvalidateContainer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContainerNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryContainerResultNode.html" title="struct xpcom::interfaces::nsINavHistoryContainerResultNode">nsINavHistoryContainerResultNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1398-1400' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when something significant has happened within the container. The
+   * contents of the container should be re-built.
+   *
+   * @param aContainerNode
+   *        the container node to invalidate
+   */
+</code></pre>
+
+<p><code>void invalidateContainer (in nsINavHistoryContainerResultNode aContainerNode);</code></p>
+</div><h4 id='method.SortingChanged' class="method"><span id='SortingChanged.v' class='invisible'><code>pub unsafe fn <a href='#method.SortingChanged' class='fnname'>SortingChanged</a>(&amp;self, sortingMode: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1421-1423' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is called to indicate to the UI that the sort has changed to the
+   * given mode. For trees, for example, this would update the column headers
+   * to reflect the sorting. For many other types of views, this won&#39;t be
+   * applicable.
+   *
+   * @param sortingMode  One of nsINavHistoryQueryOptions.SORT_BY_* that
+   *                     indicates the new sorting mode.
+   *
+   * This only is expected to update the sorting UI. invalidateAll() will also
+   * get called if the sorting changes to update everything.
+   */
+</code></pre>
+
+<p><code>void sortingChanged (in unsigned short sortingMode);</code></p>
+</div><h4 id='method.Batching' class="method"><span id='Batching.v' class='invisible'><code>pub unsafe fn <a href='#method.Batching' class='fnname'>Batching</a>(&amp;self, aToggleMode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1441-1443' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is called to indicate that a batch operation is about to start or end.
+   * The observer could want to disable some events or updates during batches,
+   * since multiple operations are packed in a short time.
+   * For example treeviews could temporarily suppress select notifications.
+   *
+   * @param aToggleMode
+   *        true if a batch is starting, false if it&#39;s ending.
+   */
+</code></pre>
+
+<p><code>void batching (in boolean aToggleMode);</code></p>
+</div><h4 id='method.GetResult' class="method"><span id='GetResult.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResult' class='fnname'>GetResult</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResult: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResult.html" title="struct xpcom::interfaces::nsINavHistoryResult">nsINavHistoryResult</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1455-1457' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called by the result when this observer is added.
+   */
+</code></pre>
+
+<p><code>attribute nsINavHistoryResult result;</code></p>
+</div><h4 id='method.SetResult' class="method"><span id='SetResult.v' class='invisible'><code>pub unsafe fn <a href='#method.SetResult' class='fnname'>SetResult</a>(&amp;self, aResult: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResult.html" title="struct xpcom::interfaces::nsINavHistoryResult">nsINavHistoryResult</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1469-1471' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called by the result when this observer is added.
+   */
+</code></pre>
+
+<p><code>attribute nsINavHistoryResult result;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultObserver.html" title="struct xpcom::interfaces::nsINavHistoryResultObserver">nsINavHistoryResultObserver</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#998-1001' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">4130179947</span>, <span class="number">15438</span>, <span class="number">19103</span>, [<span class="number">168</span>, <span class="number">151</span>, <span class="number">219</span>, <span class="number">96</span>, <span class="number">93</span>, <span class="number">11</span>, <span class="number">122</span>, <span class="number">15</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultObserver.html" title="struct xpcom::interfaces::nsINavHistoryResultObserver">nsINavHistoryResultObserver</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1005-1014' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1007-1009' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1011-1013' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryResultObserver.html" title="struct xpcom::interfaces::nsINavHistoryResultObserver">nsINavHistoryResultObserver</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1045-1053' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#1048-1052' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

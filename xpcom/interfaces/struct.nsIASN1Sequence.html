@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIASN1Sequence` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIASN1Sequence">
+
+    <title>xpcom::interfaces::nsIASN1Sequence - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIASN1Sequence</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetASN1Objects">GetASN1Objects</a><a href="#method.SetASN1Objects">SetASN1Objects</a><a href="#method.GetIsValidContainer">GetIsValidContainer</a><a href="#method.SetIsValidContainer">SetIsValidContainer</a><a href="#method.GetIsExpanded">GetIsExpanded</a><a href="#method.SetIsExpanded">SetIsExpanded</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIASN1Object&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetType">GetType</a><a href="#method.SetType">SetType</a><a href="#method.GetTag">GetTag</a><a href="#method.SetTag">SetTag</a><a href="#method.GetDisplayName">GetDisplayName</a><a href="#method.SetDisplayName">SetDisplayName</a><a href="#method.GetDisplayValue">GetDisplayValue</a><a href="#method.SetDisplayValue">SetDisplayValue</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIASN1Sequence', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIASN1Sequence</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#41-50' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIASN1Sequence { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIASN1Sequence : nsIASN1Object</code></p>
+
+<pre><code class="language-text">/**
+ * This represents a sequence of ASN.1 objects,
+ * where ASN.1 is &quot;Abstract Syntax Notation number One&quot;.
+ *
+ * Overview of how this ASN1 interface is intended to
+ * work.
+ *
+ * First off, the nsIASN1Sequence is any type in ASN1
+ * that consists of sub-elements (ie SEQUENCE, SET)
+ * nsIASN1Printable Items are all the other types that
+ * can be viewed by themselves without interpreting further.
+ * Examples would include INTEGER, UTF-8 STRING, OID.
+ * These are not intended to directly reflect the numberous
+ * types that exist in ASN1, but merely an interface to ease
+ * producing a tree display the ASN1 structure of any DER
+ * object.
+ *
+ * The additional state information carried in this interface
+ * makes it fit for being used as the data structure
+ * when working with visual reprenstation of ASN.1 objects
+ * in a human user interface, like in a tree widget
+ * where open/close state of nodes must be remembered.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIASN1Sequence.html" title="struct xpcom::interfaces::nsIASN1Sequence">nsIASN1Sequence</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#90-96' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIASN1SequenceCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#93-95' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIASN1Sequence</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIASN1Sequence.html" title="struct xpcom::interfaces::nsIASN1Sequence">nsIASN1Sequence</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#155-249' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetASN1Objects' class="method"><span id='GetASN1Objects.v' class='invisible'><code>pub unsafe fn <a href='#method.GetASN1Objects' class='fnname'>GetASN1Objects</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aASN1Objects: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIMutableArray.html" title="struct xpcom::interfaces::nsIMutableArray">nsIMutableArray</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#166-168' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  The array of objects stored in the sequence.
+   */
+</code></pre>
+
+<p><code>attribute nsIMutableArray ASN1Objects;</code></p>
+</div><h4 id='method.SetASN1Objects' class="method"><span id='SetASN1Objects.v' class='invisible'><code>pub unsafe fn <a href='#method.SetASN1Objects' class='fnname'>SetASN1Objects</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aASN1Objects: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIMutableArray.html" title="struct xpcom::interfaces::nsIMutableArray">nsIMutableArray</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#180-182' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  The array of objects stored in the sequence.
+   */
+</code></pre>
+
+<p><code>attribute nsIMutableArray ASN1Objects;</code></p>
+</div><h4 id='method.GetIsValidContainer' class="method"><span id='GetIsValidContainer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsValidContainer' class='fnname'>GetIsValidContainer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsValidContainer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#196-198' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Whether the node at this position in the ASN.1 data structure
+   *  sequence contains sub elements understood by the
+   *  application.
+   */
+</code></pre>
+
+<p><code>attribute boolean isValidContainer;</code></p>
+</div><h4 id='method.SetIsValidContainer' class="method"><span id='SetIsValidContainer.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIsValidContainer' class='fnname'>SetIsValidContainer</a>(&amp;self, aIsValidContainer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#212-214' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Whether the node at this position in the ASN.1 data structure
+   *  sequence contains sub elements understood by the
+   *  application.
+   */
+</code></pre>
+
+<p><code>attribute boolean isValidContainer;</code></p>
+</div><h4 id='method.GetIsExpanded' class="method"><span id='GetIsExpanded.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsExpanded' class='fnname'>GetIsExpanded</a>(&amp;self, aIsExpanded: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#228-230' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Whether the contained objects should be shown or hidden.
+   *  A UI implementation can use this flag to store the current
+   *  expansion state when shown in a tree widget.
+   */
+</code></pre>
+
+<p><code>attribute boolean isExpanded;</code></p>
+</div><h4 id='method.SetIsExpanded' class="method"><span id='SetIsExpanded.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIsExpanded' class='fnname'>SetIsExpanded</a>(&amp;self, aIsExpanded: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#244-246' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Whether the contained objects should be shown or hidden.
+   *  A UI implementation can use this flag to store the current
+   *  expansion state when shown in a tree widget.
+   */
+</code></pre>
+
+<p><code>attribute boolean isExpanded;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIASN1Object.html" title="struct xpcom::interfaces::nsIASN1Object">nsIASN1Object</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIASN1ObjectCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Object.rs.html#80-82' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIASN1Object</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.ASN1_END_CONTENTS' class="associatedconstant"><span id='ASN1_END_CONTENTS.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_END_CONTENTS' class="constant"><b>ASN1_END_CONTENTS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_BOOLEAN' class="associatedconstant"><span id='ASN1_BOOLEAN.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_BOOLEAN' class="constant"><b>ASN1_BOOLEAN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_INTEGER' class="associatedconstant"><span id='ASN1_INTEGER.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_INTEGER' class="constant"><b>ASN1_INTEGER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_BIT_STRING' class="associatedconstant"><span id='ASN1_BIT_STRING.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_BIT_STRING' class="constant"><b>ASN1_BIT_STRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_OCTET_STRING' class="associatedconstant"><span id='ASN1_OCTET_STRING.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_OCTET_STRING' class="constant"><b>ASN1_OCTET_STRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_NULL' class="associatedconstant"><span id='ASN1_NULL.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_NULL' class="constant"><b>ASN1_NULL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_OBJECT_ID' class="associatedconstant"><span id='ASN1_OBJECT_ID.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_OBJECT_ID' class="constant"><b>ASN1_OBJECT_ID</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_ENUMERATED' class="associatedconstant"><span id='ASN1_ENUMERATED.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_ENUMERATED' class="constant"><b>ASN1_ENUMERATED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_UTF8_STRING' class="associatedconstant"><span id='ASN1_UTF8_STRING.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_UTF8_STRING' class="constant"><b>ASN1_UTF8_STRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_SEQUENCE' class="associatedconstant"><span id='ASN1_SEQUENCE.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_SEQUENCE' class="constant"><b>ASN1_SEQUENCE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_SET' class="associatedconstant"><span id='ASN1_SET.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_SET' class="constant"><b>ASN1_SET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_PRINTABLE_STRING' class="associatedconstant"><span id='ASN1_PRINTABLE_STRING.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_PRINTABLE_STRING' class="constant"><b>ASN1_PRINTABLE_STRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_T61_STRING' class="associatedconstant"><span id='ASN1_T61_STRING.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_T61_STRING' class="constant"><b>ASN1_T61_STRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_IA5_STRING' class="associatedconstant"><span id='ASN1_IA5_STRING.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_IA5_STRING' class="constant"><b>ASN1_IA5_STRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_UTC_TIME' class="associatedconstant"><span id='ASN1_UTC_TIME.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_UTC_TIME' class="constant"><b>ASN1_UTC_TIME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_GEN_TIME' class="associatedconstant"><span id='ASN1_GEN_TIME.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_GEN_TIME' class="constant"><b>ASN1_GEN_TIME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_VISIBLE_STRING' class="associatedconstant"><span id='ASN1_VISIBLE_STRING.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_VISIBLE_STRING' class="constant"><b>ASN1_VISIBLE_STRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_UNIVERSAL_STRING' class="associatedconstant"><span id='ASN1_UNIVERSAL_STRING.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_UNIVERSAL_STRING' class="constant"><b>ASN1_UNIVERSAL_STRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_BMP_STRING' class="associatedconstant"><span id='ASN1_BMP_STRING.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_BMP_STRING' class="constant"><b>ASN1_BMP_STRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_HIGH_TAG_NUMBER' class="associatedconstant"><span id='ASN1_HIGH_TAG_NUMBER.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_HIGH_TAG_NUMBER' class="constant"><b>ASN1_HIGH_TAG_NUMBER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_CONTEXT_SPECIFIC' class="associatedconstant"><span id='ASN1_CONTEXT_SPECIFIC.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_CONTEXT_SPECIFIC' class="constant"><b>ASN1_CONTEXT_SPECIFIC</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_APPLICATION' class="associatedconstant"><span id='ASN1_APPLICATION.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_APPLICATION' class="constant"><b>ASN1_APPLICATION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.ASN1_PRIVATE' class="associatedconstant"><span id='ASN1_PRIVATE.v' class='invisible'><code>pub const <a href='#associatedconstant.ASN1_PRIVATE' class="constant"><b>ASN1_PRIVATE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='method.GetType' class="method"><span id='GetType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetType' class='fnname'>GetType</a>(&amp;self, aType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Object.rs.html#233-235' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  &quot;type&quot; will be equal to one of the defined object identifiers.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long type;</code></p>
+</div><h4 id='method.SetType' class="method"><span id='SetType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetType' class='fnname'>SetType</a>(&amp;self, aType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Object.rs.html#247-249' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  &quot;type&quot; will be equal to one of the defined object identifiers.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long type;</code></p>
+</div><h4 id='method.GetTag' class="method"><span id='GetTag.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTag' class='fnname'>GetTag</a>(&amp;self, aTag: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Object.rs.html#261-263' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  This contains a tag as explained in ASN.1 standards documents.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long tag;</code></p>
+</div><h4 id='method.SetTag' class="method"><span id='SetTag.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTag' class='fnname'>SetTag</a>(&amp;self, aTag: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Object.rs.html#275-277' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  This contains a tag as explained in ASN.1 standards documents.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long tag;</code></p>
+</div><h4 id='method.GetDisplayName' class="method"><span id='GetDisplayName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDisplayName' class='fnname'>GetDisplayName</a>(&amp;self, aDisplayName: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Object.rs.html#289-291' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  &quot;displayName&quot; contains a human readable explanatory label.
+   */
+</code></pre>
+
+<p><code>attribute AString displayName;</code></p>
+</div><h4 id='method.SetDisplayName' class="method"><span id='SetDisplayName.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDisplayName' class='fnname'>SetDisplayName</a>(&amp;self, aDisplayName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Object.rs.html#303-305' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  &quot;displayName&quot; contains a human readable explanatory label.
+   */
+</code></pre>
+
+<p><code>attribute AString displayName;</code></p>
+</div><h4 id='method.GetDisplayValue' class="method"><span id='GetDisplayValue.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDisplayValue' class='fnname'>GetDisplayValue</a>(&amp;self, aDisplayValue: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Object.rs.html#317-319' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  &quot;displayValue&quot; contains the human readable value.
+   */
+</code></pre>
+
+<p><code>attribute AString displayValue;</code></p>
+</div><h4 id='method.SetDisplayValue' class="method"><span id='SetDisplayValue.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDisplayValue' class='fnname'>SetDisplayValue</a>(&amp;self, aDisplayValue: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Object.rs.html#331-333' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  &quot;displayValue&quot; contains the human readable value.
+   */
+</code></pre>
+
+<p><code>attribute AString displayValue;</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIASN1Sequence.html" title="struct xpcom::interfaces::nsIASN1Sequence">nsIASN1Sequence</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#55-58' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3065599974</span>, <span class="number">7633</span>, <span class="number">4530</span>, [<span class="number">137</span>, <span class="number">215</span>, <span class="number">227</span>, <span class="number">6</span>, <span class="number">36</span>, <span class="number">245</span>, <span class="number">11</span>, <span class="number">0</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIASN1Sequence.html" title="struct xpcom::interfaces::nsIASN1Sequence">nsIASN1Sequence</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#62-71' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#64-66' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#68-70' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIASN1Sequence.html" title="struct xpcom::interfaces::nsIASN1Sequence">nsIASN1Sequence</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#102-110' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIASN1Object.html" title="struct xpcom::interfaces::nsIASN1Object">nsIASN1Object</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIASN1Object.html" title="struct xpcom::interfaces::nsIASN1Object">nsIASN1Object</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIASN1Sequence.rs.html#105-109' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

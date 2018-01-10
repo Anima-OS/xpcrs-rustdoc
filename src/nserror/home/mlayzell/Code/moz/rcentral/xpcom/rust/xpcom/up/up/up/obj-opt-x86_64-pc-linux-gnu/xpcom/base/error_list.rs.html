@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="Source to the Rust file `/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/../../../obj-opt-x86_64-pc-linux-gnu//xpcom/base/error_list.rs`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang">
+
+    <title>error_list.rs.html -- source</title>
+
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../../../../../../../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../../../../../../../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../../../../../../../../../../../../../../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc source">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content"><pre class="line-numbers"><span id="1">  1</span>
+<span id="2">  2</span>
+<span id="3">  3</span>
+<span id="4">  4</span>
+<span id="5">  5</span>
+<span id="6">  6</span>
+<span id="7">  7</span>
+<span id="8">  8</span>
+<span id="9">  9</span>
+<span id="10"> 10</span>
+<span id="11"> 11</span>
+<span id="12"> 12</span>
+<span id="13"> 13</span>
+<span id="14"> 14</span>
+<span id="15"> 15</span>
+<span id="16"> 16</span>
+<span id="17"> 17</span>
+<span id="18"> 18</span>
+<span id="19"> 19</span>
+<span id="20"> 20</span>
+<span id="21"> 21</span>
+<span id="22"> 22</span>
+<span id="23"> 23</span>
+<span id="24"> 24</span>
+<span id="25"> 25</span>
+<span id="26"> 26</span>
+<span id="27"> 27</span>
+<span id="28"> 28</span>
+<span id="29"> 29</span>
+<span id="30"> 30</span>
+<span id="31"> 31</span>
+<span id="32"> 32</span>
+<span id="33"> 33</span>
+<span id="34"> 34</span>
+<span id="35"> 35</span>
+<span id="36"> 36</span>
+<span id="37"> 37</span>
+<span id="38"> 38</span>
+<span id="39"> 39</span>
+<span id="40"> 40</span>
+<span id="41"> 41</span>
+<span id="42"> 42</span>
+<span id="43"> 43</span>
+<span id="44"> 44</span>
+<span id="45"> 45</span>
+<span id="46"> 46</span>
+<span id="47"> 47</span>
+<span id="48"> 48</span>
+<span id="49"> 49</span>
+<span id="50"> 50</span>
+<span id="51"> 51</span>
+<span id="52"> 52</span>
+<span id="53"> 53</span>
+<span id="54"> 54</span>
+<span id="55"> 55</span>
+<span id="56"> 56</span>
+<span id="57"> 57</span>
+<span id="58"> 58</span>
+<span id="59"> 59</span>
+<span id="60"> 60</span>
+<span id="61"> 61</span>
+<span id="62"> 62</span>
+<span id="63"> 63</span>
+<span id="64"> 64</span>
+<span id="65"> 65</span>
+<span id="66"> 66</span>
+<span id="67"> 67</span>
+<span id="68"> 68</span>
+<span id="69"> 69</span>
+<span id="70"> 70</span>
+<span id="71"> 71</span>
+<span id="72"> 72</span>
+<span id="73"> 73</span>
+<span id="74"> 74</span>
+<span id="75"> 75</span>
+<span id="76"> 76</span>
+<span id="77"> 77</span>
+<span id="78"> 78</span>
+<span id="79"> 79</span>
+<span id="80"> 80</span>
+<span id="81"> 81</span>
+<span id="82"> 82</span>
+<span id="83"> 83</span>
+<span id="84"> 84</span>
+<span id="85"> 85</span>
+<span id="86"> 86</span>
+<span id="87"> 87</span>
+<span id="88"> 88</span>
+<span id="89"> 89</span>
+<span id="90"> 90</span>
+<span id="91"> 91</span>
+<span id="92"> 92</span>
+<span id="93"> 93</span>
+<span id="94"> 94</span>
+<span id="95"> 95</span>
+<span id="96"> 96</span>
+<span id="97"> 97</span>
+<span id="98"> 98</span>
+<span id="99"> 99</span>
+<span id="100">100</span>
+<span id="101">101</span>
+<span id="102">102</span>
+<span id="103">103</span>
+<span id="104">104</span>
+<span id="105">105</span>
+<span id="106">106</span>
+<span id="107">107</span>
+<span id="108">108</span>
+<span id="109">109</span>
+<span id="110">110</span>
+<span id="111">111</span>
+<span id="112">112</span>
+<span id="113">113</span>
+<span id="114">114</span>
+<span id="115">115</span>
+<span id="116">116</span>
+<span id="117">117</span>
+<span id="118">118</span>
+<span id="119">119</span>
+<span id="120">120</span>
+<span id="121">121</span>
+<span id="122">122</span>
+<span id="123">123</span>
+<span id="124">124</span>
+<span id="125">125</span>
+<span id="126">126</span>
+<span id="127">127</span>
+<span id="128">128</span>
+<span id="129">129</span>
+<span id="130">130</span>
+<span id="131">131</span>
+<span id="132">132</span>
+<span id="133">133</span>
+<span id="134">134</span>
+<span id="135">135</span>
+<span id="136">136</span>
+<span id="137">137</span>
+<span id="138">138</span>
+<span id="139">139</span>
+<span id="140">140</span>
+<span id="141">141</span>
+<span id="142">142</span>
+<span id="143">143</span>
+<span id="144">144</span>
+<span id="145">145</span>
+<span id="146">146</span>
+<span id="147">147</span>
+<span id="148">148</span>
+<span id="149">149</span>
+<span id="150">150</span>
+<span id="151">151</span>
+<span id="152">152</span>
+<span id="153">153</span>
+<span id="154">154</span>
+<span id="155">155</span>
+<span id="156">156</span>
+<span id="157">157</span>
+<span id="158">158</span>
+<span id="159">159</span>
+<span id="160">160</span>
+<span id="161">161</span>
+<span id="162">162</span>
+<span id="163">163</span>
+<span id="164">164</span>
+<span id="165">165</span>
+<span id="166">166</span>
+<span id="167">167</span>
+<span id="168">168</span>
+<span id="169">169</span>
+<span id="170">170</span>
+<span id="171">171</span>
+<span id="172">172</span>
+<span id="173">173</span>
+<span id="174">174</span>
+<span id="175">175</span>
+<span id="176">176</span>
+<span id="177">177</span>
+<span id="178">178</span>
+<span id="179">179</span>
+<span id="180">180</span>
+<span id="181">181</span>
+<span id="182">182</span>
+<span id="183">183</span>
+<span id="184">184</span>
+<span id="185">185</span>
+<span id="186">186</span>
+<span id="187">187</span>
+<span id="188">188</span>
+<span id="189">189</span>
+<span id="190">190</span>
+<span id="191">191</span>
+<span id="192">192</span>
+<span id="193">193</span>
+<span id="194">194</span>
+<span id="195">195</span>
+<span id="196">196</span>
+<span id="197">197</span>
+<span id="198">198</span>
+<span id="199">199</span>
+<span id="200">200</span>
+<span id="201">201</span>
+<span id="202">202</span>
+<span id="203">203</span>
+<span id="204">204</span>
+<span id="205">205</span>
+<span id="206">206</span>
+<span id="207">207</span>
+<span id="208">208</span>
+<span id="209">209</span>
+<span id="210">210</span>
+<span id="211">211</span>
+<span id="212">212</span>
+<span id="213">213</span>
+<span id="214">214</span>
+<span id="215">215</span>
+<span id="216">216</span>
+<span id="217">217</span>
+<span id="218">218</span>
+<span id="219">219</span>
+<span id="220">220</span>
+<span id="221">221</span>
+<span id="222">222</span>
+<span id="223">223</span>
+<span id="224">224</span>
+<span id="225">225</span>
+<span id="226">226</span>
+<span id="227">227</span>
+<span id="228">228</span>
+<span id="229">229</span>
+<span id="230">230</span>
+<span id="231">231</span>
+<span id="232">232</span>
+<span id="233">233</span>
+<span id="234">234</span>
+<span id="235">235</span>
+<span id="236">236</span>
+<span id="237">237</span>
+<span id="238">238</span>
+<span id="239">239</span>
+<span id="240">240</span>
+<span id="241">241</span>
+<span id="242">242</span>
+<span id="243">243</span>
+<span id="244">244</span>
+<span id="245">245</span>
+<span id="246">246</span>
+<span id="247">247</span>
+<span id="248">248</span>
+<span id="249">249</span>
+<span id="250">250</span>
+<span id="251">251</span>
+<span id="252">252</span>
+<span id="253">253</span>
+<span id="254">254</span>
+<span id="255">255</span>
+<span id="256">256</span>
+<span id="257">257</span>
+<span id="258">258</span>
+<span id="259">259</span>
+<span id="260">260</span>
+<span id="261">261</span>
+<span id="262">262</span>
+<span id="263">263</span>
+<span id="264">264</span>
+<span id="265">265</span>
+<span id="266">266</span>
+<span id="267">267</span>
+<span id="268">268</span>
+<span id="269">269</span>
+<span id="270">270</span>
+<span id="271">271</span>
+<span id="272">272</span>
+<span id="273">273</span>
+<span id="274">274</span>
+<span id="275">275</span>
+<span id="276">276</span>
+<span id="277">277</span>
+<span id="278">278</span>
+<span id="279">279</span>
+<span id="280">280</span>
+<span id="281">281</span>
+<span id="282">282</span>
+<span id="283">283</span>
+<span id="284">284</span>
+<span id="285">285</span>
+<span id="286">286</span>
+<span id="287">287</span>
+<span id="288">288</span>
+<span id="289">289</span>
+<span id="290">290</span>
+<span id="291">291</span>
+<span id="292">292</span>
+<span id="293">293</span>
+<span id="294">294</span>
+<span id="295">295</span>
+<span id="296">296</span>
+<span id="297">297</span>
+<span id="298">298</span>
+<span id="299">299</span>
+<span id="300">300</span>
+<span id="301">301</span>
+<span id="302">302</span>
+<span id="303">303</span>
+<span id="304">304</span>
+<span id="305">305</span>
+<span id="306">306</span>
+<span id="307">307</span>
+<span id="308">308</span>
+<span id="309">309</span>
+<span id="310">310</span>
+<span id="311">311</span>
+<span id="312">312</span>
+<span id="313">313</span>
+<span id="314">314</span>
+<span id="315">315</span>
+<span id="316">316</span>
+<span id="317">317</span>
+<span id="318">318</span>
+<span id="319">319</span>
+<span id="320">320</span>
+<span id="321">321</span>
+<span id="322">322</span>
+<span id="323">323</span>
+<span id="324">324</span>
+<span id="325">325</span>
+<span id="326">326</span>
+<span id="327">327</span>
+<span id="328">328</span>
+<span id="329">329</span>
+<span id="330">330</span>
+<span id="331">331</span>
+<span id="332">332</span>
+<span id="333">333</span>
+<span id="334">334</span>
+<span id="335">335</span>
+<span id="336">336</span>
+<span id="337">337</span>
+<span id="338">338</span>
+<span id="339">339</span>
+<span id="340">340</span>
+<span id="341">341</span>
+<span id="342">342</span>
+<span id="343">343</span>
+<span id="344">344</span>
+<span id="345">345</span>
+<span id="346">346</span>
+<span id="347">347</span>
+<span id="348">348</span>
+<span id="349">349</span>
+<span id="350">350</span>
+<span id="351">351</span>
+<span id="352">352</span>
+<span id="353">353</span>
+<span id="354">354</span>
+<span id="355">355</span>
+<span id="356">356</span>
+<span id="357">357</span>
+<span id="358">358</span>
+<span id="359">359</span>
+<span id="360">360</span>
+<span id="361">361</span>
+<span id="362">362</span>
+<span id="363">363</span>
+<span id="364">364</span>
+<span id="365">365</span>
+<span id="366">366</span>
+<span id="367">367</span>
+<span id="368">368</span>
+<span id="369">369</span>
+<span id="370">370</span>
+<span id="371">371</span>
+<span id="372">372</span>
+<span id="373">373</span>
+<span id="374">374</span>
+<span id="375">375</span>
+<span id="376">376</span>
+<span id="377">377</span>
+<span id="378">378</span>
+<span id="379">379</span>
+<span id="380">380</span>
+<span id="381">381</span>
+<span id="382">382</span>
+<span id="383">383</span>
+<span id="384">384</span>
+<span id="385">385</span>
+<span id="386">386</span>
+<span id="387">387</span>
+<span id="388">388</span>
+<span id="389">389</span>
+<span id="390">390</span>
+<span id="391">391</span>
+<span id="392">392</span>
+<span id="393">393</span>
+<span id="394">394</span>
+<span id="395">395</span>
+<span id="396">396</span>
+<span id="397">397</span>
+<span id="398">398</span>
+<span id="399">399</span>
+<span id="400">400</span>
+<span id="401">401</span>
+<span id="402">402</span>
+<span id="403">403</span>
+<span id="404">404</span>
+<span id="405">405</span>
+<span id="406">406</span>
+<span id="407">407</span>
+<span id="408">408</span>
+<span id="409">409</span>
+<span id="410">410</span>
+<span id="411">411</span>
+<span id="412">412</span>
+<span id="413">413</span>
+<span id="414">414</span>
+<span id="415">415</span>
+<span id="416">416</span>
+<span id="417">417</span>
+<span id="418">418</span>
+<span id="419">419</span>
+<span id="420">420</span>
+<span id="421">421</span>
+<span id="422">422</span>
+<span id="423">423</span>
+<span id="424">424</span>
+<span id="425">425</span>
+<span id="426">426</span>
+<span id="427">427</span>
+<span id="428">428</span>
+<span id="429">429</span>
+<span id="430">430</span>
+<span id="431">431</span>
+<span id="432">432</span>
+<span id="433">433</span>
+<span id="434">434</span>
+<span id="435">435</span>
+<span id="436">436</span>
+<span id="437">437</span>
+<span id="438">438</span>
+<span id="439">439</span>
+<span id="440">440</span>
+<span id="441">441</span>
+<span id="442">442</span>
+<span id="443">443</span>
+<span id="444">444</span>
+<span id="445">445</span>
+<span id="446">446</span>
+<span id="447">447</span>
+<span id="448">448</span>
+<span id="449">449</span>
+<span id="450">450</span>
+<span id="451">451</span>
+<span id="452">452</span>
+<span id="453">453</span>
+<span id="454">454</span>
+<span id="455">455</span>
+<span id="456">456</span>
+<span id="457">457</span>
+<span id="458">458</span>
+<span id="459">459</span>
+<span id="460">460</span>
+<span id="461">461</span>
+<span id="462">462</span>
+<span id="463">463</span>
+<span id="464">464</span>
+<span id="465">465</span>
+<span id="466">466</span>
+<span id="467">467</span>
+<span id="468">468</span>
+<span id="469">469</span>
+<span id="470">470</span>
+<span id="471">471</span>
+<span id="472">472</span>
+<span id="473">473</span>
+<span id="474">474</span>
+<span id="475">475</span>
+<span id="476">476</span>
+<span id="477">477</span>
+<span id="478">478</span>
+<span id="479">479</span>
+<span id="480">480</span>
+<span id="481">481</span>
+<span id="482">482</span>
+<span id="483">483</span>
+<span id="484">484</span>
+<span id="485">485</span>
+<span id="486">486</span>
+<span id="487">487</span>
+<span id="488">488</span>
+<span id="489">489</span>
+<span id="490">490</span>
+<span id="491">491</span>
+<span id="492">492</span>
+<span id="493">493</span>
+<span id="494">494</span>
+<span id="495">495</span>
+<span id="496">496</span>
+<span id="497">497</span>
+<span id="498">498</span>
+<span id="499">499</span>
+<span id="500">500</span>
+<span id="501">501</span>
+<span id="502">502</span>
+<span id="503">503</span>
+<span id="504">504</span>
+<span id="505">505</span>
+<span id="506">506</span>
+<span id="507">507</span>
+<span id="508">508</span>
+<span id="509">509</span>
+<span id="510">510</span>
+<span id="511">511</span>
+<span id="512">512</span>
+<span id="513">513</span>
+<span id="514">514</span>
+<span id="515">515</span>
+<span id="516">516</span>
+<span id="517">517</span>
+<span id="518">518</span>
+<span id="519">519</span>
+<span id="520">520</span>
+<span id="521">521</span>
+<span id="522">522</span>
+<span id="523">523</span>
+<span id="524">524</span>
+<span id="525">525</span>
+<span id="526">526</span>
+<span id="527">527</span>
+<span id="528">528</span>
+<span id="529">529</span>
+<span id="530">530</span>
+<span id="531">531</span>
+<span id="532">532</span>
+<span id="533">533</span>
+<span id="534">534</span>
+<span id="535">535</span>
+<span id="536">536</span>
+<span id="537">537</span>
+<span id="538">538</span>
+<span id="539">539</span>
+<span id="540">540</span>
+<span id="541">541</span>
+<span id="542">542</span>
+<span id="543">543</span>
+<span id="544">544</span>
+<span id="545">545</span>
+</pre><pre class="rust ">
+
+<span class="comment">/* THIS FILE IS GENERATED BY ErrorList.py - DO NOT EDIT */</span>
+
+<span class="kw">use</span> <span class="kw">super</span>::<span class="ident">nsresult</span>;
+
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_BASE_OFFSET</span>: <span class="ident">u32</span> <span class="op">=</span> <span class="number">69</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_XPCOM</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">1</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_BASE</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">2</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_GFX</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">3</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_WIDGET</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">4</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_CALENDAR</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">5</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_NETWORK</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">6</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_PLUGINS</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">7</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_LAYOUT</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">8</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_HTMLPARSER</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">9</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_RDF</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">10</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_UCONV</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">11</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_REG</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">12</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_FILES</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">13</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">14</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_IMGLIB</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">15</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_MAILNEWS</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">16</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_EDITOR</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">17</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_XPCONNECT</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">18</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_PROFILE</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">19</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_LDAP</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">20</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_SECURITY</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">21</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM_XPATH</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">22</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_URILOADER</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">24</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_CONTENT</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">25</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_PYXPCOM</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">26</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_XSLT</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">27</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_IPC</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">28</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_SVG</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">29</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_STORAGE</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">30</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_SCHEMA</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">31</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM_FILE</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">32</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM_INDEXEDDB</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">33</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM_FILEHANDLE</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">34</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_SIGNED_JAR</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">35</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM_FILESYSTEM</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">36</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM_BLUETOOTH</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">37</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_SIGNED_APP</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">38</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM_ANIM</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">39</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM_PUSH</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">40</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_DOM_MEDIA</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">41</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_URL_CLASSIFIER</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">42</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_ERRORRESULT</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">43</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MODULE_GENERAL</span>: <span class="ident">u16</span> <span class="op">=</span> <span class="number">51</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x0</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_BASE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0xC1F30000</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NOT_INITIALIZED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0xC1F30001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_ALREADY_INITIALIZED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0xC1F30002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NOT_IMPLEMENTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80004001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NOINTERFACE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80004002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NO_INTERFACE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80004002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_ABORT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80004004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FAILURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80004005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UNEXPECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8000FFFF</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_OUT_OF_MEMORY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8007000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_ILLEGAL_VALUE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80070057</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INVALID_ARG</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80070057</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INVALID_POINTER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80070057</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NULL_POINTER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80070057</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NO_AGGREGATION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80040110</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NOT_AVAILABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80040111</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FACTORY_NOT_REGISTERED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80040154</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FACTORY_REGISTER_AGAIN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80040155</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FACTORY_NOT_LOADED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x800401F8</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FACTORY_NO_SIGNATURE_SUPPORT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0xC1F30101</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FACTORY_EXISTS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0xC1F30100</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CANNOT_CONVERT_DATA</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80460001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_OBJECT_IS_IMMUTABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80460002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_LOSS_OF_SIGNIFICANT_DATA</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80460003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NOT_SAME_THREAD</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80460004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_ILLEGAL_DURING_SHUTDOWN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8046001E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SERVICE_NOT_AVAILABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80460016</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_LOSS_OF_INSIGNIFICANT_DATA</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x460001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_INTERRUPTED_TRAVERSE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x460002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SERVICE_NOT_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x460016</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SERVICE_IN_USE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x460017</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BASE_STREAM_CLOSED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80470002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BASE_STREAM_OSERROR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80470003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BASE_STREAM_ILLEGAL_ARGS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80470004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BASE_STREAM_NO_CONVERTER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80470005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BASE_STREAM_BAD_CONVERSION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80470006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BASE_STREAM_WOULD_BLOCK</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80470007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_GFX_PRINTER_NO_PRINTER_AVAILABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80480001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_GFX_PRINTER_NAME_NOT_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80480002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_GFX_PRINTER_COULD_NOT_OPEN_FILE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80480003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_GFX_PRINTER_STARTDOC</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80480004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_GFX_PRINTER_ENDDOC</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80480005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_GFX_PRINTER_STARTPAGE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80480006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_GFX_PRINTER_DOC_IS_BUSY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80480007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_GFX_CMAP_MALFORMED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80480033</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_EVENT_CONSUMED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x490001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_EVENT_HANDLED_ASYNCHRONOUSLY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x490002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BINDING_SUCCEEDED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x0</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BINDING_FAILED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BINDING_ABORTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BINDING_REDIRECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_BINDING_RETARGETED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MALFORMED_URI</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_IN_PROGRESS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NO_CONTENT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0011</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UNKNOWN_PROTOCOL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0012</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INVALID_CONTENT_ENCODING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B001B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CORRUPTED_CONTENT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B001D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INVALID_SIGNATURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B003A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FIRST_HEADER_FIELD_COMPONENT_EMPTY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0022</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_ALREADY_OPENED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0049</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_ALREADY_CONNECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NOT_CONNECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CONNECTION_REFUSED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NET_TIMEOUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_OFFLINE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0010</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_PORT_ACCESS_NOT_ALLOWED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0013</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NET_RESET</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0014</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NET_INTERRUPT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0047</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_PROXY_CONNECTION_REFUSED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0048</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NET_PARTIAL_TRANSFER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B004C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NET_INADEQUATE_SECURITY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0052</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NOT_RESUMABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0019</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_REDIRECT_LOOP</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B001F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_ENTITY_CHANGED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0020</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UNSAFE_CONTENT_TYPE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B004A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_REMOTE_XUL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B004B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_LOAD_SHOWED_ERRORPAGE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B004D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOCSHELL_DYING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B004E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FTP_LOGIN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0015</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FTP_CWD</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0016</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FTP_PASV</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0017</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FTP_PWD</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0018</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FTP_LIST</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B001C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UNKNOWN_HOST</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B001E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DNS_LOOKUP_QUEUE_FULL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0021</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UNKNOWN_PROXY_HOST</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B002A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UNKNOWN_SOCKET_TYPE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0033</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SOCKET_CREATE_FAILED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0034</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SOCKET_ADDRESS_NOT_SUPPORTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0035</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SOCKET_ADDRESS_IN_USE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0036</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CACHE_KEY_NOT_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B003D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CACHE_DATA_IS_STREAM</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B003E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CACHE_DATA_IS_NOT_STREAM</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B003F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CACHE_WAIT_FOR_VALIDATION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0040</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CACHE_ENTRY_DOOMED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0041</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CACHE_READ_ACCESS_DENIED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0042</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CACHE_WRITE_ACCESS_DENIED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0043</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CACHE_IN_USE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0044</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOCUMENT_NOT_CACHED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0046</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INSUFFICIENT_DOMAIN_LEVELS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0050</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HOST_IS_IP_ADDRESS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0051</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_ADOPTED_DATA</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4B005A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_BEGIN_FTP_TRANSACTION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4B001B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_END_FTP_TRANSACTION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4B001C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_AUTH_FINISHED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4B0028</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_READING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_WRITING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_RESOLVING_HOST</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_RESOLVED_HOST</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_CONNECTING_TO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_CONNECTED_TO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_TLS_HANDSHAKE_STARTING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_TLS_HANDSHAKE_ENDED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_SENDING_TO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_WAITING_FOR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_NET_STATUS_RECEIVING_FROM</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INTERCEPTION_FAILED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B0064</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HSTS_PRIMING_TIMEOUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804B006E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_PLUGINS_PLUGINSNOTCHANGED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804C03E8</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_PLUGIN_DISABLED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804C03E9</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_PLUGIN_BLOCKLISTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804C03EA</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_PLUGIN_TIME_RANGE_NOT_SUPPORTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804C03EB</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_PLUGIN_CLICKTOPLAY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804C03EC</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_TABLELAYOUT_CELL_NOT_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4D0000</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_PARSE_SHEET</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4D0001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_POSITION_BEFORE_TABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4D0003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_STATE_PROPERTY_EXISTS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x0</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_STATE_PROPERTY_NOT_THERE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4D0005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_CONTINUE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x0</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_EOF</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03E8</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_UNKNOWN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03E9</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_CANTPROPAGATE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03EA</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_CONTEXTMISMATCH</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03EB</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_BADFILENAME</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03EC</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_BADURL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03ED</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_INVALIDPARSERCONTEXT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03EE</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_INTERRUPTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03EF</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_BLOCK</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F0</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_BADTOKENIZER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F1</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_BADATTRIBUTE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F2</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_UNRESOLVEDDTD</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F3</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_MISPLACEDTABLECONTENT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F4</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_BADDTD</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F5</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_BADCONTEXT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F6</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_STOPPARSING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F7</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_UNTERMINATEDSTRINGLITERAL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F8</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_HIERARCHYTOODEEP</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03F9</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_FAKE_ENDTAG</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03FA</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HTMLPARSER_INVALID_COMMENT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x804E03FB</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_HTMLTOKENS_NOT_AN_ENTITY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4E07D0</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_HTMLPARSER_VALID_META_CHARSET</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4E0BB8</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_RDF_ASSERTION_ACCEPTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x0</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_RDF_CURSOR_EMPTY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4F0001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_RDF_NO_VALUE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4F0002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_RDF_ASSERTION_REJECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4F0003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_RDF_STOP_VISIT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x4F0004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UCONV_NOCONV</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80500001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UDEC_ILLEGALINPUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8050000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_HAD_REPLACEMENTS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x500003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_USING_FALLBACK_LOCALE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x500002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_UDEC_EXACTLENGTH</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x50000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_UDEC_MOREINPUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x50000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_UDEC_MOREOUTPUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x50000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_UDEC_NOBOMFOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x50000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_UENC_EXACTLENGTH</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x500021</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_UENC_MOREOUTPUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x500022</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UENC_NOMAPPING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x500023</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_UENC_MOREINPUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x500024</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_EXACT_LENGTH</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x50000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_PARTIAL_MORE_INPUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x50000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_PARTIAL_MORE_OUTPUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x50000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_ILLEGAL_INPUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8050000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_UNRECOGNIZED_PATH</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_UNRESOLVABLE_SYMLINK</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_EXECUTION_FAILED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_UNKNOWN_TYPE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_DESTINATION_NOT_DIR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_TARGET_DOES_NOT_EXIST</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_COPY_OR_MOVE_FAILED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_ALREADY_EXISTS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_INVALID_PATH</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_DISK_FULL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8052000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_CORRUPTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8052000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_NOT_DIRECTORY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8052000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_IS_DIRECTORY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8052000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_IS_LOCKED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8052000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_TOO_BIG</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8052000F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_NO_DEVICE_SPACE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520010</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_NAME_TOO_LONG</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520011</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_NOT_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520012</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_READ_ONLY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520013</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_DIR_NOT_EMPTY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520014</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_FILE_ACCESS_DENIED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80520015</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_FILE_DIRECTORY_EMPTY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x520001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_AGGREGATE_RESULT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x520002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEX_SIZE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_HIERARCHY_REQUEST_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_WRONG_DOCUMENT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_CHARACTER_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NO_MODIFICATION_ALLOWED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NOT_FOUND_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NOT_SUPPORTED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INUSE_ATTRIBUTE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_STATE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_SYNTAX_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_MODIFICATION_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NAMESPACE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_ACCESS_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053000F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_TYPE_MISMATCH_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530011</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_SECURITY_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530012</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NETWORK_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530013</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_ABORT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530014</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_URL_MISMATCH_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530015</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_QUOTA_EXCEEDED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530016</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_TIMEOUT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530017</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_NODE_TYPE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530018</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_DATA_CLONE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530019</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_TYPE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053001A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_RANGE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053001B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_ENCODING_NOT_SUPPORTED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053001C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_POINTER_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053001D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_UNKNOWN_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053001E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_DATA_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8053001F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_OPERATION_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530020</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NOT_ALLOWED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530021</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_SECMAN_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303E9</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_WRONG_TYPE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303EA</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NOT_OBJECT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303EB</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NOT_XPC_OBJECT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303EC</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NOT_NUMBER_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303ED</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NOT_BOOLEAN_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303EE</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_NOT_FUNCTION_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303EF</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_TOO_FEW_PARAMETERS_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F0</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_BAD_DOCUMENT_DOMAIN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F1</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_PROP_ACCESS_DENIED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F2</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_XPCONNECT_ACCESS_DENIED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F3</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_BAD_URI</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F4</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_RETVAL_UNDEFINED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F5</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_QUOTA_REACHED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F6</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UNCATCHABLE_EXCEPTION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F7</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MALFORMED_URI</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F8</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_HEADER_NAME</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303F9</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_STATE_XHR_HAS_INVALID_CONTEXT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303FA</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_STATE_XHR_MUST_BE_OPENED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303FB</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_STATE_XHR_MUST_NOT_BE_SENDING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303FC</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_STATE_XHR_MUST_NOT_BE_LOADING_OR_DONE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303FD</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_STATE_XHR_HAS_WRONG_RESPONSETYPE_FOR_RESPONSEXML</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303FE</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_STATE_XHR_HAS_WRONG_RESPONSETYPE_FOR_RESPONSETEXT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805303FF</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_STATE_XHR_CHUNKED_RESPONSETYPES_UNSUPPORTED_FOR_SYNC</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530400</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_ACCESS_XHR_TIMEOUT_AND_RESPONSETYPE_UNSUPPORTED_FOR_SYNC</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530401</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_JS_DECODING_ERROR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80530402</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_DOM_NO_OPERATION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x530001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_DOM_SCRIPT_EVALUATION_THREW</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x530002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_DOM_SCRIPT_EVALUATION_THREW_UNCATCHABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x530003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_IMAGELIB_SUCCESS_LOAD_FINISHED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x540000</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_IMAGELIB_ERROR_FAILURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80540005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_IMAGELIB_ERROR_NO_DECODER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80540006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_IMAGELIB_ERROR_NOT_FINISHED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80540007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_IMAGELIB_ERROR_NO_ENCODER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80540009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_EDITOR_ELEMENT_NOT_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x560001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_EDITOR_FOUND_TARGET</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x560002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_NOT_ENOUGH_ARGS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_NEED_OUT_OBJECT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_SET_OUT_VAL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_NATIVE_RETURNED_FAILURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_GET_INTERFACE_INFO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_GET_PARAM_IFACE_INFO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_GET_METHOD_INFO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_UNEXPECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_BAD_CONVERT_JS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_BAD_CONVERT_NATIVE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_BAD_CONVERT_JS_NULL_REF</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_BAD_OP_ON_WN_PROTO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_CONVERT_WN_TO_FUN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_DEFINE_PROP_ON_WN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_WATCH_WN_STATIC</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057000F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_EXPORT_WN_STATIC</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570010</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_SCRIPTABLE_CALL_FAILED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570011</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_SCRIPTABLE_CTOR_FAILED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570012</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_CALL_WO_SCRIPTABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570013</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_CTOR_WO_SCRIPTABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570014</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CI_RETURNED_FAILURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570015</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_GS_RETURNED_FAILURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570016</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_BAD_CID</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570017</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_BAD_IID</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570018</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_CREATE_WN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570019</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_JS_THREW_EXCEPTION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057001A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_JS_THREW_NATIVE_OBJECT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057001B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_JS_THREW_JS_OBJECT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057001C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_JS_THREW_NULL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057001D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_JS_THREW_STRING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057001E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_JS_THREW_NUMBER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057001F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_JAVASCRIPT_ERROR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570020</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570021</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_CONVERT_PRIMITIVE_TO_ARRAY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570022</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_CONVERT_OBJECT_TO_ARRAY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570023</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_NOT_ENOUGH_ELEMENTS_IN_ARRAY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570024</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_GET_ARRAY_INFO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570025</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_NOT_ENOUGH_CHARS_IN_STRING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570026</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_SECURITY_MANAGER_VETO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570027</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_INTERFACE_NOT_SCRIPTABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570028</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_INTERFACE_NOT_FROM_NSISUPPORTS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570029</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_GET_JSOBJECT_OF_DOM_OBJECT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057002A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_SET_READ_ONLY_CONSTANT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057002B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_SET_READ_ONLY_ATTRIBUTE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057002C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_SET_READ_ONLY_METHOD</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057002D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_ADD_PROP_TO_WRAPPED_NATIVE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057002E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CALL_TO_SCRIPTABLE_FAILED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8057002F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_JSOBJECT_HAS_NO_FUNCTION_NAMED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570030</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_BAD_ID_STRING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570031</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_BAD_INITIALIZER_NAME</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570032</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_HAS_BEEN_SHUTDOWN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570033</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_MODIFY_PROP_ON_WN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570034</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_BAD_CONVERT_JS_ZERO_ISNOT_NULL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570035</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPC_CANT_PASS_CPOW_TO_NATIVE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80570036</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_LAUNCHED_CHILD_PROCESS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805800C8</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CSP_FORM_ACTION_VIOLATION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0062</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CSP_FRAME_ANCESTOR_VIOLATION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0063</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SRI_CORRUPT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A00C8</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SRI_DISABLED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A00C9</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SRI_NOT_ELIGIBLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A00CA</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SRI_UNEXPECTED_HASH_TYPE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A00CB</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SRI_IMPORT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A00CC</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_NOT_SIGNED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0400</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_NO_CONTENT_INFO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0401</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_BAD_DIGEST</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0402</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_NOCERT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0404</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_UNTRUSTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0405</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_ERROR_UNVERIFIED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0407</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_ERROR_PROCESSING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0408</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_BAD_SIGNATURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0409</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_DIGEST_MISMATCH</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A040A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_UNKNOWN_ALGO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A040B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_UNSUPPORTED_ALGO</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A040C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_MALFORMED_SIGNATURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A040D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_HEADER_MISMATCH</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A040E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_NOT_YET_ATTEMPTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A040F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_VERIFY_CERT_WITHOUT_ADDRESS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0410</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_ENCRYPT_NO_BULK_ALG</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0420</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CMS_ENCRYPT_INCOMPLETE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805A0421</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INVALID_EXPRESSION_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805B0033</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_TYPE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805B0034</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_WONT_HANDLE_CONTENT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805D0001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_MALWARE_URI</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805D001E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_PHISHING_URI</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805D001F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_TRACKING_URI</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805D0022</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UNWANTED_URI</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805D0023</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_BLOCKED_URI</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805D0025</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_HARMFUL_URI</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805D0026</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SAVE_LINK_AS_TIMEOUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805D0020</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_PARSED_DATA_CACHED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805D0021</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_REFRESHURI_HEADER_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x5D0002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CONTENT_BLOCKED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805E0006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CONTENT_BLOCKED_SHOW_ALT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805E0007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_PROPTABLE_PROP_NOT_THERE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805E000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XBL_BLOCKED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805E000F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_CONTENT_CRASHED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x805E0010</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_HTML_STYLE_PROPERTY_NOT_THERE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x5E0002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_CONTENT_BLOCKED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x5E0008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_CONTENT_BLOCKED_SHOW_ALT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x5E0009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_PROPTABLE_PROP_OVERWRITTEN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x5E000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_FINDBROADCASTER_NOT_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x5E000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_FINDBROADCASTER_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x5E000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_FINDBROADCASTER_AWAIT_OVERLAYS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x5E000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_INVALID_ARG</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80070057</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_PARSE_FAILURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_PARSE_FAILURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_ALREADY_SET</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_EXECUTION_FAILURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_UNKNOWN_FUNCTION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_BAD_RECURSION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_BAD_VALUE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_NODESET_EXPECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_ABORTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_NETWORK_ERROR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_WRONG_MIME_TYPE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_LOAD_RECURSION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_BAD_ARGUMENT_COUNT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_BAD_EXTENSION_FUNCTION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_PAREN_EXPECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060000F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_INVALID_AXIS</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600010</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_NO_NODE_TYPE_TEST</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600011</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_BRACKET_EXPECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600012</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_INVALID_VAR_NAME</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600013</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_UNEXPECTED_END</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600014</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_OPERATOR_EXPECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600015</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_UNCLOSED_LITERAL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600016</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_BAD_COLON</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600017</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_BAD_BANG</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600018</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_ILLEGAL_CHAR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600019</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_BINARY_EXPECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060001A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_LOAD_BLOCKED_ERROR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060001B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_INVALID_EXPRESSION_EVALUATED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060001C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XPATH_UNBALANCED_CURLY_BRACE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060001D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_BAD_NODE_NAME</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060001E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_VAR_ALREADY_SET</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8060001F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_XSLT_CALL_TO_KEY_NOT_ALLOWED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80600020</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_XSLT_GET_NEW_HANDLER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x600001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_TRANSPORT_INIT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80610001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DUPLICATE_HANDLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80610002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_BRIDGE_OPEN_PARENT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80610003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_BRIDGE_OPEN_CHILD</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80610004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_SVG_WRONG_TYPE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80620000</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_SVG_MATRIX_NOT_INVERTABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80620002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_STORAGE_BUSY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80630001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_STORAGE_IOERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80630002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_STORAGE_CONSTRAINT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80630003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILE_NOT_FOUND_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80650000</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILE_NOT_READABLE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80650001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILE_ABORT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80650002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_UNKNOWN_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80660001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_NOT_FOUND_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80660003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_CONSTRAINT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80660004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_DATA_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80660005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_NOT_ALLOWED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80660006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_TRANSACTION_INACTIVE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80660007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_ABORT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80660008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_READ_ONLY_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80660009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_TIMEOUT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8066000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_QUOTA_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8066000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_VERSION_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x8066000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_INDEXEDDB_RECOVERABLE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806603E9</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILEHANDLE_UNKNOWN_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80670001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILEHANDLE_NOT_ALLOWED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80670002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILEHANDLE_INACTIVE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80670003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILEHANDLE_ABORT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80670004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILEHANDLE_READ_ONLY_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80670005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILEHANDLE_QUOTA_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80670006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SIGNED_JAR_NOT_SIGNED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80680001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SIGNED_JAR_MODIFIED_ENTRY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80680002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SIGNED_JAR_UNSIGNED_ENTRY</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80680003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SIGNED_JAR_ENTRY_MISSING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80680004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SIGNED_JAR_WRONG_SIGNATURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80680005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SIGNED_JAR_ENTRY_TOO_LARGE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80680006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SIGNED_JAR_ENTRY_INVALID</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80680007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SIGNED_JAR_MANIFEST_INVALID</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80680008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILESYSTEM_INVALID_PATH_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80690001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILESYSTEM_INVALID_MODIFICATION_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80690002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILESYSTEM_NO_MODIFICATION_ALLOWED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80690003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILESYSTEM_PATH_EXISTS_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80690004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILESYSTEM_TYPE_MISMATCH_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80690005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_FILESYSTEM_UNKNOWN_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80690006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_SIGNED_APP_MANIFEST_INVALID</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806B0001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_ANIM_MISSING_PROPS_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806C0001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_PUSH_INVALID_REGISTRATION_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806D0001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_PUSH_DENIED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806D0002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_PUSH_ABORT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806D0003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_PUSH_SERVICE_UNREACHABLE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806D0004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_PUSH_INVALID_KEY_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806D0005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_PUSH_MISMATCHED_KEY_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806D0006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_PUSH_GCM_DISABLED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806D0007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_ABORT_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_NOT_ALLOWED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_NOT_SUPPORTED_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_DECODE_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_FATAL_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_METADATA_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_OVERFLOW_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_END_OF_STREAM</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_WAITING_FOR_DATA</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_CANCELED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_MEDIASINK_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_DEMUXER_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E000C</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_CDM_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E000D</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_NEED_NEW_DECODER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E000E</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_INITIALIZING_DECODER</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E000F</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOM_MEDIA_CUBEB_INITIALIZATION_ERR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806E0065</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_UNKNOWN</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F0001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_DUPLICATE_PREFIX</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F0002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_INFINITE_LOOP</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F0003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_WRONG_REMOVAL_INDICES</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F0004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_CHECKSUM_MISMATCH</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F0005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_MISSING_CHECKSUM</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F0006</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_SHUTDOWNING</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F0007</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_TABLE_NOT_FOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F0008</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_BUILD_PREFIX_FAILURE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F0009</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_FAIL_TO_WRITE_DISK</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F000A</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UC_UPDATE_PROTOCOL_PARSER_ERROR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x806F000B</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INTERNAL_ERRORRESULT_JS_EXCEPTION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80700001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INTERNAL_ERRORRESULT_DOMEXCEPTION</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80700002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INTERNAL_ERRORRESULT_EXCEPTION_ON_JSCONTEXT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80700003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INTERNAL_ERRORRESULT_TYPEERROR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80700004</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_INTERNAL_ERRORRESULT_RANGEERROR</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80700005</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOWNLOAD_COMPLETE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80780001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOWNLOAD_NOT_PARTIAL</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80780002</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_UNORM_MOREOUTPUT</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80780021</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOCSHELL_REQUEST_REJECTED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x807803E9</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_DOCUMENT_IS_PRINTMODE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x807807D1</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_DONT_FIXUP</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x780001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_RESTART_APP</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x780001</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_RESTART_APP_NOT_SAME_PROFILE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x780003</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_SUCCESS_UNORM_NOTFOUND</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x780011</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_ERROR_NOT_IN_TREE</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x80780026</span>;
+<span class="kw">pub</span> <span class="kw">const</span> <span class="ident">NS_OK_NO_NAME_CLAUSE_HANDLED</span>: <span class="ident">nsresult</span> <span class="op">=</span> <span class="number">0x780022</span>;
+</pre>
+</section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../../../../../../../../../../../../../../../";
+        window.currentCrate = "nserror";
+    </script>
+    <script src="../../../../../../../../../../../../../../../../main.js"></script>
+    <script defer src="../../../../../../../../../../../../../../../../search-index.js"></script>
+</body>
+</html>

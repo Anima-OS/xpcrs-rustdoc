@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIDocumentEncoder` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIDocumentEncoder">
+
+    <title>xpcom::interfaces::nsIDocumentEncoder - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIDocumentEncoder</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.Init">Init</a><a href="#method.SetSelection">SetSelection</a><a href="#method.SetRange">SetRange</a><a href="#method.SetNode">SetNode</a><a href="#method.SetContainerNode">SetContainerNode</a><a href="#method.SetCharset">SetCharset</a><a href="#method.SetWrapColumn">SetWrapColumn</a><a href="#method.GetMimeType">GetMimeType</a><a href="#method.EncodeToStream">EncodeToStream</a><a href="#method.EncodeToString">EncodeToString</a><a href="#method.EncodeToStringWithContext">EncodeToStringWithContext</a><a href="#method.EncodeToStringWithMaxLength">EncodeToStringWithMaxLength</a><a href="#method.SetNodeFixup">SetNodeFixup</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIDocumentEncoder', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIDocumentEncoder</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#150-159' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIDocumentEncoder { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIDocumentEncoder : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIDocumentEncoder.html" title="struct xpcom::interfaces::nsIDocumentEncoder">nsIDocumentEncoder</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#199-205' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIDocumentEncoderCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#202-204' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIDocumentEncoder</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIDocumentEncoder.html" title="struct xpcom::interfaces::nsIDocumentEncoder">nsIDocumentEncoder</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#297-833' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.OutputSelectionOnly' class="associatedconstant"><span id='OutputSelectionOnly.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputSelectionOnly' class="constant"><b>OutputSelectionOnly</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputSelectionOnly</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * Output only the selection (as opposed to the whole document).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputFormatted' class="associatedconstant"><span id='OutputFormatted.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputFormatted' class="constant"><b>OutputFormatted</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputFormatted</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/** Plaintext output: Convert html to plaintext that looks like the html.
+    * Implies wrap (except inside &lt;pre&gt;), since html wraps.
+    * HTML, XHTML and XML output: do prettyprinting, ignoring existing formatting.
+    * XML output : it doesn&#39;t implicitly wrap
+    */
+</code></pre>
+</div><h4 id='associatedconstant.OutputRaw' class="associatedconstant"><span id='OutputRaw.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputRaw' class="constant"><b>OutputRaw</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputRaw</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/** Don&#39;t do prettyprinting. Don&#39;t do any wrapping that&#39;s not in the existing
+   * HTML/XML source. This option overrides OutputFormatted if both are set.
+   * HTML/XHTML output: If neither are set, there won&#39;t be prettyprinting too, but
+   * long lines will be wrapped.
+   * Supported also in XML and Plaintext output.
+   * @note This option does not affect entity conversion.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputBodyOnly' class="associatedconstant"><span id='OutputBodyOnly.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputBodyOnly' class="constant"><b>OutputBodyOnly</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputBodyOnly</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/**
+   * Do not print html head tags.
+   * XHTML/HTML output only.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputPreformatted' class="associatedconstant"><span id='OutputPreformatted.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputPreformatted' class="constant"><b>OutputPreformatted</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputPreformatted</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+<pre><code class="language-text">/**
+   * Output as though the content is preformatted
+   * (e.g. maybe it&#39;s wrapped in a PRE or PRE_WRAP style tag)
+   * Plaintext output only.
+   * XXXbz How does this interact with
+   * OutputFormatted/OutputRaw/OutputPreformatted/OutputFormatFlowed?
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputWrap' class="associatedconstant"><span id='OutputWrap.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputWrap' class="constant"><b>OutputWrap</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputWrap</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+<pre><code class="language-text">/**
+   * Wrap even if we&#39;re not doing formatted output (e.g. for text fields).
+   * Supported in XML, XHTML, HTML and Plaintext output.
+   * Set implicitly in HTML/XHTML output when no OutputRaw.
+   * Ignored when OutputRaw.
+   * XXXLJ: set implicitly in HTML/XHTML output, to keep compatible behaviors
+   *        for old callers of this interface
+   * XXXbz How does this interact with OutputFormatFlowed?
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputFormatFlowed' class="associatedconstant"><span id='OutputFormatFlowed.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputFormatFlowed' class="constant"><b>OutputFormatFlowed</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputFormatFlowed</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">64</span></pre>
+<pre><code class="language-text">/**
+   * Output for format flowed (RFC 2646). This is used when converting
+   * to text for mail sending. This differs just slightly
+   * but in an important way from normal formatted, and that is that
+   * lines are space stuffed. This can&#39;t (correctly) be done later.
+   * PlainText output only.
+   * XXXbz How does this interact with
+   * OutputFormatted/OutputRaw/OutputPreformatted/OutputWrap?
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputAbsoluteLinks' class="associatedconstant"><span id='OutputAbsoluteLinks.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputAbsoluteLinks' class="constant"><b>OutputAbsoluteLinks</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputAbsoluteLinks</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">128</span></pre>
+<pre><code class="language-text">/**
+   * Convert links, image src, and script src to absolute URLs when possible.
+   * XHTML/HTML output only.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputCRLineBreak' class="associatedconstant"><span id='OutputCRLineBreak.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputCRLineBreak' class="constant"><b>OutputCRLineBreak</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputCRLineBreak</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">512</span></pre>
+<pre><code class="language-text">/**
+   * LineBreak processing: if this flag is set than CR line breaks will
+   * be written. If neither this nor OutputLFLineBreak is set, then we
+   * will use platform line breaks. The combination of the two flags will
+   * cause CRLF line breaks to be written.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputLFLineBreak' class="associatedconstant"><span id='OutputLFLineBreak.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputLFLineBreak' class="constant"><b>OutputLFLineBreak</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputLFLineBreak</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1024</span></pre>
+<pre><code class="language-text">/**
+   * LineBreak processing: if this flag is set than LF line breaks will
+   * be written. If neither this nor OutputCRLineBreak is set, then we
+   * will use platform line breaks. The combination of the two flags will
+   * cause CRLF line breaks to be written.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputNoScriptContent' class="associatedconstant"><span id='OutputNoScriptContent.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputNoScriptContent' class="constant"><b>OutputNoScriptContent</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputNoScriptContent</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2048</span></pre>
+<pre><code class="language-text">/**
+   * Output the content of noscript elements (only for serializing
+   * to plaintext).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputNoFramesContent' class="associatedconstant"><span id='OutputNoFramesContent.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputNoFramesContent' class="constant"><b>OutputNoFramesContent</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputNoFramesContent</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4096</span></pre>
+<pre><code class="language-text">/**
+   * Output the content of noframes elements (only for serializing
+   * to plaintext). (Used only internally in the plain text serializer;
+   * ignored if passed by the caller.)
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputNoFormattingInPre' class="associatedconstant"><span id='OutputNoFormattingInPre.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputNoFormattingInPre' class="constant"><b>OutputNoFormattingInPre</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputNoFormattingInPre</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8192</span></pre>
+<pre><code class="language-text">/**
+   * Don&#39;t allow any formatting nodes (e.g. &lt;br&gt;, &lt;b&gt;) inside a &lt;pre&gt;.
+   * This is used primarily by mail. XHTML/HTML output only.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputEncodeBasicEntities' class="associatedconstant"><span id='OutputEncodeBasicEntities.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputEncodeBasicEntities' class="constant"><b>OutputEncodeBasicEntities</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputEncodeBasicEntities</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16384</span></pre>
+<pre><code class="language-text">/**
+   * Encode entities when outputting to a string.
+   * E.g. If set, we&#39;ll output &amp;nbsp; if clear, we&#39;ll output 0xa0.
+   * The basic set is just &amp;nbsp; &amp;amp; &amp;lt; &amp;gt; &amp;quot; for interoperability
+   * with older products that don&#39;t support &amp;alpha; and friends.
+   * HTML output only.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputPersistNBSP' class="associatedconstant"><span id='OutputPersistNBSP.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputPersistNBSP' class="constant"><b>OutputPersistNBSP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputPersistNBSP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">131072</span></pre>
+<pre><code class="language-text">/**
+   * Normally &amp;nbsp; is replaced with a space character when
+   * encoding data as plain text, set this flag if that&#39;s
+   * not desired.
+   * Plaintext output only.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputDontRewriteEncodingDeclaration' class="associatedconstant"><span id='OutputDontRewriteEncodingDeclaration.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputDontRewriteEncodingDeclaration' class="constant"><b>OutputDontRewriteEncodingDeclaration</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputDontRewriteEncodingDeclaration</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">262144</span></pre>
+<pre><code class="language-text">/**
+   * Normally when serializing the whole document using the HTML or
+   * XHTML serializer, the encoding declaration is rewritten to match.
+   * This flag suppresses that behavior.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SkipInvisibleContent' class="associatedconstant"><span id='SkipInvisibleContent.v' class='invisible'><code>pub const <a href='#associatedconstant.SkipInvisibleContent' class="constant"><b>SkipInvisibleContent</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SkipInvisibleContent</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">524288</span></pre>
+<pre><code class="language-text">/**
+   * When using the HTML or XHTML serializer, skip elements that are not
+   * visible when this flag is set.  Elements are not visible when they
+   * have CSS style display:none or visibility:collapse, for example.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputFormatDelSp' class="associatedconstant"><span id='OutputFormatDelSp.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputFormatDelSp' class="constant"><b>OutputFormatDelSp</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputFormatDelSp</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1048576</span></pre>
+<pre><code class="language-text">/**
+   * Output for delsp=yes (RFC 3676). This is used with OutputFormatFlowed
+   * when converting to text for mail sending.
+   * PlainText output only.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputDropInvisibleBreak' class="associatedconstant"><span id='OutputDropInvisibleBreak.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputDropInvisibleBreak' class="constant"><b>OutputDropInvisibleBreak</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputDropInvisibleBreak</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2097152</span></pre>
+<pre><code class="language-text">/**
+   * Drop &lt;br&gt; elements considered &quot;invisible&quot; by the editor. OutputPreformatted
+   * implies this flag.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputIgnoreMozDirty' class="associatedconstant"><span id='OutputIgnoreMozDirty.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputIgnoreMozDirty' class="constant"><b>OutputIgnoreMozDirty</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputIgnoreMozDirty</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4194304</span></pre>
+<pre><code class="language-text">/**
+   * Don&#39;t check for _moz_dirty attributes when deciding whether to
+   * pretty-print if this flag is set (bug 599983).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputNonTextContentAsPlaceholder' class="associatedconstant"><span id='OutputNonTextContentAsPlaceholder.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputNonTextContentAsPlaceholder' class="constant"><b>OutputNonTextContentAsPlaceholder</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputNonTextContentAsPlaceholder</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8388608</span></pre>
+<pre><code class="language-text">/**
+   * Output the content of non-text elements as the placehodler character
+   * U+FFFC (OBJECT REPLACEMENT CHARACTER, only for serializing to plaintext).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputDontRemoveLineEndingSpaces' class="associatedconstant"><span id='OutputDontRemoveLineEndingSpaces.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputDontRemoveLineEndingSpaces' class="constant"><b>OutputDontRemoveLineEndingSpaces</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputDontRemoveLineEndingSpaces</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16777216</span></pre>
+<pre><code class="language-text">/**
+   * Don&#39;t Strip ending spaces from a line (only for serializing to plaintext).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputForPlainTextClipboardCopy' class="associatedconstant"><span id='OutputForPlainTextClipboardCopy.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputForPlainTextClipboardCopy' class="constant"><b>OutputForPlainTextClipboardCopy</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputForPlainTextClipboardCopy</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">33554432</span></pre>
+<pre><code class="language-text">/**
+   * Serialize in a way that is suitable for copying a plaintext version of the
+   * document to the clipboard.  This can for example cause line endings to be
+   * injected at preformatted block element boundaries.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputRubyAnnotation' class="associatedconstant"><span id='OutputRubyAnnotation.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputRubyAnnotation' class="constant"><b>OutputRubyAnnotation</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputRubyAnnotation</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">67108864</span></pre>
+<pre><code class="language-text">/**
+   * Include ruby annotations and ruby parentheses in the output.
+   * PlainText output only.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.OutputDisallowLineBreaking' class="associatedconstant"><span id='OutputDisallowLineBreaking.v' class='invisible'><code>pub const <a href='#associatedconstant.OutputDisallowLineBreaking' class="constant"><b>OutputDisallowLineBreaking</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutputDisallowLineBreaking</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">134217728</span></pre>
+<pre><code class="language-text">/**
+   * Disallow breaking of long character strings. This is important
+   * for serializing e-mail which contains CJK strings. These must
+   * not be broken just as &quot;normal&quot; longs strings aren&#39;t broken.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RequiresReinitAfterOutput' class="associatedconstant"><span id='RequiresReinitAfterOutput.v' class='invisible'><code>pub const <a href='#associatedconstant.RequiresReinitAfterOutput' class="constant"><b>RequiresReinitAfterOutput</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RequiresReinitAfterOutput</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">268435456</span></pre>
+<pre><code class="language-text">/**
+   * Release reference of nsIDocument after using encodeTo* method to recycle
+   * this encoder without holding nsIDocument. To use this encoder again,
+   * we have to call init again.
+   */
+</code></pre>
+</div><h4 id='method.Init' class="method"><span id='Init.v' class='invisible'><code>pub unsafe fn <a href='#method.Init' class='fnname'>Init</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMDocument.html" title="struct xpcom::interfaces::nsIDOMDocument">nsIDOMDocument</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMimeType: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#601-603' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Initialize with a pointer to the document and the mime type.
+   * @param aDocument Document to encode.
+   * @param aMimeType MimeType to use. May also be set by SetMimeType.
+   * @param aFlags Flags to use while encoding. May also be set by SetFlags.
+   */
+</code></pre>
+
+<p><code>void init (in nsIDOMDocument aDocument, in AString aMimeType, in unsigned long aFlags);</code></p>
+</div><h4 id='method.SetSelection' class="method"><span id='SetSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSelection' class='fnname'>SetSelection</a>(&amp;self, aSelection: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISelection.html" title="struct xpcom::interfaces::nsISelection">nsISelection</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#622-624' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  If the selection is set to a non-null value, then the
+   *  selection is used for encoding, otherwise the entire
+   *  document is encoded.
+   * @param aSelection The selection to encode.
+   */
+</code></pre>
+
+<p><code>void setSelection (in nsISelection aSelection);</code></p>
+</div><h4 id='method.SetRange' class="method"><span id='SetRange.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRange' class='fnname'>SetRange</a>(&amp;self, aRange: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMRange.html" title="struct xpcom::interfaces::nsIDOMRange">nsIDOMRange</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#639-641' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  If the range is set to a non-null value, then the
+   *  range is used for encoding, otherwise the entire
+   *  document or selection is encoded.
+   * @param aRange The range to encode.
+   */
+</code></pre>
+
+<p><code>void setRange (in nsIDOMRange aRange);</code></p>
+</div><h4 id='method.SetNode' class="method"><span id='SetNode.v' class='invisible'><code>pub unsafe fn <a href='#method.SetNode' class='fnname'>SetNode</a>(&amp;self, aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#656-658' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  If the node is set to a non-null value, then the
+   *  node is used for encoding, otherwise the entire
+   *  document or range or selection is encoded.
+   * @param aNode The node to encode.
+   */
+</code></pre>
+
+<p><code>void setNode (in nsIDOMNode aNode);</code></p>
+</div><h4 id='method.SetContainerNode' class="method"><span id='SetContainerNode.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContainerNode' class='fnname'>SetContainerNode</a>(&amp;self, aContainer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#677-679' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  If the container is set to a non-null value, then its
+   *  child nodes are used for encoding, otherwise the entire
+   *  document or range or selection or node is encoded.
+   *  @param aContainer The node which child nodes will be encoded.
+   */
+</code></pre>
+
+<p><code>void setContainerNode (in nsIDOMNode aContainer);</code></p>
+</div><h4 id='method.SetCharset' class="method"><span id='SetCharset.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCharset' class='fnname'>SetCharset</a>(&amp;self, aCharset: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#702-704' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Documents typically have an intrinsic character set,
+   *  but if no intrinsic value is found, the platform character set
+   *  is used. This function overrides both the intrinisc and platform
+   *  charset.
+   *  @param aCharset Overrides the both the intrinsic or platform
+   *  character set when encoding the document.
+   *
+   *  Possible result codes: NS_ERROR_NO_CHARSET_CONVERTER
+   */
+</code></pre>
+
+<p><code>void setCharset (in ACString aCharset);</code></p>
+</div><h4 id='method.SetWrapColumn' class="method"><span id='SetWrapColumn.v' class='invisible'><code>pub unsafe fn <a href='#method.SetWrapColumn' class='fnname'>SetWrapColumn</a>(&amp;self, aWrapColumn: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#717-719' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Set a wrap column.  This may have no effect in some types of encoders.
+   * @param aWrapColumn Column to which to wrap.
+   */
+</code></pre>
+
+<p><code>void setWrapColumn (in unsigned long aWrapColumn);</code></p>
+</div><h4 id='method.GetMimeType' class="method"><span id='GetMimeType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMimeType' class='fnname'>GetMimeType</a>(&amp;self, aMimeType: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#734-736' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  The mime type preferred by the encoder.  This piece of api was
+   *  added because the copy encoder may need to switch mime types on you
+   *  if you ask it to copy html that really represents plaintext content.
+   *  Call this AFTER Init() and SetSelection() have both been called.
+   */
+</code></pre>
+
+<p><code>readonly attribute AString mimeType;</code></p>
+</div><h4 id='method.EncodeToStream' class="method"><span id='EncodeToStream.v' class='invisible'><code>pub unsafe fn <a href='#method.EncodeToStream' class='fnname'>EncodeToStream</a>(&amp;self, aStream: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIOutputStream.html" title="struct xpcom::interfaces::nsIOutputStream">nsIOutputStream</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#752-754' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Encode the document and send the result to the nsIOutputStream.
+   *
+   *  Possible result codes are the stream errors which might have
+   *  been encountered.
+   * @param aStream Stream into which to encode.
+   */
+</code></pre>
+
+<p><code>void encodeToStream (in nsIOutputStream aStream);</code></p>
+</div><h4 id='method.EncodeToString' class="method"><span id='EncodeToString.v' class='invisible'><code>pub unsafe fn <a href='#method.EncodeToString' class='fnname'>EncodeToString</a>(&amp;self, _retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#768-770' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Encode the document into a string.
+   *
+   * @return The document encoded into a string.
+   */
+</code></pre>
+
+<p><code>AString encodeToString ();</code></p>
+</div><h4 id='method.EncodeToStringWithContext' class="method"><span id='EncodeToStringWithContext.v' class='invisible'><code>pub unsafe fn <a href='#method.EncodeToStringWithContext' class='fnname'>EncodeToStringWithContext</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContextString: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aInfoString: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#789-791' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Encode the document into a string. Stores the extra context information
+   * into the two arguments.
+   * @param [OUT] aContextString The string where the parent hierarchy
+   *              information will be stored.
+   * @param [OUT] aInfoString The string where extra context info will
+   *              be stored.
+   * @return The document encoded as a string.
+   *
+   */
+</code></pre>
+
+<p><code>AString encodeToStringWithContext (out AString aContextString, out AString aInfoString);</code></p>
+</div><h4 id='method.EncodeToStringWithMaxLength' class="method"><span id='EncodeToStringWithMaxLength.v' class='invisible'><code>pub unsafe fn <a href='#method.EncodeToStringWithMaxLength' class='fnname'>EncodeToStringWithMaxLength</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMaxLength: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#813-815' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Encode the document into a string of limited size.
+   * @param aMaxLength After aMaxLength characters, the encoder will stop
+   *                   encoding new data.
+   *                   Only values &gt; 0 will be considered.
+   *                   The returned string may be slightly larger than
+   *                   aMaxLength because some serializers (eg. HTML)
+   *                   may need to close some tags after they stop
+   *                   encoding new data, or finish a line (72 columns
+   *                   by default for the plain text serializer).
+   *
+   * @return The document encoded into a string.
+   */
+</code></pre>
+
+<p><code>AString encodeToStringWithMaxLength (in unsigned long aMaxLength);</code></p>
+</div><h4 id='method.SetNodeFixup' class="method"><span id='SetNodeFixup.v' class='invisible'><code>pub unsafe fn <a href='#method.SetNodeFixup' class='fnname'>SetNodeFixup</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFixup: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocumentEncoderNodeFixup.html" title="struct xpcom::interfaces::nsIDocumentEncoderNodeFixup">nsIDocumentEncoderNodeFixup</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#828-830' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the fixup object associated with node persistence.
+   * @param aFixup The fixup object.
+   */
+</code></pre>
+
+<p><code>void setNodeFixup (in nsIDocumentEncoderNodeFixup aFixup);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDocumentEncoder.html" title="struct xpcom::interfaces::nsIDocumentEncoder">nsIDocumentEncoder</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#164-167' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">569447135</span>, <span class="number">55663</span>, <span class="number">18394</span>, [<span class="number">191</span>, <span class="number">203</span>, <span class="number">83</span>, <span class="number">49</span>, <span class="number">39</span>, <span class="number">48</span>, <span class="number">3</span>, <span class="number">209</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDocumentEncoder.html" title="struct xpcom::interfaces::nsIDocumentEncoder">nsIDocumentEncoder</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#171-180' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#173-175' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#177-179' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDocumentEncoder.html" title="struct xpcom::interfaces::nsIDocumentEncoder">nsIDocumentEncoder</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#211-219' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDocumentEncoder.rs.html#214-218' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

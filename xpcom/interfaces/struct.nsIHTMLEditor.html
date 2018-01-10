@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIHTMLEditor` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIHTMLEditor">
+
+    <title>xpcom::interfaces::nsIHTMLEditor - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIHTMLEditor</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.SetInlineProperty">SetInlineProperty</a><a href="#method.GetInlineProperty">GetInlineProperty</a><a href="#method.GetInlinePropertyWithAttrValue">GetInlinePropertyWithAttrValue</a><a href="#method.RemoveAllInlineProperties">RemoveAllInlineProperties</a><a href="#method.RemoveInlineProperty">RemoveInlineProperty</a><a href="#method.IncreaseFontSize">IncreaseFontSize</a><a href="#method.DecreaseFontSize">DecreaseFontSize</a><a href="#method.NodeIsBlock">NodeIsBlock</a><a href="#method.InsertHTML">InsertHTML</a><a href="#method.PasteNoFormatting">PasteNoFormatting</a><a href="#method.RebuildDocumentFromSource">RebuildDocumentFromSource</a><a href="#method.InsertHTMLWithContext">InsertHTMLWithContext</a><a href="#method.InsertElementAtSelection">InsertElementAtSelection</a><a href="#method.UpdateBaseURL">UpdateBaseURL</a><a href="#method.SelectElement">SelectElement</a><a href="#method.SetCaretAfterElement">SetCaretAfterElement</a><a href="#method.SetParagraphFormat">SetParagraphFormat</a><a href="#method.GetParagraphState">GetParagraphState</a><a href="#method.GetFontFaceState">GetFontFaceState</a><a href="#method.GetFontColorState">GetFontColorState</a><a href="#method.GetBackgroundColorState">GetBackgroundColorState</a><a href="#method.GetHighlightColorState">GetHighlightColorState</a><a href="#method.GetListState">GetListState</a><a href="#method.GetListItemState">GetListItemState</a><a href="#method.GetAlignment">GetAlignment</a><a href="#method.GetIndentState">GetIndentState</a><a href="#method.MakeOrChangeList">MakeOrChangeList</a><a href="#method.RemoveList">RemoveList</a><a href="#method.Indent">Indent</a><a href="#method.Align">Align</a><a href="#method.GetElementOrParentByTagName">GetElementOrParentByTagName</a><a href="#method.GetSelectedElement">GetSelectedElement</a><a href="#method.GetHeadContentsAsHTML">GetHeadContentsAsHTML</a><a href="#method.ReplaceHeadContentsWithHTML">ReplaceHeadContentsWithHTML</a><a href="#method.CreateElementWithDefaults">CreateElementWithDefaults</a><a href="#method.InsertLinkAroundSelection">InsertLinkAroundSelection</a><a href="#method.SetBackgroundColor">SetBackgroundColor</a><a href="#method.SetBodyAttribute">SetBodyAttribute</a><a href="#method.GetLinkedObjects">GetLinkedObjects</a><a href="#method.GetIsCSSEnabled">GetIsCSSEnabled</a><a href="#method.SetIsCSSEnabled">SetIsCSSEnabled</a><a href="#method.GetSelectionContainer">GetSelectionContainer</a><a href="#method.CheckSelectionStateForAnonymousButtons">CheckSelectionStateForAnonymousButtons</a><a href="#method.IsAnonymousElement">IsAnonymousElement</a><a href="#method.GetReturnInParagraphCreatesNewParagraph">GetReturnInParagraphCreatesNewParagraph</a><a href="#method.SetReturnInParagraphCreatesNewParagraph">SetReturnInParagraphCreatesNewParagraph</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIHTMLEditor', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIHTMLEditor</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIHTMLEditor { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIHTMLEditor : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIHTMLEditor.html" title="struct xpcom::interfaces::nsIHTMLEditor">nsIHTMLEditor</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIHTMLEditorCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIHTMLEditor</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIHTMLEditor.html" title="struct xpcom::interfaces::nsIHTMLEditor">nsIHTMLEditor</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#253-1107' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.eLeft' class="associatedconstant"><span id='eLeft.v' class='invisible'><code>pub const <a href='#associatedconstant.eLeft' class="constant"><b>eLeft</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eLeft</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.eCenter' class="associatedconstant"><span id='eCenter.v' class='invisible'><code>pub const <a href='#associatedconstant.eCenter' class="constant"><b>eCenter</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eCenter</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.eRight' class="associatedconstant"><span id='eRight.v' class='invisible'><code>pub const <a href='#associatedconstant.eRight' class="constant"><b>eRight</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eRight</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.eJustify' class="associatedconstant"><span id='eJustify.v' class='invisible'><code>pub const <a href='#associatedconstant.eJustify' class="constant"><b>eJustify</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eJustify</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='method.SetInlineProperty' class="method"><span id='SetInlineProperty.v' class='invisible'><code>pub unsafe fn <a href='#method.SetInlineProperty' class='fnname'>SetInlineProperty</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProperty: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttribute: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aValue: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#284-286' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * SetInlineProperty() sets the aggregate properties on the current selection
+   *
+   * @param aProperty   the property to set on the selection
+   * @param aAttribute  the attribute of the property, if applicable.
+   *                    May be null.
+   *                    Example: aProperty=&quot;font&quot;, aAttribute=&quot;color&quot;
+   * @param aValue      if aAttribute is not null, the value of the attribute.
+   *                    May be null.
+   *                    Example: aProperty=&quot;font&quot;, aAttribute=&quot;color&quot;,
+   *                             aValue=&quot;0x00FFFF&quot;
+   */
+</code></pre>
+
+<p><code>void setInlineProperty (in AString aProperty, in AString aAttribute, in AString aValue);</code></p>
+</div><h4 id='method.GetInlineProperty' class="method"><span id='GetInlineProperty.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInlineProperty' class='fnname'>GetInlineProperty</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProperty: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttribute: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aValue: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFirst: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAny: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAll: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#315-317' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getInlineProperty() gets aggregate properties of the current selection.
+   * All object in the current selection are scanned and their attributes are
+   * represented in a list of Property object.
+   *
+   * @param aProperty   the property to get on the selection
+   * @param aAttribute  the attribute of the property, if applicable.
+   *                    May be null.
+   *                    Example: aProperty=&quot;font&quot;, aAttribute=&quot;color&quot;
+   * @param aValue      if aAttribute is not null, the value of the attribute.
+   *                    May be null.
+   *                    Example: aProperty=&quot;font&quot;, aAttribute=&quot;color&quot;,
+   *                             aValue=&quot;0x00FFFF&quot;
+   * @param aFirst      [OUT] PR_TRUE if the first text node in the
+   *                          selection has the property
+   * @param aAny        [OUT] PR_TRUE if any of the text nodes in the
+   *                          selection have the property
+   * @param aAll        [OUT] PR_TRUE if all of the text nodes in the
+   *                          selection have the property
+   */
+</code></pre>
+
+<p><code>void getInlineProperty (in AString aProperty, in AString aAttribute, in AString aValue, out boolean aFirst, out boolean aAny, out boolean aAll);</code></p>
+</div><h4 id='method.GetInlinePropertyWithAttrValue' class="method"><span id='GetInlinePropertyWithAttrValue.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInlinePropertyWithAttrValue' class='fnname'>GetInlinePropertyWithAttrValue</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProperty: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttribute: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aValue: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFirst: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAny: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAll: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#323-325' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>AString getInlinePropertyWithAttrValue (in AString aProperty, in AString aAttribute, in AString aValue, out boolean aFirst, out boolean aAny, out boolean aAll);</code></p>
+</div><h4 id='method.RemoveAllInlineProperties' class="method"><span id='RemoveAllInlineProperties.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveAllInlineProperties' class='fnname'>RemoveAllInlineProperties</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#338-340' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * removeAllInlineProperties() deletes all the inline properties from all
+   * text in the current selection.
+   */
+</code></pre>
+
+<p><code>void removeAllInlineProperties ();</code></p>
+</div><h4 id='method.RemoveInlineProperty' class="method"><span id='RemoveInlineProperty.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveInlineProperty' class='fnname'>RemoveInlineProperty</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProperty: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttribute: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#366-368' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * removeInlineProperty() deletes the properties from all text in the current
+   * selection.  If aProperty is not set on the selection, nothing is done.
+   *
+   * @param aProperty   the property to remove from the selection
+   *                    All atoms are for normal HTML tags (e.g.:
+   *                    nsIEditorProperty::font) except when you want to
+   *                    remove just links and not named anchors.
+   *                    For that, use nsIEditorProperty::href
+   * @param aAttribute  the attribute of the property, if applicable.
+   *                    May be null.
+   *                    Example: aProperty=nsIEditorProptery::font,
+   *                    aAttribute=&quot;color&quot;
+   *                    nsIEditProperty::allAttributes is special.
+   *                    It indicates that all content-based text properties
+   *                    are to be removed from the selection.
+   */
+</code></pre>
+
+<p><code>void removeInlineProperty (in AString aProperty, in AString aAttribute);</code></p>
+</div><h4 id='method.IncreaseFontSize' class="method"><span id='IncreaseFontSize.v' class='invisible'><code>pub unsafe fn <a href='#method.IncreaseFontSize' class='fnname'>IncreaseFontSize</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#382-384' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Increase font size for text in selection by 1 HTML unit
+   *  All existing text is scanned for existing &lt;FONT SIZE&gt; attributes
+   *  so they will be incremented instead of inserting new &lt;FONT&gt; tag
+   */
+</code></pre>
+
+<p><code>void increaseFontSize ();</code></p>
+</div><h4 id='method.DecreaseFontSize' class="method"><span id='DecreaseFontSize.v' class='invisible'><code>pub unsafe fn <a href='#method.DecreaseFontSize' class='fnname'>DecreaseFontSize</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#398-400' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Decrease font size for text in selection by 1 HTML unit
+   *  All existing text is scanned for existing &lt;FONT SIZE&gt; attributes
+   *  so they will be decreased instead of inserting new &lt;FONT&gt; tag
+   */
+</code></pre>
+
+<p><code>void decreaseFontSize ();</code></p>
+</div><h4 id='method.NodeIsBlock' class="method"><span id='NodeIsBlock.v' class='invisible'><code>pub unsafe fn <a href='#method.NodeIsBlock' class='fnname'>NodeIsBlock</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;node: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#415-417' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Tests if a node is a BLOCK element according the the HTML 4.0 DTD.
+   *   This does NOT consider CSS effect on display type
+   *
+   * @param aNode      the node to test
+   */
+</code></pre>
+
+<p><code>boolean nodeIsBlock (in nsIDOMNode node);</code></p>
+</div><h4 id='method.InsertHTML' class="method"><span id='InsertHTML.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertHTML' class='fnname'>InsertHTML</a>(&amp;self, aInputString: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#431-433' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Insert some HTML source at the current location
+   *
+   * @param aInputString   the string to be inserted
+   */
+</code></pre>
+
+<p><code>void insertHTML (in AString aInputString);</code></p>
+</div><h4 id='method.PasteNoFormatting' class="method"><span id='PasteNoFormatting.v' class='invisible'><code>pub unsafe fn <a href='#method.PasteNoFormatting' class='fnname'>PasteNoFormatting</a>(&amp;self, aSelectionType: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#446-448' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * Paste the text in the OS clipboard at the cursor position, replacing
+    * the selected text (if any), but strip out any HTML styles and formatting
+    */
+</code></pre>
+
+<p><code>void pasteNoFormatting (in long aSelectionType);</code></p>
+</div><h4 id='method.RebuildDocumentFromSource' class="method"><span id='RebuildDocumentFromSource.v' class='invisible'><code>pub unsafe fn <a href='#method.RebuildDocumentFromSource' class='fnname'>RebuildDocumentFromSource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSourceString: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#463-465' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Rebuild the entire document from source HTML
+   *  Needed to be able to edit HEAD and other outside-of-BODY content
+   *
+   *  @param aSourceString   HTML source string of the entire new document
+   */
+</code></pre>
+
+<p><code>void rebuildDocumentFromSource (in AString aSourceString);</code></p>
+</div><h4 id='method.InsertHTMLWithContext' class="method"><span id='InsertHTMLWithContext.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertHTMLWithContext' class='fnname'>InsertHTMLWithContext</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aInputString: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContextStr: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aInfoStr: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlavor: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSourceDoc: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMDocument.html" title="struct xpcom::interfaces::nsIDOMDocument">nsIDOMDocument</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDestinationNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDestinationOffset: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDeleteSelection: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#488-490' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Insert some HTML source, interpreting
+   * the string argument according to the given context.
+   *
+   * @param aInputString   the string to be inserted
+   * @param aContextStr    Context of insertion
+   * @param aInfoStr       Related info to aInputString
+   * @param aFlavor        Transferable flavor, can be &quot;&quot;
+   * @param aSourceDoc          document where input was dragged from (may be null)
+   * @param aDestinationNode    location for insertion (such as when dropped)
+   * @param aDestinationOffset  used with aDestNode to determine insert location
+   * @param aDeleteSelection    used with aDestNode during drag&amp;drop
+   * @param aCollapseSelection  used with aDestNode during drag&amp;drop
+   */
+</code></pre>
+
+<p><code>void insertHTMLWithContext (in AString aInputString, in AString aContextStr, in AString aInfoStr, in AString aFlavor, in nsIDOMDocument aSourceDoc, in nsIDOMNode aDestinationNode, in long aDestinationOffset, in boolean aDeleteSelection);</code></p>
+</div><h4 id='method.InsertElementAtSelection' class="method"><span id='InsertElementAtSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertElementAtSelection' class='fnname'>InsertElementAtSelection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDeleteSelection: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#511-513' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * Insert an element, which may have child nodes, at the selection
+    * Used primarily to insert a new element for various insert element dialogs,
+    *   but it enforces the HTML 4.0 DTD &quot;CanContain&quot; rules, so it should
+    *   be useful for other elements.
+    *
+    * @param aElement           The element to insert
+    * @param aDeleteSelection   Delete the selection before inserting
+    *     If aDeleteSelection is PR_FALSE, then the element is inserted
+    *     after the end of the selection for all element except
+    *     Named Anchors, which insert before the selection
+    */
+</code></pre>
+
+<p><code>void insertElementAtSelection (in nsIDOMElement aElement, in boolean aDeleteSelection);</code></p>
+</div><h4 id='method.UpdateBaseURL' class="method"><span id='UpdateBaseURL.v' class='invisible'><code>pub unsafe fn <a href='#method.UpdateBaseURL' class='fnname'>UpdateBaseURL</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#529-531' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *   Set the BaseURL for the document to the current URL
+   *     but only if the page doesn&#39;t have a &lt;base&gt; tag
+   *   This should be done after the document URL has changed,
+   *     such as after saving a file
+   *   This is used as base for relativizing link and image urls
+   */
+</code></pre>
+
+<p><code>void updateBaseURL ();</code></p>
+</div><h4 id='method.SelectElement' class="method"><span id='SelectElement.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectElement' class='fnname'>SelectElement</a>(&amp;self, aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#545-547' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * Set the selection at the suppled element
+    *
+    * @param aElement   An element in the document
+    */
+</code></pre>
+
+<p><code>void selectElement (in nsIDOMElement aElement);</code></p>
+</div><h4 id='method.SetCaretAfterElement' class="method"><span id='SetCaretAfterElement.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCaretAfterElement' class='fnname'>SetCaretAfterElement</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#568-570' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * Create a collapsed selection just after aElement
+    *
+    * XXX could we parameterize SelectElement(before/select/after&gt;?
+    *
+    * The selection is set to parent-of-aElement with an
+    *   offset 1 greater than aElement&#39;s offset
+    *   but it enforces the HTML 4.0 DTD &quot;CanContain&quot; rules, so it should
+    *   be useful for other elements.
+    *
+    * @param aElement  An element in the document
+    */
+</code></pre>
+
+<p><code>void setCaretAfterElement (in nsIDOMElement aElement);</code></p>
+</div><h4 id='method.SetParagraphFormat' class="method"><span id='SetParagraphFormat.v' class='invisible'><code>pub unsafe fn <a href='#method.SetParagraphFormat' class='fnname'>SetParagraphFormat</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aParagraphFormat: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#583-585' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * SetParagraphFormat       Insert a block paragraph tag around selection
+   * @param aParagraphFormat  &quot;p&quot;, &quot;h1&quot; to &quot;h6&quot;, &quot;address&quot;, &quot;pre&quot;, or &quot;blockquote&quot;
+   */
+</code></pre>
+
+<p><code>void setParagraphFormat (in AString aParagraphFormat);</code></p>
+</div><h4 id='method.GetParagraphState' class="method"><span id='GetParagraphState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetParagraphState' class='fnname'>GetParagraphState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMixed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#600-602' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getParagraphState returns what block tag paragraph format is in
+   * the selection.
+   * @param aMixed     True if there is more than one format
+   * @return           Name of block tag. &quot;&quot; is returned for none.
+   */
+</code></pre>
+
+<p><code>AString getParagraphState (out boolean aMixed);</code></p>
+</div><h4 id='method.GetFontFaceState' class="method"><span id='GetFontFaceState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFontFaceState' class='fnname'>GetFontFaceState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMixed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#617-619' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getFontFaceState returns what font face is in the selection.
+   * @param aMixed    True if there is more than one font face
+   * @return          Name of face.  Note: &quot;tt&quot; is returned for
+   *                  tt tag.  &quot;&quot; is returned for none.
+   */
+</code></pre>
+
+<p><code>AString getFontFaceState (out boolean aMixed);</code></p>
+</div><h4 id='method.GetFontColorState' class="method"><span id='GetFontColorState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFontColorState' class='fnname'>GetFontColorState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMixed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#633-635' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getFontColorState returns what font face is in the selection.
+   * @param aMixed     True if there is more than one font color
+   * @return           Color string. &quot;&quot; is returned for none.
+   */
+</code></pre>
+
+<p><code>AString getFontColorState (out boolean aMixed);</code></p>
+</div><h4 id='method.GetBackgroundColorState' class="method"><span id='GetBackgroundColorState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBackgroundColorState' class='fnname'>GetBackgroundColorState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMixed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#649-651' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getFontColorState returns what font face is in the selection.
+   * @param aMixed     True if there is more than one font color
+   * @return           Color string. &quot;&quot; is returned for none.
+   */
+</code></pre>
+
+<p><code>AString getBackgroundColorState (out boolean aMixed);</code></p>
+</div><h4 id='method.GetHighlightColorState' class="method"><span id='GetHighlightColorState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHighlightColorState' class='fnname'>GetHighlightColorState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMixed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#665-667' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getHighlightColorState returns what the highlight color of the selection.
+   * @param aMixed     True if there is more than one font color
+   * @return           Color string. &quot;&quot; is returned for none.
+   */
+</code></pre>
+
+<p><code>AString getHighlightColorState (out boolean aMixed);</code></p>
+</div><h4 id='method.GetListState' class="method"><span id='GetListState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetListState' class='fnname'>GetListState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMixed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOL: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUL: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDL: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#685-687' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getListState returns what list type is in the selection.
+   * @param aMixed    True if there is more than one type of list, or
+   *                  if there is some list and non-list
+   * @param aOL       The company that employs me.  No, really, it&#39;s
+   *                  true if an &quot;ol&quot; list is selected.
+   * @param aUL       true if an &quot;ul&quot; list is selected.
+   * @param aDL       true if a &quot;dl&quot; list is selected.
+   */
+</code></pre>
+
+<p><code>void getListState (out boolean aMixed, out boolean aOL, out boolean aUL, out boolean aDL);</code></p>
+</div><h4 id='method.GetListItemState' class="method"><span id='GetListItemState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetListItemState' class='fnname'>GetListItemState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMixed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDT: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDD: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#704-706' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getListItemState returns what list item type is in the selection.
+   * @param aMixed    True if there is more than one type of list item, or
+   *                  if there is some list and non-list
+   * @param aLI       true if &quot;li&quot; list items are selected.
+   * @param aDT       true if &quot;dt&quot; list items are selected.
+   * @param aDD       true if &quot;dd&quot; list items are selected.
+   */
+</code></pre>
+
+<p><code>void getListItemState (out boolean aMixed, out boolean aLI, out boolean aDT, out boolean aDD);</code></p>
+</div><h4 id='method.GetAlignment' class="method"><span id='GetAlignment.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAlignment' class='fnname'>GetAlignment</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMixed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAlign: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#722-724' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getAlignment     returns what alignment is in the selection.
+   * @param aMixed    True if there is more than one type of list item, or
+   *                  if there is some list and non-list
+   * @param aAlign    enum value for first encountered alignment
+   *                  (left/center/right)
+   */
+</code></pre>
+
+<p><code>void getAlignment (out boolean aMixed, out short aAlign);</code></p>
+</div><h4 id='method.GetIndentState' class="method"><span id='GetIndentState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIndentState' class='fnname'>GetIndentState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCanIndent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCanOutdent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#737-739' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Document me!
+   *
+   */
+</code></pre>
+
+<p><code>void getIndentState (out boolean aCanIndent, out boolean aCanOutdent);</code></p>
+</div><h4 id='method.MakeOrChangeList' class="method"><span id='MakeOrChangeList.v' class='invisible'><code>pub unsafe fn <a href='#method.MakeOrChangeList' class='fnname'>MakeOrChangeList</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListType: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;entireList: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBulletType: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#752-754' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Document me!
+   *
+   */
+</code></pre>
+
+<p><code>void makeOrChangeList (in AString aListType, in boolean entireList, in AString aBulletType);</code></p>
+</div><h4 id='method.RemoveList' class="method"><span id='RemoveList.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveList' class='fnname'>RemoveList</a>(&amp;self, aListType: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#767-769' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Document me!
+   *
+   */
+</code></pre>
+
+<p><code>void removeList (in AString aListType);</code></p>
+</div><h4 id='method.Indent' class="method"><span id='Indent.v' class='invisible'><code>pub unsafe fn <a href='#method.Indent' class='fnname'>Indent</a>(&amp;self, aIndent: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#782-784' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Document me!
+   *
+   */
+</code></pre>
+
+<p><code>void indent (in AString aIndent);</code></p>
+</div><h4 id='method.Align' class="method"><span id='Align.v' class='invisible'><code>pub unsafe fn <a href='#method.Align' class='fnname'>Align</a>(&amp;self, aAlign: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#797-799' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Document me!
+   *
+   */
+</code></pre>
+
+<p><code>void align (in AString aAlign);</code></p>
+</div><h4 id='method.GetElementOrParentByTagName' class="method"><span id='GetElementOrParentByTagName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetElementOrParentByTagName' class='fnname'>GetElementOrParentByTagName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTagName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#828-830' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return the input node or a parent matching the given aTagName,
+   *   starting the search at the supplied node.
+   * An example of use is for testing if a node is in a table cell
+   *   given a selection anchor node.
+   *
+   * @param aTagName  The HTML tagname
+   *  Special input values:
+   *    Use &quot;href&quot; to get a link node
+   *      (an &quot;A&quot; tag with the &quot;href&quot; attribute set)
+   *    Use &quot;anchor&quot; or &quot;namedanchor&quot; to get a named anchor node
+   *      (an &quot;A&quot; tag with the &quot;name&quot; attribute set)
+   *    Use &quot;list&quot; to get an OL, UL, or DL list node
+   *    Use &quot;td&quot; to get either a TD or TH cell node
+   *
+   * @param aNode    The node in the document to start the search.
+   *     If it is null, the anchor node of the current selection is used.
+   * @return         NS_EDITOR_ELEMENT_NOT_FOUND if an element is not found
+   *                 (passes NS_SUCCEEDED macro)
+   */
+</code></pre>
+
+<p><code>nsIDOMElement getElementOrParentByTagName (in AString aTagName, in nsIDOMNode aNode);</code></p>
+</div><h4 id='method.GetSelectedElement' class="method"><span id='GetSelectedElement.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelectedElement' class='fnname'>GetSelectedElement</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTagName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#858-860' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return an element only if it is the only node selected,
+   *    such as an image, horizontal rule, etc.
+   * The exception is a link, which is more like a text attribute:
+   *    The Anchor tag is returned if the selection is within the textnode(s)
+   *    that are children of the &quot;A&quot; node.
+   *    This could be a collapsed selection, i.e., a caret
+   *    within the link text.
+   *
+   * @param aTagName  The HTML tagname or and empty string
+   *       to get any element (but only if it is the only element selected)
+   *    Special input values for Links and Named anchors:
+   *    Use &quot;href&quot; to get a link node
+   *      (an &quot;A&quot; tag with the &quot;href&quot; attribute set)
+   *    Use &quot;anchor&quot; or &quot;namedanchor&quot; to get a named anchor node
+   *      (an &quot;A&quot; tag with the &quot;name&quot; attribute set)
+   * @return          NS_EDITOR_ELEMENT_NOT_FOUND if an element is not found
+   *                  (passes NS_SUCCEEDED macro)
+   */
+</code></pre>
+
+<p><code>nsIDOMElement getSelectedElement (in AString aTagName);</code></p>
+</div><h4 id='method.GetHeadContentsAsHTML' class="method"><span id='GetHeadContentsAsHTML.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHeadContentsAsHTML' class='fnname'>GetHeadContentsAsHTML</a>(&amp;self, _retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#872-874' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Output the contents of the &lt;HEAD&gt; section as text/HTML format
+   */
+</code></pre>
+
+<p><code>AString getHeadContentsAsHTML ();</code></p>
+</div><h4 id='method.ReplaceHeadContentsWithHTML' class="method"><span id='ReplaceHeadContentsWithHTML.v' class='invisible'><code>pub unsafe fn <a href='#method.ReplaceHeadContentsWithHTML' class='fnname'>ReplaceHeadContentsWithHTML</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSourceToInsert: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#886-888' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Replace all children of &lt;HEAD&gt; with string of HTML source
+   */
+</code></pre>
+
+<p><code>void replaceHeadContentsWithHTML (in AString aSourceToInsert);</code></p>
+</div><h4 id='method.CreateElementWithDefaults' class="method"><span id='CreateElementWithDefaults.v' class='invisible'><code>pub unsafe fn <a href='#method.CreateElementWithDefaults' class='fnname'>CreateElementWithDefaults</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTagName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#914-916' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return a new element with default attribute values
+   *
+   * This does not rely on the selection, and is not sensitive to context.
+   *
+   * Used primarily to supply new element for various insert element dialogs
+   *  (Image, Link, NamedAnchor, Table, and HorizontalRule
+   *   are the only returned elements as of 7/25/99)
+   *
+   * @param aTagName  The HTML tagname
+   *    Special input values for Links and Named anchors:
+   *    Use &quot;href&quot; to get a link node
+   *      (an &quot;A&quot; tag with the &quot;href&quot; attribute set)
+   *    Use &quot;anchor&quot; or &quot;namedanchor&quot; to get a named anchor node
+   *      (an &quot;A&quot; tag with the &quot;name&quot; attribute set)
+   * @return          The new element created.
+   */
+</code></pre>
+
+<p><code>nsIDOMElement createElementWithDefaults (in AString aTagName);</code></p>
+</div><h4 id='method.InsertLinkAroundSelection' class="method"><span id='InsertLinkAroundSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertLinkAroundSelection' class='fnname'>InsertLinkAroundSelection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAnchorElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#930-932' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Insert an link element as the parent of the current selection
+   *
+   * @param aElement   An &quot;A&quot; element with a non-empty &quot;href&quot; attribute
+   */
+</code></pre>
+
+<p><code>void insertLinkAroundSelection (in nsIDOMElement aAnchorElement);</code></p>
+</div><h4 id='method.SetBackgroundColor' class="method"><span id='SetBackgroundColor.v' class='invisible'><code>pub unsafe fn <a href='#method.SetBackgroundColor' class='fnname'>SetBackgroundColor</a>(&amp;self, aColor: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#946-948' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the value of the &quot;bgcolor&quot; attribute on the document&#39;s &lt;body&gt; element
+   *
+   * @param aColor  The HTML color string, such as &quot;#ffccff&quot; or &quot;yellow&quot;
+   */
+</code></pre>
+
+<p><code>void setBackgroundColor (in AString aColor);</code></p>
+</div><h4 id='method.SetBodyAttribute' class="method"><span id='SetBodyAttribute.v' class='invisible'><code>pub unsafe fn <a href='#method.SetBodyAttribute' class='fnname'>SetBodyAttribute</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttr: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aValue: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#966-968' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set an attribute on the document&#39;s &lt;body&gt; element
+   *    such as text, link, background colors
+   *
+   * 8/31/00 THIS ISN&#39;T BEING USED? SHOULD WE DROP IT?
+   *
+   * @param aAttr   The attribute to be set
+   * @param aValue  The value of the attribute
+   */
+</code></pre>
+
+<p><code>void setBodyAttribute (in AString aAttr, in AString aValue);</code></p>
+</div><h4 id='method.GetLinkedObjects' class="method"><span id='GetLinkedObjects.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLinkedObjects' class='fnname'>GetLinkedObjects</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#984-986' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Find all the nodes in the document which contain references
+   * to outside URIs (e.g. a href, img src, script src, etc.)
+   * The objects in the array will be type nsIURIRefObject.
+   *
+   * @return aNodeList    the linked nodes found
+   */
+</code></pre>
+
+<p><code>nsIArray getLinkedObjects ();</code></p>
+</div><h4 id='method.GetIsCSSEnabled' class="method"><span id='GetIsCSSEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsCSSEnabled' class='fnname'>GetIsCSSEnabled</a>(&amp;self, aIsCSSEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#1001-1003' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A boolean which is true is the HTMLEditor has been instantiated
+   * with CSS knowledge and if the CSS pref is currently checked
+   *
+   * @return    true if CSS handled and enabled
+   */
+</code></pre>
+
+<p><code>attribute boolean isCSSEnabled;</code></p>
+</div><h4 id='method.SetIsCSSEnabled' class="method"><span id='SetIsCSSEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIsCSSEnabled' class='fnname'>SetIsCSSEnabled</a>(&amp;self, aIsCSSEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#1018-1020' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A boolean which is true is the HTMLEditor has been instantiated
+   * with CSS knowledge and if the CSS pref is currently checked
+   *
+   * @return    true if CSS handled and enabled
+   */
+</code></pre>
+
+<p><code>attribute boolean isCSSEnabled;</code></p>
+</div><h4 id='method.GetSelectionContainer' class="method"><span id='GetSelectionContainer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelectionContainer' class='fnname'>GetSelectionContainer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#1033-1035' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * returns the deepest container of the selection
+   * @return a DOM Element
+   */
+</code></pre>
+
+<p><code>nsIDOMElement getSelectionContainer ();</code></p>
+</div><h4 id='method.CheckSelectionStateForAnonymousButtons' class="method"><span id='CheckSelectionStateForAnonymousButtons.v' class='invisible'><code>pub unsafe fn <a href='#method.CheckSelectionStateForAnonymousButtons' class='fnname'>CheckSelectionStateForAnonymousButtons</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSelection: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISelection.html" title="struct xpcom::interfaces::nsISelection">nsISelection</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#1049-1051' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Checks if the anonymous nodes created by the HTML editor have to be
+   * refreshed or hidden depending on a possible new state of the selection
+   * @param aSelection [IN] a selection
+   */
+</code></pre>
+
+<p><code>void checkSelectionStateForAnonymousButtons (in nsISelection aSelection);</code></p>
+</div><h4 id='method.IsAnonymousElement' class="method"><span id='IsAnonymousElement.v' class='invisible'><code>pub unsafe fn <a href='#method.IsAnonymousElement' class='fnname'>IsAnonymousElement</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#1057-1059' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>boolean isAnonymousElement (in nsIDOMElement aElement);</code></p>
+</div><h4 id='method.GetReturnInParagraphCreatesNewParagraph' class="method"><span id='GetReturnInParagraphCreatesNewParagraph.v' class='invisible'><code>pub unsafe fn <a href='#method.GetReturnInParagraphCreatesNewParagraph' class='fnname'>GetReturnInParagraphCreatesNewParagraph</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReturnInParagraphCreatesNewParagraph: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#1074-1076' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A boolean indicating if a return key pressed in a paragraph creates
+   * another paragraph or just inserts a &lt;br&gt; at the caret
+   *
+   * @return    true if CR in a paragraph creates a new paragraph
+   */
+</code></pre>
+
+<p><code>attribute boolean returnInParagraphCreatesNewParagraph;</code></p>
+</div><h4 id='method.SetReturnInParagraphCreatesNewParagraph' class="method"><span id='SetReturnInParagraphCreatesNewParagraph.v' class='invisible'><code>pub unsafe fn <a href='#method.SetReturnInParagraphCreatesNewParagraph' class='fnname'>SetReturnInParagraphCreatesNewParagraph</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReturnInParagraphCreatesNewParagraph: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#1091-1093' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A boolean indicating if a return key pressed in a paragraph creates
+   * another paragraph or just inserts a &lt;br&gt; at the caret
+   *
+   * @return    true if CR in a paragraph creates a new paragraph
+   */
+</code></pre>
+
+<p><code>attribute boolean returnInParagraphCreatesNewParagraph;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIHTMLEditor.html" title="struct xpcom::interfaces::nsIHTMLEditor">nsIHTMLEditor</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2280560958</span>, <span class="number">39007</span>, <span class="number">19011</span>, [<span class="number">169</span>, <span class="number">116</span>, <span class="number">13</span>, <span class="number">149</span>, <span class="number">18</span>, <span class="number">218</span>, <span class="number">47</span>, <span class="number">176</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIHTMLEditor.html" title="struct xpcom::interfaces::nsIHTMLEditor">nsIHTMLEditor</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIHTMLEditor.html" title="struct xpcom::interfaces::nsIHTMLEditor">nsIHTMLEditor</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHTMLEditor.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

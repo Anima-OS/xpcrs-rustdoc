@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIHttpChannel` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIHttpChannel">
+
+    <title>xpcom::interfaces::nsIHttpChannel - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIHttpChannel</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetRequestMethod">GetRequestMethod</a><a href="#method.SetRequestMethod">SetRequestMethod</a><a href="#method.GetReferrer">GetReferrer</a><a href="#method.SetReferrer">SetReferrer</a><a href="#method.GetReferrerPolicy">GetReferrerPolicy</a><a href="#method.SetReferrerWithPolicy">SetReferrerWithPolicy</a><a href="#method.GetProtocolVersion">GetProtocolVersion</a><a href="#method.GetTransferSize">GetTransferSize</a><a href="#method.GetDecodedBodySize">GetDecodedBodySize</a><a href="#method.GetEncodedBodySize">GetEncodedBodySize</a><a href="#method.GetRequestHeader">GetRequestHeader</a><a href="#method.SetRequestHeader">SetRequestHeader</a><a href="#method.SetEmptyRequestHeader">SetEmptyRequestHeader</a><a href="#method.VisitRequestHeaders">VisitRequestHeaders</a><a href="#method.VisitNonDefaultRequestHeaders">VisitNonDefaultRequestHeaders</a><a href="#method.GetAllowPipelining">GetAllowPipelining</a><a href="#method.SetAllowPipelining">SetAllowPipelining</a><a href="#method.GetAllowSTS">GetAllowSTS</a><a href="#method.SetAllowSTS">SetAllowSTS</a><a href="#method.GetRedirectionLimit">GetRedirectionLimit</a><a href="#method.SetRedirectionLimit">SetRedirectionLimit</a><a href="#method.GetResponseStatus">GetResponseStatus</a><a href="#method.GetResponseStatusText">GetResponseStatusText</a><a href="#method.GetRequestSucceeded">GetRequestSucceeded</a><a href="#method.GetIsMainDocumentChannel">GetIsMainDocumentChannel</a><a href="#method.SetIsMainDocumentChannel">SetIsMainDocumentChannel</a><a href="#method.GetResponseHeader">GetResponseHeader</a><a href="#method.SetResponseHeader">SetResponseHeader</a><a href="#method.VisitResponseHeaders">VisitResponseHeaders</a><a href="#method.GetOriginalResponseHeader">GetOriginalResponseHeader</a><a href="#method.VisitOriginalResponseHeaders">VisitOriginalResponseHeaders</a><a href="#method.IsNoStoreResponse">IsNoStoreResponse</a><a href="#method.IsNoCacheResponse">IsNoCacheResponse</a><a href="#method.IsPrivateResponse">IsPrivateResponse</a><a href="#method.RedirectTo">RedirectTo</a><a href="#method.UpgradeToSecure">UpgradeToSecure</a><a href="#method.GetRequestContextID">GetRequestContextID</a><a href="#method.SetRequestContextID">SetRequestContextID</a><a href="#method.GetChannelId">GetChannelId</a><a href="#method.SetChannelId">SetChannelId</a><a href="#method.GetTopLevelContentWindowId">GetTopLevelContentWindowId</a><a href="#method.SetTopLevelContentWindowId">SetTopLevelContentWindowId</a><a href="#method.GetIsTrackingResource">GetIsTrackingResource</a><a href="#method.GetTopLevelOuterContentWindowId">GetTopLevelOuterContentWindowId</a><a href="#method.SetTopLevelOuterContentWindowId">SetTopLevelOuterContentWindowId</a><a href="#method.LogBlockedCORSRequest">LogBlockedCORSRequest</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIChannel&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetOriginalURI">GetOriginalURI</a><a href="#method.SetOriginalURI">SetOriginalURI</a><a href="#method.GetURI">GetURI</a><a href="#method.GetOwner">GetOwner</a><a href="#method.SetOwner">SetOwner</a><a href="#method.GetNotificationCallbacks">GetNotificationCallbacks</a><a href="#method.SetNotificationCallbacks">SetNotificationCallbacks</a><a href="#method.GetSecurityInfo">GetSecurityInfo</a><a href="#method.GetContentType">GetContentType</a><a href="#method.SetContentType">SetContentType</a><a href="#method.GetContentCharset">GetContentCharset</a><a href="#method.SetContentCharset">SetContentCharset</a><a href="#method.GetContentLength">GetContentLength</a><a href="#method.SetContentLength">SetContentLength</a><a href="#method.Open">Open</a><a href="#method.Open2">Open2</a><a href="#method.AsyncOpen">AsyncOpen</a><a href="#method.AsyncOpen2">AsyncOpen2</a><a href="#method.GetContentDisposition">GetContentDisposition</a><a href="#method.SetContentDisposition">SetContentDisposition</a><a href="#method.GetContentDispositionFilename">GetContentDispositionFilename</a><a href="#method.SetContentDispositionFilename">SetContentDispositionFilename</a><a href="#method.GetContentDispositionHeader">GetContentDispositionHeader</a><a href="#method.GetLoadInfo">GetLoadInfo</a><a href="#method.SetLoadInfo">SetLoadInfo</a><a href="#method.GetIsDocument">GetIsDocument</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIHttpChannel', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIHttpChannel</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#25-34' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIHttpChannel { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIHttpChannel : nsIChannel</code></p>
+
+<pre><code class="language-text">/**
+ * nsIHttpChannel
+ *
+ * This interface allows for the modification of HTTP request parameters and
+ * the inspection of the resulting HTTP response status and headers when they
+ * become available.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpChannel.html" title="struct xpcom::interfaces::nsIHttpChannel">nsIHttpChannel</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#74-80' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIHttpChannelCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#77-79' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIHttpChannel</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpChannel.html" title="struct xpcom::interfaces::nsIHttpChannel">nsIHttpChannel</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#259-1261' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.REFERRER_POLICY_UNSET' class="associatedconstant"><span id='REFERRER_POLICY_UNSET.v' class='invisible'><code>pub const <a href='#associatedconstant.REFERRER_POLICY_UNSET' class="constant"><b>REFERRER_POLICY_UNSET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REFERRER_POLICY_UNSET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+     * Referrer policies. See ReferrerPolicy.h for more details.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.REFERRER_POLICY_NO_REFERRER_WHEN_DOWNGRADE' class="associatedconstant"><span id='REFERRER_POLICY_NO_REFERRER_WHEN_DOWNGRADE.v' class='invisible'><code>pub const <a href='#associatedconstant.REFERRER_POLICY_NO_REFERRER_WHEN_DOWNGRADE' class="constant"><b>REFERRER_POLICY_NO_REFERRER_WHEN_DOWNGRADE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REFERRER_POLICY_NO_REFERRER_WHEN_DOWNGRADE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.REFERRER_POLICY_NO_REFERRER' class="associatedconstant"><span id='REFERRER_POLICY_NO_REFERRER.v' class='invisible'><code>pub const <a href='#associatedconstant.REFERRER_POLICY_NO_REFERRER' class="constant"><b>REFERRER_POLICY_NO_REFERRER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REFERRER_POLICY_NO_REFERRER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.REFERRER_POLICY_ORIGIN' class="associatedconstant"><span id='REFERRER_POLICY_ORIGIN.v' class='invisible'><code>pub const <a href='#associatedconstant.REFERRER_POLICY_ORIGIN' class="constant"><b>REFERRER_POLICY_ORIGIN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REFERRER_POLICY_ORIGIN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.REFERRER_POLICY_ORIGIN_WHEN_XORIGIN' class="associatedconstant"><span id='REFERRER_POLICY_ORIGIN_WHEN_XORIGIN.v' class='invisible'><code>pub const <a href='#associatedconstant.REFERRER_POLICY_ORIGIN_WHEN_XORIGIN' class="constant"><b>REFERRER_POLICY_ORIGIN_WHEN_XORIGIN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REFERRER_POLICY_ORIGIN_WHEN_XORIGIN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.REFERRER_POLICY_UNSAFE_URL' class="associatedconstant"><span id='REFERRER_POLICY_UNSAFE_URL.v' class='invisible'><code>pub const <a href='#associatedconstant.REFERRER_POLICY_UNSAFE_URL' class="constant"><b>REFERRER_POLICY_UNSAFE_URL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REFERRER_POLICY_UNSAFE_URL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.REFERRER_POLICY_SAME_ORIGIN' class="associatedconstant"><span id='REFERRER_POLICY_SAME_ORIGIN.v' class='invisible'><code>pub const <a href='#associatedconstant.REFERRER_POLICY_SAME_ORIGIN' class="constant"><b>REFERRER_POLICY_SAME_ORIGIN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REFERRER_POLICY_SAME_ORIGIN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.REFERRER_POLICY_STRICT_ORIGIN' class="associatedconstant"><span id='REFERRER_POLICY_STRICT_ORIGIN.v' class='invisible'><code>pub const <a href='#associatedconstant.REFERRER_POLICY_STRICT_ORIGIN' class="constant"><b>REFERRER_POLICY_STRICT_ORIGIN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REFERRER_POLICY_STRICT_ORIGIN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+</div><h4 id='associatedconstant.REFERRER_POLICY_STRICT_ORIGIN_WHEN_XORIGIN' class="associatedconstant"><span id='REFERRER_POLICY_STRICT_ORIGIN_WHEN_XORIGIN.v' class='invisible'><code>pub const <a href='#associatedconstant.REFERRER_POLICY_STRICT_ORIGIN_WHEN_XORIGIN' class="constant"><b>REFERRER_POLICY_STRICT_ORIGIN_WHEN_XORIGIN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">REFERRER_POLICY_STRICT_ORIGIN_WHEN_XORIGIN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='method.GetRequestMethod' class="method"><span id='GetRequestMethod.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRequestMethod' class='fnname'>GetRequestMethod</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestMethod: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#317-319' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**************************************************************************
+     * REQUEST CONFIGURATION
+     *
+     * Modifying request parameters after asyncOpen has been called is an error.
+     */
+/**
+     * Set/get the HTTP request method (default is &quot;GET&quot;).  Both setter and
+     * getter are case sensitive.
+     *
+     * This attribute may only be set before the channel is opened.
+     *
+     * NOTE: The data for a &quot;POST&quot; or &quot;PUT&quot; request can be configured via
+     * nsIUploadChannel; however, after setting the upload data, it may be
+     * necessary to set the request method explicitly.  The documentation
+     * for nsIUploadChannel has further details.
+     *
+     * @throws NS_ERROR_IN_PROGRESS if set after the channel has been opened.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute ACString requestMethod;</code></p>
+</div><h4 id='method.SetRequestMethod' class="method"><span id='SetRequestMethod.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRequestMethod' class='fnname'>SetRequestMethod</a>(&amp;self, aRequestMethod: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#346-348' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**************************************************************************
+     * REQUEST CONFIGURATION
+     *
+     * Modifying request parameters after asyncOpen has been called is an error.
+     */
+/**
+     * Set/get the HTTP request method (default is &quot;GET&quot;).  Both setter and
+     * getter are case sensitive.
+     *
+     * This attribute may only be set before the channel is opened.
+     *
+     * NOTE: The data for a &quot;POST&quot; or &quot;PUT&quot; request can be configured via
+     * nsIUploadChannel; however, after setting the upload data, it may be
+     * necessary to set the request method explicitly.  The documentation
+     * for nsIUploadChannel has further details.
+     *
+     * @throws NS_ERROR_IN_PROGRESS if set after the channel has been opened.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute ACString requestMethod;</code></p>
+</div><h4 id='method.GetReferrer' class="method"><span id='GetReferrer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetReferrer' class='fnname'>GetReferrer</a>(&amp;self, aReferrer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#374-376' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get/set the HTTP referrer URI.  This is the address (URI) of the
+     * resource from which this channel&#39;s URI was obtained (see RFC2616 section
+     * 14.36).
+     *
+     * This attribute may only be set before the channel is opened.
+     *
+     * NOTE: The channel may silently refuse to set the Referer header if the
+     * URI does not pass certain security checks (e.g., a &quot;https://&quot; URL will
+     * never be sent as the referrer for a plaintext HTTP request).  The
+     * implementation is not required to throw an exception when the referrer
+     * URI is rejected.
+     *
+     * @throws NS_ERROR_IN_PROGRESS if set after the channel has been opened.
+     * @throws NS_ERROR_FAILURE if used for setting referrer during
+     *         visitRequestHeaders. Getting the value will not throw.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute nsIURI referrer;</code></p>
+</div><h4 id='method.SetReferrer' class="method"><span id='SetReferrer.v' class='invisible'><code>pub unsafe fn <a href='#method.SetReferrer' class='fnname'>SetReferrer</a>(&amp;self, aReferrer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#402-404' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get/set the HTTP referrer URI.  This is the address (URI) of the
+     * resource from which this channel&#39;s URI was obtained (see RFC2616 section
+     * 14.36).
+     *
+     * This attribute may only be set before the channel is opened.
+     *
+     * NOTE: The channel may silently refuse to set the Referer header if the
+     * URI does not pass certain security checks (e.g., a &quot;https://&quot; URL will
+     * never be sent as the referrer for a plaintext HTTP request).  The
+     * implementation is not required to throw an exception when the referrer
+     * URI is rejected.
+     *
+     * @throws NS_ERROR_IN_PROGRESS if set after the channel has been opened.
+     * @throws NS_ERROR_FAILURE if used for setting referrer during
+     *         visitRequestHeaders. Getting the value will not throw.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute nsIURI referrer;</code></p>
+</div><h4 id='method.GetReferrerPolicy' class="method"><span id='GetReferrerPolicy.v' class='invisible'><code>pub unsafe fn <a href='#method.GetReferrerPolicy' class='fnname'>GetReferrerPolicy</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReferrerPolicy: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#418-420' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the HTTP referrer policy.  The policy is retrieved from the meta
+     * referrer tag, which can be one of many values (see ReferrerPolicy.h for
+     * more details).
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute unsigned long referrerPolicy;</code></p>
+</div><h4 id='method.SetReferrerWithPolicy' class="method"><span id='SetReferrerWithPolicy.v' class='invisible'><code>pub unsafe fn <a href='#method.SetReferrerWithPolicy' class='fnname'>SetReferrerWithPolicy</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;referrer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;referrerPolicy: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#433-435' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Set the HTTP referrer URI with a referrer policy.
+     * @throws NS_ERROR_FAILURE if called during visitRequestHeaders.
+     */
+</code></pre>
+
+<p><code>[must_use] void setReferrerWithPolicy (in nsIURI referrer, in unsigned long referrerPolicy);</code></p>
+</div><h4 id='method.GetProtocolVersion' class="method"><span id='GetProtocolVersion.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProtocolVersion' class='fnname'>GetProtocolVersion</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProtocolVersion: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#451-453' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns the network protocol used to fetch the resource as identified
+     * by the ALPN Protocol ID.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute ACString protocolVersion;</code></p>
+</div><h4 id='method.GetTransferSize' class="method"><span id='GetTransferSize.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTransferSize' class='fnname'>GetTransferSize</a>(&amp;self, aTransferSize: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#465-467' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * size consumed by the response header fields and the response payload body
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute uint64_t transferSize;</code></p>
+</div><h4 id='method.GetDecodedBodySize' class="method"><span id='GetDecodedBodySize.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDecodedBodySize' class='fnname'>GetDecodedBodySize</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDecodedBodySize: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#480-482' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The size of the message body received by the client,
+     * after removing any applied content-codings
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute uint64_t decodedBodySize;</code></p>
+</div><h4 id='method.GetEncodedBodySize' class="method"><span id='GetEncodedBodySize.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEncodedBodySize' class='fnname'>GetEncodedBodySize</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEncodedBodySize: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#494-496' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The size in octets of the payload body, prior to removing content-codings
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute uint64_t encodedBodySize;</code></p>
+</div><h4 id='method.GetRequestHeader' class="method"><span id='GetRequestHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRequestHeader' class='fnname'>GetRequestHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHeader: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#515-517' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the value of a particular request header.
+     *
+     * @param aHeader
+     *        The case-insensitive name of the request header to query (e.g.,
+     *        &quot;Cache-Control&quot;).
+     *
+     * @return the value of the request header.
+     * @throws NS_ERROR_NOT_AVAILABLE if the header is not set.
+     */
+</code></pre>
+
+<p><code>[must_use] ACString getRequestHeader (in ACString aHeader);</code></p>
+</div><h4 id='method.SetRequestHeader' class="method"><span id='SetRequestHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRequestHeader' class='fnname'>SetRequestHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHeader: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aValue: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMerge: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#554-556' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Set the value of a particular request header.
+     *
+     * This method allows, for example, the cookies module to add &quot;Cookie&quot;
+     * headers to the outgoing HTTP request.
+     *
+     * This method may only be called before the channel is opened.
+     *
+     * @param aHeader
+     *        The case-insensitive name of the request header to set (e.g.,
+     *        &quot;Cookie&quot;).
+     * @param aValue
+     *        The request header value to set (e.g., &quot;X=1&quot;).
+     * @param aMerge
+     *        If true, the new header value will be merged with any existing
+     *        values for the specified header.  This flag is ignored if the
+     *        specified header does not support merging (e.g., the &quot;Content-
+     *        Type&quot; header can only have one value).  The list of headers for
+     *        which this flag is ignored is an implementation detail.  If this
+     *        flag is false, then the header value will be replaced with the
+     *        contents of |aValue|.
+     *
+     * If aValue is empty and aMerge is false, the header will be cleared.
+     *
+     * @throws NS_ERROR_IN_PROGRESS if called after the channel has been
+     *         opened.
+     * @throws NS_ERROR_FAILURE if called during visitRequestHeaders.
+     */
+</code></pre>
+
+<p><code>[must_use] void setRequestHeader (in ACString aHeader, in ACString aValue, in boolean aMerge);</code></p>
+</div><h4 id='method.SetEmptyRequestHeader' class="method"><span id='SetEmptyRequestHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.SetEmptyRequestHeader' class='fnname'>SetEmptyRequestHeader</a>(&amp;self, aHeader: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#581-583' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Set a request header with empty value.
+     *
+     * This should be used with caution in the cases where the behavior of
+     * setRequestHeader ignoring empty header values is undesirable.
+     *
+     * This method may only be called before the channel is opened.
+     *
+     * @param aHeader
+     *        The case-insensitive name of the request header to set (e.g.,
+     *        &quot;Cookie&quot;).
+     *
+     * @throws NS_ERROR_IN_PROGRESS if called after the channel has been
+     *         opened.
+     * @throws NS_ERROR_FAILURE if called during visitRequestHeaders.
+     */
+</code></pre>
+
+<p><code>[must_use] void setEmptyRequestHeader (in ACString aHeader);</code></p>
+</div><h4 id='method.VisitRequestHeaders' class="method"><span id='VisitRequestHeaders.v' class='invisible'><code>pub unsafe fn <a href='#method.VisitRequestHeaders' class='fnname'>VisitRequestHeaders</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aVisitor: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIHttpHeaderVisitor.html" title="struct xpcom::interfaces::nsIHttpHeaderVisitor">nsIHttpHeaderVisitor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#599-601' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Call this method to visit all request headers.  Calling setRequestHeader
+     * while visiting request headers has undefined behavior.  Don&#39;t do it!
+     *
+     * @param aVisitor
+     *        the header visitor instance.
+     */
+</code></pre>
+
+<p><code>[must_use] void visitRequestHeaders (in nsIHttpHeaderVisitor aVisitor);</code></p>
+</div><h4 id='method.VisitNonDefaultRequestHeaders' class="method"><span id='VisitNonDefaultRequestHeaders.v' class='invisible'><code>pub unsafe fn <a href='#method.VisitNonDefaultRequestHeaders' class='fnname'>VisitNonDefaultRequestHeaders</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aVisitor: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIHttpHeaderVisitor.html" title="struct xpcom::interfaces::nsIHttpHeaderVisitor">nsIHttpHeaderVisitor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#618-620' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Call this method to visit all non-default (UA-provided) request headers.
+     * Calling setRequestHeader while visiting request headers has undefined
+     * behavior. Don&#39;t do it!
+     *
+     * @param aVisitor
+     *        the header visitor instance.
+     */
+</code></pre>
+
+<p><code>[must_use] void visitNonDefaultRequestHeaders (in nsIHttpHeaderVisitor aVisitor);</code></p>
+</div><h4 id='method.GetAllowPipelining' class="method"><span id='GetAllowPipelining.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAllowPipelining' class='fnname'>GetAllowPipelining</a>(&amp;self, aAllowPipelining: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#634-636' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This attribute no longer has any effect, it remains for backwards compat
+     *
+     * @throws NS_ERROR_FAILURE if set after the channel has been opened.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute boolean allowPipelining;</code></p>
+</div><h4 id='method.SetAllowPipelining' class="method"><span id='SetAllowPipelining.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAllowPipelining' class='fnname'>SetAllowPipelining</a>(&amp;self, aAllowPipelining: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#650-652' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This attribute no longer has any effect, it remains for backwards compat
+     *
+     * @throws NS_ERROR_FAILURE if set after the channel has been opened.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute boolean allowPipelining;</code></p>
+</div><h4 id='method.GetAllowSTS' class="method"><span id='GetAllowSTS.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAllowSTS' class='fnname'>GetAllowSTS</a>(&amp;self, aAllowSTS: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#673-675' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This attribute of the channel indicates whether or not
+     * the underlying HTTP transaction should be honor stored Strict Transport
+     * Security directives for its principal. It defaults to true. Using
+     * OCSP to bootstrap the HTTPs is the likely use case for setting it to
+     * false.
+     *
+     * This attribute may only be set before the channel is opened.
+     *
+     * @throws NS_ERROR_IN_PROGRESS or NS_ERROR_ALREADY_OPENED
+     *         if called after the channel has been opened.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute boolean allowSTS;</code></p>
+</div><h4 id='method.SetAllowSTS' class="method"><span id='SetAllowSTS.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAllowSTS' class='fnname'>SetAllowSTS</a>(&amp;self, aAllowSTS: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#696-698' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This attribute of the channel indicates whether or not
+     * the underlying HTTP transaction should be honor stored Strict Transport
+     * Security directives for its principal. It defaults to true. Using
+     * OCSP to bootstrap the HTTPs is the likely use case for setting it to
+     * false.
+     *
+     * This attribute may only be set before the channel is opened.
+     *
+     * @throws NS_ERROR_IN_PROGRESS or NS_ERROR_ALREADY_OPENED
+     *         if called after the channel has been opened.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute boolean allowSTS;</code></p>
+</div><h4 id='method.GetRedirectionLimit' class="method"><span id='GetRedirectionLimit.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRedirectionLimit' class='fnname'>GetRedirectionLimit</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRedirectionLimit: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#719-721' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This attribute specifies the number of redirects this channel is allowed
+     * to make.  If zero, the channel will fail to redirect and will generate
+     * a NS_ERROR_REDIRECT_LOOP failure status.
+     *
+     * NOTE: An HTTP redirect results in a new channel being created.  If the
+     * new channel supports nsIHttpChannel, then it will be assigned a value
+     * to its |redirectionLimit| attribute one less than the value of the
+     * redirected channel&#39;s |redirectionLimit| attribute.  The initial value
+     * for this attribute may be a configurable preference (depending on the
+     * implementation).
+     */
+</code></pre>
+
+<p><code>[must_use] attribute unsigned long redirectionLimit;</code></p>
+</div><h4 id='method.SetRedirectionLimit' class="method"><span id='SetRedirectionLimit.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRedirectionLimit' class='fnname'>SetRedirectionLimit</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRedirectionLimit: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#742-744' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This attribute specifies the number of redirects this channel is allowed
+     * to make.  If zero, the channel will fail to redirect and will generate
+     * a NS_ERROR_REDIRECT_LOOP failure status.
+     *
+     * NOTE: An HTTP redirect results in a new channel being created.  If the
+     * new channel supports nsIHttpChannel, then it will be assigned a value
+     * to its |redirectionLimit| attribute one less than the value of the
+     * redirected channel&#39;s |redirectionLimit| attribute.  The initial value
+     * for this attribute may be a configurable preference (depending on the
+     * implementation).
+     */
+</code></pre>
+
+<p><code>[must_use] attribute unsigned long redirectionLimit;</code></p>
+</div><h4 id='method.GetResponseStatus' class="method"><span id='GetResponseStatus.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResponseStatus' class='fnname'>GetResponseStatus</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResponseStatus: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#764-766' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**************************************************************************
+     * RESPONSE INFO
+     *
+     * Accessing response info before the onStartRequest event is an error.
+     */
+/**
+     * Get the HTTP response code (e.g., 200).
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute unsigned long responseStatus;</code></p>
+</div><h4 id='method.GetResponseStatusText' class="method"><span id='GetResponseStatusText.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResponseStatusText' class='fnname'>GetResponseStatusText</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aResponseStatusText: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#785-787' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the HTTP response status text (e.g., &quot;OK&quot;).
+     *
+     * NOTE: This returns the raw (possibly 8-bit) text from the server.  There
+     * are no assumptions made about the charset of the returned text.  You
+     * have been warned!
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute ACString responseStatusText;</code></p>
+</div><h4 id='method.GetRequestSucceeded' class="method"><span id='GetRequestSucceeded.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRequestSucceeded' class='fnname'>GetRequestSucceeded</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestSucceeded: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#809-811' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns true if the HTTP response code indicates success.  The value of
+     * nsIRequest::status will be NS_OK even when processing a 404 response
+     * because a 404 response may include a message body that (in some cases)
+     * should be shown to the user.
+     *
+     * Use this attribute to distinguish server error pages from normal pages,
+     * instead of comparing the response status manually against the set of
+     * valid response codes, if that is required by your application.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute boolean requestSucceeded;</code></p>
+</div><h4 id='method.GetIsMainDocumentChannel' class="method"><span id='GetIsMainDocumentChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsMainDocumentChannel' class='fnname'>GetIsMainDocumentChannel</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsMainDocumentChannel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#824-826' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Indicates whether channel should be treated as the main one for the
+    *  current document.  If manually set to true, will always remain true.  Otherwise,
+    *  will be true if LOAD_DOCUMENT_URI is set in the channel&#39;s loadflags.
+    */
+</code></pre>
+
+<p><code>[must_use] attribute boolean isMainDocumentChannel;</code></p>
+</div><h4 id='method.SetIsMainDocumentChannel' class="method"><span id='SetIsMainDocumentChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIsMainDocumentChannel' class='fnname'>SetIsMainDocumentChannel</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsMainDocumentChannel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#839-841' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Indicates whether channel should be treated as the main one for the
+    *  current document.  If manually set to true, will always remain true.  Otherwise,
+    *  will be true if LOAD_DOCUMENT_URI is set in the channel&#39;s loadflags.
+    */
+</code></pre>
+
+<p><code>[must_use] attribute boolean isMainDocumentChannel;</code></p>
+</div><h4 id='method.GetResponseHeader' class="method"><span id='GetResponseHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResponseHeader' class='fnname'>GetResponseHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;header: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#863-865' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the value of a particular response header.
+     *
+     * @param aHeader
+     *        The case-insensitive name of the response header to query (e.g.,
+     *        &quot;Set-Cookie&quot;).
+     *
+     * @return the value of the response header.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest) or if the header is
+     *         not set in the response.
+     */
+</code></pre>
+
+<p><code>[must_use] ACString getResponseHeader (in ACString header);</code></p>
+</div><h4 id='method.SetResponseHeader' class="method"><span id='SetResponseHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.SetResponseHeader' class='fnname'>SetResponseHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;header: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;value: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;merge: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#903-905' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Set the value of a particular response header.
+     *
+     * This method allows, for example, the HTML content sink to inform the HTTP
+     * channel about HTTP-EQUIV headers found in HTML &lt;META&gt; tags.
+     *
+     * @param aHeader
+     *        The case-insensitive name of the response header to set (e.g.,
+     *        &quot;Cache-control&quot;).
+     * @param aValue
+     *        The response header value to set (e.g., &quot;no-cache&quot;).
+     * @param aMerge
+     *        If true, the new header value will be merged with any existing
+     *        values for the specified header.  This flag is ignored if the
+     *        specified header does not support merging (e.g., the &quot;Content-
+     *        Type&quot; header can only have one value).  The list of headers for
+     *        which this flag is ignored is an implementation detail.  If this
+     *        flag is false, then the header value will be replaced with the
+     *        contents of |aValue|.
+     *
+     * If aValue is empty and aMerge is false, the header will be cleared.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     * @throws NS_ERROR_ILLEGAL_VALUE if changing the value of this response
+     *         header is not allowed.
+     * @throws NS_ERROR_FAILURE if called during visitResponseHeaders,
+     *         VisitOriginalResponseHeaders or getOriginalResponseHeader.
+     */
+</code></pre>
+
+<p><code>[must_use] void setResponseHeader (in ACString header, in ACString value, in boolean merge);</code></p>
+</div><h4 id='method.VisitResponseHeaders' class="method"><span id='VisitResponseHeaders.v' class='invisible'><code>pub unsafe fn <a href='#method.VisitResponseHeaders' class='fnname'>VisitResponseHeaders</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aVisitor: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIHttpHeaderVisitor.html" title="struct xpcom::interfaces::nsIHttpHeaderVisitor">nsIHttpHeaderVisitor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#925-927' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Call this method to visit all response headers.  Calling
+     * setResponseHeader while visiting response headers has undefined
+     * behavior.  Don&#39;t do it!
+     *
+     * @param aVisitor
+     *        the header visitor instance.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     */
+</code></pre>
+
+<p><code>[must_use] void visitResponseHeaders (in nsIHttpHeaderVisitor aVisitor);</code></p>
+</div><h4 id='method.GetOriginalResponseHeader' class="method"><span id='GetOriginalResponseHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOriginalResponseHeader' class='fnname'>GetOriginalResponseHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHeader: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aVisitor: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIHttpHeaderVisitor.html" title="struct xpcom::interfaces::nsIHttpHeaderVisitor">nsIHttpHeaderVisitor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#952-954' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the value(s) of a particular response header in the form and order
+     * it has been received from the remote peer. There can be multiple headers
+     * with the same name.
+     *
+     * @param aHeader
+     *        The case-insensitive name of the response header to query (e.g.,
+     *        &quot;Set-Cookie&quot;).
+     *
+     * @param aVisitor
+     *        the header visitor instance.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest) or if the header is
+     *         not set in the response.
+     */
+</code></pre>
+
+<p><code>[must_use] void getOriginalResponseHeader (in ACString aHeader, in nsIHttpHeaderVisitor aVisitor);</code></p>
+</div><h4 id='method.VisitOriginalResponseHeaders' class="method"><span id='VisitOriginalResponseHeaders.v' class='invisible'><code>pub unsafe fn <a href='#method.VisitOriginalResponseHeaders' class='fnname'>VisitOriginalResponseHeaders</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aVisitor: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIHttpHeaderVisitor.html" title="struct xpcom::interfaces::nsIHttpHeaderVisitor">nsIHttpHeaderVisitor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#975-977' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Call this method to visit all response headers in the form and order as
+     * they have been received from the remote peer.
+     * Calling setResponseHeader while visiting response headers has undefined
+     * behavior.  Don&#39;t do it!
+     *
+     * @param aVisitor
+     *        the header visitor instance.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     */
+</code></pre>
+
+<p><code>[must_use] void visitOriginalResponseHeaders (in nsIHttpHeaderVisitor aVisitor);</code></p>
+</div><h4 id='method.IsNoStoreResponse' class="method"><span id='IsNoStoreResponse.v' class='invisible'><code>pub unsafe fn <a href='#method.IsNoStoreResponse' class='fnname'>IsNoStoreResponse</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#993-995' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns true if the server sent a &quot;Cache-Control: no-store&quot; response
+     * header.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     */
+</code></pre>
+
+<p><code>[must_use] boolean isNoStoreResponse ();</code></p>
+</div><h4 id='method.IsNoCacheResponse' class="method"><span id='IsNoCacheResponse.v' class='invisible'><code>pub unsafe fn <a href='#method.IsNoCacheResponse' class='fnname'>IsNoCacheResponse</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1013-1015' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns true if the server sent the equivalent of a &quot;Cache-control:
+     * no-cache&quot; response header.  Equivalent response headers include:
+     * &quot;Pragma: no-cache&quot;, &quot;Expires: 0&quot;, and &quot;Expires&quot; with a date value
+     * in the past relative to the value of the &quot;Date&quot; header.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     */
+</code></pre>
+
+<p><code>[must_use] boolean isNoCacheResponse ();</code></p>
+</div><h4 id='method.IsPrivateResponse' class="method"><span id='IsPrivateResponse.v' class='invisible'><code>pub unsafe fn <a href='#method.IsPrivateResponse' class='fnname'>IsPrivateResponse</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1031-1033' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns true if the server sent a &quot;Cache-Control: private&quot; response
+     * header.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called before the response
+     *         has been received (before onStartRequest).
+     */
+</code></pre>
+
+<p><code>[must_use] boolean isPrivateResponse ();</code></p>
+</div><h4 id='method.RedirectTo' class="method"><span id='RedirectTo.v' class='invisible'><code>pub unsafe fn <a href='#method.RedirectTo' class='fnname'>RedirectTo</a>(&amp;self, aTargetURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1070-1072' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Instructs the channel to immediately redirect to a new destination.
+     * Can only be called on channels that have not yet called their
+     * listener&#39;s OnStartRequest(). Generally that means the latest time
+     * this can be used is one of:
+     *    &quot;http-on-examine-response&quot;
+     *    &quot;http-on-examine-merged-response&quot;
+     *    &quot;http-on-examine-cached-response&quot;
+     *
+     * When non-null URL is set before AsyncOpen:
+     *  we attempt to redirect to the targetURI before we even start building
+     *  and sending the request to the cache or the origin server.
+     *  If the redirect is vetoed, we fail the channel.
+     *
+     * When set between AsyncOpen and first call to OnStartRequest being called:
+     *  we attempt to redirect before we start delivery of network or cached
+     *  response to the listener.  If vetoed, we continue with delivery of
+     *  the original content to the channel listener.
+     *
+     * When passed aTargetURI is null the channel behaves normally (can be
+     * rewritten).
+     *
+     * This method provides no explicit conflict resolution. The last
+     * caller to call it wins.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called after the channel has already
+     *         started to deliver the content to its listener.
+     */
+</code></pre>
+
+<p><code>[must_use] void redirectTo (in nsIURI aTargetURI);</code></p>
+</div><h4 id='method.UpgradeToSecure' class="method"><span id='UpgradeToSecure.v' class='invisible'><code>pub unsafe fn <a href='#method.UpgradeToSecure' class='fnname'>UpgradeToSecure</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1091-1093' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Flags a channel to be upgraded to HTTPS.
+     *
+     * Upgrading to a secure channel must happen before or during
+     * &quot;http-on-modify-request&quot;. If redirectTo is called early as well, it
+     * will win and upgradeToSecure will be a no-op.
+     *
+     * @throws NS_ERROR_NOT_AVAILABLE if called after the channel has already
+     *         started to deliver the content to its listener.
+     */
+</code></pre>
+
+<p><code>[must_use] void upgradeToSecure ();</code></p>
+</div><h4 id='method.GetRequestContextID' class="method"><span id='GetRequestContextID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRequestContextID' class='fnname'>GetRequestContextID</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestContextID: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1105-1107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Identifies the request context for this load.
+     */
+</code></pre>
+
+<p><code>[must_use,noscript] attribute uint64_t requestContextID;</code></p>
+</div><h4 id='method.SetRequestContextID' class="method"><span id='SetRequestContextID.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRequestContextID' class='fnname'>SetRequestContextID</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestContextID: <a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1119-1121' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Identifies the request context for this load.
+     */
+</code></pre>
+
+<p><code>[must_use,noscript] attribute uint64_t requestContextID;</code></p>
+</div><h4 id='method.GetChannelId' class="method"><span id='GetChannelId.v' class='invisible'><code>pub unsafe fn <a href='#method.GetChannelId' class='fnname'>GetChannelId</a>(&amp;self, aChannelId: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1135-1137' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Unique ID of the channel, shared between parent and child. Needed if
+     * the channel activity needs to be monitored across process boundaries,
+     * like in devtools net monitor. See bug 1274556.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute uint64_t channelId;</code></p>
+</div><h4 id='method.SetChannelId' class="method"><span id='SetChannelId.v' class='invisible'><code>pub unsafe fn <a href='#method.SetChannelId' class='fnname'>SetChannelId</a>(&amp;self, aChannelId: <a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1151-1153' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Unique ID of the channel, shared between parent and child. Needed if
+     * the channel activity needs to be monitored across process boundaries,
+     * like in devtools net monitor. See bug 1274556.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute uint64_t channelId;</code></p>
+</div><h4 id='method.GetTopLevelContentWindowId' class="method"><span id='GetTopLevelContentWindowId.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTopLevelContentWindowId' class='fnname'>GetTopLevelContentWindowId</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTopLevelContentWindowId: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1166-1168' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * ID of the top-level document&#39;s inner window.  Identifies the content
+     * this channels is being load in.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute uint64_t topLevelContentWindowId;</code></p>
+</div><h4 id='method.SetTopLevelContentWindowId' class="method"><span id='SetTopLevelContentWindowId.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTopLevelContentWindowId' class='fnname'>SetTopLevelContentWindowId</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTopLevelContentWindowId: <a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1181-1183' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * ID of the top-level document&#39;s inner window.  Identifies the content
+     * this channels is being load in.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute uint64_t topLevelContentWindowId;</code></p>
+</div><h4 id='method.GetIsTrackingResource' class="method"><span id='GetIsTrackingResource.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsTrackingResource' class='fnname'>GetIsTrackingResource</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1198-1203' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns true if the channel has loaded a resource that is on the tracking
+     * protection list.  This is only available if the
+     * privacy.trackingprotection.annotate_channels pref is set and its value
+     * should only be relied on after the channel has established a connection.
+     */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean isTrackingResource;</code></p>
+</div><h4 id='method.GetTopLevelOuterContentWindowId' class="method"><span id='GetTopLevelOuterContentWindowId.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTopLevelOuterContentWindowId' class='fnname'>GetTopLevelOuterContentWindowId</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTopLevelOuterContentWindowId: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1219-1221' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * ID of the top-level outer content window. Identifies this channel&#39;s
+     * top-level window it comes from.
+     *
+     * NOTE: The setter of this attribute is currently for xpcshell test only.
+     *       Don&#39;t alter it otherwise.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute uint64_t topLevelOuterContentWindowId;</code></p>
+</div><h4 id='method.SetTopLevelOuterContentWindowId' class="method"><span id='SetTopLevelOuterContentWindowId.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTopLevelOuterContentWindowId' class='fnname'>SetTopLevelOuterContentWindowId</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTopLevelOuterContentWindowId: <a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1237-1239' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * ID of the top-level outer content window. Identifies this channel&#39;s
+     * top-level window it comes from.
+     *
+     * NOTE: The setter of this attribute is currently for xpcshell test only.
+     *       Don&#39;t alter it otherwise.
+     */
+</code></pre>
+
+<p><code>[must_use] attribute uint64_t topLevelOuterContentWindowId;</code></p>
+</div><h4 id='method.LogBlockedCORSRequest' class="method"><span id='LogBlockedCORSRequest.v' class='invisible'><code>pub unsafe fn <a href='#method.LogBlockedCORSRequest' class='fnname'>LogBlockedCORSRequest</a>(&amp;self, aMessage: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#1256-1258' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * In e10s, the information that the CORS response blocks the load is in the
+     * parent, which doesn&#39;t know the true window id of the request, so we may
+     * need to proxy the request to the child.
+     *
+     * @param aMessage
+     *        The message to print in the console.
+     */
+</code></pre>
+
+<p><code>void logBlockedCORSRequest (in AString aMessage);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIChannelCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIChannel</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.LOAD_DOCUMENT_URI' class="associatedconstant"><span id='LOAD_DOCUMENT_URI.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_DOCUMENT_URI' class="constant"><b>LOAD_DOCUMENT_URI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_RETARGETED_DOCUMENT_URI' class="associatedconstant"><span id='LOAD_RETARGETED_DOCUMENT_URI.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_RETARGETED_DOCUMENT_URI' class="constant"><b>LOAD_RETARGETED_DOCUMENT_URI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_REPLACE' class="associatedconstant"><span id='LOAD_REPLACE.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_REPLACE' class="constant"><b>LOAD_REPLACE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_INITIAL_DOCUMENT_URI' class="associatedconstant"><span id='LOAD_INITIAL_DOCUMENT_URI.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_INITIAL_DOCUMENT_URI' class="constant"><b>LOAD_INITIAL_DOCUMENT_URI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_TARGETED' class="associatedconstant"><span id='LOAD_TARGETED.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_TARGETED' class="constant"><b>LOAD_TARGETED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_CALL_CONTENT_SNIFFERS' class="associatedconstant"><span id='LOAD_CALL_CONTENT_SNIFFERS.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_CALL_CONTENT_SNIFFERS' class="constant"><b>LOAD_CALL_CONTENT_SNIFFERS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_CLASSIFY_URI' class="associatedconstant"><span id='LOAD_CLASSIFY_URI.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_CLASSIFY_URI' class="constant"><b>LOAD_CLASSIFY_URI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_MEDIA_SNIFFER_OVERRIDES_CONTENT_TYPE' class="associatedconstant"><span id='LOAD_MEDIA_SNIFFER_OVERRIDES_CONTENT_TYPE.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_MEDIA_SNIFFER_OVERRIDES_CONTENT_TYPE' class="constant"><b>LOAD_MEDIA_SNIFFER_OVERRIDES_CONTENT_TYPE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_EXPLICIT_CREDENTIALS' class="associatedconstant"><span id='LOAD_EXPLICIT_CREDENTIALS.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_EXPLICIT_CREDENTIALS' class="constant"><b>LOAD_EXPLICIT_CREDENTIALS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_BYPASS_SERVICE_WORKER' class="associatedconstant"><span id='LOAD_BYPASS_SERVICE_WORKER.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_BYPASS_SERVICE_WORKER' class="constant"><b>LOAD_BYPASS_SERVICE_WORKER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISPOSITION_INLINE' class="associatedconstant"><span id='DISPOSITION_INLINE.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPOSITION_INLINE' class="constant"><b>DISPOSITION_INLINE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISPOSITION_ATTACHMENT' class="associatedconstant"><span id='DISPOSITION_ATTACHMENT.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPOSITION_ATTACHMENT' class="constant"><b>DISPOSITION_ATTACHMENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='method.GetOriginalURI' class="method"><span id='GetOriginalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOriginalURI' class='fnname'>GetOriginalURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOriginalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#357-359' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+ * The nsIChannel interface allows clients to construct &quot;GET&quot; requests for
+ * specific protocols, and manage them in a uniform way.  Once a channel is
+ * created (via nsIIOService::newChannel), parameters for that request may
+ * be set by using the channel attributes, or by QI&#39;ing to a subclass of
+ * nsIChannel for protocol-specific parameters.  Then, the URI can be fetched
+ * by calling nsIChannel::open or nsIChannel::asyncOpen.
+ *
+ * After a request has been completed, the channel is still valid for accessing
+ * protocol-specific results.  For example, QI&#39;ing to nsIHttpChannel allows
+ * response headers to be retrieved for the corresponding http transaction.
+ *
+ * This interface must be used only from the XPCOM main thread.
+ */
+/**
+     * The original URI used to construct the channel. This is used in
+     * the case of a redirect or URI &quot;resolution&quot; (e.g. resolving a
+     * resource: URI to a file: URI) so that the original pre-redirect
+     * URI can still be obtained.  This is never null.  Attempts to
+     * set it to null must throw.
+     *
+     * NOTE: this is distinctly different from the http Referer (referring URI),
+     * which is typically the page that contained the original URI (accessible
+     * from nsIHttpChannel).
+     */
+</code></pre>
+
+<p><code>attribute nsIURI originalURI;</code></p>
+</div><h4 id='method.SetOriginalURI' class="method"><span id='SetOriginalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetOriginalURI' class='fnname'>SetOriginalURI</a>(&amp;self, aOriginalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#393-395' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+ * The nsIChannel interface allows clients to construct &quot;GET&quot; requests for
+ * specific protocols, and manage them in a uniform way.  Once a channel is
+ * created (via nsIIOService::newChannel), parameters for that request may
+ * be set by using the channel attributes, or by QI&#39;ing to a subclass of
+ * nsIChannel for protocol-specific parameters.  Then, the URI can be fetched
+ * by calling nsIChannel::open or nsIChannel::asyncOpen.
+ *
+ * After a request has been completed, the channel is still valid for accessing
+ * protocol-specific results.  For example, QI&#39;ing to nsIHttpChannel allows
+ * response headers to be retrieved for the corresponding http transaction.
+ *
+ * This interface must be used only from the XPCOM main thread.
+ */
+/**
+     * The original URI used to construct the channel. This is used in
+     * the case of a redirect or URI &quot;resolution&quot; (e.g. resolving a
+     * resource: URI to a file: URI) so that the original pre-redirect
+     * URI can still be obtained.  This is never null.  Attempts to
+     * set it to null must throw.
+     *
+     * NOTE: this is distinctly different from the http Referer (referring URI),
+     * which is typically the page that contained the original URI (accessible
+     * from nsIHttpChannel).
+     */
+</code></pre>
+
+<p><code>attribute nsIURI originalURI;</code></p>
+</div><h4 id='method.GetURI' class="method"><span id='GetURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetURI' class='fnname'>GetURI</a>(&amp;self, aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#407-409' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The URI corresponding to the channel.  Its value is immutable.
+     */
+</code></pre>
+
+<p><code>readonly attribute nsIURI URI;</code></p>
+</div><h4 id='method.GetOwner' class="method"><span id='GetOwner.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOwner' class='fnname'>GetOwner</a>(&amp;self, aOwner: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#427-429' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The owner, corresponding to the entity that is responsible for this
+     * channel.  Used by the security manager to grant or deny privileges to
+     * mobile code loaded from this channel.
+     *
+     * NOTE: this is a strong reference to the owner, so if the owner is also
+     * holding a strong reference to the channel, care must be taken to
+     * explicitly drop its reference to the channel.
+     */
+</code></pre>
+
+<p><code>attribute nsISupports owner;</code></p>
+</div><h4 id='method.SetOwner' class="method"><span id='SetOwner.v' class='invisible'><code>pub unsafe fn <a href='#method.SetOwner' class='fnname'>SetOwner</a>(&amp;self, aOwner: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#447-449' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The owner, corresponding to the entity that is responsible for this
+     * channel.  Used by the security manager to grant or deny privileges to
+     * mobile code loaded from this channel.
+     *
+     * NOTE: this is a strong reference to the owner, so if the owner is also
+     * holding a strong reference to the channel, care must be taken to
+     * explicitly drop its reference to the channel.
+     */
+</code></pre>
+
+<p><code>attribute nsISupports owner;</code></p>
+</div><h4 id='method.GetNotificationCallbacks' class="method"><span id='GetNotificationCallbacks.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNotificationCallbacks' class='fnname'>GetNotificationCallbacks</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNotificationCallbacks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#477-479' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The notification callbacks for the channel.  This is set by clients, who
+     * wish to provide a means to receive progress, status and protocol-specific
+     * notifications.  If this value is NULL, the channel implementation may use
+     * the notification callbacks from its load group.  The channel may also
+     * query the notification callbacks from its load group if its notification
+     * callbacks do not supply the requested interface.
+     *
+     * Interfaces commonly requested include: nsIProgressEventSink, nsIPrompt,
+     * and nsIAuthPrompt/nsIAuthPrompt2.
+     *
+     * When the channel is done, it must not continue holding references to
+     * this object.
+     *
+     * NOTE: A channel implementation should take care when &quot;caching&quot; an
+     * interface pointer queried from its notification callbacks.  If the
+     * notification callbacks are changed, then a cached interface pointer may
+     * become invalid and may therefore need to be re-queried.
+     */
+</code></pre>
+
+<p><code>attribute nsIInterfaceRequestor notificationCallbacks;</code></p>
+</div><h4 id='method.SetNotificationCallbacks' class="method"><span id='SetNotificationCallbacks.v' class='invisible'><code>pub unsafe fn <a href='#method.SetNotificationCallbacks' class='fnname'>SetNotificationCallbacks</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNotificationCallbacks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#507-509' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The notification callbacks for the channel.  This is set by clients, who
+     * wish to provide a means to receive progress, status and protocol-specific
+     * notifications.  If this value is NULL, the channel implementation may use
+     * the notification callbacks from its load group.  The channel may also
+     * query the notification callbacks from its load group if its notification
+     * callbacks do not supply the requested interface.
+     *
+     * Interfaces commonly requested include: nsIProgressEventSink, nsIPrompt,
+     * and nsIAuthPrompt/nsIAuthPrompt2.
+     *
+     * When the channel is done, it must not continue holding references to
+     * this object.
+     *
+     * NOTE: A channel implementation should take care when &quot;caching&quot; an
+     * interface pointer queried from its notification callbacks.  If the
+     * notification callbacks are changed, then a cached interface pointer may
+     * become invalid and may therefore need to be re-queried.
+     */
+</code></pre>
+
+<p><code>attribute nsIInterfaceRequestor notificationCallbacks;</code></p>
+</div><h4 id='method.GetSecurityInfo' class="method"><span id='GetSecurityInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSecurityInfo' class='fnname'>GetSecurityInfo</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSecurityInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#530-532' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Transport-level security information (if any) corresponding to the
+     * channel.
+     *
+     * NOTE: In some circumstances TLS information is propagated onto
+     * non-nsIHttpChannel objects to indicate that their contents were likely
+     * delivered over TLS all the same.  For example, document.open() may
+     * create an nsWyciwygChannel to store the data that will be written to the
+     * document.  In that case, if the caller has TLS information, we propagate
+     * that info onto the nsWyciwygChannel given that it is likely that the
+     * caller will be writing data that was delivered over TLS to the document.
+     */
+</code></pre>
+
+<p><code>readonly attribute nsISupports securityInfo;</code></p>
+</div><h4 id='method.GetContentType' class="method"><span id='GetContentType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentType' class='fnname'>GetContentType</a>(&amp;self, aContentType: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#566-568' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The MIME type of the channel&#39;s content if available.
+     *
+     * NOTE: the content type can often be wrongly specified (e.g., wrong file
+     * extension, wrong MIME type, wrong document type stored on a server, etc.),
+     * and the caller most likely wants to verify with the actual data.
+     *
+     * Setting contentType before the channel has been opened provides a hint
+     * to the channel as to what the MIME type is.  The channel may ignore this
+     * hint in deciding on the actual MIME type that it will report.
+     *
+     * Setting contentType after onStartRequest has been fired or after open()
+     * is called will override the type determined by the channel.
+     *
+     * Setting contentType between the time that asyncOpen() is called and the
+     * time when onStartRequest is fired has undefined behavior at this time.
+     *
+     * The value of the contentType attribute is a lowercase string.  A value
+     * assigned to this attribute will be parsed and normalized as follows:
+     *  1- any parameters (delimited with a &#39;;&#39;) will be stripped.
+     *  2- if a charset parameter is given, then its value will replace the
+     *     the contentCharset attribute of the channel.
+     *  3- the stripped contentType will be lowercased.
+     * Any implementation of nsIChannel must follow these rules.
+     */
+</code></pre>
+
+<p><code>attribute ACString contentType;</code></p>
+</div><h4 id='method.SetContentType' class="method"><span id='SetContentType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentType' class='fnname'>SetContentType</a>(&amp;self, aContentType: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#602-604' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The MIME type of the channel&#39;s content if available.
+     *
+     * NOTE: the content type can often be wrongly specified (e.g., wrong file
+     * extension, wrong MIME type, wrong document type stored on a server, etc.),
+     * and the caller most likely wants to verify with the actual data.
+     *
+     * Setting contentType before the channel has been opened provides a hint
+     * to the channel as to what the MIME type is.  The channel may ignore this
+     * hint in deciding on the actual MIME type that it will report.
+     *
+     * Setting contentType after onStartRequest has been fired or after open()
+     * is called will override the type determined by the channel.
+     *
+     * Setting contentType between the time that asyncOpen() is called and the
+     * time when onStartRequest is fired has undefined behavior at this time.
+     *
+     * The value of the contentType attribute is a lowercase string.  A value
+     * assigned to this attribute will be parsed and normalized as follows:
+     *  1- any parameters (delimited with a &#39;;&#39;) will be stripped.
+     *  2- if a charset parameter is given, then its value will replace the
+     *     the contentCharset attribute of the channel.
+     *  3- the stripped contentType will be lowercased.
+     * Any implementation of nsIChannel must follow these rules.
+     */
+</code></pre>
+
+<p><code>attribute ACString contentType;</code></p>
+</div><h4 id='method.GetContentCharset' class="method"><span id='GetContentCharset.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentCharset' class='fnname'>GetContentCharset</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentCharset: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#619-621' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The character set of the channel&#39;s content if available and if applicable.
+     * This attribute only applies to textual data.
+     *
+     * The value of the contentCharset attribute is a mixedcase string.
+     */
+</code></pre>
+
+<p><code>attribute ACString contentCharset;</code></p>
+</div><h4 id='method.SetContentCharset' class="method"><span id='SetContentCharset.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentCharset' class='fnname'>SetContentCharset</a>(&amp;self, aContentCharset: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#636-638' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The character set of the channel&#39;s content if available and if applicable.
+     * This attribute only applies to textual data.
+     *
+     * The value of the contentCharset attribute is a mixedcase string.
+     */
+</code></pre>
+
+<p><code>attribute ACString contentCharset;</code></p>
+</div><h4 id='method.GetContentLength' class="method"><span id='GetContentLength.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentLength' class='fnname'>GetContentLength</a>(&amp;self, aContentLength: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#653-655' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The length of the data associated with the channel if available.  A value
+     * of -1 indicates that the content length is unknown. Note that this is a
+     * 64-bit value and obsoletes the &quot;content-length&quot; property used on some
+     * channels.
+     */
+</code></pre>
+
+<p><code>attribute int64_t contentLength;</code></p>
+</div><h4 id='method.SetContentLength' class="method"><span id='SetContentLength.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentLength' class='fnname'>SetContentLength</a>(&amp;self, aContentLength: <a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#670-672' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The length of the data associated with the channel if available.  A value
+     * of -1 indicates that the content length is unknown. Note that this is a
+     * 64-bit value and obsoletes the &quot;content-length&quot; property used on some
+     * channels.
+     */
+</code></pre>
+
+<p><code>attribute int64_t contentLength;</code></p>
+</div><h4 id='method.Open' class="method"><span id='Open.v' class='invisible'><code>pub unsafe fn <a href='#method.Open' class='fnname'>Open</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#695-697' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Synchronously open the channel.
+     *
+     * @return blocking input stream to the channel&#39;s data.
+     *
+     * NOTE: nsIChannel implementations are not required to implement this
+     * method.  Moreover, since this method may block the calling thread, it
+     * should not be called on a thread that processes UI events.  Like any
+     * other nsIChannel method it must not be called on any thread other
+     * than the XPCOM main thread.
+     *
+     * NOTE: Implementations should throw NS_ERROR_IN_PROGRESS if the channel
+     * is reopened.
+     */
+</code></pre>
+
+<p><code>nsIInputStream open ();</code></p>
+</div><h4 id='method.Open2' class="method"><span id='Open2.v' class='invisible'><code>pub unsafe fn <a href='#method.Open2' class='fnname'>Open2</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#709-711' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Performs content security check and calls open()
+     */
+</code></pre>
+
+<p><code>nsIInputStream open2 ();</code></p>
+</div><h4 id='method.AsyncOpen' class="method"><span id='AsyncOpen.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncOpen' class='fnname'>AsyncOpen</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIStreamListener.html" title="struct xpcom::interfaces::nsIStreamListener">nsIStreamListener</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContext: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#751-753' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Asynchronously open this channel.  Data is fed to the specified stream
+     * listener as it becomes available.  The stream listener&#39;s methods are
+     * called on the thread that calls asyncOpen and are not called until
+     * after asyncOpen returns.  If asyncOpen returns successfully, the
+     * channel promises to call at least onStartRequest and onStopRequest.
+     *
+     * If the nsIRequest object passed to the stream listener&#39;s methods is not
+     * this channel, an appropriate onChannelRedirect notification needs to be
+     * sent to the notification callbacks before onStartRequest is called.
+     * Once onStartRequest is called, all following method calls on aListener
+     * will get the request that was passed to onStartRequest.
+     *
+     * If the channel&#39;s and loadgroup&#39;s notification callbacks do not provide
+     * an nsIChannelEventSink when onChannelRedirect would be called, that&#39;s
+     * equivalent to having called onChannelRedirect.
+     *
+     * If asyncOpen returns successfully, the channel is responsible for
+     * keeping itself alive until it has called onStopRequest on aListener or
+     * called onChannelRedirect.
+     *
+     * Implementations are allowed to synchronously add themselves to the
+     * associated load group (if any).
+     *
+     * NOTE: Implementations should throw NS_ERROR_ALREADY_OPENED if the
+     * channel is reopened.
+     *
+     * @param aListener the nsIStreamListener implementation
+     * @param aContext an opaque parameter forwarded to aListener&#39;s methods
+     * @see nsIChannelEventSink for onChannelRedirect
+     */
+</code></pre>
+
+<p><code>void asyncOpen (in nsIStreamListener aListener, in nsISupports aContext);</code></p>
+</div><h4 id='method.AsyncOpen2' class="method"><span id='AsyncOpen2.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncOpen2' class='fnname'>AsyncOpen2</a>(&amp;self, aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIStreamListener.html" title="struct xpcom::interfaces::nsIStreamListener">nsIStreamListener</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#765-767' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Performs content security check and calls asyncOpen().
+     */
+</code></pre>
+
+<p><code>void asyncOpen2 (in nsIStreamListener aListener);</code></p>
+</div><h4 id='method.GetContentDisposition' class="method"><span id='GetContentDisposition.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentDisposition' class='fnname'>GetContentDisposition</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDisposition: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#790-792' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the type implied or stated by the Content-Disposition header
+     * if available and if applicable. This allows determining inline versus
+     * attachment.
+     *
+     * Setting contentDisposition provides a hint to the channel about the
+     * disposition.  If a normal Content-Disposition header is present its
+     * value will always be used.  If it is missing the hinted value will
+     * be used if set.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header either
+     * doesn&#39;t exist for this type of channel or is empty, and return
+     * DISPOSITION_ATTACHMENT if an invalid/noncompliant value is present.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long contentDisposition;</code></p>
+</div><h4 id='method.SetContentDisposition' class="method"><span id='SetContentDisposition.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentDisposition' class='fnname'>SetContentDisposition</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDisposition: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#815-817' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the type implied or stated by the Content-Disposition header
+     * if available and if applicable. This allows determining inline versus
+     * attachment.
+     *
+     * Setting contentDisposition provides a hint to the channel about the
+     * disposition.  If a normal Content-Disposition header is present its
+     * value will always be used.  If it is missing the hinted value will
+     * be used if set.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header either
+     * doesn&#39;t exist for this type of channel or is empty, and return
+     * DISPOSITION_ATTACHMENT if an invalid/noncompliant value is present.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long contentDisposition;</code></p>
+</div><h4 id='method.GetContentDispositionFilename' class="method"><span id='GetContentDispositionFilename.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentDispositionFilename' class='fnname'>GetContentDispositionFilename</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDispositionFilename: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#841-843' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the filename portion of the Content-Disposition header if
+     * available and if applicable. This allows getting the preferred filename
+     * without having to parse it out yourself.
+     *
+     * Setting contentDispositionFilename provides a hint to the channel about
+     * the disposition.  If a normal Content-Disposition header is present its
+     * value will always be used.  If it is missing the hinted value will be
+     * used if set.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header doesn&#39;t
+     * exist for this type of channel, if the header is empty, if the header
+     * doesn&#39;t contain a filename portion, or the value of the filename
+     * attribute is empty/missing.
+     */
+</code></pre>
+
+<p><code>attribute AString contentDispositionFilename;</code></p>
+</div><h4 id='method.SetContentDispositionFilename' class="method"><span id='SetContentDispositionFilename.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentDispositionFilename' class='fnname'>SetContentDispositionFilename</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDispositionFilename: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#867-869' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the filename portion of the Content-Disposition header if
+     * available and if applicable. This allows getting the preferred filename
+     * without having to parse it out yourself.
+     *
+     * Setting contentDispositionFilename provides a hint to the channel about
+     * the disposition.  If a normal Content-Disposition header is present its
+     * value will always be used.  If it is missing the hinted value will be
+     * used if set.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header doesn&#39;t
+     * exist for this type of channel, if the header is empty, if the header
+     * doesn&#39;t contain a filename portion, or the value of the filename
+     * attribute is empty/missing.
+     */
+</code></pre>
+
+<p><code>attribute AString contentDispositionFilename;</code></p>
+</div><h4 id='method.GetContentDispositionHeader' class="method"><span id='GetContentDispositionHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentDispositionHeader' class='fnname'>GetContentDispositionHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDispositionHeader: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#886-888' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the raw Content-Disposition header if available and applicable.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header either
+     * doesn&#39;t exist for this type of channel or is empty.
+     *
+     * @deprecated Use contentDisposition/contentDispositionFilename instead.
+     */
+</code></pre>
+
+<p><code>readonly attribute ACString contentDispositionHeader;</code></p>
+</div><h4 id='method.GetLoadInfo' class="method"><span id='GetLoadInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadInfo' class='fnname'>GetLoadInfo</a>(&amp;self, aLoadInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadInfo.html" title="struct xpcom::interfaces::nsILoadInfo">nsILoadInfo</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#906-908' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The LoadInfo object contains information about a network load, why it
+     * was started, and how we plan on using the resulting response.
+     * If a network request is redirected, the new channel will receive a new
+     * LoadInfo object. The new object will contain mostly the same
+     * information as the pre-redirect one, but updated as appropriate.
+     * For detailed information about what parts of LoadInfo are updated on
+     * redirect, see documentation on individual properties.
+     */
+</code></pre>
+
+<p><code>attribute nsILoadInfo loadInfo;</code></p>
+</div><h4 id='method.SetLoadInfo' class="method"><span id='SetLoadInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLoadInfo' class='fnname'>SetLoadInfo</a>(&amp;self, aLoadInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadInfo.html" title="struct xpcom::interfaces::nsILoadInfo">nsILoadInfo</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#926-928' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The LoadInfo object contains information about a network load, why it
+     * was started, and how we plan on using the resulting response.
+     * If a network request is redirected, the new channel will receive a new
+     * LoadInfo object. The new object will contain mostly the same
+     * information as the pre-redirect one, but updated as appropriate.
+     * For detailed information about what parts of LoadInfo are updated on
+     * redirect, see documentation on individual properties.
+     */
+</code></pre>
+
+<p><code>attribute nsILoadInfo loadInfo;</code></p>
+</div><h4 id='method.GetIsDocument' class="method"><span id='GetIsDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsDocument' class='fnname'>GetIsDocument</a>(&amp;self, aIsDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#945-947' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns true if the channel is used to create a document.
+     * It returns true if the loadFlags have LOAD_DOCUMENT_URI set, or if
+     * LOAD_HTML_OBJECT_DATA is set and the channel has the appropriate
+     * MIME type.
+     * Note: May have the wrong value if called before OnStartRequest as we
+     * don&#39;t know the MIME type yet.
+     */
+</code></pre>
+
+<p><code>readonly attribute bool isDocument;</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpChannel.html" title="struct xpcom::interfaces::nsIHttpChannel">nsIHttpChannel</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#39-42' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3315900531</span>, <span class="number">17721</span>, <span class="number">18887</span>, [<span class="number">163</span>, <span class="number">242</span>, <span class="number">206</span>, <span class="number">195</span>, <span class="number">240</span>, <span class="number">97</span>, <span class="number">156</span>, <span class="number">108</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpChannel.html" title="struct xpcom::interfaces::nsIHttpChannel">nsIHttpChannel</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#46-55' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#48-50' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#52-54' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpChannel.html" title="struct xpcom::interfaces::nsIHttpChannel">nsIHttpChannel</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#86-94' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpChannel.rs.html#89-93' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

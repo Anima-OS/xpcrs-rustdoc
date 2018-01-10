@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIImageLoadingContent` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIImageLoadingContent">
+
+    <title>xpcom::interfaces::nsIImageLoadingContent - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIImageLoadingContent</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetLoadingEnabled">GetLoadingEnabled</a><a href="#method.SetLoadingEnabled">SetLoadingEnabled</a><a href="#method.GetImageBlockingStatus">GetImageBlockingStatus</a><a href="#method.AddNativeObserver">AddNativeObserver</a><a href="#method.RemoveNativeObserver">RemoveNativeObserver</a><a href="#method.AddObserver">AddObserver</a><a href="#method.RemoveObserver">RemoveObserver</a><a href="#method.GetRequest">GetRequest</a><a href="#method.SetBlockedRequest">SetBlockedRequest</a><a href="#method.CurrentRequestHasSize">CurrentRequestHasSize</a><a href="#method.GetRequestType">GetRequestType</a><a href="#method.GetCurrentURI">GetCurrentURI</a><a href="#method.LoadImageWithChannel">LoadImageWithChannel</a><a href="#method.ForceImageState">ForceImageState</a><a href="#method.GetNaturalWidth">GetNaturalWidth</a><a href="#method.GetNaturalHeight">GetNaturalHeight</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=imgINotificationObserver&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIImageLoadingContent', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIImageLoadingContent</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#37-46' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIImageLoadingContent { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIImageLoadingContent : imgINotificationObserver</code></p>
+
+<pre><code class="language-text">/**
+ * This interface represents a content node that loads images.  The interface
+ * exists to allow getting information on the images that the content node
+ * loads and to allow registration of observers for the image loads.
+ *
+ * Implementors of this interface should handle all the mechanics of actually
+ * loading an image -- getting the URI, checking with content policies and
+ * the security manager to see whether loading the URI is allowed, performing
+ * the load, firing any DOM events as needed.
+ *
+ * An implementation of this interface may support the concepts of a
+ * &quot;current&quot; image and a &quot;pending&quot; image.  If it does, a request to change
+ * the currently loaded image will start a &quot;pending&quot; request which will
+ * become current only when the image is loaded.  It is the responsibility of
+ * observers to check which request they are getting notifications for.
+ *
+ * Please make sure to update the MozImageLoadingContent WebIDL
+ * interface to mirror this interface when changing it.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIImageLoadingContent.html" title="struct xpcom::interfaces::nsIImageLoadingContent">nsIImageLoadingContent</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#86-92' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIImageLoadingContentCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#89-91' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIImageLoadingContent</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIImageLoadingContent.html" title="struct xpcom::interfaces::nsIImageLoadingContent">nsIImageLoadingContent</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#197-543' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.UNKNOWN_REQUEST' class="associatedconstant"><span id='UNKNOWN_REQUEST.v' class='invisible'><code>pub const <a href='#associatedconstant.UNKNOWN_REQUEST' class="constant"><b>UNKNOWN_REQUEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">UNKNOWN_REQUEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * Request types.  Image loading content nodes attempt to do atomic
+   * image changes when the image url is changed.  This means that
+   * when the url changes the new image load will start, but the old
+   * image will remain the &quot;current&quot; request until the new image is
+   * fully loaded.  At that point, the old &quot;current&quot; request will be
+   * discarded and the &quot;pending&quot; request will become &quot;current&quot;.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.CURRENT_REQUEST' class="associatedconstant"><span id='CURRENT_REQUEST.v' class='invisible'><code>pub const <a href='#associatedconstant.CURRENT_REQUEST' class="constant"><b>CURRENT_REQUEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CURRENT_REQUEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.PENDING_REQUEST' class="associatedconstant"><span id='PENDING_REQUEST.v' class='invisible'><code>pub const <a href='#associatedconstant.PENDING_REQUEST' class="constant"><b>PENDING_REQUEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PENDING_REQUEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='method.GetLoadingEnabled' class="method"><span id='GetLoadingEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadingEnabled' class='fnname'>GetLoadingEnabled</a>(&amp;self, aLoadingEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#229-231' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * loadingEnabled is used to enable and disable loading in
+   * situations where loading images is unwanted.  Note that enabling
+   * loading will *not* automatically trigger an image load.
+   */
+</code></pre>
+
+<p><code>attribute boolean loadingEnabled;</code></p>
+</div><h4 id='method.SetLoadingEnabled' class="method"><span id='SetLoadingEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLoadingEnabled' class='fnname'>SetLoadingEnabled</a>(&amp;self, aLoadingEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#245-247' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * loadingEnabled is used to enable and disable loading in
+   * situations where loading images is unwanted.  Note that enabling
+   * loading will *not* automatically trigger an image load.
+   */
+</code></pre>
+
+<p><code>attribute boolean loadingEnabled;</code></p>
+</div><h4 id='method.GetImageBlockingStatus' class="method"><span id='GetImageBlockingStatus.v' class='invisible'><code>pub unsafe fn <a href='#method.GetImageBlockingStatus' class='fnname'>GetImageBlockingStatus</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aImageBlockingStatus: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#262-264' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the image blocking status (@see nsIContentPolicy).  This
+   * will always be an nsIContentPolicy REJECT_* status for cases when
+   * the image was blocked.  This status always refers to the
+   * CURRENT_REQUEST load.
+   */
+</code></pre>
+
+<p><code>readonly attribute short imageBlockingStatus;</code></p>
+</div><h4 id='method.AddNativeObserver' class="method"><span id='AddNativeObserver.v' class='invisible'><code>pub unsafe fn <a href='#method.AddNativeObserver' class='fnname'>AddNativeObserver</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObserver: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.imgINotificationObserver.html" title="struct xpcom::interfaces::imgINotificationObserver">imgINotificationObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#284-286' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Used to register an image decoder observer.  Typically, this will
+   * be a proxy for a frame that wants to paint the image.
+   * Notifications from ongoing image loads will be passed to all
+   * registered observers.  Notifications for all request types,
+   * current and pending, will be passed through.
+   *
+   * @param aObserver the observer to register
+   *
+   * @throws NS_ERROR_OUT_OF_MEMORY
+   */
+</code></pre>
+
+<p><code>[notxpcom] nsresult addNativeObserver (in imgINotificationObserver aObserver);</code></p>
+</div><h4 id='method.RemoveNativeObserver' class="method"><span id='RemoveNativeObserver.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveNativeObserver' class='fnname'>RemoveNativeObserver</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObserver: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.imgINotificationObserver.html" title="struct xpcom::interfaces::imgINotificationObserver">imgINotificationObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#300-302' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Used to unregister an image decoder observer.
+   *
+   * @param aObserver the observer to unregister
+   */
+</code></pre>
+
+<p><code>[notxpcom] nsresult removeNativeObserver (in imgINotificationObserver aObserver);</code></p>
+</div><h4 id='method.AddObserver' class="method"><span id='AddObserver.v' class='invisible'><code>pub unsafe fn <a href='#method.AddObserver' class='fnname'>AddObserver</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObserver: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.imgINotificationObserver.html" title="struct xpcom::interfaces::imgINotificationObserver">imgINotificationObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#315-317' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Same as addNativeObserver but intended for scripted observers or observers
+   * from another or without a document.
+   */
+</code></pre>
+
+<p><code>void addObserver (in imgINotificationObserver aObserver);</code></p>
+</div><h4 id='method.RemoveObserver' class="method"><span id='RemoveObserver.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveObserver' class='fnname'>RemoveObserver</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObserver: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.imgINotificationObserver.html" title="struct xpcom::interfaces::imgINotificationObserver">imgINotificationObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#330-332' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Same as removeNativeObserver but intended for scripted observers or
+   * observers from another or without a document.
+   */
+</code></pre>
+
+<p><code>void removeObserver (in imgINotificationObserver aObserver);</code></p>
+</div><h4 id='method.GetRequest' class="method"><span id='GetRequest.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRequest' class='fnname'>GetRequest</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestType: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.imgIRequest.html" title="struct xpcom::interfaces::imgIRequest">imgIRequest</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#352-354' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Accessor to get the image requests
+   *
+   * @param aRequestType a value saying which request is wanted
+   *
+   * @return the imgIRequest object (may be null, even when no error
+   * is thrown)
+   *
+   * @throws NS_ERROR_UNEXPECTED if the request type requested is not
+   * known
+   */
+</code></pre>
+
+<p><code>imgIRequest getRequest (in long aRequestType);</code></p>
+</div><h4 id='method.SetBlockedRequest' class="method"><span id='SetBlockedRequest.v' class='invisible'><code>pub unsafe fn <a href='#method.SetBlockedRequest' class='fnname'>SetBlockedRequest</a>(&amp;self, aContentDecision: <a class="type" href="../../xpcom/interfaces/type.int16_t.html" title="type xpcom::interfaces::int16_t">int16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#370-372' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Call this function when the request was blocked by any of the
+   * security policies enforced.
+   *
+   * @param aContentDecision the decision returned from nsIContentPolicy
+   *                         (any of the types REJECT_*)
+   */
+</code></pre>
+
+<p><code>void setBlockedRequest (in int16_t aContentDecision);</code></p>
+</div><h4 id='method.CurrentRequestHasSize' class="method"><span id='CurrentRequestHasSize.v' class='invisible'><code>pub unsafe fn <a href='#method.CurrentRequestHasSize' class='fnname'>CurrentRequestHasSize</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#384-386' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * @return true if the current request&#39;s size is available.
+   */
+</code></pre>
+
+<p><code>[noscript,notxpcom] boolean currentRequestHasSize ();</code></p>
+</div><h4 id='method.GetRequestType' class="method"><span id='GetRequestType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRequestType' class='fnname'>GetRequestType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequest: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.imgIRequest.html" title="struct xpcom::interfaces::imgIRequest">imgIRequest</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#428-430' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Used to find out what type of request one is dealing with (eg
+   * which request got passed through to the imgINotificationObserver
+   * interface of an observer)
+   *
+   * @param aRequest the request whose type we want to know
+   *
+   * @return an enum value saying what type this request is
+   *
+   * @throws NS_ERROR_UNEXPECTED if aRequest is not known
+   */
+</code></pre>
+
+<p><code>long getRequestType (in imgIRequest aRequest);</code></p>
+</div><h4 id='method.GetCurrentURI' class="method"><span id='GetCurrentURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCurrentURI' class='fnname'>GetCurrentURI</a>(&amp;self, aCurrentURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#444-446' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets the URI of the current request, if available.
+   * Otherwise, returns the last URI that this content tried to load, or
+   * null if there haven&#39;t been any such attempts.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIURI currentURI;</code></p>
+</div><h4 id='method.LoadImageWithChannel' class="method"><span id='LoadImageWithChannel.v' class='invisible'><code>pub unsafe fn <a href='#method.LoadImageWithChannel' class='fnname'>LoadImageWithChannel</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aChannel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIStreamListener.html" title="struct xpcom::interfaces::nsIStreamListener">nsIStreamListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#467-469' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * loadImageWithChannel allows data from an existing channel to be
+   * used as the image data for this content node.
+   *
+   * @param aChannel the channel that will deliver the data
+   *
+   * @return a stream listener to pump the image data into
+   *
+   * @see imgILoader::loadImageWithChannel
+   *
+   * @throws NS_ERROR_NULL_POINTER if aChannel is null
+   */
+</code></pre>
+
+<p><code>nsIStreamListener loadImageWithChannel (in nsIChannel aChannel);</code></p>
+</div><h4 id='method.ForceImageState' class="method"><span id='ForceImageState.v' class='invisible'><code>pub unsafe fn <a href='#method.ForceImageState' class='fnname'>ForceImageState</a>(&amp;self, aForce: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, aState: <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#496-498' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Enables/disables image state forcing. When |aForce| is PR_TRUE, we force
+   * nsImageLoadingContent::ImageState() to return |aState|. Call again with |aForce|
+   * as PR_FALSE to revert ImageState() to its original behaviour.
+   */
+</code></pre>
+
+<p><code>void forceImageState (in boolean aForce, in unsigned long long aState);</code></p>
+</div><h4 id='method.GetNaturalWidth' class="method"><span id='GetNaturalWidth.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNaturalWidth' class='fnname'>GetNaturalWidth</a>(&amp;self, aNaturalWidth: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#511-513' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The intrinsic size and width of this content. May differ from actual image
+   * size due to things like responsive image density.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long naturalWidth;</code></p>
+</div><h4 id='method.GetNaturalHeight' class="method"><span id='GetNaturalHeight.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNaturalHeight' class='fnname'>GetNaturalHeight</a>(&amp;self, aNaturalHeight: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#519-521' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute unsigned long naturalHeight;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.imgINotificationObserver.html" title="struct xpcom::interfaces::imgINotificationObserver">imgINotificationObserver</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;imgINotificationObserverCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgINotificationObserver.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>imgINotificationObserver</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.SIZE_AVAILABLE' class="associatedconstant"><span id='SIZE_AVAILABLE.v' class='invisible'><code>pub const <a href='#associatedconstant.SIZE_AVAILABLE' class="constant"><b>SIZE_AVAILABLE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.FRAME_UPDATE' class="associatedconstant"><span id='FRAME_UPDATE.v' class='invisible'><code>pub const <a href='#associatedconstant.FRAME_UPDATE' class="constant"><b>FRAME_UPDATE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.FRAME_COMPLETE' class="associatedconstant"><span id='FRAME_COMPLETE.v' class='invisible'><code>pub const <a href='#associatedconstant.FRAME_COMPLETE' class="constant"><b>FRAME_COMPLETE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_COMPLETE' class="associatedconstant"><span id='LOAD_COMPLETE.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_COMPLETE' class="constant"><b>LOAD_COMPLETE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DECODE_COMPLETE' class="associatedconstant"><span id='DECODE_COMPLETE.v' class='invisible'><code>pub const <a href='#associatedconstant.DECODE_COMPLETE' class="constant"><b>DECODE_COMPLETE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISCARD' class="associatedconstant"><span id='DISCARD.v' class='invisible'><code>pub const <a href='#associatedconstant.DISCARD' class="constant"><b>DISCARD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.UNLOCKED_DRAW' class="associatedconstant"><span id='UNLOCKED_DRAW.v' class='invisible'><code>pub const <a href='#associatedconstant.UNLOCKED_DRAW' class="constant"><b>UNLOCKED_DRAW</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.IS_ANIMATED' class="associatedconstant"><span id='IS_ANIMATED.v' class='invisible'><code>pub const <a href='#associatedconstant.IS_ANIMATED' class="constant"><b>IS_ANIMATED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.HAS_TRANSPARENCY' class="associatedconstant"><span id='HAS_TRANSPARENCY.v' class='invisible'><code>pub const <a href='#associatedconstant.HAS_TRANSPARENCY' class="constant"><b>HAS_TRANSPARENCY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+</div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIImageLoadingContent.html" title="struct xpcom::interfaces::nsIImageLoadingContent">nsIImageLoadingContent</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#51-54' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">56037949</span>, <span class="number">37412</span>, <span class="number">19730</span>, [<span class="number">164</span>, <span class="number">126</span>, <span class="number">134</span>, <span class="number">140</span>, <span class="number">50</span>, <span class="number">104</span>, <span class="number">151</span>, <span class="number">119</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIImageLoadingContent.html" title="struct xpcom::interfaces::nsIImageLoadingContent">nsIImageLoadingContent</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#58-67' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#60-62' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#64-66' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIImageLoadingContent.html" title="struct xpcom::interfaces::nsIImageLoadingContent">nsIImageLoadingContent</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#98-106' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.imgINotificationObserver.html" title="struct xpcom::interfaces::imgINotificationObserver">imgINotificationObserver</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.imgINotificationObserver.html" title="struct xpcom::interfaces::imgINotificationObserver">imgINotificationObserver</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIImageLoadingContent.rs.html#101-105' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIDOMKeyEvent` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIDOMKeyEvent">
+
+    <title>xpcom::interfaces::nsIDOMKeyEvent - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIDOMKeyEvent</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetCharCode">GetCharCode</a><a href="#method.GetKeyCode">GetKeyCode</a><a href="#method.GetAltKey">GetAltKey</a><a href="#method.GetCtrlKey">GetCtrlKey</a><a href="#method.GetShiftKey">GetShiftKey</a><a href="#method.GetMetaKey">GetMetaKey</a><a href="#method.InitKeyEvent">InitKeyEvent</a><a href="#method.GetModifierState">GetModifierState</a><a href="#method.GetLocation">GetLocation</a><a href="#method.GetRepeat">GetRepeat</a><a href="#method.GetKey">GetKey</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIDOMUIEvent&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetView">GetView</a><a href="#method.GetDetail">GetDetail</a><a href="#method.InitUIEvent">InitUIEvent</a><a href="#method.GetLayerX">GetLayerX</a><a href="#method.GetLayerY">GetLayerY</a><a href="#method.GetPageX">GetPageX</a><a href="#method.GetPageY">GetPageY</a><a href="#method.GetWhich">GetWhich</a><a href="#method.GetRangeParent">GetRangeParent</a><a href="#method.GetRangeOffset">GetRangeOffset</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIDOMKeyEvent', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIDOMKeyEvent</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIDOMKeyEvent { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIDOMKeyEvent : nsIDOMUIEvent</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIDOMKeyEvent.html" title="struct xpcom::interfaces::nsIDOMKeyEvent">nsIDOMKeyEvent</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIDOMKeyEventCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIDOMKeyEvent</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIDOMKeyEvent.html" title="struct xpcom::interfaces::nsIDOMKeyEvent">nsIDOMKeyEvent</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#144-800' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.DOM_VK_CANCEL' class="associatedconstant"><span id='DOM_VK_CANCEL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CANCEL' class="constant"><b>DOM_VK_CANCEL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CANCEL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_HELP' class="associatedconstant"><span id='DOM_VK_HELP.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_HELP' class="constant"><b>DOM_VK_HELP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_HELP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_BACK_SPACE' class="associatedconstant"><span id='DOM_VK_BACK_SPACE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_BACK_SPACE' class="constant"><b>DOM_VK_BACK_SPACE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_BACK_SPACE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_TAB' class="associatedconstant"><span id='DOM_VK_TAB.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_TAB' class="constant"><b>DOM_VK_TAB</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_TAB</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CLEAR' class="associatedconstant"><span id='DOM_VK_CLEAR.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CLEAR' class="constant"><b>DOM_VK_CLEAR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CLEAR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">12</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_RETURN' class="associatedconstant"><span id='DOM_VK_RETURN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_RETURN' class="constant"><b>DOM_VK_RETURN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_RETURN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">13</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_SHIFT' class="associatedconstant"><span id='DOM_VK_SHIFT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_SHIFT' class="constant"><b>DOM_VK_SHIFT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_SHIFT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CONTROL' class="associatedconstant"><span id='DOM_VK_CONTROL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CONTROL' class="constant"><b>DOM_VK_CONTROL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CONTROL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">17</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_ALT' class="associatedconstant"><span id='DOM_VK_ALT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_ALT' class="constant"><b>DOM_VK_ALT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_ALT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">18</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PAUSE' class="associatedconstant"><span id='DOM_VK_PAUSE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PAUSE' class="constant"><b>DOM_VK_PAUSE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PAUSE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">19</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CAPS_LOCK' class="associatedconstant"><span id='DOM_VK_CAPS_LOCK.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CAPS_LOCK' class="constant"><b>DOM_VK_CAPS_LOCK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CAPS_LOCK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">20</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_KANA' class="associatedconstant"><span id='DOM_VK_KANA.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_KANA' class="constant"><b>DOM_VK_KANA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_KANA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">21</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_HANGUL' class="associatedconstant"><span id='DOM_VK_HANGUL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_HANGUL' class="constant"><b>DOM_VK_HANGUL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_HANGUL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">21</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_EISU' class="associatedconstant"><span id='DOM_VK_EISU.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_EISU' class="constant"><b>DOM_VK_EISU</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_EISU</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">22</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_JUNJA' class="associatedconstant"><span id='DOM_VK_JUNJA.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_JUNJA' class="constant"><b>DOM_VK_JUNJA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_JUNJA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">23</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_FINAL' class="associatedconstant"><span id='DOM_VK_FINAL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_FINAL' class="constant"><b>DOM_VK_FINAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_FINAL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">24</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_HANJA' class="associatedconstant"><span id='DOM_VK_HANJA.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_HANJA' class="constant"><b>DOM_VK_HANJA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_HANJA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">25</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_KANJI' class="associatedconstant"><span id='DOM_VK_KANJI.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_KANJI' class="constant"><b>DOM_VK_KANJI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_KANJI</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">25</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_ESCAPE' class="associatedconstant"><span id='DOM_VK_ESCAPE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_ESCAPE' class="constant"><b>DOM_VK_ESCAPE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_ESCAPE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">27</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CONVERT' class="associatedconstant"><span id='DOM_VK_CONVERT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CONVERT' class="constant"><b>DOM_VK_CONVERT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CONVERT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">28</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NONCONVERT' class="associatedconstant"><span id='DOM_VK_NONCONVERT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NONCONVERT' class="constant"><b>DOM_VK_NONCONVERT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NONCONVERT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">29</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_ACCEPT' class="associatedconstant"><span id='DOM_VK_ACCEPT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_ACCEPT' class="constant"><b>DOM_VK_ACCEPT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_ACCEPT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">30</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_MODECHANGE' class="associatedconstant"><span id='DOM_VK_MODECHANGE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_MODECHANGE' class="constant"><b>DOM_VK_MODECHANGE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_MODECHANGE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">31</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_SPACE' class="associatedconstant"><span id='DOM_VK_SPACE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_SPACE' class="constant"><b>DOM_VK_SPACE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_SPACE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PAGE_UP' class="associatedconstant"><span id='DOM_VK_PAGE_UP.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PAGE_UP' class="constant"><b>DOM_VK_PAGE_UP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PAGE_UP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">33</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PAGE_DOWN' class="associatedconstant"><span id='DOM_VK_PAGE_DOWN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PAGE_DOWN' class="constant"><b>DOM_VK_PAGE_DOWN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PAGE_DOWN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">34</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_END' class="associatedconstant"><span id='DOM_VK_END.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_END' class="constant"><b>DOM_VK_END</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_END</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">35</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_HOME' class="associatedconstant"><span id='DOM_VK_HOME.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_HOME' class="constant"><b>DOM_VK_HOME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_HOME</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">36</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_LEFT' class="associatedconstant"><span id='DOM_VK_LEFT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_LEFT' class="constant"><b>DOM_VK_LEFT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_LEFT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">37</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_UP' class="associatedconstant"><span id='DOM_VK_UP.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_UP' class="constant"><b>DOM_VK_UP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_UP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">38</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_RIGHT' class="associatedconstant"><span id='DOM_VK_RIGHT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_RIGHT' class="constant"><b>DOM_VK_RIGHT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_RIGHT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">39</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_DOWN' class="associatedconstant"><span id='DOM_VK_DOWN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_DOWN' class="constant"><b>DOM_VK_DOWN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_DOWN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">40</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_SELECT' class="associatedconstant"><span id='DOM_VK_SELECT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_SELECT' class="constant"><b>DOM_VK_SELECT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_SELECT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">41</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PRINT' class="associatedconstant"><span id='DOM_VK_PRINT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PRINT' class="constant"><b>DOM_VK_PRINT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PRINT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">42</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_EXECUTE' class="associatedconstant"><span id='DOM_VK_EXECUTE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_EXECUTE' class="constant"><b>DOM_VK_EXECUTE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_EXECUTE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">43</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PRINTSCREEN' class="associatedconstant"><span id='DOM_VK_PRINTSCREEN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PRINTSCREEN' class="constant"><b>DOM_VK_PRINTSCREEN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PRINTSCREEN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">44</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_INSERT' class="associatedconstant"><span id='DOM_VK_INSERT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_INSERT' class="constant"><b>DOM_VK_INSERT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_INSERT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">45</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_DELETE' class="associatedconstant"><span id='DOM_VK_DELETE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_DELETE' class="constant"><b>DOM_VK_DELETE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_DELETE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">46</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_0' class="associatedconstant"><span id='DOM_VK_0.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_0' class="constant"><b>DOM_VK_0</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_0</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">48</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_1' class="associatedconstant"><span id='DOM_VK_1.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_1' class="constant"><b>DOM_VK_1</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_1</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">49</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_2' class="associatedconstant"><span id='DOM_VK_2.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_2' class="constant"><b>DOM_VK_2</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_2</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">50</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_3' class="associatedconstant"><span id='DOM_VK_3.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_3' class="constant"><b>DOM_VK_3</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_3</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">51</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_4' class="associatedconstant"><span id='DOM_VK_4.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_4' class="constant"><b>DOM_VK_4</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_4</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">52</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_5' class="associatedconstant"><span id='DOM_VK_5.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_5' class="constant"><b>DOM_VK_5</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_5</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">53</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_6' class="associatedconstant"><span id='DOM_VK_6.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_6' class="constant"><b>DOM_VK_6</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_6</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">54</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_7' class="associatedconstant"><span id='DOM_VK_7.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_7' class="constant"><b>DOM_VK_7</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_7</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">55</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_8' class="associatedconstant"><span id='DOM_VK_8.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_8' class="constant"><b>DOM_VK_8</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_8</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">56</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_9' class="associatedconstant"><span id='DOM_VK_9.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_9' class="constant"><b>DOM_VK_9</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_9</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">57</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_COLON' class="associatedconstant"><span id='DOM_VK_COLON.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_COLON' class="constant"><b>DOM_VK_COLON</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_COLON</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">58</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_SEMICOLON' class="associatedconstant"><span id='DOM_VK_SEMICOLON.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_SEMICOLON' class="constant"><b>DOM_VK_SEMICOLON</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_SEMICOLON</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">59</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_LESS_THAN' class="associatedconstant"><span id='DOM_VK_LESS_THAN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_LESS_THAN' class="constant"><b>DOM_VK_LESS_THAN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_LESS_THAN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">60</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_EQUALS' class="associatedconstant"><span id='DOM_VK_EQUALS.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_EQUALS' class="constant"><b>DOM_VK_EQUALS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_EQUALS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">61</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_GREATER_THAN' class="associatedconstant"><span id='DOM_VK_GREATER_THAN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_GREATER_THAN' class="constant"><b>DOM_VK_GREATER_THAN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_GREATER_THAN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">62</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_QUESTION_MARK' class="associatedconstant"><span id='DOM_VK_QUESTION_MARK.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_QUESTION_MARK' class="constant"><b>DOM_VK_QUESTION_MARK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_QUESTION_MARK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">63</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_AT' class="associatedconstant"><span id='DOM_VK_AT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_AT' class="constant"><b>DOM_VK_AT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_AT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">64</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_A' class="associatedconstant"><span id='DOM_VK_A.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_A' class="constant"><b>DOM_VK_A</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_A</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">65</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_B' class="associatedconstant"><span id='DOM_VK_B.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_B' class="constant"><b>DOM_VK_B</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_B</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">66</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_C' class="associatedconstant"><span id='DOM_VK_C.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_C' class="constant"><b>DOM_VK_C</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_C</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">67</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_D' class="associatedconstant"><span id='DOM_VK_D.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_D' class="constant"><b>DOM_VK_D</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_D</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">68</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_E' class="associatedconstant"><span id='DOM_VK_E.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_E' class="constant"><b>DOM_VK_E</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_E</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">69</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F' class="associatedconstant"><span id='DOM_VK_F.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F' class="constant"><b>DOM_VK_F</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">70</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_G' class="associatedconstant"><span id='DOM_VK_G.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_G' class="constant"><b>DOM_VK_G</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_G</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">71</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_H' class="associatedconstant"><span id='DOM_VK_H.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_H' class="constant"><b>DOM_VK_H</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_H</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">72</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_I' class="associatedconstant"><span id='DOM_VK_I.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_I' class="constant"><b>DOM_VK_I</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_I</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">73</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_J' class="associatedconstant"><span id='DOM_VK_J.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_J' class="constant"><b>DOM_VK_J</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_J</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">74</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_K' class="associatedconstant"><span id='DOM_VK_K.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_K' class="constant"><b>DOM_VK_K</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_K</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">75</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_L' class="associatedconstant"><span id='DOM_VK_L.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_L' class="constant"><b>DOM_VK_L</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_L</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">76</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_M' class="associatedconstant"><span id='DOM_VK_M.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_M' class="constant"><b>DOM_VK_M</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_M</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">77</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_N' class="associatedconstant"><span id='DOM_VK_N.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_N' class="constant"><b>DOM_VK_N</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_N</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">78</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_O' class="associatedconstant"><span id='DOM_VK_O.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_O' class="constant"><b>DOM_VK_O</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_O</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">79</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_P' class="associatedconstant"><span id='DOM_VK_P.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_P' class="constant"><b>DOM_VK_P</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_P</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">80</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_Q' class="associatedconstant"><span id='DOM_VK_Q.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_Q' class="constant"><b>DOM_VK_Q</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_Q</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">81</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_R' class="associatedconstant"><span id='DOM_VK_R.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_R' class="constant"><b>DOM_VK_R</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_R</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">82</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_S' class="associatedconstant"><span id='DOM_VK_S.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_S' class="constant"><b>DOM_VK_S</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_S</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">83</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_T' class="associatedconstant"><span id='DOM_VK_T.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_T' class="constant"><b>DOM_VK_T</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_T</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">84</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_U' class="associatedconstant"><span id='DOM_VK_U.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_U' class="constant"><b>DOM_VK_U</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_U</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">85</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_V' class="associatedconstant"><span id='DOM_VK_V.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_V' class="constant"><b>DOM_VK_V</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_V</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">86</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_W' class="associatedconstant"><span id='DOM_VK_W.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_W' class="constant"><b>DOM_VK_W</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_W</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">87</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_X' class="associatedconstant"><span id='DOM_VK_X.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_X' class="constant"><b>DOM_VK_X</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_X</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">88</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_Y' class="associatedconstant"><span id='DOM_VK_Y.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_Y' class="constant"><b>DOM_VK_Y</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_Y</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">89</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_Z' class="associatedconstant"><span id='DOM_VK_Z.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_Z' class="constant"><b>DOM_VK_Z</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_Z</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">90</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN' class="associatedconstant"><span id='DOM_VK_WIN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN' class="constant"><b>DOM_VK_WIN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">91</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CONTEXT_MENU' class="associatedconstant"><span id='DOM_VK_CONTEXT_MENU.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CONTEXT_MENU' class="constant"><b>DOM_VK_CONTEXT_MENU</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CONTEXT_MENU</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">93</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_SLEEP' class="associatedconstant"><span id='DOM_VK_SLEEP.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_SLEEP' class="constant"><b>DOM_VK_SLEEP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_SLEEP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">95</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD0' class="associatedconstant"><span id='DOM_VK_NUMPAD0.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD0' class="constant"><b>DOM_VK_NUMPAD0</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD0</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">96</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD1' class="associatedconstant"><span id='DOM_VK_NUMPAD1.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD1' class="constant"><b>DOM_VK_NUMPAD1</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD1</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">97</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD2' class="associatedconstant"><span id='DOM_VK_NUMPAD2.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD2' class="constant"><b>DOM_VK_NUMPAD2</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD2</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">98</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD3' class="associatedconstant"><span id='DOM_VK_NUMPAD3.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD3' class="constant"><b>DOM_VK_NUMPAD3</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD3</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">99</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD4' class="associatedconstant"><span id='DOM_VK_NUMPAD4.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD4' class="constant"><b>DOM_VK_NUMPAD4</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD4</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">100</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD5' class="associatedconstant"><span id='DOM_VK_NUMPAD5.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD5' class="constant"><b>DOM_VK_NUMPAD5</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD5</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">101</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD6' class="associatedconstant"><span id='DOM_VK_NUMPAD6.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD6' class="constant"><b>DOM_VK_NUMPAD6</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD6</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">102</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD7' class="associatedconstant"><span id='DOM_VK_NUMPAD7.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD7' class="constant"><b>DOM_VK_NUMPAD7</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD7</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">103</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD8' class="associatedconstant"><span id='DOM_VK_NUMPAD8.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD8' class="constant"><b>DOM_VK_NUMPAD8</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD8</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">104</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUMPAD9' class="associatedconstant"><span id='DOM_VK_NUMPAD9.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUMPAD9' class="constant"><b>DOM_VK_NUMPAD9</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUMPAD9</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">105</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_MULTIPLY' class="associatedconstant"><span id='DOM_VK_MULTIPLY.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_MULTIPLY' class="constant"><b>DOM_VK_MULTIPLY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_MULTIPLY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">106</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_ADD' class="associatedconstant"><span id='DOM_VK_ADD.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_ADD' class="constant"><b>DOM_VK_ADD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_ADD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">107</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_SEPARATOR' class="associatedconstant"><span id='DOM_VK_SEPARATOR.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_SEPARATOR' class="constant"><b>DOM_VK_SEPARATOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_SEPARATOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">108</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_SUBTRACT' class="associatedconstant"><span id='DOM_VK_SUBTRACT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_SUBTRACT' class="constant"><b>DOM_VK_SUBTRACT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_SUBTRACT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">109</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_DECIMAL' class="associatedconstant"><span id='DOM_VK_DECIMAL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_DECIMAL' class="constant"><b>DOM_VK_DECIMAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_DECIMAL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">110</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_DIVIDE' class="associatedconstant"><span id='DOM_VK_DIVIDE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_DIVIDE' class="constant"><b>DOM_VK_DIVIDE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_DIVIDE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">111</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F1' class="associatedconstant"><span id='DOM_VK_F1.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F1' class="constant"><b>DOM_VK_F1</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F1</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">112</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F2' class="associatedconstant"><span id='DOM_VK_F2.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F2' class="constant"><b>DOM_VK_F2</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F2</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">113</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F3' class="associatedconstant"><span id='DOM_VK_F3.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F3' class="constant"><b>DOM_VK_F3</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F3</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">114</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F4' class="associatedconstant"><span id='DOM_VK_F4.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F4' class="constant"><b>DOM_VK_F4</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F4</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">115</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F5' class="associatedconstant"><span id='DOM_VK_F5.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F5' class="constant"><b>DOM_VK_F5</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F5</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">116</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F6' class="associatedconstant"><span id='DOM_VK_F6.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F6' class="constant"><b>DOM_VK_F6</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F6</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">117</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F7' class="associatedconstant"><span id='DOM_VK_F7.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F7' class="constant"><b>DOM_VK_F7</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F7</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">118</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F8' class="associatedconstant"><span id='DOM_VK_F8.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F8' class="constant"><b>DOM_VK_F8</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F8</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">119</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F9' class="associatedconstant"><span id='DOM_VK_F9.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F9' class="constant"><b>DOM_VK_F9</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F9</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">120</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F10' class="associatedconstant"><span id='DOM_VK_F10.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F10' class="constant"><b>DOM_VK_F10</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F10</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">121</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F11' class="associatedconstant"><span id='DOM_VK_F11.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F11' class="constant"><b>DOM_VK_F11</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F11</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">122</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F12' class="associatedconstant"><span id='DOM_VK_F12.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F12' class="constant"><b>DOM_VK_F12</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F12</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">123</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F13' class="associatedconstant"><span id='DOM_VK_F13.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F13' class="constant"><b>DOM_VK_F13</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F13</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">124</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F14' class="associatedconstant"><span id='DOM_VK_F14.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F14' class="constant"><b>DOM_VK_F14</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F14</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">125</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F15' class="associatedconstant"><span id='DOM_VK_F15.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F15' class="constant"><b>DOM_VK_F15</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F15</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">126</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F16' class="associatedconstant"><span id='DOM_VK_F16.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F16' class="constant"><b>DOM_VK_F16</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F16</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">127</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F17' class="associatedconstant"><span id='DOM_VK_F17.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F17' class="constant"><b>DOM_VK_F17</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F17</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">128</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F18' class="associatedconstant"><span id='DOM_VK_F18.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F18' class="constant"><b>DOM_VK_F18</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F18</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">129</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F19' class="associatedconstant"><span id='DOM_VK_F19.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F19' class="constant"><b>DOM_VK_F19</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F19</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">130</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F20' class="associatedconstant"><span id='DOM_VK_F20.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F20' class="constant"><b>DOM_VK_F20</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F20</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">131</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F21' class="associatedconstant"><span id='DOM_VK_F21.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F21' class="constant"><b>DOM_VK_F21</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F21</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">132</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F22' class="associatedconstant"><span id='DOM_VK_F22.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F22' class="constant"><b>DOM_VK_F22</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F22</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">133</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F23' class="associatedconstant"><span id='DOM_VK_F23.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F23' class="constant"><b>DOM_VK_F23</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F23</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">134</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_F24' class="associatedconstant"><span id='DOM_VK_F24.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_F24' class="constant"><b>DOM_VK_F24</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_F24</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">135</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_NUM_LOCK' class="associatedconstant"><span id='DOM_VK_NUM_LOCK.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_NUM_LOCK' class="constant"><b>DOM_VK_NUM_LOCK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_NUM_LOCK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">144</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_SCROLL_LOCK' class="associatedconstant"><span id='DOM_VK_SCROLL_LOCK.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_SCROLL_LOCK' class="constant"><b>DOM_VK_SCROLL_LOCK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_SCROLL_LOCK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">145</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_FJ_JISHO' class="associatedconstant"><span id='DOM_VK_WIN_OEM_FJ_JISHO.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_FJ_JISHO' class="constant"><b>DOM_VK_WIN_OEM_FJ_JISHO</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_FJ_JISHO</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">146</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_FJ_MASSHOU' class="associatedconstant"><span id='DOM_VK_WIN_OEM_FJ_MASSHOU.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_FJ_MASSHOU' class="constant"><b>DOM_VK_WIN_OEM_FJ_MASSHOU</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_FJ_MASSHOU</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">147</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_FJ_TOUROKU' class="associatedconstant"><span id='DOM_VK_WIN_OEM_FJ_TOUROKU.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_FJ_TOUROKU' class="constant"><b>DOM_VK_WIN_OEM_FJ_TOUROKU</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_FJ_TOUROKU</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">148</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_FJ_LOYA' class="associatedconstant"><span id='DOM_VK_WIN_OEM_FJ_LOYA.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_FJ_LOYA' class="constant"><b>DOM_VK_WIN_OEM_FJ_LOYA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_FJ_LOYA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">149</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_FJ_ROYA' class="associatedconstant"><span id='DOM_VK_WIN_OEM_FJ_ROYA.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_FJ_ROYA' class="constant"><b>DOM_VK_WIN_OEM_FJ_ROYA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_FJ_ROYA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">150</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CIRCUMFLEX' class="associatedconstant"><span id='DOM_VK_CIRCUMFLEX.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CIRCUMFLEX' class="constant"><b>DOM_VK_CIRCUMFLEX</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CIRCUMFLEX</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">160</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_EXCLAMATION' class="associatedconstant"><span id='DOM_VK_EXCLAMATION.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_EXCLAMATION' class="constant"><b>DOM_VK_EXCLAMATION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_EXCLAMATION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">161</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_DOUBLE_QUOTE' class="associatedconstant"><span id='DOM_VK_DOUBLE_QUOTE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_DOUBLE_QUOTE' class="constant"><b>DOM_VK_DOUBLE_QUOTE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_DOUBLE_QUOTE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">162</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_HASH' class="associatedconstant"><span id='DOM_VK_HASH.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_HASH' class="constant"><b>DOM_VK_HASH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_HASH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">163</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_DOLLAR' class="associatedconstant"><span id='DOM_VK_DOLLAR.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_DOLLAR' class="constant"><b>DOM_VK_DOLLAR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_DOLLAR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">164</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PERCENT' class="associatedconstant"><span id='DOM_VK_PERCENT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PERCENT' class="constant"><b>DOM_VK_PERCENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PERCENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">165</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_AMPERSAND' class="associatedconstant"><span id='DOM_VK_AMPERSAND.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_AMPERSAND' class="constant"><b>DOM_VK_AMPERSAND</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_AMPERSAND</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">166</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_UNDERSCORE' class="associatedconstant"><span id='DOM_VK_UNDERSCORE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_UNDERSCORE' class="constant"><b>DOM_VK_UNDERSCORE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_UNDERSCORE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">167</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_OPEN_PAREN' class="associatedconstant"><span id='DOM_VK_OPEN_PAREN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_OPEN_PAREN' class="constant"><b>DOM_VK_OPEN_PAREN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_OPEN_PAREN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">168</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CLOSE_PAREN' class="associatedconstant"><span id='DOM_VK_CLOSE_PAREN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CLOSE_PAREN' class="constant"><b>DOM_VK_CLOSE_PAREN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CLOSE_PAREN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">169</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_ASTERISK' class="associatedconstant"><span id='DOM_VK_ASTERISK.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_ASTERISK' class="constant"><b>DOM_VK_ASTERISK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_ASTERISK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">170</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PLUS' class="associatedconstant"><span id='DOM_VK_PLUS.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PLUS' class="constant"><b>DOM_VK_PLUS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PLUS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">171</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PIPE' class="associatedconstant"><span id='DOM_VK_PIPE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PIPE' class="constant"><b>DOM_VK_PIPE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PIPE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">172</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_HYPHEN_MINUS' class="associatedconstant"><span id='DOM_VK_HYPHEN_MINUS.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_HYPHEN_MINUS' class="constant"><b>DOM_VK_HYPHEN_MINUS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_HYPHEN_MINUS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">173</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_OPEN_CURLY_BRACKET' class="associatedconstant"><span id='DOM_VK_OPEN_CURLY_BRACKET.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_OPEN_CURLY_BRACKET' class="constant"><b>DOM_VK_OPEN_CURLY_BRACKET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_OPEN_CURLY_BRACKET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">174</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CLOSE_CURLY_BRACKET' class="associatedconstant"><span id='DOM_VK_CLOSE_CURLY_BRACKET.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CLOSE_CURLY_BRACKET' class="constant"><b>DOM_VK_CLOSE_CURLY_BRACKET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CLOSE_CURLY_BRACKET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">175</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_TILDE' class="associatedconstant"><span id='DOM_VK_TILDE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_TILDE' class="constant"><b>DOM_VK_TILDE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_TILDE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">176</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_VOLUME_MUTE' class="associatedconstant"><span id='DOM_VK_VOLUME_MUTE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_VOLUME_MUTE' class="constant"><b>DOM_VK_VOLUME_MUTE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_VOLUME_MUTE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">181</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_VOLUME_DOWN' class="associatedconstant"><span id='DOM_VK_VOLUME_DOWN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_VOLUME_DOWN' class="constant"><b>DOM_VK_VOLUME_DOWN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_VOLUME_DOWN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">182</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_VOLUME_UP' class="associatedconstant"><span id='DOM_VK_VOLUME_UP.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_VOLUME_UP' class="constant"><b>DOM_VK_VOLUME_UP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_VOLUME_UP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">183</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_COMMA' class="associatedconstant"><span id='DOM_VK_COMMA.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_COMMA' class="constant"><b>DOM_VK_COMMA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_COMMA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">188</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PERIOD' class="associatedconstant"><span id='DOM_VK_PERIOD.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PERIOD' class="constant"><b>DOM_VK_PERIOD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PERIOD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">190</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_SLASH' class="associatedconstant"><span id='DOM_VK_SLASH.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_SLASH' class="constant"><b>DOM_VK_SLASH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_SLASH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">191</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_BACK_QUOTE' class="associatedconstant"><span id='DOM_VK_BACK_QUOTE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_BACK_QUOTE' class="constant"><b>DOM_VK_BACK_QUOTE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_BACK_QUOTE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">192</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_OPEN_BRACKET' class="associatedconstant"><span id='DOM_VK_OPEN_BRACKET.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_OPEN_BRACKET' class="constant"><b>DOM_VK_OPEN_BRACKET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_OPEN_BRACKET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">219</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_BACK_SLASH' class="associatedconstant"><span id='DOM_VK_BACK_SLASH.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_BACK_SLASH' class="constant"><b>DOM_VK_BACK_SLASH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_BACK_SLASH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">220</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CLOSE_BRACKET' class="associatedconstant"><span id='DOM_VK_CLOSE_BRACKET.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CLOSE_BRACKET' class="constant"><b>DOM_VK_CLOSE_BRACKET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CLOSE_BRACKET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">221</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_QUOTE' class="associatedconstant"><span id='DOM_VK_QUOTE.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_QUOTE' class="constant"><b>DOM_VK_QUOTE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_QUOTE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">222</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_META' class="associatedconstant"><span id='DOM_VK_META.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_META' class="constant"><b>DOM_VK_META</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_META</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">224</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_ALTGR' class="associatedconstant"><span id='DOM_VK_ALTGR.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_ALTGR' class="constant"><b>DOM_VK_ALTGR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_ALTGR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">225</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_ICO_HELP' class="associatedconstant"><span id='DOM_VK_WIN_ICO_HELP.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_ICO_HELP' class="constant"><b>DOM_VK_WIN_ICO_HELP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_ICO_HELP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">227</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_ICO_00' class="associatedconstant"><span id='DOM_VK_WIN_ICO_00.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_ICO_00' class="constant"><b>DOM_VK_WIN_ICO_00</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_ICO_00</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">228</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_ICO_CLEAR' class="associatedconstant"><span id='DOM_VK_WIN_ICO_CLEAR.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_ICO_CLEAR' class="constant"><b>DOM_VK_WIN_ICO_CLEAR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_ICO_CLEAR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">230</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_RESET' class="associatedconstant"><span id='DOM_VK_WIN_OEM_RESET.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_RESET' class="constant"><b>DOM_VK_WIN_OEM_RESET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_RESET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">233</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_JUMP' class="associatedconstant"><span id='DOM_VK_WIN_OEM_JUMP.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_JUMP' class="constant"><b>DOM_VK_WIN_OEM_JUMP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_JUMP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">234</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_PA1' class="associatedconstant"><span id='DOM_VK_WIN_OEM_PA1.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_PA1' class="constant"><b>DOM_VK_WIN_OEM_PA1</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_PA1</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">235</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_PA2' class="associatedconstant"><span id='DOM_VK_WIN_OEM_PA2.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_PA2' class="constant"><b>DOM_VK_WIN_OEM_PA2</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_PA2</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">236</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_PA3' class="associatedconstant"><span id='DOM_VK_WIN_OEM_PA3.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_PA3' class="constant"><b>DOM_VK_WIN_OEM_PA3</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_PA3</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">237</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_WSCTRL' class="associatedconstant"><span id='DOM_VK_WIN_OEM_WSCTRL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_WSCTRL' class="constant"><b>DOM_VK_WIN_OEM_WSCTRL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_WSCTRL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">238</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_CUSEL' class="associatedconstant"><span id='DOM_VK_WIN_OEM_CUSEL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_CUSEL' class="constant"><b>DOM_VK_WIN_OEM_CUSEL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_CUSEL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">239</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_ATTN' class="associatedconstant"><span id='DOM_VK_WIN_OEM_ATTN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_ATTN' class="constant"><b>DOM_VK_WIN_OEM_ATTN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_ATTN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">240</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_FINISH' class="associatedconstant"><span id='DOM_VK_WIN_OEM_FINISH.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_FINISH' class="constant"><b>DOM_VK_WIN_OEM_FINISH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_FINISH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">241</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_COPY' class="associatedconstant"><span id='DOM_VK_WIN_OEM_COPY.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_COPY' class="constant"><b>DOM_VK_WIN_OEM_COPY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_COPY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">242</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_AUTO' class="associatedconstant"><span id='DOM_VK_WIN_OEM_AUTO.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_AUTO' class="constant"><b>DOM_VK_WIN_OEM_AUTO</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_AUTO</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">243</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_ENLW' class="associatedconstant"><span id='DOM_VK_WIN_OEM_ENLW.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_ENLW' class="constant"><b>DOM_VK_WIN_OEM_ENLW</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_ENLW</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">244</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_BACKTAB' class="associatedconstant"><span id='DOM_VK_WIN_OEM_BACKTAB.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_BACKTAB' class="constant"><b>DOM_VK_WIN_OEM_BACKTAB</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_BACKTAB</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">245</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_ATTN' class="associatedconstant"><span id='DOM_VK_ATTN.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_ATTN' class="constant"><b>DOM_VK_ATTN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_ATTN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">246</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_CRSEL' class="associatedconstant"><span id='DOM_VK_CRSEL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_CRSEL' class="constant"><b>DOM_VK_CRSEL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_CRSEL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">247</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_EXSEL' class="associatedconstant"><span id='DOM_VK_EXSEL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_EXSEL' class="constant"><b>DOM_VK_EXSEL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_EXSEL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">248</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_EREOF' class="associatedconstant"><span id='DOM_VK_EREOF.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_EREOF' class="constant"><b>DOM_VK_EREOF</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_EREOF</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">249</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PLAY' class="associatedconstant"><span id='DOM_VK_PLAY.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PLAY' class="constant"><b>DOM_VK_PLAY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PLAY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">250</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_ZOOM' class="associatedconstant"><span id='DOM_VK_ZOOM.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_ZOOM' class="constant"><b>DOM_VK_ZOOM</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_ZOOM</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">251</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_PA1' class="associatedconstant"><span id='DOM_VK_PA1.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_PA1' class="constant"><b>DOM_VK_PA1</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_PA1</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">253</span></pre>
+</div><h4 id='associatedconstant.DOM_VK_WIN_OEM_CLEAR' class="associatedconstant"><span id='DOM_VK_WIN_OEM_CLEAR.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_VK_WIN_OEM_CLEAR' class="constant"><b>DOM_VK_WIN_OEM_CLEAR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_VK_WIN_OEM_CLEAR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">254</span></pre>
+</div><h4 id='associatedconstant.DOM_KEY_LOCATION_STANDARD' class="associatedconstant"><span id='DOM_KEY_LOCATION_STANDARD.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_KEY_LOCATION_STANDARD' class="constant"><b>DOM_KEY_LOCATION_STANDARD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_KEY_LOCATION_STANDARD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.DOM_KEY_LOCATION_LEFT' class="associatedconstant"><span id='DOM_KEY_LOCATION_LEFT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_KEY_LOCATION_LEFT' class="constant"><b>DOM_KEY_LOCATION_LEFT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_KEY_LOCATION_LEFT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.DOM_KEY_LOCATION_RIGHT' class="associatedconstant"><span id='DOM_KEY_LOCATION_RIGHT.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_KEY_LOCATION_RIGHT' class="constant"><b>DOM_KEY_LOCATION_RIGHT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_KEY_LOCATION_RIGHT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.DOM_KEY_LOCATION_NUMPAD' class="associatedconstant"><span id='DOM_KEY_LOCATION_NUMPAD.v' class='invisible'><code>pub const <a href='#associatedconstant.DOM_KEY_LOCATION_NUMPAD' class="constant"><b>DOM_KEY_LOCATION_NUMPAD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOM_KEY_LOCATION_NUMPAD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='method.GetCharCode' class="method"><span id='GetCharCode.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCharCode' class='fnname'>GetCharCode</a>(&amp;self, aCharCode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#715-717' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute unsigned long charCode;</code></p>
+</div><h4 id='method.GetKeyCode' class="method"><span id='GetKeyCode.v' class='invisible'><code>pub unsafe fn <a href='#method.GetKeyCode' class='fnname'>GetKeyCode</a>(&amp;self, aKeyCode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#723-725' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute unsigned long keyCode;</code></p>
+</div><h4 id='method.GetAltKey' class="method"><span id='GetAltKey.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAltKey' class='fnname'>GetAltKey</a>(&amp;self, aAltKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#731-733' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean altKey;</code></p>
+</div><h4 id='method.GetCtrlKey' class="method"><span id='GetCtrlKey.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCtrlKey' class='fnname'>GetCtrlKey</a>(&amp;self, aCtrlKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#739-741' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean ctrlKey;</code></p>
+</div><h4 id='method.GetShiftKey' class="method"><span id='GetShiftKey.v' class='invisible'><code>pub unsafe fn <a href='#method.GetShiftKey' class='fnname'>GetShiftKey</a>(&amp;self, aShiftKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#747-749' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean shiftKey;</code></p>
+</div><h4 id='method.GetMetaKey' class="method"><span id='GetMetaKey.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMetaKey' class='fnname'>GetMetaKey</a>(&amp;self, aMetaKey: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#755-757' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean metaKey;</code></p>
+</div><h4 id='method.InitKeyEvent' class="method"><span id='InitKeyEvent.v' class='invisible'><code>pub unsafe fn <a href='#method.InitKeyEvent' class='fnname'>InitKeyEvent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;typeArg: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;canBubbleArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;cancelableArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;viewArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindow.html" title="struct xpcom::interfaces::mozIDOMWindow">mozIDOMWindow</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;ctrlKeyArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;altKeyArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;shiftKeyArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;metaKeyArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;keyCodeArg: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;charCodeArg: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#763-765' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void initKeyEvent (in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in mozIDOMWindow viewArg, in boolean ctrlKeyArg, in boolean altKeyArg, in boolean shiftKeyArg, in boolean metaKeyArg, in unsigned long keyCodeArg, in unsigned long charCodeArg);</code></p>
+</div><h4 id='method.GetModifierState' class="method"><span id='GetModifierState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetModifierState' class='fnname'>GetModifierState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;keyArg: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#771-773' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>bool getModifierState (in DOMString keyArg);</code></p>
+</div><h4 id='method.GetLocation' class="method"><span id='GetLocation.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLocation' class='fnname'>GetLocation</a>(&amp;self, aLocation: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#779-781' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute unsigned long location;</code></p>
+</div><h4 id='method.GetRepeat' class="method"><span id='GetRepeat.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRepeat' class='fnname'>GetRepeat</a>(&amp;self, aRepeat: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#787-789' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean repeat;</code></p>
+</div><h4 id='method.GetKey' class="method"><span id='GetKey.v' class='invisible'><code>pub unsafe fn <a href='#method.GetKey' class='fnname'>GetKey</a>(&amp;self, aKey: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#795-797' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute DOMString key;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIDOMUIEvent.html" title="struct xpcom::interfaces::nsIDOMUIEvent">nsIDOMUIEvent</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIDOMUIEventCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIDOMUIEvent</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.SCROLL_PAGE_UP' class="associatedconstant"><span id='SCROLL_PAGE_UP.v' class='invisible'><code>pub const <a href='#associatedconstant.SCROLL_PAGE_UP' class="constant"><b>SCROLL_PAGE_UP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.SCROLL_PAGE_DOWN' class="associatedconstant"><span id='SCROLL_PAGE_DOWN.v' class='invisible'><code>pub const <a href='#associatedconstant.SCROLL_PAGE_DOWN' class="constant"><b>SCROLL_PAGE_DOWN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='method.GetView' class="method"><span id='GetView.v' class='invisible'><code>pub unsafe fn <a href='#method.GetView' class='fnname'>GetView</a>(&amp;self, aView: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#155-157' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute mozIDOMWindowProxy view;</code></p>
+</div><h4 id='method.GetDetail' class="method"><span id='GetDetail.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDetail' class='fnname'>GetDetail</a>(&amp;self, aDetail: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#163-165' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute long detail;</code></p>
+</div><h4 id='method.InitUIEvent' class="method"><span id='InitUIEvent.v' class='invisible'><code>pub unsafe fn <a href='#method.InitUIEvent' class='fnname'>InitUIEvent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;typeArg: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;canBubbleArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;cancelableArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;viewArg: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindow.html" title="struct xpcom::interfaces::mozIDOMWindow">mozIDOMWindow</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;detailArg: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#171-173' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void initUIEvent (in DOMString typeArg, in boolean canBubbleArg, in boolean cancelableArg, in mozIDOMWindow viewArg, in long detailArg);</code></p>
+</div><h4 id='method.GetLayerX' class="method"><span id='GetLayerX.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLayerX' class='fnname'>GetLayerX</a>(&amp;self, aLayerX: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#179-181' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute long layerX;</code></p>
+</div><h4 id='method.GetLayerY' class="method"><span id='GetLayerY.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLayerY' class='fnname'>GetLayerY</a>(&amp;self, aLayerY: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#187-189' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute long layerY;</code></p>
+</div><h4 id='method.GetPageX' class="method"><span id='GetPageX.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPageX' class='fnname'>GetPageX</a>(&amp;self, aPageX: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#195-197' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute long pageX;</code></p>
+</div><h4 id='method.GetPageY' class="method"><span id='GetPageY.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPageY' class='fnname'>GetPageY</a>(&amp;self, aPageY: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#203-205' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute long pageY;</code></p>
+</div><h4 id='method.GetWhich' class="method"><span id='GetWhich.v' class='invisible'><code>pub unsafe fn <a href='#method.GetWhich' class='fnname'>GetWhich</a>(&amp;self, aWhich: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#211-213' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute unsigned long which;</code></p>
+</div><h4 id='method.GetRangeParent' class="method"><span id='GetRangeParent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRangeParent' class='fnname'>GetRangeParent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRangeParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#219-221' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute nsIDOMNode rangeParent;</code></p>
+</div><h4 id='method.GetRangeOffset' class="method"><span id='GetRangeOffset.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRangeOffset' class='fnname'>GetRangeOffset</a>(&amp;self, aRangeOffset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMUIEvent.rs.html#227-229' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute long rangeOffset;</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDOMKeyEvent.html" title="struct xpcom::interfaces::nsIDOMKeyEvent">nsIDOMKeyEvent</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">777186201</span>, <span class="number">26381</span>, <span class="number">18074</span>, [<span class="number">181</span>, <span class="number">31</span>, <span class="number">142</span>, <span class="number">254</span>, <span class="number">226</span>, <span class="number">221</span>, <span class="number">9</span>, <span class="number">29</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDOMKeyEvent.html" title="struct xpcom::interfaces::nsIDOMKeyEvent">nsIDOMKeyEvent</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDOMKeyEvent.html" title="struct xpcom::interfaces::nsIDOMKeyEvent">nsIDOMKeyEvent</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIDOMUIEvent.html" title="struct xpcom::interfaces::nsIDOMUIEvent">nsIDOMUIEvent</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIDOMUIEvent.html" title="struct xpcom::interfaces::nsIDOMUIEvent">nsIDOMUIEvent</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDOMKeyEvent.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

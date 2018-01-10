@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIFocusManager` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIFocusManager">
+
+    <title>xpcom::interfaces::nsIFocusManager - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIFocusManager</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetActiveWindow">GetActiveWindow</a><a href="#method.SetActiveWindow">SetActiveWindow</a><a href="#method.GetFocusedWindow">GetFocusedWindow</a><a href="#method.SetFocusedWindow">SetFocusedWindow</a><a href="#method.GetFocusedElement">GetFocusedElement</a><a href="#method.GetLastFocusMethod">GetLastFocusMethod</a><a href="#method.SetFocus">SetFocus</a><a href="#method.MoveFocus">MoveFocus</a><a href="#method.ClearFocus">ClearFocus</a><a href="#method.GetFocusedElementForWindow">GetFocusedElementForWindow</a><a href="#method.MoveCaretToFocus">MoveCaretToFocus</a><a href="#method.ElementIsFocusable">ElementIsFocusable</a><a href="#method.WindowRaised">WindowRaised</a><a href="#method.WindowLowered">WindowLowered</a><a href="#method.WindowShown">WindowShown</a><a href="#method.WindowHidden">WindowHidden</a><a href="#method.FireDelayedEvents">FireDelayedEvents</a><a href="#method.FocusPlugin">FocusPlugin</a><a href="#method.ParentActivated">ParentActivated</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIFocusManager', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIFocusManager</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#46-55' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIFocusManager { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIFocusManager : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * The focus manager deals with all focus related behaviour. Only one element
+ * in the entire application may have the focus at a time; this element
+ * receives any keyboard events. While there is only one application-wide
+ * focused element, each nsIDOMWindow maintains a reference to the element
+ * that would be focused if the window was active.
+ *
+ * If the window&#39;s reference is to a frame element (iframe, browser,
+ * editor), then the child window contains the element that is currently
+ * focused. If the window&#39;s reference is to a root element, then the root is
+ * focused. If a window&#39;s reference is null, then no element is focused, yet
+ * the window is still focused.
+ *
+ * The blur event is fired on an element when it loses the application focus.
+ * After this blur event, if the focus is moving away from a document, two
+ * additional blur events are fired on the old document and window containing
+ * the focus respectively.
+ *
+ * When a new document is focused, two focus events are fired on the new
+ * document and window respectively. Then the focus event is fired on an
+ * element when it gains the application focus.
+ *
+ * A special case is that the root element may be focused, yet does not
+ * receive the element focus and blur events. Instead a focus outline may be
+ * drawn around the document.
+ *
+ * Blur and focus events do not bubble as per the W3C DOM Events spec.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIFocusManager.html" title="struct xpcom::interfaces::nsIFocusManager">nsIFocusManager</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#95-101' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIFocusManagerCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#98-100' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIFocusManager</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIFocusManager.html" title="struct xpcom::interfaces::nsIFocusManager">nsIFocusManager</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#199-696' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.FLAG_RAISE' class="associatedconstant"><span id='FLAG_RAISE.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_RAISE' class="constant"><b>FLAG_RAISE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_RAISE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.FLAG_NOSCROLL' class="associatedconstant"><span id='FLAG_NOSCROLL.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_NOSCROLL' class="constant"><b>FLAG_NOSCROLL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_NOSCROLL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/**
+   * Do not scroll the element to focus into view
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FLAG_NOSWITCHFRAME' class="associatedconstant"><span id='FLAG_NOSWITCHFRAME.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_NOSWITCHFRAME' class="constant"><b>FLAG_NOSWITCHFRAME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_NOSWITCHFRAME</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * If attempting to change focus in a window that is not focused, do not
+   * switch focus to that window. Instead, just update the focus within that
+   * window and leave the application focus as is. This flag will have no
+   * effect if a child window is focused and an attempt is made to adjust the
+   * focus in an ancestor, as the frame must be switched in this case.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FLAG_NOPARENTFRAME' class="associatedconstant"><span id='FLAG_NOPARENTFRAME.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_NOPARENTFRAME' class="constant"><b>FLAG_NOPARENTFRAME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_NOPARENTFRAME</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/**
+   * This flag is only used when passed to moveFocus. If set, focus is never
+   * moved to the parent frame of the starting element&#39;s document, instead
+   * iterating around to the beginning of that document again. Child frames
+   * are navigated as normal.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FLAG_BYMOUSE' class="associatedconstant"><span id='FLAG_BYMOUSE.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_BYMOUSE' class="constant"><b>FLAG_BYMOUSE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_BYMOUSE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4096</span></pre>
+<pre><code class="language-text">/**
+   * Focus is changing due to a mouse operation, for instance the mouse was
+   * clicked on an element.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FLAG_BYKEY' class="associatedconstant"><span id='FLAG_BYKEY.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_BYKEY' class="constant"><b>FLAG_BYKEY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_BYKEY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8192</span></pre>
+<pre><code class="language-text">/**
+   * Focus is changing due to a key operation, for instance pressing the tab
+   * key. This flag would normally be passed when MOVEFOCUS_FORWARD or
+   * MOVEFOCUS_BACKWARD is used.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FLAG_BYMOVEFOCUS' class="associatedconstant"><span id='FLAG_BYMOVEFOCUS.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_BYMOVEFOCUS' class="constant"><b>FLAG_BYMOVEFOCUS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_BYMOVEFOCUS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16384</span></pre>
+<pre><code class="language-text">/**
+   * Focus is changing due to a call to MoveFocus. This flag will be implied
+   * when MoveFocus is called except when one of the other mechanisms (mouse
+   * or key) is specified, or when the type is MOVEFOCUS_ROOT or
+   * MOVEFOCUS_CARET.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FLAG_SHOWRING' class="associatedconstant"><span id='FLAG_SHOWRING.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_SHOWRING' class="constant"><b>FLAG_SHOWRING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_SHOWRING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1048576</span></pre>
+<pre><code class="language-text">/**
+   * Always show the focus ring or other indicator of focus, regardless of
+   * other state.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FLAG_BYTOUCH' class="associatedconstant"><span id='FLAG_BYTOUCH.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_BYTOUCH' class="constant"><b>FLAG_BYTOUCH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_BYTOUCH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2097152</span></pre>
+<pre><code class="language-text">/**
+   * Focus is changing due to a touch operation that generated a mouse event.
+   * Normally used in conjunction with FLAG_BYMOUSE.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_FORWARD' class="associatedconstant"><span id='MOVEFOCUS_FORWARD.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_FORWARD' class="constant"><b>MOVEFOCUS_FORWARD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_FORWARD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/** move focus forward one element, used when pressing TAB */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_BACKWARD' class="associatedconstant"><span id='MOVEFOCUS_BACKWARD.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_BACKWARD' class="constant"><b>MOVEFOCUS_BACKWARD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_BACKWARD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/** move focus backward one element, used when pressing Shift+TAB */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_FORWARDDOC' class="associatedconstant"><span id='MOVEFOCUS_FORWARDDOC.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_FORWARDDOC' class="constant"><b>MOVEFOCUS_FORWARDDOC</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_FORWARDDOC</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+<pre><code class="language-text">/** move focus forward to the next frame document, used when pressing F6 */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_BACKWARDDOC' class="associatedconstant"><span id='MOVEFOCUS_BACKWARDDOC.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_BACKWARDDOC' class="constant"><b>MOVEFOCUS_BACKWARDDOC</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_BACKWARDDOC</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/** move focus forward to the previous frame document, used when pressing Shift+F6 */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_FIRST' class="associatedconstant"><span id='MOVEFOCUS_FIRST.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_FIRST' class="constant"><b>MOVEFOCUS_FIRST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_FIRST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+<pre><code class="language-text">/** move focus to the first focusable element */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_LAST' class="associatedconstant"><span id='MOVEFOCUS_LAST.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_LAST' class="constant"><b>MOVEFOCUS_LAST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_LAST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+<pre><code class="language-text">/** move focus to the last focusable element */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_ROOT' class="associatedconstant"><span id='MOVEFOCUS_ROOT.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_ROOT' class="constant"><b>MOVEFOCUS_ROOT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_ROOT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+<pre><code class="language-text">/** move focus to the root element in the document */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_CARET' class="associatedconstant"><span id='MOVEFOCUS_CARET.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_CARET' class="constant"><b>MOVEFOCUS_CARET</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_CARET</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/** move focus to a link at the position of the caret. This is a special value used to
+   *  focus links as the caret moves over them in caret browsing mode.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_FIRSTDOC' class="associatedconstant"><span id='MOVEFOCUS_FIRSTDOC.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_FIRSTDOC' class="constant"><b>MOVEFOCUS_FIRSTDOC</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_FIRSTDOC</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+<pre><code class="language-text">/** move focus to the first focusable document */
+</code></pre>
+</div><h4 id='associatedconstant.MOVEFOCUS_LASTDOC' class="associatedconstant"><span id='MOVEFOCUS_LASTDOC.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVEFOCUS_LASTDOC' class="constant"><b>MOVEFOCUS_LASTDOC</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVEFOCUS_LASTDOC</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">10</span></pre>
+<pre><code class="language-text">/** move focus to the last focusable document */
+</code></pre>
+</div><h4 id='method.GetActiveWindow' class="method"><span id='GetActiveWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.GetActiveWindow' class='fnname'>GetActiveWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aActiveWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#375-377' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The most active (frontmost) window, or null if no window that is part of
+   * the application is active. Setting the activeWindow raises it, and
+   * focuses the current child window&#39;s current element, if any. Setting this
+   * to null or to a non-top-level window throws an NS_ERROR_INVALID_ARG
+   * exception.
+   */
+</code></pre>
+
+<p><code>attribute mozIDOMWindowProxy activeWindow;</code></p>
+</div><h4 id='method.SetActiveWindow' class="method"><span id='SetActiveWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.SetActiveWindow' class='fnname'>SetActiveWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aActiveWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#393-395' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The most active (frontmost) window, or null if no window that is part of
+   * the application is active. Setting the activeWindow raises it, and
+   * focuses the current child window&#39;s current element, if any. Setting this
+   * to null or to a non-top-level window throws an NS_ERROR_INVALID_ARG
+   * exception.
+   */
+</code></pre>
+
+<p><code>attribute mozIDOMWindowProxy activeWindow;</code></p>
+</div><h4 id='method.GetFocusedWindow' class="method"><span id='GetFocusedWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFocusedWindow' class='fnname'>GetFocusedWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFocusedWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#414-416' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The child window within the activeWindow that is focused. This will
+   * always be activeWindow, a child window of activeWindow or null if no
+   * child window is focused. Setting the focusedWindow changes the focused
+   * window and raises the toplevel window it is in. If the current focus
+   * within the new focusedWindow is a frame element, then the focusedWindow
+   * will actually be set to the child window and the current element within
+   * that set as the focused element. This process repeats downwards until a
+   * non-frame element is found.
+   */
+</code></pre>
+
+<p><code>attribute mozIDOMWindowProxy focusedWindow;</code></p>
+</div><h4 id='method.SetFocusedWindow' class="method"><span id='SetFocusedWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.SetFocusedWindow' class='fnname'>SetFocusedWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFocusedWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#435-437' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The child window within the activeWindow that is focused. This will
+   * always be activeWindow, a child window of activeWindow or null if no
+   * child window is focused. Setting the focusedWindow changes the focused
+   * window and raises the toplevel window it is in. If the current focus
+   * within the new focusedWindow is a frame element, then the focusedWindow
+   * will actually be set to the child window and the current element within
+   * that set as the focused element. This process repeats downwards until a
+   * non-frame element is found.
+   */
+</code></pre>
+
+<p><code>attribute mozIDOMWindowProxy focusedWindow;</code></p>
+</div><h4 id='method.GetFocusedElement' class="method"><span id='GetFocusedElement.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFocusedElement' class='fnname'>GetFocusedElement</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFocusedElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#451-453' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The element that is currently focused. This will always be an element
+   * within the document loaded in focusedWindow or null if no element in that
+   * document is focused.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIDOMElement focusedElement;</code></p>
+</div><h4 id='method.GetLastFocusMethod' class="method"><span id='GetLastFocusMethod.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLastFocusMethod' class='fnname'>GetLastFocusMethod</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;window: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#469-471' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the method that was used to focus the element in window. This
+   * will either be 0, FLAG_BYMOUSE or FLAG_BYKEY. If window is null, then
+   * the current focusedWindow will be used by default. This has the result
+   * of retrieving the method that was used to focus the currently focused
+   * element.
+   */
+</code></pre>
+
+<p><code>uint32_t getLastFocusMethod (in mozIDOMWindowProxy window);</code></p>
+</div><h4 id='method.SetFocus' class="method"><span id='SetFocus.v' class='invisible'><code>pub unsafe fn <a href='#method.SetFocus' class='fnname'>SetFocus</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#484-486' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Changes the focused element reference within the window containing
+   * aElement to aElement.
+   */
+</code></pre>
+
+<p><code>void setFocus (in nsIDOMElement aElement, in unsigned long aFlags);</code></p>
+</div><h4 id='method.MoveFocus' class="method"><span id='MoveFocus.v' class='invisible'><code>pub unsafe fn <a href='#method.MoveFocus' class='fnname'>MoveFocus</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStartElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#513-515' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Move the focus to another element. If aStartElement is specified, then
+   * movement is done relative to aStartElement. If aStartElement is null,
+   * then movement is done relative to the currently focused element. If no
+   * element is focused, focus the first focusable element within the
+   * document (or the last focusable element if aType is MOVEFOCUS_END). This
+   * method is equivalent to setting the focusedElement to the new element.
+   *
+   * Specifying aStartElement and using MOVEFOCUS_LAST is not currently
+   * implemented.
+   *
+   * If no element is found, and aType is either MOVEFOCUS_ROOT or
+   * MOVEFOCUS_CARET, then the focus is cleared. If aType is any other value,
+   * the focus is not changed.
+   *
+   * Returns the element that was focused. The return value may be null if focus
+   * was moved into a child process.
+   */
+</code></pre>
+
+<p><code>nsIDOMElement moveFocus (in mozIDOMWindowProxy aWindow, in nsIDOMElement aStartElement, in unsigned long aType, in unsigned long aFlags);</code></p>
+</div><h4 id='method.ClearFocus' class="method"><span id='ClearFocus.v' class='invisible'><code>pub unsafe fn <a href='#method.ClearFocus' class='fnname'>ClearFocus</a>(&amp;self, aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#530-532' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Clears the focused element within aWindow. If the current focusedWindow
+   * is a descendant of aWindow, sets the current focusedWindow to aWindow.
+   *
+   * @throws NS_ERROR_INVALID_ARG if aWindow is null
+   */
+</code></pre>
+
+<p><code>void clearFocus (in mozIDOMWindowProxy aWindow);</code></p>
+</div><h4 id='method.GetFocusedElementForWindow' class="method"><span id='GetFocusedElementForWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFocusedElementForWindow' class='fnname'>GetFocusedElementForWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDeep: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFocusedWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#558-560' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the currently focused element within aWindow. If aWindow is equal
+   * to the current value of focusedWindow, then the returned element will be
+   * the application-wide focused element (the value of focusedElement). The
+   * return value will be null if no element is focused.
+   *
+   * If aDeep is true, then child frames are traversed and the return value
+   * may be the element within a child descendant window that is focused. If
+   * aDeep if false, then the return value will be the frame element if the
+   * focus is in a child frame.
+   *
+   * aFocusedWindow will be set to the currently focused descendant window of
+   * aWindow, or to aWindow if aDeep is false. This will be set even if no
+   * element is focused.
+   *
+   * @throws NS_ERROR_INVALID_ARG if aWindow is null
+   */
+</code></pre>
+
+<p><code>nsIDOMElement getFocusedElementForWindow (in mozIDOMWindowProxy aWindow, in boolean aDeep, out mozIDOMWindowProxy aFocusedWindow);</code></p>
+</div><h4 id='method.MoveCaretToFocus' class="method"><span id='MoveCaretToFocus.v' class='invisible'><code>pub unsafe fn <a href='#method.MoveCaretToFocus' class='fnname'>MoveCaretToFocus</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#572-574' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Moves the selection caret within aWindow to the current focus.
+   */
+</code></pre>
+
+<p><code>void moveCaretToFocus (in mozIDOMWindowProxy aWindow);</code></p>
+</div><h4 id='method.ElementIsFocusable' class="method"><span id='ElementIsFocusable.v' class='invisible'><code>pub unsafe fn <a href='#method.ElementIsFocusable' class='fnname'>ElementIsFocusable</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#586-588' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/***
+   * Check if given element is focusable.
+   */
+</code></pre>
+
+<p><code>boolean elementIsFocusable (in nsIDOMElement aElement, in unsigned long aFlags);</code></p>
+</div><h4 id='method.WindowRaised' class="method"><span id='WindowRaised.v' class='invisible'><code>pub unsafe fn <a href='#method.WindowRaised' class='fnname'>WindowRaised</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#600-602' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when a window has been raised.
+   */
+</code></pre>
+
+<p><code>[noscript] void windowRaised (in mozIDOMWindowProxy aWindow);</code></p>
+</div><h4 id='method.WindowLowered' class="method"><span id='WindowLowered.v' class='invisible'><code>pub unsafe fn <a href='#method.WindowLowered' class='fnname'>WindowLowered</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#614-616' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when a window has been lowered.
+   */
+</code></pre>
+
+<p><code>[noscript] void windowLowered (in mozIDOMWindowProxy aWindow);</code></p>
+</div><h4 id='method.WindowShown' class="method"><span id='WindowShown.v' class='invisible'><code>pub unsafe fn <a href='#method.WindowShown' class='fnname'>WindowShown</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNeedsFocus: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#631-633' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when a new document in a window is shown.
+   *
+   * If aNeedsFocus is true, then focus events are expected to be fired on the
+   * window if this window is in the focused window chain.
+   */
+</code></pre>
+
+<p><code>[noscript] void windowShown (in mozIDOMWindowProxy aWindow, in boolean aNeedsFocus);</code></p>
+</div><h4 id='method.WindowHidden' class="method"><span id='WindowHidden.v' class='invisible'><code>pub unsafe fn <a href='#method.WindowHidden' class='fnname'>WindowHidden</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#646-648' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when a document in a window has been hidden or otherwise can no
+   * longer accept focus.
+   */
+</code></pre>
+
+<p><code>[noscript] void windowHidden (in mozIDOMWindowProxy aWindow);</code></p>
+</div><h4 id='method.FireDelayedEvents' class="method"><span id='FireDelayedEvents.v' class='invisible'><code>pub unsafe fn <a href='#method.FireDelayedEvents' class='fnname'>FireDelayedEvents</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocument.html" title="struct xpcom::interfaces::nsIDocument">nsIDocument</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#660-662' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Fire any events that have been delayed due to synchronized actions.
+   */
+</code></pre>
+
+<p><code>[noscript] void fireDelayedEvents (in nsIDocument aDocument);</code></p>
+</div><h4 id='method.FocusPlugin' class="method"><span id='FocusPlugin.v' class='invisible'><code>pub unsafe fn <a href='#method.FocusPlugin' class='fnname'>FocusPlugin</a>(&amp;self, aPlugin: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContent.html" title="struct xpcom::interfaces::nsIContent">nsIContent</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#676-678' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicate that a plugin wishes to take the focus. This is similar to a
+   * normal focus except that the widget focus is not changed. Updating the
+   * widget focus state is the responsibility of the caller.
+   */
+</code></pre>
+
+<p><code>[noscript] void focusPlugin (in nsIContent aPlugin);</code></p>
+</div><h4 id='method.ParentActivated' class="method"><span id='ParentActivated.v' class='invisible'><code>pub unsafe fn <a href='#method.ParentActivated' class='fnname'>ParentActivated</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;active: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#691-693' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Used in a child process to indicate that the parent window is now
+   * active or deactive.
+   */
+</code></pre>
+
+<p><code>[noscript] void parentActivated (in mozIDOMWindowProxy aWindow, in bool active);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIFocusManager.html" title="struct xpcom::interfaces::nsIFocusManager">nsIFocusManager</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#60-63' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2262954465</span>, <span class="number">13917</span>, <span class="number">18747</span>, [<span class="number">181</span>, <span class="number">42</span>, <span class="number">166</span>, <span class="number">73</span>, <span class="number">243</span>, <span class="number">243</span>, <span class="number">17</span>, <span class="number">220</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIFocusManager.html" title="struct xpcom::interfaces::nsIFocusManager">nsIFocusManager</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#67-76' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#69-71' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#73-75' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIFocusManager.html" title="struct xpcom::interfaces::nsIFocusManager">nsIFocusManager</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#107-115' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFocusManager.rs.html#110-114' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

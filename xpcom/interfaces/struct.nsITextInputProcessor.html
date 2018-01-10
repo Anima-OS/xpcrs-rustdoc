@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsITextInputProcessor` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsITextInputProcessor">
+
+    <title>xpcom::interfaces::nsITextInputProcessor - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsITextInputProcessor</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetHasComposition">GetHasComposition</a><a href="#method.BeginInputTransaction">BeginInputTransaction</a><a href="#method.SetPendingCompositionString">SetPendingCompositionString</a><a href="#method.AppendClauseToPendingComposition">AppendClauseToPendingComposition</a><a href="#method.SetCaretInPendingComposition">SetCaretInPendingComposition</a><a href="#method.GetModifierState">GetModifierState</a><a href="#method.ShareModifierStateOf">ShareModifierStateOf</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsITextInputProcessor', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsITextInputProcessor</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#262-271' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsITextInputProcessor { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsITextInputProcessor : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * An nsITextInputProcessor instance is associated with a top level widget which
+ * handles native IME.  It&#39;s associated by calling beginInputTransaction() or
+ * beginInputTransactionForTests().  While an instance has composition, nobody
+ * can steal the rights to make composition on the top level widget.  In other
+ * words, if another instance is composing on a top level widget, either
+ * beginInputTransaction() or beginInputTransactionForTests() returns false
+ * (i.e., not throws an exception).
+ *
+ * NOTE: See nsITextInputProcessorCallback.idl for examples of |callback| in
+ *       following examples,
+ *
+ * Example #1 JS-IME can start composition like this:
+ *
+ *   var TIP = Components.classes[&quot;@mozilla.org/text-input-processor;1&quot;].
+ *               createInstance(Components.interfaces.nsITextInputProcessor);
+ *   if (!TIP.beginInputTransaction(window, callback)) {
+ *     return; // You failed to get the rights to make composition
+ *   }
+ *   // Create a keyboard event if the following compositionc change is caused
+ *   // by a key event.
+ *   var keyEvent =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;foo&quot;, code: &quot;bar&quot;, keyCode: buzz });
+ *   // Set new composition string first
+ *   TIP.setPendingCompositionString(&quot;some-words-are-inputted&quot;);
+ *   // Set clause information.
+ *   TIP.appendClauseToPendingComposition(23, TIP.ATTR_RAW_CLAUSE);
+ *   // Set caret position, this is optional.
+ *   TIP.setCaretInPendingComposition(23);
+ *   // Flush the pending composition
+ *   if (!TIP.flushPendingComposition(keyEvent)) {
+ *     // If it returns false, it fails to start composition.
+ *     return;
+ *   }
+ *
+ * Example #2 JS-IME can separate composition string to two or more clauses:
+ *
+ *   // Create a keyboard event if the following compositionc change is caused
+ *   // by a key event.
+ *   var keyEvent =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;foo&quot;, code: &quot;bar&quot;, keyCode: buzz });
+ *   // First, set composition string again
+ *   TIP.setPendingCompositionString(&quot;some-words-are-inputted&quot;);
+ *   // Then, if &quot;are&quot; is selected to convert, there are 3 clauses:
+ *   TIP.appendClauseToPendingComposition(11, TIP.ATTR_CONVERTED_CLAUSE);
+ *   TIP.appendClauseToPendingComposition(3,  TIP.ATTR_SELECTED_CLAUSE);
+ *   TIP.appendClauseToPendingComposition(9,  TIP.ATTR_CONVERTED_CLAUSE);
+ *   // Show caret at the beginning of the selected clause
+ *   TIP.setCaretInPendingComposition(11);
+ *   // Flush the pending composition.  Note that if there is a composition,
+ *   // flushPendingComposition() won&#39;t return false.
+ *   TIP.flushPendingComposition(keyEvent);
+ *
+ * Example #3 JS-IME can commit composition with specific string with this:
+ *
+ *   // Create a keyboard event if the following compositionc change is caused
+ *   // by a key event.
+ *   var keyEvent1 =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;foo&quot;, code: &quot;bar&quot;, keyCode: buzz });
+ *   // First, there is a composition.
+ *   TIP.setPendingCompositionString(&quot;some-words-directly-inputted&quot;);
+ *   TIP.appendClauseToPendingComposition(28, TIP.ATTR_RAW_CLAUSE);
+ *   TIP.flushPendingComposition(keyEvent1);
+ *   // Create a keyboard event if the following commit composition is caused
+ *   // by a key event.
+ *   var keyEvent2 =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;foo&quot;, code: &quot;bar&quot;, keyCode: buzz });
+ *   // This is useful when user selects a commit string from candidate list UI
+ *   // which is provided by JS-IME.
+ *   TIP.commitCompositionWith(&quot;selected-words-from-candidate-list&quot;, keyEvent2);
+ *
+ * Example #4 JS-IME can commit composition with the last composition string
+ *            without specifying commit string:
+ *
+ *   // Create a keyboard event if the following compositionc change is caused
+ *   // by a key event.
+ *   var keyEvent1 =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;foo&quot;, code: &quot;bar&quot;, keyCode: buzz });
+ *   // First, there is a composition.
+ *   TIP.setPendingCompositionString(&quot;some-words-will-be-commited&quot;);
+ *   TIP.appendClauseToPendingComposition(27, TIP.ATTR_RAW_CLAUSE);
+ *   TIP.flushPendingComposition(keyEvent1);
+ *   // Create a keyboard event if the following commit is caused by a key
+ *   // event.
+ *   var keyEvent2 =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;Enter&quot;, code: &quot;Enter&quot;,
+                               keyCode: KeyboardEvent.DOM_VK_RETURN });
+ *   // This is useful when user just type Enter key.
+ *   TIP.commitComposition(keyEvent2);
+ *
+ * Example #5 JS-IME can cancel composition with this:
+ *
+ *   // Create a keyboard event if the following composition change is caused
+ *   // by a key event.
+ *   var keyEvent1 =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;foo&quot;, code: &quot;bar&quot;, keyCode: buzz });
+ *   // First, there is a composition.
+ *   TIP.setPendingCompositionString(&quot;some-words-will-be-canceled&quot;);
+ *   TIP.appendClauseToPendingComposition(27, TIP.ATTR_RAW_CLAUSE);
+ *   TIP.flushPendingComposition(keyEvent1);
+ *   // Create a keyboard event if the following canceling composition is
+ *   // caused by a key event.
+ *   var keyEvent2 =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;Escape&quot;, code: &quot;Escape&quot;,
+                               keyCode: KeyboardEvent.DOM_VK_ESCAPE });
+ *   // This is useful when user doesn&#39;t want to commit the composition.
+ *   // FYI: This is same as TIP.commitCompositionWith(&quot;&quot;) for now.
+ *   TIP.cancelComposition(keyEvent2);
+ *
+ * Example #6 JS-IME can insert text only with commitCompositionWith():
+ *
+ *   // Create a keyboard event if the following inserting text is caused by a
+ *   // key event.
+ *   var keyEvent1 =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;foo&quot;, code: &quot;bar&quot;, keyCode: buzz });
+ *   if (!TIP.beginInputTransaction(window, callback)) {
+ *     return; // You failed to get the rights to make composition
+ *   }
+ *   TIP.commitCompositionWith(&quot;Some words&quot;, keyEvent1);
+ *
+ * Example #7 JS-IME can start composition explicitly:
+ *
+ *   if (!TIP.beginInputTransaction(window, callback)) {
+ *     return; // You failed to get the rights to make composition
+ *   }
+ *   // Create a keyboard event if the following starting composition is caused
+ *   // by a key event.
+ *   var keyEvent1 =
+ *     new KeyboardEvent(&quot;&quot;, { key: &quot;foo&quot;, code: &quot;bar&quot;, keyCode: buzz });
+ *   // If JS-IME don&#39;t want to show composing string in the focused editor,
+ *   // JS-IME can dispatch only compositionstart event with this.
+ *   if (!TIP.startComposition(keyEvent1)) {
+ *     // Failed to start composition.
+ *     return;
+ *   }
+ *   // And when user selects a result from UI of JS-IME, commit with it.
+ *   // Then, the key event should be null.
+ *   TIP.commitCompositionWith(&quot;selected-words&quot;);
+ *
+ * Example #8 JS-IME or JS-Keyboard should dispatch key events even during
+ *            composition (non-printable key case):
+ *
+ *   if (!TIP.beginInputTransaction(window, callback)) {
+ *     return; // You failed to get the rights to dispatch key events
+ *   }
+ *
+ *   // You don&#39;t need to specify .keyCode value if it&#39;s non-printable key
+ *   // because it can be computed from .key value.
+ *   // If you specify non-zero value to .keyCode, it&#39;ll be used.
+ *   var keyEvent = new KeyboardEvent(&quot;&quot;, { code: &quot;Enter&quot;, key: &quot;Enter&quot; });
+ *   if (TIP.keydown(keyEvent)) {
+ *     // Handle its default action
+ *   }
+ *
+ *   // Even if keydown event was consumed, keyup event should be dispatched.
+ *   if (TIP.keyup(keyEvent)) {
+ *     // Handle its default action
+ *   }
+ *
+ * Example #9 JS-IME or JS-Keyboard should dispatch key events even during
+ *            composition (printable key case):
+ *
+ *   if (!TIP.beginInputTransaction(window, callback)) {
+ *     return; // You failed to get the rights to dispatch key events
+ *   }
+ *
+ *   // You need to specify .keyCode value if it&#39;s printable key.
+ *   // The rules of .keyCode value is documented in MDN:
+ *   //   https://developer.mozilla.org/docs/Web/API/KeyboardEvent.keyCode
+ *   //
+ *   //   #1 If the key location is DOM_KEY_LOCATION_NUMPAD and NumLock is
+ *   //      active, you should specify DOM_VK_NUMPAD[0-9], DOM_VK_MULTIPLY,
+ *   //      DOM_VK_ADD, DOM_VK_SEPARATOR, DOM_VK_SUBTRACT, DOM_VK_DECIMAL or
+ *   //      DOM_VK_DIVIDE.
+ *   //   #2 If the key is Spacebar, use DOM_VK_SPACE.
+ *   //
+ *   //   Following rules are printable keys in DOM_KEY_LOCATION_STANDARD.
+ *   //   .keyCode value for a key shouldn&#39;t be changed by modifier states:
+ *   //     #1 If the key can input [0-9] with any modifier state (except
+ *   //        NumLock state), the value should be DOM_VK_[0-9].
+ *   //     #2 Otherwise, and if the key inputs an ASCII alphabet with no
+ *   //        active modifiers, use DOM_VK_[A-Z].
+ *   //     #3 Otherwise, and if the key inputs an ASCII alphabet with no
+ *   //        active modifiers except Shift key state, use DOM_VK_[A-Z] for
+ *   //        the shifted character.  E.g., if a key causes non-alphabet
+ *   //        character such as &quot;@&quot; or a Unicode character without Shift key
+ *   //        but &quot;a&quot; is inputted when Shift key is pressed, the proper
+ *   //        keyCode is DOM_VK_A.
+ *   //     #4 Otherwise, and if the key inputs another ASCII character with
+ *   //        no modifier states, use a proper value for the character.  E.g.,
+ *   //        if the key inputs &quot;*&quot; without Shift key state, it should be
+ *   //        DOM_VK_ASTERISK.
+ *   //     #5 Otherwise, and if the key inputs another ASCII character with
+ *   //        Shift key state, use a proper value for the character.  E.g.,
+ *   //        if a key causes a Unicode character without Shift key but &quot;&amp;&quot;
+ *   //        is inputted when Shift key is pressed, the proper keyCode is
+ *   //        DOM_VK_AMPERSAND.
+ *   //     See above document for the other cases.
+ *   //
+ *   // NOTE: If the software keyboard is 10-key like simple phone,
+ *   //       We don&#39;t have common rules to decide its .keyCode value.
+ *   //       Above rules should be used when the JS-Keyboard emulates PC
+ *   //       keyboard.
+ *   // .key value should be inputting character by the key with current
+ *   // modifier state.
+ *   // .code value should be empty string if the JS-Keyboard isn&#39;t emulating
+ *   // physical keyboard.  Otherwise, use same value with physical keyboard&#39;s
+ *   // same key.
+ *   var keyEvent = new KeyboardEvent(&quot;&quot;, { code: &quot;KeyA&quot;, key: &quot;a&quot;,
+ *                                          keyCode: KeyboardEvent.DOM_VK_A });
+ *   if (TIP.keydown(keyEvent)) {
+ *     // Handle its default action
+ *   }
+ *
+ *   // Even if keydown event was consumed, keyup event should be dispatched.
+ *   if (TIP.keyup(keyEvent)) {
+ *     // Handle its default action
+ *   }
+ *
+ * Example #10 JS-Keyboard doesn&#39;t need to initialize modifier states at
+ *             calling either keydown() or keyup().
+ *
+ *   // Neither beginInputTransaction() nor beginInputTransactionForTests()
+ *   // resets modifier state.
+ *   if (!TIP.beginInputTransaction(window, callback)) {
+ *     return; // You failed to get the rights to dispatch key events
+ *   }
+ *
+ *   var leftShift = new KeyboardEvent(&quot;&quot;, { code: &quot;ShiftLeft&quot;, key: &quot;Shift&quot; });
+ *
+ *   // This causes following key events will be shifted automatically.
+ *   TIP.keydown(leftShift);
+ *
+ *   var rightShift =
+ *     new KeyboardEvent(&quot;&quot;, { code: &quot;ShiftRight&quot;, key: &quot;Shift&quot; });
+ *
+ *   TIP.keydown(rightShift);
+ *
+ *   // keyup of one of shift key doesn&#39;t cause inactivating &quot;Shift&quot; state.
+ *   TIP.keyup(rightShift);
+ *
+ *   // This causes inactivating &quot;Shift&quot; state completely.
+ *   TIP.keyup(leftShift);
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsITextInputProcessor.html" title="struct xpcom::interfaces::nsITextInputProcessor">nsITextInputProcessor</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#311-317' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsITextInputProcessorCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#314-316' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsITextInputProcessor</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsITextInputProcessor.html" title="struct xpcom::interfaces::nsITextInputProcessor">nsITextInputProcessor</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#411-807' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.ATTR_RAW_CLAUSE' class="associatedconstant"><span id='ATTR_RAW_CLAUSE.v' class='invisible'><code>pub const <a href='#associatedconstant.ATTR_RAW_CLAUSE' class="constant"><b>ATTR_RAW_CLAUSE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ATTR_RAW_CLAUSE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.ATTR_SELECTED_RAW_CLAUSE' class="associatedconstant"><span id='ATTR_SELECTED_RAW_CLAUSE.v' class='invisible'><code>pub const <a href='#associatedconstant.ATTR_SELECTED_RAW_CLAUSE' class="constant"><b>ATTR_SELECTED_RAW_CLAUSE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ATTR_SELECTED_RAW_CLAUSE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.ATTR_CONVERTED_CLAUSE' class="associatedconstant"><span id='ATTR_CONVERTED_CLAUSE.v' class='invisible'><code>pub const <a href='#associatedconstant.ATTR_CONVERTED_CLAUSE' class="constant"><b>ATTR_CONVERTED_CLAUSE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ATTR_CONVERTED_CLAUSE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.ATTR_SELECTED_CLAUSE' class="associatedconstant"><span id='ATTR_SELECTED_CLAUSE.v' class='invisible'><code>pub const <a href='#associatedconstant.ATTR_SELECTED_CLAUSE' class="constant"><b>ATTR_SELECTED_CLAUSE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ATTR_SELECTED_CLAUSE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.KEY_DEFAULT_PREVENTED' class="associatedconstant"><span id='KEY_DEFAULT_PREVENTED.v' class='invisible'><code>pub const <a href='#associatedconstant.KEY_DEFAULT_PREVENTED' class="constant"><b>KEY_DEFAULT_PREVENTED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEY_DEFAULT_PREVENTED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.KEY_NON_PRINTABLE_KEY' class="associatedconstant"><span id='KEY_NON_PRINTABLE_KEY.v' class='invisible'><code>pub const <a href='#associatedconstant.KEY_NON_PRINTABLE_KEY' class="constant"><b>KEY_NON_PRINTABLE_KEY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEY_NON_PRINTABLE_KEY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.KEY_FORCE_PRINTABLE_KEY' class="associatedconstant"><span id='KEY_FORCE_PRINTABLE_KEY.v' class='invisible'><code>pub const <a href='#associatedconstant.KEY_FORCE_PRINTABLE_KEY' class="constant"><b>KEY_FORCE_PRINTABLE_KEY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEY_FORCE_PRINTABLE_KEY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.KEY_KEEP_KEY_LOCATION_STANDARD' class="associatedconstant"><span id='KEY_KEEP_KEY_LOCATION_STANDARD.v' class='invisible'><code>pub const <a href='#associatedconstant.KEY_KEEP_KEY_LOCATION_STANDARD' class="constant"><b>KEY_KEEP_KEY_LOCATION_STANDARD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEY_KEEP_KEY_LOCATION_STANDARD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='associatedconstant.KEY_KEEP_KEYCODE_ZERO' class="associatedconstant"><span id='KEY_KEEP_KEYCODE_ZERO.v' class='invisible'><code>pub const <a href='#associatedconstant.KEY_KEEP_KEYCODE_ZERO' class="constant"><b>KEY_KEEP_KEYCODE_ZERO</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEY_KEEP_KEYCODE_ZERO</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+</div><h4 id='associatedconstant.KEY_DONT_DISPATCH_MODIFIER_KEY_EVENT' class="associatedconstant"><span id='KEY_DONT_DISPATCH_MODIFIER_KEY_EVENT.v' class='invisible'><code>pub const <a href='#associatedconstant.KEY_DONT_DISPATCH_MODIFIER_KEY_EVENT' class="constant"><b>KEY_DONT_DISPATCH_MODIFIER_KEY_EVENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEY_DONT_DISPATCH_MODIFIER_KEY_EVENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+</div><h4 id='associatedconstant.KEYEVENT_NOT_CONSUMED' class="associatedconstant"><span id='KEYEVENT_NOT_CONSUMED.v' class='invisible'><code>pub const <a href='#associatedconstant.KEYEVENT_NOT_CONSUMED' class="constant"><b>KEYEVENT_NOT_CONSUMED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEYEVENT_NOT_CONSUMED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.KEYDOWN_IS_CONSUMED' class="associatedconstant"><span id='KEYDOWN_IS_CONSUMED.v' class='invisible'><code>pub const <a href='#associatedconstant.KEYDOWN_IS_CONSUMED' class="constant"><b>KEYDOWN_IS_CONSUMED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEYDOWN_IS_CONSUMED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.KEYPRESS_IS_CONSUMED' class="associatedconstant"><span id='KEYPRESS_IS_CONSUMED.v' class='invisible'><code>pub const <a href='#associatedconstant.KEYPRESS_IS_CONSUMED' class="constant"><b>KEYPRESS_IS_CONSUMED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEYPRESS_IS_CONSUMED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.GetHasComposition' class="method"><span id='GetHasComposition.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHasComposition' class='fnname'>GetHasComposition</a>(&amp;self, aHasComposition: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#461-463' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns true if this instance was dispatched compositionstart but hasn&#39;t
+   * dispatched compositionend yet.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean hasComposition;</code></p>
+</div><h4 id='method.BeginInputTransaction' class="method"><span id='BeginInputTransaction.v' class='invisible'><code>pub unsafe fn <a href='#method.BeginInputTransaction' class='fnname'>BeginInputTransaction</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindow.html" title="struct xpcom::interfaces::mozIDOMWindow">mozIDOMWindow</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITextInputProcessorCallback.html" title="struct xpcom::interfaces::nsITextInputProcessorCallback">nsITextInputProcessorCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#487-489' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When you create an instance, you must call beginInputTransaction() first
+   * except when you created the instance for automated tests.
+   *
+   * @param aWindow         A DOM window.  The instance will look for a top
+   *                        level widget from this.
+   * @param aCallback       Callback interface which handles requests to
+   *                        IME and notifications to IME.  This must not be
+   *                        null.
+   * @return                If somebody uses internal text input service for a
+   *                        composition, this returns false.  Otherwise, returns
+   *                        true.  I.e., only your TIP can create composition
+   *                        when this returns true.  If this returns false,
+   *                        your TIP should wait next chance.
+   */
+</code></pre>
+
+<p><code>boolean beginInputTransaction (in mozIDOMWindow aWindow, in nsITextInputProcessorCallback aCallback);</code></p>
+</div><h4 id='method.SetPendingCompositionString' class="method"><span id='SetPendingCompositionString.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPendingCompositionString' class='fnname'>SetPendingCompositionString</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aString: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#544-546' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set new composition string.  Pending composition will be flushed by
+   * a call of flushPendingComposition().  However, if the new composition
+   * string isn&#39;t empty, you need to call appendClauseToPendingComposition() to
+   * fill all characters of aString with one or more clauses before flushing.
+   * Note that if you need to commit or cancel composition, use
+   * commitComposition(), commitCompositionWith() or cancelComposition().
+   */
+</code></pre>
+
+<p><code>void setPendingCompositionString (in DOMString aString);</code></p>
+</div><h4 id='method.AppendClauseToPendingComposition' class="method"><span id='AppendClauseToPendingComposition.v' class='invisible'><code>pub unsafe fn <a href='#method.AppendClauseToPendingComposition' class='fnname'>AppendClauseToPendingComposition</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLength: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttribute: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#582-584' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Append a clause to the pending composition.
+   *
+   * If you need to fill the pending composition string with a clause, you
+   * should call this once.  For example:
+   *   appendClauseToPendingComposition(compositionString.length,
+   *                                    ATTR_RAW_CLAUSE);
+   * is enough.  If you need to separate the pending composition string to
+   * multiple clauses, you need to call this multiple times. For example,
+   * if your pending composition string has three clauses and the second clause
+   * is being converted:
+   *  appendClauseToPendingComposition(firstClauseLength,
+   *                                   ATTR_CONVERTED_CLAUSE);
+   *  appendClauseToPendingComposition(secondClauseLength,
+   *                                   ATTR_SELECTED_CLAUSE);
+   *  appendClauseToPendingComposition(thirdClauseLength,
+   *                                   ATTR_CONVERTED_CLAUSE);
+   * Note that if sum of aLength mismatches length of the pending composition
+   * string, flushPendingComposition() will throw an exception.  I.e.,
+   * |firstClauseLength + secondClauseLength + thirdClauseLength| must be
+   * same as the length of pending composition string.
+   *
+   * TODO: Should be able to specify custom clause style.
+   *
+   * @param aLength         Length of the clause.
+   * @param aAttribute      One of ATTR_* constants.
+   */
+</code></pre>
+
+<p><code>void appendClauseToPendingComposition (in unsigned long aLength, in unsigned long aAttribute);</code></p>
+</div><h4 id='method.SetCaretInPendingComposition' class="method"><span id='SetCaretInPendingComposition.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCaretInPendingComposition' class='fnname'>SetCaretInPendingComposition</a>(&amp;self, aOffset: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#601-603' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set caret offset in the pending composition string.  If you don&#39;t need to
+   * show a caret, you don&#39;t need to call this.
+   *
+   * @param aOffset         Caret offset in the pending composition string.
+   *                        This must be between 0 and length of the pending
+   *                        composition string.
+   */
+</code></pre>
+
+<p><code>void setCaretInPendingComposition (in unsigned long aOffset);</code></p>
+</div><h4 id='method.GetModifierState' class="method"><span id='GetModifierState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetModifierState' class='fnname'>GetModifierState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aModifierKey: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#781-783' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getModifierState() returns modifier state managed by this instance.
+   *
+   * @param aModifier       One of modifier key names.  This doesn&#39;t support
+   *                        virtual modifiers like &quot;Accel&quot;.
+   * @return                true if the modifier key is active.  Otherwise,
+   *                        false.
+   */
+</code></pre>
+
+<p><code>boolean getModifierState (in DOMString aModifierKey);</code></p>
+</div><h4 id='method.ShareModifierStateOf' class="method"><span id='ShareModifierStateOf.v' class='invisible'><code>pub unsafe fn <a href='#method.ShareModifierStateOf' class='fnname'>ShareModifierStateOf</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOther: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITextInputProcessor.html" title="struct xpcom::interfaces::nsITextInputProcessor">nsITextInputProcessor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#802-804' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * shareModifierStateOf() makes the instance shares modifier state of
+   * another instance.  When this is called, the instance refers the modifier
+   * state of another instance.  After that, changes to either this and the
+   * other instance&#39;s modifier state is synchronized.
+   *
+   * @param aOther          Another instance which will be referred by the
+   *                        instance.  If this is null, the instance restarts
+   *                        to manage modifier state independently.
+   */
+</code></pre>
+
+<p><code>void shareModifierStateOf (in nsITextInputProcessor aOther);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITextInputProcessor.html" title="struct xpcom::interfaces::nsITextInputProcessor">nsITextInputProcessor</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#276-279' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1202594177</span>, <span class="number">11928</span>, <span class="number">19800</span>, [<span class="number">132</span>, <span class="number">162</span>, <span class="number">184</span>, <span class="number">219</span>, <span class="number">103</span>, <span class="number">100</span>, <span class="number">206</span>, <span class="number">154</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITextInputProcessor.html" title="struct xpcom::interfaces::nsITextInputProcessor">nsITextInputProcessor</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#283-292' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#285-287' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#289-291' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITextInputProcessor.html" title="struct xpcom::interfaces::nsITextInputProcessor">nsITextInputProcessor</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#323-331' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITextInputProcessor.rs.html#326-330' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

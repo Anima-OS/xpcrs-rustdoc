@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIHttpAuthenticableChannel` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIHttpAuthenticableChannel">
+
+    <title>xpcom::interfaces::nsIHttpAuthenticableChannel - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIHttpAuthenticableChannel</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetIsSSL">GetIsSSL</a><a href="#method.GetProxyMethodIsConnect">GetProxyMethodIsConnect</a><a href="#method.Cancel">Cancel</a><a href="#method.GetLoadFlags">GetLoadFlags</a><a href="#method.GetURI">GetURI</a><a href="#method.GetLoadGroup">GetLoadGroup</a><a href="#method.GetNotificationCallbacks">GetNotificationCallbacks</a><a href="#method.GetRequestMethod">GetRequestMethod</a><a href="#method.GetServerResponseHeader">GetServerResponseHeader</a><a href="#method.GetProxyChallenges">GetProxyChallenges</a><a href="#method.GetWWWChallenges">GetWWWChallenges</a><a href="#method.SetProxyCredentials">SetProxyCredentials</a><a href="#method.SetWWWCredentials">SetWWWCredentials</a><a href="#method.OnAuthAvailable">OnAuthAvailable</a><a href="#method.OnAuthCancelled">OnAuthCancelled</a><a href="#method.CloseStickyConnection">CloseStickyConnection</a><a href="#method.ConnectionRestartable">ConnectionRestartable</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIProxiedChannel&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetProxyInfo">GetProxyInfo</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIHttpAuthenticableChannel', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIHttpAuthenticableChannel</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIHttpAuthenticableChannel { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIHttpAuthenticableChannel : nsIProxiedChannel</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpAuthenticableChannel.html" title="struct xpcom::interfaces::nsIHttpAuthenticableChannel">nsIHttpAuthenticableChannel</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIHttpAuthenticableChannelCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIHttpAuthenticableChannel</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpAuthenticableChannel.html" title="struct xpcom::interfaces::nsIHttpAuthenticableChannel">nsIHttpAuthenticableChannel</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#162-424' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetIsSSL' class="method"><span id='GetIsSSL.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsSSL' class='fnname'>GetIsSSL</a>(&amp;self, aIsSSL: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#173-175' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * If the channel being authenticated is using SSL.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute boolean isSSL;</code></p>
+</div><h4 id='method.GetProxyMethodIsConnect' class="method"><span id='GetProxyMethodIsConnect.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProxyMethodIsConnect' class='fnname'>GetProxyMethodIsConnect</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProxyMethodIsConnect: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#188-190' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns if the proxy HTTP method used is CONNECT. If no proxy is being
+     * used it must return PR_FALSE.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute boolean proxyMethodIsConnect;</code></p>
+</div><h4 id='method.Cancel' class="method"><span id='Cancel.v' class='invisible'><code>pub unsafe fn <a href='#method.Cancel' class='fnname'>Cancel</a>(&amp;self, aStatus: <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#202-204' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Cancels the current request. See nsIRequest.
+     */
+</code></pre>
+
+<p><code>[must_use] void cancel (in nsresult aStatus);</code></p>
+</div><h4 id='method.GetLoadFlags' class="method"><span id='GetLoadFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadFlags' class='fnname'>GetLoadFlags</a>(&amp;self, aLoadFlags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.nsLoadFlags.html" title="type xpcom::interfaces::nsLoadFlags">nsLoadFlags</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#216-218' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The load flags of this request. See nsIRequest.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute nsLoadFlags loadFlags;</code></p>
+</div><h4 id='method.GetURI' class="method"><span id='GetURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetURI' class='fnname'>GetURI</a>(&amp;self, aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#230-232' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The URI corresponding to the channel. See nsIChannel.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute nsIURI URI;</code></p>
+</div><h4 id='method.GetLoadGroup' class="method"><span id='GetLoadGroup.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadGroup' class='fnname'>GetLoadGroup</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLoadGroup: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadGroup.html" title="struct xpcom::interfaces::nsILoadGroup">nsILoadGroup</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#245-247' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The load group of this request. It is here for querying its
+     * notificationCallbacks. See nsIRequest.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute nsILoadGroup loadGroup;</code></p>
+</div><h4 id='method.GetNotificationCallbacks' class="method"><span id='GetNotificationCallbacks.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNotificationCallbacks' class='fnname'>GetNotificationCallbacks</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNotificationCallbacks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#259-261' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The notification callbacks for the channel. See nsIChannel.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute nsIInterfaceRequestor notificationCallbacks;</code></p>
+</div><h4 id='method.GetRequestMethod' class="method"><span id='GetRequestMethod.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRequestMethod' class='fnname'>GetRequestMethod</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRequestMethod: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#273-275' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The HTTP request method. See nsIHttpChannel.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute ACString requestMethod;</code></p>
+</div><h4 id='method.GetServerResponseHeader' class="method"><span id='GetServerResponseHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.GetServerResponseHeader' class='fnname'>GetServerResponseHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aServerResponseHeader: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#288-290' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The &quot;Server&quot; response header.
+     * Return NS_ERROR_NOT_AVAILABLE if not available.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute ACString serverResponseHeader;</code></p>
+</div><h4 id='method.GetProxyChallenges' class="method"><span id='GetProxyChallenges.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProxyChallenges' class='fnname'>GetProxyChallenges</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProxyChallenges: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#302-304' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The Proxy-Authenticate response header.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute ACString proxyChallenges;</code></p>
+</div><h4 id='method.GetWWWChallenges' class="method"><span id='GetWWWChallenges.v' class='invisible'><code>pub unsafe fn <a href='#method.GetWWWChallenges' class='fnname'>GetWWWChallenges</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWWWChallenges: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#316-318' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The WWW-Authenticate response header.
+     */
+</code></pre>
+
+<p><code>[must_use] readonly attribute ACString WWWChallenges;</code></p>
+</div><h4 id='method.SetProxyCredentials' class="method"><span id='SetProxyCredentials.v' class='invisible'><code>pub unsafe fn <a href='#method.SetProxyCredentials' class='fnname'>SetProxyCredentials</a>(&amp;self, credentials: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#331-333' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Sets the Proxy-Authorization request header. An empty string
+     * will clear it.
+     */
+</code></pre>
+
+<p><code>[must_use] void setProxyCredentials (in ACString credentials);</code></p>
+</div><h4 id='method.SetWWWCredentials' class="method"><span id='SetWWWCredentials.v' class='invisible'><code>pub unsafe fn <a href='#method.SetWWWCredentials' class='fnname'>SetWWWCredentials</a>(&amp;self, credentials: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#346-348' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Sets the Authorization request header. An empty string
+     * will clear it.
+     */
+</code></pre>
+
+<p><code>[must_use] void setWWWCredentials (in ACString credentials);</code></p>
+</div><h4 id='method.OnAuthAvailable' class="method"><span id='OnAuthAvailable.v' class='invisible'><code>pub unsafe fn <a href='#method.OnAuthAvailable' class='fnname'>OnAuthAvailable</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#368-370' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Called when authentication information is ready and has been set on this
+     * object using setWWWCredentials/setProxyCredentials. Implementations can
+     * continue with the request and send the given information to the server.
+     *
+     * It is called asynchronously from
+     * nsIHttpChannelAuthProvider::processAuthentication if that method returns
+     * NS_ERROR_IN_PROGRESS.
+     *
+     * @note  Any exceptions thrown from this method should be ignored.
+     */
+</code></pre>
+
+<p><code>[must_use] void onAuthAvailable ();</code></p>
+</div><h4 id='method.OnAuthCancelled' class="method"><span id='OnAuthCancelled.v' class='invisible'><code>pub unsafe fn <a href='#method.OnAuthCancelled' class='fnname'>OnAuthCancelled</a>(&amp;self, userCancel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#387-389' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Notifies that the prompt was cancelled. It is called asynchronously
+     * from nsIHttpChannelAuthProvider::processAuthentication if that method
+     * returns NS_ERROR_IN_PROGRESS.
+     *
+     * @param userCancel
+     *        If the user was cancelled has cancelled the authentication prompt.
+     */
+</code></pre>
+
+<p><code>[must_use] void onAuthCancelled (in boolean userCancel);</code></p>
+</div><h4 id='method.CloseStickyConnection' class="method"><span id='CloseStickyConnection.v' class='invisible'><code>pub unsafe fn <a href='#method.CloseStickyConnection' class='fnname'>CloseStickyConnection</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#403-405' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Tells the channel to drop and close any sticky connection, since this
+     * connection oriented schema cannot be negotiated second time on
+     * the same connection.
+     */
+</code></pre>
+
+<p><code>[must_use] void closeStickyConnection ();</code></p>
+</div><h4 id='method.ConnectionRestartable' class="method"><span id='ConnectionRestartable.v' class='invisible'><code>pub unsafe fn <a href='#method.ConnectionRestartable' class='fnname'>ConnectionRestartable</a>(&amp;self, restartable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#419-421' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Tells the channel to mark the connection as allowed to restart on
+     * authentication retry.  This is allowed when the request is a start
+     * of a new authentication round.
+     */
+</code></pre>
+
+<p><code>void connectionRestartable (in boolean restartable);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIProxiedChannel.html" title="struct xpcom::interfaces::nsIProxiedChannel">nsIProxiedChannel</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIProxiedChannelCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProxiedChannel.rs.html#76-78' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIProxiedChannel</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.GetProxyInfo' class="method"><span id='GetProxyInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProxyInfo' class='fnname'>GetProxyInfo</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProxyInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProxyInfo.html" title="struct xpcom::interfaces::nsIProxyInfo">nsIProxyInfo</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProxiedChannel.rs.html#137-139' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets the proxy info the channel was constructed with. null or a
+   * proxyInfo with type &quot;direct&quot; mean no proxy.
+   *
+   * The returned proxy info must not be modified.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIProxyInfo proxyInfo;</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpAuthenticableChannel.html" title="struct xpcom::interfaces::nsIHttpAuthenticableChannel">nsIHttpAuthenticableChannel</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1880134572</span>, <span class="number">23679</span>, <span class="number">17052</span>, [<span class="number">153</span>, <span class="number">227</span>, <span class="number">66</span>, <span class="number">59</span>, <span class="number">4</span>, <span class="number">31</span>, <span class="number">204</span>, <span class="number">180</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpAuthenticableChannel.html" title="struct xpcom::interfaces::nsIHttpAuthenticableChannel">nsIHttpAuthenticableChannel</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIHttpAuthenticableChannel.html" title="struct xpcom::interfaces::nsIHttpAuthenticableChannel">nsIHttpAuthenticableChannel</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIProxiedChannel.html" title="struct xpcom::interfaces::nsIProxiedChannel">nsIProxiedChannel</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIProxiedChannel.html" title="struct xpcom::interfaces::nsIProxiedChannel">nsIProxiedChannel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIHttpAuthenticableChannel.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

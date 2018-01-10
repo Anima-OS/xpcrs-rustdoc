@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIWebProgress` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIWebProgress">
+
+    <title>xpcom::interfaces::nsIWebProgress - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIWebProgress</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.AddProgressListener">AddProgressListener</a><a href="#method.RemoveProgressListener">RemoveProgressListener</a><a href="#method.GetDOMWindow">GetDOMWindow</a><a href="#method.GetDOMWindowID">GetDOMWindowID</a><a href="#method.GetInnerDOMWindowID">GetInnerDOMWindowID</a><a href="#method.GetIsTopLevel">GetIsTopLevel</a><a href="#method.GetIsLoadingDocument">GetIsLoadingDocument</a><a href="#method.GetLoadType">GetLoadType</a><a href="#method.GetTarget">GetTarget</a><a href="#method.SetTarget">SetTarget</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIWebProgress', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIWebProgress</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#35-44' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIWebProgress { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIWebProgress : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * The nsIWebProgress interface is used to add or remove nsIWebProgressListener
+ * instances to observe the loading of asynchronous requests (usually in the
+ * context of a DOM window).
+ *
+ * nsIWebProgress instances may be arranged in a parent-child configuration,
+ * corresponding to the parent-child configuration of their respective DOM
+ * windows.  However, in some cases a nsIWebProgress instance may not have an
+ * associated DOM window.  The parent-child relationship of nsIWebProgress
+ * instances is not made explicit by this interface, but the relationship may
+ * exist in some implementations.
+ *
+ * A nsIWebProgressListener instance receives notifications for the
+ * nsIWebProgress instance to which it added itself, and it may also receive
+ * notifications from any nsIWebProgress instances that are children of that
+ * nsIWebProgress instance.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIWebProgress.html" title="struct xpcom::interfaces::nsIWebProgress">nsIWebProgress</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#84-90' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIWebProgressCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#87-89' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIWebProgress</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIWebProgress.html" title="struct xpcom::interfaces::nsIWebProgress">nsIWebProgress</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#161-411' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.NOTIFY_STATE_REQUEST' class="associatedconstant"><span id='NOTIFY_STATE_REQUEST.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_STATE_REQUEST' class="constant"><b>NOTIFY_STATE_REQUEST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_STATE_REQUEST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * The following flags may be combined to form the aNotifyMask parameter for
+   * the addProgressListener method.  They limit the set of events that are
+   * delivered to an nsIWebProgressListener instance.
+   */
+/**
+   * These flags indicate the state transistions to observe, corresponding to
+   * nsIWebProgressListener::onStateChange.
+   *
+   * NOTIFY_STATE_REQUEST
+   *   Only receive the onStateChange event if the aStateFlags parameter
+   *   includes nsIWebProgressListener::STATE_IS_REQUEST.
+   *
+   * NOTIFY_STATE_DOCUMENT
+   *   Only receive the onStateChange event if the aStateFlags parameter
+   *   includes nsIWebProgressListener::STATE_IS_DOCUMENT.
+   *
+   * NOTIFY_STATE_NETWORK
+   *   Only receive the onStateChange event if the aStateFlags parameter
+   *   includes nsIWebProgressListener::STATE_IS_NETWORK.
+   *
+   * NOTIFY_STATE_WINDOW
+   *   Only receive the onStateChange event if the aStateFlags parameter
+   *   includes nsIWebProgressListener::STATE_IS_WINDOW.
+   *
+   * NOTIFY_STATE_ALL
+   *   Receive all onStateChange events.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.NOTIFY_STATE_DOCUMENT' class="associatedconstant"><span id='NOTIFY_STATE_DOCUMENT.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_STATE_DOCUMENT' class="constant"><b>NOTIFY_STATE_DOCUMENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_STATE_DOCUMENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.NOTIFY_STATE_NETWORK' class="associatedconstant"><span id='NOTIFY_STATE_NETWORK.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_STATE_NETWORK' class="constant"><b>NOTIFY_STATE_NETWORK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_STATE_NETWORK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.NOTIFY_STATE_WINDOW' class="associatedconstant"><span id='NOTIFY_STATE_WINDOW.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_STATE_WINDOW' class="constant"><b>NOTIFY_STATE_WINDOW</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_STATE_WINDOW</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='associatedconstant.NOTIFY_STATE_ALL' class="associatedconstant"><span id='NOTIFY_STATE_ALL.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_STATE_ALL' class="constant"><b>NOTIFY_STATE_ALL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_STATE_ALL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">15</span></pre>
+</div><h4 id='associatedconstant.NOTIFY_PROGRESS' class="associatedconstant"><span id='NOTIFY_PROGRESS.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_PROGRESS' class="constant"><b>NOTIFY_PROGRESS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_PROGRESS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+<pre><code class="language-text">/**
+   * These flags indicate the other events to observe, corresponding to the
+   * other four methods defined on nsIWebProgressListener.
+   *
+   * NOTIFY_PROGRESS
+   *   Receive onProgressChange events.
+   *
+   * NOTIFY_STATUS
+   *   Receive onStatusChange events.
+   *
+   * NOTIFY_SECURITY
+   *   Receive onSecurityChange events.
+   *
+   * NOTIFY_LOCATION
+   *   Receive onLocationChange events.
+   *
+   * NOTIFY_REFRESH
+   *   Receive onRefreshAttempted events.
+   *   This is defined on nsIWebProgressListener2.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.NOTIFY_STATUS' class="associatedconstant"><span id='NOTIFY_STATUS.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_STATUS' class="constant"><b>NOTIFY_STATUS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_STATUS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+</div><h4 id='associatedconstant.NOTIFY_SECURITY' class="associatedconstant"><span id='NOTIFY_SECURITY.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_SECURITY' class="constant"><b>NOTIFY_SECURITY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_SECURITY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">64</span></pre>
+</div><h4 id='associatedconstant.NOTIFY_LOCATION' class="associatedconstant"><span id='NOTIFY_LOCATION.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_LOCATION' class="constant"><b>NOTIFY_LOCATION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_LOCATION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">128</span></pre>
+</div><h4 id='associatedconstant.NOTIFY_REFRESH' class="associatedconstant"><span id='NOTIFY_REFRESH.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_REFRESH' class="constant"><b>NOTIFY_REFRESH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_REFRESH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">256</span></pre>
+</div><h4 id='associatedconstant.NOTIFY_ALL' class="associatedconstant"><span id='NOTIFY_ALL.v' class='invisible'><code>pub const <a href='#associatedconstant.NOTIFY_ALL' class="constant"><b>NOTIFY_ALL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NOTIFY_ALL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">511</span></pre>
+<pre><code class="language-text">/**
+   * This flag enables all notifications.
+   */
+</code></pre>
+</div><h4 id='method.AddProgressListener' class="method"><span id='AddProgressListener.v' class='invisible'><code>pub unsafe fn <a href='#method.AddProgressListener' class='fnname'>AddProgressListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIWebProgressListener.html" title="struct xpcom::interfaces::nsIWebProgressListener">nsIWebProgressListener</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNotifyMask: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#276-278' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Registers a listener to receive web progress events.
+   *
+   * @param aListener
+   *        The listener interface to be called when a progress event occurs.
+   *        This object must also implement nsISupportsWeakReference.
+   * @param aNotifyMask
+   *        The types of notifications to receive.
+   *
+   * @throw NS_ERROR_INVALID_ARG
+   *        Indicates that aListener was either null or that it does not
+   *        support weak references.
+   * @throw NS_ERROR_FAILURE
+   *        Indicates that aListener was already registered.
+   */
+</code></pre>
+
+<p><code>void addProgressListener (in nsIWebProgressListener aListener, in unsigned long aNotifyMask);</code></p>
+</div><h4 id='method.RemoveProgressListener' class="method"><span id='RemoveProgressListener.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveProgressListener' class='fnname'>RemoveProgressListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIWebProgressListener.html" title="struct xpcom::interfaces::nsIWebProgressListener">nsIWebProgressListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#297-299' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes a previously registered listener of progress events.
+   *
+   * @param aListener
+   *        The listener interface previously registered with a call to
+   *        addProgressListener.
+   *
+   * @throw NS_ERROR_FAILURE
+   *        Indicates that aListener was not registered.
+   */
+</code></pre>
+
+<p><code>void removeProgressListener (in nsIWebProgressListener aListener);</code></p>
+</div><h4 id='method.GetDOMWindow' class="method"><span id='GetDOMWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDOMWindow' class='fnname'>GetDOMWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDOMWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#314-316' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The DOM window associated with this nsIWebProgress instance.
+   *
+   * @throw NS_ERROR_FAILURE
+   *        Indicates that there is no associated DOM window.
+   */
+</code></pre>
+
+<p><code>readonly attribute mozIDOMWindowProxy DOMWindow;</code></p>
+</div><h4 id='method.GetDOMWindowID' class="method"><span id='GetDOMWindowID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDOMWindowID' class='fnname'>GetDOMWindowID</a>(&amp;self, aDOMWindowID: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#322-324' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute uint64_t DOMWindowID;</code></p>
+</div><h4 id='method.GetInnerDOMWindowID' class="method"><span id='GetInnerDOMWindowID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInnerDOMWindowID' class='fnname'>GetInnerDOMWindowID</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aInnerDOMWindowID: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#330-332' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute uint64_t innerDOMWindowID;</code></p>
+</div><h4 id='method.GetIsTopLevel' class="method"><span id='GetIsTopLevel.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsTopLevel' class='fnname'>GetIsTopLevel</a>(&amp;self, aIsTopLevel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#344-346' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicates whether DOMWindow.top == DOMWindow.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean isTopLevel;</code></p>
+</div><h4 id='method.GetIsLoadingDocument' class="method"><span id='GetIsLoadingDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsLoadingDocument' class='fnname'>GetIsLoadingDocument</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsLoadingDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#359-361' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicates whether or not a document is currently being loaded
+   * in the context of this nsIWebProgress instance.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean isLoadingDocument;</code></p>
+</div><h4 id='method.GetLoadType' class="method"><span id='GetLoadType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadType' class='fnname'>GetLoadType</a>(&amp;self, aLoadType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#374-376' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Contains a load type as specified by the load* constants in
+   * nsIDocShellLoadInfo.idl.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long loadType;</code></p>
+</div><h4 id='method.GetTarget' class="method"><span id='GetTarget.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTarget' class='fnname'>GetTarget</a>(&amp;self, aTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#390-392' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Main thread event target to which progress updates should be
+   * dispatched. This typically will be a SchedulerEventTarget
+   * corresponding to the tab requesting updates.
+   */
+</code></pre>
+
+<p><code>attribute nsIEventTarget target;</code></p>
+</div><h4 id='method.SetTarget' class="method"><span id='SetTarget.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTarget' class='fnname'>SetTarget</a>(&amp;self, aTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#406-408' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Main thread event target to which progress updates should be
+   * dispatched. This typically will be a SchedulerEventTarget
+   * corresponding to the tab requesting updates.
+   */
+</code></pre>
+
+<p><code>attribute nsIEventTarget target;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIWebProgress.html" title="struct xpcom::interfaces::nsIWebProgress">nsIWebProgress</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#49-52' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3302377024</span>, <span class="number">45874</span>, <span class="number">19894</span>, [<span class="number">162</span>, <span class="number">165</span>, <span class="number">224</span>, <span class="number">133</span>, <span class="number">102</span>, <span class="number">0</span>, <span class="number">13</span>, <span class="number">201</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIWebProgress.html" title="struct xpcom::interfaces::nsIWebProgress">nsIWebProgress</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#56-65' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#58-60' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#62-64' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIWebProgress.html" title="struct xpcom::interfaces::nsIWebProgress">nsIWebProgress</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#96-104' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWebProgress.rs.html#99-103' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

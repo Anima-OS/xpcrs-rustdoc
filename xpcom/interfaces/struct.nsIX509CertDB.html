@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIX509CertDB` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIX509CertDB">
+
+    <title>xpcom::interfaces::nsIX509CertDB - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIX509CertDB</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.FindCertByDBKey">FindCertByDBKey</a><a href="#method.FindCertByEmailAddress">FindCertByEmailAddress</a><a href="#method.ImportCertificates">ImportCertificates</a><a href="#method.ImportEmailCertificate">ImportEmailCertificate</a><a href="#method.ImportUserCertificate">ImportUserCertificate</a><a href="#method.DeleteCertificate">DeleteCertificate</a><a href="#method.SetCertTrust">SetCertTrust</a><a href="#method.SetCertTrustFromString">SetCertTrustFromString</a><a href="#method.IsCertTrusted">IsCertTrusted</a><a href="#method.ImportCertsFromFile">ImportCertsFromFile</a><a href="#method.ImportPKCS12File">ImportPKCS12File</a><a href="#method.ExportPKCS12File">ExportPKCS12File</a><a href="#method.ConstructX509FromBase64">ConstructX509FromBase64</a><a href="#method.ConstructX509">ConstructX509</a><a href="#method.OpenSignedAppFileAsync">OpenSignedAppFileAsync</a><a href="#method.VerifySignedDirectoryAsync">VerifySignedDirectoryAsync</a><a href="#method.AddCert">AddCert</a><a href="#method.VerifyCertAtTime">VerifyCertAtTime</a><a href="#method.VerifyCertNow">VerifyCertNow</a><a href="#method.AsyncVerifyCertAtTime">AsyncVerifyCertAtTime</a><a href="#method.ClearOCSPCache">ClearOCSPCache</a><a href="#method.AddCertFromBase64">AddCertFromBase64</a><a href="#method.GetCerts">GetCerts</a><a href="#method.GetEnterpriseRoots">GetEnterpriseRoots</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIX509CertDB', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIX509CertDB</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#404-413' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIX509CertDB { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIX509CertDB : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * This represents a service to access and manipulate
+ * X.509 certificates stored in a database.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIX509CertDB.html" title="struct xpcom::interfaces::nsIX509CertDB">nsIX509CertDB</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#453-459' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIX509CertDBCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#456-458' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIX509CertDB</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIX509CertDB.html" title="struct xpcom::interfaces::nsIX509CertDB">nsIX509CertDB</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#572-991' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.UNTRUSTED' class="associatedconstant"><span id='UNTRUSTED.v' class='invisible'><code>pub const <a href='#associatedconstant.UNTRUSTED' class="constant"><b>UNTRUSTED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">UNTRUSTED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   *  Constants that define which usages a certificate
+   *  is trusted for.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TRUSTED_SSL' class="associatedconstant"><span id='TRUSTED_SSL.v' class='invisible'><code>pub const <a href='#associatedconstant.TRUSTED_SSL' class="constant"><b>TRUSTED_SSL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TRUSTED_SSL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.TRUSTED_EMAIL' class="associatedconstant"><span id='TRUSTED_EMAIL.v' class='invisible'><code>pub const <a href='#associatedconstant.TRUSTED_EMAIL' class="constant"><b>TRUSTED_EMAIL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TRUSTED_EMAIL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.AppXPCShellRoot' class="associatedconstant"><span id='AppXPCShellRoot.v' class='invisible'><code>pub const <a href='#associatedconstant.AppXPCShellRoot' class="constant"><b>AppXPCShellRoot</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">AppXPCShellRoot</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+<pre><code class="language-text">/**
+   *  Verifies the signature on the given JAR file to verify that it has a
+   *  valid signature.  To be considered valid, there must be exactly one
+   *  signature on the JAR file and that signature must have signed every
+   *  entry. Further, the signature must come from a certificate that
+   *  is trusted for code signing.
+   *
+   *  On success, NS_OK, a nsIZipReader, and the trusted certificate that
+   *  signed the JAR are returned.
+   *
+   *  On failure, an error code is returned.
+   *
+   *  This method returns a nsIZipReader, instead of taking an nsIZipReader
+   *  as input, to encourage users of the API to verify the signature as the
+   *  first step in opening the JAR.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.AddonsPublicRoot' class="associatedconstant"><span id='AddonsPublicRoot.v' class='invisible'><code>pub const <a href='#associatedconstant.AddonsPublicRoot' class="constant"><b>AddonsPublicRoot</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">AddonsPublicRoot</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+</div><h4 id='associatedconstant.AddonsStageRoot' class="associatedconstant"><span id='AddonsStageRoot.v' class='invisible'><code>pub const <a href='#associatedconstant.AddonsStageRoot' class="constant"><b>AddonsStageRoot</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">AddonsStageRoot</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='associatedconstant.PrivilegedPackageRoot' class="associatedconstant"><span id='PrivilegedPackageRoot.v' class='invisible'><code>pub const <a href='#associatedconstant.PrivilegedPackageRoot' class="constant"><b>PrivilegedPackageRoot</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PrivilegedPackageRoot</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+</div><h4 id='associatedconstant.DeveloperImportedRoot' class="associatedconstant"><span id='DeveloperImportedRoot.v' class='invisible'><code>pub const <a href='#associatedconstant.DeveloperImportedRoot' class="constant"><b>DeveloperImportedRoot</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DeveloperImportedRoot</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">10</span></pre>
+</div><h4 id='associatedconstant.FLAG_LOCAL_ONLY' class="associatedconstant"><span id='FLAG_LOCAL_ONLY.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_LOCAL_ONLY' class="constant"><b>FLAG_LOCAL_ONLY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_LOCAL_ONLY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.FLAG_MUST_BE_EV' class="associatedconstant"><span id='FLAG_MUST_BE_EV.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_MUST_BE_EV' class="constant"><b>FLAG_MUST_BE_EV</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_MUST_BE_EV</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.FindCertByDBKey' class="method"><span id='FindCertByDBKey.v' class='invisible'><code>pub unsafe fn <a href='#method.FindCertByDBKey' class='fnname'>FindCertByDBKey</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDBkey: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#643-645' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Will find a certificate based on its dbkey
+   *  retrieved by getting the dbKey attribute of
+   *  the certificate.
+   *
+   *  @param aDBkey Database internal key, as obtained using
+   *                attribute dbkey in nsIX509Cert.
+   */
+</code></pre>
+
+<p><code>[must_use] nsIX509Cert findCertByDBKey (in ACString aDBkey);</code></p>
+</div><h4 id='method.FindCertByEmailAddress' class="method"><span id='FindCertByEmailAddress.v' class='invisible'><code>pub unsafe fn <a href='#method.FindCertByEmailAddress' class='fnname'>FindCertByEmailAddress</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEmailAddress: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#662-664' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Find a certificate by email address.
+   *
+   *  @param aEmailAddress The email address to be used as the key
+   *                       to find the certificate.
+   *
+   *  @return The matching certificate if found.
+   */
+</code></pre>
+
+<p><code>[must_use] nsIX509Cert findCertByEmailAddress (in ACString aEmailAddress);</code></p>
+</div><h4 id='method.ImportCertificates' class="method"><span id='ImportCertificates.v' class='invisible'><code>pub unsafe fn <a href='#method.ImportCertificates' class='fnname'>ImportCertificates</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;data: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;length: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;ctx: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#683-685' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Use this to import a stream sent down as a mime type into
+   *  the certificate database on the default token.
+   *  The stream may consist of one or more certificates.
+   *
+   *  @param data The raw data to be imported
+   *  @param length The length of the data to be imported
+   *  @param type The type of the certificate, see constants in nsIX509Cert
+   *  @param ctx A UI context.
+   */
+</code></pre>
+
+<p><code>void importCertificates ([array, size_is (length)] in octet data, in unsigned long length, in unsigned long type, in nsIInterfaceRequestor ctx);</code></p>
+</div><h4 id='method.ImportEmailCertificate' class="method"><span id='ImportEmailCertificate.v' class='invisible'><code>pub unsafe fn <a href='#method.ImportEmailCertificate' class='fnname'>ImportEmailCertificate</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;data: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;length: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;ctx: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#701-703' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Import another person&#39;s email certificate into the database.
+   *
+   *  @param data The raw data to be imported
+   *  @param length The length of the data to be imported
+   *  @param ctx A UI context.
+   */
+</code></pre>
+
+<p><code>void importEmailCertificate ([array, size_is (length)] in octet data, in unsigned long length, in nsIInterfaceRequestor ctx);</code></p>
+</div><h4 id='method.ImportUserCertificate' class="method"><span id='ImportUserCertificate.v' class='invisible'><code>pub unsafe fn <a href='#method.ImportUserCertificate' class='fnname'>ImportUserCertificate</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;data: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;length: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;ctx: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#720-722' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Import a personal certificate into the database, assuming
+   *  the database already contains the private key for this certificate.
+   *
+   *  @param data The raw data to be imported
+   *  @param length The length of the data to be imported
+   *  @param ctx A UI context.
+   */
+</code></pre>
+
+<p><code>void importUserCertificate ([array, size_is (length)] in octet data, in unsigned long length, in nsIInterfaceRequestor ctx);</code></p>
+</div><h4 id='method.DeleteCertificate' class="method"><span id='DeleteCertificate.v' class='invisible'><code>pub unsafe fn <a href='#method.DeleteCertificate' class='fnname'>DeleteCertificate</a>(&amp;self, aCert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#736-738' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Delete a certificate stored in the database.
+   *
+   *  @param aCert Delete this certificate.
+   */
+</code></pre>
+
+<p><code>void deleteCertificate (in nsIX509Cert aCert);</code></p>
+</div><h4 id='method.SetCertTrust' class="method"><span id='SetCertTrust.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCertTrust' class='fnname'>SetCertTrust</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;cert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;trust: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#758-760' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Modify the trust that is stored and associated to a certificate within
+   *  a database. Separate trust is stored for
+   *  One call manipulates the trust for one trust type only.
+   *  See the trust type constants defined within this interface.
+   *
+   *  @param cert Change the stored trust of this certificate.
+   *  @param type The type of the certificate. See nsIX509Cert.
+   *  @param trust A bitmask. The new trust for the possible usages.
+   *               See the trust constants defined within this interface.
+   */
+</code></pre>
+
+<p><code>[must_use] void setCertTrust (in nsIX509Cert cert, in unsigned long type, in unsigned long trust);</code></p>
+</div><h4 id='method.SetCertTrustFromString' class="method"><span id='SetCertTrustFromString.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCertTrustFromString' class='fnname'>SetCertTrustFromString</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;cert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;trustString: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#778-780' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * @param cert        The certificate for which to modify trust.
+   * @param trustString decoded by CERT_DecodeTrustString. 3 comma separated
+   *                    characters, indicating SSL, Email, and Object signing
+   *                    trust. The object signing trust flags are effectively
+   *                    ignored by gecko, but they still must be specified (at
+   *                    least by a final trailing comma) because this argument
+   *                    is passed to CERT_DecodeTrustString.
+   */
+</code></pre>
+
+<p><code>[must_use] void setCertTrustFromString (in nsIX509Cert cert, in ACString trustString);</code></p>
+</div><h4 id='method.IsCertTrusted' class="method"><span id='IsCertTrusted.v' class='invisible'><code>pub unsafe fn <a href='#method.IsCertTrusted' class='fnname'>IsCertTrusted</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;cert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;certType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;trustType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#799-801' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Query whether a certificate is trusted for a particular use.
+   *
+   *  @param cert Obtain the stored trust of this certificate.
+   *  @param certType The type of the certificate. See nsIX509Cert.
+   *  @param trustType A single bit from the usages constants defined
+   *                   within this interface.
+   *
+   *  @return Returns true if the certificate is trusted for the given use.
+   */
+</code></pre>
+
+<p><code>[must_use] boolean isCertTrusted (in nsIX509Cert cert, in unsigned long certType, in unsigned long trustType);</code></p>
+</div><h4 id='method.ImportCertsFromFile' class="method"><span id='ImportCertsFromFile.v' class='invisible'><code>pub unsafe fn <a href='#method.ImportCertsFromFile' class='fnname'>ImportCertsFromFile</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#818-820' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Import certificate(s) from file
+   *
+   *  @param aFile Identifies a file that contains the certificate
+   *               to be imported.
+   *  @param aType Describes the type of certificate that is going to
+   *               be imported. See type constants in nsIX509Cert.
+   */
+</code></pre>
+
+<p><code>[must_use] void importCertsFromFile (in nsIFile aFile, in unsigned long aType);</code></p>
+</div><h4 id='method.ImportPKCS12File' class="method"><span id='ImportPKCS12File.v' class='invisible'><code>pub unsafe fn <a href='#method.ImportPKCS12File' class='fnname'>ImportPKCS12File</a>(&amp;self, aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#834-836' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Import a PKCS#12 file containing cert(s) and key(s) into the database.
+   *
+   *  @param aFile Identifies a file that contains the data to be imported.
+   */
+</code></pre>
+
+<p><code>[must_use] void importPKCS12File (in nsIFile aFile);</code></p>
+</div><h4 id='method.ExportPKCS12File' class="method"><span id='ExportPKCS12File.v' class='invisible'><code>pub unsafe fn <a href='#method.ExportPKCS12File' class='fnname'>ExportPKCS12File</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;count: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCerts: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#853-855' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Export a set of certs and keys from the database to a PKCS#12 file.
+   *
+   *  @param aFile Identifies a file that will be filled with the data to be
+   *               exported.
+   *  @param count The number of certificates to be exported.
+   *  @param aCerts The array of all certificates to be exported.
+   */
+</code></pre>
+
+<p><code>[must_use] void exportPKCS12File (in nsIFile aFile, in unsigned long count, [array, size_is (count)] in nsIX509Cert aCerts);</code></p>
+</div><h4 id='method.ConstructX509FromBase64' class="method"><span id='ConstructX509FromBase64.v' class='invisible'><code>pub unsafe fn <a href='#method.ConstructX509FromBase64' class='fnname'>ConstructX509FromBase64</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;base64: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#861-863' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[must_use] nsIX509Cert constructX509FromBase64 (in ACString base64);</code></p>
+</div><h4 id='method.ConstructX509' class="method"><span id='ConstructX509.v' class='invisible'><code>pub unsafe fn <a href='#method.ConstructX509' class='fnname'>ConstructX509</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;certDER: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#869-871' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[must_use] nsIX509Cert constructX509 (in ACString certDER);</code></p>
+</div><h4 id='method.OpenSignedAppFileAsync' class="method"><span id='OpenSignedAppFileAsync.v' class='invisible'><code>pub unsafe fn <a href='#method.OpenSignedAppFileAsync' class='fnname'>OpenSignedAppFileAsync</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;trustedRoot: <a class="type" href="../../xpcom/interfaces/type.AppTrustedRoot.html" title="type xpcom::interfaces::AppTrustedRoot">AppTrustedRoot</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aJarFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIOpenSignedAppFileCallback.html" title="struct xpcom::interfaces::nsIOpenSignedAppFileCallback">nsIOpenSignedAppFileCallback</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#877-879' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[must_use] void openSignedAppFileAsync (in AppTrustedRoot trustedRoot, in nsIFile aJarFile, in nsIOpenSignedAppFileCallback callback);</code></p>
+</div><h4 id='method.VerifySignedDirectoryAsync' class="method"><span id='VerifySignedDirectoryAsync.v' class='invisible'><code>pub unsafe fn <a href='#method.VerifySignedDirectoryAsync' class='fnname'>VerifySignedDirectoryAsync</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;trustedRoot: <a class="type" href="../../xpcom/interfaces/type.AppTrustedRoot.html" title="type xpcom::interfaces::AppTrustedRoot">AppTrustedRoot</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUnpackedDir: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIVerifySignedDirectoryCallback.html" title="struct xpcom::interfaces::nsIVerifySignedDirectoryCallback">nsIVerifySignedDirectoryCallback</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#893-895' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Vestigial implementation of verifying signed unpacked add-ons. trustedRoot
+   * and aUnpackedDir are ignored. The callback is always called with
+   * NS_ERROR_SIGNED_JAR_NOT_SIGNED and a null signer cert.
+   */
+</code></pre>
+
+<p><code>[must_use] void verifySignedDirectoryAsync (in AppTrustedRoot trustedRoot, in nsIFile aUnpackedDir, in nsIVerifySignedDirectoryCallback callback);</code></p>
+</div><h4 id='method.AddCert' class="method"><span id='AddCert.v' class='invisible'><code>pub unsafe fn <a href='#method.AddCert' class='fnname'>AddCert</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;certDER: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;trust: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#901-903' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[must_use] nsIX509Cert addCert (in ACString certDER, in ACString trust);</code></p>
+</div><h4 id='method.VerifyCertAtTime' class="method"><span id='VerifyCertAtTime.v' class='invisible'><code>pub unsafe fn <a href='#method.VerifyCertAtTime' class='fnname'>VerifyCertAtTime</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUsage: <a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHostname: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTime: <a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aVerifiedChain: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509CertList.html" title="struct xpcom::interfaces::nsIX509CertList">nsIX509CertList</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHasEVPolicy: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#931-933' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Warning: This interface is inteded to use only for testing only as:
+   *    1. It can create IO on the main thread.
+   *    2. It is in constant change, so in/out can change at any release.
+   *
+   *  Obtain the verification result for a cert given a particular usage.
+   *  On success, the call returns 0, the chain built during verification,
+   *  and whether the cert is good for EV usage.
+   *  On failure, the call returns the PRErrorCode for the verification failure
+   *
+   *  @param aCert Obtain the stored trust of this certificate
+   *  @param aUsage a integer representing the usage from NSS
+   *  @param aFlags flags as described above
+   *  @param aHostname the (optional) hostname to verify for
+   *  @param aTime the time at which to verify, in seconds since the epoch
+   *  @param aVerifiedChain chain of verification up to the root if success
+   *  @param aHasEVPolicy bool that signified that the cert was an EV cert
+   *  @return 0 if success or the value or the error code for the verification
+   *          failure
+   */
+</code></pre>
+
+<p><code>[must_use] int32_t verifyCertAtTime (in nsIX509Cert aCert, in int64_t aUsage, in uint32_t aFlags, in ACString aHostname, in uint64_t aTime, out nsIX509CertList aVerifiedChain, out bool aHasEVPolicy);</code></p>
+</div><h4 id='method.VerifyCertNow' class="method"><span id='VerifyCertNow.v' class='invisible'><code>pub unsafe fn <a href='#method.VerifyCertNow' class='fnname'>VerifyCertNow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUsage: <a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHostname: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aVerifiedChain: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509CertList.html" title="struct xpcom::interfaces::nsIX509CertList">nsIX509CertList</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHasEVPolicy: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#939-941' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[must_use] int32_t verifyCertNow (in nsIX509Cert aCert, in int64_t aUsage, in uint32_t aFlags, in ACString aHostname, out nsIX509CertList aVerifiedChain, out bool aHasEVPolicy);</code></p>
+</div><h4 id='method.AsyncVerifyCertAtTime' class="method"><span id='AsyncVerifyCertAtTime.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncVerifyCertAtTime' class='fnname'>AsyncVerifyCertAtTime</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUsage: <a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHostname: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTime: <a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsICertVerificationCallback.html" title="struct xpcom::interfaces::nsICertVerificationCallback">nsICertVerificationCallback</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#954-956' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Similar to the above, but asynchronous. As a result, use of this API is not
+   * limited to tests.
+   */
+</code></pre>
+
+<p><code>[must_use] void asyncVerifyCertAtTime (in nsIX509Cert aCert, in int64_t aUsage, in uint32_t aFlags, in ACString aHostname, in uint64_t aTime, in nsICertVerificationCallback aCallback);</code></p>
+</div><h4 id='method.ClearOCSPCache' class="method"><span id='ClearOCSPCache.v' class='invisible'><code>pub unsafe fn <a href='#method.ClearOCSPCache' class='fnname'>ClearOCSPCache</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#962-964' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[must_use] void clearOCSPCache ();</code></p>
+</div><h4 id='method.AddCertFromBase64' class="method"><span id='AddCertFromBase64.v' class='invisible'><code>pub unsafe fn <a href='#method.AddCertFromBase64' class='fnname'>AddCertFromBase64</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;base64: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;trust: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#970-972' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[must_use] nsIX509Cert addCertFromBase64 (in ACString base64, in ACString trust);</code></p>
+</div><h4 id='method.GetCerts' class="method"><span id='GetCerts.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCerts' class='fnname'>GetCerts</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509CertList.html" title="struct xpcom::interfaces::nsIX509CertList">nsIX509CertList</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#978-980' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[must_use] nsIX509CertList getCerts ();</code></p>
+</div><h4 id='method.GetEnterpriseRoots' class="method"><span id='GetEnterpriseRoots.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEnterpriseRoots' class='fnname'>GetEnterpriseRoots</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509CertList.html" title="struct xpcom::interfaces::nsIX509CertList">nsIX509CertList</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#986-988' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[must_use] nsIX509CertList getEnterpriseRoots ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIX509CertDB.html" title="struct xpcom::interfaces::nsIX509CertDB">nsIX509CertDB</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#418-421' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1544998299</span>, <span class="number">23155</span>, <span class="number">18417</span>, [<span class="number">171</span>, <span class="number">15</span>, <span class="number">17</span>, <span class="number">237</span>, <span class="number">231</span>, <span class="number">73</span>, <span class="number">92</span>, <span class="number">206</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIX509CertDB.html" title="struct xpcom::interfaces::nsIX509CertDB">nsIX509CertDB</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#425-434' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#427-429' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#431-433' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIX509CertDB.html" title="struct xpcom::interfaces::nsIX509CertDB">nsIX509CertDB</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#465-473' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIX509CertDB.rs.html#468-472' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

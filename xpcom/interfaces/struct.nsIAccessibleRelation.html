@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIAccessibleRelation` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIAccessibleRelation">
+
+    <title>xpcom::interfaces::nsIAccessibleRelation - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIAccessibleRelation</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetRelationType">GetRelationType</a><a href="#method.GetTargetsCount">GetTargetsCount</a><a href="#method.GetTarget">GetTarget</a><a href="#method.GetTargets">GetTargets</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIAccessibleRelation', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIAccessibleRelation</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#21-30' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIAccessibleRelation { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIAccessibleRelation : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * This interface gives access to an accessible&#39;s set of relations.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleRelation.html" title="struct xpcom::interfaces::nsIAccessibleRelation">nsIAccessibleRelation</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#70-76' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIAccessibleRelationCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#73-75' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIAccessibleRelation</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleRelation.html" title="struct xpcom::interfaces::nsIAccessibleRelation">nsIAccessibleRelation</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#129-428' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.RELATION_LABELLED_BY' class="associatedconstant"><span id='RELATION_LABELLED_BY.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_LABELLED_BY' class="constant"><b>RELATION_LABELLED_BY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_LABELLED_BY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * This object is labelled by a target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_LABEL_FOR' class="associatedconstant"><span id='RELATION_LABEL_FOR.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_LABEL_FOR' class="constant"><b>RELATION_LABEL_FOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_LABEL_FOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * This object is label for a target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_DESCRIBED_BY' class="associatedconstant"><span id='RELATION_DESCRIBED_BY.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_DESCRIBED_BY' class="constant"><b>RELATION_DESCRIBED_BY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_DESCRIBED_BY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/**
+   * This object is described by the target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_DESCRIPTION_FOR' class="associatedconstant"><span id='RELATION_DESCRIPTION_FOR.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_DESCRIPTION_FOR' class="constant"><b>RELATION_DESCRIPTION_FOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_DESCRIPTION_FOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+<pre><code class="language-text">/**
+   * This object is describes the target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_NODE_CHILD_OF' class="associatedconstant"><span id='RELATION_NODE_CHILD_OF.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_NODE_CHILD_OF' class="constant"><b>RELATION_NODE_CHILD_OF</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_NODE_CHILD_OF</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * This object is a child of a target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_NODE_PARENT_OF' class="associatedconstant"><span id='RELATION_NODE_PARENT_OF.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_NODE_PARENT_OF' class="constant"><b>RELATION_NODE_PARENT_OF</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_NODE_PARENT_OF</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+<pre><code class="language-text">/**
+   * This object is a parent of a target object. A dual relation to
+   * RELATION_NODE_CHILD_OF
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_CONTROLLED_BY' class="associatedconstant"><span id='RELATION_CONTROLLED_BY.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_CONTROLLED_BY' class="constant"><b>RELATION_CONTROLLED_BY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_CONTROLLED_BY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+<pre><code class="language-text">/**
+   * Some attribute of this object is affected by a target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_CONTROLLER_FOR' class="associatedconstant"><span id='RELATION_CONTROLLER_FOR.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_CONTROLLER_FOR' class="constant"><b>RELATION_CONTROLLER_FOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_CONTROLLER_FOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+<pre><code class="language-text">/**
+   * This object is interactive and controls some attribute of a target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_FLOWS_TO' class="associatedconstant"><span id='RELATION_FLOWS_TO.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_FLOWS_TO' class="constant"><b>RELATION_FLOWS_TO</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_FLOWS_TO</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/**
+   * Content flows from this object to a target object, i.e. has content that
+   * flows logically to another object in a sequential way, e.g. text flow.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_FLOWS_FROM' class="associatedconstant"><span id='RELATION_FLOWS_FROM.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_FLOWS_FROM' class="constant"><b>RELATION_FLOWS_FROM</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_FLOWS_FROM</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+<pre><code class="language-text">/**
+   * Content flows to this object from a target object, i.e. has content that
+   * flows logically from another object in a sequential way, e.g. text flow.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_MEMBER_OF' class="associatedconstant"><span id='RELATION_MEMBER_OF.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_MEMBER_OF' class="constant"><b>RELATION_MEMBER_OF</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_MEMBER_OF</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">10</span></pre>
+<pre><code class="language-text">/**
+   * This object is a member of a group of one or more objects. When there is
+   * more than one object in the group each member may have one and the same
+   * target, e.g. a grouping object.  It is also possible that each member has
+   * multiple additional targets, e.g. one for every other member in the group.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_SUBWINDOW_OF' class="associatedconstant"><span id='RELATION_SUBWINDOW_OF.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_SUBWINDOW_OF' class="constant"><b>RELATION_SUBWINDOW_OF</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_SUBWINDOW_OF</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">11</span></pre>
+<pre><code class="language-text">/**
+   * This object is a sub window of a target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_EMBEDS' class="associatedconstant"><span id='RELATION_EMBEDS.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_EMBEDS' class="constant"><b>RELATION_EMBEDS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_EMBEDS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">12</span></pre>
+<pre><code class="language-text">/**
+   * This object embeds a target object. This relation can be used on the
+   * OBJID_CLIENT accessible for a top level window to show where the content
+   * areas are.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_EMBEDDED_BY' class="associatedconstant"><span id='RELATION_EMBEDDED_BY.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_EMBEDDED_BY' class="constant"><b>RELATION_EMBEDDED_BY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_EMBEDDED_BY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">13</span></pre>
+<pre><code class="language-text">/**
+   * This object is embedded by a target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_POPUP_FOR' class="associatedconstant"><span id='RELATION_POPUP_FOR.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_POPUP_FOR' class="constant"><b>RELATION_POPUP_FOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_POPUP_FOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">14</span></pre>
+<pre><code class="language-text">/**
+   * This object is a transient component related to the target object. When
+   * this object is activated the target object doesn&#39;t lose focus.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_PARENT_WINDOW_OF' class="associatedconstant"><span id='RELATION_PARENT_WINDOW_OF.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_PARENT_WINDOW_OF' class="constant"><b>RELATION_PARENT_WINDOW_OF</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_PARENT_WINDOW_OF</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">15</span></pre>
+<pre><code class="language-text">/**
+   * This object is a parent window of the target object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_DEFAULT_BUTTON' class="associatedconstant"><span id='RELATION_DEFAULT_BUTTON.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_DEFAULT_BUTTON' class="constant"><b>RELATION_DEFAULT_BUTTON</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_DEFAULT_BUTTON</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+<pre><code class="language-text">/**
+   * Part of a form/dialog with a related default button. It is used for
+   * MSAA/XPCOM, it isn&#39;t for IA2 or ATK.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_CONTAINING_DOCUMENT' class="associatedconstant"><span id='RELATION_CONTAINING_DOCUMENT.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_CONTAINING_DOCUMENT' class="constant"><b>RELATION_CONTAINING_DOCUMENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_CONTAINING_DOCUMENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">17</span></pre>
+<pre><code class="language-text">/**
+   * The target object is the containing document object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_CONTAINING_TAB_PANE' class="associatedconstant"><span id='RELATION_CONTAINING_TAB_PANE.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_CONTAINING_TAB_PANE' class="constant"><b>RELATION_CONTAINING_TAB_PANE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_CONTAINING_TAB_PANE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">18</span></pre>
+<pre><code class="language-text">/**
+   * The target object is the topmost containing document object in the tab pane.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_CONTAINING_WINDOW' class="associatedconstant"><span id='RELATION_CONTAINING_WINDOW.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_CONTAINING_WINDOW' class="constant"><b>RELATION_CONTAINING_WINDOW</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_CONTAINING_WINDOW</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">19</span></pre>
+<pre><code class="language-text">/**
+   * The target object is the containing window object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_CONTAINING_APPLICATION' class="associatedconstant"><span id='RELATION_CONTAINING_APPLICATION.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_CONTAINING_APPLICATION' class="constant"><b>RELATION_CONTAINING_APPLICATION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_CONTAINING_APPLICATION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">20</span></pre>
+<pre><code class="language-text">/**
+   * The target object is the containing application object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_DETAILS' class="associatedconstant"><span id='RELATION_DETAILS.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_DETAILS' class="constant"><b>RELATION_DETAILS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_DETAILS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">21</span></pre>
+<pre><code class="language-text">/**
+   * The target object provides the detailed, extended description for this
+   * object. It provides more detailed information than would normally be
+   * provided using the DESCRIBED_BY relation. A common use for this relation is
+   * in digital publishing where an extended description needs to be conveyed in
+   * a book that requires structural markup or the embedding of other technology
+   * to provide illustrative content.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_DETAILS_FOR' class="associatedconstant"><span id='RELATION_DETAILS_FOR.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_DETAILS_FOR' class="constant"><b>RELATION_DETAILS_FOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_DETAILS_FOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">22</span></pre>
+<pre><code class="language-text">/**
+   * This object provides the detailed, extended description for the target
+   * object. See DETAILS relation.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_ERRORMSG' class="associatedconstant"><span id='RELATION_ERRORMSG.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_ERRORMSG' class="constant"><b>RELATION_ERRORMSG</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_ERRORMSG</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">23</span></pre>
+<pre><code class="language-text">/**
+   * The target object is the error message for this object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RELATION_ERRORMSG_FOR' class="associatedconstant"><span id='RELATION_ERRORMSG_FOR.v' class='invisible'><code>pub const <a href='#associatedconstant.RELATION_ERRORMSG_FOR' class="constant"><b>RELATION_ERRORMSG_FOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RELATION_ERRORMSG_FOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">24</span></pre>
+<pre><code class="language-text">/**
+   * This object is the error message for the target object.
+   */
+</code></pre>
+</div><h4 id='method.GetRelationType' class="method"><span id='GetRelationType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRelationType' class='fnname'>GetRelationType</a>(&amp;self, aRelationType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#380-382' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the type of the relation.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long relationType;</code></p>
+</div><h4 id='method.GetTargetsCount' class="method"><span id='GetTargetsCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTargetsCount' class='fnname'>GetTargetsCount</a>(&amp;self, aTargetsCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#394-396' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the number of targets for this relation.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long targetsCount;</code></p>
+</div><h4 id='method.GetTarget' class="method"><span id='GetTarget.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTarget' class='fnname'>GetTarget</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;index: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#409-411' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns one accessible relation target.
+   * @param index - 0 based index of relation target.
+   */
+</code></pre>
+
+<p><code>nsIAccessible getTarget (in unsigned long index);</code></p>
+</div><h4 id='method.GetTargets' class="method"><span id='GetTargets.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTargets' class='fnname'>GetTargets</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#423-425' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns multiple accessible relation targets.
+   */
+</code></pre>
+
+<p><code>nsIArray getTargets ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleRelation.html" title="struct xpcom::interfaces::nsIAccessibleRelation">nsIAccessibleRelation</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#35-38' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1437796548</span>, <span class="number">10980</span>, <span class="number">18108</span>, [<span class="number">180</span>, <span class="number">205</span>, <span class="number">77</span>, <span class="number">67</span>, <span class="number">112</span>, <span class="number">224</span>, <span class="number">166</span>, <span class="number">96</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleRelation.html" title="struct xpcom::interfaces::nsIAccessibleRelation">nsIAccessibleRelation</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#42-51' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#44-46' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#48-50' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleRelation.html" title="struct xpcom::interfaces::nsIAccessibleRelation">nsIAccessibleRelation</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#82-90' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleRelation.rs.html#85-89' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

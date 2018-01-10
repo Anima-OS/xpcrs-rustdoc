@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `imgIContainer` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, imgIContainer">
+
+    <title>xpcom::interfaces::imgIContainer - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct imgIContainer</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetWidth">GetWidth</a><a href="#method.GetHeight">GetHeight</a><a href="#method.GetType">GetType</a><a href="#method.GetAnimated">GetAnimated</a><a href="#method.WillDrawOpaqueNow">WillDrawOpaqueNow</a><a href="#method.StartDecoding">StartDecoding</a><a href="#method.StartDecodingWithResult">StartDecodingWithResult</a><a href="#method.LockImage">LockImage</a><a href="#method.UnlockImage">UnlockImage</a><a href="#method.RequestDiscard">RequestDiscard</a><a href="#method.GetAnimationMode">GetAnimationMode</a><a href="#method.SetAnimationMode">SetAnimationMode</a><a href="#method.ResetAnimation">ResetAnimation</a><a href="#method.GetFrameIndex">GetFrameIndex</a><a href="#method.GetFirstFrameDelay">GetFirstFrameDelay</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'imgIContainer', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>imgIContainer</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#25-34' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct imgIContainer { /* fields omitted */ }</pre><div class='docblock'><p><code>interface imgIContainer : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * imgIContainer is the interface that represents an image. It allows
+ * access to frames as Thebes surfaces. It also allows drawing of images
+ * onto Thebes contexts.
+ *
+ * Internally, imgIContainer also manages animation of images.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.imgIContainer.html" title="struct xpcom::interfaces::imgIContainer">imgIContainer</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#74-80' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;imgIContainerCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#77-79' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>imgIContainer</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.imgIContainer.html" title="struct xpcom::interfaces::imgIContainer">imgIContainer</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#234-888' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.TYPE_RASTER' class="associatedconstant"><span id='TYPE_RASTER.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_RASTER' class="constant"><b>TYPE_RASTER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_RASTER</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+    * Enumerated values for the &#39;type&#39; attribute (below).
+    */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_VECTOR' class="associatedconstant"><span id='TYPE_VECTOR.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_VECTOR' class="constant"><b>TYPE_VECTOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_VECTOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.FLAG_NONE' class="associatedconstant"><span id='FLAG_NONE.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_NONE' class="constant"><b>FLAG_NONE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_NONE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Flags for imgIContainer operations.
+   *
+   * Meanings:
+   *
+   * FLAG_NONE: Lack of flags.
+   *
+   * FLAG_SYNC_DECODE: Forces synchronous/non-progressive decode of all
+   * available data before the call returns.
+   *
+   * FLAG_SYNC_DECODE_IF_FAST: Like FLAG_SYNC_DECODE, but requests a sync decode
+   * be performed only if ImageLib estimates it can be completed very quickly.
+   *
+   * FLAG_ASYNC_NOTIFY: Send notifications asynchronously, even if we decode
+   * synchronously beause of FLAG_SYNC_DECODE or FLAG_SYNC_DECODE_IF_FAST.
+   *
+   * FLAG_DECODE_NO_PREMULTIPLY_ALPHA: Do not premultiply alpha if
+   * it&#39;s not already premultiplied in the image data.
+   *
+   * FLAG_DECODE_NO_COLORSPACE_CONVERSION: Do not do any colorspace conversion;
+   * ignore any embedded profiles, and don&#39;t convert to any particular
+   * destination space.
+   *
+   * FLAG_CLAMP: Extend the image to the fill area by clamping image sample
+   * coordinates instead of by tiling. This only affects &#39;draw&#39;.
+   *
+   * FLAG_HIGH_QUALITY_SCALING: A hint as to whether this image should be
+   * scaled using the high quality scaler. Do not set this if not drawing to
+   * a window or not listening to invalidations. Passing this flag will do two
+   * things: 1) request a decode of the image at the size asked for by the
+   * caller if one isn&#39;t already started or complete, and 2) allows a decoded
+   * frame of any size (it could be neither the requested size, nor the
+   * intrinsic size) to be substituted.
+   *
+   * FLAG_WANT_DATA_SURFACE: Can be passed to GetFrame when the caller wants a
+   * DataSourceSurface instead of a hardware accelerated surface. This can be
+   * important for performance (by avoiding an upload to/readback from the GPU)
+   * when the caller knows they want a SourceSurface of type DATA.
+   *
+   * FLAG_BYPASS_SURFACE_CACHE: Forces drawing to happen rather than taking
+   * cached rendering from the surface cache. This is used when we are printing,
+   * for example, where we want the vector commands from VectorImages to end up
+   * in the PDF output rather than a cached rendering at screen resolution.
+   *
+   * FLAG_FORCE_PRESERVEASPECTRATIO_NONE: Force scaling this image
+   * non-uniformly if necessary. This flag is for vector image only. A raster
+   * image should ignore this flag. While drawing a vector image with this
+   * flag, do not force uniform scaling even if its root &lt;svg&gt; node has a
+   * preserveAspectRatio attribute that would otherwise require uniform
+   * scaling , such as xMinYMin/ xMidYMin. Always scale the graphic content of
+   * the given image non-uniformly if necessary such that the image&#39;s
+   * viewBox (if specified or implied by height/width attributes) exactly
+   * matches the viewport rectangle.
+   *
+   * FLAG_FORCE_UNIFORM_SCALING: Signal to ClippedImage::OptimalSizeForDest that
+   * its returned size can only scale the image&#39;s size *uniformly* (by the same
+   * factor in each dimension). We need this flag when painting border-image
+   * section with SVG image source-data, if the SVG image has no viewBox and no
+   * intrinsic size. In such a case, we synthesize a viewport for the SVG image
+   * (a &quot;window into SVG space&quot;) based on the border image area, and we need to
+   * be sure we don&#39;t subsequently scale that viewport in a way that distorts
+   * its contents by stretching them more in one dimension than the other.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FLAG_SYNC_DECODE' class="associatedconstant"><span id='FLAG_SYNC_DECODE.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_SYNC_DECODE' class="constant"><b>FLAG_SYNC_DECODE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_SYNC_DECODE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.FLAG_SYNC_DECODE_IF_FAST' class="associatedconstant"><span id='FLAG_SYNC_DECODE_IF_FAST.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_SYNC_DECODE_IF_FAST' class="constant"><b>FLAG_SYNC_DECODE_IF_FAST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_SYNC_DECODE_IF_FAST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.FLAG_ASYNC_NOTIFY' class="associatedconstant"><span id='FLAG_ASYNC_NOTIFY.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_ASYNC_NOTIFY' class="constant"><b>FLAG_ASYNC_NOTIFY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_ASYNC_NOTIFY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.FLAG_DECODE_NO_PREMULTIPLY_ALPHA' class="associatedconstant"><span id='FLAG_DECODE_NO_PREMULTIPLY_ALPHA.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_DECODE_NO_PREMULTIPLY_ALPHA' class="constant"><b>FLAG_DECODE_NO_PREMULTIPLY_ALPHA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_DECODE_NO_PREMULTIPLY_ALPHA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='associatedconstant.FLAG_DECODE_NO_COLORSPACE_CONVERSION' class="associatedconstant"><span id='FLAG_DECODE_NO_COLORSPACE_CONVERSION.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_DECODE_NO_COLORSPACE_CONVERSION' class="constant"><b>FLAG_DECODE_NO_COLORSPACE_CONVERSION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_DECODE_NO_COLORSPACE_CONVERSION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+</div><h4 id='associatedconstant.FLAG_CLAMP' class="associatedconstant"><span id='FLAG_CLAMP.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_CLAMP' class="constant"><b>FLAG_CLAMP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_CLAMP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+</div><h4 id='associatedconstant.FLAG_HIGH_QUALITY_SCALING' class="associatedconstant"><span id='FLAG_HIGH_QUALITY_SCALING.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_HIGH_QUALITY_SCALING' class="constant"><b>FLAG_HIGH_QUALITY_SCALING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_HIGH_QUALITY_SCALING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">64</span></pre>
+</div><h4 id='associatedconstant.FLAG_WANT_DATA_SURFACE' class="associatedconstant"><span id='FLAG_WANT_DATA_SURFACE.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_WANT_DATA_SURFACE' class="constant"><b>FLAG_WANT_DATA_SURFACE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_WANT_DATA_SURFACE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">128</span></pre>
+</div><h4 id='associatedconstant.FLAG_BYPASS_SURFACE_CACHE' class="associatedconstant"><span id='FLAG_BYPASS_SURFACE_CACHE.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_BYPASS_SURFACE_CACHE' class="constant"><b>FLAG_BYPASS_SURFACE_CACHE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_BYPASS_SURFACE_CACHE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">256</span></pre>
+</div><h4 id='associatedconstant.FLAG_FORCE_PRESERVEASPECTRATIO_NONE' class="associatedconstant"><span id='FLAG_FORCE_PRESERVEASPECTRATIO_NONE.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_FORCE_PRESERVEASPECTRATIO_NONE' class="constant"><b>FLAG_FORCE_PRESERVEASPECTRATIO_NONE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_FORCE_PRESERVEASPECTRATIO_NONE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">512</span></pre>
+</div><h4 id='associatedconstant.FLAG_FORCE_UNIFORM_SCALING' class="associatedconstant"><span id='FLAG_FORCE_UNIFORM_SCALING.v' class='invisible'><code>pub const <a href='#associatedconstant.FLAG_FORCE_UNIFORM_SCALING' class="constant"><b>FLAG_FORCE_UNIFORM_SCALING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FLAG_FORCE_UNIFORM_SCALING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1024</span></pre>
+</div><h4 id='associatedconstant.DECODE_FLAGS_DEFAULT' class="associatedconstant"><span id='DECODE_FLAGS_DEFAULT.v' class='invisible'><code>pub const <a href='#associatedconstant.DECODE_FLAGS_DEFAULT' class="constant"><b>DECODE_FLAGS_DEFAULT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DECODE_FLAGS_DEFAULT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * A constant specifying the default set of decode flags (i.e., the default
+   * values for FLAG_DECODE_*).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.FRAME_FIRST' class="associatedconstant"><span id='FRAME_FIRST.v' class='invisible'><code>pub const <a href='#associatedconstant.FRAME_FIRST' class="constant"><b>FRAME_FIRST</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FRAME_FIRST</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+    * Constants for specifying various &quot;special&quot; frames.
+    *
+    * FRAME_FIRST: The first frame
+    * FRAME_CURRENT: The current frame
+    *
+    * FRAME_MAX_VALUE should be set to the value of the maximum constant above,
+    * as it is used for ensuring that a valid value was passed in.
+    */
+</code></pre>
+</div><h4 id='associatedconstant.FRAME_CURRENT' class="associatedconstant"><span id='FRAME_CURRENT.v' class='invisible'><code>pub const <a href='#associatedconstant.FRAME_CURRENT' class="constant"><b>FRAME_CURRENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FRAME_CURRENT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.FRAME_MAX_VALUE' class="associatedconstant"><span id='FRAME_MAX_VALUE.v' class='invisible'><code>pub const <a href='#associatedconstant.FRAME_MAX_VALUE' class="constant"><b>FRAME_MAX_VALUE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FRAME_MAX_VALUE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.kNormalAnimMode' class="associatedconstant"><span id='kNormalAnimMode.v' class='invisible'><code>pub const <a href='#associatedconstant.kNormalAnimMode' class="constant"><b>kNormalAnimMode</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">kNormalAnimMode</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Animation mode Constants
+   *   0 = normal
+   *   1 = don&#39;t animate
+   *   2 = loop once
+   */
+</code></pre>
+</div><h4 id='associatedconstant.kDontAnimMode' class="associatedconstant"><span id='kDontAnimMode.v' class='invisible'><code>pub const <a href='#associatedconstant.kDontAnimMode' class="constant"><b>kDontAnimMode</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">kDontAnimMode</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.kLoopOnceAnimMode' class="associatedconstant"><span id='kLoopOnceAnimMode.v' class='invisible'><code>pub const <a href='#associatedconstant.kLoopOnceAnimMode' class="constant"><b>kLoopOnceAnimMode</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">kLoopOnceAnimMode</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.GetWidth' class="method"><span id='GetWidth.v' class='invisible'><code>pub unsafe fn <a href='#method.GetWidth' class='fnname'>GetWidth</a>(&amp;self, aWidth: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#408-410' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The width of the container rectangle.  In the case of any error,
+   * zero is returned, and an exception will be thrown.
+   */
+</code></pre>
+
+<p><code>readonly attribute int32_t width;</code></p>
+</div><h4 id='method.GetHeight' class="method"><span id='GetHeight.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHeight' class='fnname'>GetHeight</a>(&amp;self, aHeight: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#423-425' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The height of the container rectangle.  In the case of any error,
+   * zero is returned, and an exception will be thrown.
+   */
+</code></pre>
+
+<p><code>readonly attribute int32_t height;</code></p>
+</div><h4 id='method.GetType' class="method"><span id='GetType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetType' class='fnname'>GetType</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#483-488' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The type of this image (one of the TYPE_* values above).
+   */
+</code></pre>
+
+<p><code>[infallible] readonly attribute unsigned short type;</code></p>
+</div><h4 id='method.GetAnimated' class="method"><span id='GetAnimated.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAnimated' class='fnname'>GetAnimated</a>(&amp;self, aAnimated: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#503-505' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether this image is animated. You can only be guaranteed that querying
+   * this will not throw if STATUS_DECODE_COMPLETE is set on the imgIRequest.
+   *
+   * @throws NS_ERROR_NOT_AVAILABLE if the animated state cannot be determined.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean animated;</code></p>
+</div><h4 id='method.WillDrawOpaqueNow' class="method"><span id='WillDrawOpaqueNow.v' class='invisible'><code>pub unsafe fn <a href='#method.WillDrawOpaqueNow' class='fnname'>WillDrawOpaqueNow</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#553-555' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns true if this image will draw opaquely right now if asked to draw
+   * with FLAG_HIGH_QUALITY_SCALING and otherwise default flags. If this image
+   * (when decoded) is opaque but no decoded frames are available then
+   * willDrawOpaqueNow will return false.
+   */
+</code></pre>
+
+<p><code>[noscript,notxpcom] boolean willDrawOpaqueNow ();</code></p>
+</div><h4 id='method.StartDecoding' class="method"><span id='StartDecoding.v' class='invisible'><code>pub unsafe fn <a href='#method.StartDecoding' class='fnname'>StartDecoding</a>(&amp;self, aFlags: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#746-748' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript] void startDecoding (in uint32_t aFlags);</code></p>
+</div><h4 id='method.StartDecodingWithResult' class="method"><span id='StartDecodingWithResult.v' class='invisible'><code>pub unsafe fn <a href='#method.StartDecodingWithResult' class='fnname'>StartDecodingWithResult</a>(&amp;self, aFlags: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#754-756' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] boolean startDecodingWithResult (in uint32_t aFlags);</code></p>
+</div><h4 id='method.LockImage' class="method"><span id='LockImage.v' class='invisible'><code>pub unsafe fn <a href='#method.LockImage' class='fnname'>LockImage</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#777-779' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * Increments the lock count on the image. An image will not be discarded
+    * as long as the lock count is nonzero. Note that it is still possible for
+    * the image to be undecoded if decode-on-draw is enabled and the image
+    * was never drawn.
+    *
+    * Upon instantiation images have a lock count of zero.
+    */
+</code></pre>
+
+<p><code>void lockImage ();</code></p>
+</div><h4 id='method.UnlockImage' class="method"><span id='UnlockImage.v' class='invisible'><code>pub unsafe fn <a href='#method.UnlockImage' class='fnname'>UnlockImage</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#796-798' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * Decreases the lock count on the image. If the lock count drops to zero,
+    * the image is allowed to discard its frame data to save memory.
+    *
+    * Upon instantiation images have a lock count of zero. It is an error to
+    * call this method without first having made a matching lockImage() call.
+    * In other words, the lock count is not allowed to be negative.
+    */
+</code></pre>
+
+<p><code>void unlockImage ();</code></p>
+</div><h4 id='method.RequestDiscard' class="method"><span id='RequestDiscard.v' class='invisible'><code>pub unsafe fn <a href='#method.RequestDiscard' class='fnname'>RequestDiscard</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#811-813' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If this image is unlocked, discard its decoded data.  If the image is
+   * locked or has already been discarded, do nothing.
+   */
+</code></pre>
+
+<p><code>void requestDiscard ();</code></p>
+</div><h4 id='method.GetAnimationMode' class="method"><span id='GetAnimationMode.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAnimationMode' class='fnname'>GetAnimationMode</a>(&amp;self, aAnimationMode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#831-833' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned short animationMode;</code></p>
+</div><h4 id='method.SetAnimationMode' class="method"><span id='SetAnimationMode.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAnimationMode' class='fnname'>SetAnimationMode</a>(&amp;self, aAnimationMode: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#839-841' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned short animationMode;</code></p>
+</div><h4 id='method.ResetAnimation' class="method"><span id='ResetAnimation.v' class='invisible'><code>pub unsafe fn <a href='#method.ResetAnimation' class='fnname'>ResetAnimation</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#847-849' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void resetAnimation ();</code></p>
+</div><h4 id='method.GetFrameIndex' class="method"><span id='GetFrameIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFrameIndex' class='fnname'>GetFrameIndex</a>(&amp;self, aWhichFrame: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#855-857' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[notxpcom] float getFrameIndex (in uint32_t aWhichFrame);</code></p>
+</div><h4 id='method.GetFirstFrameDelay' class="method"><span id='GetFirstFrameDelay.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFirstFrameDelay' class='fnname'>GetFirstFrameDelay</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#867-869' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[notxpcom] int32_t getFirstFrameDelay ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.imgIContainer.html" title="struct xpcom::interfaces::imgIContainer">imgIContainer</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#39-42' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2832985636</span>, <span class="number">65414</span>, <span class="number">18261</span>, [<span class="number">180</span>, <span class="number">14</span>, <span class="number">81</span>, <span class="number">23</span>, <span class="number">92</span>, <span class="number">175</span>, <span class="number">49</span>, <span class="number">175</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.imgIContainer.html" title="struct xpcom::interfaces::imgIContainer">imgIContainer</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#46-55' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#48-50' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#52-54' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.imgIContainer.html" title="struct xpcom::interfaces::imgIContainer">imgIContainer</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#86-94' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/imgIContainer.rs.html#89-93' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

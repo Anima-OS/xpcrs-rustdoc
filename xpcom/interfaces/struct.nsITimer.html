@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsITimer` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsITimer">
+
+    <title>xpcom::interfaces::nsITimer - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsITimer</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.Init">Init</a><a href="#method.InitWithCallback">InitWithCallback</a><a href="#method.Cancel">Cancel</a><a href="#method.GetDelay">GetDelay</a><a href="#method.SetDelay">SetDelay</a><a href="#method.GetType">GetType</a><a href="#method.SetType">SetType</a><a href="#method.GetClosure">GetClosure</a><a href="#method.GetCallback">GetCallback</a><a href="#method.GetTarget">GetTarget</a><a href="#method.SetTarget">SetTarget</a><a href="#method.GetAllowedEarlyFiringMicroseconds">GetAllowedEarlyFiringMicroseconds</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsITimer', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsITimer</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#148-157' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsITimer { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsITimer : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * The callback interface for timers.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsITimer.html" title="struct xpcom::interfaces::nsITimer">nsITimer</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#197-203' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsITimerCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#200-202' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsITimer</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsITimer.html" title="struct xpcom::interfaces::nsITimer">nsITimer</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#292-634' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.TYPE_ONE_SHOT' class="associatedconstant"><span id='TYPE_ONE_SHOT.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_ONE_SHOT' class="constant"><b>TYPE_ONE_SHOT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_ONE_SHOT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+ * nsITimer instances must be initialized by calling one of the &quot;init&quot; methods
+ * documented below.  You may also re-initialize (using one of the init()
+ * methods) an existing instance to avoid the overhead of destroying and
+ * creating a timer.  It is not necessary to cancel the timer in that case.
+ *
+ * By default a timer will fire on the thread that created it.  Set the .target
+ * attribute to fire on a different thread.  Once you have set a timer&#39;s .target
+ * and called one of its init functions, any further interactions with the timer
+ * (calling cancel(), changing member fields, etc) should only be done by the
+ * target thread, or races may occur with bad results like timers firing after
+ * they&#39;ve been canceled, and/or not firing after re-initiatization.
+ */
+/**
+   * Type of a timer that fires once only.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_REPEATING_SLACK' class="associatedconstant"><span id='TYPE_REPEATING_SLACK.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_REPEATING_SLACK' class="constant"><b>TYPE_REPEATING_SLACK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_REPEATING_SLACK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * After firing, a TYPE_REPEATING_SLACK timer is stopped and not restarted
+   * until its callback completes.  Specified timer period will be at least
+   * the time between when processing for last firing the callback completes
+   * and when the next firing occurs.
+   *
+   * This is the preferable repeating type for most situations.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_REPEATING_PRECISE' class="associatedconstant"><span id='TYPE_REPEATING_PRECISE.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_REPEATING_PRECISE' class="constant"><b>TYPE_REPEATING_PRECISE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_REPEATING_PRECISE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/**
+   * TYPE_REPEATING_PRECISE is just a synonym for
+   * TYPE_REPEATING_PRECISE_CAN_SKIP. They used to be distinct, but the old
+   * TYPE_REPEATING_PRECISE kind was similar to TYPE_REPEATING_PRECISE_CAN_SKIP
+   * while also being less useful. So the distinction was removed.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_REPEATING_PRECISE_CAN_SKIP' class="associatedconstant"><span id='TYPE_REPEATING_PRECISE_CAN_SKIP.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_REPEATING_PRECISE_CAN_SKIP' class="constant"><b>TYPE_REPEATING_PRECISE_CAN_SKIP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_REPEATING_PRECISE_CAN_SKIP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+<pre><code class="language-text">/**
+   * A TYPE_REPEATING_PRECISE_CAN_SKIP repeating timer aims to have constant
+   * period between firings.  The processing time for each timer callback
+   * should not influence the timer period.  However this timer type
+   * guarantees that it will not queue up new events to fire the callback
+   * until the previous callback event finishes firing.  If the callback
+   * takes a long time, then the next callback will be scheduled immediately
+   * afterward, but only once.  This is the only non-slack timer available.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_REPEATING_SLACK_LOW_PRIORITY' class="associatedconstant"><span id='TYPE_REPEATING_SLACK_LOW_PRIORITY.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_REPEATING_SLACK_LOW_PRIORITY' class="constant"><b>TYPE_REPEATING_SLACK_LOW_PRIORITY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_REPEATING_SLACK_LOW_PRIORITY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * Same as TYPE_REPEATING_SLACK with the exception that idle events
+   * won&#39;t yield to timers with this type.  Use this when you want an
+   * idle callback to be scheduled to run even though this timer is
+   * about to fire.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TYPE_ONE_SHOT_LOW_PRIORITY' class="associatedconstant"><span id='TYPE_ONE_SHOT_LOW_PRIORITY.v' class='invisible'><code>pub const <a href='#associatedconstant.TYPE_ONE_SHOT_LOW_PRIORITY' class="constant"><b>TYPE_ONE_SHOT_LOW_PRIORITY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TYPE_ONE_SHOT_LOW_PRIORITY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+<pre><code class="language-text">/**
+   * Same as TYPE_ONE_SHOT with the exception that idle events won&#39;t
+   * yield to timers with this type.  Use this when you want an idle
+   * callback to be scheduled to run even though this timer is about
+   * to fire.
+   */
+</code></pre>
+</div><h4 id='method.Init' class="method"><span id='Init.v' class='invisible'><code>pub unsafe fn <a href='#method.Init' class='fnname'>Init</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObserver: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIObserver.html" title="struct xpcom::interfaces::nsIObserver">nsIObserver</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDelay: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#402-404' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Initialize a timer that will fire after the said delay.
+   * A user must keep a reference to this timer till it is
+   * is no longer needed or has been cancelled.
+   *
+   * @param aObserver   the callback object that observes the
+   *                    ``timer-callback&#39;&#39; topic with the subject being
+   *                    the timer itself when the timer fires:
+   *
+   *                    observe(nsISupports aSubject, =&gt; nsITimer
+   *                            string aTopic,        =&gt; ``timer-callback&#39;&#39;
+   *                            wstring data          =&gt;  null
+   *
+   * @param aDelay      delay in milliseconds for timer to fire
+   * @param aType       timer type per TYPE* consts defined above
+   */
+</code></pre>
+
+<p><code>void init (in nsIObserver aObserver, in unsigned long aDelay, in unsigned long aType);</code></p>
+</div><h4 id='method.InitWithCallback' class="method"><span id='InitWithCallback.v' class='invisible'><code>pub unsafe fn <a href='#method.InitWithCallback' class='fnname'>InitWithCallback</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITimerCallback.html" title="struct xpcom::interfaces::nsITimerCallback">nsITimerCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDelay: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#421-423' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Initialize a timer to fire after the given millisecond interval.
+   * This version takes a callback object.
+   *
+   * @param aFunc      nsITimerCallback interface to call when timer expires
+   * @param aDelay     The millisecond interval
+   * @param aType      Timer type per TYPE* consts defined above
+   */
+</code></pre>
+
+<p><code>void initWithCallback (in nsITimerCallback aCallback, in unsigned long aDelay, in unsigned long aType);</code></p>
+</div><h4 id='method.Cancel' class="method"><span id='Cancel.v' class='invisible'><code>pub unsafe fn <a href='#method.Cancel' class='fnname'>Cancel</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#453-455' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Cancel the timer.  This method works on all types, not just on repeating
+   * timers -- you might want to cancel a TYPE_ONE_SHOT timer, and even reuse
+   * it by re-initializing it (to avoid object destruction and creation costs
+   * by conserving one timer instance).
+   */
+</code></pre>
+
+<p><code>void cancel ();</code></p>
+</div><h4 id='method.GetDelay' class="method"><span id='GetDelay.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDelay' class='fnname'>GetDelay</a>(&amp;self, aDelay: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#506-508' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The millisecond delay of the timeout.
+   *
+   * NOTE: Re-setting the delay on a one-shot timer that has already fired
+   * doesn&#39;t restart the timer. Call one of the init() methods to restart
+   * a one-shot timer.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long delay;</code></p>
+</div><h4 id='method.SetDelay' class="method"><span id='SetDelay.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDelay' class='fnname'>SetDelay</a>(&amp;self, aDelay: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#524-526' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The millisecond delay of the timeout.
+   *
+   * NOTE: Re-setting the delay on a one-shot timer that has already fired
+   * doesn&#39;t restart the timer. Call one of the init() methods to restart
+   * a one-shot timer.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long delay;</code></p>
+</div><h4 id='method.GetType' class="method"><span id='GetType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetType' class='fnname'>GetType</a>(&amp;self, aType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#538-540' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The timer type - one of the above TYPE_* constants.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long type;</code></p>
+</div><h4 id='method.SetType' class="method"><span id='SetType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetType' class='fnname'>SetType</a>(&amp;self, aType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#552-554' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The timer type - one of the above TYPE_* constants.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long type;</code></p>
+</div><h4 id='method.GetClosure' class="method"><span id='GetClosure.v' class='invisible'><code>pub unsafe fn <a href='#method.GetClosure' class='fnname'>GetClosure</a>(&amp;self, aClosure: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#566-568' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The opaque pointer pass to initWithFuncCallback.
+   */
+</code></pre>
+
+<p><code>[noscript] readonly attribute voidPtr closure;</code></p>
+</div><h4 id='method.GetCallback' class="method"><span id='GetCallback.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCallback' class='fnname'>GetCallback</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITimerCallback.html" title="struct xpcom::interfaces::nsITimerCallback">nsITimerCallback</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#580-582' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The nsITimerCallback object passed to initWithCallback.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsITimerCallback callback;</code></p>
+</div><h4 id='method.GetTarget' class="method"><span id='GetTarget.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTarget' class='fnname'>GetTarget</a>(&amp;self, aTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#597-599' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The nsIEventTarget where the callback will be dispatched. Note that this
+   * target may only be set before the call to one of the init methods above.
+   *
+   * By default the target is the thread that created the timer.
+   */
+</code></pre>
+
+<p><code>attribute nsIEventTarget target;</code></p>
+</div><h4 id='method.SetTarget' class="method"><span id='SetTarget.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTarget' class='fnname'>SetTarget</a>(&amp;self, aTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#614-616' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The nsIEventTarget where the callback will be dispatched. Note that this
+   * target may only be set before the call to one of the init methods above.
+   *
+   * By default the target is the thread that created the timer.
+   */
+</code></pre>
+
+<p><code>attribute nsIEventTarget target;</code></p>
+</div><h4 id='method.GetAllowedEarlyFiringMicroseconds' class="method"><span id='GetAllowedEarlyFiringMicroseconds.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAllowedEarlyFiringMicroseconds' class='fnname'>GetAllowedEarlyFiringMicroseconds</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAllowedEarlyFiringMicroseconds: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#629-631' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The number of microseconds this nsITimer implementation can possibly
+   * fire early.
+   */
+</code></pre>
+
+<p><code>[noscript] readonly attribute unsigned long allowedEarlyFiringMicroseconds;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITimer.html" title="struct xpcom::interfaces::nsITimer">nsITimer</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#162-165' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1038397701</span>, <span class="number">13884</span>, <span class="number">18476</span>, [<span class="number">164</span>, <span class="number">9</span>, <span class="number">186</span>, <span class="number">172</span>, <span class="number">131</span>, <span class="number">160</span>, <span class="number">27</span>, <span class="number">252</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITimer.html" title="struct xpcom::interfaces::nsITimer">nsITimer</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#169-178' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#171-173' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#175-177' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsITimer.html" title="struct xpcom::interfaces::nsITimer">nsITimer</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#209-217' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITimer.rs.html#212-216' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

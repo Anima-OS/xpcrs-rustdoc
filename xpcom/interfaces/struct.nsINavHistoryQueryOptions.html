@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsINavHistoryQueryOptions` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsINavHistoryQueryOptions">
+
+    <title>xpcom::interfaces::nsINavHistoryQueryOptions - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsINavHistoryQueryOptions</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetSortingMode">GetSortingMode</a><a href="#method.SetSortingMode">SetSortingMode</a><a href="#method.GetSortingAnnotation">GetSortingAnnotation</a><a href="#method.SetSortingAnnotation">SetSortingAnnotation</a><a href="#method.GetResultType">GetResultType</a><a href="#method.SetResultType">SetResultType</a><a href="#method.GetExcludeItems">GetExcludeItems</a><a href="#method.SetExcludeItems">SetExcludeItems</a><a href="#method.GetExcludeQueries">GetExcludeQueries</a><a href="#method.SetExcludeQueries">SetExcludeQueries</a><a href="#method.GetExcludeReadOnlyFolders">GetExcludeReadOnlyFolders</a><a href="#method.SetExcludeReadOnlyFolders">SetExcludeReadOnlyFolders</a><a href="#method.GetExpandQueries">GetExpandQueries</a><a href="#method.SetExpandQueries">SetExpandQueries</a><a href="#method.GetIncludeHidden">GetIncludeHidden</a><a href="#method.SetIncludeHidden">SetIncludeHidden</a><a href="#method.GetMaxResults">GetMaxResults</a><a href="#method.SetMaxResults">SetMaxResults</a><a href="#method.GetQueryType">GetQueryType</a><a href="#method.SetQueryType">SetQueryType</a><a href="#method.GetAsyncEnabled">GetAsyncEnabled</a><a href="#method.SetAsyncEnabled">SetAsyncEnabled</a><a href="#method.Clone">Clone</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsINavHistoryQueryOptions', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsINavHistoryQueryOptions</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3248-3257' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsINavHistoryQueryOptions { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsINavHistoryQueryOptions : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQueryOptions.html" title="struct xpcom::interfaces::nsINavHistoryQueryOptions">nsINavHistoryQueryOptions</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3297-3303' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsINavHistoryQueryOptionsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3300-3302' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsINavHistoryQueryOptions</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQueryOptions.html" title="struct xpcom::interfaces::nsINavHistoryQueryOptions">nsINavHistoryQueryOptions</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3413-3980' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.SORT_BY_NONE' class="associatedconstant"><span id='SORT_BY_NONE.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_NONE' class="constant"><b>SORT_BY_NONE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_NONE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+ * This object represents the global options for executing a query.
+ */
+/**
+   * You can ask for the results to be pre-sorted. Since the DB has indices
+   * of many items, it can produce sorted results almost for free. These should
+   * be self-explanatory.
+   *
+   * Note: re-sorting is slower, as is sorting by title or when you have a
+   * host name.
+   *
+   * For bookmark items, SORT_BY_NONE means sort by the natural bookmark order.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.SORT_BY_TITLE_ASCENDING' class="associatedconstant"><span id='SORT_BY_TITLE_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_TITLE_ASCENDING' class="constant"><b>SORT_BY_TITLE_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_TITLE_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_TITLE_DESCENDING' class="associatedconstant"><span id='SORT_BY_TITLE_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_TITLE_DESCENDING' class="constant"><b>SORT_BY_TITLE_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_TITLE_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_DATE_ASCENDING' class="associatedconstant"><span id='SORT_BY_DATE_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_DATE_ASCENDING' class="constant"><b>SORT_BY_DATE_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_DATE_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_DATE_DESCENDING' class="associatedconstant"><span id='SORT_BY_DATE_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_DATE_DESCENDING' class="constant"><b>SORT_BY_DATE_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_DATE_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_URI_ASCENDING' class="associatedconstant"><span id='SORT_BY_URI_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_URI_ASCENDING' class="constant"><b>SORT_BY_URI_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_URI_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_URI_DESCENDING' class="associatedconstant"><span id='SORT_BY_URI_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_URI_DESCENDING' class="constant"><b>SORT_BY_URI_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_URI_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_VISITCOUNT_ASCENDING' class="associatedconstant"><span id='SORT_BY_VISITCOUNT_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_VISITCOUNT_ASCENDING' class="constant"><b>SORT_BY_VISITCOUNT_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_VISITCOUNT_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_VISITCOUNT_DESCENDING' class="associatedconstant"><span id='SORT_BY_VISITCOUNT_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_VISITCOUNT_DESCENDING' class="constant"><b>SORT_BY_VISITCOUNT_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_VISITCOUNT_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_KEYWORD_ASCENDING' class="associatedconstant"><span id='SORT_BY_KEYWORD_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_KEYWORD_ASCENDING' class="constant"><b>SORT_BY_KEYWORD_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_KEYWORD_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_KEYWORD_DESCENDING' class="associatedconstant"><span id='SORT_BY_KEYWORD_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_KEYWORD_DESCENDING' class="constant"><b>SORT_BY_KEYWORD_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_KEYWORD_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">10</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_DATEADDED_ASCENDING' class="associatedconstant"><span id='SORT_BY_DATEADDED_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_DATEADDED_ASCENDING' class="constant"><b>SORT_BY_DATEADDED_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_DATEADDED_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">11</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_DATEADDED_DESCENDING' class="associatedconstant"><span id='SORT_BY_DATEADDED_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_DATEADDED_DESCENDING' class="constant"><b>SORT_BY_DATEADDED_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_DATEADDED_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">12</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_LASTMODIFIED_ASCENDING' class="associatedconstant"><span id='SORT_BY_LASTMODIFIED_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_LASTMODIFIED_ASCENDING' class="constant"><b>SORT_BY_LASTMODIFIED_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_LASTMODIFIED_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">13</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_LASTMODIFIED_DESCENDING' class="associatedconstant"><span id='SORT_BY_LASTMODIFIED_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_LASTMODIFIED_DESCENDING' class="constant"><b>SORT_BY_LASTMODIFIED_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_LASTMODIFIED_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">14</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_TAGS_ASCENDING' class="associatedconstant"><span id='SORT_BY_TAGS_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_TAGS_ASCENDING' class="constant"><b>SORT_BY_TAGS_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_TAGS_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">17</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_TAGS_DESCENDING' class="associatedconstant"><span id='SORT_BY_TAGS_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_TAGS_DESCENDING' class="constant"><b>SORT_BY_TAGS_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_TAGS_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">18</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_ANNOTATION_ASCENDING' class="associatedconstant"><span id='SORT_BY_ANNOTATION_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_ANNOTATION_ASCENDING' class="constant"><b>SORT_BY_ANNOTATION_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_ANNOTATION_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">19</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_ANNOTATION_DESCENDING' class="associatedconstant"><span id='SORT_BY_ANNOTATION_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_ANNOTATION_DESCENDING' class="constant"><b>SORT_BY_ANNOTATION_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_ANNOTATION_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">20</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_FRECENCY_ASCENDING' class="associatedconstant"><span id='SORT_BY_FRECENCY_ASCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_FRECENCY_ASCENDING' class="constant"><b>SORT_BY_FRECENCY_ASCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_FRECENCY_ASCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">21</span></pre>
+</div><h4 id='associatedconstant.SORT_BY_FRECENCY_DESCENDING' class="associatedconstant"><span id='SORT_BY_FRECENCY_DESCENDING.v' class='invisible'><code>pub const <a href='#associatedconstant.SORT_BY_FRECENCY_DESCENDING' class="constant"><b>SORT_BY_FRECENCY_DESCENDING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SORT_BY_FRECENCY_DESCENDING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">22</span></pre>
+</div><h4 id='associatedconstant.RESULTS_AS_URI' class="associatedconstant"><span id='RESULTS_AS_URI.v' class='invisible'><code>pub const <a href='#associatedconstant.RESULTS_AS_URI' class="constant"><b>RESULTS_AS_URI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RESULTS_AS_URI</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * &quot;URI&quot; results, one for each URI visited in the range. Individual result
+   * nodes will be of type &quot;URI&quot;.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RESULTS_AS_VISIT' class="associatedconstant"><span id='RESULTS_AS_VISIT.v' class='invisible'><code>pub const <a href='#associatedconstant.RESULTS_AS_VISIT' class="constant"><b>RESULTS_AS_VISIT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RESULTS_AS_VISIT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * &quot;Visit&quot; results, with one for each time a page was visited (this will
+   * often give you multiple results for one URI). Individual result nodes will
+   * have type &quot;Visit&quot;
+   *
+   * @note This result type is only supported by QUERY_TYPE_HISTORY.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RESULTS_AS_DATE_QUERY' class="associatedconstant"><span id='RESULTS_AS_DATE_QUERY.v' class='invisible'><code>pub const <a href='#associatedconstant.RESULTS_AS_DATE_QUERY' class="constant"><b>RESULTS_AS_DATE_QUERY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RESULTS_AS_DATE_QUERY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+<pre><code class="language-text">/**
+   * This returns query nodes for each predefined date range where we
+   * had visits. The node contains information how to load its content:
+   * - visits for the given date range will be loaded.
+   *
+   * @note This result type is only supported by QUERY_TYPE_HISTORY.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RESULTS_AS_SITE_QUERY' class="associatedconstant"><span id='RESULTS_AS_SITE_QUERY.v' class='invisible'><code>pub const <a href='#associatedconstant.RESULTS_AS_SITE_QUERY' class="constant"><b>RESULTS_AS_SITE_QUERY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RESULTS_AS_SITE_QUERY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * This returns nsINavHistoryQueryResultNode nodes for each site where we
+   * have visits. The node contains information how to load its content:
+   * - last visit for each url in the given host will be loaded.
+   *
+   * @note This result type is only supported by QUERY_TYPE_HISTORY.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RESULTS_AS_DATE_SITE_QUERY' class="associatedconstant"><span id='RESULTS_AS_DATE_SITE_QUERY.v' class='invisible'><code>pub const <a href='#associatedconstant.RESULTS_AS_DATE_SITE_QUERY' class="constant"><b>RESULTS_AS_DATE_SITE_QUERY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RESULTS_AS_DATE_SITE_QUERY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+<pre><code class="language-text">/**
+   * This returns nsINavHistoryQueryResultNode nodes for each day where we
+   * have visits. The node contains information how to load its content:
+   * - list of hosts visited in the given period will be loaded.
+   *
+   * @note This result type is only supported by QUERY_TYPE_HISTORY.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RESULTS_AS_TAG_QUERY' class="associatedconstant"><span id='RESULTS_AS_TAG_QUERY.v' class='invisible'><code>pub const <a href='#associatedconstant.RESULTS_AS_TAG_QUERY' class="constant"><b>RESULTS_AS_TAG_QUERY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RESULTS_AS_TAG_QUERY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+<pre><code class="language-text">/**
+   * This returns nsINavHistoryQueryResultNode nodes for each tag.
+   * The node contains information how to load its content:
+   * - list of bookmarks with the given tag will be loaded.
+   *
+   * @note Setting this resultType will force queryType to QUERY_TYPE_BOOKMARKS.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.RESULTS_AS_TAG_CONTENTS' class="associatedconstant"><span id='RESULTS_AS_TAG_CONTENTS.v' class='invisible'><code>pub const <a href='#associatedconstant.RESULTS_AS_TAG_CONTENTS' class="constant"><b>RESULTS_AS_TAG_CONTENTS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">RESULTS_AS_TAG_CONTENTS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+<pre><code class="language-text">/**
+   * This is a container with an URI result type that contains the last
+   * modified bookmarks for the given tag.
+   * Tag folder id must be defined in the query.
+   *
+   * @note Setting this resultType will force queryType to QUERY_TYPE_BOOKMARKS.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.QUERY_TYPE_HISTORY' class="associatedconstant"><span id='QUERY_TYPE_HISTORY.v' class='invisible'><code>pub const <a href='#associatedconstant.QUERY_TYPE_HISTORY' class="constant"><b>QUERY_TYPE_HISTORY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">QUERY_TYPE_HISTORY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.QUERY_TYPE_BOOKMARKS' class="associatedconstant"><span id='QUERY_TYPE_BOOKMARKS.v' class='invisible'><code>pub const <a href='#associatedconstant.QUERY_TYPE_BOOKMARKS' class="constant"><b>QUERY_TYPE_BOOKMARKS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">QUERY_TYPE_BOOKMARKS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.QUERY_TYPE_UNIFIED' class="associatedconstant"><span id='QUERY_TYPE_UNIFIED.v' class='invisible'><code>pub const <a href='#associatedconstant.QUERY_TYPE_UNIFIED' class="constant"><b>QUERY_TYPE_UNIFIED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">QUERY_TYPE_UNIFIED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.GetSortingMode' class="method"><span id='GetSortingMode.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSortingMode' class='fnname'>GetSortingMode</a>(&amp;self, aSortingMode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3600-3602' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The sorting mode to be used for this query.
+   * mode is one of SORT_BY_*
+   */
+</code></pre>
+
+<p><code>attribute unsigned short sortingMode;</code></p>
+</div><h4 id='method.SetSortingMode' class="method"><span id='SetSortingMode.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSortingMode' class='fnname'>SetSortingMode</a>(&amp;self, aSortingMode: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3615-3617' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The sorting mode to be used for this query.
+   * mode is one of SORT_BY_*
+   */
+</code></pre>
+
+<p><code>attribute unsigned short sortingMode;</code></p>
+</div><h4 id='method.GetSortingAnnotation' class="method"><span id='GetSortingAnnotation.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSortingAnnotation' class='fnname'>GetSortingAnnotation</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSortingAnnotation: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3629-3631' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The annotation to use in SORT_BY_ANNOTATION_* sorting modes.
+   */
+</code></pre>
+
+<p><code>attribute AUTF8String sortingAnnotation;</code></p>
+</div><h4 id='method.SetSortingAnnotation' class="method"><span id='SetSortingAnnotation.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSortingAnnotation' class='fnname'>SetSortingAnnotation</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSortingAnnotation: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3643-3645' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The annotation to use in SORT_BY_ANNOTATION_* sorting modes.
+   */
+</code></pre>
+
+<p><code>attribute AUTF8String sortingAnnotation;</code></p>
+</div><h4 id='method.GetResultType' class="method"><span id='GetResultType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetResultType' class='fnname'>GetResultType</a>(&amp;self, aResultType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3658-3660' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sets the result type. One of RESULT_TYPE_* which includes how URIs are
+   * represented.
+   */
+</code></pre>
+
+<p><code>attribute unsigned short resultType;</code></p>
+</div><h4 id='method.SetResultType' class="method"><span id='SetResultType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetResultType' class='fnname'>SetResultType</a>(&amp;self, aResultType: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3673-3675' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sets the result type. One of RESULT_TYPE_* which includes how URIs are
+   * represented.
+   */
+</code></pre>
+
+<p><code>attribute unsigned short resultType;</code></p>
+</div><h4 id='method.GetExcludeItems' class="method"><span id='GetExcludeItems.v' class='invisible'><code>pub unsafe fn <a href='#method.GetExcludeItems' class='fnname'>GetExcludeItems</a>(&amp;self, aExcludeItems: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3690-3692' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This option excludes all URIs and separators from a bookmarks query.
+   * This would be used if you just wanted a list of bookmark folders and
+   * queries (such as the left pane of the places page).
+   * Defaults to false.
+   */
+</code></pre>
+
+<p><code>attribute boolean excludeItems;</code></p>
+</div><h4 id='method.SetExcludeItems' class="method"><span id='SetExcludeItems.v' class='invisible'><code>pub unsafe fn <a href='#method.SetExcludeItems' class='fnname'>SetExcludeItems</a>(&amp;self, aExcludeItems: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3707-3709' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This option excludes all URIs and separators from a bookmarks query.
+   * This would be used if you just wanted a list of bookmark folders and
+   * queries (such as the left pane of the places page).
+   * Defaults to false.
+   */
+</code></pre>
+
+<p><code>attribute boolean excludeItems;</code></p>
+</div><h4 id='method.GetExcludeQueries' class="method"><span id='GetExcludeQueries.v' class='invisible'><code>pub unsafe fn <a href='#method.GetExcludeQueries' class='fnname'>GetExcludeQueries</a>(&amp;self, aExcludeQueries: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3723-3725' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set to true to exclude queries (&quot;place:&quot; URIs) from the query results.
+   * Simple folder queries (bookmark folder symlinks) will still be included.
+   * Defaults to false.
+   */
+</code></pre>
+
+<p><code>attribute boolean excludeQueries;</code></p>
+</div><h4 id='method.SetExcludeQueries' class="method"><span id='SetExcludeQueries.v' class='invisible'><code>pub unsafe fn <a href='#method.SetExcludeQueries' class='fnname'>SetExcludeQueries</a>(&amp;self, aExcludeQueries: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3739-3741' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set to true to exclude queries (&quot;place:&quot; URIs) from the query results.
+   * Simple folder queries (bookmark folder symlinks) will still be included.
+   * Defaults to false.
+   */
+</code></pre>
+
+<p><code>attribute boolean excludeQueries;</code></p>
+</div><h4 id='method.GetExcludeReadOnlyFolders' class="method"><span id='GetExcludeReadOnlyFolders.v' class='invisible'><code>pub unsafe fn <a href='#method.GetExcludeReadOnlyFolders' class='fnname'>GetExcludeReadOnlyFolders</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExcludeReadOnlyFolders: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3755-3757' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * DO NOT USE THIS API. IT&#39;LL BE REMOVED IN BUG 1072833.
+   *
+   * Set to true to exclude live bookmarks from the query results.
+   */
+</code></pre>
+
+<p><code>attribute boolean excludeReadOnlyFolders;</code></p>
+</div><h4 id='method.SetExcludeReadOnlyFolders' class="method"><span id='SetExcludeReadOnlyFolders.v' class='invisible'><code>pub unsafe fn <a href='#method.SetExcludeReadOnlyFolders' class='fnname'>SetExcludeReadOnlyFolders</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExcludeReadOnlyFolders: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3771-3773' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * DO NOT USE THIS API. IT&#39;LL BE REMOVED IN BUG 1072833.
+   *
+   * Set to true to exclude live bookmarks from the query results.
+   */
+</code></pre>
+
+<p><code>attribute boolean excludeReadOnlyFolders;</code></p>
+</div><h4 id='method.GetExpandQueries' class="method"><span id='GetExpandQueries.v' class='invisible'><code>pub unsafe fn <a href='#method.GetExpandQueries' class='fnname'>GetExpandQueries</a>(&amp;self, aExpandQueries: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3792-3794' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When set, allows items with &quot;place:&quot; URIs to appear as containers,
+   * with the container&#39;s contents filled in from the stored query.
+   * If not set, these will appear as normal items. Doesn&#39;t do anything if
+   * excludeQueries is set. Defaults to false.
+   *
+   * Note that this has no effect on folder links, which are place: URIs
+   * returned by nsINavBookmarkService.GetFolderURI. These are always expanded
+   * and will appear as bookmark folders.
+   */
+</code></pre>
+
+<p><code>attribute boolean expandQueries;</code></p>
+</div><h4 id='method.SetExpandQueries' class="method"><span id='SetExpandQueries.v' class='invisible'><code>pub unsafe fn <a href='#method.SetExpandQueries' class='fnname'>SetExpandQueries</a>(&amp;self, aExpandQueries: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3813-3815' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When set, allows items with &quot;place:&quot; URIs to appear as containers,
+   * with the container&#39;s contents filled in from the stored query.
+   * If not set, these will appear as normal items. Doesn&#39;t do anything if
+   * excludeQueries is set. Defaults to false.
+   *
+   * Note that this has no effect on folder links, which are place: URIs
+   * returned by nsINavBookmarkService.GetFolderURI. These are always expanded
+   * and will appear as bookmark folders.
+   */
+</code></pre>
+
+<p><code>attribute boolean expandQueries;</code></p>
+</div><h4 id='method.GetIncludeHidden' class="method"><span id='GetIncludeHidden.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIncludeHidden' class='fnname'>GetIncludeHidden</a>(&amp;self, aIncludeHidden: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3830-3832' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Some pages in history are marked &quot;hidden&quot; and thus don&#39;t appear by default
+   * in queries.  These include automatic framed visits and redirects.  Setting
+   * this attribute will return all pages, even hidden ones.  Does nothing for
+   * bookmark queries. Defaults to false.
+   */
+</code></pre>
+
+<p><code>attribute boolean includeHidden;</code></p>
+</div><h4 id='method.SetIncludeHidden' class="method"><span id='SetIncludeHidden.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIncludeHidden' class='fnname'>SetIncludeHidden</a>(&amp;self, aIncludeHidden: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3847-3849' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Some pages in history are marked &quot;hidden&quot; and thus don&#39;t appear by default
+   * in queries.  These include automatic framed visits and redirects.  Setting
+   * this attribute will return all pages, even hidden ones.  Does nothing for
+   * bookmark queries. Defaults to false.
+   */
+</code></pre>
+
+<p><code>attribute boolean includeHidden;</code></p>
+</div><h4 id='method.GetMaxResults' class="method"><span id='GetMaxResults.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMaxResults' class='fnname'>GetMaxResults</a>(&amp;self, aMaxResults: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3870-3872' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is the maximum number of results that you want. The query is exeucted,
+   * the results are sorted, and then the top &#39;maxResults&#39; results are taken
+   * and returned. Set to 0 (the default) to get all results.
+   *
+   * THIS DOES NOT WORK IN CONJUNCTION WITH SORTING BY TITLE. This is because
+   * sorting by title requires us to sort after using locale-sensetive sorting
+   * (as opposed to letting the database do it for us).
+   *
+   * Instead, we get the result ordered by date, pick the maxResult most recent
+   * ones, and THEN sort by title.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long maxResults;</code></p>
+</div><h4 id='method.SetMaxResults' class="method"><span id='SetMaxResults.v' class='invisible'><code>pub unsafe fn <a href='#method.SetMaxResults' class='fnname'>SetMaxResults</a>(&amp;self, aMaxResults: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3893-3895' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is the maximum number of results that you want. The query is exeucted,
+   * the results are sorted, and then the top &#39;maxResults&#39; results are taken
+   * and returned. Set to 0 (the default) to get all results.
+   *
+   * THIS DOES NOT WORK IN CONJUNCTION WITH SORTING BY TITLE. This is because
+   * sorting by title requires us to sort after using locale-sensetive sorting
+   * (as opposed to letting the database do it for us).
+   *
+   * Instead, we get the result ordered by date, pick the maxResult most recent
+   * ones, and THEN sort by title.
+   */
+</code></pre>
+
+<p><code>attribute unsigned long maxResults;</code></p>
+</div><h4 id='method.GetQueryType' class="method"><span id='GetQueryType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetQueryType' class='fnname'>GetQueryType</a>(&amp;self, aQueryType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3908-3910' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The type of search to use when querying the DB; This attribute is only
+   * honored by query nodes. It is silently ignored for simple folder queries.
+   */
+</code></pre>
+
+<p><code>attribute unsigned short queryType;</code></p>
+</div><h4 id='method.SetQueryType' class="method"><span id='SetQueryType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetQueryType' class='fnname'>SetQueryType</a>(&amp;self, aQueryType: <a class="type" href="../../libc/type.uint16_t.html" title="type libc::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3923-3925' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The type of search to use when querying the DB; This attribute is only
+   * honored by query nodes. It is silently ignored for simple folder queries.
+   */
+</code></pre>
+
+<p><code>attribute unsigned short queryType;</code></p>
+</div><h4 id='method.GetAsyncEnabled' class="method"><span id='GetAsyncEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAsyncEnabled' class='fnname'>GetAsyncEnabled</a>(&amp;self, aAsyncEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3942-3944' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When this is true, the root container node generated by these options and
+   * its descendant containers will be opened asynchronously if they support it.
+   * This is false by default.
+   *
+   * @note Currently only bookmark folder containers support being opened
+   *       asynchronously.
+   */
+</code></pre>
+
+<p><code>attribute boolean asyncEnabled;</code></p>
+</div><h4 id='method.SetAsyncEnabled' class="method"><span id='SetAsyncEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAsyncEnabled' class='fnname'>SetAsyncEnabled</a>(&amp;self, aAsyncEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3961-3963' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When this is true, the root container node generated by these options and
+   * its descendant containers will be opened asynchronously if they support it.
+   * This is false by default.
+   *
+   * @note Currently only bookmark folder containers support being opened
+   *       asynchronously.
+   */
+</code></pre>
+
+<p><code>attribute boolean asyncEnabled;</code></p>
+</div><h4 id='method.Clone' class="method"><span id='Clone.v' class='invisible'><code>pub unsafe fn <a href='#method.Clone' class='fnname'>Clone</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQueryOptions.html" title="struct xpcom::interfaces::nsINavHistoryQueryOptions">nsINavHistoryQueryOptions</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3975-3977' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Creates a new options item with the same parameters of this one.
+   */
+</code></pre>
+
+<p><code>nsINavHistoryQueryOptions clone ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQueryOptions.html" title="struct xpcom::interfaces::nsINavHistoryQueryOptions">nsINavHistoryQueryOptions</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3262-3265' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2174279591</span>, <span class="number">32865</span>, <span class="number">18278</span>, [<span class="number">149</span>, <span class="number">203</span>, <span class="number">250</span>, <span class="number">134</span>, <span class="number">179</span>, <span class="number">192</span>, <span class="number">10</span>, <span class="number">71</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQueryOptions.html" title="struct xpcom::interfaces::nsINavHistoryQueryOptions">nsINavHistoryQueryOptions</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3269-3278' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3271-3273' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3275-3277' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQueryOptions.html" title="struct xpcom::interfaces::nsINavHistoryQueryOptions">nsINavHistoryQueryOptions</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3309-3317' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3312-3316' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

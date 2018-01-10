@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIXULWindow` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIXULWindow">
+
+    <title>xpcom::interfaces::nsIXULWindow - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIXULWindow</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetDocShell">GetDocShell</a><a href="#method.GetIntrinsicallySized">GetIntrinsicallySized</a><a href="#method.SetIntrinsicallySized">SetIntrinsicallySized</a><a href="#method.GetPrimaryContentShell">GetPrimaryContentShell</a><a href="#method.GetPrimaryTabParent">GetPrimaryTabParent</a><a href="#method.TabParentAdded">TabParentAdded</a><a href="#method.TabParentRemoved">TabParentRemoved</a><a href="#method.AddChildWindow">AddChildWindow</a><a href="#method.RemoveChildWindow">RemoveChildWindow</a><a href="#method.Center">Center</a><a href="#method.ShowModal">ShowModal</a><a href="#method.GetZLevel">GetZLevel</a><a href="#method.SetZLevel">SetZLevel</a><a href="#method.GetChromeFlags">GetChromeFlags</a><a href="#method.SetChromeFlags">SetChromeFlags</a><a href="#method.AssumeChromeFlagsAreFrozen">AssumeChromeFlagsAreFrozen</a><a href="#method.CreateNewWindow">CreateNewWindow</a><a href="#method.GetXULBrowserWindow">GetXULBrowserWindow</a><a href="#method.SetXULBrowserWindow">SetXULBrowserWindow</a><a href="#method.ApplyChromeFlags">ApplyChromeFlags</a><a href="#method.SizeShellToWithLimit">SizeShellToWithLimit</a><a href="#method.GetNextTabParentId">GetNextTabParentId</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIXULWindow', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIXULWindow</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIXULWindow { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIXULWindow : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIXULWindow.html" title="struct xpcom::interfaces::nsIXULWindow">nsIXULWindow</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIXULWindowCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIXULWindow</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIXULWindow.html" title="struct xpcom::interfaces::nsIXULWindow">nsIXULWindow</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#181-513' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.lowestZ' class="associatedconstant"><span id='lowestZ.v' class='invisible'><code>pub const <a href='#associatedconstant.lowestZ' class="constant"><b>lowestZ</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">lowestZ</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.loweredZ' class="associatedconstant"><span id='loweredZ.v' class='invisible'><code>pub const <a href='#associatedconstant.loweredZ' class="constant"><b>loweredZ</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">loweredZ</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.normalZ' class="associatedconstant"><span id='normalZ.v' class='invisible'><code>pub const <a href='#associatedconstant.normalZ' class="constant"><b>normalZ</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">normalZ</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.raisedZ' class="associatedconstant"><span id='raisedZ.v' class='invisible'><code>pub const <a href='#associatedconstant.raisedZ' class="constant"><b>raisedZ</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">raisedZ</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.highestZ' class="associatedconstant"><span id='highestZ.v' class='invisible'><code>pub const <a href='#associatedconstant.highestZ' class="constant"><b>highestZ</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">highestZ</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+</div><h4 id='method.GetDocShell' class="method"><span id='GetDocShell.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDocShell' class='fnname'>GetDocShell</a>(&amp;self, aDocShell: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocShell.html" title="struct xpcom::interfaces::nsIDocShell">nsIDocShell</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#206-208' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The docshell owning the XUL for this window.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIDocShell docShell;</code></p>
+</div><h4 id='method.GetIntrinsicallySized' class="method"><span id='GetIntrinsicallySized.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIntrinsicallySized' class='fnname'>GetIntrinsicallySized</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIntrinsicallySized: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#220-222' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicates if this window is instrinsically sized.
+   */
+</code></pre>
+
+<p><code>attribute boolean intrinsicallySized;</code></p>
+</div><h4 id='method.SetIntrinsicallySized' class="method"><span id='SetIntrinsicallySized.v' class='invisible'><code>pub unsafe fn <a href='#method.SetIntrinsicallySized' class='fnname'>SetIntrinsicallySized</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIntrinsicallySized: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#234-236' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicates if this window is instrinsically sized.
+   */
+</code></pre>
+
+<p><code>attribute boolean intrinsicallySized;</code></p>
+</div><h4 id='method.GetPrimaryContentShell' class="method"><span id='GetPrimaryContentShell.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPrimaryContentShell' class='fnname'>GetPrimaryContentShell</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrimaryContentShell: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocShellTreeItem.html" title="struct xpcom::interfaces::nsIDocShellTreeItem">nsIDocShellTreeItem</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#253-255' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The primary content shell.
+   *
+   * Note that this is a docshell tree item and therefore can not be assured of
+   * what object it is. It could be an editor, a docshell, or a browser object.
+   * Or down the road any other object that supports being a DocShellTreeItem
+   * Query accordingly to determine the capabilities.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIDocShellTreeItem primaryContentShell;</code></p>
+</div><h4 id='method.GetPrimaryTabParent' class="method"><span id='GetPrimaryTabParent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPrimaryTabParent' class='fnname'>GetPrimaryTabParent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrimaryTabParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITabParent.html" title="struct xpcom::interfaces::nsITabParent">nsITabParent</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#268-270' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * In multiprocess case we may not have primaryContentShell but
+   * primaryTabParent.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsITabParent primaryTabParent;</code></p>
+</div><h4 id='method.TabParentAdded' class="method"><span id='TabParentAdded.v' class='invisible'><code>pub unsafe fn <a href='#method.TabParentAdded' class='fnname'>TabParentAdded</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITabParent.html" title="struct xpcom::interfaces::nsITabParent">nsITabParent</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrimary: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#276-278' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void tabParentAdded (in nsITabParent aTab, in boolean aPrimary);</code></p>
+</div><h4 id='method.TabParentRemoved' class="method"><span id='TabParentRemoved.v' class='invisible'><code>pub unsafe fn <a href='#method.TabParentRemoved' class='fnname'>TabParentRemoved</a>(&amp;self, aTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITabParent.html" title="struct xpcom::interfaces::nsITabParent">nsITabParent</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#284-286' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void tabParentRemoved (in nsITabParent aTab);</code></p>
+</div><h4 id='method.AddChildWindow' class="method"><span id='AddChildWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.AddChildWindow' class='fnname'>AddChildWindow</a>(&amp;self, aChild: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIXULWindow.html" title="struct xpcom::interfaces::nsIXULWindow">nsIXULWindow</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#303-305' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Tell this window that it has picked up a child XUL window
+   * @param aChild the child window being added
+   */
+</code></pre>
+
+<p><code>void addChildWindow (in nsIXULWindow aChild);</code></p>
+</div><h4 id='method.RemoveChildWindow' class="method"><span id='RemoveChildWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveChildWindow' class='fnname'>RemoveChildWindow</a>(&amp;self, aChild: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIXULWindow.html" title="struct xpcom::interfaces::nsIXULWindow">nsIXULWindow</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#318-320' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Tell this window that it has lost a child XUL window
+   * @param aChild the child window being removed
+   */
+</code></pre>
+
+<p><code>void removeChildWindow (in nsIXULWindow aChild);</code></p>
+</div><h4 id='method.Center' class="method"><span id='Center.v' class='invisible'><code>pub unsafe fn <a href='#method.Center' class='fnname'>Center</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRelative: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIXULWindow.html" title="struct xpcom::interfaces::nsIXULWindow">nsIXULWindow</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aScreen: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAlert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#343-345' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Move the window to a centered position.
+   * @param aRelative If not null, the window relative to which the window is
+   *                  moved. See aScreen parameter for details.
+   * @param aScreen   PR_TRUE to center the window relative to the screen
+   *                  containing aRelative if aRelative is not null. If
+   *                  aRelative is null then relative to the screen of the
+   *                  opener window if it was initialized by passing it to
+   *                  nsWebShellWindow::Initialize. Failing that relative to
+   *                  the main screen.
+   *                  PR_FALSE to center it relative to aRelative itself.
+   * @param aAlert    PR_TRUE to move the window to an alert position,
+   *                  generally centered horizontally and 1/3 down from the top.
+   */
+</code></pre>
+
+<p><code>void center (in nsIXULWindow aRelative, in boolean aScreen, in boolean aAlert);</code></p>
+</div><h4 id='method.ShowModal' class="method"><span id='ShowModal.v' class='invisible'><code>pub unsafe fn <a href='#method.ShowModal' class='fnname'>ShowModal</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#358-360' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Shows the window as a modal window. That is, ensures that it is visible
+   * and runs a local event loop, exiting only once the window has been closed.
+   */
+</code></pre>
+
+<p><code>void showModal ();</code></p>
+</div><h4 id='method.GetZLevel' class="method"><span id='GetZLevel.v' class='invisible'><code>pub unsafe fn <a href='#method.GetZLevel' class='fnname'>GetZLevel</a>(&amp;self, aZLevel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#366-368' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned long zLevel;</code></p>
+</div><h4 id='method.SetZLevel' class="method"><span id='SetZLevel.v' class='invisible'><code>pub unsafe fn <a href='#method.SetZLevel' class='fnname'>SetZLevel</a>(&amp;self, aZLevel: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#374-376' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned long zLevel;</code></p>
+</div><h4 id='method.GetChromeFlags' class="method"><span id='GetChromeFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetChromeFlags' class='fnname'>GetChromeFlags</a>(&amp;self, aChromeFlags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#382-384' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute uint32_t chromeFlags;</code></p>
+</div><h4 id='method.SetChromeFlags' class="method"><span id='SetChromeFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.SetChromeFlags' class='fnname'>SetChromeFlags</a>(&amp;self, aChromeFlags: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#390-392' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute uint32_t chromeFlags;</code></p>
+</div><h4 id='method.AssumeChromeFlagsAreFrozen' class="method"><span id='AssumeChromeFlagsAreFrozen.v' class='invisible'><code>pub unsafe fn <a href='#method.AssumeChromeFlagsAreFrozen' class='fnname'>AssumeChromeFlagsAreFrozen</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#405-407' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Begin assuming |chromeFlags| don&#39;t change hereafter, and assert
+   * if they do change.  The state change is one-way and idempotent.
+   */
+</code></pre>
+
+<p><code>void assumeChromeFlagsAreFrozen ();</code></p>
+</div><h4 id='method.CreateNewWindow' class="method"><span id='CreateNewWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.CreateNewWindow' class='fnname'>CreateNewWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aChromeFlags: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOpeningTab: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITabParent.html" title="struct xpcom::interfaces::nsITabParent">nsITabParent</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOpener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIDOMWindowProxy.html" title="struct xpcom::interfaces::mozIDOMWindowProxy">mozIDOMWindowProxy</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNextTabParentId: <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIXULWindow.html" title="struct xpcom::interfaces::nsIXULWindow">nsIXULWindow</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#426-428' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Create a new window.
+   * @param aChromeFlags see nsIWebBrowserChrome
+   * @param aOpeningTab the TabParent that requested this new window be opened.
+   *                    Can be left null.
+   * @param aOpener The window which is requesting that this new window be opened.
+   * @param aNextTabParentId The integer ID of the next tab parent actor to use.
+   *        0 means there is no next tab parent actor to use.
+   * @return the newly minted window
+   */
+</code></pre>
+
+<p><code>nsIXULWindow createNewWindow (in int32_t aChromeFlags, in nsITabParent aOpeningTab, in mozIDOMWindowProxy aOpener, in unsigned long long aNextTabParentId);</code></p>
+</div><h4 id='method.GetXULBrowserWindow' class="method"><span id='GetXULBrowserWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.GetXULBrowserWindow' class='fnname'>GetXULBrowserWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aXULBrowserWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIXULBrowserWindow.html" title="struct xpcom::interfaces::nsIXULBrowserWindow">nsIXULBrowserWindow</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#434-436' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIXULBrowserWindow XULBrowserWindow;</code></p>
+</div><h4 id='method.SetXULBrowserWindow' class="method"><span id='SetXULBrowserWindow.v' class='invisible'><code>pub unsafe fn <a href='#method.SetXULBrowserWindow' class='fnname'>SetXULBrowserWindow</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aXULBrowserWindow: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIXULBrowserWindow.html" title="struct xpcom::interfaces::nsIXULBrowserWindow">nsIXULBrowserWindow</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#442-444' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIXULBrowserWindow XULBrowserWindow;</code></p>
+</div><h4 id='method.ApplyChromeFlags' class="method"><span id='ApplyChromeFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.ApplyChromeFlags' class='fnname'>ApplyChromeFlags</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#459-461' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Back-door method to force application of chrome flags at a particular
+   * time.  Do NOT call this unless you know what you&#39;re doing!  In particular,
+   * calling this when this XUL window doesn&#39;t yet have a document in its
+   * docshell could cause problems.
+   */
+</code></pre>
+
+<p><code>[noscript] void applyChromeFlags ();</code></p>
+</div><h4 id='method.SizeShellToWithLimit' class="method"><span id='SizeShellToWithLimit.v' class='invisible'><code>pub unsafe fn <a href='#method.SizeShellToWithLimit' class='fnname'>SizeShellToWithLimit</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDesiredWidth: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDesiredHeight: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;shellItemWidth: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;shellItemHeight: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a><br>) -&gt; <a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#493-495' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Given the dimensions of some content area held within this
+   * XUL window, and assuming that that content area will change
+   * its dimensions in linear proportion to the dimensions of this
+   * XUL window, changes the size of the XUL window so that the
+   * content area reaches a particular size.
+   *
+   * We need to supply the content area dimensions because sometimes
+   * the child&#39;s nsDocShellTreeOwner needs to propagate a SizeShellTo
+   * call to the parent. But the shellItem argument of the call will
+   * not be available on the parent side.
+   *
+   * Note: this is an internal method, other consumers should never call this.
+   *
+   * @param aDesiredWidth
+   *        The desired width of the content area in device pixels.
+   * @param aDesiredHeight
+   *        The desired height of the content area in device pixels.
+   * @param shellItemWidth
+   *        The current width of the content area.
+   * @param shellItemHeight
+   *        The current height of the content area.
+   */
+</code></pre>
+
+<p><code>[noscript,notxpcom] void sizeShellToWithLimit (in int32_t aDesiredWidth, in int32_t aDesiredHeight, in int32_t shellItemWidth, in int32_t shellItemHeight);</code></p>
+</div><h4 id='method.GetNextTabParentId' class="method"><span id='GetNextTabParentId.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNextTabParentId' class='fnname'>GetNextTabParentId</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNextTabParentId: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#508-510' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If the window was opened as a content window by script, this will return the
+   * integer ID of the next TabParent actor to use.
+   */
+</code></pre>
+
+<p><code>[noscript] readonly attribute unsigned long long nextTabParentId;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIXULWindow.html" title="struct xpcom::interfaces::nsIXULWindow">nsIXULWindow</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3604455444</span>, <span class="number">57997</span>, <span class="number">19613</span>, [<span class="number">135</span>, <span class="number">39</span>, <span class="number">28</span>, <span class="number">246</span>, <span class="number">216</span>, <span class="number">112</span>, <span class="number">97</span>, <span class="number">155</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIXULWindow.html" title="struct xpcom::interfaces::nsIXULWindow">nsIXULWindow</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIXULWindow.html" title="struct xpcom::interfaces::nsIXULWindow">nsIXULWindow</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIXULWindow.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

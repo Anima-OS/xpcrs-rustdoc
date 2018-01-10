@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIURI` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIURI">
+
+    <title>xpcom::interfaces::nsIURI - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIURI</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetSpec">GetSpec</a><a href="#method.SetSpec">SetSpec</a><a href="#method.GetPrePath">GetPrePath</a><a href="#method.GetScheme">GetScheme</a><a href="#method.SetScheme">SetScheme</a><a href="#method.GetUserPass">GetUserPass</a><a href="#method.SetUserPass">SetUserPass</a><a href="#method.GetUsername">GetUsername</a><a href="#method.SetUsername">SetUsername</a><a href="#method.GetPassword">GetPassword</a><a href="#method.SetPassword">SetPassword</a><a href="#method.GetHostPort">GetHostPort</a><a href="#method.SetHostPort">SetHostPort</a><a href="#method.SetHostAndPort">SetHostAndPort</a><a href="#method.GetHost">GetHost</a><a href="#method.SetHost">SetHost</a><a href="#method.GetPort">GetPort</a><a href="#method.SetPort">SetPort</a><a href="#method.GetPathQueryRef">GetPathQueryRef</a><a href="#method.SetPathQueryRef">SetPathQueryRef</a><a href="#method.Equals">Equals</a><a href="#method.SchemeIs">SchemeIs</a><a href="#method.Clone">Clone</a><a href="#method.Resolve">Resolve</a><a href="#method.GetAsciiSpec">GetAsciiSpec</a><a href="#method.GetAsciiHostPort">GetAsciiHostPort</a><a href="#method.GetAsciiHost">GetAsciiHost</a><a href="#method.GetRef">GetRef</a><a href="#method.SetRef">SetRef</a><a href="#method.EqualsExceptRef">EqualsExceptRef</a><a href="#method.CloneIgnoringRef">CloneIgnoringRef</a><a href="#method.CloneWithNewRef">CloneWithNewRef</a><a href="#method.GetSpecIgnoringRef">GetSpecIgnoringRef</a><a href="#method.GetHasRef">GetHasRef</a><a href="#method.GetFilePath">GetFilePath</a><a href="#method.SetFilePath">SetFilePath</a><a href="#method.GetQuery">GetQuery</a><a href="#method.SetQuery">SetQuery</a><a href="#method.GetDisplayHost">GetDisplayHost</a><a href="#method.GetDisplayHostPort">GetDisplayHostPort</a><a href="#method.GetDisplaySpec">GetDisplaySpec</a><a href="#method.GetDisplayPrePath">GetDisplayPrePath</a><a href="#method.Mutate">Mutate</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIURI', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIURI</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#41-50' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIURI { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIURI : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * nsIURI - interface for an uniform resource identifier w/ i18n support.
+ *
+ * AUTF8String attributes may contain unescaped UTF-8 characters.
+ * Consumers should be careful to escape the UTF-8 strings as necessary, but
+ * should always try to &quot;display&quot; the UTF-8 version as provided by this
+ * interface.
+ *
+ * AUTF8String attributes may also contain escaped characters.
+ *
+ * Unescaping URI segments is unadvised unless there is intimate
+ * knowledge of the underlying charset or there is no plan to display (or
+ * otherwise enforce a charset on) the resulting URI substring.
+ *
+ * The correct way to create an nsIURI from a string is via
+ * nsIIOService.newURI.
+ *
+ * NOTE: nsBinaryInputStream::ReadObject contains a hackaround to intercept the
+ * old (pre-gecko6) nsIURI IID and swap in the current IID instead, in order
+ * for sessionstore to work after an upgrade.  If this IID is revved further,
+ * we will need to add additional checks there for all intermediate IIDs, until
+ * ContentPrincipal is fixed to serialize its URIs as nsISupports (bug 662693).
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#90-96' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIURICoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#93-95' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIURI</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#270-1000' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetSpec' class="method"><span id='GetSpec.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSpec' class='fnname'>GetSpec</a>(&amp;self, aSpec: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#293-295' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/************************************************************************
+     * The URI is broken down into the following principal components:
+     */
+/**
+     * Returns a string representation of the URI. Setting the spec causes
+     * the new spec to be parsed per the rules for the scheme the URI
+     * currently has.  In particular, setting the spec to a URI string with a
+     * different scheme will generally produce incorrect results; no one
+     * outside of a protocol handler implementation should be doing that.  If
+     * the URI stores information from the nsIIOService.newURI call used to
+     * create it other than just the parsed string, then behavior of this
+     * information on setting the spec attribute is undefined.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String spec;</code></p>
+</div><h4 id='method.SetSpec' class="method"><span id='SetSpec.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSpec' class='fnname'>SetSpec</a>(&amp;self, aSpec: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#319-321' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/************************************************************************
+     * The URI is broken down into the following principal components:
+     */
+/**
+     * Returns a string representation of the URI. Setting the spec causes
+     * the new spec to be parsed per the rules for the scheme the URI
+     * currently has.  In particular, setting the spec to a URI string with a
+     * different scheme will generally produce incorrect results; no one
+     * outside of a protocol handler implementation should be doing that.  If
+     * the URI stores information from the nsIIOService.newURI call used to
+     * create it other than just the parsed string, then behavior of this
+     * information on setting the spec attribute is undefined.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String spec;</code></p>
+</div><h4 id='method.GetPrePath' class="method"><span id='GetPrePath.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPrePath' class='fnname'>GetPrePath</a>(&amp;self, aPrePath: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#336-338' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The prePath (eg. scheme://user:password@host:port) returns the string
+     * before the path.  This is useful for authentication or managing sessions.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String prePath;</code></p>
+</div><h4 id='method.GetScheme' class="method"><span id='GetScheme.v' class='invisible'><code>pub unsafe fn <a href='#method.GetScheme' class='fnname'>GetScheme</a>(&amp;self, aScheme: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#353-355' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The Scheme is the protocol to which this URI refers.  The scheme is
+     * restricted to the US-ASCII charset per RFC3986.  Setting this is
+     * highly discouraged outside of a protocol handler implementation, since
+     * that will generally lead to incorrect results.
+     */
+</code></pre>
+
+<p><code>attribute ACString scheme;</code></p>
+</div><h4 id='method.SetScheme' class="method"><span id='SetScheme.v' class='invisible'><code>pub unsafe fn <a href='#method.SetScheme' class='fnname'>SetScheme</a>(&amp;self, aScheme: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#370-372' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The Scheme is the protocol to which this URI refers.  The scheme is
+     * restricted to the US-ASCII charset per RFC3986.  Setting this is
+     * highly discouraged outside of a protocol handler implementation, since
+     * that will generally lead to incorrect results.
+     */
+</code></pre>
+
+<p><code>attribute ACString scheme;</code></p>
+</div><h4 id='method.GetUserPass' class="method"><span id='GetUserPass.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUserPass' class='fnname'>GetUserPass</a>(&amp;self, aUserPass: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#386-388' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The username:password (or username only if value doesn&#39;t contain a &#39;:&#39;)
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String userPass;</code></p>
+</div><h4 id='method.SetUserPass' class="method"><span id='SetUserPass.v' class='invisible'><code>pub unsafe fn <a href='#method.SetUserPass' class='fnname'>SetUserPass</a>(&amp;self, aUserPass: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#402-404' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The username:password (or username only if value doesn&#39;t contain a &#39;:&#39;)
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String userPass;</code></p>
+</div><h4 id='method.GetUsername' class="method"><span id='GetUsername.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUsername' class='fnname'>GetUsername</a>(&amp;self, aUsername: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#419-421' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The optional username and password, assuming the preHost consists of
+     * username:password.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String username;</code></p>
+</div><h4 id='method.SetUsername' class="method"><span id='SetUsername.v' class='invisible'><code>pub unsafe fn <a href='#method.SetUsername' class='fnname'>SetUsername</a>(&amp;self, aUsername: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#436-438' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The optional username and password, assuming the preHost consists of
+     * username:password.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String username;</code></p>
+</div><h4 id='method.GetPassword' class="method"><span id='GetPassword.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPassword' class='fnname'>GetPassword</a>(&amp;self, aPassword: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#444-446' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute AUTF8String password;</code></p>
+</div><h4 id='method.SetPassword' class="method"><span id='SetPassword.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPassword' class='fnname'>SetPassword</a>(&amp;self, aPassword: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#452-454' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute AUTF8String password;</code></p>
+</div><h4 id='method.GetHostPort' class="method"><span id='GetHostPort.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHostPort' class='fnname'>GetHostPort</a>(&amp;self, aHostPort: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#469-471' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The host:port (or simply the host, if port == -1).
+     *
+     * If this attribute is set to a value that only has a host part, the port
+     * will not be reset. To reset the port as well use setHostAndPort.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String hostPort;</code></p>
+</div><h4 id='method.SetHostPort' class="method"><span id='SetHostPort.v' class='invisible'><code>pub unsafe fn <a href='#method.SetHostPort' class='fnname'>SetHostPort</a>(&amp;self, aHostPort: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#486-488' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The host:port (or simply the host, if port == -1).
+     *
+     * If this attribute is set to a value that only has a host part, the port
+     * will not be reset. To reset the port as well use setHostAndPort.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String hostPort;</code></p>
+</div><h4 id='method.SetHostAndPort' class="method"><span id='SetHostAndPort.v' class='invisible'><code>pub unsafe fn <a href='#method.SetHostAndPort' class='fnname'>SetHostAndPort</a>(&amp;self, hostport: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#501-503' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This function will always set a host and a port. If the port part is
+     * empty, the value of the port will be set to the default value.
+     */
+</code></pre>
+
+<p><code>void setHostAndPort (in AUTF8String hostport);</code></p>
+</div><h4 id='method.GetHost' class="method"><span id='GetHost.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHost' class='fnname'>GetHost</a>(&amp;self, aHost: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#517-519' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The host is the internet domain name to which this URI refers.  It could
+     * be an IPv4 (or IPv6) address literal. Otherwise it is an ASCII or punycode
+     * encoded string.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String host;</code></p>
+</div><h4 id='method.SetHost' class="method"><span id='SetHost.v' class='invisible'><code>pub unsafe fn <a href='#method.SetHost' class='fnname'>SetHost</a>(&amp;self, aHost: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#533-535' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The host is the internet domain name to which this URI refers.  It could
+     * be an IPv4 (or IPv6) address literal. Otherwise it is an ASCII or punycode
+     * encoded string.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String host;</code></p>
+</div><h4 id='method.GetPort' class="method"><span id='GetPort.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPort' class='fnname'>GetPort</a>(&amp;self, aPort: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#548-550' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * A port value of -1 corresponds to the protocol&#39;s default port (eg. -1
+     * implies port 80 for http URIs).
+     */
+</code></pre>
+
+<p><code>attribute long port;</code></p>
+</div><h4 id='method.SetPort' class="method"><span id='SetPort.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPort' class='fnname'>SetPort</a>(&amp;self, aPort: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#563-565' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * A port value of -1 corresponds to the protocol&#39;s default port (eg. -1
+     * implies port 80 for http URIs).
+     */
+</code></pre>
+
+<p><code>attribute long port;</code></p>
+</div><h4 id='method.GetPathQueryRef' class="method"><span id='GetPathQueryRef.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPathQueryRef' class='fnname'>GetPathQueryRef</a>(&amp;self, aPathQueryRef: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#583-585' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The path, typically including at least a leading &#39;/&#39; (but may also be
+     * empty, depending on the protocol).
+     *
+     * Some characters may be escaped.
+     *
+     * This attribute contains query and ref parts for historical reasons.
+     * Use the &#39;filePath&#39; attribute if you do not want those parts included.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String pathQueryRef;</code></p>
+</div><h4 id='method.SetPathQueryRef' class="method"><span id='SetPathQueryRef.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPathQueryRef' class='fnname'>SetPathQueryRef</a>(&amp;self, aPathQueryRef: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#603-605' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The path, typically including at least a leading &#39;/&#39; (but may also be
+     * empty, depending on the protocol).
+     *
+     * Some characters may be escaped.
+     *
+     * This attribute contains query and ref parts for historical reasons.
+     * Use the &#39;filePath&#39; attribute if you do not want those parts included.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String pathQueryRef;</code></p>
+</div><h4 id='method.Equals' class="method"><span id='Equals.v' class='invisible'><code>pub unsafe fn <a href='#method.Equals' class='fnname'>Equals</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;other: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#622-624' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/************************************************************************
+     * An URI supports the following methods:
+     */
+/**
+     * URI equivalence test (not a strict string comparison).
+     *
+     * eg. http://foo.com:80/ == http://foo.com/
+     */
+</code></pre>
+
+<p><code>boolean equals (in nsIURI other);</code></p>
+</div><h4 id='method.SchemeIs' class="method"><span id='SchemeIs.v' class='invisible'><code>pub unsafe fn <a href='#method.SchemeIs' class='fnname'>SchemeIs</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;scheme: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#638-640' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * An optimization to do scheme checks without requiring the users of nsIURI
+     * to GetScheme, thereby saving extra allocating and freeing. Returns true if
+     * the schemes match (case ignored).
+     */
+</code></pre>
+
+<p><code>boolean schemeIs (in string scheme);</code></p>
+</div><h4 id='method.Clone' class="method"><span id='Clone.v' class='invisible'><code>pub unsafe fn <a href='#method.Clone' class='fnname'>Clone</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#652-654' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Clones the current URI.
+     */
+</code></pre>
+
+<p><code>nsIURI clone ();</code></p>
+</div><h4 id='method.Resolve' class="method"><span id='Resolve.v' class='invisible'><code>pub unsafe fn <a href='#method.Resolve' class='fnname'>Resolve</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;relativePath: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#669-671' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This method resolves a relative string into an absolute URI string,
+     * using this URI as the base.
+     *
+     * NOTE: some implementations may have no concept of a relative URI.
+     */
+</code></pre>
+
+<p><code>AUTF8String resolve (in AUTF8String relativePath);</code></p>
+</div><h4 id='method.GetAsciiSpec' class="method"><span id='GetAsciiSpec.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAsciiSpec' class='fnname'>GetAsciiSpec</a>(&amp;self, aAsciiSpec: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#688-690' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/************************************************************************
+     * Additional attributes:
+     */
+/**
+     * The URI spec with an ASCII compatible encoding.  Host portion follows
+     * the IDNA draft spec.  Other parts are URL-escaped per the rules of
+     * RFC2396.  The result is strictly ASCII.
+     */
+</code></pre>
+
+<p><code>readonly attribute ACString asciiSpec;</code></p>
+</div><h4 id='method.GetAsciiHostPort' class="method"><span id='GetAsciiHostPort.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAsciiHostPort' class='fnname'>GetAsciiHostPort</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAsciiHostPort: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#704-706' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The host:port (or simply the host, if port == -1), with an ASCII compatible
+     * encoding.  Host portion follows the IDNA draft spec.  The result is strictly
+     * ASCII.
+     */
+</code></pre>
+
+<p><code>readonly attribute ACString asciiHostPort;</code></p>
+</div><h4 id='method.GetAsciiHost' class="method"><span id='GetAsciiHost.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAsciiHost' class='fnname'>GetAsciiHost</a>(&amp;self, aAsciiHost: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#720-722' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The URI host with an ASCII compatible encoding.  Follows the IDNA
+     * draft spec for converting internationalized domain names (UTF-8) to
+     * ASCII for compatibility with existing internet infrasture.
+     */
+</code></pre>
+
+<p><code>readonly attribute ACString asciiHost;</code></p>
+</div><h4 id='method.GetRef' class="method"><span id='GetRef.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRef' class='fnname'>GetRef</a>(&amp;self, aRef: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#740-742' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/************************************************************************
+     * Additional attribute &amp; methods added for .ref support:
+     */
+/**
+     * Returns the reference portion (the part after the &quot;#&quot;) of the URI.
+     * If there isn&#39;t one, an empty string is returned.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String ref;</code></p>
+</div><h4 id='method.SetRef' class="method"><span id='SetRef.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRef' class='fnname'>SetRef</a>(&amp;self, aRef: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#760-762' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/************************************************************************
+     * Additional attribute &amp; methods added for .ref support:
+     */
+/**
+     * Returns the reference portion (the part after the &quot;#&quot;) of the URI.
+     * If there isn&#39;t one, an empty string is returned.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String ref;</code></p>
+</div><h4 id='method.EqualsExceptRef' class="method"><span id='EqualsExceptRef.v' class='invisible'><code>pub unsafe fn <a href='#method.EqualsExceptRef' class='fnname'>EqualsExceptRef</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;other: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#778-780' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * URI equivalence test (not a strict string comparison), ignoring
+     * the value of the .ref member.
+     *
+     * eg. http://foo.com/# == http://foo.com/
+     *     http://foo.com/#aaa == http://foo.com/#bbb
+     */
+</code></pre>
+
+<p><code>boolean equalsExceptRef (in nsIURI other);</code></p>
+</div><h4 id='method.CloneIgnoringRef' class="method"><span id='CloneIgnoringRef.v' class='invisible'><code>pub unsafe fn <a href='#method.CloneIgnoringRef' class='fnname'>CloneIgnoringRef</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#792-794' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Clones the current URI, clearing the &#39;ref&#39; attribute in the clone.
+     */
+</code></pre>
+
+<p><code>nsIURI cloneIgnoringRef ();</code></p>
+</div><h4 id='method.CloneWithNewRef' class="method"><span id='CloneWithNewRef.v' class='invisible'><code>pub unsafe fn <a href='#method.CloneWithNewRef' class='fnname'>CloneWithNewRef</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;newRef: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#807-809' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Clones the current URI, replacing the &#39;ref&#39; attribute in the clone with
+     * the ref supplied.
+     */
+</code></pre>
+
+<p><code>nsIURI cloneWithNewRef (in AUTF8String newRef);</code></p>
+</div><h4 id='method.GetSpecIgnoringRef' class="method"><span id='GetSpecIgnoringRef.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSpecIgnoringRef' class='fnname'>GetSpecIgnoringRef</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSpecIgnoringRef: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#821-823' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * returns a string for the current URI with the ref element cleared.
+     */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String specIgnoringRef;</code></p>
+</div><h4 id='method.GetHasRef' class="method"><span id='GetHasRef.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHasRef' class='fnname'>GetHasRef</a>(&amp;self, aHasRef: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#835-837' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns if there is a reference portion (the part after the &quot;#&quot;) of the URI.
+     */
+</code></pre>
+
+<p><code>readonly attribute boolean hasRef;</code></p>
+</div><h4 id='method.GetFilePath' class="method"><span id='GetFilePath.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFilePath' class='fnname'>GetFilePath</a>(&amp;self, aFilePath: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#856-858' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/************************************************************************
+     * Additional attributes added for .query support:
+     */
+/**
+     * Returns a path including the directory and file portions of a
+     * URL.  For example, the filePath of &quot;http://host/foo/bar.html#baz&quot;
+     * is &quot;/foo/bar.html&quot;.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String filePath;</code></p>
+</div><h4 id='method.SetFilePath' class="method"><span id='SetFilePath.v' class='invisible'><code>pub unsafe fn <a href='#method.SetFilePath' class='fnname'>SetFilePath</a>(&amp;self, aFilePath: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#877-879' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/************************************************************************
+     * Additional attributes added for .query support:
+     */
+/**
+     * Returns a path including the directory and file portions of a
+     * URL.  For example, the filePath of &quot;http://host/foo/bar.html#baz&quot;
+     * is &quot;/foo/bar.html&quot;.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String filePath;</code></p>
+</div><h4 id='method.GetQuery' class="method"><span id='GetQuery.v' class='invisible'><code>pub unsafe fn <a href='#method.GetQuery' class='fnname'>GetQuery</a>(&amp;self, aQuery: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#894-896' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns the query portion (the part after the &quot;?&quot;) of the URL.
+     * If there isn&#39;t one, an empty string is returned.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String query;</code></p>
+</div><h4 id='method.SetQuery' class="method"><span id='SetQuery.v' class='invisible'><code>pub unsafe fn <a href='#method.SetQuery' class='fnname'>SetQuery</a>(&amp;self, aQuery: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#911-913' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns the query portion (the part after the &quot;?&quot;) of the URL.
+     * If there isn&#39;t one, an empty string is returned.
+     *
+     * Some characters may be escaped.
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String query;</code></p>
+</div><h4 id='method.GetDisplayHost' class="method"><span id='GetDisplayHost.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDisplayHost' class='fnname'>GetDisplayHost</a>(&amp;self, aDisplayHost: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#932-934' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * If the URI has a punycode encoded hostname, this will hold the UTF8
+     * representation of that hostname (if that representation doesn&#39;t contain
+     * blacklisted characters, and the network.IDN_show_punycode pref is false)
+     * Otherwise, if the hostname is ASCII, it will return the same as .asciiHost
+     */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String displayHost;</code></p>
+</div><h4 id='method.GetDisplayHostPort' class="method"><span id='GetDisplayHostPort.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDisplayHostPort' class='fnname'>GetDisplayHostPort</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDisplayHostPort: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#946-948' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The displayHost:port (or simply the displayHost, if port == -1).
+     */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String displayHostPort;</code></p>
+</div><h4 id='method.GetDisplaySpec' class="method"><span id='GetDisplaySpec.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDisplaySpec' class='fnname'>GetDisplaySpec</a>(&amp;self, aDisplaySpec: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#962-964' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns the same as calling .spec, only with a UTF8 encoded hostname
+     * (if that hostname doesn&#39;t contain blacklisted characters, and
+     * the network.IDN_show_punycode pref is false)
+     */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String displaySpec;</code></p>
+</div><h4 id='method.GetDisplayPrePath' class="method"><span id='GetDisplayPrePath.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDisplayPrePath' class='fnname'>GetDisplayPrePath</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDisplayPrePath: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#978-980' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns the same as calling .prePath, only with a UTF8 encoded hostname
+     * (if that hostname doesn&#39;t contain blacklisted characters, and
+     * the network.IDN_show_punycode pref is false)
+     */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String displayPrePath;</code></p>
+</div><h4 id='method.Mutate' class="method"><span id='Mutate.v' class='invisible'><code>pub unsafe fn <a href='#method.Mutate' class='fnname'>Mutate</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURIMutator.html" title="struct xpcom::interfaces::nsIURIMutator">nsIURIMutator</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#995-997' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns an nsIURIMutator that can be used to make changes to the URI.
+     * After performing the setter operations on the mutator, one may call
+     * mutator.finalize() to get a new immutable URI with the desired
+     * properties.
+     */
+</code></pre>
+
+<p><code>nsIURIMutator mutate ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#55-58' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2449947220</span>, <span class="number">28024</span>, <span class="number">20272</span>, [<span class="number">145</span>, <span class="number">58</span>, <span class="number">184</span>, <span class="number">113</span>, <span class="number">129</span>, <span class="number">50</span>, <span class="number">8</span>, <span class="number">198</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#62-71' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#64-66' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#68-70' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#102-110' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIURI.rs.html#105-109' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

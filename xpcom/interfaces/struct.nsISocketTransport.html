@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsISocketTransport` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsISocketTransport">
+
+    <title>xpcom::interfaces::nsISocketTransport - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsISocketTransport</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetHost">GetHost</a><a href="#method.GetPort">GetPort</a><a href="#method.GetNetworkInterfaceId">GetNetworkInterfaceId</a><a href="#method.SetNetworkInterfaceId">SetNetworkInterfaceId</a><a href="#method.GetScriptablePeerAddr">GetScriptablePeerAddr</a><a href="#method.GetScriptableSelfAddr">GetScriptableSelfAddr</a><a href="#method.GetSecurityInfo">GetSecurityInfo</a><a href="#method.GetSecurityCallbacks">GetSecurityCallbacks</a><a href="#method.SetSecurityCallbacks">SetSecurityCallbacks</a><a href="#method.IsAlive">IsAlive</a><a href="#method.GetTimeout">GetTimeout</a><a href="#method.SetTimeout">SetTimeout</a><a href="#method.SetReuseAddrPort">SetReuseAddrPort</a><a href="#method.GetConnectionFlags">GetConnectionFlags</a><a href="#method.SetConnectionFlags">SetConnectionFlags</a><a href="#method.GetTlsFlags">GetTlsFlags</a><a href="#method.SetTlsFlags">SetTlsFlags</a><a href="#method.GetQoSBits">GetQoSBits</a><a href="#method.SetQoSBits">SetQoSBits</a><a href="#method.GetRecvBufferSize">GetRecvBufferSize</a><a href="#method.SetRecvBufferSize">SetRecvBufferSize</a><a href="#method.GetSendBufferSize">GetSendBufferSize</a><a href="#method.SetSendBufferSize">SetSendBufferSize</a><a href="#method.GetKeepaliveEnabled">GetKeepaliveEnabled</a><a href="#method.SetKeepaliveEnabled">SetKeepaliveEnabled</a><a href="#method.SetKeepaliveVals">SetKeepaliveVals</a><a href="#method.GetFirstRetryError">GetFirstRetryError</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsITransport&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.OpenInputStream">OpenInputStream</a><a href="#method.OpenOutputStream">OpenOutputStream</a><a href="#method.Close">Close</a><a href="#method.SetEventSink">SetEventSink</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsISocketTransport', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsISocketTransport</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#28-37' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsISocketTransport { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsISocketTransport : nsITransport</code></p>
+
+<pre><code class="language-text">/**
+ * nsISocketTransport
+ *
+ * NOTE: Connection setup is triggered by opening an input or output stream,
+ * it does not start on its own. Completion of the connection setup is
+ * indicated by a STATUS_CONNECTED_TO notification to the event sink (if set).
+ *
+ * NOTE: This is a free-threaded interface, meaning that the methods on
+ * this interface may be called from any thread.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISocketTransport.html" title="struct xpcom::interfaces::nsISocketTransport">nsISocketTransport</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#77-83' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsISocketTransportCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#80-82' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISocketTransport</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISocketTransport.html" title="struct xpcom::interfaces::nsISocketTransport">nsISocketTransport</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#237-854' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.TIMEOUT_CONNECT' class="associatedconstant"><span id='TIMEOUT_CONNECT.v' class='invisible'><code>pub const <a href='#associatedconstant.TIMEOUT_CONNECT' class="constant"><b>TIMEOUT_CONNECT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TIMEOUT_CONNECT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+     * Values for the aType parameter passed to get/setTimeout.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.TIMEOUT_READ_WRITE' class="associatedconstant"><span id='TIMEOUT_READ_WRITE.v' class='invisible'><code>pub const <a href='#associatedconstant.TIMEOUT_READ_WRITE' class="constant"><b>TIMEOUT_READ_WRITE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TIMEOUT_READ_WRITE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.STATUS_RESOLVING' class="associatedconstant"><span id='STATUS_RESOLVING.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_RESOLVING' class="constant"><b>STATUS_RESOLVING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">STATUS_RESOLVING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2152398851</span></pre>
+<pre><code class="language-text">/**
+     * nsITransportEventSink status codes.
+     *
+     * Although these look like XPCOM error codes and are passed in an nsresult
+     * variable, they are *not* error codes.  Note that while they *do* overlap
+     * with existing error codes in Necko, these status codes are confined
+     * within a very limited context where no error codes may appear, so there
+     * is no ambiguity.
+     *
+     * The values of these status codes must never change.
+     *
+     * The status codes appear in near-chronological order (not in numeric
+     * order).  STATUS_RESOLVING may be skipped if the host does not need to be
+     * resolved.  STATUS_WAITING_FOR is an optional status code, which the impl
+     * of this interface may choose not to generate.
+     *
+     * In C++, these constants have a type of uint32_t, so C++ callers must use
+     * the NS_NET_STATUS_* constants defined below, which have a type of
+     * nsresult.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.STATUS_RESOLVED' class="associatedconstant"><span id='STATUS_RESOLVED.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_RESOLVED' class="constant"><b>STATUS_RESOLVED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">STATUS_RESOLVED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2152398859</span></pre>
+</div><h4 id='associatedconstant.STATUS_CONNECTING_TO' class="associatedconstant"><span id='STATUS_CONNECTING_TO.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_CONNECTING_TO' class="constant"><b>STATUS_CONNECTING_TO</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">STATUS_CONNECTING_TO</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2152398855</span></pre>
+</div><h4 id='associatedconstant.STATUS_CONNECTED_TO' class="associatedconstant"><span id='STATUS_CONNECTED_TO.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_CONNECTED_TO' class="constant"><b>STATUS_CONNECTED_TO</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">STATUS_CONNECTED_TO</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2152398852</span></pre>
+</div><h4 id='associatedconstant.STATUS_SENDING_TO' class="associatedconstant"><span id='STATUS_SENDING_TO.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_SENDING_TO' class="constant"><b>STATUS_SENDING_TO</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">STATUS_SENDING_TO</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2152398853</span></pre>
+</div><h4 id='associatedconstant.STATUS_WAITING_FOR' class="associatedconstant"><span id='STATUS_WAITING_FOR.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_WAITING_FOR' class="constant"><b>STATUS_WAITING_FOR</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">STATUS_WAITING_FOR</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2152398858</span></pre>
+</div><h4 id='associatedconstant.STATUS_RECEIVING_FROM' class="associatedconstant"><span id='STATUS_RECEIVING_FROM.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_RECEIVING_FROM' class="constant"><b>STATUS_RECEIVING_FROM</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">STATUS_RECEIVING_FROM</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2152398854</span></pre>
+</div><h4 id='associatedconstant.STATUS_TLS_HANDSHAKE_STARTING' class="associatedconstant"><span id='STATUS_TLS_HANDSHAKE_STARTING.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_TLS_HANDSHAKE_STARTING' class="constant"><b>STATUS_TLS_HANDSHAKE_STARTING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">STATUS_TLS_HANDSHAKE_STARTING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2152398860</span></pre>
+</div><h4 id='associatedconstant.STATUS_TLS_HANDSHAKE_ENDED' class="associatedconstant"><span id='STATUS_TLS_HANDSHAKE_ENDED.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_TLS_HANDSHAKE_ENDED' class="constant"><b>STATUS_TLS_HANDSHAKE_ENDED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">STATUS_TLS_HANDSHAKE_ENDED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2152398861</span></pre>
+</div><h4 id='associatedconstant.BYPASS_CACHE' class="associatedconstant"><span id='BYPASS_CACHE.v' class='invisible'><code>pub const <a href='#associatedconstant.BYPASS_CACHE' class="constant"><b>BYPASS_CACHE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">BYPASS_CACHE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+     * Values for the connectionFlags
+     *
+     * When making a new connection BYPASS_CACHE will force the Necko DNS
+     * cache entry to be refreshed with a new call to NSPR if it is set before
+     * opening the new stream.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.ANONYMOUS_CONNECT' class="associatedconstant"><span id='ANONYMOUS_CONNECT.v' class='invisible'><code>pub const <a href='#associatedconstant.ANONYMOUS_CONNECT' class="constant"><b>ANONYMOUS_CONNECT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ANONYMOUS_CONNECT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/**
+     * When setting this flag, the socket will not apply any
+     * credentials when establishing a connection. For example,
+     * an SSL connection would not send any client-certificates
+     * if this flag is set.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.DISABLE_IPV6' class="associatedconstant"><span id='DISABLE_IPV6.v' class='invisible'><code>pub const <a href='#associatedconstant.DISABLE_IPV6' class="constant"><b>DISABLE_IPV6</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DISABLE_IPV6</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+     * If set, we will skip all IPv6 addresses the host may have and only
+     * connect to IPv4 ones.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.NO_PERMANENT_STORAGE' class="associatedconstant"><span id='NO_PERMANENT_STORAGE.v' class='invisible'><code>pub const <a href='#associatedconstant.NO_PERMANENT_STORAGE' class="constant"><b>NO_PERMANENT_STORAGE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NO_PERMANENT_STORAGE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/**
+     * If set, indicates that the connection was initiated from a source
+     * defined as being private in the sense of Private Browsing. Generally,
+     * there should be no state shared between connections that are private
+     * and those that are not; it is OK for multiple private connections
+     * to share state with each other, and it is OK for multiple non-private
+     * connections to share state with each other.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.DISABLE_IPV4' class="associatedconstant"><span id='DISABLE_IPV4.v' class='invisible'><code>pub const <a href='#associatedconstant.DISABLE_IPV4' class="constant"><b>DISABLE_IPV4</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DISABLE_IPV4</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+<pre><code class="language-text">/**
+     * If set, we will skip all IPv4 addresses the host may have and only
+     * connect to IPv6 ones.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.DISABLE_RFC1918' class="associatedconstant"><span id='DISABLE_RFC1918.v' class='invisible'><code>pub const <a href='#associatedconstant.DISABLE_RFC1918' class="constant"><b>DISABLE_RFC1918</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DISABLE_RFC1918</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+<pre><code class="language-text">/**
+     * If set, indicates that the socket should not connect if the hostname
+     * resolves to an RFC1918 address or IPv6 equivalent.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.MITM_OK' class="associatedconstant"><span id='MITM_OK.v' class='invisible'><code>pub const <a href='#associatedconstant.MITM_OK' class="constant"><b>MITM_OK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MITM_OK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">64</span></pre>
+<pre><code class="language-text">/**
+     * This flag is an explicit opt-in that allows a normally secure socket
+     * provider to use, at its discretion, an insecure algorithm. e.g.
+     * a TLS socket without authentication.
+     */
+</code></pre>
+</div><h4 id='associatedconstant.BE_CONSERVATIVE' class="associatedconstant"><span id='BE_CONSERVATIVE.v' class='invisible'><code>pub const <a href='#associatedconstant.BE_CONSERVATIVE' class="constant"><b>BE_CONSERVATIVE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">BE_CONSERVATIVE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">128</span></pre>
+<pre><code class="language-text">/**
+     * If set, do not use newer protocol features that might have interop problems
+     * on the Internet. Intended only for use with critical infra like the updater.
+     * default is false.
+     */
+</code></pre>
+</div><h4 id='method.GetHost' class="method"><span id='GetHost.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHost' class='fnname'>GetHost</a>(&amp;self, aHost: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#402-404' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the peer&#39;s host for the underlying socket connection.
+     * For Unix domain sockets, this is a pathname, or the empty string for
+     * unnamed and abstract socket addresses.
+     */
+</code></pre>
+
+<p><code>readonly attribute AUTF8String host;</code></p>
+</div><h4 id='method.GetPort' class="method"><span id='GetPort.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPort' class='fnname'>GetPort</a>(&amp;self, aPort: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#417-419' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Get the port for the underlying socket connection.
+     * For Unix domain sockets, this is zero.
+     */
+</code></pre>
+
+<p><code>readonly attribute long port;</code></p>
+</div><h4 id='method.GetNetworkInterfaceId' class="method"><span id='GetNetworkInterfaceId.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNetworkInterfaceId' class='fnname'>GetNetworkInterfaceId</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNetworkInterfaceId: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#469-471' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The platform-specific network interface id that this socket
+     * associated with. Note that this attribute can be only accessed
+     * in the socket thread.
+     */
+</code></pre>
+
+<p><code>attribute ACString networkInterfaceId;</code></p>
+</div><h4 id='method.SetNetworkInterfaceId' class="method"><span id='SetNetworkInterfaceId.v' class='invisible'><code>pub unsafe fn <a href='#method.SetNetworkInterfaceId' class='fnname'>SetNetworkInterfaceId</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNetworkInterfaceId: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#485-487' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The platform-specific network interface id that this socket
+     * associated with. Note that this attribute can be only accessed
+     * in the socket thread.
+     */
+</code></pre>
+
+<p><code>attribute ACString networkInterfaceId;</code></p>
+</div><h4 id='method.GetScriptablePeerAddr' class="method"><span id='GetScriptablePeerAddr.v' class='invisible'><code>pub unsafe fn <a href='#method.GetScriptablePeerAddr' class='fnname'>GetScriptablePeerAddr</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINetAddr.html" title="struct xpcom::interfaces::nsINetAddr">nsINetAddr</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#532-534' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns a scriptable version of getPeerAddr. This attribute is defined
+     * only once a connection has been established.
+     */
+</code></pre>
+
+<p><code>nsINetAddr getScriptablePeerAddr ();</code></p>
+</div><h4 id='method.GetScriptableSelfAddr' class="method"><span id='GetScriptableSelfAddr.v' class='invisible'><code>pub unsafe fn <a href='#method.GetScriptableSelfAddr' class='fnname'>GetScriptableSelfAddr</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINetAddr.html" title="struct xpcom::interfaces::nsINetAddr">nsINetAddr</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#547-549' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns a scriptable version of getSelfAddr. This attribute is defined
+     * only once a connection has been established.
+     */
+</code></pre>
+
+<p><code>nsINetAddr getScriptableSelfAddr ();</code></p>
+</div><h4 id='method.GetSecurityInfo' class="method"><span id='GetSecurityInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSecurityInfo' class='fnname'>GetSecurityInfo</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSecurityInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#565-567' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Security info object returned from the secure socket provider.  This
+     * object supports nsISSLSocketControl, nsITransportSecurityInfo, and
+     * possibly other interfaces.
+     *
+     * This attribute is only available once the socket is connected.
+     */
+</code></pre>
+
+<p><code>readonly attribute nsISupports securityInfo;</code></p>
+</div><h4 id='method.GetSecurityCallbacks' class="method"><span id='GetSecurityCallbacks.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSecurityCallbacks' class='fnname'>GetSecurityCallbacks</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSecurityCallbacks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#582-584' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Security notification callbacks passed to the secure socket provider
+     * via nsISSLSocketControl at socket creation time.
+     *
+     * NOTE: this attribute cannot be changed once a stream has been opened.
+     */
+</code></pre>
+
+<p><code>attribute nsIInterfaceRequestor securityCallbacks;</code></p>
+</div><h4 id='method.SetSecurityCallbacks' class="method"><span id='SetSecurityCallbacks.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSecurityCallbacks' class='fnname'>SetSecurityCallbacks</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSecurityCallbacks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#599-601' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Security notification callbacks passed to the secure socket provider
+     * via nsISSLSocketControl at socket creation time.
+     *
+     * NOTE: this attribute cannot be changed once a stream has been opened.
+     */
+</code></pre>
+
+<p><code>attribute nsIInterfaceRequestor securityCallbacks;</code></p>
+</div><h4 id='method.IsAlive' class="method"><span id='IsAlive.v' class='invisible'><code>pub unsafe fn <a href='#method.IsAlive' class='fnname'>IsAlive</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#613-615' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Test if this socket transport is (still) connected.
+     */
+</code></pre>
+
+<p><code>boolean isAlive ();</code></p>
+</div><h4 id='method.GetTimeout' class="method"><span id='GetTimeout.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTimeout' class='fnname'>GetTimeout</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#629-631' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Socket timeouts in seconds.  To specify no timeout, pass UINT32_MAX
+     * as aValue to setTimeout.  The implementation may truncate timeout values
+     * to a smaller range of values (e.g., 0 to 0xFFFF).
+     */
+</code></pre>
+
+<p><code>unsigned long getTimeout (in unsigned long aType);</code></p>
+</div><h4 id='method.SetTimeout' class="method"><span id='SetTimeout.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTimeout' class='fnname'>SetTimeout</a>(&amp;self, aType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, aValue: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#637-639' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void setTimeout (in unsigned long aType, in unsigned long aValue);</code></p>
+</div><h4 id='method.SetReuseAddrPort' class="method"><span id='SetReuseAddrPort.v' class='invisible'><code>pub unsafe fn <a href='#method.SetReuseAddrPort' class='fnname'>SetReuseAddrPort</a>(&amp;self, reuseAddrPort: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#651-653' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * True to set addr and port reuse socket options.
+     */
+</code></pre>
+
+<p><code>void setReuseAddrPort (in bool reuseAddrPort);</code></p>
+</div><h4 id='method.GetConnectionFlags' class="method"><span id='GetConnectionFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetConnectionFlags' class='fnname'>GetConnectionFlags</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aConnectionFlags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#666-668' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * connectionFlags is a bitmask that can be used to modify underlying
+     * behavior of the socket connection. See the flags below.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long connectionFlags;</code></p>
+</div><h4 id='method.SetConnectionFlags' class="method"><span id='SetConnectionFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.SetConnectionFlags' class='fnname'>SetConnectionFlags</a>(&amp;self, aConnectionFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#681-683' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * connectionFlags is a bitmask that can be used to modify underlying
+     * behavior of the socket connection. See the flags below.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long connectionFlags;</code></p>
+</div><h4 id='method.GetTlsFlags' class="method"><span id='GetTlsFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTlsFlags' class='fnname'>GetTlsFlags</a>(&amp;self, aTlsFlags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#697-699' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * An opaque flags for non-standard behavior of the TLS system.
+     * It is unlikely this will need to be set outside of telemetry studies
+     * relating to the TLS implementation.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long tlsFlags;</code></p>
+</div><h4 id='method.SetTlsFlags' class="method"><span id='SetTlsFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTlsFlags' class='fnname'>SetTlsFlags</a>(&amp;self, aTlsFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#713-715' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * An opaque flags for non-standard behavior of the TLS system.
+     * It is unlikely this will need to be set outside of telemetry studies
+     * relating to the TLS implementation.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long tlsFlags;</code></p>
+</div><h4 id='method.GetQoSBits' class="method"><span id='GetQoSBits.v' class='invisible'><code>pub unsafe fn <a href='#method.GetQoSBits' class='fnname'>GetQoSBits</a>(&amp;self, aQoSBits: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#732-734' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Socket QoS/ToS markings. Valid values are IPTOS_DSCP_AFxx or
+     * IPTOS_CLASS_CSx (or IPTOS_DSCP_EF, but currently no supported
+     * services require expedited-forwarding).
+     * Not setting this value will leave the socket with the default
+     * ToS value, which on most systems if IPTOS_CLASS_CS0 (formerly
+     * IPTOS_PREC_ROUTINE).
+     */
+</code></pre>
+
+<p><code>attribute octet QoSBits;</code></p>
+</div><h4 id='method.SetQoSBits' class="method"><span id='SetQoSBits.v' class='invisible'><code>pub unsafe fn <a href='#method.SetQoSBits' class='fnname'>SetQoSBits</a>(&amp;self, aQoSBits: <a class="type" href="../../libc/type.uint8_t.html" title="type libc::uint8_t">uint8_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#751-753' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Socket QoS/ToS markings. Valid values are IPTOS_DSCP_AFxx or
+     * IPTOS_CLASS_CSx (or IPTOS_DSCP_EF, but currently no supported
+     * services require expedited-forwarding).
+     * Not setting this value will leave the socket with the default
+     * ToS value, which on most systems if IPTOS_CLASS_CS0 (formerly
+     * IPTOS_PREC_ROUTINE).
+     */
+</code></pre>
+
+<p><code>attribute octet QoSBits;</code></p>
+</div><h4 id='method.GetRecvBufferSize' class="method"><span id='GetRecvBufferSize.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRecvBufferSize' class='fnname'>GetRecvBufferSize</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRecvBufferSize: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#766-768' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * TCP send and receive buffer sizes. A value of 0 means OS level
+     * auto-tuning is in effect.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long recvBufferSize;</code></p>
+</div><h4 id='method.SetRecvBufferSize' class="method"><span id='SetRecvBufferSize.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRecvBufferSize' class='fnname'>SetRecvBufferSize</a>(&amp;self, aRecvBufferSize: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#781-783' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * TCP send and receive buffer sizes. A value of 0 means OS level
+     * auto-tuning is in effect.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long recvBufferSize;</code></p>
+</div><h4 id='method.GetSendBufferSize' class="method"><span id='GetSendBufferSize.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSendBufferSize' class='fnname'>GetSendBufferSize</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSendBufferSize: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#789-791' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned long sendBufferSize;</code></p>
+</div><h4 id='method.SetSendBufferSize' class="method"><span id='SetSendBufferSize.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSendBufferSize' class='fnname'>SetSendBufferSize</a>(&amp;self, aSendBufferSize: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#797-799' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned long sendBufferSize;</code></p>
+</div><h4 id='method.GetKeepaliveEnabled' class="method"><span id='GetKeepaliveEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetKeepaliveEnabled' class='fnname'>GetKeepaliveEnabled</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aKeepaliveEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#813-815' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * TCP keepalive configuration (support varies by platform).
+     * Note that the attribute as well as the setter can only accessed
+     * in the socket thread.
+     */
+</code></pre>
+
+<p><code>attribute boolean keepaliveEnabled;</code></p>
+</div><h4 id='method.SetKeepaliveEnabled' class="method"><span id='SetKeepaliveEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.SetKeepaliveEnabled' class='fnname'>SetKeepaliveEnabled</a>(&amp;self, aKeepaliveEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#829-831' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * TCP keepalive configuration (support varies by platform).
+     * Note that the attribute as well as the setter can only accessed
+     * in the socket thread.
+     */
+</code></pre>
+
+<p><code>attribute boolean keepaliveEnabled;</code></p>
+</div><h4 id='method.SetKeepaliveVals' class="method"><span id='SetKeepaliveVals.v' class='invisible'><code>pub unsafe fn <a href='#method.SetKeepaliveVals' class='fnname'>SetKeepaliveVals</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;keepaliveIdleTime: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;keepaliveRetryInterval: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#837-839' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void setKeepaliveVals (in long keepaliveIdleTime, in long keepaliveRetryInterval);</code></p>
+</div><h4 id='method.GetFirstRetryError' class="method"><span id='GetFirstRetryError.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFirstRetryError' class='fnname'>GetFirstRetryError</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFirstRetryError: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#849-851' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute nsresult firstRetryError;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsITransport.html" title="struct xpcom::interfaces::nsITransport">nsITransport</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsITransportCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITransport.rs.html#85-87' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsITransport</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.OPEN_BLOCKING' class="associatedconstant"><span id='OPEN_BLOCKING.v' class='invisible'><code>pub const <a href='#associatedconstant.OPEN_BLOCKING' class="constant"><b>OPEN_BLOCKING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.OPEN_UNBUFFERED' class="associatedconstant"><span id='OPEN_UNBUFFERED.v' class='invisible'><code>pub const <a href='#associatedconstant.OPEN_UNBUFFERED' class="constant"><b>OPEN_UNBUFFERED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.STATUS_READING' class="associatedconstant"><span id='STATUS_READING.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_READING' class="constant"><b>STATUS_READING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.STATUS_WRITING' class="associatedconstant"><span id='STATUS_WRITING.v' class='invisible'><code>pub const <a href='#associatedconstant.STATUS_WRITING' class="constant"><b>STATUS_WRITING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='method.OpenInputStream' class="method"><span id='OpenInputStream.v' class='invisible'><code>pub unsafe fn <a href='#method.OpenInputStream' class='fnname'>OpenInputStream</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSegmentSize: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSegmentCount: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITransport.rs.html#209-211' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Open an input stream on this transport.
+     *
+     * Flags have the following meaning:
+     *
+     * OPEN_BLOCKING
+     *   If specified, then the resulting stream will have blocking stream
+     *   semantics.  This means that if the stream has no data and is not
+     *   closed, then reading from it will block the calling thread until
+     *   at least one byte is available or until the stream is closed.
+     *   If this flag is NOT specified, then the stream has non-blocking
+     *   stream semantics.  This means that if the stream has no data and is
+     *   not closed, then reading from it returns NS_BASE_STREAM_WOULD_BLOCK.
+     *   In addition, in non-blocking mode, the stream is guaranteed to
+     *   support nsIAsyncInputStream.  This interface allows the consumer of
+     *   the stream to be notified when the stream can again be read.
+     *
+     * OPEN_UNBUFFERED
+     *   If specified, the resulting stream may not support ReadSegments.
+     *   ReadSegments is only gauranteed to be implemented when this flag is
+     *   NOT specified.
+     *
+     * @param aFlags
+     *        optional transport specific flags.
+     * @param aSegmentSize
+     *        if OPEN_UNBUFFERED is not set, then this parameter specifies the
+     *        size of each buffer segment (pass 0 to use default value).
+     * @param aSegmentCount
+     *        if OPEN_UNBUFFERED is not set, then this parameter specifies the
+     *        maximum number of buffer segments (pass 0 to use default value).
+     */
+</code></pre>
+
+<p><code>nsIInputStream openInputStream (in unsigned long aFlags, in unsigned long aSegmentSize, in unsigned long aSegmentCount);</code></p>
+</div><h4 id='method.OpenOutputStream' class="method"><span id='OpenOutputStream.v' class='invisible'><code>pub unsafe fn <a href='#method.OpenOutputStream' class='fnname'>OpenOutputStream</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSegmentSize: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSegmentCount: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIOutputStream.html" title="struct xpcom::interfaces::nsIOutputStream">nsIOutputStream</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITransport.rs.html#251-253' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Open an output stream on this transport.
+     *
+     * Flags have the following meaning:
+     *
+     * OPEN_BLOCKING
+     *   If specified, then the resulting stream will have blocking stream
+     *   semantics.  This means that if the stream is full and is not closed,
+     *   then writing to it will block the calling thread until ALL of the
+     *   data can be written or until the stream is closed.  If this flag is
+     *   NOT specified, then the stream has non-blocking stream semantics.
+     *   This means that if the stream is full and is not closed, then writing
+     *   to it returns NS_BASE_STREAM_WOULD_BLOCK.  In addition, in non-
+     *   blocking mode, the stream is guaranteed to support
+     *   nsIAsyncOutputStream.  This interface allows the consumer of the
+     *   stream to be notified when the stream can again accept more data.
+     *
+     * OPEN_UNBUFFERED
+     *   If specified, the resulting stream may not support WriteSegments and
+     *   WriteFrom.  WriteSegments and WriteFrom are only guaranteed to be
+     *   implemented when this flag is NOT specified.
+     *
+     * @param aFlags
+     *        optional transport specific flags.
+     * @param aSegmentSize
+     *        if OPEN_UNBUFFERED is not set, then this parameter specifies the
+     *        size of each buffer segment (pass 0 to use default value).
+     * @param aSegmentCount
+     *        if OPEN_UNBUFFERED is not set, then this parameter specifies the
+     *        maximum number of buffer segments (pass 0 to use default value).
+     */
+</code></pre>
+
+<p><code>nsIOutputStream openOutputStream (in unsigned long aFlags, in unsigned long aSegmentSize, in unsigned long aSegmentCount);</code></p>
+</div><h4 id='method.Close' class="method"><span id='Close.v' class='invisible'><code>pub unsafe fn <a href='#method.Close' class='fnname'>Close</a>(&amp;self, aReason: <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITransport.rs.html#268-270' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Close the transport and any open streams.
+     *
+     * @param aReason
+     *        the reason for closing the stream.
+     */
+</code></pre>
+
+<p><code>void close (in nsresult aReason);</code></p>
+</div><h4 id='method.SetEventSink' class="method"><span id='SetEventSink.v' class='invisible'><code>pub unsafe fn <a href='#method.SetEventSink' class='fnname'>SetEventSink</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSink: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITransportEventSink.html" title="struct xpcom::interfaces::nsITransportEventSink">nsITransportEventSink</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEventTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITransport.rs.html#289-291' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Set the transport event sink.
+     *
+     * @param aSink
+     *        receives transport layer notifications
+     * @param aEventTarget
+     *        indicates the event target to which the notifications should
+     *        be delivered.  if NULL, then the notifications may occur on
+     *        any thread.
+     */
+</code></pre>
+
+<p><code>void setEventSink (in nsITransportEventSink aSink, in nsIEventTarget aEventTarget);</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISocketTransport.html" title="struct xpcom::interfaces::nsISocketTransport">nsISocketTransport</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#42-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2032277553</span>, <span class="number">34274</span>, <span class="number">17320</span>, [<span class="number">129</span>, <span class="number">82</span>, <span class="number">5</span>, <span class="number">215</span>, <span class="number">125</span>, <span class="number">111</span>, <span class="number">222</span>, <span class="number">49</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISocketTransport.html" title="struct xpcom::interfaces::nsISocketTransport">nsISocketTransport</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#49-58' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#51-53' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#55-57' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISocketTransport.html" title="struct xpcom::interfaces::nsISocketTransport">nsISocketTransport</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#89-97' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsITransport.html" title="struct xpcom::interfaces::nsITransport">nsITransport</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsITransport.html" title="struct xpcom::interfaces::nsITransport">nsITransport</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISocketTransport.rs.html#92-96' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

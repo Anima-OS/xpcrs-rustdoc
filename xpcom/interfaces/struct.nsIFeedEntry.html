@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIFeedEntry` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIFeedEntry">
+
+    <title>xpcom::interfaces::nsIFeedEntry - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIFeedEntry</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetSummary">GetSummary</a><a href="#method.SetSummary">SetSummary</a><a href="#method.GetPublished">GetPublished</a><a href="#method.SetPublished">SetPublished</a><a href="#method.GetContent">GetContent</a><a href="#method.SetContent">SetContent</a><a href="#method.GetEnclosures">GetEnclosures</a><a href="#method.SetEnclosures">SetEnclosures</a><a href="#method.GetMediaContent">GetMediaContent</a><a href="#method.SetMediaContent">SetMediaContent</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIFeedContainer&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetId">GetId</a><a href="#method.SetId">SetId</a><a href="#method.GetFields">GetFields</a><a href="#method.SetFields">SetFields</a><a href="#method.GetTitle">GetTitle</a><a href="#method.SetTitle">SetTitle</a><a href="#method.GetLink">GetLink</a><a href="#method.SetLink">SetLink</a><a href="#method.GetLinks">GetLinks</a><a href="#method.SetLinks">SetLinks</a><a href="#method.GetCategories">GetCategories</a><a href="#method.SetCategories">SetCategories</a><a href="#method.GetRights">GetRights</a><a href="#method.SetRights">SetRights</a><a href="#method.GetAuthors">GetAuthors</a><a href="#method.SetAuthors">SetAuthors</a><a href="#method.GetContributors">GetContributors</a><a href="#method.SetContributors">SetContributors</a><a href="#method.GetUpdated">GetUpdated</a><a href="#method.SetUpdated">SetUpdated</a><a href="#method.Normalize">Normalize</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIFeedEntry', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIFeedEntry</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#23-32' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIFeedEntry { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIFeedEntry : nsIFeedContainer</code></p>
+
+<pre><code class="language-text">/**
+ * An nsIFeedEntry represents an Atom or RSS entry/item. Summary
+ * and/or full-text content may be available, but callers will have to
+ * check both.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIFeedEntry.html" title="struct xpcom::interfaces::nsIFeedEntry">nsIFeedEntry</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#72-78' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIFeedEntryCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIFeedEntry</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIFeedEntry.html" title="struct xpcom::interfaces::nsIFeedEntry">nsIFeedEntry</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#149-301' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetSummary' class="method"><span id='GetSummary.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSummary' class='fnname'>GetSummary</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSummary: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFeedTextConstruct.html" title="struct xpcom::interfaces::nsIFeedTextConstruct">nsIFeedTextConstruct</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#162-164' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Uses description, subtitle, summary, content and extensions
+  * to generate a summary.
+  *
+  */
+</code></pre>
+
+<p><code>attribute nsIFeedTextConstruct summary;</code></p>
+</div><h4 id='method.SetSummary' class="method"><span id='SetSummary.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSummary' class='fnname'>SetSummary</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSummary: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFeedTextConstruct.html" title="struct xpcom::interfaces::nsIFeedTextConstruct">nsIFeedTextConstruct</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#178-180' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Uses description, subtitle, summary, content and extensions
+  * to generate a summary.
+  *
+  */
+</code></pre>
+
+<p><code>attribute nsIFeedTextConstruct summary;</code></p>
+</div><h4 id='method.GetPublished' class="method"><span id='GetPublished.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPublished' class='fnname'>GetPublished</a>(&amp;self, aPublished: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#193-195' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The date the entry was published, in RFC822 form. Parsable by JS
+   * and mail code.
+   */
+</code></pre>
+
+<p><code>attribute AString published;</code></p>
+</div><h4 id='method.SetPublished' class="method"><span id='SetPublished.v' class='invisible'><code>pub unsafe fn <a href='#method.SetPublished' class='fnname'>SetPublished</a>(&amp;self, aPublished: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#208-210' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The date the entry was published, in RFC822 form. Parsable by JS
+   * and mail code.
+   */
+</code></pre>
+
+<p><code>attribute AString published;</code></p>
+</div><h4 id='method.GetContent' class="method"><span id='GetContent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContent' class='fnname'>GetContent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFeedTextConstruct.html" title="struct xpcom::interfaces::nsIFeedTextConstruct">nsIFeedTextConstruct</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#224-226' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Uses atom:content and content:encoded to provide
+  * a &#39;full text&#39; view of an entry.
+  *
+  */
+</code></pre>
+
+<p><code>attribute nsIFeedTextConstruct content;</code></p>
+</div><h4 id='method.SetContent' class="method"><span id='SetContent.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContent' class='fnname'>SetContent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFeedTextConstruct.html" title="struct xpcom::interfaces::nsIFeedTextConstruct">nsIFeedTextConstruct</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#240-242' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Uses atom:content and content:encoded to provide
+  * a &#39;full text&#39; view of an entry.
+  *
+  */
+</code></pre>
+
+<p><code>attribute nsIFeedTextConstruct content;</code></p>
+</div><h4 id='method.GetEnclosures' class="method"><span id='GetEnclosures.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEnclosures' class='fnname'>GetEnclosures</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEnclosures: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#254-256' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Enclosures are podcasts, photocasts, etc.
+  */
+</code></pre>
+
+<p><code>attribute nsIArray enclosures;</code></p>
+</div><h4 id='method.SetEnclosures' class="method"><span id='SetEnclosures.v' class='invisible'><code>pub unsafe fn <a href='#method.SetEnclosures' class='fnname'>SetEnclosures</a>(&amp;self, aEnclosures: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#268-270' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Enclosures are podcasts, photocasts, etc.
+  */
+</code></pre>
+
+<p><code>attribute nsIArray enclosures;</code></p>
+</div><h4 id='method.GetMediaContent' class="method"><span id='GetMediaContent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMediaContent' class='fnname'>GetMediaContent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMediaContent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#282-284' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Enclosures, etc. that might be displayed inline.
+  */
+</code></pre>
+
+<p><code>attribute nsIArray mediaContent;</code></p>
+</div><h4 id='method.SetMediaContent' class="method"><span id='SetMediaContent.v' class='invisible'><code>pub unsafe fn <a href='#method.SetMediaContent' class='fnname'>SetMediaContent</a>(&amp;self, aMediaContent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#296-298' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Enclosures, etc. that might be displayed inline.
+  */
+</code></pre>
+
+<p><code>attribute nsIArray mediaContent;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIFeedContainer.html" title="struct xpcom::interfaces::nsIFeedContainer">nsIFeedContainer</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIFeedContainerCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#75-77' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIFeedContainer</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.GetId' class="method"><span id='GetId.v' class='invisible'><code>pub unsafe fn <a href='#method.GetId' class='fnname'>GetId</a>(&amp;self, aId: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#194-196' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Many feeds contain an ID distinct from their URI, and
+  * entries have standard fields for this in all major formats.
+  */
+</code></pre>
+
+<p><code>attribute AString id;</code></p>
+</div><h4 id='method.SetId' class="method"><span id='SetId.v' class='invisible'><code>pub unsafe fn <a href='#method.SetId' class='fnname'>SetId</a>(&amp;self, aId: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#209-211' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Many feeds contain an ID distinct from their URI, and
+  * entries have standard fields for this in all major formats.
+  */
+</code></pre>
+
+<p><code>attribute AString id;</code></p>
+</div><h4 id='method.GetFields' class="method"><span id='GetFields.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFields' class='fnname'>GetFields</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFields: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIWritablePropertyBag2.html" title="struct xpcom::interfaces::nsIWritablePropertyBag2">nsIWritablePropertyBag2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#230-232' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * The fields found in the document. Common Atom
+  * and RSS fields are normalized. This includes some namespaced
+  * extensions such as dc:subject and content:encoded.
+  * Consumers can avoid normalization by checking the feed type
+  * and accessing specific fields.
+  *
+  * Common namespaces are accessed using prefixes, like get(&quot;dc:subject&quot;);.
+  * See nsIFeedResult::registerExtensionPrefix.
+  */
+</code></pre>
+
+<p><code>attribute nsIWritablePropertyBag2 fields;</code></p>
+</div><h4 id='method.SetFields' class="method"><span id='SetFields.v' class='invisible'><code>pub unsafe fn <a href='#method.SetFields' class='fnname'>SetFields</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFields: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIWritablePropertyBag2.html" title="struct xpcom::interfaces::nsIWritablePropertyBag2">nsIWritablePropertyBag2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#251-253' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * The fields found in the document. Common Atom
+  * and RSS fields are normalized. This includes some namespaced
+  * extensions such as dc:subject and content:encoded.
+  * Consumers can avoid normalization by checking the feed type
+  * and accessing specific fields.
+  *
+  * Common namespaces are accessed using prefixes, like get(&quot;dc:subject&quot;);.
+  * See nsIFeedResult::registerExtensionPrefix.
+  */
+</code></pre>
+
+<p><code>attribute nsIWritablePropertyBag2 fields;</code></p>
+</div><h4 id='method.GetTitle' class="method"><span id='GetTitle.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTitle' class='fnname'>GetTitle</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTitle: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFeedTextConstruct.html" title="struct xpcom::interfaces::nsIFeedTextConstruct">nsIFeedTextConstruct</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#266-268' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sometimes there&#39;s no title, or the title contains markup, so take
+   * care in decoding the attribute.
+   */
+</code></pre>
+
+<p><code>attribute nsIFeedTextConstruct title;</code></p>
+</div><h4 id='method.SetTitle' class="method"><span id='SetTitle.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTitle' class='fnname'>SetTitle</a>(&amp;self, aTitle: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFeedTextConstruct.html" title="struct xpcom::interfaces::nsIFeedTextConstruct">nsIFeedTextConstruct</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#281-283' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sometimes there&#39;s no title, or the title contains markup, so take
+   * care in decoding the attribute.
+   */
+</code></pre>
+
+<p><code>attribute nsIFeedTextConstruct title;</code></p>
+</div><h4 id='method.GetLink' class="method"><span id='GetLink.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLink' class='fnname'>GetLink</a>(&amp;self, aLink: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#295-297' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Returns the primary link for the feed or entry.
+  */
+</code></pre>
+
+<p><code>attribute nsIURI link;</code></p>
+</div><h4 id='method.SetLink' class="method"><span id='SetLink.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLink' class='fnname'>SetLink</a>(&amp;self, aLink: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#309-311' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Returns the primary link for the feed or entry.
+  */
+</code></pre>
+
+<p><code>attribute nsIURI link;</code></p>
+</div><h4 id='method.GetLinks' class="method"><span id='GetLinks.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLinks' class='fnname'>GetLinks</a>(&amp;self, aLinks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#323-325' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Returns all links for a feed or entry.
+  */
+</code></pre>
+
+<p><code>attribute nsIArray links;</code></p>
+</div><h4 id='method.SetLinks' class="method"><span id='SetLinks.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLinks' class='fnname'>SetLinks</a>(&amp;self, aLinks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#337-339' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Returns all links for a feed or entry.
+  */
+</code></pre>
+
+<p><code>attribute nsIArray links;</code></p>
+</div><h4 id='method.GetCategories' class="method"><span id='GetCategories.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCategories' class='fnname'>GetCategories</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCategories: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#351-353' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Returns the categories found in a feed or entry.
+  */
+</code></pre>
+
+<p><code>attribute nsIArray categories;</code></p>
+</div><h4 id='method.SetCategories' class="method"><span id='SetCategories.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCategories' class='fnname'>SetCategories</a>(&amp;self, aCategories: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#365-367' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Returns the categories found in a feed or entry.
+  */
+</code></pre>
+
+<p><code>attribute nsIArray categories;</code></p>
+</div><h4 id='method.GetRights' class="method"><span id='GetRights.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRights' class='fnname'>GetRights</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRights: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFeedTextConstruct.html" title="struct xpcom::interfaces::nsIFeedTextConstruct">nsIFeedTextConstruct</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#379-381' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The rights or license associated with a feed or entry.
+   */
+</code></pre>
+
+<p><code>attribute nsIFeedTextConstruct rights;</code></p>
+</div><h4 id='method.SetRights' class="method"><span id='SetRights.v' class='invisible'><code>pub unsafe fn <a href='#method.SetRights' class='fnname'>SetRights</a>(&amp;self, aRights: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFeedTextConstruct.html" title="struct xpcom::interfaces::nsIFeedTextConstruct">nsIFeedTextConstruct</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#393-395' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The rights or license associated with a feed or entry.
+   */
+</code></pre>
+
+<p><code>attribute nsIFeedTextConstruct rights;</code></p>
+</div><h4 id='method.GetAuthors' class="method"><span id='GetAuthors.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAuthors' class='fnname'>GetAuthors</a>(&amp;self, aAuthors: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#407-409' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A list of nsIFeedPersons that authored the feed.
+   */
+</code></pre>
+
+<p><code>attribute nsIArray authors;</code></p>
+</div><h4 id='method.SetAuthors' class="method"><span id='SetAuthors.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAuthors' class='fnname'>SetAuthors</a>(&amp;self, aAuthors: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#421-423' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A list of nsIFeedPersons that authored the feed.
+   */
+</code></pre>
+
+<p><code>attribute nsIArray authors;</code></p>
+</div><h4 id='method.GetContributors' class="method"><span id='GetContributors.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContributors' class='fnname'>GetContributors</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContributors: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#435-437' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A list of nsIFeedPersons that contributed to the feed.
+   */
+</code></pre>
+
+<p><code>attribute nsIArray contributors;</code></p>
+</div><h4 id='method.SetContributors' class="method"><span id='SetContributors.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContributors' class='fnname'>SetContributors</a>(&amp;self, aContributors: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#449-451' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * A list of nsIFeedPersons that contributed to the feed.
+   */
+</code></pre>
+
+<p><code>attribute nsIArray contributors;</code></p>
+</div><h4 id='method.GetUpdated' class="method"><span id='GetUpdated.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUpdated' class='fnname'>GetUpdated</a>(&amp;self, aUpdated: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#464-466' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The date the feed was updated, in RFC822 form. Parsable by JS
+   * and mail code.
+   */
+</code></pre>
+
+<p><code>attribute AString updated;</code></p>
+</div><h4 id='method.SetUpdated' class="method"><span id='SetUpdated.v' class='invisible'><code>pub unsafe fn <a href='#method.SetUpdated' class='fnname'>SetUpdated</a>(&amp;self, aUpdated: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#479-481' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The date the feed was updated, in RFC822 form. Parsable by JS
+   * and mail code.
+   */
+</code></pre>
+
+<p><code>attribute AString updated;</code></p>
+</div><h4 id='method.Normalize' class="method"><span id='Normalize.v' class='invisible'><code>pub unsafe fn <a href='#method.Normalize' class='fnname'>Normalize</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedContainer.rs.html#493-495' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+  * Syncs a container&#39;s fields with its convenience attributes.
+  */
+</code></pre>
+
+<p><code>void normalize ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIFeedEntry.html" title="struct xpcom::interfaces::nsIFeedEntry">nsIFeedEntry</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#37-40' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">834655668</span>, <span class="number">36853</span>, <span class="number">19453</span>, [<span class="number">168</span>, <span class="number">203</span>, <span class="number">179</span>, <span class="number">223</span>, <span class="number">189</span>, <span class="number">79</span>, <span class="number">10</span>, <span class="number">91</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIFeedEntry.html" title="struct xpcom::interfaces::nsIFeedEntry">nsIFeedEntry</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#44-53' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#46-48' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#50-52' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIFeedEntry.html" title="struct xpcom::interfaces::nsIFeedEntry">nsIFeedEntry</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#84-92' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIFeedContainer.html" title="struct xpcom::interfaces::nsIFeedContainer">nsIFeedContainer</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIFeedContainer.html" title="struct xpcom::interfaces::nsIFeedContainer">nsIFeedContainer</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIFeedEntry.rs.html#87-91' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

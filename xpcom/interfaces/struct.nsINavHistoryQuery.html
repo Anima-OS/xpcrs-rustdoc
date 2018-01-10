@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsINavHistoryQuery` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsINavHistoryQuery">
+
+    <title>xpcom::interfaces::nsINavHistoryQuery - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsINavHistoryQuery</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetBeginTime">GetBeginTime</a><a href="#method.SetBeginTime">SetBeginTime</a><a href="#method.GetBeginTimeReference">GetBeginTimeReference</a><a href="#method.SetBeginTimeReference">SetBeginTimeReference</a><a href="#method.GetHasBeginTime">GetHasBeginTime</a><a href="#method.GetAbsoluteBeginTime">GetAbsoluteBeginTime</a><a href="#method.GetEndTime">GetEndTime</a><a href="#method.SetEndTime">SetEndTime</a><a href="#method.GetEndTimeReference">GetEndTimeReference</a><a href="#method.SetEndTimeReference">SetEndTimeReference</a><a href="#method.GetHasEndTime">GetHasEndTime</a><a href="#method.GetAbsoluteEndTime">GetAbsoluteEndTime</a><a href="#method.GetSearchTerms">GetSearchTerms</a><a href="#method.SetSearchTerms">SetSearchTerms</a><a href="#method.GetHasSearchTerms">GetHasSearchTerms</a><a href="#method.GetMinVisits">GetMinVisits</a><a href="#method.SetMinVisits">SetMinVisits</a><a href="#method.GetMaxVisits">GetMaxVisits</a><a href="#method.SetMaxVisits">SetMaxVisits</a><a href="#method.SetTransitions">SetTransitions</a><a href="#method.GetTransitions">GetTransitions</a><a href="#method.GetTransitionCount">GetTransitionCount</a><a href="#method.GetOnlyBookmarked">GetOnlyBookmarked</a><a href="#method.SetOnlyBookmarked">SetOnlyBookmarked</a><a href="#method.GetDomainIsHost">GetDomainIsHost</a><a href="#method.SetDomainIsHost">SetDomainIsHost</a><a href="#method.GetDomain">GetDomain</a><a href="#method.SetDomain">SetDomain</a><a href="#method.GetHasDomain">GetHasDomain</a><a href="#method.GetUri">GetUri</a><a href="#method.SetUri">SetUri</a><a href="#method.GetHasUri">GetHasUri</a><a href="#method.GetAnnotationIsNot">GetAnnotationIsNot</a><a href="#method.SetAnnotationIsNot">SetAnnotationIsNot</a><a href="#method.GetAnnotation">GetAnnotation</a><a href="#method.SetAnnotation">SetAnnotation</a><a href="#method.GetHasAnnotation">GetHasAnnotation</a><a href="#method.GetTags">GetTags</a><a href="#method.SetTags">SetTags</a><a href="#method.GetTagsAreNot">GetTagsAreNot</a><a href="#method.SetTagsAreNot">SetTagsAreNot</a><a href="#method.GetFolders">GetFolders</a><a href="#method.GetFolderCount">GetFolderCount</a><a href="#method.SetFolders">SetFolders</a><a href="#method.Clone">Clone</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsINavHistoryQuery', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsINavHistoryQuery</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2387-2396' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsINavHistoryQuery { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsINavHistoryQuery : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQuery.html" title="struct xpcom::interfaces::nsINavHistoryQuery">nsINavHistoryQuery</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2436-2442' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsINavHistoryQueryCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2439-2441' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsINavHistoryQuery</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQuery.html" title="struct xpcom::interfaces::nsINavHistoryQuery">nsINavHistoryQuery</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2618-3236' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.TIME_RELATIVE_EPOCH' class="associatedconstant"><span id='TIME_RELATIVE_EPOCH.v' class='invisible'><code>pub const <a href='#associatedconstant.TIME_RELATIVE_EPOCH' class="constant"><b>TIME_RELATIVE_EPOCH</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TIME_RELATIVE_EPOCH</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+ * This object encapsulates all the query parameters you&#39;re likely to need
+ * when building up history UI. All parameters are ANDed together.
+ *
+ * This is not intended to be a super-general query mechanism. This was designed
+ * so that most queries can be done in only one SQL query. This is important
+ * because, if the user has their profile on a networked drive, query latency
+ * can be non-negligible.
+ */
+/**
+   * Time range for results (INCLUSIVE). The *TimeReference is one of the
+   * constants TIME_RELATIVE_* which indicates how to interpret the
+   * corresponding time value.
+   *   TIME_RELATIVE_EPOCH (default):
+   *     The time is relative to Jan 1 1970 GMT, (this is a normal PRTime)
+   *   TIME_RELATIVE_TODAY:
+   *     The time is relative to this morning at midnight. Normally used for
+   *     queries relative to today. For example, a &quot;past week&quot; query would be
+   *     today-6 days -&gt; today+1 day
+   *   TIME_RELATIVE_NOW:
+   *     The time is relative to right now.
+   *
+   * Note: PRTime is in MICROseconds since 1 Jan 1970. Javascript date objects
+   * are expressed in MILLIseconds since 1 Jan 1970.
+   *
+   * As a special case, a 0 time relative to TIME_RELATIVE_EPOCH indicates that
+   * the time is not part of the query. This is the default, so an empty query
+   * will match any time. The has* functions return whether the corresponding
+   * time is considered.
+   *
+   * You can read absolute*Time to get the time value that the currently loaded
+   * reference points + offset resolve to.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.TIME_RELATIVE_TODAY' class="associatedconstant"><span id='TIME_RELATIVE_TODAY.v' class='invisible'><code>pub const <a href='#associatedconstant.TIME_RELATIVE_TODAY' class="constant"><b>TIME_RELATIVE_TODAY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TIME_RELATIVE_TODAY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.TIME_RELATIVE_NOW' class="associatedconstant"><span id='TIME_RELATIVE_NOW.v' class='invisible'><code>pub const <a href='#associatedconstant.TIME_RELATIVE_NOW' class="constant"><b>TIME_RELATIVE_NOW</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TIME_RELATIVE_NOW</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='method.GetBeginTime' class="method"><span id='GetBeginTime.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBeginTime' class='fnname'>GetBeginTime</a>(&amp;self, aBeginTime: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2667-2669' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute PRTime beginTime;</code></p>
+</div><h4 id='method.SetBeginTime' class="method"><span id='SetBeginTime.v' class='invisible'><code>pub unsafe fn <a href='#method.SetBeginTime' class='fnname'>SetBeginTime</a>(&amp;self, aBeginTime: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2675-2677' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute PRTime beginTime;</code></p>
+</div><h4 id='method.GetBeginTimeReference' class="method"><span id='GetBeginTimeReference.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBeginTimeReference' class='fnname'>GetBeginTimeReference</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBeginTimeReference: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2683-2685' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned long beginTimeReference;</code></p>
+</div><h4 id='method.SetBeginTimeReference' class="method"><span id='SetBeginTimeReference.v' class='invisible'><code>pub unsafe fn <a href='#method.SetBeginTimeReference' class='fnname'>SetBeginTimeReference</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBeginTimeReference: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2691-2693' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned long beginTimeReference;</code></p>
+</div><h4 id='method.GetHasBeginTime' class="method"><span id='GetHasBeginTime.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHasBeginTime' class='fnname'>GetHasBeginTime</a>(&amp;self, aHasBeginTime: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2699-2701' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean hasBeginTime;</code></p>
+</div><h4 id='method.GetAbsoluteBeginTime' class="method"><span id='GetAbsoluteBeginTime.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAbsoluteBeginTime' class='fnname'>GetAbsoluteBeginTime</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAbsoluteBeginTime: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2707-2709' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute PRTime absoluteBeginTime;</code></p>
+</div><h4 id='method.GetEndTime' class="method"><span id='GetEndTime.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEndTime' class='fnname'>GetEndTime</a>(&amp;self, aEndTime: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2715-2717' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute PRTime endTime;</code></p>
+</div><h4 id='method.SetEndTime' class="method"><span id='SetEndTime.v' class='invisible'><code>pub unsafe fn <a href='#method.SetEndTime' class='fnname'>SetEndTime</a>(&amp;self, aEndTime: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2723-2725' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute PRTime endTime;</code></p>
+</div><h4 id='method.GetEndTimeReference' class="method"><span id='GetEndTimeReference.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEndTimeReference' class='fnname'>GetEndTimeReference</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEndTimeReference: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2731-2733' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned long endTimeReference;</code></p>
+</div><h4 id='method.SetEndTimeReference' class="method"><span id='SetEndTimeReference.v' class='invisible'><code>pub unsafe fn <a href='#method.SetEndTimeReference' class='fnname'>SetEndTimeReference</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEndTimeReference: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2739-2741' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute unsigned long endTimeReference;</code></p>
+</div><h4 id='method.GetHasEndTime' class="method"><span id='GetHasEndTime.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHasEndTime' class='fnname'>GetHasEndTime</a>(&amp;self, aHasEndTime: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2747-2749' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean hasEndTime;</code></p>
+</div><h4 id='method.GetAbsoluteEndTime' class="method"><span id='GetAbsoluteEndTime.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAbsoluteEndTime' class='fnname'>GetAbsoluteEndTime</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAbsoluteEndTime: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2755-2757' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute PRTime absoluteEndTime;</code></p>
+</div><h4 id='method.GetSearchTerms' class="method"><span id='GetSearchTerms.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSearchTerms' class='fnname'>GetSearchTerms</a>(&amp;self, aSearchTerms: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2769-2771' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Text search terms.
+   */
+</code></pre>
+
+<p><code>attribute AString searchTerms;</code></p>
+</div><h4 id='method.SetSearchTerms' class="method"><span id='SetSearchTerms.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSearchTerms' class='fnname'>SetSearchTerms</a>(&amp;self, aSearchTerms: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2783-2785' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Text search terms.
+   */
+</code></pre>
+
+<p><code>attribute AString searchTerms;</code></p>
+</div><h4 id='method.GetHasSearchTerms' class="method"><span id='GetHasSearchTerms.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHasSearchTerms' class='fnname'>GetHasSearchTerms</a>(&amp;self, aHasSearchTerms: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2791-2793' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean hasSearchTerms;</code></p>
+</div><h4 id='method.GetMinVisits' class="method"><span id='GetMinVisits.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMinVisits' class='fnname'>GetMinVisits</a>(&amp;self, aMinVisits: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2807-2809' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set lower or upper limits for how many times an item has been
+   * visited.  The default is -1, and in that case all items are
+   * matched regardless of their visit count.
+   */
+</code></pre>
+
+<p><code>attribute long minVisits;</code></p>
+</div><h4 id='method.SetMinVisits' class="method"><span id='SetMinVisits.v' class='invisible'><code>pub unsafe fn <a href='#method.SetMinVisits' class='fnname'>SetMinVisits</a>(&amp;self, aMinVisits: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2823-2825' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set lower or upper limits for how many times an item has been
+   * visited.  The default is -1, and in that case all items are
+   * matched regardless of their visit count.
+   */
+</code></pre>
+
+<p><code>attribute long minVisits;</code></p>
+</div><h4 id='method.GetMaxVisits' class="method"><span id='GetMaxVisits.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMaxVisits' class='fnname'>GetMaxVisits</a>(&amp;self, aMaxVisits: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2831-2833' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute long maxVisits;</code></p>
+</div><h4 id='method.SetMaxVisits' class="method"><span id='SetMaxVisits.v' class='invisible'><code>pub unsafe fn <a href='#method.SetMaxVisits' class='fnname'>SetMaxVisits</a>(&amp;self, aMaxVisits: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2839-2841' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute long maxVisits;</code></p>
+</div><h4 id='method.SetTransitions' class="method"><span id='SetTransitions.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTransitions' class='fnname'>SetTransitions</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;transitions: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;count: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2857-2859' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When the set of transitions is nonempty, results are limited to pages which
+   * have at least one visit for each of the transition types.
+   * @note: For searching on more than one transition this can be very slow.
+   *
+   * Limit results to the specified list of transition types.
+   */
+</code></pre>
+
+<p><code>void setTransitions ([array, size_is (count), const] in unsigned long transitions, in unsigned long count);</code></p>
+</div><h4 id='method.GetTransitions' class="method"><span id='GetTransitions.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTransitions' class='fnname'>GetTransitions</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;count: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;transitions: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2871-2873' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the transitions set for this query.
+   */
+</code></pre>
+
+<p><code>void getTransitions ([optional] out unsigned long count, [array, size_is (count), retval] out unsigned long transitions);</code></p>
+</div><h4 id='method.GetTransitionCount' class="method"><span id='GetTransitionCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTransitionCount' class='fnname'>GetTransitionCount</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTransitionCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2885-2887' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the count of the set query transitions.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long transitionCount;</code></p>
+</div><h4 id='method.GetOnlyBookmarked' class="method"><span id='GetOnlyBookmarked.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOnlyBookmarked' class='fnname'>GetOnlyBookmarked</a>(&amp;self, aOnlyBookmarked: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2900-2902' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When set, returns only bookmarked items, when unset, returns anything. Setting this
+   * is equivalent to listing all bookmark folders in the &#39;folders&#39; parameter.
+   */
+</code></pre>
+
+<p><code>attribute boolean onlyBookmarked;</code></p>
+</div><h4 id='method.SetOnlyBookmarked' class="method"><span id='SetOnlyBookmarked.v' class='invisible'><code>pub unsafe fn <a href='#method.SetOnlyBookmarked' class='fnname'>SetOnlyBookmarked</a>(&amp;self, aOnlyBookmarked: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2915-2917' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * When set, returns only bookmarked items, when unset, returns anything. Setting this
+   * is equivalent to listing all bookmark folders in the &#39;folders&#39; parameter.
+   */
+</code></pre>
+
+<p><code>attribute boolean onlyBookmarked;</code></p>
+</div><h4 id='method.GetDomainIsHost' class="method"><span id='GetDomainIsHost.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDomainIsHost' class='fnname'>GetDomainIsHost</a>(&amp;self, aDomainIsHost: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2930-2932' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This controls the meaning of &#39;domain&#39;, and whether it is an exact match
+   * &#39;domainIsHost&#39; = true, or hierarchical (= false).
+   */
+</code></pre>
+
+<p><code>attribute boolean domainIsHost;</code></p>
+</div><h4 id='method.SetDomainIsHost' class="method"><span id='SetDomainIsHost.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDomainIsHost' class='fnname'>SetDomainIsHost</a>(&amp;self, aDomainIsHost: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2945-2947' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This controls the meaning of &#39;domain&#39;, and whether it is an exact match
+   * &#39;domainIsHost&#39; = true, or hierarchical (= false).
+   */
+</code></pre>
+
+<p><code>attribute boolean domainIsHost;</code></p>
+</div><h4 id='method.GetDomain' class="method"><span id='GetDomain.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDomain' class='fnname'>GetDomain</a>(&amp;self, aDomain: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2966-2968' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is the host or domain name (controlled by domainIsHost). When
+   * domainIsHost, domain only does exact matching on host names. Otherwise,
+   * it will return anything whose host name ends in &#39;domain&#39;.
+   *
+   * This one is a little different than most. Setting it to an empty string
+   * is a real query and will match any URI that has no host name (local files
+   * and such). Set this to NULL (in C++ use SetIsVoid) if you don&#39;t want
+   * domain matching.
+   */
+</code></pre>
+
+<p><code>attribute AUTF8String domain;</code></p>
+</div><h4 id='method.SetDomain' class="method"><span id='SetDomain.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDomain' class='fnname'>SetDomain</a>(&amp;self, aDomain: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2987-2989' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is the host or domain name (controlled by domainIsHost). When
+   * domainIsHost, domain only does exact matching on host names. Otherwise,
+   * it will return anything whose host name ends in &#39;domain&#39;.
+   *
+   * This one is a little different than most. Setting it to an empty string
+   * is a real query and will match any URI that has no host name (local files
+   * and such). Set this to NULL (in C++ use SetIsVoid) if you don&#39;t want
+   * domain matching.
+   */
+</code></pre>
+
+<p><code>attribute AUTF8String domain;</code></p>
+</div><h4 id='method.GetHasDomain' class="method"><span id='GetHasDomain.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHasDomain' class='fnname'>GetHasDomain</a>(&amp;self, aHasDomain: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2995-2997' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean hasDomain;</code></p>
+</div><h4 id='method.GetUri' class="method"><span id='GetUri.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUri' class='fnname'>GetUri</a>(&amp;self, aUri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3010-3012' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is a URI to match, to, for example, find out every time you visited
+   * a given URI. This is an exact match.
+   */
+</code></pre>
+
+<p><code>attribute nsIURI uri;</code></p>
+</div><h4 id='method.SetUri' class="method"><span id='SetUri.v' class='invisible'><code>pub unsafe fn <a href='#method.SetUri' class='fnname'>SetUri</a>(&amp;self, aUri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3025-3027' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This is a URI to match, to, for example, find out every time you visited
+   * a given URI. This is an exact match.
+   */
+</code></pre>
+
+<p><code>attribute nsIURI uri;</code></p>
+</div><h4 id='method.GetHasUri' class="method"><span id='GetHasUri.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHasUri' class='fnname'>GetHasUri</a>(&amp;self, aHasUri: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3033-3035' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean hasUri;</code></p>
+</div><h4 id='method.GetAnnotationIsNot' class="method"><span id='GetAnnotationIsNot.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAnnotationIsNot' class='fnname'>GetAnnotationIsNot</a>(&amp;self, aAnnotationIsNot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3057-3059' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Test for existence or non-existence of a given annotation. We don&#39;t
+   * currently support &gt;1 annotation name per query. If &#39;annotationIsNot&#39; is
+   * true, we test for the non-existence of the specified annotation.
+   *
+   * Testing for not annotation will do the same thing as a normal query and
+   * remove everything that doesn&#39;t have that annotation. Asking for things
+   * that DO have a given annotation is a little different. It also includes
+   * things that have never been visited. This allows place queries to be
+   * returned as well as anything else that may have been tagged with an
+   * annotation. This will only work for RESULTS_AS_URI since there will be
+   * no visits for these items.
+   */
+</code></pre>
+
+<p><code>attribute boolean annotationIsNot;</code></p>
+</div><h4 id='method.SetAnnotationIsNot' class="method"><span id='SetAnnotationIsNot.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAnnotationIsNot' class='fnname'>SetAnnotationIsNot</a>(&amp;self, aAnnotationIsNot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3081-3083' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Test for existence or non-existence of a given annotation. We don&#39;t
+   * currently support &gt;1 annotation name per query. If &#39;annotationIsNot&#39; is
+   * true, we test for the non-existence of the specified annotation.
+   *
+   * Testing for not annotation will do the same thing as a normal query and
+   * remove everything that doesn&#39;t have that annotation. Asking for things
+   * that DO have a given annotation is a little different. It also includes
+   * things that have never been visited. This allows place queries to be
+   * returned as well as anything else that may have been tagged with an
+   * annotation. This will only work for RESULTS_AS_URI since there will be
+   * no visits for these items.
+   */
+</code></pre>
+
+<p><code>attribute boolean annotationIsNot;</code></p>
+</div><h4 id='method.GetAnnotation' class="method"><span id='GetAnnotation.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAnnotation' class='fnname'>GetAnnotation</a>(&amp;self, aAnnotation: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3089-3091' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute AUTF8String annotation;</code></p>
+</div><h4 id='method.SetAnnotation' class="method"><span id='SetAnnotation.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAnnotation' class='fnname'>SetAnnotation</a>(&amp;self, aAnnotation: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3097-3099' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute AUTF8String annotation;</code></p>
+</div><h4 id='method.GetHasAnnotation' class="method"><span id='GetHasAnnotation.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHasAnnotation' class='fnname'>GetHasAnnotation</a>(&amp;self, aHasAnnotation: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3105-3107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute boolean hasAnnotation;</code></p>
+</div><h4 id='method.GetTags' class="method"><span id='GetTags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTags' class='fnname'>GetTags</a>(&amp;self, aTags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIVariant.html" title="struct xpcom::interfaces::nsIVariant">nsIVariant</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3126-3128' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Limit results to items that are tagged with all of the given tags.  This
+   * attribute must be set to an array of strings.  When called as a getter it
+   * will return an array of strings sorted ascending in lexicographical order.
+   * The array may be empty in either case.  Duplicate tags may be specified
+   * when setting the attribute, but the getter returns only unique tags.
+   *
+   * To search for items that are tagged with any given tags rather than all,
+   * multiple queries may be passed to nsINavHistoryService.executeQueries().
+   */
+</code></pre>
+
+<p><code>attribute nsIVariant tags;</code></p>
+</div><h4 id='method.SetTags' class="method"><span id='SetTags.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTags' class='fnname'>SetTags</a>(&amp;self, aTags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIVariant.html" title="struct xpcom::interfaces::nsIVariant">nsIVariant</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3147-3149' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Limit results to items that are tagged with all of the given tags.  This
+   * attribute must be set to an array of strings.  When called as a getter it
+   * will return an array of strings sorted ascending in lexicographical order.
+   * The array may be empty in either case.  Duplicate tags may be specified
+   * when setting the attribute, but the getter returns only unique tags.
+   *
+   * To search for items that are tagged with any given tags rather than all,
+   * multiple queries may be passed to nsINavHistoryService.executeQueries().
+   */
+</code></pre>
+
+<p><code>attribute nsIVariant tags;</code></p>
+</div><h4 id='method.GetTagsAreNot' class="method"><span id='GetTagsAreNot.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTagsAreNot' class='fnname'>GetTagsAreNot</a>(&amp;self, aTagsAreNot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3163-3165' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If &#39;tagsAreNot&#39; is true, the results are instead limited to items that
+   * are not tagged with any of the given tags.  This attribute is used in
+   * conjunction with the &#39;tags&#39; attribute.
+   */
+</code></pre>
+
+<p><code>attribute boolean tagsAreNot;</code></p>
+</div><h4 id='method.SetTagsAreNot' class="method"><span id='SetTagsAreNot.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTagsAreNot' class='fnname'>SetTagsAreNot</a>(&amp;self, aTagsAreNot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3179-3181' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * If &#39;tagsAreNot&#39; is true, the results are instead limited to items that
+   * are not tagged with any of the given tags.  This attribute is used in
+   * conjunction with the &#39;tags&#39; attribute.
+   */
+</code></pre>
+
+<p><code>attribute boolean tagsAreNot;</code></p>
+</div><h4 id='method.GetFolders' class="method"><span id='GetFolders.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFolders' class='fnname'>GetFolders</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;count: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;folders: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3193-3195' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Limit results to items that are in all of the given folders.
+   */
+</code></pre>
+
+<p><code>void getFolders ([optional] out unsigned long count, [array, size_is (count), retval] out long long folders);</code></p>
+</div><h4 id='method.GetFolderCount' class="method"><span id='GetFolderCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFolderCount' class='fnname'>GetFolderCount</a>(&amp;self, aFolderCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3201-3203' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute unsigned long folderCount;</code></p>
+</div><h4 id='method.SetFolders' class="method"><span id='SetFolders.v' class='invisible'><code>pub unsafe fn <a href='#method.SetFolders' class='fnname'>SetFolders</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;folders: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;folderCount: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3217-3219' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * For the special result type RESULTS_AS_TAG_CONTENTS we can define only
+   * one folder that must be a tag folder. This is not recursive so results
+   * will be returned from the first level of that folder.
+   */
+</code></pre>
+
+<p><code>void setFolders ([array, size_is (folderCount), const] in long long folders, in unsigned long folderCount);</code></p>
+</div><h4 id='method.Clone' class="method"><span id='Clone.v' class='invisible'><code>pub unsafe fn <a href='#method.Clone' class='fnname'>Clone</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQuery.html" title="struct xpcom::interfaces::nsINavHistoryQuery">nsINavHistoryQuery</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#3231-3233' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Creates a new query item with the same parameters of this one.
+   */
+</code></pre>
+
+<p><code>nsINavHistoryQuery clone ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQuery.html" title="struct xpcom::interfaces::nsINavHistoryQuery">nsINavHistoryQuery</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2401-2404' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3699879545</span>, <span class="number">8945</span>, <span class="number">19919</span>, [<span class="number">151</span>, <span class="number">91</span>, <span class="number">133</span>, <span class="number">43</span>, <span class="number">1</span>, <span class="number">210</span>, <span class="number">16</span>, <span class="number">203</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQuery.html" title="struct xpcom::interfaces::nsINavHistoryQuery">nsINavHistoryQuery</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2408-2417' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2410-2412' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2414-2416' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINavHistoryQuery.html" title="struct xpcom::interfaces::nsINavHistoryQuery">nsINavHistoryQuery</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2448-2456' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsINavHistoryService.rs.html#2451-2455' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

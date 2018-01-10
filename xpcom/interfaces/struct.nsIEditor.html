@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIEditor` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIEditor">
+
+    <title>xpcom::interfaces::nsIEditor - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIEditor</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetSelection">GetSelection</a><a href="#method.FinalizeSelection">FinalizeSelection</a><a href="#method.Init">Init</a><a href="#method.SetAttributeOrEquivalent">SetAttributeOrEquivalent</a><a href="#method.RemoveAttributeOrEquivalent">RemoveAttributeOrEquivalent</a><a href="#method.PostCreate">PostCreate</a><a href="#method.PreDestroy">PreDestroy</a><a href="#method.GetFlags">GetFlags</a><a href="#method.SetFlags">SetFlags</a><a href="#method.GetContentsMIMEType">GetContentsMIMEType</a><a href="#method.SetContentsMIMEType">SetContentsMIMEType</a><a href="#method.GetIsDocumentEditable">GetIsDocumentEditable</a><a href="#method.GetIsSelectionEditable">GetIsSelectionEditable</a><a href="#method.GetDocument">GetDocument</a><a href="#method.GetRootElement">GetRootElement</a><a href="#method.GetSelectionController">GetSelectionController</a><a href="#method.DeleteSelection">DeleteSelection</a><a href="#method.GetDocumentIsEmpty">GetDocumentIsEmpty</a><a href="#method.GetDocumentModified">GetDocumentModified</a><a href="#method.GetDocumentCharacterSet">GetDocumentCharacterSet</a><a href="#method.SetDocumentCharacterSet">SetDocumentCharacterSet</a><a href="#method.ResetModificationCount">ResetModificationCount</a><a href="#method.GetModificationCount">GetModificationCount</a><a href="#method.IncrementModificationCount">IncrementModificationCount</a><a href="#method.GetTransactionManager">GetTransactionManager</a><a href="#method.DoTransaction">DoTransaction</a><a href="#method.EnableUndo">EnableUndo</a><a href="#method.GetNumberOfUndoItems">GetNumberOfUndoItems</a><a href="#method.GetNumberOfRedoItems">GetNumberOfRedoItems</a><a href="#method.Undo">Undo</a><a href="#method.CanUndo">CanUndo</a><a href="#method.Redo">Redo</a><a href="#method.CanRedo">CanRedo</a><a href="#method.BeginTransaction">BeginTransaction</a><a href="#method.EndTransaction">EndTransaction</a><a href="#method.ShouldTxnSetSelection">ShouldTxnSetSelection</a><a href="#method.SetShouldTxnSetSelection">SetShouldTxnSetSelection</a><a href="#method.GetInlineSpellChecker">GetInlineSpellChecker</a><a href="#method.SyncRealTimeSpell">SyncRealTimeSpell</a><a href="#method.SetSpellcheckUserOverride">SetSpellcheckUserOverride</a><a href="#method.Cut">Cut</a><a href="#method.CanCut">CanCut</a><a href="#method.Copy">Copy</a><a href="#method.CanCopy">CanCopy</a><a href="#method.CanDelete">CanDelete</a><a href="#method.Paste">Paste</a><a href="#method.PasteTransferable">PasteTransferable</a><a href="#method.CanPaste">CanPaste</a><a href="#method.CanPasteTransferable">CanPasteTransferable</a><a href="#method.SelectAll">SelectAll</a><a href="#method.BeginningOfDocument">BeginningOfDocument</a><a href="#method.EndOfDocument">EndOfDocument</a><a href="#method.SetAttribute">SetAttribute</a><a href="#method.GetAttributeValue">GetAttributeValue</a><a href="#method.RemoveAttribute">RemoveAttribute</a><a href="#method.CloneAttribute">CloneAttribute</a><a href="#method.CloneAttributes">CloneAttributes</a><a href="#method.InsertNode">InsertNode</a><a href="#method.SplitNode">SplitNode</a><a href="#method.JoinNodes">JoinNodes</a><a href="#method.DeleteNode">DeleteNode</a><a href="#method.OutputsMozDirty">OutputsMozDirty</a><a href="#method.MarkNodeDirty">MarkNodeDirty</a><a href="#method.SwitchTextDirection">SwitchTextDirection</a><a href="#method.OutputToString">OutputToString</a><a href="#method.OutputToStream">OutputToStream</a><a href="#method.AddEditorObserver">AddEditorObserver</a><a href="#method.RemoveEditorObserver">RemoveEditorObserver</a><a href="#method.AddEditActionListener">AddEditActionListener</a><a href="#method.RemoveEditActionListener">RemoveEditActionListener</a><a href="#method.AddDocumentStateListener">AddDocumentStateListener</a><a href="#method.RemoveDocumentStateListener">RemoveDocumentStateListener</a><a href="#method.DumpContentTree">DumpContentTree</a><a href="#method.DebugDumpContent">DebugDumpContent</a><a href="#method.DebugUnitTests">DebugUnitTests</a><a href="#method.IsModifiableNode">IsModifiableNode</a><a href="#method.GetSuppressDispatchingInputEvent">GetSuppressDispatchingInputEvent</a><a href="#method.SetSuppressDispatchingInputEvent">SetSuppressDispatchingInputEvent</a><a href="#method.GetIsInEditAction">GetIsInEditAction</a><a href="#method.ForceCompositionEnd">ForceCompositionEnd</a><a href="#method.GetComposing">GetComposing</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIEditor', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIEditor</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIEditor { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIEditor : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIEditor.html" title="struct xpcom::interfaces::nsIEditor">nsIEditor</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIEditorCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIEditor</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIEditor.html" title="struct xpcom::interfaces::nsIEditor">nsIEditor</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#358-1577' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.eNone' class="associatedconstant"><span id='eNone.v' class='invisible'><code>pub const <a href='#associatedconstant.eNone' class="constant"><b>eNone</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eNone</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.eNext' class="associatedconstant"><span id='eNext.v' class='invisible'><code>pub const <a href='#associatedconstant.eNext' class="constant"><b>eNext</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eNext</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.ePrevious' class="associatedconstant"><span id='ePrevious.v' class='invisible'><code>pub const <a href='#associatedconstant.ePrevious' class="constant"><b>ePrevious</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ePrevious</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.eNextWord' class="associatedconstant"><span id='eNextWord.v' class='invisible'><code>pub const <a href='#associatedconstant.eNextWord' class="constant"><b>eNextWord</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eNextWord</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.ePreviousWord' class="associatedconstant"><span id='ePreviousWord.v' class='invisible'><code>pub const <a href='#associatedconstant.ePreviousWord' class="constant"><b>ePreviousWord</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ePreviousWord</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.eToBeginningOfLine' class="associatedconstant"><span id='eToBeginningOfLine.v' class='invisible'><code>pub const <a href='#associatedconstant.eToBeginningOfLine' class="constant"><b>eToBeginningOfLine</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eToBeginningOfLine</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.eToEndOfLine' class="associatedconstant"><span id='eToEndOfLine.v' class='invisible'><code>pub const <a href='#associatedconstant.eToEndOfLine' class="constant"><b>eToEndOfLine</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eToEndOfLine</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.eStrip' class="associatedconstant"><span id='eStrip.v' class='invisible'><code>pub const <a href='#associatedconstant.eStrip' class="constant"><b>eStrip</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eStrip</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.eNoStrip' class="associatedconstant"><span id='eNoStrip.v' class='invisible'><code>pub const <a href='#associatedconstant.eNoStrip' class="constant"><b>eNoStrip</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">eNoStrip</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='method.GetSelection' class="method"><span id='GetSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelection' class='fnname'>GetSelection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSelection: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISelection.html" title="struct xpcom::interfaces::nsISelection">nsISelection</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#389-391' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute nsISelection selection;</code></p>
+</div><h4 id='method.FinalizeSelection' class="method"><span id='FinalizeSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.FinalizeSelection' class='fnname'>FinalizeSelection</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#403-405' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Finalizes selection and caret for the editor.
+   */
+</code></pre>
+
+<p><code>[noscript] void finalizeSelection ();</code></p>
+</div><h4 id='method.Init' class="method"><span id='Init.v' class='invisible'><code>pub unsafe fn <a href='#method.Init' class='fnname'>Init</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;doc: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMDocument.html" title="struct xpcom::interfaces::nsIDOMDocument">nsIDOMDocument</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRoot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContent.html" title="struct xpcom::interfaces::nsIContent">nsIContent</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSelCon: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISelectionController.html" title="struct xpcom::interfaces::nsISelectionController">nsISelectionController</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;initialValue: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#425-427' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Init is to tell the implementation of nsIEditor to begin its services
+   * @param aDoc          The dom document interface being observed
+   * @param aRoot         This is the root of the editable section of this
+   *                      document. If it is null then we get root
+   *                      from document body.
+   * @param aSelCon       this should be used to get the selection location
+   *                      (will be null for HTML editors)
+   * @param aFlags        A bitmask of flags for specifying the behavior
+   *                      of the editor.
+   */
+</code></pre>
+
+<p><code>[noscript] void init (in nsIDOMDocument doc, in nsIContent aRoot, in nsISelectionController aSelCon, in unsigned long aFlags, in AString initialValue);</code></p>
+</div><h4 id='method.SetAttributeOrEquivalent' class="method"><span id='SetAttributeOrEquivalent.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAttributeOrEquivalent' class='fnname'>SetAttributeOrEquivalent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;element: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;sourceAttrName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;sourceAttrValue: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSuppressTransaction: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#433-435' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void setAttributeOrEquivalent (in nsIDOMElement element, in AString sourceAttrName, in AString sourceAttrValue, in boolean aSuppressTransaction);</code></p>
+</div><h4 id='method.RemoveAttributeOrEquivalent' class="method"><span id='RemoveAttributeOrEquivalent.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveAttributeOrEquivalent' class='fnname'>RemoveAttributeOrEquivalent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;element: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;sourceAttrName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSuppressTransaction: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#441-443' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void removeAttributeOrEquivalent (in nsIDOMElement element, in DOMString sourceAttrName, in boolean aSuppressTransaction);</code></p>
+</div><h4 id='method.PostCreate' class="method"><span id='PostCreate.v' class='invisible'><code>pub unsafe fn <a href='#method.PostCreate' class='fnname'>PostCreate</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#456-458' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * postCreate should be called after Init, and is the time that the editor
+   * tells its documentStateObservers that the document has been created.
+   */
+</code></pre>
+
+<p><code>void postCreate ();</code></p>
+</div><h4 id='method.PreDestroy' class="method"><span id='PreDestroy.v' class='invisible'><code>pub unsafe fn <a href='#method.PreDestroy' class='fnname'>PreDestroy</a>(&amp;self, aDestroyingFrames: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#474-476' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * preDestroy is called before the editor goes away, and gives the editor a
+   * chance to tell its documentStateObservers that the document is going away.
+   * @param aDestroyingFrames set to true when the frames being edited
+   * are being destroyed (so there is no need to modify any nsISelections,
+   * nor is it safe to do so)
+   */
+</code></pre>
+
+<p><code>void preDestroy (in boolean aDestroyingFrames);</code></p>
+</div><h4 id='method.GetFlags' class="method"><span id='GetFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFlags' class='fnname'>GetFlags</a>(&amp;self, aFlags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#486-488' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** edit flags for this editor.  May be set at any time. */
+</code></pre>
+
+<p><code>attribute unsigned long flags;</code></p>
+</div><h4 id='method.SetFlags' class="method"><span id='SetFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.SetFlags' class='fnname'>SetFlags</a>(&amp;self, aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#498-500' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** edit flags for this editor.  May be set at any time. */
+</code></pre>
+
+<p><code>attribute unsigned long flags;</code></p>
+</div><h4 id='method.GetContentsMIMEType' class="method"><span id='GetContentsMIMEType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentsMIMEType' class='fnname'>GetContentsMIMEType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentsMIMEType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#512-514' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * the MimeType of the document
+   */
+</code></pre>
+
+<p><code>attribute string contentsMIMEType;</code></p>
+</div><h4 id='method.SetContentsMIMEType' class="method"><span id='SetContentsMIMEType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentsMIMEType' class='fnname'>SetContentsMIMEType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentsMIMEType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#526-528' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * the MimeType of the document
+   */
+</code></pre>
+
+<p><code>attribute string contentsMIMEType;</code></p>
+</div><h4 id='method.GetIsDocumentEditable' class="method"><span id='GetIsDocumentEditable.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsDocumentEditable' class='fnname'>GetIsDocumentEditable</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsDocumentEditable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#538-540' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Returns true if we have a document that is not marked read-only */
+</code></pre>
+
+<p><code>readonly attribute boolean isDocumentEditable;</code></p>
+</div><h4 id='method.GetIsSelectionEditable' class="method"><span id='GetIsSelectionEditable.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsSelectionEditable' class='fnname'>GetIsSelectionEditable</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsSelectionEditable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#550-552' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Returns true if the current selection anchor is editable */
+</code></pre>
+
+<p><code>readonly attribute boolean isSelectionEditable;</code></p>
+</div><h4 id='method.GetDocument' class="method"><span id='GetDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDocument' class='fnname'>GetDocument</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMDocument.html" title="struct xpcom::interfaces::nsIDOMDocument">nsIDOMDocument</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#564-566' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * the DOM Document this editor is associated with, refcounted.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIDOMDocument document;</code></p>
+</div><h4 id='method.GetRootElement' class="method"><span id='GetRootElement.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRootElement' class='fnname'>GetRootElement</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRootElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#577-579' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** the body element, i.e. the root of the editable document.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIDOMElement rootElement;</code></p>
+</div><h4 id='method.GetSelectionController' class="method"><span id='GetSelectionController.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelectionController' class='fnname'>GetSelectionController</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSelectionController: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISelectionController.html" title="struct xpcom::interfaces::nsISelectionController">nsISelectionController</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#591-593' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * the selection controller for the current presentation, refcounted.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsISelectionController selectionController;</code></p>
+</div><h4 id='method.DeleteSelection' class="method"><span id='DeleteSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.DeleteSelection' class='fnname'>DeleteSelection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;action: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;stripWrappers: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#611-613' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * DeleteSelection removes all nodes in the current selection.
+   * @param aDir  if eNext, delete to the right (for example, the DEL key)
+   *              if ePrevious, delete to the left (for example, the BACKSPACE key)
+   * @param stripWrappers If eStrip, strip any empty inline elements left
+   *                      behind after the deletion; if eNoStrip, don&#39;t.  If in
+   *                      doubt, pass eStrip -- eNoStrip is only for if you&#39;re
+   *                      about to insert text or similar right after.
+   */
+</code></pre>
+
+<p><code>void deleteSelection (in short action, in short stripWrappers);</code></p>
+</div><h4 id='method.GetDocumentIsEmpty' class="method"><span id='GetDocumentIsEmpty.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDocumentIsEmpty' class='fnname'>GetDocumentIsEmpty</a>(&amp;self, aDocumentIsEmpty: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#623-625' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Returns true if the document has no *meaningful* content */
+</code></pre>
+
+<p><code>readonly attribute boolean documentIsEmpty;</code></p>
+</div><h4 id='method.GetDocumentModified' class="method"><span id='GetDocumentModified.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDocumentModified' class='fnname'>GetDocumentModified</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDocumentModified: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#635-637' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Returns true if the document is modifed and needs saving */
+</code></pre>
+
+<p><code>readonly attribute boolean documentModified;</code></p>
+</div><h4 id='method.GetDocumentCharacterSet' class="method"><span id='GetDocumentCharacterSet.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDocumentCharacterSet' class='fnname'>GetDocumentCharacterSet</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDocumentCharacterSet: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#647-649' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Sets the current &#39;Save&#39; document character set */
+</code></pre>
+
+<p><code>attribute ACString documentCharacterSet;</code></p>
+</div><h4 id='method.SetDocumentCharacterSet' class="method"><span id='SetDocumentCharacterSet.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDocumentCharacterSet' class='fnname'>SetDocumentCharacterSet</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDocumentCharacterSet: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#659-661' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Sets the current &#39;Save&#39; document character set */
+</code></pre>
+
+<p><code>attribute ACString documentCharacterSet;</code></p>
+</div><h4 id='method.ResetModificationCount' class="method"><span id='ResetModificationCount.v' class='invisible'><code>pub unsafe fn <a href='#method.ResetModificationCount' class='fnname'>ResetModificationCount</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#673-675' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** to be used ONLY when we need to override the doc&#39;s modification
+    * state (such as when it&#39;s saved).
+    */
+</code></pre>
+
+<p><code>void resetModificationCount ();</code></p>
+</div><h4 id='method.GetModificationCount' class="method"><span id='GetModificationCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetModificationCount' class='fnname'>GetModificationCount</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#688-690' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Gets the modification count of the document we are editing.
+    * @return the modification count of the document being edited.
+    *         Zero means unchanged.
+    */
+</code></pre>
+
+<p><code>long getModificationCount ();</code></p>
+</div><h4 id='method.IncrementModificationCount' class="method"><span id='IncrementModificationCount.v' class='invisible'><code>pub unsafe fn <a href='#method.IncrementModificationCount' class='fnname'>IncrementModificationCount</a>(&amp;self, aModCount: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#704-706' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** called each time we modify the document.
+    * Increments the modification count of the document.
+    * @param  aModCount  the number of modifications by which
+    *                    to increase or decrease the count
+    */
+</code></pre>
+
+<p><code>void incrementModificationCount (in long aModCount);</code></p>
+</div><h4 id='method.GetTransactionManager' class="method"><span id='GetTransactionManager.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTransactionManager' class='fnname'>GetTransactionManager</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTransactionManager: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITransactionManager.html" title="struct xpcom::interfaces::nsITransactionManager">nsITransactionManager</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#717-719' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** transactionManager Get the transaction manager the editor is using.
+    */
+</code></pre>
+
+<p><code>readonly attribute nsITransactionManager transactionManager;</code></p>
+</div><h4 id='method.DoTransaction' class="method"><span id='DoTransaction.v' class='invisible'><code>pub unsafe fn <a href='#method.DoTransaction' class='fnname'>DoTransaction</a>(&amp;self, txn: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITransaction.html" title="struct xpcom::interfaces::nsITransaction">nsITransaction</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#735-737' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** doTransaction() fires a transaction.
+    * It is provided here so clients can create their own transactions.
+    * If a transaction manager is present, it is used.
+    * Otherwise, the transaction is just executed directly.
+    *
+    * @param aTxn the transaction to execute
+    */
+</code></pre>
+
+<p><code>void doTransaction (in nsITransaction txn);</code></p>
+</div><h4 id='method.EnableUndo' class="method"><span id='EnableUndo.v' class='invisible'><code>pub unsafe fn <a href='#method.EnableUndo' class='fnname'>EnableUndo</a>(&amp;self, enable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#754-756' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** turn the undo system on or off
+    * @param aEnable  if PR_TRUE, the undo system is turned on if available
+    *                 if PR_FALSE the undo system is turned off if it
+    *                 was previously on
+    * @return         if aEnable is PR_TRUE, returns NS_OK if
+    *                 the undo system could be initialized properly
+    *                 if aEnable is PR_FALSE, returns NS_OK.
+    */
+</code></pre>
+
+<p><code>void enableUndo (in boolean enable);</code></p>
+</div><h4 id='method.GetNumberOfUndoItems' class="method"><span id='GetNumberOfUndoItems.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNumberOfUndoItems' class='fnname'>GetNumberOfUndoItems</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNumberOfUndoItems: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#768-770' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The number of items on the undo stack.
+   */
+</code></pre>
+
+<p><code>readonly attribute long numberOfUndoItems;</code></p>
+</div><h4 id='method.GetNumberOfRedoItems' class="method"><span id='GetNumberOfRedoItems.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNumberOfRedoItems' class='fnname'>GetNumberOfRedoItems</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNumberOfRedoItems: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#782-784' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The number of items on the redo stack.
+   */
+</code></pre>
+
+<p><code>readonly attribute long numberOfRedoItems;</code></p>
+</div><h4 id='method.Undo' class="method"><span id='Undo.v' class='invisible'><code>pub unsafe fn <a href='#method.Undo' class='fnname'>Undo</a>(&amp;self, count: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#803-805' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** undo reverses the effects of the last Do operation,
+    * if Undo is enabled in the editor.
+    * It is provided here so clients need no knowledge of whether
+    * the editor has a transaction manager or not.
+    * If a transaction manager is present, it is told to undo,
+    * and the result of that undo is returned.
+    * Otherwise, the Undo request is ignored and an
+    * error NS_ERROR_NOT_AVAILABLE is returned.
+    *
+    */
+</code></pre>
+
+<p><code>void undo (in unsigned long count);</code></p>
+</div><h4 id='method.CanUndo' class="method"><span id='CanUndo.v' class='invisible'><code>pub unsafe fn <a href='#method.CanUndo' class='fnname'>CanUndo</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;isEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;canUndo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#819-821' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** returns state information about the undo system.
+    * @param aIsEnabled [OUT] PR_TRUE if undo is enabled
+    * @param aCanUndo   [OUT] PR_TRUE if at least one transaction is
+    *                         currently ready to be undone.
+    */
+</code></pre>
+
+<p><code>void canUndo (out boolean isEnabled, out boolean canUndo);</code></p>
+</div><h4 id='method.Redo' class="method"><span id='Redo.v' class='invisible'><code>pub unsafe fn <a href='#method.Redo' class='fnname'>Redo</a>(&amp;self, count: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#840-842' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** redo reverses the effects of the last Undo operation
+    * It is provided here so clients need no knowledge of whether
+    * the editor has a transaction manager or not.
+    * If a transaction manager is present, it is told to redo and the
+    * result of the previously undone transaction is reapplied to the document.
+    * If no transaction is available for Redo, or if the document
+    * has no transaction manager, the Redo request is ignored and an
+    * error NS_ERROR_NOT_AVAILABLE is returned.
+    *
+    */
+</code></pre>
+
+<p><code>void redo (in unsigned long count);</code></p>
+</div><h4 id='method.CanRedo' class="method"><span id='CanRedo.v' class='invisible'><code>pub unsafe fn <a href='#method.CanRedo' class='fnname'>CanRedo</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;isEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;canRedo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#856-858' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** returns state information about the redo system.
+    * @param aIsEnabled [OUT] PR_TRUE if redo is enabled
+    * @param aCanRedo   [OUT] PR_TRUE if at least one transaction is
+                              currently ready to be redone.
+    */
+</code></pre>
+
+<p><code>void canRedo (out boolean isEnabled, out boolean canRedo);</code></p>
+</div><h4 id='method.BeginTransaction' class="method"><span id='BeginTransaction.v' class='invisible'><code>pub unsafe fn <a href='#method.BeginTransaction' class='fnname'>BeginTransaction</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#877-879' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** beginTransaction is a signal from the caller to the editor that
+    * the caller will execute multiple updates to the content tree
+    * that should be treated as a single logical operation,
+    * in the most efficient way possible.&lt;br&gt;
+    * All transactions executed between a call to beginTransaction and
+    * endTransaction will be undoable as an atomic action.&lt;br&gt;
+    * endTransaction must be called after beginTransaction.&lt;br&gt;
+    * Calls to beginTransaction can be nested, as long as endTransaction
+    * is called once per beginUpdate.
+    */
+</code></pre>
+
+<p><code>void beginTransaction ();</code></p>
+</div><h4 id='method.EndTransaction' class="method"><span id='EndTransaction.v' class='invisible'><code>pub unsafe fn <a href='#method.EndTransaction' class='fnname'>EndTransaction</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#894-896' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** endTransaction is a signal to the editor that the caller is
+    * finished updating the content model.&lt;br&gt;
+    * beginUpdate must be called before endTransaction is called.&lt;br&gt;
+    * Calls to beginTransaction can be nested, as long as endTransaction
+    * is called once per beginTransaction.
+    */
+</code></pre>
+
+<p><code>void endTransaction ();</code></p>
+</div><h4 id='method.ShouldTxnSetSelection' class="method"><span id='ShouldTxnSetSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.ShouldTxnSetSelection' class='fnname'>ShouldTxnSetSelection</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#902-904' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>boolean shouldTxnSetSelection ();</code></p>
+</div><h4 id='method.SetShouldTxnSetSelection' class="method"><span id='SetShouldTxnSetSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.SetShouldTxnSetSelection' class='fnname'>SetShouldTxnSetSelection</a>(&amp;self, should: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#921-923' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Set the flag that prevents insertElementTxn from changing the selection
+    * @param   should  Set false to suppress changing the selection;
+    *                  i.e., before using InsertElement() to insert
+    *                  under &lt;head&gt; element
+    * WARNING: You must be very careful to reset back to PR_TRUE after
+    *          setting PR_FALSE, else selection/caret is trashed
+    *          for further editing.
+    */
+</code></pre>
+
+<p><code>void setShouldTxnSetSelection (in boolean should);</code></p>
+</div><h4 id='method.GetInlineSpellChecker' class="method"><span id='GetInlineSpellChecker.v' class='invisible'><code>pub unsafe fn <a href='#method.GetInlineSpellChecker' class='fnname'>GetInlineSpellChecker</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;autoCreate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInlineSpellChecker.html" title="struct xpcom::interfaces::nsIInlineSpellChecker">nsIInlineSpellChecker</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#940-942' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Returns the inline spell checker associated with this object. The spell
+    * checker is lazily created, so this function may create the object for
+    * you during this call.
+    * @param  autoCreate  If true, this will create a spell checker object
+    *                     if one does not exist yet for this editor. If false
+    *                     and the object has not been created, this function
+    *                     WILL RETURN NULL.
+    */
+</code></pre>
+
+<p><code>nsIInlineSpellChecker getInlineSpellChecker (in boolean autoCreate);</code></p>
+</div><h4 id='method.SyncRealTimeSpell' class="method"><span id='SyncRealTimeSpell.v' class='invisible'><code>pub unsafe fn <a href='#method.SyncRealTimeSpell' class='fnname'>SyncRealTimeSpell</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#955-957' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Resyncs spellchecking state (enabled/disabled).  This should be called
+    * when anything that affects spellchecking state changes, such as the
+    * spellcheck attribute value.
+    */
+</code></pre>
+
+<p><code>void syncRealTimeSpell ();</code></p>
+</div><h4 id='method.SetSpellcheckUserOverride' class="method"><span id='SetSpellcheckUserOverride.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSpellcheckUserOverride' class='fnname'>SetSpellcheckUserOverride</a>(&amp;self, enable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#971-973' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Called when the user manually overrides the spellchecking state for this
+    * editor.
+    * @param  enable  The new state of spellchecking in this editor, as
+    *                 requested by the user.
+    */
+</code></pre>
+
+<p><code>void setSpellcheckUserOverride (in boolean enable);</code></p>
+</div><h4 id='method.Cut' class="method"><span id='Cut.v' class='invisible'><code>pub unsafe fn <a href='#method.Cut' class='fnname'>Cut</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#987-989' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** cut the currently selected text, putting it into the OS clipboard
+    * What if no text is selected?
+    * What about mixed selections?
+    * What are the clipboard formats?
+    */
+</code></pre>
+
+<p><code>void cut ();</code></p>
+</div><h4 id='method.CanCut' class="method"><span id='CanCut.v' class='invisible'><code>pub unsafe fn <a href='#method.CanCut' class='fnname'>CanCut</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1001-1003' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Can we cut? True if the doc is modifiable, and we have a non-
+    * collapsed selection.
+    */
+</code></pre>
+
+<p><code>boolean canCut ();</code></p>
+</div><h4 id='method.Copy' class="method"><span id='Copy.v' class='invisible'><code>pub unsafe fn <a href='#method.Copy' class='fnname'>Copy</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1017-1019' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** copy the currently selected text, putting it into the OS clipboard
+    * What if no text is selected?
+    * What about mixed selections?
+    * What are the clipboard formats?
+    */
+</code></pre>
+
+<p><code>void copy ();</code></p>
+</div><h4 id='method.CanCopy' class="method"><span id='CanCopy.v' class='invisible'><code>pub unsafe fn <a href='#method.CanCopy' class='fnname'>CanCopy</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1030-1032' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Can we copy? True if we have a non-collapsed selection.
+    */
+</code></pre>
+
+<p><code>boolean canCopy ();</code></p>
+</div><h4 id='method.CanDelete' class="method"><span id='CanDelete.v' class='invisible'><code>pub unsafe fn <a href='#method.CanDelete' class='fnname'>CanDelete</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1043-1045' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Can we delete? True if we have a non-collapsed selection.
+    */
+</code></pre>
+
+<p><code>boolean canDelete ();</code></p>
+</div><h4 id='method.Paste' class="method"><span id='Paste.v' class='invisible'><code>pub unsafe fn <a href='#method.Paste' class='fnname'>Paste</a>(&amp;self, aSelectionType: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1057-1059' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** paste the text in the OS clipboard at the cursor position, replacing
+    * the selected text (if any)
+    */
+</code></pre>
+
+<p><code>void paste (in long aSelectionType);</code></p>
+</div><h4 id='method.PasteTransferable' class="method"><span id='PasteTransferable.v' class='invisible'><code>pub unsafe fn <a href='#method.PasteTransferable' class='fnname'>PasteTransferable</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTransferable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITransferable.html" title="struct xpcom::interfaces::nsITransferable">nsITransferable</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1071-1073' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Paste the text in |aTransferable| at the cursor position, replacing the
+    * selected text (if any).
+    */
+</code></pre>
+
+<p><code>void pasteTransferable (in nsITransferable aTransferable);</code></p>
+</div><h4 id='method.CanPaste' class="method"><span id='CanPaste.v' class='invisible'><code>pub unsafe fn <a href='#method.CanPaste' class='fnname'>CanPaste</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSelectionType: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1085-1087' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Can we paste? True if the doc is modifiable, and we have
+    * pasteable data in the clipboard.
+    */
+</code></pre>
+
+<p><code>boolean canPaste (in long aSelectionType);</code></p>
+</div><h4 id='method.CanPasteTransferable' class="method"><span id='CanPasteTransferable.v' class='invisible'><code>pub unsafe fn <a href='#method.CanPasteTransferable' class='fnname'>CanPasteTransferable</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTransferable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITransferable.html" title="struct xpcom::interfaces::nsITransferable">nsITransferable</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1101-1103' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Can we paste |aTransferable| or, if |aTransferable| is null, will a call
+    * to pasteTransferable later possibly succeed if given an instance of
+    * nsITransferable then? True if the doc is modifiable, and, if
+    * |aTransfeable| is non-null, we have pasteable data in |aTransfeable|.
+    */
+</code></pre>
+
+<p><code>boolean canPasteTransferable ([optional] in nsITransferable aTransferable);</code></p>
+</div><h4 id='method.SelectAll' class="method"><span id='SelectAll.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectAll' class='fnname'>SelectAll</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1113-1115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** sets the document selection to the entire contents of the document */
+</code></pre>
+
+<p><code>void selectAll ();</code></p>
+</div><h4 id='method.BeginningOfDocument' class="method"><span id='BeginningOfDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.BeginningOfDocument' class='fnname'>BeginningOfDocument</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1125-1127' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** sets the document selection to the beginning of the document */
+</code></pre>
+
+<p><code>void beginningOfDocument ();</code></p>
+</div><h4 id='method.EndOfDocument' class="method"><span id='EndOfDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.EndOfDocument' class='fnname'>EndOfDocument</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1137-1139' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** sets the document selection to the end of the document */
+</code></pre>
+
+<p><code>void endOfDocument ();</code></p>
+</div><h4 id='method.SetAttribute' class="method"><span id='SetAttribute.v' class='invisible'><code>pub unsafe fn <a href='#method.SetAttribute' class='fnname'>SetAttribute</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;attributestr: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;attvalue: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1157-1159' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * setAttribute() sets the attribute of aElement.
+   * No checking is done to see if aAttribute is a legal attribute of the node,
+   * or if aValue is a legal value of aAttribute.
+   *
+   * @param aElement    the content element to operate on
+   * @param aAttribute  the string representation of the attribute to set
+   * @param aValue      the value to set aAttribute to
+   */
+</code></pre>
+
+<p><code>void setAttribute (in nsIDOMElement aElement, in AString attributestr, in AString attvalue);</code></p>
+</div><h4 id='method.GetAttributeValue' class="method"><span id='GetAttributeValue.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAttributeValue' class='fnname'>GetAttributeValue</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;attributestr: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;resultValue: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1178-1180' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * getAttributeValue() retrieves the attribute&#39;s value for aElement.
+   *
+   * @param aElement      the content element to operate on
+   * @param aAttribute    the string representation of the attribute to get
+   * @param aResultValue  [OUT] the value of aAttribute.
+   *                      Only valid if aResultIsSet is PR_TRUE
+   * @return              PR_TRUE if aAttribute is set on the current node,
+   *                      PR_FALSE if it is not.
+   */
+</code></pre>
+
+<p><code>boolean getAttributeValue (in nsIDOMElement aElement, in AString attributestr, out AString resultValue);</code></p>
+</div><h4 id='method.RemoveAttribute' class="method"><span id='RemoveAttribute.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveAttribute' class='fnname'>RemoveAttribute</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aElement: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMElement.html" title="struct xpcom::interfaces::nsIDOMElement">nsIDOMElement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttribute: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1196-1198' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * removeAttribute() deletes aAttribute from the attribute list of aElement.
+   * If aAttribute is not an attribute of aElement, nothing is done.
+   *
+   * @param aElement      the content element to operate on
+   * @param aAttribute    the string representation of the attribute to get
+   */
+</code></pre>
+
+<p><code>void removeAttribute (in nsIDOMElement aElement, in AString aAttribute);</code></p>
+</div><h4 id='method.CloneAttribute' class="method"><span id='CloneAttribute.v' class='invisible'><code>pub unsafe fn <a href='#method.CloneAttribute' class='fnname'>CloneAttribute</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttribute: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDestNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSourceNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1219-1221' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * cloneAttribute() copies the attribute from the source node to
+   * the destination node and delete those not in the source.
+   *
+   * The supplied nodes MUST BE ELEMENTS (most callers are working with nodes)
+   * @param aAttribute    the name of the attribute to copy
+   * @param aDestNode     the destination element to operate on
+   * @param aSourceNode   the source element to copy attributes from
+   * @exception NS_ERROR_NULL_POINTER at least one of the nodes is null
+   * @exception NS_ERROR_NO_INTERFACE at least one of the nodes is not an
+   *                                  element
+   */
+</code></pre>
+
+<p><code>void cloneAttribute (in AString aAttribute, in nsIDOMNode aDestNode, in nsIDOMNode aSourceNode);</code></p>
+</div><h4 id='method.CloneAttributes' class="method"><span id='CloneAttributes.v' class='invisible'><code>pub unsafe fn <a href='#method.CloneAttributes' class='fnname'>CloneAttributes</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;destNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;sourceNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1241-1243' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * cloneAttributes() is similar to nsIDOMNode::cloneNode(),
+   *   it assures the attribute nodes of the destination are identical
+   *   with the source node by copying all existing attributes from the
+   *   source and deleting those not in the source.
+   *   This is used when the destination node (element) already exists
+   *
+   * The supplied nodes MUST BE ELEMENTS (most callers are working with nodes)
+   * @param aDestNode     the destination element to operate on
+   * @param aSourceNode   the source element to copy attributes from
+   */
+</code></pre>
+
+<p><code>void cloneAttributes (in nsIDOMNode destNode, in nsIDOMNode sourceNode);</code></p>
+</div><h4 id='method.InsertNode' class="method"><span id='InsertNode.v' class='invisible'><code>pub unsafe fn <a href='#method.InsertNode' class='fnname'>InsertNode</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;node: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;parent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPosition: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1262-1264' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * insertNode inserts aNode into aParent at aPosition.
+   * No checking is done to verify the legality of the insertion.
+   * That is the responsibility of the caller.
+   * @param aNode     The DOM Node to insert.
+   * @param aParent   The node to insert the new object into
+   * @param aPosition The place in aParent to insert the new node
+   *                  0=first child, 1=second child, etc.
+   *                  any number &gt; number of current children = last child
+   */
+</code></pre>
+
+<p><code>void insertNode (in nsIDOMNode node, in nsIDOMNode parent, in long aPosition);</code></p>
+</div><h4 id='method.SplitNode' class="method"><span id='SplitNode.v' class='invisible'><code>pub unsafe fn <a href='#method.SplitNode' class='fnname'>SplitNode</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;existingRightNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;offset: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;newLeftNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1283-1285' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * splitNode() creates a new node identical to an existing node,
+   * and split the contents between the two nodes
+   * @param aExistingRightNode   the node to split.
+   *                             It will become the new node&#39;s next sibling.
+   * @param aOffset              the offset of aExistingRightNode&#39;s
+   *                             content|children to do the split at
+   * @param aNewLeftNode         [OUT] the new node resulting from the split,
+   *                             becomes aExistingRightNode&#39;s previous sibling.
+   */
+</code></pre>
+
+<p><code>void splitNode (in nsIDOMNode existingRightNode, in long offset, out nsIDOMNode newLeftNode);</code></p>
+</div><h4 id='method.JoinNodes' class="method"><span id='JoinNodes.v' class='invisible'><code>pub unsafe fn <a href='#method.JoinNodes' class='fnname'>JoinNodes</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;leftNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;rightNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;parent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1304-1306' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * joinNodes() takes 2 nodes and merge their content|children.
+   * @param aLeftNode     The left node.  It will be deleted.
+   * @param aRightNode    The right node. It will remain after the join.
+   * @param aParent       The parent of aExistingRightNode
+   *
+   *                      There is no requirement that the two nodes be
+   *                      of the same type.  However, a text node can be
+   *                      merged only with another text node.
+   */
+</code></pre>
+
+<p><code>void joinNodes (in nsIDOMNode leftNode, in nsIDOMNode rightNode, in nsIDOMNode parent);</code></p>
+</div><h4 id='method.DeleteNode' class="method"><span id='DeleteNode.v' class='invisible'><code>pub unsafe fn <a href='#method.DeleteNode' class='fnname'>DeleteNode</a>(&amp;self, child: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1319-1321' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * deleteNode removes aChild from aParent.
+   * @param aChild    The node to delete
+   */
+</code></pre>
+
+<p><code>void deleteNode (in nsIDOMNode child);</code></p>
+</div><h4 id='method.OutputsMozDirty' class="method"><span id='OutputsMozDirty.v' class='invisible'><code>pub unsafe fn <a href='#method.OutputsMozDirty' class='fnname'>OutputsMozDirty</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1334-1336' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns true if markNodeDirty() has any effect.  Returns false if
+   * markNodeDirty() is a no-op.
+   */
+</code></pre>
+
+<p><code>[notxpcom] boolean outputsMozDirty ();</code></p>
+</div><h4 id='method.MarkNodeDirty' class="method"><span id='MarkNodeDirty.v' class='invisible'><code>pub unsafe fn <a href='#method.MarkNodeDirty' class='fnname'>MarkNodeDirty</a>(&amp;self, node: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1350-1352' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * markNodeDirty() sets a special dirty attribute on the node.
+   * Usually this will be called immediately after creating a new node.
+   * @param aNode      The node for which to insert formatting.
+   */
+</code></pre>
+
+<p><code>void markNodeDirty (in nsIDOMNode node);</code></p>
+</div><h4 id='method.SwitchTextDirection' class="method"><span id='SwitchTextDirection.v' class='invisible'><code>pub unsafe fn <a href='#method.SwitchTextDirection' class='fnname'>SwitchTextDirection</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1365-1367' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Switches the editor element direction; from &quot;Left-to-Right&quot; to
+   * &quot;Right-to-Left&quot;, and vice versa.
+   */
+</code></pre>
+
+<p><code>void switchTextDirection ();</code></p>
+</div><h4 id='method.OutputToString' class="method"><span id='OutputToString.v' class='invisible'><code>pub unsafe fn <a href='#method.OutputToString' class='fnname'>OutputToString</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;formatType: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;flags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1380-1382' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Output methods:
+   * aFormatType is a mime type, like text/plain.
+   */
+</code></pre>
+
+<p><code>AString outputToString (in AString formatType, in unsigned long flags);</code></p>
+</div><h4 id='method.OutputToStream' class="method"><span id='OutputToStream.v' class='invisible'><code>pub unsafe fn <a href='#method.OutputToStream' class='fnname'>OutputToStream</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStream: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIOutputStream.html" title="struct xpcom::interfaces::nsIOutputStream">nsIOutputStream</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;formatType: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;charsetOverride: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;flags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1388-1390' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void outputToStream (in nsIOutputStream aStream, in AString formatType, in ACString charsetOverride, in unsigned long flags);</code></p>
+</div><h4 id='method.AddEditorObserver' class="method"><span id='AddEditorObserver.v' class='invisible'><code>pub unsafe fn <a href='#method.AddEditorObserver' class='fnname'>AddEditorObserver</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;observer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEditorObserver.html" title="struct xpcom::interfaces::nsIEditorObserver">nsIEditorObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1400-1402' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** add an EditorObserver to the editors list of observers. */
+</code></pre>
+
+<p><code>void addEditorObserver (in nsIEditorObserver observer);</code></p>
+</div><h4 id='method.RemoveEditorObserver' class="method"><span id='RemoveEditorObserver.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveEditorObserver' class='fnname'>RemoveEditorObserver</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;observer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEditorObserver.html" title="struct xpcom::interfaces::nsIEditorObserver">nsIEditorObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1412-1414' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Remove an EditorObserver from the editor&#39;s list of observers. */
+</code></pre>
+
+<p><code>void removeEditorObserver (in nsIEditorObserver observer);</code></p>
+</div><h4 id='method.AddEditActionListener' class="method"><span id='AddEditActionListener.v' class='invisible'><code>pub unsafe fn <a href='#method.AddEditActionListener' class='fnname'>AddEditActionListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;listener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEditActionListener.html" title="struct xpcom::interfaces::nsIEditActionListener">nsIEditActionListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1424-1426' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** add an EditActionListener to the editors list of listeners. */
+</code></pre>
+
+<p><code>void addEditActionListener (in nsIEditActionListener listener);</code></p>
+</div><h4 id='method.RemoveEditActionListener' class="method"><span id='RemoveEditActionListener.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveEditActionListener' class='fnname'>RemoveEditActionListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;listener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEditActionListener.html" title="struct xpcom::interfaces::nsIEditActionListener">nsIEditActionListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1436-1438' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Remove an EditActionListener from the editor&#39;s list of listeners. */
+</code></pre>
+
+<p><code>void removeEditActionListener (in nsIEditActionListener listener);</code></p>
+</div><h4 id='method.AddDocumentStateListener' class="method"><span id='AddDocumentStateListener.v' class='invisible'><code>pub unsafe fn <a href='#method.AddDocumentStateListener' class='fnname'>AddDocumentStateListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;listener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocumentStateListener.html" title="struct xpcom::interfaces::nsIDocumentStateListener">nsIDocumentStateListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1448-1450' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Add a DocumentStateListener to the editors list of doc state listeners. */
+</code></pre>
+
+<p><code>void addDocumentStateListener (in nsIDocumentStateListener listener);</code></p>
+</div><h4 id='method.RemoveDocumentStateListener' class="method"><span id='RemoveDocumentStateListener.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveDocumentStateListener' class='fnname'>RemoveDocumentStateListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;listener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDocumentStateListener.html" title="struct xpcom::interfaces::nsIDocumentStateListener">nsIDocumentStateListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1460-1462' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Remove a DocumentStateListener to the editors list of doc state listeners. */
+</code></pre>
+
+<p><code>void removeDocumentStateListener (in nsIDocumentStateListener listener);</code></p>
+</div><h4 id='method.DumpContentTree' class="method"><span id='DumpContentTree.v' class='invisible'><code>pub unsafe fn <a href='#method.DumpContentTree' class='fnname'>DumpContentTree</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1474-1476' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * And a debug method -- show us what the tree looks like right now
+   */
+</code></pre>
+
+<p><code>void dumpContentTree ();</code></p>
+</div><h4 id='method.DebugDumpContent' class="method"><span id='DebugDumpContent.v' class='invisible'><code>pub unsafe fn <a href='#method.DebugDumpContent' class='fnname'>DebugDumpContent</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1486-1488' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** Dumps a text representation of the content tree to standard out */
+</code></pre>
+
+<p><code>void debugDumpContent ();</code></p>
+</div><h4 id='method.DebugUnitTests' class="method"><span id='DebugUnitTests.v' class='invisible'><code>pub unsafe fn <a href='#method.DebugUnitTests' class='fnname'>DebugUnitTests</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;outNumTests: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;outNumTestsFailed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1494-1496' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void debugUnitTests (out long outNumTests, out long outNumTestsFailed);</code></p>
+</div><h4 id='method.IsModifiableNode' class="method"><span id='IsModifiableNode.v' class='invisible'><code>pub unsafe fn <a href='#method.IsModifiableNode' class='fnname'>IsModifiableNode</a>(&amp;self, aNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1502-1504' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[notxpcom] boolean isModifiableNode (in nsIDOMNode aNode);</code></p>
+</div><h4 id='method.GetSuppressDispatchingInputEvent' class="method"><span id='GetSuppressDispatchingInputEvent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSuppressDispatchingInputEvent' class='fnname'>GetSuppressDispatchingInputEvent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSuppressDispatchingInputEvent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1510-1512' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean suppressDispatchingInputEvent;</code></p>
+</div><h4 id='method.SetSuppressDispatchingInputEvent' class="method"><span id='SetSuppressDispatchingInputEvent.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSuppressDispatchingInputEvent' class='fnname'>SetSuppressDispatchingInputEvent</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSuppressDispatchingInputEvent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1518-1520' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute boolean suppressDispatchingInputEvent;</code></p>
+</div><h4 id='method.GetIsInEditAction' class="method"><span id='GetIsInEditAction.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsInEditAction' class='fnname'>GetIsInEditAction</a>(&amp;self, aIsInEditAction: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1534-1536' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * True if an edit action is being handled (in other words, between calls of
+   * nsIEditorObserver::BeforeEditAction() and nsIEditorObserver::EditAction()
+   * or nsIEditorObserver::CancelEditAction().  Otherwise, false.
+   */
+</code></pre>
+
+<p><code>[noscript] readonly attribute boolean isInEditAction;</code></p>
+</div><h4 id='method.ForceCompositionEnd' class="method"><span id='ForceCompositionEnd.v' class='invisible'><code>pub unsafe fn <a href='#method.ForceCompositionEnd' class='fnname'>ForceCompositionEnd</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1548-1550' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * forceCompositionEnd() force the composition end
+   */
+</code></pre>
+
+<p><code>void forceCompositionEnd ();</code></p>
+</div><h4 id='method.GetComposing' class="method"><span id='GetComposing.v' class='invisible'><code>pub unsafe fn <a href='#method.GetComposing' class='fnname'>GetComposing</a>(&amp;self, aComposing: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#1572-1574' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * whether this editor has active IME transaction
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean composing;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIEditor.html" title="struct xpcom::interfaces::nsIEditor">nsIEditor</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">155969060</span>, <span class="number">61631</span>, <span class="number">16399</span>, [<span class="number">137</span>, <span class="number">226</span>, <span class="number">106</span>, <span class="number">132</span>, <span class="number">186</span>, <span class="number">171</span>, <span class="number">148</span>, <span class="number">116</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIEditor.html" title="struct xpcom::interfaces::nsIEditor">nsIEditor</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIEditor.html" title="struct xpcom::interfaces::nsIEditor">nsIEditor</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIEditor.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

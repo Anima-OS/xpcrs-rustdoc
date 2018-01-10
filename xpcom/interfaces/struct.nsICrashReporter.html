@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsICrashReporter` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsICrashReporter">
+
+    <title>xpcom::interfaces::nsICrashReporter - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsICrashReporter</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetEnabled">GetEnabled</a><a href="#method.SetEnabled">SetEnabled</a><a href="#method.GetServerURL">GetServerURL</a><a href="#method.SetServerURL">SetServerURL</a><a href="#method.GetMinidumpPath">GetMinidumpPath</a><a href="#method.SetMinidumpPath">SetMinidumpPath</a><a href="#method.GetMinidumpForID">GetMinidumpForID</a><a href="#method.GetExtraFileForID">GetExtraFileForID</a><a href="#method.AnnotateCrashReport">AnnotateCrashReport</a><a href="#method.AppendAppNotesToCrashReport">AppendAppNotesToCrashReport</a><a href="#method.RegisterAppMemory">RegisterAppMemory</a><a href="#method.WriteMinidumpForException">WriteMinidumpForException</a><a href="#method.AppendObjCExceptionInfoToAppNotes">AppendObjCExceptionInfoToAppNotes</a><a href="#method.GetSubmitReports">GetSubmitReports</a><a href="#method.SetSubmitReports">SetSubmitReports</a><a href="#method.UpdateCrashEventsDir">UpdateCrashEventsDir</a><a href="#method.SaveMemoryReport">SaveMemoryReport</a><a href="#method.SetTelemetrySessionId">SetTelemetrySessionId</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsICrashReporter', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsICrashReporter</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#24-33' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsICrashReporter { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsICrashReporter : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * Provides access to crash reporting functionality.
+ *
+ * @status UNSTABLE - This interface is not frozen and will probably change in
+ *                    future releases.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsICrashReporter.html" title="struct xpcom::interfaces::nsICrashReporter">nsICrashReporter</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#73-79' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsICrashReporterCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#76-78' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsICrashReporter</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsICrashReporter.html" title="struct xpcom::interfaces::nsICrashReporter">nsICrashReporter</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#174-501' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetEnabled' class="method"><span id='GetEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEnabled' class='fnname'>GetEnabled</a>(&amp;self, aEnabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#185-187' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the enabled status of the crash reporter.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean enabled;</code></p>
+</div><h4 id='method.SetEnabled' class="method"><span id='SetEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.SetEnabled' class='fnname'>SetEnabled</a>(&amp;self, enabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#200-202' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Enable or disable crash reporting at runtime. Not available to script
+   * because the JS engine relies on proper exception handler chaining.
+   */
+</code></pre>
+
+<p><code>[noscript] void setEnabled (in bool enabled);</code></p>
+</div><h4 id='method.GetServerURL' class="method"><span id='GetServerURL.v' class='invisible'><code>pub unsafe fn <a href='#method.GetServerURL' class='fnname'>GetServerURL</a>(&amp;self, aServerURL: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURL.html" title="struct xpcom::interfaces::nsIURL">nsIURL</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#220-222' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get or set the URL to which crash reports will be submitted.
+   * Only https and http URLs are allowed, as the submission is handled
+   * by OS-native networking libraries.
+   *
+   * @throw NS_ERROR_NOT_INITIALIZED if crash reporting is not initialized
+   * @throw NS_ERROR_INVALID_ARG on set if a non-http(s) URL is assigned
+   * @throw NS_ERROR_FAILURE on get if no URL is set
+   */
+</code></pre>
+
+<p><code>attribute nsIURL serverURL;</code></p>
+</div><h4 id='method.SetServerURL' class="method"><span id='SetServerURL.v' class='invisible'><code>pub unsafe fn <a href='#method.SetServerURL' class='fnname'>SetServerURL</a>(&amp;self, aServerURL: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURL.html" title="struct xpcom::interfaces::nsIURL">nsIURL</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#240-242' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get or set the URL to which crash reports will be submitted.
+   * Only https and http URLs are allowed, as the submission is handled
+   * by OS-native networking libraries.
+   *
+   * @throw NS_ERROR_NOT_INITIALIZED if crash reporting is not initialized
+   * @throw NS_ERROR_INVALID_ARG on set if a non-http(s) URL is assigned
+   * @throw NS_ERROR_FAILURE on get if no URL is set
+   */
+</code></pre>
+
+<p><code>attribute nsIURL serverURL;</code></p>
+</div><h4 id='method.GetMinidumpPath' class="method"><span id='GetMinidumpPath.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMinidumpPath' class='fnname'>GetMinidumpPath</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMinidumpPath: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#257-259' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get or set the path on the local system to which minidumps will be
+   * written when a crash happens.
+   *
+   * @throw NS_ERROR_NOT_INITIALIZED if crash reporting is not initialized
+   */
+</code></pre>
+
+<p><code>attribute nsIFile minidumpPath;</code></p>
+</div><h4 id='method.SetMinidumpPath' class="method"><span id='SetMinidumpPath.v' class='invisible'><code>pub unsafe fn <a href='#method.SetMinidumpPath' class='fnname'>SetMinidumpPath</a>(&amp;self, aMinidumpPath: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#274-276' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get or set the path on the local system to which minidumps will be
+   * written when a crash happens.
+   *
+   * @throw NS_ERROR_NOT_INITIALIZED if crash reporting is not initialized
+   */
+</code></pre>
+
+<p><code>attribute nsIFile minidumpPath;</code></p>
+</div><h4 id='method.GetMinidumpForID' class="method"><span id='GetMinidumpForID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMinidumpForID' class='fnname'>GetMinidumpForID</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;id: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#295-297' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the minidump file corresponding to the specified ID.
+   *
+   * @param id
+   *        ID of the crash. Likely a UUID.
+   *
+   * @return The minidump file associated with the ID.
+   *
+   * @throw NS_ERROR_FILE_NOT_FOUND if the minidump could not be found
+   */
+</code></pre>
+
+<p><code>nsIFile getMinidumpForID (in AString id);</code></p>
+</div><h4 id='method.GetExtraFileForID' class="method"><span id='GetExtraFileForID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetExtraFileForID' class='fnname'>GetExtraFileForID</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;id: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#316-318' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Get the extra file corresponding to the specified ID.
+   *
+   * @param id
+   *        ID of the crash. Likely a UUID.
+   *
+   * @return The extra file associated with the ID.
+   *
+   * @throw NS_ERROR_FILE_NOT_FOUND if the extra file could not be found
+   */
+</code></pre>
+
+<p><code>nsIFile getExtraFileForID (in AString id);</code></p>
+</div><h4 id='method.AnnotateCrashReport' class="method"><span id='AnnotateCrashReport.v' class='invisible'><code>pub unsafe fn <a href='#method.AnnotateCrashReport' class='fnname'>AnnotateCrashReport</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;key: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;data: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#340-342' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Add some extra data to be submitted with a crash report.
+   *
+   * @param key
+   *        Name of the data to be added.
+   * @param data
+   *        Data to be added.
+   *
+   * @throw NS_ERROR_NOT_INITIALIZED if crash reporting not initialized
+   * @throw NS_ERROR_INVALID_ARG if key or data contain invalid characters.
+   *                             Invalid characters for key are &#39;=&#39; and
+   *                             &#39;\n&#39;.  Invalid character for data is &#39;\0&#39;.
+   */
+</code></pre>
+
+<p><code>void annotateCrashReport (in AUTF8String key, in AUTF8String data);</code></p>
+</div><h4 id='method.AppendAppNotesToCrashReport' class="method"><span id='AppendAppNotesToCrashReport.v' class='invisible'><code>pub unsafe fn <a href='#method.AppendAppNotesToCrashReport' class='fnname'>AppendAppNotesToCrashReport</a>(&amp;self, data: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#362-364' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Append some data to the &quot;Notes&quot; field, to be submitted with a crash report.
+   * Unlike annotateCrashReport, this method will append to existing data.
+   *
+   * @param data
+   *        Data to be added.
+   *
+   * @throw NS_ERROR_NOT_INITIALIZED if crash reporting not initialized
+   * @throw NS_ERROR_INVALID_ARG if data contains invalid characters.
+   *                             The only invalid character is &#39;\0&#39;.
+   */
+</code></pre>
+
+<p><code>void appendAppNotesToCrashReport (in ACString data);</code></p>
+</div><h4 id='method.RegisterAppMemory' class="method"><span id='RegisterAppMemory.v' class='invisible'><code>pub unsafe fn <a href='#method.RegisterAppMemory' class='fnname'>RegisterAppMemory</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;ptr: <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;size: <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#384-386' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Register a given memory range to be included in the crash report.
+   *
+   * @param ptr
+   *        The starting address for the bytes.
+   * @param size
+   *        The number of bytes to include.
+   *
+   * @throw NS_ERROR_NOT_INITIALIZED if crash reporting not initialized
+   * @throw NS_ERROR_NOT_IMPLEMENTED if unavailable on the current OS
+   */
+</code></pre>
+
+<p><code>void registerAppMemory (in unsigned long long ptr, in unsigned long long size);</code></p>
+</div><h4 id='method.WriteMinidumpForException' class="method"><span id='WriteMinidumpForException.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteMinidumpForException' class='fnname'>WriteMinidumpForException</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExceptionInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#402-404' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Write a minidump immediately, with the user-supplied exception
+   * information. This is implemented on Windows only, because
+   * SEH (structured exception handling) exists on Windows only.
+   *
+   * @param aExceptionInfo  EXCEPTION_INFO* provided by Window&#39;s SEH
+   */
+</code></pre>
+
+<p><code>[noscript] void writeMinidumpForException (in voidPtr aExceptionInfo);</code></p>
+</div><h4 id='method.AppendObjCExceptionInfoToAppNotes' class="method"><span id='AppendObjCExceptionInfoToAppNotes.v' class='invisible'><code>pub unsafe fn <a href='#method.AppendObjCExceptionInfoToAppNotes' class='fnname'>AppendObjCExceptionInfoToAppNotes</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aException: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#418-420' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Append note containing an Obj-C exception&#39;s info.
+   *
+   * @param aException  NSException object to append note for
+   */
+</code></pre>
+
+<p><code>[noscript] void appendObjCExceptionInfoToAppNotes (in voidPtr aException);</code></p>
+</div><h4 id='method.GetSubmitReports' class="method"><span id='GetSubmitReports.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSubmitReports' class='fnname'>GetSubmitReports</a>(&amp;self, aSubmitReports: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#432-434' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * User preference for submitting crash reports.
+   */
+</code></pre>
+
+<p><code>attribute boolean submitReports;</code></p>
+</div><h4 id='method.SetSubmitReports' class="method"><span id='SetSubmitReports.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSubmitReports' class='fnname'>SetSubmitReports</a>(&amp;self, aSubmitReports: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#446-448' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * User preference for submitting crash reports.
+   */
+</code></pre>
+
+<p><code>attribute boolean submitReports;</code></p>
+</div><h4 id='method.UpdateCrashEventsDir' class="method"><span id='UpdateCrashEventsDir.v' class='invisible'><code>pub unsafe fn <a href='#method.UpdateCrashEventsDir' class='fnname'>UpdateCrashEventsDir</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#463-465' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Cause the crash reporter to re-evaluate where crash events should go.
+   *
+   * This should be called during application startup and whenever profiles
+   * change.
+   */
+</code></pre>
+
+<p><code>void UpdateCrashEventsDir ();</code></p>
+</div><h4 id='method.SaveMemoryReport' class="method"><span id='SaveMemoryReport.v' class='invisible'><code>pub unsafe fn <a href='#method.SaveMemoryReport' class='fnname'>SaveMemoryReport</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#480-482' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Save an anonymized memory report file for inclusion in a future crash
+   * report in this session.
+   *
+   * @throws NS_ERROR_NOT_INITIALIZED if crash reporting is disabled.
+   */
+</code></pre>
+
+<p><code>void saveMemoryReport ();</code></p>
+</div><h4 id='method.SetTelemetrySessionId' class="method"><span id='SetTelemetrySessionId.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTelemetrySessionId' class='fnname'>SetTelemetrySessionId</a>(&amp;self, id: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#496-498' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the telemetry session ID which is recorded in crash metadata. This is
+   * saved in the crash manager and telemetry but is not submitted as a
+   * crash-stats annotation.
+   */
+</code></pre>
+
+<p><code>void setTelemetrySessionId (in AUTF8String id);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsICrashReporter.html" title="struct xpcom::interfaces::nsICrashReporter">nsICrashReporter</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#38-41' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1265943450</span>, <span class="number">53097</span>, <span class="number">19082</span>, [<span class="number">142</span>, <span class="number">99</span>, <span class="number">22</span>, <span class="number">157</span>, <span class="number">129</span>, <span class="number">173</span>, <span class="number">30</span>, <span class="number">207</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsICrashReporter.html" title="struct xpcom::interfaces::nsICrashReporter">nsICrashReporter</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#45-54' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#47-49' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#51-53' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsICrashReporter.html" title="struct xpcom::interfaces::nsICrashReporter">nsICrashReporter</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#85-93' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsICrashReporter.rs.html#88-92' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

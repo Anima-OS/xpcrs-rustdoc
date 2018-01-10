@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIDownloadManager` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIDownloadManager">
+
+    <title>xpcom::interfaces::nsIDownloadManager - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIDownloadManager</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.AddDownload">AddDownload</a><a href="#method.GetDownload">GetDownload</a><a href="#method.GetDownloadByGUID">GetDownloadByGUID</a><a href="#method.CancelDownload">CancelDownload</a><a href="#method.RemoveDownload">RemoveDownload</a><a href="#method.RemoveDownloadsByTimeframe">RemoveDownloadsByTimeframe</a><a href="#method.PauseDownload">PauseDownload</a><a href="#method.ResumeDownload">ResumeDownload</a><a href="#method.RetryDownload">RetryDownload</a><a href="#method.GetDBConnection">GetDBConnection</a><a href="#method.GetPrivateDBConnection">GetPrivateDBConnection</a><a href="#method.GetCanCleanUp">GetCanCleanUp</a><a href="#method.GetCanCleanUpPrivate">GetCanCleanUpPrivate</a><a href="#method.CleanUp">CleanUp</a><a href="#method.CleanUpPrivate">CleanUpPrivate</a><a href="#method.GetActiveDownloadCount">GetActiveDownloadCount</a><a href="#method.GetActivePrivateDownloadCount">GetActivePrivateDownloadCount</a><a href="#method.GetActiveDownloads">GetActiveDownloads</a><a href="#method.GetActivePrivateDownloads">GetActivePrivateDownloads</a><a href="#method.AddListener">AddListener</a><a href="#method.AddPrivacyAwareListener">AddPrivacyAwareListener</a><a href="#method.RemoveListener">RemoveListener</a><a href="#method.GetDefaultDownloadsDirectory">GetDefaultDownloadsDirectory</a><a href="#method.GetUserDownloadsDirectory">GetUserDownloadsDirectory</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIDownloadManager', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIDownloadManager</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#147-156' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIDownloadManager { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIDownloadManager : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIDownloadManager.html" title="struct xpcom::interfaces::nsIDownloadManager">nsIDownloadManager</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#196-202' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIDownloadManagerCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#199-201' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIDownloadManager</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIDownloadManager.html" title="struct xpcom::interfaces::nsIDownloadManager">nsIDownloadManager</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#315-891' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.DOWNLOAD_TYPE_DOWNLOAD' class="associatedconstant"><span id='DOWNLOAD_TYPE_DOWNLOAD.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_TYPE_DOWNLOAD' class="constant"><b>DOWNLOAD_TYPE_DOWNLOAD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_TYPE_DOWNLOAD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Download type for generic file download.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_NOTSTARTED' class="associatedconstant"><span id='DOWNLOAD_NOTSTARTED.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_NOTSTARTED' class="constant"><b>DOWNLOAD_NOTSTARTED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_NOTSTARTED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * Download state for uninitialized download object.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_DOWNLOADING' class="associatedconstant"><span id='DOWNLOAD_DOWNLOADING.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_DOWNLOADING' class="constant"><b>DOWNLOAD_DOWNLOADING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_DOWNLOADING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Download is currently transferring data.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_FINISHED' class="associatedconstant"><span id='DOWNLOAD_FINISHED.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_FINISHED' class="constant"><b>DOWNLOAD_FINISHED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_FINISHED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * Download completed including any processing of the target
+   * file.  (completed)
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_FAILED' class="associatedconstant"><span id='DOWNLOAD_FAILED.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_FAILED' class="constant"><b>DOWNLOAD_FAILED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_FAILED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+<pre><code class="language-text">/**
+   * Transfer failed due to error. (completed)
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_CANCELED' class="associatedconstant"><span id='DOWNLOAD_CANCELED.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_CANCELED' class="constant"><b>DOWNLOAD_CANCELED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_CANCELED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+<pre><code class="language-text">/**
+   * Download was canceled by the user. (completed)
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_PAUSED' class="associatedconstant"><span id='DOWNLOAD_PAUSED.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_PAUSED' class="constant"><b>DOWNLOAD_PAUSED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_PAUSED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+<pre><code class="language-text">/**
+   * Transfer was paused by the user.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_QUEUED' class="associatedconstant"><span id='DOWNLOAD_QUEUED.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_QUEUED' class="constant"><b>DOWNLOAD_QUEUED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_QUEUED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+<pre><code class="language-text">/**
+   * Download is active but data has not yet been received.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_BLOCKED_PARENTAL' class="associatedconstant"><span id='DOWNLOAD_BLOCKED_PARENTAL.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_BLOCKED_PARENTAL' class="constant"><b>DOWNLOAD_BLOCKED_PARENTAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_BLOCKED_PARENTAL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+<pre><code class="language-text">/**
+   * Transfer request was blocked by parental controls proxies. (completed)
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_SCANNING' class="associatedconstant"><span id='DOWNLOAD_SCANNING.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_SCANNING' class="constant"><b>DOWNLOAD_SCANNING</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_SCANNING</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+<pre><code class="language-text">/**
+   * Transferred download is being scanned by virus scanners.
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_DIRTY' class="associatedconstant"><span id='DOWNLOAD_DIRTY.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_DIRTY' class="constant"><b>DOWNLOAD_DIRTY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_DIRTY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+<pre><code class="language-text">/**
+   * A virus was detected in the download. The target will most likely
+   * no longer exist. (completed)
+   */
+</code></pre>
+</div><h4 id='associatedconstant.DOWNLOAD_BLOCKED_POLICY' class="associatedconstant"><span id='DOWNLOAD_BLOCKED_POLICY.v' class='invisible'><code>pub const <a href='#associatedconstant.DOWNLOAD_BLOCKED_POLICY' class="constant"><b>DOWNLOAD_BLOCKED_POLICY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DOWNLOAD_BLOCKED_POLICY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+<pre><code class="language-text">/**
+   * Win specific: Request was blocked by zone policy settings.
+   * (see bug #416683) (completed)
+   */
+</code></pre>
+</div><h4 id='method.AddDownload' class="method"><span id='AddDownload.v' class='invisible'><code>pub unsafe fn <a href='#method.AddDownload' class='fnname'>AddDownload</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDownloadType: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDisplayName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMIMEInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIMIMEInfo.html" title="struct xpcom::interfaces::nsIMIMEInfo">nsIMIMEInfo</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStartTime: <a class="type" href="../../xpcom/interfaces/type.PRTime.html" title="type xpcom::interfaces::PRTime">PRTime</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aTempFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCancelable: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsICancelable.html" title="struct xpcom::interfaces::nsICancelable">nsICancelable</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsPrivate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDownload.html" title="struct xpcom::interfaces::nsIDownload">nsIDownload</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#473-475' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Creates an nsIDownload and adds it to be managed by the download manager.
+   *
+   * @param aSource The source URI of the transfer. Must not be null.
+   *
+   * @param aTarget The target URI of the transfer. Must not be null.
+   *
+   * @param aDisplayName The user-readable description of the transfer.
+   *                     Can be empty.
+   *
+   * @param aMIMEInfo The MIME info associated with the target,
+   *                  including MIME type and helper app when appropriate.
+   *                  This parameter is optional.
+   *
+   * @param startTime Time when the download started
+   *
+   * @param aTempFile The location of a temporary file; i.e. a file in which
+   *                  the received data will be stored, but which is not
+   *                  equal to the target file. (will be moved to the real
+   *                  target by the DownloadManager, when the download is
+   *                  finished). This will be null for all callers except for
+   *                  nsExternalHelperAppHandler. Addons should generally pass
+   *                  null for aTempFile. This will be moved to the real target
+   *                  by the download manager when the download is finished,
+   *                  and the action indicated by aMIMEInfo will be executed.
+   *
+   * @param aCancelable An object that can be used to abort the download.
+   *                    Must not be null.
+   *
+   * @param aIsPrivate Used to determine the privacy status of the new download.
+   *                   If true, the download is stored in a manner that leaves
+   *                   no permanent trace outside of the current private session.
+   *
+   * @return The newly created download item with the passed-in properties.
+   *
+   * @note This does not actually start a download.  If you want to add and
+   *       start a download, you need to create an nsIWebBrowserPersist, pass it
+   *       as the aCancelable object, call this method, set the progressListener
+   *       as the returned download object, then call saveURI.
+   */
+</code></pre>
+
+<p><code>nsIDownload addDownload (in short aDownloadType, in nsIURI aSource, in nsIURI aTarget, in AString aDisplayName, in nsIMIMEInfo aMIMEInfo, in PRTime aStartTime, in nsIFile aTempFile, in nsICancelable aCancelable, in boolean aIsPrivate);</code></p>
+</div><h4 id='method.GetDownload' class="method"><span id='GetDownload.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDownload' class='fnname'>GetDownload</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aID: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDownload.html" title="struct xpcom::interfaces::nsIDownload">nsIDownload</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#493-495' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Retrieves a download managed by the download manager.  This can be one that
+   * is in progress, or one that has completed in the past and is stored in the
+   * database.
+   *
+   * @param aID The unique ID of the download.
+   * @return The download with the specified ID.
+   * @throws NS_ERROR_NOT_AVAILABLE if the download is not in the database.
+   */
+</code></pre>
+
+<p><code>nsIDownload getDownload (in unsigned long aID);</code></p>
+</div><h4 id='method.GetDownloadByGUID' class="method"><span id='GetDownloadByGUID.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDownloadByGUID' class='fnname'>GetDownloadByGUID</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aGUID: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDownloadManagerResult.html" title="struct xpcom::interfaces::nsIDownloadManagerResult">nsIDownloadManagerResult</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#514-516' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Retrieves a download managed by the download manager.  This can be one that
+   * is in progress, or one that has completed in the past and is stored in the
+   * database.  The result of this method is returned via an asynchronous callback,
+   * the parameter of which will be an nsIDownload object, or null if none exists
+   * with the provided GUID.
+   *
+   * @param aGUID The unique GUID of the download.
+   * @param aCallback The callback to invoke with the result of the search.
+   */
+</code></pre>
+
+<p><code>void getDownloadByGUID (in ACString aGUID, in nsIDownloadManagerResult aCallback);</code></p>
+</div><h4 id='method.CancelDownload' class="method"><span id='CancelDownload.v' class='invisible'><code>pub unsafe fn <a href='#method.CancelDownload' class='fnname'>CancelDownload</a>(&amp;self, aID: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#533-535' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Cancels the download with the specified ID if it&#39;s currently in-progress.
+   * This calls cancel(NS_BINDING_ABORTED) on the nsICancelable provided by the
+   * download.
+   *
+   * @param aID The unique ID of the download.
+   * @throws NS_ERROR_FAILURE if the download is not in-progress.
+   */
+</code></pre>
+
+<p><code>void cancelDownload (in unsigned long aID);</code></p>
+</div><h4 id='method.RemoveDownload' class="method"><span id='RemoveDownload.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveDownload' class='fnname'>RemoveDownload</a>(&amp;self, aID: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#561-563' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes the download with the specified id if it&#39;s not currently
+   * in-progress.  Whereas cancelDownload simply cancels the transfer, but
+   * retains information about it, removeDownload removes all knowledge of it.
+   *
+   * Also notifies observers of the &quot;download-manager-remove-download-guid&quot;
+   * topic with the download guid as the subject to allow any DM consumers to
+   * react to the removal.
+   *
+   * Also may notify observers of the &quot;download-manager-remove-download&quot; topic
+   * with the download id as the subject, if the download removed is public
+   * or if global private browsing mode is in use. This notification is deprecated;
+   * the guid notification should be relied upon instead.
+   *
+   * @param aID The unique ID of the download.
+   * @throws NS_ERROR_FAILURE if the download is active.
+   */
+</code></pre>
+
+<p><code>void removeDownload (in unsigned long aID);</code></p>
+</div><h4 id='method.RemoveDownloadsByTimeframe' class="method"><span id='RemoveDownloadsByTimeframe.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveDownloadsByTimeframe' class='fnname'>RemoveDownloadsByTimeframe</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBeginTime: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEndTime: <a class="type" href="../../libc/type.int64_t.html" title="type libc::int64_t">int64_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#581-583' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes all inactive downloads that were started inclusively within the
+   * specified time frame.
+   *
+   * @param aBeginTime
+   *        The start time to remove downloads by in microseconds.
+   * @param aEndTime
+   *        The end time to remove downloads by in microseconds.
+   */
+</code></pre>
+
+<p><code>void removeDownloadsByTimeframe (in long long aBeginTime, in long long aEndTime);</code></p>
+</div><h4 id='method.PauseDownload' class="method"><span id='PauseDownload.v' class='invisible'><code>pub unsafe fn <a href='#method.PauseDownload' class='fnname'>PauseDownload</a>(&amp;self, aID: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#598-600' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Pause the specified download.
+   *
+   * @param aID The unique ID of the download.
+   * @throws NS_ERROR_FAILURE if the download is not in-progress.
+   */
+</code></pre>
+
+<p><code>void pauseDownload (in unsigned long aID);</code></p>
+</div><h4 id='method.ResumeDownload' class="method"><span id='ResumeDownload.v' class='invisible'><code>pub unsafe fn <a href='#method.ResumeDownload' class='fnname'>ResumeDownload</a>(&amp;self, aID: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#615-617' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Resume the specified download.
+   *
+   * @param aID The unique ID of the download.
+   * @throws NS_ERROR_FAILURE if the download is not in-progress.
+   */
+</code></pre>
+
+<p><code>void resumeDownload (in unsigned long aID);</code></p>
+</div><h4 id='method.RetryDownload' class="method"><span id='RetryDownload.v' class='invisible'><code>pub unsafe fn <a href='#method.RetryDownload' class='fnname'>RetryDownload</a>(&amp;self, aID: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#635-637' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Retries a failed download.
+   *
+   * @param aID The unique ID of the download.
+   * @throws NS_ERROR_NOT_AVAILALE if the download id is not known.
+   * @throws NS_ERROR_FAILURE if the download is not in the following states:
+   *           nsIDownloadManager::DOWNLOAD_CANCELED
+   *           nsIDownloadManager::DOWNLOAD_FAILED
+   */
+</code></pre>
+
+<p><code>void retryDownload (in unsigned long aID);</code></p>
+</div><h4 id='method.GetDBConnection' class="method"><span id='GetDBConnection.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDBConnection' class='fnname'>GetDBConnection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDBConnection: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageConnection.html" title="struct xpcom::interfaces::mozIStorageConnection">mozIStorageConnection</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#649-651' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The database connection to the downloads database.
+   */
+</code></pre>
+
+<p><code>readonly attribute mozIStorageConnection DBConnection;</code></p>
+</div><h4 id='method.GetPrivateDBConnection' class="method"><span id='GetPrivateDBConnection.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPrivateDBConnection' class='fnname'>GetPrivateDBConnection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPrivateDBConnection: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageConnection.html" title="struct xpcom::interfaces::mozIStorageConnection">mozIStorageConnection</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#657-659' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute mozIStorageConnection privateDBConnection;</code></p>
+</div><h4 id='method.GetCanCleanUp' class="method"><span id='GetCanCleanUp.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCanCleanUp' class='fnname'>GetCanCleanUp</a>(&amp;self, aCanCleanUp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#675-677' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether or not there are downloads that can be cleaned up (removed)
+   * i.e. downloads that have completed, have failed or have been canceled.
+   * In global private browsing mode, this reports the status of the relevant
+   * private or public downloads. In per-window mode, it only reports for
+   * public ones.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean canCleanUp;</code></p>
+</div><h4 id='method.GetCanCleanUpPrivate' class="method"><span id='GetCanCleanUpPrivate.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCanCleanUpPrivate' class='fnname'>GetCanCleanUpPrivate</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCanCleanUpPrivate: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#690-692' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Whether or not there are private downloads that can be cleaned up (removed)
+   * i.e. downloads that have completed, have failed or have been canceled.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean canCleanUpPrivate;</code></p>
+</div><h4 id='method.CleanUp' class="method"><span id='CleanUp.v' class='invisible'><code>pub unsafe fn <a href='#method.CleanUp' class='fnname'>CleanUp</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#711-713' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes completed, failed, and canceled downloads from the list.
+   * In global private browsing mode, this operates on the relevant
+   * private or public downloads. In per-window mode, it only operates
+   * on public ones.
+   *
+   * Also notifies observers of the &quot;download-manager-remove-download-gui&quot;
+   * and &quot;download-manager-remove-download&quot; topics with a null subject to
+   * allow any DM consumers to react to the removals.
+   */
+</code></pre>
+
+<p><code>void cleanUp ();</code></p>
+</div><h4 id='method.CleanUpPrivate' class="method"><span id='CleanUpPrivate.v' class='invisible'><code>pub unsafe fn <a href='#method.CleanUpPrivate' class='fnname'>CleanUpPrivate</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#730-732' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes completed, failed, and canceled downloads from the list
+   * of private downloads.
+   *
+   * Also notifies observers of the &quot;download-manager-remove-download-gui&quot;
+   * and &quot;download-manager-remove-download&quot; topics with a null subject to
+   * allow any DM consumers to react to the removals.
+   */
+</code></pre>
+
+<p><code>void cleanUpPrivate ();</code></p>
+</div><h4 id='method.GetActiveDownloadCount' class="method"><span id='GetActiveDownloadCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetActiveDownloadCount' class='fnname'>GetActiveDownloadCount</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aActiveDownloadCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#748-750' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The number of files currently being downloaded.
+   *
+   * In global private browsing mode, this reports the status of the relevant
+   * private or public downloads. In per-window mode, it only reports public
+   * ones.
+   */
+</code></pre>
+
+<p><code>readonly attribute long activeDownloadCount;</code></p>
+</div><h4 id='method.GetActivePrivateDownloadCount' class="method"><span id='GetActivePrivateDownloadCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetActivePrivateDownloadCount' class='fnname'>GetActivePrivateDownloadCount</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aActivePrivateDownloadCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#762-764' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The number of private files currently being downloaded.
+   */
+</code></pre>
+
+<p><code>readonly attribute long activePrivateDownloadCount;</code></p>
+</div><h4 id='method.GetActiveDownloads' class="method"><span id='GetActiveDownloads.v' class='invisible'><code>pub unsafe fn <a href='#method.GetActiveDownloads' class='fnname'>GetActiveDownloads</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aActiveDownloads: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISimpleEnumerator.html" title="struct xpcom::interfaces::nsISimpleEnumerator">nsISimpleEnumerator</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#780-782' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * An enumeration of active nsIDownloads
+   *
+   * In global private browsing mode, this reports the status of the relevant
+   * private or public downloads. In per-window mode, it only reports public
+   * ones.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsISimpleEnumerator activeDownloads;</code></p>
+</div><h4 id='method.GetActivePrivateDownloads' class="method"><span id='GetActivePrivateDownloads.v' class='invisible'><code>pub unsafe fn <a href='#method.GetActivePrivateDownloads' class='fnname'>GetActivePrivateDownloads</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aActivePrivateDownloads: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISimpleEnumerator.html" title="struct xpcom::interfaces::nsISimpleEnumerator">nsISimpleEnumerator</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#794-796' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * An enumeration of active private nsIDownloads
+   */
+</code></pre>
+
+<p><code>readonly attribute nsISimpleEnumerator activePrivateDownloads;</code></p>
+</div><h4 id='method.AddListener' class="method"><span id='AddListener.v' class='invisible'><code>pub unsafe fn <a href='#method.AddListener' class='fnname'>AddListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDownloadProgressListener.html" title="struct xpcom::interfaces::nsIDownloadProgressListener">nsIDownloadProgressListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#811-813' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Adds a listener to the download manager. It is expected that this
+   * listener will only access downloads via their deprecated integer id attribute,
+   * and when global private browsing compatibility mode is disabled, this listener
+   * will receive no notifications for downloads marked private.
+   */
+</code></pre>
+
+<p><code>void addListener (in nsIDownloadProgressListener aListener);</code></p>
+</div><h4 id='method.AddPrivacyAwareListener' class="method"><span id='AddPrivacyAwareListener.v' class='invisible'><code>pub unsafe fn <a href='#method.AddPrivacyAwareListener' class='fnname'>AddPrivacyAwareListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDownloadProgressListener.html" title="struct xpcom::interfaces::nsIDownloadProgressListener">nsIDownloadProgressListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#827-829' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Adds a listener to the download manager. This listener must be able to
+   * understand and use the guid attribute of downloads for all interactions
+   * with the download manager.
+   */
+</code></pre>
+
+<p><code>void addPrivacyAwareListener (in nsIDownloadProgressListener aListener);</code></p>
+</div><h4 id='method.RemoveListener' class="method"><span id='RemoveListener.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveListener' class='fnname'>RemoveListener</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDownloadProgressListener.html" title="struct xpcom::interfaces::nsIDownloadProgressListener">nsIDownloadProgressListener</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#841-843' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes a listener from the download manager.
+   */
+</code></pre>
+
+<p><code>void removeListener (in nsIDownloadProgressListener aListener);</code></p>
+</div><h4 id='method.GetDefaultDownloadsDirectory' class="method"><span id='GetDefaultDownloadsDirectory.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDefaultDownloadsDirectory' class='fnname'>GetDefaultDownloadsDirectory</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDefaultDownloadsDirectory: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#855-857' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the platform default downloads directory.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIFile defaultDownloadsDirectory;</code></p>
+</div><h4 id='method.GetUserDownloadsDirectory' class="method"><span id='GetUserDownloadsDirectory.v' class='invisible'><code>pub unsafe fn <a href='#method.GetUserDownloadsDirectory' class='fnname'>GetUserDownloadsDirectory</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUserDownloadsDirectory: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#886-888' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns the user configured downloads directory.
+   * The path is dependent on two user configurable prefs
+   * set in preferences:
+   *
+   * browser.download.folderList
+   *   Indicates the location users wish to save downloaded
+   *   files too.
+   *   Values:
+   *     0 - The desktop is the default download location.
+   *     1 - The system&#39;s downloads folder is the default download location.
+   *     2 - The default download location is elsewhere as specified in
+   *         browser.download.dir. If invalid, userDownloadsDirectory
+   *         will fallback on defaultDownloadsDirectory.
+   *
+   * browser.download.dir -
+   *   A local path the user may have selected at some point
+   *   where downloaded files are saved. The use of which is
+   *   enabled when folderList equals 2.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIFile userDownloadsDirectory;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDownloadManager.html" title="struct xpcom::interfaces::nsIDownloadManager">nsIDownloadManager</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#161-164' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2996481045</span>, <span class="number">32452</span>, <span class="number">19123</span>, [<span class="number">165</span>, <span class="number">59</span>, <span class="number">8</span>, <span class="number">247</span>, <span class="number">138</span>, <span class="number">237</span>, <span class="number">59</span>, <span class="number">52</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDownloadManager.html" title="struct xpcom::interfaces::nsIDownloadManager">nsIDownloadManager</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#168-177' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#170-172' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#174-176' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDownloadManager.html" title="struct xpcom::interfaces::nsIDownloadManager">nsIDownloadManager</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#208-216' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIDownloadManager.rs.html#211-215' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

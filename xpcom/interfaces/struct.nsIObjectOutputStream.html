@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIObjectOutputStream` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIObjectOutputStream">
+
+    <title>xpcom::interfaces::nsIObjectOutputStream - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIObjectOutputStream</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.WriteObject">WriteObject</a><a href="#method.WriteSingleRefObject">WriteSingleRefObject</a><a href="#method.WriteCompoundObject">WriteCompoundObject</a><a href="#method.WriteID">WriteID</a><a href="#method.GetBuffer">GetBuffer</a><a href="#method.PutBuffer">PutBuffer</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIBinaryOutputStream&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.SetOutputStream">SetOutputStream</a><a href="#method.WriteBoolean">WriteBoolean</a><a href="#method.Write8">Write8</a><a href="#method.Write16">Write16</a><a href="#method.Write32">Write32</a><a href="#method.Write64">Write64</a><a href="#method.WriteFloat">WriteFloat</a><a href="#method.WriteDouble">WriteDouble</a><a href="#method.WriteStringZ">WriteStringZ</a><a href="#method.WriteWStringZ">WriteWStringZ</a><a href="#method.WriteUtf8Z">WriteUtf8Z</a><a href="#method.WriteBytes">WriteBytes</a><a href="#method.WriteByteArray">WriteByteArray</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIObjectOutputStream', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIObjectOutputStream</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#22-31' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIObjectOutputStream { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIObjectOutputStream : nsIBinaryOutputStream</code></p>
+
+<pre><code class="language-text">/**
+ * @See nsIObjectInputStream
+ * @See nsIBinaryOutputStream
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIObjectOutputStream.html" title="struct xpcom::interfaces::nsIObjectOutputStream">nsIObjectOutputStream</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#71-77' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIObjectOutputStreamCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#74-76' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIObjectOutputStream</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIObjectOutputStream.html" title="struct xpcom::interfaces::nsIObjectOutputStream">nsIObjectOutputStream</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#136-228' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.WriteObject' class="method"><span id='WriteObject.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteObject' class='fnname'>WriteObject</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObject: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsStrongRef: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#158-160' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Write the object whose &quot;root&quot; or XPCOM-identity nsISupports is aObject.
+     * The cause for writing this object is a strong or weak reference, so the
+     * aIsStrongRef argument must tell which kind of pointer is being followed
+     * here during serialization.
+     *
+     * If the object has only one strong reference in the serialization and no
+     * weak refs, use writeSingleRefObject.  This is a valuable optimization:
+     * it saves space in the stream, and cycles on both ends of the process.
+     *
+     * If the reference being serialized is a pointer to an interface not on
+     * the primary inheritance chain ending in the root nsISupports, you must
+     * call writeCompoundObject instead of this method.
+     */
+</code></pre>
+
+<p><code>void writeObject (in nsISupports aObject, in boolean aIsStrongRef);</code></p>
+</div><h4 id='method.WriteSingleRefObject' class="method"><span id='WriteSingleRefObject.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteSingleRefObject' class='fnname'>WriteSingleRefObject</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObject: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#174-176' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Write an object referenced singly and strongly via its root nsISupports
+     * or a subclass of its root nsISupports.  There must not be other refs to
+     * aObject in memory, or in the serialization.
+     */
+</code></pre>
+
+<p><code>void writeSingleRefObject (in nsISupports aObject);</code></p>
+</div><h4 id='method.WriteCompoundObject' class="method"><span id='WriteCompoundObject.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteCompoundObject' class='fnname'>WriteCompoundObject</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aObject: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIID: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsStrongRef: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#193-195' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Write the object referenced by an interface pointer at aObject that
+     * inherits from a non-primary nsISupports, i.e., a reference to one of
+     * the multiply inherited interfaces derived from an nsISupports other
+     * than the root or XPCOM-identity nsISupports; or a reference to an
+     * inner object in the case of true XPCOM aggregation.  aIID identifies
+     * this interface.
+     */
+</code></pre>
+
+<p><code>void writeCompoundObject (in nsISupports aObject, in nsIIDRef aIID, in boolean aIsStrongRef);</code></p>
+</div><h4 id='method.WriteID' class="method"><span id='WriteID.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteID' class='fnname'>WriteID</a>(&amp;self, aID: &amp;<a class="struct" href="../../xpcom/struct.nsID.html" title="struct xpcom::nsID">nsID</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#201-203' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void writeID (in nsIDRef aID);</code></p>
+</div><h4 id='method.GetBuffer' class="method"><span id='GetBuffer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBuffer' class='fnname'>GetBuffer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLength: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAlignMask: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#215-217' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Optimized serialization support -- see nsIStreamBufferAccess.idl.
+     */
+</code></pre>
+
+<p><code>[notxpcom] charPtr getBuffer (in uint32_t aLength, in uint32_t aAlignMask);</code></p>
+</div><h4 id='method.PutBuffer' class="method"><span id='PutBuffer.v' class='invisible'><code>pub unsafe fn <a href='#method.PutBuffer' class='fnname'>PutBuffer</a>(&amp;self, aBuffer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.u8.html">u8</a>, aLength: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>) -&gt; <a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#223-225' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[notxpcom] void putBuffer (in charPtr aBuffer, in uint32_t aLength);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIBinaryOutputStream.html" title="struct xpcom::interfaces::nsIBinaryOutputStream">nsIBinaryOutputStream</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIBinaryOutputStreamCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#81-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIBinaryOutputStream</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.SetOutputStream' class="method"><span id='SetOutputStream.v' class='invisible'><code>pub unsafe fn <a href='#method.SetOutputStream' class='fnname'>SetOutputStream</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOutputStream: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIOutputStream.html" title="struct xpcom::interfaces::nsIOutputStream">nsIOutputStream</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#169-171' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void setOutputStream (in nsIOutputStream aOutputStream);</code></p>
+</div><h4 id='method.WriteBoolean' class="method"><span id='WriteBoolean.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteBoolean' class='fnname'>WriteBoolean</a>(&amp;self, aBoolean: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#183-185' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Write a boolean as an 8-bit char to the stream.
+     */
+</code></pre>
+
+<p><code>void writeBoolean (in boolean aBoolean);</code></p>
+</div><h4 id='method.Write8' class="method"><span id='Write8.v' class='invisible'><code>pub unsafe fn <a href='#method.Write8' class='fnname'>Write8</a>(&amp;self, aByte: <a class="type" href="../../xpcom/interfaces/type.uint8_t.html" title="type xpcom::interfaces::uint8_t">uint8_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#191-193' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void write8 (in uint8_t aByte);</code></p>
+</div><h4 id='method.Write16' class="method"><span id='Write16.v' class='invisible'><code>pub unsafe fn <a href='#method.Write16' class='fnname'>Write16</a>(&amp;self, a16: <a class="type" href="../../xpcom/interfaces/type.uint16_t.html" title="type xpcom::interfaces::uint16_t">uint16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#199-201' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void write16 (in uint16_t a16);</code></p>
+</div><h4 id='method.Write32' class="method"><span id='Write32.v' class='invisible'><code>pub unsafe fn <a href='#method.Write32' class='fnname'>Write32</a>(&amp;self, a32: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#207-209' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void write32 (in uint32_t a32);</code></p>
+</div><h4 id='method.Write64' class="method"><span id='Write64.v' class='invisible'><code>pub unsafe fn <a href='#method.Write64' class='fnname'>Write64</a>(&amp;self, a64: <a class="type" href="../../xpcom/interfaces/type.uint64_t.html" title="type xpcom::interfaces::uint64_t">uint64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#215-217' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void write64 (in uint64_t a64);</code></p>
+</div><h4 id='method.WriteFloat' class="method"><span id='WriteFloat.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteFloat' class='fnname'>WriteFloat</a>(&amp;self, aFloat: <a class="type" href="../../libc/type.c_float.html" title="type libc::c_float">c_float</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#223-225' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void writeFloat (in float aFloat);</code></p>
+</div><h4 id='method.WriteDouble' class="method"><span id='WriteDouble.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteDouble' class='fnname'>WriteDouble</a>(&amp;self, aDouble: <a class="type" href="../../libc/type.c_double.html" title="type libc::c_double">c_double</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#231-233' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void writeDouble (in double aDouble);</code></p>
+</div><h4 id='method.WriteStringZ' class="method"><span id='WriteStringZ.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteStringZ' class='fnname'>WriteStringZ</a>(&amp;self, aString: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#246-248' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Write an 8-bit pascal style string to the stream.
+     * 32-bit length field, followed by length 8-bit chars.
+     */
+</code></pre>
+
+<p><code>void writeStringZ (in string aString);</code></p>
+</div><h4 id='method.WriteWStringZ' class="method"><span id='WriteWStringZ.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteWStringZ' class='fnname'>WriteWStringZ</a>(&amp;self, aString: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#261-263' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Write a 16-bit pascal style string to the stream.
+     * 32-bit length field, followed by length PRUnichars.
+     */
+</code></pre>
+
+<p><code>void writeWStringZ (in wstring aString);</code></p>
+</div><h4 id='method.WriteUtf8Z' class="method"><span id='WriteUtf8Z.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteUtf8Z' class='fnname'>WriteUtf8Z</a>(&amp;self, aString: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#276-278' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Write an 8-bit pascal style string (UTF8-encoded) to the stream.
+     * 32-bit length field, followed by length 8-bit chars.
+     */
+</code></pre>
+
+<p><code>void writeUtf8Z (in wstring aString);</code></p>
+</div><h4 id='method.WriteBytes' class="method"><span id='WriteBytes.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteBytes' class='fnname'>WriteBytes</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aString: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="type" href="../../libc/unix/notbsd/linux/other/b64/x86_64/type.c_char.html" title="type libc::unix::notbsd::linux::other::b64::x86_64::c_char">c_char</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLength: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#290-292' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Write an opaque byte array to the stream.
+     */
+</code></pre>
+
+<p><code>void writeBytes ([size_is (aLength)] in string aString, in uint32_t aLength);</code></p>
+</div><h4 id='method.WriteByteArray' class="method"><span id='WriteByteArray.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteByteArray' class='fnname'>WriteByteArray</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aBytes: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint8_t.html" title="type xpcom::interfaces::uint8_t">uint8_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLength: <a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIBinaryOutputStream.rs.html#304-306' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Write an opaque byte array to the stream.
+     */
+</code></pre>
+
+<p><code>void writeByteArray ([array, size_is (aLength)] in uint8_t aBytes, in uint32_t aLength);</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIObjectOutputStream.html" title="struct xpcom::interfaces::nsIObjectOutputStream">nsIObjectOutputStream</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#36-39' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2462619820</span>, <span class="number">24542</span>, <span class="number">19353</span>, [<span class="number">135</span>, <span class="number">179</span>, <span class="number">93</span>, <span class="number">72</span>, <span class="number">100</span>, <span class="number">34</span>, <span class="number">9</span>, <span class="number">75</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIObjectOutputStream.html" title="struct xpcom::interfaces::nsIObjectOutputStream">nsIObjectOutputStream</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#43-52' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#45-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#49-51' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIObjectOutputStream.html" title="struct xpcom::interfaces::nsIObjectOutputStream">nsIObjectOutputStream</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#83-91' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIBinaryOutputStream.html" title="struct xpcom::interfaces::nsIBinaryOutputStream">nsIBinaryOutputStream</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIBinaryOutputStream.html" title="struct xpcom::interfaces::nsIBinaryOutputStream">nsIBinaryOutputStream</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIObjectOutputStream.rs.html#86-90' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

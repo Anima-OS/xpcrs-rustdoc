@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIAccessibleTextRange` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIAccessibleTextRange">
+
+    <title>xpcom::interfaces::nsIAccessibleTextRange - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIAccessibleTextRange</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetStartContainer">GetStartContainer</a><a href="#method.GetStartOffset">GetStartOffset</a><a href="#method.GetEndContainer">GetEndContainer</a><a href="#method.GetEndOffset">GetEndOffset</a><a href="#method.GetContainer">GetContainer</a><a href="#method.GetEmbeddedChildren">GetEmbeddedChildren</a><a href="#method.Compare">Compare</a><a href="#method.CompareEndPoints">CompareEndPoints</a><a href="#method.GetText">GetText</a><a href="#method.GetBounds">GetBounds</a><a href="#method.Move">Move</a><a href="#method.MoveStart">MoveStart</a><a href="#method.MoveEnd">MoveEnd</a><a href="#method.Normalize">Normalize</a><a href="#method.Crop">Crop</a><a href="#method.FindText">FindText</a><a href="#method.FindAttr">FindAttr</a><a href="#method.AddToSelection">AddToSelection</a><a href="#method.RemoveFromSelection">RemoveFromSelection</a><a href="#method.Select">Select</a><a href="#method.ScrollIntoView">ScrollIntoView</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIAccessibleTextRange', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIAccessibleTextRange</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#21-30' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIAccessibleTextRange { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIAccessibleTextRange : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * A range representing a piece of text in the document.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleTextRange.html" title="struct xpcom::interfaces::nsIAccessibleTextRange">nsIAccessibleTextRange</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#70-76' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIAccessibleTextRangeCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#73-75' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIAccessibleTextRange</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleTextRange.html" title="struct xpcom::interfaces::nsIAccessibleTextRange">nsIAccessibleTextRange</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#180-592' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.EndPoint_Start' class="associatedconstant"><span id='EndPoint_Start.v' class='invisible'><code>pub const <a href='#associatedconstant.EndPoint_Start' class="constant"><b>EndPoint_Start</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">EndPoint_Start</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+<pre><code class="language-text">/**
+   * The two endpoints of the range (starting and ending).
+   */
+</code></pre>
+</div><h4 id='associatedconstant.EndPoint_End' class="associatedconstant"><span id='EndPoint_End.v' class='invisible'><code>pub const <a href='#associatedconstant.EndPoint_End' class="constant"><b>EndPoint_End</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">EndPoint_End</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.FormatUnit' class="associatedconstant"><span id='FormatUnit.v' class='invisible'><code>pub const <a href='#associatedconstant.FormatUnit' class="constant"><b>FormatUnit</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FormatUnit</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.WordUnit' class="associatedconstant"><span id='WordUnit.v' class='invisible'><code>pub const <a href='#associatedconstant.WordUnit' class="constant"><b>WordUnit</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">WordUnit</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.LineUnit' class="associatedconstant"><span id='LineUnit.v' class='invisible'><code>pub const <a href='#associatedconstant.LineUnit' class="constant"><b>LineUnit</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">LineUnit</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.ParagraphUnit' class="associatedconstant"><span id='ParagraphUnit.v' class='invisible'><code>pub const <a href='#associatedconstant.ParagraphUnit' class="constant"><b>ParagraphUnit</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ParagraphUnit</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.PageUnit' class="associatedconstant"><span id='PageUnit.v' class='invisible'><code>pub const <a href='#associatedconstant.PageUnit' class="constant"><b>PageUnit</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">PageUnit</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.DocumentUnit' class="associatedconstant"><span id='DocumentUnit.v' class='invisible'><code>pub const <a href='#associatedconstant.DocumentUnit' class="constant"><b>DocumentUnit</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">DocumentUnit</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.AnimationStyleAttr' class="associatedconstant"><span id='AnimationStyleAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.AnimationStyleAttr' class="constant"><b>AnimationStyleAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">AnimationStyleAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+   * Text attributes. Used in conjunction with findAttrs().
+   */
+</code></pre>
+</div><h4 id='associatedconstant.AnnotationObjectsAttr' class="associatedconstant"><span id='AnnotationObjectsAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.AnnotationObjectsAttr' class="constant"><b>AnnotationObjectsAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">AnnotationObjectsAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.AnnotationTypesAttr' class="associatedconstant"><span id='AnnotationTypesAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.AnnotationTypesAttr' class="constant"><b>AnnotationTypesAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">AnnotationTypesAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.BackgroundColorAttr' class="associatedconstant"><span id='BackgroundColorAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.BackgroundColorAttr' class="constant"><b>BackgroundColorAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">BackgroundColorAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.BulletStyleAttr' class="associatedconstant"><span id='BulletStyleAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.BulletStyleAttr' class="constant"><b>BulletStyleAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">BulletStyleAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.CapStyleAttr' class="associatedconstant"><span id='CapStyleAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.CapStyleAttr' class="constant"><b>CapStyleAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CapStyleAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.CaretBidiModeAttr' class="associatedconstant"><span id='CaretBidiModeAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.CaretBidiModeAttr' class="constant"><b>CaretBidiModeAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CaretBidiModeAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.CaretPositionAttr' class="associatedconstant"><span id='CaretPositionAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.CaretPositionAttr' class="constant"><b>CaretPositionAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CaretPositionAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+</div><h4 id='associatedconstant.CultureAttr' class="associatedconstant"><span id='CultureAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.CultureAttr' class="constant"><b>CultureAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">CultureAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='associatedconstant.FontNameAttr' class="associatedconstant"><span id='FontNameAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.FontNameAttr' class="constant"><b>FontNameAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FontNameAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+</div><h4 id='associatedconstant.FontSizeAttr' class="associatedconstant"><span id='FontSizeAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.FontSizeAttr' class="constant"><b>FontSizeAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FontSizeAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">10</span></pre>
+</div><h4 id='associatedconstant.FontWeightAttr' class="associatedconstant"><span id='FontWeightAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.FontWeightAttr' class="constant"><b>FontWeightAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">FontWeightAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">11</span></pre>
+</div><h4 id='associatedconstant.ForegroundColorAttr' class="associatedconstant"><span id='ForegroundColorAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.ForegroundColorAttr' class="constant"><b>ForegroundColorAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">ForegroundColorAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">12</span></pre>
+</div><h4 id='associatedconstant.HorizontalTextAlignmentAttr' class="associatedconstant"><span id='HorizontalTextAlignmentAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.HorizontalTextAlignmentAttr' class="constant"><b>HorizontalTextAlignmentAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">HorizontalTextAlignmentAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">13</span></pre>
+</div><h4 id='associatedconstant.IndentationFirstLineAttr' class="associatedconstant"><span id='IndentationFirstLineAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.IndentationFirstLineAttr' class="constant"><b>IndentationFirstLineAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IndentationFirstLineAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">14</span></pre>
+</div><h4 id='associatedconstant.IndentationLeadingAttr' class="associatedconstant"><span id='IndentationLeadingAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.IndentationLeadingAttr' class="constant"><b>IndentationLeadingAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IndentationLeadingAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">15</span></pre>
+</div><h4 id='associatedconstant.IndentationTrailingAttr' class="associatedconstant"><span id='IndentationTrailingAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.IndentationTrailingAttr' class="constant"><b>IndentationTrailingAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IndentationTrailingAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+</div><h4 id='associatedconstant.IsActiveAttr' class="associatedconstant"><span id='IsActiveAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.IsActiveAttr' class="constant"><b>IsActiveAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IsActiveAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">17</span></pre>
+</div><h4 id='associatedconstant.IsHiddenAttr' class="associatedconstant"><span id='IsHiddenAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.IsHiddenAttr' class="constant"><b>IsHiddenAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IsHiddenAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">18</span></pre>
+</div><h4 id='associatedconstant.IsItalicAttr' class="associatedconstant"><span id='IsItalicAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.IsItalicAttr' class="constant"><b>IsItalicAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IsItalicAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">19</span></pre>
+</div><h4 id='associatedconstant.IsReadOnlyAttr' class="associatedconstant"><span id='IsReadOnlyAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.IsReadOnlyAttr' class="constant"><b>IsReadOnlyAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IsReadOnlyAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">20</span></pre>
+</div><h4 id='associatedconstant.IsSubscriptAttr' class="associatedconstant"><span id='IsSubscriptAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.IsSubscriptAttr' class="constant"><b>IsSubscriptAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IsSubscriptAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">21</span></pre>
+</div><h4 id='associatedconstant.IsSuperscriptAttr' class="associatedconstant"><span id='IsSuperscriptAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.IsSuperscriptAttr' class="constant"><b>IsSuperscriptAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IsSuperscriptAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">22</span></pre>
+</div><h4 id='associatedconstant.LinkAttr' class="associatedconstant"><span id='LinkAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.LinkAttr' class="constant"><b>LinkAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">LinkAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">23</span></pre>
+</div><h4 id='associatedconstant.MarginBottomAttr' class="associatedconstant"><span id='MarginBottomAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.MarginBottomAttr' class="constant"><b>MarginBottomAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MarginBottomAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">24</span></pre>
+</div><h4 id='associatedconstant.MarginLeadingAttr' class="associatedconstant"><span id='MarginLeadingAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.MarginLeadingAttr' class="constant"><b>MarginLeadingAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MarginLeadingAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">25</span></pre>
+</div><h4 id='associatedconstant.MarginTopAttr' class="associatedconstant"><span id='MarginTopAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.MarginTopAttr' class="constant"><b>MarginTopAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MarginTopAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">26</span></pre>
+</div><h4 id='associatedconstant.MarginTrailingAttr' class="associatedconstant"><span id='MarginTrailingAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.MarginTrailingAttr' class="constant"><b>MarginTrailingAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MarginTrailingAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">27</span></pre>
+</div><h4 id='associatedconstant.OutlineStylesAttr' class="associatedconstant"><span id='OutlineStylesAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.OutlineStylesAttr' class="constant"><b>OutlineStylesAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OutlineStylesAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">28</span></pre>
+</div><h4 id='associatedconstant.OverlineColorAttr' class="associatedconstant"><span id='OverlineColorAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.OverlineColorAttr' class="constant"><b>OverlineColorAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OverlineColorAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">29</span></pre>
+</div><h4 id='associatedconstant.OverlineStyleAttr' class="associatedconstant"><span id='OverlineStyleAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.OverlineStyleAttr' class="constant"><b>OverlineStyleAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">OverlineStyleAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">30</span></pre>
+</div><h4 id='associatedconstant.SelectionActiveEndAttr' class="associatedconstant"><span id='SelectionActiveEndAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.SelectionActiveEndAttr' class="constant"><b>SelectionActiveEndAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SelectionActiveEndAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">31</span></pre>
+</div><h4 id='associatedconstant.StrikethroughColorAttr' class="associatedconstant"><span id='StrikethroughColorAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.StrikethroughColorAttr' class="constant"><b>StrikethroughColorAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">StrikethroughColorAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+</div><h4 id='associatedconstant.StrikethroughStyleAttr' class="associatedconstant"><span id='StrikethroughStyleAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.StrikethroughStyleAttr' class="constant"><b>StrikethroughStyleAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">StrikethroughStyleAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">33</span></pre>
+</div><h4 id='associatedconstant.StyleIdAttr' class="associatedconstant"><span id='StyleIdAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.StyleIdAttr' class="constant"><b>StyleIdAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">StyleIdAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">34</span></pre>
+</div><h4 id='associatedconstant.StyleNameAttr' class="associatedconstant"><span id='StyleNameAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.StyleNameAttr' class="constant"><b>StyleNameAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">StyleNameAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">35</span></pre>
+</div><h4 id='associatedconstant.TabsAttr' class="associatedconstant"><span id='TabsAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.TabsAttr' class="constant"><b>TabsAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TabsAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">36</span></pre>
+</div><h4 id='associatedconstant.TextFlowDirectionsAttr' class="associatedconstant"><span id='TextFlowDirectionsAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.TextFlowDirectionsAttr' class="constant"><b>TextFlowDirectionsAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TextFlowDirectionsAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">37</span></pre>
+</div><h4 id='associatedconstant.UnderlineColorAttr' class="associatedconstant"><span id='UnderlineColorAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.UnderlineColorAttr' class="constant"><b>UnderlineColorAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">UnderlineColorAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">38</span></pre>
+</div><h4 id='associatedconstant.UnderlineStyleAttr' class="associatedconstant"><span id='UnderlineStyleAttr.v' class='invisible'><code>pub const <a href='#associatedconstant.UnderlineStyleAttr' class="constant"><b>UnderlineStyleAttr</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">UnderlineStyleAttr</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">39</span></pre>
+</div><h4 id='associatedconstant.AlignToTop' class="associatedconstant"><span id='AlignToTop.v' class='invisible'><code>pub const <a href='#associatedconstant.AlignToTop' class="constant"><b>AlignToTop</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">AlignToTop</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.AlignToBottom' class="associatedconstant"><span id='AlignToBottom.v' class='invisible'><code>pub const <a href='#associatedconstant.AlignToBottom' class="constant"><b>AlignToBottom</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">AlignToBottom</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='method.GetStartContainer' class="method"><span id='GetStartContainer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetStartContainer' class='fnname'>GetStartContainer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStartContainer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleText.html" title="struct xpcom::interfaces::nsIAccessibleText">nsIAccessibleText</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#346-348' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute nsIAccessibleText startContainer;</code></p>
+</div><h4 id='method.GetStartOffset' class="method"><span id='GetStartOffset.v' class='invisible'><code>pub unsafe fn <a href='#method.GetStartOffset' class='fnname'>GetStartOffset</a>(&amp;self, aStartOffset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#354-356' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute long startOffset;</code></p>
+</div><h4 id='method.GetEndContainer' class="method"><span id='GetEndContainer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEndContainer' class='fnname'>GetEndContainer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEndContainer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleText.html" title="struct xpcom::interfaces::nsIAccessibleText">nsIAccessibleText</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#362-364' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute nsIAccessibleText endContainer;</code></p>
+</div><h4 id='method.GetEndOffset' class="method"><span id='GetEndOffset.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEndOffset' class='fnname'>GetEndOffset</a>(&amp;self, aEndOffset: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#370-372' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute long endOffset;</code></p>
+</div><h4 id='method.GetContainer' class="method"><span id='GetContainer.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContainer' class='fnname'>GetContainer</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContainer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#384-386' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return an accessible containing the whole range
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIAccessible container;</code></p>
+</div><h4 id='method.GetEmbeddedChildren' class="method"><span id='GetEmbeddedChildren.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEmbeddedChildren' class='fnname'>GetEmbeddedChildren</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEmbeddedChildren: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#398-400' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return embedded children within the range.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIArray embeddedChildren;</code></p>
+</div><h4 id='method.Compare' class="method"><span id='Compare.v' class='invisible'><code>pub unsafe fn <a href='#method.Compare' class='fnname'>Compare</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOtherRange: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleTextRange.html" title="struct xpcom::interfaces::nsIAccessibleTextRange">nsIAccessibleTextRange</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#412-414' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return true if this range has the same end points of the given range.
+   */
+</code></pre>
+
+<p><code>boolean compare (in nsIAccessibleTextRange aOtherRange);</code></p>
+</div><h4 id='method.CompareEndPoints' class="method"><span id='CompareEndPoints.v' class='invisible'><code>pub unsafe fn <a href='#method.CompareEndPoints' class='fnname'>CompareEndPoints</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEndPoint: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOtherRange: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleTextRange.html" title="struct xpcom::interfaces::nsIAccessibleTextRange">nsIAccessibleTextRange</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOtherRangeEndPoint: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#429-431' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Compare this and given ranges end points.
+   *
+   * @return -1/0/1 if this range end point is before/equal/after the given
+   *          range end point.
+   */
+</code></pre>
+
+<p><code>long compareEndPoints (in unsigned long aEndPoint, in nsIAccessibleTextRange aOtherRange, in unsigned long aOtherRangeEndPoint);</code></p>
+</div><h4 id='method.GetText' class="method"><span id='GetText.v' class='invisible'><code>pub unsafe fn <a href='#method.GetText' class='fnname'>GetText</a>(&amp;self, aText: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#443-445' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return text within the range.
+   */
+</code></pre>
+
+<p><code>readonly attribute AString text;</code></p>
+</div><h4 id='method.GetBounds' class="method"><span id='GetBounds.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBounds' class='fnname'>GetBounds</a>(&amp;self, aBounds: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#457-459' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return list of rects of the range.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIArray bounds;</code></p>
+</div><h4 id='method.Move' class="method"><span id='Move.v' class='invisible'><code>pub unsafe fn <a href='#method.Move' class='fnname'>Move</a>(&amp;self, aUnit: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, aCount: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#471-473' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   *  Move the boundary(ies) by the given number of the unit.
+   */
+</code></pre>
+
+<p><code>void move (in unsigned long aUnit, in long aCount);</code></p>
+</div><h4 id='method.MoveStart' class="method"><span id='MoveStart.v' class='invisible'><code>pub unsafe fn <a href='#method.MoveStart' class='fnname'>MoveStart</a>(&amp;self, aUnit: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, aCount: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#479-481' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void moveStart (in unsigned long aUnit, in long aCount);</code></p>
+</div><h4 id='method.MoveEnd' class="method"><span id='MoveEnd.v' class='invisible'><code>pub unsafe fn <a href='#method.MoveEnd' class='fnname'>MoveEnd</a>(&amp;self, aUnit: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, aCount: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#487-489' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void moveEnd (in unsigned long aUnit, in long aCount);</code></p>
+</div><h4 id='method.Normalize' class="method"><span id='Normalize.v' class='invisible'><code>pub unsafe fn <a href='#method.Normalize' class='fnname'>Normalize</a>(&amp;self, aUnit: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#501-503' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Normalize the range to the closest unit of the given type.
+   */
+</code></pre>
+
+<p><code>void normalize (in unsigned long aUnit);</code></p>
+</div><h4 id='method.Crop' class="method"><span id='Crop.v' class='invisible'><code>pub unsafe fn <a href='#method.Crop' class='fnname'>Crop</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContainer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#515-517' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Crops the range by the given accessible element.
+   */
+</code></pre>
+
+<p><code>boolean crop (in nsIAccessible aContainer);</code></p>
+</div><h4 id='method.FindText' class="method"><span id='FindText.v' class='invisible'><code>pub unsafe fn <a href='#method.FindText' class='fnname'>FindText</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aText: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsBackward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsIgnoreCase: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleTextRange.html" title="struct xpcom::interfaces::nsIAccessibleTextRange">nsIAccessibleTextRange</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#529-531' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return range enclosing the found text.
+   */
+</code></pre>
+
+<p><code>nsIAccessibleTextRange findText (in AString aText, in boolean aIsBackward, in boolean aIsIgnoreCase);</code></p>
+</div><h4 id='method.FindAttr' class="method"><span id='FindAttr.v' class='invisible'><code>pub unsafe fn <a href='#method.FindAttr' class='fnname'>FindAttr</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttr: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aValue: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIVariant.html" title="struct xpcom::interfaces::nsIVariant">nsIVariant</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIsBackward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleTextRange.html" title="struct xpcom::interfaces::nsIAccessibleTextRange">nsIAccessibleTextRange</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#543-545' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return range enslosing the text having requested attribute.
+   */
+</code></pre>
+
+<p><code>nsIAccessibleTextRange findAttr (in unsigned long aAttr, in nsIVariant aValue, in boolean aIsBackward);</code></p>
+</div><h4 id='method.AddToSelection' class="method"><span id='AddToSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.AddToSelection' class='fnname'>AddToSelection</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#557-559' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Add/remove the text range from selection.
+   */
+</code></pre>
+
+<p><code>void addToSelection ();</code></p>
+</div><h4 id='method.RemoveFromSelection' class="method"><span id='RemoveFromSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveFromSelection' class='fnname'>RemoveFromSelection</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#565-567' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void removeFromSelection ();</code></p>
+</div><h4 id='method.Select' class="method"><span id='Select.v' class='invisible'><code>pub unsafe fn <a href='#method.Select' class='fnname'>Select</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#573-575' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void select ();</code></p>
+</div><h4 id='method.ScrollIntoView' class="method"><span id='ScrollIntoView.v' class='invisible'><code>pub unsafe fn <a href='#method.ScrollIntoView' class='fnname'>ScrollIntoView</a>(&amp;self, aHow: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#587-589' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Scroll the range into view.
+   */
+</code></pre>
+
+<p><code>void scrollIntoView (in unsigned long aHow);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleTextRange.html" title="struct xpcom::interfaces::nsIAccessibleTextRange">nsIAccessibleTextRange</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#35-38' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3293664803</span>, <span class="number">22009</span>, <span class="number">17731</span>, [<span class="number">163</span>, <span class="number">213</span>, <span class="number">193</span>, <span class="number">233</span>, <span class="number">175</span>, <span class="number">165</span>, <span class="number">136</span>, <span class="number">244</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleTextRange.html" title="struct xpcom::interfaces::nsIAccessibleTextRange">nsIAccessibleTextRange</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#42-51' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#44-46' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#48-50' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleTextRange.html" title="struct xpcom::interfaces::nsIAccessibleTextRange">nsIAccessibleTextRange</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#82-90' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessibleTextRange.rs.html#85-89' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

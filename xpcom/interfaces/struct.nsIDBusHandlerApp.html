@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIDBusHandlerApp` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIDBusHandlerApp">
+
+    <title>xpcom::interfaces::nsIDBusHandlerApp - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIDBusHandlerApp</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetService">GetService</a><a href="#method.SetService">SetService</a><a href="#method.GetObjectPath">GetObjectPath</a><a href="#method.SetObjectPath">SetObjectPath</a><a href="#method.GetDBusInterface">GetDBusInterface</a><a href="#method.SetDBusInterface">SetDBusInterface</a><a href="#method.GetMethod">GetMethod</a><a href="#method.SetMethod">SetMethod</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIHandlerApp&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetName">GetName</a><a href="#method.SetName">SetName</a><a href="#method.GetDetailedDescription">GetDetailedDescription</a><a href="#method.SetDetailedDescription">SetDetailedDescription</a><a href="#method.Equals">Equals</a><a href="#method.LaunchWithURI">LaunchWithURI</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIDBusHandlerApp', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIDBusHandlerApp</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1413-1422' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIDBusHandlerApp { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIDBusHandlerApp : nsIHandlerApp</code></p>
+
+<pre><code class="language-text">/**
+ * nsIDBusHandlerApp represents local applications launched by DBus a message
+ * invoking a method taking a single string argument descibing a URI
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIDBusHandlerApp.html" title="struct xpcom::interfaces::nsIDBusHandlerApp">nsIDBusHandlerApp</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1462-1468' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIDBusHandlerAppCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1465-1467' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIDBusHandlerApp</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIDBusHandlerApp.html" title="struct xpcom::interfaces::nsIDBusHandlerApp">nsIDBusHandlerApp</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1533-1661' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetService' class="method"><span id='GetService.v' class='invisible'><code>pub unsafe fn <a href='#method.GetService' class='fnname'>GetService</a>(&amp;self, aService: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1545-1547' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Service defines the dbus service that should handle this protocol.
+     * If its not set,  NS_ERROR_FAILURE will be returned by LaunchWithURI
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String service;</code></p>
+</div><h4 id='method.SetService' class="method"><span id='SetService.v' class='invisible'><code>pub unsafe fn <a href='#method.SetService' class='fnname'>SetService</a>(&amp;self, aService: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1560-1562' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Service defines the dbus service that should handle this protocol.
+     * If its not set,  NS_ERROR_FAILURE will be returned by LaunchWithURI
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String service;</code></p>
+</div><h4 id='method.GetObjectPath' class="method"><span id='GetObjectPath.v' class='invisible'><code>pub unsafe fn <a href='#method.GetObjectPath' class='fnname'>GetObjectPath</a>(&amp;self, aObjectPath: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1576-1578' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Objpath defines the object path of the dbus service that should handle
+     * this protocol. If its not set,  NS_ERROR_FAILURE will be returned
+     * by LaunchWithURI
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String objectPath;</code></p>
+</div><h4 id='method.SetObjectPath' class="method"><span id='SetObjectPath.v' class='invisible'><code>pub unsafe fn <a href='#method.SetObjectPath' class='fnname'>SetObjectPath</a>(&amp;self, aObjectPath: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1592-1594' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Objpath defines the object path of the dbus service that should handle
+     * this protocol. If its not set,  NS_ERROR_FAILURE will be returned
+     * by LaunchWithURI
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String objectPath;</code></p>
+</div><h4 id='method.GetDBusInterface' class="method"><span id='GetDBusInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDBusInterface' class='fnname'>GetDBusInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDBusInterface: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1608-1610' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * DBusInterface defines the interface of the dbus service that should
+     * handle this protocol. If its not set,  NS_ERROR_FAILURE will be
+     * returned by LaunchWithURI
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String dBusInterface;</code></p>
+</div><h4 id='method.SetDBusInterface' class="method"><span id='SetDBusInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDBusInterface' class='fnname'>SetDBusInterface</a>(&amp;self, aDBusInterface: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1624-1626' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * DBusInterface defines the interface of the dbus service that should
+     * handle this protocol. If its not set,  NS_ERROR_FAILURE will be
+     * returned by LaunchWithURI
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String dBusInterface;</code></p>
+</div><h4 id='method.GetMethod' class="method"><span id='GetMethod.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMethod' class='fnname'>GetMethod</a>(&amp;self, aMethod: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1640-1642' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Method defines the dbus method that should be invoked to handle this
+     * protocol. If its not set,  NS_ERROR_FAILURE will be returned by
+     * LaunchWithURI
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String method;</code></p>
+</div><h4 id='method.SetMethod' class="method"><span id='SetMethod.v' class='invisible'><code>pub unsafe fn <a href='#method.SetMethod' class='fnname'>SetMethod</a>(&amp;self, aMethod: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1656-1658' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Method defines the dbus method that should be invoked to handle this
+     * protocol. If its not set,  NS_ERROR_FAILURE will be returned by
+     * LaunchWithURI
+     */
+</code></pre>
+
+<p><code>attribute AUTF8String method;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIHandlerApp.html" title="struct xpcom::interfaces::nsIHandlerApp">nsIHandlerApp</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIHandlerAppCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#798-800' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIHandlerApp</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.GetName' class="method"><span id='GetName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetName' class='fnname'>GetName</a>(&amp;self, aName: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#879-881' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+ * nsIHandlerApp represents an external application that can handle content
+ * of some sort (either a MIME type or a protocol).
+ *
+ * FIXME: now that we&#39;ve made nsIWebHandlerApp inherit from nsIHandlerApp,
+ * we should also try to make nsIWebContentHandlerInfo inherit from or possibly
+ * be replaced by nsIWebHandlerApp (bug 394710).
+ */
+/**
+     * Human readable name for the handler
+     */
+</code></pre>
+
+<p><code>attribute AString name;</code></p>
+</div><h4 id='method.SetName' class="method"><span id='SetName.v' class='invisible'><code>pub unsafe fn <a href='#method.SetName' class='fnname'>SetName</a>(&amp;self, aName: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#901-903' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+ * nsIHandlerApp represents an external application that can handle content
+ * of some sort (either a MIME type or a protocol).
+ *
+ * FIXME: now that we&#39;ve made nsIWebHandlerApp inherit from nsIHandlerApp,
+ * we should also try to make nsIWebContentHandlerInfo inherit from or possibly
+ * be replaced by nsIWebHandlerApp (bug 394710).
+ */
+/**
+     * Human readable name for the handler
+     */
+</code></pre>
+
+<p><code>attribute AString name;</code></p>
+</div><h4 id='method.GetDetailedDescription' class="method"><span id='GetDetailedDescription.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDetailedDescription' class='fnname'>GetDetailedDescription</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDetailedDescription: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#916-918' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Detailed description for this handler. Suitable for
+     * a tooltip or short informative sentence.
+     */
+</code></pre>
+
+<p><code>attribute AString detailedDescription;</code></p>
+</div><h4 id='method.SetDetailedDescription' class="method"><span id='SetDetailedDescription.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDetailedDescription' class='fnname'>SetDetailedDescription</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDetailedDescription: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#931-933' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Detailed description for this handler. Suitable for
+     * a tooltip or short informative sentence.
+     */
+</code></pre>
+
+<p><code>attribute AString detailedDescription;</code></p>
+</div><h4 id='method.Equals' class="method"><span id='Equals.v' class='invisible'><code>pub unsafe fn <a href='#method.Equals' class='fnname'>Equals</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHandlerApp: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIHandlerApp.html" title="struct xpcom::interfaces::nsIHandlerApp">nsIHandlerApp</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#954-956' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Whether or not the given handler app is logically equivalent to the
+     * invokant (i.e. they represent the same app).
+     *
+     * Two apps are the same if they are both either local or web handlers
+     * and their executables/URI templates and command line parameters are
+     * the same.
+     *
+     * @param aHandlerApp the handler app to compare to the invokant
+     *
+     * @returns true if the two are logically equivalent, false otherwise
+     */
+</code></pre>
+
+<p><code>boolean equals (in nsIHandlerApp aHandlerApp);</code></p>
+</div><h4 id='method.LaunchWithURI' class="method"><span id='LaunchWithURI.v' class='invisible'><code>pub unsafe fn <a href='#method.LaunchWithURI' class='fnname'>LaunchWithURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aWindowContext: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#983-985' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Launches the application with the specified URI.
+     *
+     * @param aURI
+     *        The URI to launch this application with
+     *
+     * @param aWindowContext
+     *
+     *        Currently only relevant to web-handler apps.  If given, this
+     *        represents the docshell to load the handler in and is passed
+     *        through to nsIURILoader.openURI.  If this parameter is null or
+     *        not present, the web handler app implementation will attempt to
+     *        find/create a place to load the handler and do so.  As of this
+     *        writing, it tries to load the web handler in a new window using
+     *        nsIBrowserDOMWindow.openURI.  In the future, it may attempt to
+     *        have a more comprehensive strategy which could include handing
+     *        off to the system default browser (bug 394479).
+     */
+</code></pre>
+
+<p><code>void launchWithURI (in nsIURI aURI, [optional] in nsIInterfaceRequestor aWindowContext);</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDBusHandlerApp.html" title="struct xpcom::interfaces::nsIDBusHandlerApp">nsIDBusHandlerApp</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1427-1430' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">536618827</span>, <span class="number">19647</span>, <span class="number">19381</span>, [<span class="number">166</span>, <span class="number">53</span>, <span class="number">5</span>, <span class="number">173</span>, <span class="number">44</span>, <span class="number">187</span>, <span class="number">101</span>, <span class="number">52</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDBusHandlerApp.html" title="struct xpcom::interfaces::nsIDBusHandlerApp">nsIDBusHandlerApp</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1434-1443' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1436-1438' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1440-1442' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIDBusHandlerApp.html" title="struct xpcom::interfaces::nsIDBusHandlerApp">nsIDBusHandlerApp</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1474-1482' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIHandlerApp.html" title="struct xpcom::interfaces::nsIHandlerApp">nsIHandlerApp</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIHandlerApp.html" title="struct xpcom::interfaces::nsIHandlerApp">nsIHandlerApp</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIMIMEInfo.rs.html#1477-1481' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

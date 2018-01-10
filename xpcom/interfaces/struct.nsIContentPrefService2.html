@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIContentPrefService2` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIContentPrefService2">
+
+    <title>xpcom::interfaces::nsIContentPrefService2 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIContentPrefService2</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetByName">GetByName</a><a href="#method.GetByDomainAndName">GetByDomainAndName</a><a href="#method.GetBySubdomainAndName">GetBySubdomainAndName</a><a href="#method.GetGlobal">GetGlobal</a><a href="#method.GetCachedByDomainAndName">GetCachedByDomainAndName</a><a href="#method.GetCachedBySubdomainAndName">GetCachedBySubdomainAndName</a><a href="#method.GetCachedGlobal">GetCachedGlobal</a><a href="#method.Set">Set</a><a href="#method.SetGlobal">SetGlobal</a><a href="#method.RemoveByDomainAndName">RemoveByDomainAndName</a><a href="#method.RemoveBySubdomainAndName">RemoveBySubdomainAndName</a><a href="#method.RemoveGlobal">RemoveGlobal</a><a href="#method.RemoveByDomain">RemoveByDomain</a><a href="#method.RemoveBySubdomain">RemoveBySubdomain</a><a href="#method.RemoveByName">RemoveByName</a><a href="#method.RemoveAllDomains">RemoveAllDomains</a><a href="#method.RemoveAllDomainsSince">RemoveAllDomainsSince</a><a href="#method.RemoveAllGlobals">RemoveAllGlobals</a><a href="#method.AddObserverForName">AddObserverForName</a><a href="#method.RemoveObserverForName">RemoveObserverForName</a><a href="#method.ExtractDomain">ExtractDomain</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIContentPrefService2', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIContentPrefService2</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#231-240' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIContentPrefService2 { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIContentPrefService2 : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * Content Preferences
+ *
+ * Content preferences allow the application to associate arbitrary data, or
+ * &quot;preferences&quot;, with specific domains, or web &quot;content&quot;.  Specifically, a
+ * content preference is a structure with three values: a domain with which the
+ * preference is associated, a name that identifies the preference within its
+ * domain, and a value.  (See nsIContentPref below.)
+ *
+ * For example, if you want to remember the user&#39;s preference for a certain zoom
+ * level on www.mozilla.org pages, you might store a preference whose domain is
+ * &quot;www.mozilla.org&quot;, whose name is &quot;zoomLevel&quot;, and whose value is the numeric
+ * zoom level.
+ *
+ * A preference need not have a domain, and in that case the preference is
+ * called a &quot;global&quot; preference.  This interface doesn&#39;t impart any special
+ * significance to global preferences; they&#39;re simply name-value pairs that
+ * aren&#39;t associated with any particular domain.  As a consumer of this
+ * interface, you might choose to let a global preference override all non-
+ * global preferences of the same name, for example, for whatever definition of
+ * &quot;override&quot; is appropriate for your use case.
+ *
+ *
+ * Domain Parameters
+ *
+ * Many methods of this interface accept a &quot;domain&quot; parameter.  Domains may be
+ * specified either exactly, like &quot;example.com&quot;, or as full URLs, like
+ * &quot;http://example.com/foo/bar&quot;.  In the latter case the API extracts the full
+ * domain from the URL, so if you specify &quot;http://foo.bar.example.com/baz&quot;, the
+ * domain is taken to be &quot;foo.bar.example.com&quot;, not &quot;example.com&quot;.
+ *
+ *
+ * Private-Browsing Context Parameters
+ *
+ * Many methods also accept a &quot;context&quot; parameter.  This parameter relates to
+ * private browsing and determines the kind of storage that a method uses,
+ * either the usual permanent storage or temporary storage set aside for private
+ * browsing sessions.
+ *
+ * Pass null to unconditionally use permanent storage.  Pass an nsILoadContext
+ * to use storage appropriate to the context&#39;s usePrivateBrowsing attribute: if
+ * usePrivateBrowsing is true, temporary private-browsing storage is used, and
+ * otherwise permanent storage is used.  A context can be obtained from the
+ * window or channel whose content pertains to the preferences being modified or
+ * retrieved.
+ *
+ *
+ * Callbacks
+ *
+ * The methods of callback objects are always called asynchronously.
+ *
+ * Observers are called after callbacks are called, but they are called in the
+ * same turn of the event loop as callbacks.
+ *
+ * See nsIContentPrefCallback2 below for more information about callbacks.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefService2.html" title="struct xpcom::interfaces::nsIContentPrefService2">nsIContentPrefService2</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#280-286' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIContentPrefService2Coerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#283-285' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIContentPrefService2</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefService2.html" title="struct xpcom::interfaces::nsIContentPrefService2">nsIContentPrefService2</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#390-826' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetByName' class="method"><span id='GetByName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetByName' class='fnname'>GetByName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#407-409' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets all the preferences with the given name.
+   *
+   * @param name      The preferences&#39; name.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleResult is called once for each preference unless
+   *                  no such preferences exist, in which case handleResult
+   *                  is not called at all.
+   */
+</code></pre>
+
+<p><code>void getByName (in AString name, in nsILoadContext context, in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.GetByDomainAndName' class="method"><span id='GetByDomainAndName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetByDomainAndName' class='fnname'>GetByDomainAndName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;domain: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#427-429' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets the preference with the given domain and name.
+   *
+   * @param domain    The preference&#39;s domain.
+   * @param name      The preference&#39;s name.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleResult is called once unless no such preference
+   *                  exists, in which case handleResult is not called at all.
+   */
+</code></pre>
+
+<p><code>void getByDomainAndName (in AString domain, in AString name, in nsILoadContext context, in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.GetBySubdomainAndName' class="method"><span id='GetBySubdomainAndName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBySubdomainAndName' class='fnname'>GetBySubdomainAndName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;domain: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#448-450' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets all preferences with the given name whose domains are either the same
+   * as or subdomains of the given domain.
+   *
+   * @param domain    The preferences&#39; domain.
+   * @param name      The preferences&#39; name.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleResult is called once for each preference.  If no
+   *                  such preferences exist, handleResult is not called at all.
+   */
+</code></pre>
+
+<p><code>void getBySubdomainAndName (in AString domain, in AString name, in nsILoadContext context, in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.GetGlobal' class="method"><span id='GetGlobal.v' class='invisible'><code>pub unsafe fn <a href='#method.GetGlobal' class='fnname'>GetGlobal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#467-469' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets the preference with no domain and the given name.
+   *
+   * @param name      The preference&#39;s name.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleResult is called once unless no such preference
+   *                  exists, in which case handleResult is not called at all.
+   */
+</code></pre>
+
+<p><code>void getGlobal (in AString name, in nsILoadContext context, in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.GetCachedByDomainAndName' class="method"><span id='GetCachedByDomainAndName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCachedByDomainAndName' class='fnname'>GetCachedByDomainAndName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;domain: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPref.html" title="struct xpcom::interfaces::nsIContentPref">nsIContentPref</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#497-499' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Synchronously retrieves from the in-memory cache the preference with the
+   * given domain and name.
+   *
+   * In addition to caching preference values, the cache also keeps track of
+   * preferences that are known not to exist.  If the preference is known not to
+   * exist, the value attribute of the returned object will be undefined
+   * (nsIDataType::VTYPE_VOID).
+   *
+   * If the preference is neither cached nor known not to exist, then null is
+   * returned, and get() must be called to determine whether the preference
+   * exists.
+   *
+   * @param domain   The preference&#39;s domain.
+   * @param name     The preference&#39;s name.
+   * @param context  The private-browsing context, if any.
+   * @return         The preference, or null if no such preference is known to
+   *                 exist.
+   */
+</code></pre>
+
+<p><code>nsIContentPref getCachedByDomainAndName (in AString domain, in AString name, in nsILoadContext context);</code></p>
+</div><h4 id='method.GetCachedBySubdomainAndName' class="method"><span id='GetCachedBySubdomainAndName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCachedBySubdomainAndName' class='fnname'>GetCachedBySubdomainAndName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;domain: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;len: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;prefs: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPref.html" title="struct xpcom::interfaces::nsIContentPref">nsIContentPref</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#524-526' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Synchronously retrieves from the in-memory cache all preferences with the
+   * given name whose domains are either the same as or subdomains of the given
+   * domain.
+   *
+   * The preferences are returned in an array through the out-parameter.  If a
+   * preference for a particular subdomain is known not to exist, then an object
+   * corresponding to that preference will be present in the array, and, as with
+   * getCachedByDomainAndName, its value attribute will be undefined.
+   *
+   * @param domain   The preferences&#39; domain.
+   * @param name     The preferences&#39; name.
+   * @param context  The private-browsing context, if any.
+   * @param len      The length of the returned array.
+   * @param prefs    The array of preferences.
+   */
+</code></pre>
+
+<p><code>void getCachedBySubdomainAndName (in AString domain, in AString name, in nsILoadContext context, [optional] out unsigned long len, [array, size_is (len), retval] out nsIContentPref prefs);</code></p>
+</div><h4 id='method.GetCachedGlobal' class="method"><span id='GetCachedGlobal.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCachedGlobal' class='fnname'>GetCachedGlobal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPref.html" title="struct xpcom::interfaces::nsIContentPref">nsIContentPref</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#549-551' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Synchronously retrieves from the in-memory cache the preference with no
+   * domain and the given name.
+   *
+   * As with getCachedByDomainAndName, if the preference is cached then it is
+   * returned; if the preference is known not to exist, then the value attribute
+   * of the returned object will be undefined; if the preference is neither
+   * cached nor known not to exist, then null is returned.
+   *
+   * @param name     The preference&#39;s name.
+   * @param context  The private-browsing context, if any.
+   * @return         The preference, or null if no such preference is known to
+   *                 exist.
+   */
+</code></pre>
+
+<p><code>nsIContentPref getCachedGlobal (in AString name, in nsILoadContext context);</code></p>
+</div><h4 id='method.Set' class="method"><span id='Set.v' class='invisible'><code>pub unsafe fn <a href='#method.Set' class='fnname'>Set</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;domain: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;value: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIVariant.html" title="struct xpcom::interfaces::nsIVariant">nsIVariant</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#570-572' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sets a preference.
+   *
+   * @param domain    The preference&#39;s domain.
+   * @param name      The preference&#39;s name.
+   * @param value     The preference&#39;s value.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the preference has been
+   *                  stored.
+   */
+</code></pre>
+
+<p><code>void set (in AString domain, in AString name, in nsIVariant value, in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.SetGlobal' class="method"><span id='SetGlobal.v' class='invisible'><code>pub unsafe fn <a href='#method.SetGlobal' class='fnname'>SetGlobal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;value: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIVariant.html" title="struct xpcom::interfaces::nsIVariant">nsIVariant</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#590-592' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sets a preference with no domain.
+   *
+   * @param name      The preference&#39;s name.
+   * @param value     The preference&#39;s value.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the preference has been
+   *                  stored.
+   */
+</code></pre>
+
+<p><code>void setGlobal (in AString name, in nsIVariant value, in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.RemoveByDomainAndName' class="method"><span id='RemoveByDomainAndName.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveByDomainAndName' class='fnname'>RemoveByDomainAndName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;domain: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#609-611' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes the preference with the given domain and name.
+   *
+   * @param domain    The preference&#39;s domain.
+   * @param name      The preference&#39;s name.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the operation completes.
+   */
+</code></pre>
+
+<p><code>void removeByDomainAndName (in AString domain, in AString name, in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.RemoveBySubdomainAndName' class="method"><span id='RemoveBySubdomainAndName.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveBySubdomainAndName' class='fnname'>RemoveBySubdomainAndName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;domain: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#629-631' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes all the preferences with the given name whose domains are either
+   * the same as or subdomains of the given domain.
+   *
+   * @param domain    The preferences&#39; domain.
+   * @param name      The preferences&#39; name.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the operation completes.
+   */
+</code></pre>
+
+<p><code>void removeBySubdomainAndName (in AString domain, in AString name, in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.RemoveGlobal' class="method"><span id='RemoveGlobal.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveGlobal' class='fnname'>RemoveGlobal</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#647-649' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes the preference with no domain and the given name.
+   *
+   * @param name      The preference&#39;s name.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the operation completes.
+   */
+</code></pre>
+
+<p><code>void removeGlobal (in AString name, in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.RemoveByDomain' class="method"><span id='RemoveByDomain.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveByDomain' class='fnname'>RemoveByDomain</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;domain: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#665-667' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes all preferences with the given domain.
+   *
+   * @param domain    The preferences&#39; domain.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the operation completes.
+   */
+</code></pre>
+
+<p><code>void removeByDomain (in AString domain, in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.RemoveBySubdomain' class="method"><span id='RemoveBySubdomain.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveBySubdomain' class='fnname'>RemoveBySubdomain</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;domain: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#684-686' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes all preferences whose domains are either the same as or subdomains
+   * of the given domain.
+   *
+   * @param domain    The preferences&#39; domain.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the operation completes.
+   */
+</code></pre>
+
+<p><code>void removeBySubdomain (in AString domain, in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.RemoveByName' class="method"><span id='RemoveByName.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveByName' class='fnname'>RemoveByName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#703-705' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes all preferences with the given name regardless of domain, including
+   * global preferences with the given name.
+   *
+   * @param name      The preferences&#39; name.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the operation completes.
+   */
+</code></pre>
+
+<p><code>void removeByName (in AString name, in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.RemoveAllDomains' class="method"><span id='RemoveAllDomains.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveAllDomains' class='fnname'>RemoveAllDomains</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#721-723' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes all non-global preferences -- in other words, all preferences that
+   * have a domain.
+   *
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the operation completes.
+   */
+</code></pre>
+
+<p><code>void removeAllDomains (in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.RemoveAllDomainsSince' class="method"><span id='RemoveAllDomainsSince.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveAllDomainsSince' class='fnname'>RemoveAllDomainsSince</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;since: <a class="type" href="../../libc/type.uint64_t.html" title="type libc::uint64_t">uint64_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#739-741' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes all non-global preferences created after and including |since|.
+   *
+   * @param since     Timestamp in milliseconds.
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the operation completes.
+   */
+</code></pre>
+
+<p><code>void removeAllDomainsSince (in unsigned long long since, in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.RemoveAllGlobals' class="method"><span id='RemoveAllGlobals.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveAllGlobals' class='fnname'>RemoveAllGlobals</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;context: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadContext.html" title="struct xpcom::interfaces::nsILoadContext">nsILoadContext</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;callback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefCallback2.html" title="struct xpcom::interfaces::nsIContentPrefCallback2">nsIContentPrefCallback2</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#757-759' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Removes all global preferences -- in other words, all preferences that have
+   * no domain.
+   *
+   * @param context   The private-browsing context, if any.
+   * @param callback  handleCompletion is called when the operation completes.
+   */
+</code></pre>
+
+<p><code>void removeAllGlobals (in nsILoadContext context, [optional] in nsIContentPrefCallback2 callback);</code></p>
+</div><h4 id='method.AddObserverForName' class="method"><span id='AddObserverForName.v' class='invisible'><code>pub unsafe fn <a href='#method.AddObserverForName' class='fnname'>AddObserverForName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;observer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefObserver.html" title="struct xpcom::interfaces::nsIContentPrefObserver">nsIContentPrefObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#783-785' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Registers an observer that will be notified whenever a preference with the
+   * given name is set or removed.
+   *
+   * When a set or remove method is called, observers are called after the set
+   * or removal completes and after the method&#39;s callback is called, and they
+   * are called in the same turn of the event loop as the callback.
+   *
+   * The service holds a strong reference to the observer, so the observer must
+   * be removed later to avoid leaking it.
+   *
+   * @param name      The name of the preferences to observe.  Pass null to
+   *                  observe all preference changes regardless of name.
+   * @param observer  The observer.
+   */
+</code></pre>
+
+<p><code>void addObserverForName (in AString name, in nsIContentPrefObserver observer);</code></p>
+</div><h4 id='method.RemoveObserverForName' class="method"><span id='RemoveObserverForName.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveObserverForName' class='fnname'>RemoveObserverForName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;name: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;observer: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefObserver.html" title="struct xpcom::interfaces::nsIContentPrefObserver">nsIContentPrefObserver</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#801-803' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Unregisters an observer for the given name.
+   *
+   * @param name      The name for which the observer was registered.  Pass null
+   *                  if the observer was added with a null name.
+   * @param observer  The observer.
+   */
+</code></pre>
+
+<p><code>void removeObserverForName (in AString name, in nsIContentPrefObserver observer);</code></p>
+</div><h4 id='method.ExtractDomain' class="method"><span id='ExtractDomain.v' class='invisible'><code>pub unsafe fn <a href='#method.ExtractDomain' class='fnname'>ExtractDomain</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;str: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#821-823' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Extracts and returns the domain from the given string representation of a
+   * URI.  This is how the API extracts domains from URIs passed to it.
+   *
+   * @param str  The string representation of a URI, like
+   *             &quot;http://example.com/foo/bar&quot;.
+   * @return     If the given string is a valid URI, the domain of that URI is
+   *             returned.  Otherwise, the string itself is returned.
+   */
+</code></pre>
+
+<p><code>AString extractDomain (in AString str);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefService2.html" title="struct xpcom::interfaces::nsIContentPrefService2">nsIContentPrefService2</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#245-248' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3201926758</span>, <span class="number">55701</span>, <span class="number">18191</span>, [<span class="number">190</span>, <span class="number">189</span>, <span class="number">98</span>, <span class="number">71</span>, <span class="number">109</span>, <span class="number">49</span>, <span class="number">133</span>, <span class="number">118</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefService2.html" title="struct xpcom::interfaces::nsIContentPrefService2">nsIContentPrefService2</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#252-261' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#254-256' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#258-260' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIContentPrefService2.html" title="struct xpcom::interfaces::nsIContentPrefService2">nsIContentPrefService2</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#292-300' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIContentPrefService2.rs.html#295-299' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

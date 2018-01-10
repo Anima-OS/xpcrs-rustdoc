@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `mozIStorageAsyncConnection` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, mozIStorageAsyncConnection">
+
+    <title>xpcom::interfaces::mozIStorageAsyncConnection - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct mozIStorageAsyncConnection</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.AsyncClose">AsyncClose</a><a href="#method.SpinningSynchronousClose">SpinningSynchronousClose</a><a href="#method.AsyncClone">AsyncClone</a><a href="#method.GetDatabaseFile">GetDatabaseFile</a><a href="#method.Interrupt">Interrupt</a><a href="#method.CreateAsyncStatement">CreateAsyncStatement</a><a href="#method.ExecuteAsync">ExecuteAsync</a><a href="#method.ExecuteSimpleSQLAsync">ExecuteSimpleSQLAsync</a><a href="#method.CreateFunction">CreateFunction</a><a href="#method.CreateAggregateFunction">CreateAggregateFunction</a><a href="#method.RemoveFunction">RemoveFunction</a><a href="#method.SetProgressHandler">SetProgressHandler</a><a href="#method.RemoveProgressHandler">RemoveProgressHandler</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'mozIStorageAsyncConnection', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>mozIStorageAsyncConnection</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#25-34' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct mozIStorageAsyncConnection { /* fields omitted */ }</pre><div class='docblock'><p><code>interface mozIStorageAsyncConnection : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * mozIStorageAsyncConnection represents an asynchronous database
+ * connection attached to a specific file or to an in-memory data
+ * storage.  It is the primary interface for interacting with a
+ * database from the main thread, including creating prepared
+ * statements, executing SQL, and examining database errors.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageAsyncConnection.html" title="struct xpcom::interfaces::mozIStorageAsyncConnection">mozIStorageAsyncConnection</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#74-80' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;mozIStorageAsyncConnectionCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#77-79' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>mozIStorageAsyncConnection</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageAsyncConnection.html" title="struct xpcom::interfaces::mozIStorageAsyncConnection">mozIStorageAsyncConnection</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#160-486' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.AsyncClose' class="method"><span id='AsyncClose.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncClose' class='fnname'>AsyncClose</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageCompletionCallback.html" title="struct xpcom::interfaces::mozIStorageCompletionCallback">mozIStorageCompletionCallback</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#187-189' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Close this database connection, allowing all pending statements
+   * to complete first.
+   *
+   * @param aCallback [optional]
+   *        A callback that will be notified when the close is completed,
+   *        with the following arguments:
+   *        - status: the status of the call
+   *        - value: |null|
+   *
+   * @throws NS_ERROR_NOT_SAME_THREAD
+   *         If called on a thread other than the one that opened it.  The
+   *         callback will not be dispatched.
+   * @throws NS_ERROR_NOT_INITIALIZED
+   *         If called on a connection that has already been closed or was
+   *         never properly opened.  The callback will still be dispatched
+   *         to the main thread despite the returned error.
+   * @note If this call should fail, the callback won&#39;t be invoked.
+   */
+</code></pre>
+
+<p><code>void asyncClose ([optional] in mozIStorageCompletionCallback aCallback);</code></p>
+</div><h4 id='method.SpinningSynchronousClose' class="method"><span id='SpinningSynchronousClose.v' class='invisible'><code>pub unsafe fn <a href='#method.SpinningSynchronousClose' class='fnname'>SpinningSynchronousClose</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#209-211' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Forcibly closes a database connection synchronously.
+   * This should only be used when it&#39;s required to close and replace the
+   * database synchronously to return control to the consumer, for example in
+   * case of a detected corruption on database opening.
+   * Since this spins the events loop, it should be used only in very particular
+   * and rare situations, or it may cause unexpected consequences (crashes).
+   *
+   * @throws NS_ERROR_NOT_SAME_THREAD
+   *         If called on a thread other than the one that opened it.
+   */
+</code></pre>
+
+<p><code>[noscript] void spinningSynchronousClose ();</code></p>
+</div><h4 id='method.AsyncClone' class="method"><span id='AsyncClone.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncClone' class='fnname'>AsyncClone</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReadOnly: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageCompletionCallback.html" title="struct xpcom::interfaces::mozIStorageCompletionCallback">mozIStorageCompletionCallback</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#262-264' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Clone a database and make the clone read only if needed.
+   * SQL Functions and attached on-disk databases are applied to the new clone.
+   *
+   * @param aReadOnly
+   *        If true, the returned database should be put into read-only mode.
+   *
+   * @param aCallback
+   *        A callback that will be notified when the operation is complete,
+   *        with the following arguments:
+   *        - status: the status of the operation
+   *        - value: in case of success, an intance of
+   *             mozIStorageAsyncConnection cloned from this one.
+   *
+   * @throws NS_ERROR_NOT_SAME_THREAD
+   *         If is called on a thread other than the one that opened it.
+   * @throws NS_ERROR_UNEXPECTED
+   *         If this connection is a memory database.
+   *
+   * @note If your connection is already read-only, you will get a read-only
+   *       clone.
+   * @note The resulting connection will NOT implement mozIStorageConnection,
+   *       it will only implement mozIStorageAsyncConnection.
+   * @note Due to a bug in SQLite, if you use the shared cache
+   *       (see mozIStorageService), you end up with the same privileges as the
+   *       first connection opened regardless of what is specified in aReadOnly.
+   * @note The following pragmas are copied over to a read-only clone:
+   *        - cache_size
+   *        - temp_store
+   *       The following pragmas are copied over to a writeable clone:
+   *        - cache_size
+   *        - temp_store
+   *        - foreign_keys
+   *        - journal_size_limit
+   *        - synchronous
+   *        - wal_autocheckpoint
+   *       All SQL functions are copied over to read-only and writeable clones.
+   *       Additionally, all temporary tables, triggers, and views, as well as
+   *       any indexes on temporary tables, are copied over to writeable clones.
+   *       For temporary tables, only the schemas are copied, not their
+   *       contents.
+   */
+</code></pre>
+
+<p><code>void asyncClone (in boolean aReadOnly, in mozIStorageCompletionCallback aCallback);</code></p>
+</div><h4 id='method.GetDatabaseFile' class="method"><span id='GetDatabaseFile.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDatabaseFile' class='fnname'>GetDatabaseFile</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDatabaseFile: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIFile.html" title="struct xpcom::interfaces::nsIFile">nsIFile</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#277-279' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The current database nsIFile.  Null if the database
+   * connection refers to an in-memory database.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIFile databaseFile;</code></p>
+</div><h4 id='method.Interrupt' class="method"><span id='Interrupt.v' class='invisible'><code>pub unsafe fn <a href='#method.Interrupt' class='fnname'>Interrupt</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#296-298' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Causes any pending database operation to abort and return at the first
+   * opportunity.
+   * This can only be used on read-only connections that don&#39;t implement
+   * the mozIStorageConnection interface.
+   * @note operations that are nearly complete may still be able to complete.
+   * @throws if used on an unsupported connection type, or a closed connection.
+   */
+</code></pre>
+
+<p><code>void interrupt ();</code></p>
+</div><h4 id='method.CreateAsyncStatement' class="method"><span id='CreateAsyncStatement.v' class='invisible'><code>pub unsafe fn <a href='#method.CreateAsyncStatement' class='fnname'>CreateAsyncStatement</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSQLStatement: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageAsyncStatement.html" title="struct xpcom::interfaces::mozIStorageAsyncStatement">mozIStorageAsyncStatement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#322-324' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Create an asynchronous statement for the given SQL. An
+   * asynchronous statement can only be used to dispatch asynchronous
+   * requests to the asynchronous execution thread and cannot be used
+   * to take any synchronous actions on the database.
+   *
+   * The expression may use ? to indicate sequential numbered arguments,
+   * ?1, ?2 etc. to indicate specific numbered arguments or :name and
+   * $var to indicate named arguments.
+   *
+   * @param aSQLStatement
+   *        The SQL statement to execute.
+   * @return a new mozIStorageAsyncStatement
+   * @note The statement is created lazily on first execution.
+   */
+</code></pre>
+
+<p><code>mozIStorageAsyncStatement createAsyncStatement (in AUTF8String aSQLStatement);</code></p>
+</div><h4 id='method.ExecuteAsync' class="method"><span id='ExecuteAsync.v' class='invisible'><code>pub unsafe fn <a href='#method.ExecuteAsync' class='fnname'>ExecuteAsync</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aStatements: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageBaseStatement.html" title="struct xpcom::interfaces::mozIStorageBaseStatement">mozIStorageBaseStatement</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNumStatements: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageStatementCallback.html" title="struct xpcom::interfaces::mozIStorageStatementCallback">mozIStorageStatementCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStoragePendingStatement.html" title="struct xpcom::interfaces::mozIStoragePendingStatement">mozIStoragePendingStatement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#353-355' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Execute an array of statements created with this connection using
+   * any currently bound parameters. When the array contains multiple
+   * statements, the execution is wrapped in a single
+   * transaction. These statements can be reused immediately, and
+   * reset does not need to be called.
+   *
+   * @param aStatements
+   *        The array of statements to execute asynchronously, in the order they
+   *        are given in the array.
+   * @param aNumStatements
+   *        The number of statements in aStatements.
+   * @param aCallback [optional]
+   *        The callback object that will be notified of progress, errors, and
+   *        completion.
+   * @return an object that can be used to cancel the statements execution.
+   *
+   * @note If you have any custom defined functions, they must be
+   *        re-entrant since they can be called on multiple threads.
+   */
+</code></pre>
+
+<p><code>mozIStoragePendingStatement executeAsync ([array, size_is (aNumStatements)] in mozIStorageBaseStatement aStatements, in unsigned long aNumStatements, [optional] in mozIStorageStatementCallback aCallback);</code></p>
+</div><h4 id='method.ExecuteSimpleSQLAsync' class="method"><span id='ExecuteSimpleSQLAsync.v' class='invisible'><code>pub unsafe fn <a href='#method.ExecuteSimpleSQLAsync' class='fnname'>ExecuteSimpleSQLAsync</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSQLStatement: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageStatementCallback.html" title="struct xpcom::interfaces::mozIStorageStatementCallback">mozIStorageStatementCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStoragePendingStatement.html" title="struct xpcom::interfaces::mozIStoragePendingStatement">mozIStoragePendingStatement</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#374-376' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Execute asynchronously an SQL expression, expecting no arguments.
+   *
+   * @param aSQLStatement
+   *        The SQL statement to execute
+   * @param aCallback [optional]
+   *        The callback object that will be notified of progress, errors, and
+   *        completion.
+   * @return an object that can be used to cancel the statement execution.
+   */
+</code></pre>
+
+<p><code>mozIStoragePendingStatement executeSimpleSQLAsync (in AUTF8String aSQLStatement, [optional] in mozIStorageStatementCallback aCallback);</code></p>
+</div><h4 id='method.CreateFunction' class="method"><span id='CreateFunction.v' class='invisible'><code>pub unsafe fn <a href='#method.CreateFunction' class='fnname'>CreateFunction</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFunctionName: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNumArguments: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFunction: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageFunction.html" title="struct xpcom::interfaces::mozIStorageFunction">mozIStorageFunction</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#399-401' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Create a new SQL function.  If you use your connection on multiple threads,
+   * your function needs to be threadsafe, or it should only be called on one
+   * thread.
+   *
+   * @param aFunctionName
+   *        The name of function to create, as seen in SQL.
+   * @param aNumArguments
+   *        The number of arguments the function takes. Pass -1 for
+   *        variable-argument functions.
+   * @param aFunction
+   *        The instance of mozIStorageFunction, which implements the function
+   *        in question.
+   */
+</code></pre>
+
+<p><code>void createFunction (in AUTF8String aFunctionName, in long aNumArguments, in mozIStorageFunction aFunction);</code></p>
+</div><h4 id='method.CreateAggregateFunction' class="method"><span id='CreateAggregateFunction.v' class='invisible'><code>pub unsafe fn <a href='#method.CreateAggregateFunction' class='fnname'>CreateAggregateFunction</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFunctionName: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNumArguments: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFunction: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageAggregateFunction.html" title="struct xpcom::interfaces::mozIStorageAggregateFunction">mozIStorageAggregateFunction</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#424-426' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Create a new SQL aggregate function.  If you use your connection on
+   * multiple threads, your function needs to be threadsafe, or it should only
+   * be called on one thread.
+   *
+   * @param aFunctionName
+   *        The name of aggregate function to create, as seen in SQL.
+   * @param aNumArguments
+   *        The number of arguments the function takes. Pass -1 for
+   *        variable-argument functions.
+   * @param aFunction
+   *        The instance of mozIStorageAggreagteFunction, which implements the
+   *        function in question.
+   */
+</code></pre>
+
+<p><code>void createAggregateFunction (in AUTF8String aFunctionName, in long aNumArguments, in mozIStorageAggregateFunction aFunction);</code></p>
+</div><h4 id='method.RemoveFunction' class="method"><span id='RemoveFunction.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveFunction' class='fnname'>RemoveFunction</a>(&amp;self, aFunctionName: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#441-443' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Delete custom SQL function (simple or aggregate one).
+   *
+   * @param aFunctionName
+   *        The name of function to remove.
+   */
+</code></pre>
+
+<p><code>void removeFunction (in AUTF8String aFunctionName);</code></p>
+</div><h4 id='method.SetProgressHandler' class="method"><span id='SetProgressHandler.v' class='invisible'><code>pub unsafe fn <a href='#method.SetProgressHandler' class='fnname'>SetProgressHandler</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aGranularity: <a class="type" href="../../xpcom/interfaces/type.int32_t.html" title="type xpcom::interfaces::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHandler: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageProgressHandler.html" title="struct xpcom::interfaces::mozIStorageProgressHandler">mozIStorageProgressHandler</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageProgressHandler.html" title="struct xpcom::interfaces::mozIStorageProgressHandler">mozIStorageProgressHandler</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#465-467' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Sets a progress handler. Only one handler can be registered at a time.
+   * If you need more than one, you need to chain them yourself.  This progress
+   * handler should be threadsafe if you use this connection object on more than
+   * one thread.
+   *
+   * @param aGranularity
+   *        The number of SQL virtual machine steps between progress handler
+   *        callbacks.
+   * @param aHandler
+   *        The instance of mozIStorageProgressHandler.
+   * @return previous registered handler.
+   */
+</code></pre>
+
+<p><code>mozIStorageProgressHandler setProgressHandler (in int32_t aGranularity, in mozIStorageProgressHandler aHandler);</code></p>
+</div><h4 id='method.RemoveProgressHandler' class="method"><span id='RemoveProgressHandler.v' class='invisible'><code>pub unsafe fn <a href='#method.RemoveProgressHandler' class='fnname'>RemoveProgressHandler</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.mozIStorageProgressHandler.html" title="struct xpcom::interfaces::mozIStorageProgressHandler">mozIStorageProgressHandler</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#481-483' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Remove a progress handler.
+   *
+   * @return previous registered handler.
+   */
+</code></pre>
+
+<p><code>mozIStorageProgressHandler removeProgressHandler ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageAsyncConnection.html" title="struct xpcom::interfaces::mozIStorageAsyncConnection">mozIStorageAsyncConnection</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#39-42' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2348627157</span>, <span class="number">19935</span>, <span class="number">20043</span>, [<span class="number">137</span>, <span class="number">221</span>, <span class="number">155</span>, <span class="number">20</span>, <span class="number">243</span>, <span class="number">53</span>, <span class="number">52</span>, <span class="number">198</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageAsyncConnection.html" title="struct xpcom::interfaces::mozIStorageAsyncConnection">mozIStorageAsyncConnection</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#46-55' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#48-50' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#52-54' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.mozIStorageAsyncConnection.html" title="struct xpcom::interfaces::mozIStorageAsyncConnection">mozIStorageAsyncConnection</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#86-94' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/mozIStorageAsyncConnection.rs.html#89-93' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

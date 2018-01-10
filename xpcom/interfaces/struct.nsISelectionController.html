@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsISelectionController` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsISelectionController">
+
+    <title>xpcom::interfaces::nsISelectionController - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsISelectionController</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.SetDisplaySelection">SetDisplaySelection</a><a href="#method.GetDisplaySelection">GetDisplaySelection</a><a href="#method.GetSelection">GetSelection</a><a href="#method.ScrollSelectionIntoView">ScrollSelectionIntoView</a><a href="#method.RepaintSelection">RepaintSelection</a><a href="#method.SetCaretEnabled">SetCaretEnabled</a><a href="#method.SetCaretReadOnly">SetCaretReadOnly</a><a href="#method.GetCaretEnabled">GetCaretEnabled</a><a href="#method.GetCaretVisible">GetCaretVisible</a><a href="#method.SetCaretVisibilityDuringSelection">SetCaretVisibilityDuringSelection</a><a href="#method.CharacterMove">CharacterMove</a><a href="#method.PhysicalMove">PhysicalMove</a><a href="#method.CharacterExtendForDelete">CharacterExtendForDelete</a><a href="#method.CharacterExtendForBackspace">CharacterExtendForBackspace</a><a href="#method.WordMove">WordMove</a><a href="#method.WordExtendForDelete">WordExtendForDelete</a><a href="#method.LineMove">LineMove</a><a href="#method.IntraLineMove">IntraLineMove</a><a href="#method.PageMove">PageMove</a><a href="#method.CompleteScroll">CompleteScroll</a><a href="#method.CompleteMove">CompleteMove</a><a href="#method.ScrollPage">ScrollPage</a><a href="#method.ScrollLine">ScrollLine</a><a href="#method.ScrollCharacter">ScrollCharacter</a><a href="#method.SelectAll">SelectAll</a><a href="#method.CheckVisibility">CheckVisibility</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISelectionDisplay&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.SetSelectionFlags">SetSelectionFlags</a><a href="#method.GetSelectionFlags">GetSelectionFlags</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsISelectionController', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsISelectionController</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsISelectionController { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsISelectionController : nsISelectionDisplay</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISelectionController.html" title="struct xpcom::interfaces::nsISelectionController">nsISelectionController</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsISelectionControllerCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISelectionController</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISelectionController.html" title="struct xpcom::interfaces::nsISelectionController">nsISelectionController</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#197-754' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.SELECTION_NONE' class="associatedconstant"><span id='SELECTION_NONE.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_NONE' class="constant"><b>SELECTION_NONE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_NONE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.SELECTION_NORMAL' class="associatedconstant"><span id='SELECTION_NORMAL.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_NORMAL' class="constant"><b>SELECTION_NORMAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_NORMAL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SELECTION_SPELLCHECK' class="associatedconstant"><span id='SELECTION_SPELLCHECK.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_SPELLCHECK' class="constant"><b>SELECTION_SPELLCHECK</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_SPELLCHECK</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.SELECTION_IME_RAWINPUT' class="associatedconstant"><span id='SELECTION_IME_RAWINPUT.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_IME_RAWINPUT' class="constant"><b>SELECTION_IME_RAWINPUT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_IME_RAWINPUT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.SELECTION_IME_SELECTEDRAWTEXT' class="associatedconstant"><span id='SELECTION_IME_SELECTEDRAWTEXT.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_IME_SELECTEDRAWTEXT' class="constant"><b>SELECTION_IME_SELECTEDRAWTEXT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_IME_SELECTEDRAWTEXT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.SELECTION_IME_CONVERTEDTEXT' class="associatedconstant"><span id='SELECTION_IME_CONVERTEDTEXT.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_IME_CONVERTEDTEXT' class="constant"><b>SELECTION_IME_CONVERTEDTEXT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_IME_CONVERTEDTEXT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.SELECTION_IME_SELECTEDCONVERTEDTEXT' class="associatedconstant"><span id='SELECTION_IME_SELECTEDCONVERTEDTEXT.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_IME_SELECTEDCONVERTEDTEXT' class="constant"><b>SELECTION_IME_SELECTEDCONVERTEDTEXT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_IME_SELECTEDCONVERTEDTEXT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='associatedconstant.SELECTION_ACCESSIBILITY' class="associatedconstant"><span id='SELECTION_ACCESSIBILITY.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_ACCESSIBILITY' class="constant"><b>SELECTION_ACCESSIBILITY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_ACCESSIBILITY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">7</span></pre>
+</div><h4 id='associatedconstant.SELECTION_FIND' class="associatedconstant"><span id='SELECTION_FIND.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_FIND' class="constant"><b>SELECTION_FIND</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_FIND</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">8</span></pre>
+</div><h4 id='associatedconstant.SELECTION_URLSECONDARY' class="associatedconstant"><span id='SELECTION_URLSECONDARY.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_URLSECONDARY' class="constant"><b>SELECTION_URLSECONDARY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_URLSECONDARY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">9</span></pre>
+</div><h4 id='associatedconstant.SELECTION_URLSTRIKEOUT' class="associatedconstant"><span id='SELECTION_URLSTRIKEOUT.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_URLSTRIKEOUT' class="constant"><b>SELECTION_URLSTRIKEOUT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_URLSTRIKEOUT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">10</span></pre>
+</div><h4 id='associatedconstant.NUM_SELECTIONTYPES' class="associatedconstant"><span id='NUM_SELECTIONTYPES.v' class='invisible'><code>pub const <a href='#associatedconstant.NUM_SELECTIONTYPES' class="constant"><b>NUM_SELECTIONTYPES</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NUM_SELECTIONTYPES</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">11</span></pre>
+</div><h4 id='associatedconstant.SELECTION_ANCHOR_REGION' class="associatedconstant"><span id='SELECTION_ANCHOR_REGION.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_ANCHOR_REGION' class="constant"><b>SELECTION_ANCHOR_REGION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_ANCHOR_REGION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.SELECTION_FOCUS_REGION' class="associatedconstant"><span id='SELECTION_FOCUS_REGION.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_FOCUS_REGION' class="constant"><b>SELECTION_FOCUS_REGION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_FOCUS_REGION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SELECTION_WHOLE_SELECTION' class="associatedconstant"><span id='SELECTION_WHOLE_SELECTION.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_WHOLE_SELECTION' class="constant"><b>SELECTION_WHOLE_SELECTION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_WHOLE_SELECTION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.NUM_SELECTION_REGIONS' class="associatedconstant"><span id='NUM_SELECTION_REGIONS.v' class='invisible'><code>pub const <a href='#associatedconstant.NUM_SELECTION_REGIONS' class="constant"><b>NUM_SELECTION_REGIONS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">NUM_SELECTION_REGIONS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.SELECTION_OFF' class="associatedconstant"><span id='SELECTION_OFF.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_OFF' class="constant"><b>SELECTION_OFF</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_OFF</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.SELECTION_HIDDEN' class="associatedconstant"><span id='SELECTION_HIDDEN.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_HIDDEN' class="constant"><b>SELECTION_HIDDEN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_HIDDEN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SELECTION_ON' class="associatedconstant"><span id='SELECTION_ON.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_ON' class="constant"><b>SELECTION_ON</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_ON</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.SELECTION_DISABLED' class="associatedconstant"><span id='SELECTION_DISABLED.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_DISABLED' class="constant"><b>SELECTION_DISABLED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_DISABLED</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.SELECTION_ATTENTION' class="associatedconstant"><span id='SELECTION_ATTENTION.v' class='invisible'><code>pub const <a href='#associatedconstant.SELECTION_ATTENTION' class="constant"><b>SELECTION_ATTENTION</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SELECTION_ATTENTION</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.SCROLL_SYNCHRONOUS' class="associatedconstant"><span id='SCROLL_SYNCHRONOUS.v' class='invisible'><code>pub const <a href='#associatedconstant.SCROLL_SYNCHRONOUS' class="constant"><b>SCROLL_SYNCHRONOUS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SCROLL_SYNCHRONOUS</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.SCROLL_FIRST_ANCESTOR_ONLY' class="associatedconstant"><span id='SCROLL_FIRST_ANCESTOR_ONLY.v' class='invisible'><code>pub const <a href='#associatedconstant.SCROLL_FIRST_ANCESTOR_ONLY' class="constant"><b>SCROLL_FIRST_ANCESTOR_ONLY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SCROLL_FIRST_ANCESTOR_ONLY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.SCROLL_CENTER_VERTICALLY' class="associatedconstant"><span id='SCROLL_CENTER_VERTICALLY.v' class='invisible'><code>pub const <a href='#associatedconstant.SCROLL_CENTER_VERTICALLY' class="constant"><b>SCROLL_CENTER_VERTICALLY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SCROLL_CENTER_VERTICALLY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">16</span></pre>
+</div><h4 id='associatedconstant.SCROLL_OVERFLOW_HIDDEN' class="associatedconstant"><span id='SCROLL_OVERFLOW_HIDDEN.v' class='invisible'><code>pub const <a href='#associatedconstant.SCROLL_OVERFLOW_HIDDEN' class="constant"><b>SCROLL_OVERFLOW_HIDDEN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SCROLL_OVERFLOW_HIDDEN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">32</span></pre>
+</div><h4 id='associatedconstant.SCROLL_FOR_CARET_MOVE' class="associatedconstant"><span id='SCROLL_FOR_CARET_MOVE.v' class='invisible'><code>pub const <a href='#associatedconstant.SCROLL_FOR_CARET_MOVE' class="constant"><b>SCROLL_FOR_CARET_MOVE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SCROLL_FOR_CARET_MOVE</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">64</span></pre>
+</div><h4 id='associatedconstant.MOVE_LEFT' class="associatedconstant"><span id='MOVE_LEFT.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVE_LEFT' class="constant"><b>MOVE_LEFT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVE_LEFT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+<pre><code class="language-text">/**
+    * nsFrameSelection::PhysicalMove depends on the ordering of these values;
+    * do not change without checking there!
+    */
+</code></pre>
+</div><h4 id='associatedconstant.MOVE_RIGHT' class="associatedconstant"><span id='MOVE_RIGHT.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVE_RIGHT' class="constant"><b>MOVE_RIGHT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVE_RIGHT</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.MOVE_UP' class="associatedconstant"><span id='MOVE_UP.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVE_UP' class="constant"><b>MOVE_UP</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVE_UP</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.MOVE_DOWN' class="associatedconstant"><span id='MOVE_DOWN.v' class='invisible'><code>pub const <a href='#associatedconstant.MOVE_DOWN' class="constant"><b>MOVE_DOWN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">MOVE_DOWN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='method.SetDisplaySelection' class="method"><span id='SetDisplaySelection.v' class='invisible'><code>pub unsafe fn <a href='#method.SetDisplaySelection' class='fnname'>SetDisplaySelection</a>(&amp;self, toggle: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#304-306' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * SetDisplaySelection will set the display mode for the selection. OFF,ON,DISABLED
+   */
+</code></pre>
+
+<p><code>void setDisplaySelection (in short toggle);</code></p>
+</div><h4 id='method.GetDisplaySelection' class="method"><span id='GetDisplaySelection.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDisplaySelection' class='fnname'>GetDisplaySelection</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#318-320' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * GetDisplaySelection will get the display mode for the selection. OFF,ON,DISABLED
+   */
+</code></pre>
+
+<p><code>short getDisplaySelection ();</code></p>
+</div><h4 id='method.GetSelection' class="method"><span id='GetSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelection' class='fnname'>GetSelection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISelection.html" title="struct xpcom::interfaces::nsISelection">nsISelection</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#337-339' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * GetSelection will return the selection that the presentation
+   *  shell may implement.
+   *
+   * @param aType This will hold the type of selection.  This value must be one
+   *              of RawSelectionType values.
+   * @param _return will hold the return value
+   */
+</code></pre>
+
+<p><code>nsISelection getSelection (in short type);</code></p>
+</div><h4 id='method.ScrollSelectionIntoView' class="method"><span id='ScrollSelectionIntoView.v' class='invisible'><code>pub unsafe fn <a href='#method.ScrollSelectionIntoView' class='fnname'>ScrollSelectionIntoView</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;type_: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;region: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;flags: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#380-382' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * ScrollSelectionIntoView scrolls a region of the selection,
+   * so that it is visible in the scrolled view.
+   *
+   * @param aType the selection to scroll into view.  This value must be one
+   *              of RawSelectionType values.
+   * @param aRegion the region inside the selection to scroll into view. //SelectionRegion
+   * @param aFlags the scroll flags.  Valid bits include:
+   * SCROLL_SYNCHRONOUS: when set, scrolls the selection into view
+   * before returning. If not set, posts a request which is processed
+   * at some point after the method returns.
+   * SCROLL_FIRST_ANCESTOR_ONLY: if set, only the first ancestor will be scrolled
+   * into view.
+   * SCROLL_OVERFLOW_HIDDEN: if set, scrolls even if the overflow is specified
+   * as hidden.
+   * SCROLL_FOR_CARET_MOVE: set to indicate whether scrolling is in response
+   * to the caret being moved. Does not affect behavior (used for telemetry
+   * purposes only).
+   *
+   * Note that if isSynchronous is true, then this might flush the pending
+   * reflow. It&#39;s dangerous for some objects. See bug 418470 comment 12.
+   */
+</code></pre>
+
+<p><code>void scrollSelectionIntoView (in short type, in short region, in short flags);</code></p>
+</div><h4 id='method.RepaintSelection' class="method"><span id='RepaintSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.RepaintSelection' class='fnname'>RepaintSelection</a>(&amp;self, type_: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#396-398' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * RepaintSelection repaints the selection specified by aType.
+   *
+   * @param aType specifies the selection to repaint.
+   */
+</code></pre>
+
+<p><code>void repaintSelection (in short type);</code></p>
+</div><h4 id='method.SetCaretEnabled' class="method"><span id='SetCaretEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCaretEnabled' class='fnname'>SetCaretEnabled</a>(&amp;self, enabled: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#414-416' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the caret as enabled or disabled. An enabled caret will
+   * draw or blink when made visible. A disabled caret will never show up.
+   * Can be called any time.
+   * @param aEnable PR_TRUE to enable caret.  PR_FALSE to disable.
+   * @return always NS_OK
+   */
+</code></pre>
+
+<p><code>void setCaretEnabled (in boolean enabled);</code></p>
+</div><h4 id='method.SetCaretReadOnly' class="method"><span id='SetCaretReadOnly.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCaretReadOnly' class='fnname'>SetCaretReadOnly</a>(&amp;self, readOnly: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#431-433' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the caret readonly or not. An readonly caret will
+   * draw but not blink when made visible.
+   * @param aReadOnly PR_TRUE to enable caret.  PR_FALSE to disable.
+   * @return always NS_OK
+   */
+</code></pre>
+
+<p><code>void setCaretReadOnly (in boolean readOnly);</code></p>
+</div><h4 id='method.GetCaretEnabled' class="method"><span id='GetCaretEnabled.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCaretEnabled' class='fnname'>GetCaretEnabled</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#448-450' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Gets the current state of the caret.
+   * @param aEnabled  [OUT] set to the current caret state, as set by SetCaretEnabled
+   * @return   if aOutEnabled==null, returns NS_ERROR_INVALID_ARG
+   *           else NS_OK
+   */
+</code></pre>
+
+<p><code>boolean getCaretEnabled ();</code></p>
+</div><h4 id='method.GetCaretVisible' class="method"><span id='GetCaretVisible.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCaretVisible' class='fnname'>GetCaretVisible</a>(&amp;self, aCaretVisible: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#464-466' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * This is true if the caret is enabled, visible, and currently blinking.
+    * This is still true when the caret is enabled, visible, but in its &quot;off&quot;
+    * blink cycle.
+    */
+</code></pre>
+
+<p><code>readonly attribute boolean caretVisible;</code></p>
+</div><h4 id='method.SetCaretVisibilityDuringSelection' class="method"><span id='SetCaretVisibilityDuringSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCaretVisibilityDuringSelection' class='fnname'>SetCaretVisibilityDuringSelection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;visibility: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#481-483' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Show the caret even in selections. By default the caret is hidden unless the
+   * selection is collapsed. Use this function to show the caret even in selections.
+   * @param aVisibility PR_TRUE to show the caret in selections.  PR_FALSE to hide.
+   * @return always NS_OK
+   */
+</code></pre>
+
+<p><code>void setCaretVisibilityDuringSelection (in boolean visibility);</code></p>
+</div><h4 id='method.CharacterMove' class="method"><span id='CharacterMove.v' class='invisible'><code>pub unsafe fn <a href='#method.CharacterMove' class='fnname'>CharacterMove</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, extend: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#499-501' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** CharacterMove will move the selection one character forward/backward in the document.
+   *  this will also have the effect of collapsing the selection if the aExtend = PR_FALSE
+   *  the &quot;point&quot; of selection that is extended is considered the &quot;focus&quot; point.
+   *  or the last point adjusted by the selection.
+   *  @param aForward forward or backward if PR_FALSE
+   *  @param aExtend  should it collapse the selection of extend it?
+   */
+</code></pre>
+
+<p><code>void characterMove (in boolean forward, in boolean extend);</code></p>
+</div><h4 id='method.PhysicalMove' class="method"><span id='PhysicalMove.v' class='invisible'><code>pub unsafe fn <a href='#method.PhysicalMove' class='fnname'>PhysicalMove</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;direction: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;amount: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;extend: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#519-521' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** PhysicalMove will move the selection one &quot;unit&quot; in a given direction
+   *  within the document.
+   *  this will also have the effect of collapsing the selection if the aExtend = PR_FALSE
+   *  the &quot;point&quot; of selection that is extended is considered the &quot;focus&quot; point.
+   *  or the last point adjusted by the selection.
+   *  @param aDirection
+   *  @param aAmount    character/line; word/lineBoundary
+   *  @param aExtend    should it collapse the selection of extend it?
+   */
+</code></pre>
+
+<p><code>void physicalMove (in short direction, in short amount, in boolean extend);</code></p>
+</div><h4 id='method.CharacterExtendForDelete' class="method"><span id='CharacterExtendForDelete.v' class='invisible'><code>pub unsafe fn <a href='#method.CharacterExtendForDelete' class='fnname'>CharacterExtendForDelete</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#535-537' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * CharacterExtendForDelete will extend the selection one character cell
+    * forward in the document.
+    * this method is used internally for handling del key.
+    */
+</code></pre>
+
+<p><code>[noscript] void characterExtendForDelete ();</code></p>
+</div><h4 id='method.CharacterExtendForBackspace' class="method"><span id='CharacterExtendForBackspace.v' class='invisible'><code>pub unsafe fn <a href='#method.CharacterExtendForBackspace' class='fnname'>CharacterExtendForBackspace</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#552-554' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * CharacterExtendForBackspace will extend the selection one character cell
+    * backward in the document.
+    * this method is used internally for handling backspace key only when we&#39;re
+    * after UTF-16 surrogates.
+    */
+</code></pre>
+
+<p><code>[noscript] void characterExtendForBackspace ();</code></p>
+</div><h4 id='method.WordMove' class="method"><span id='WordMove.v' class='invisible'><code>pub unsafe fn <a href='#method.WordMove' class='fnname'>WordMove</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, extend: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#570-572' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** WordMove will move the selection one word forward/backward in the document.
+   *  this will also have the effect of collapsing the selection if the aExtend = PR_FALSE
+   *  the &quot;point&quot; of selection that is extended is considered the &quot;focus&quot; point.
+   *  or the last point adjusted by the selection.
+   *  @param aForward forward or backward if PR_FALSE
+   *  @param aExtend  should it collapse the selection of extend it?
+   */
+</code></pre>
+
+<p><code>void wordMove (in boolean forward, in boolean extend);</code></p>
+</div><h4 id='method.WordExtendForDelete' class="method"><span id='WordExtendForDelete.v' class='invisible'><code>pub unsafe fn <a href='#method.WordExtendForDelete' class='fnname'>WordExtendForDelete</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#585-587' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** wordExtendForDelete will extend the selection one word forward/backward in the document.
+   *  this method is used internally for handling ctrl[option]-backspace and ctrl[option]-del.
+   *  @param aForward forward or backward if PR_FALSE
+   */
+</code></pre>
+
+<p><code>[noscript] void wordExtendForDelete (in boolean forward);</code></p>
+</div><h4 id='method.LineMove' class="method"><span id='LineMove.v' class='invisible'><code>pub unsafe fn <a href='#method.LineMove' class='fnname'>LineMove</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, extend: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#603-605' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** LineMove will move the selection one line forward/backward in the document.
+   *  this will also have the effect of collapsing the selection if the aExtend = PR_FALSE
+   *  the &quot;point&quot; of selection that is extended is considered the &quot;focus&quot; point.
+   *  or the last point adjusted by the selection.
+   *  @param aForward forward or backward if PR_FALSE
+   *  @param aExtend  should it collapse the selection of extend it?
+   */
+</code></pre>
+
+<p><code>void lineMove (in boolean forward, in boolean extend);</code></p>
+</div><h4 id='method.IntraLineMove' class="method"><span id='IntraLineMove.v' class='invisible'><code>pub unsafe fn <a href='#method.IntraLineMove' class='fnname'>IntraLineMove</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, extend: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#622-624' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** IntraLineMove will move the selection to the front of the line or end of the line
+   *  in the document.
+   *  this will also have the effect of collapsing the selection if the aExtend = PR_FALSE
+   *  the &quot;point&quot; of selection that is extended is considered the &quot;focus&quot; point.
+   *  or the last point adjusted by the selection.
+   *  @param aForward forward or backward if PR_FALSE
+   *  @param aExtend  should it collapse the selection of extend it?
+   */
+</code></pre>
+
+<p><code>void intraLineMove (in boolean forward, in boolean extend);</code></p>
+</div><h4 id='method.PageMove' class="method"><span id='PageMove.v' class='invisible'><code>pub unsafe fn <a href='#method.PageMove' class='fnname'>PageMove</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, extend: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#640-642' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** PageMove will move the selection one page forward/backward in the document.
+   *  this will also have the effect of collapsing the selection if the aExtend = PR_FALSE
+   *  the &quot;point&quot; of selection that is extended is considered the &quot;focus&quot; point.
+   *  or the last point adjusted by the selection.
+   *  @param aForward forward or backward if PR_FALSE
+   *  @param aExtend  should it collapse the selection of extend it?
+   */
+</code></pre>
+
+<p><code>void pageMove (in boolean forward, in boolean extend);</code></p>
+</div><h4 id='method.CompleteScroll' class="method"><span id='CompleteScroll.v' class='invisible'><code>pub unsafe fn <a href='#method.CompleteScroll' class='fnname'>CompleteScroll</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#654-656' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** CompleteScroll will move page view to the top or bottom of the document
+   *  @param aForward forward or backward if PR_FALSE
+   */
+</code></pre>
+
+<p><code>void completeScroll (in boolean forward);</code></p>
+</div><h4 id='method.CompleteMove' class="method"><span id='CompleteMove.v' class='invisible'><code>pub unsafe fn <a href='#method.CompleteMove' class='fnname'>CompleteMove</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>, extend: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#672-674' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** CompleteMove will move page view to the top or bottom of the document
+   *  this will also have the effect of collapsing the selection if the aExtend = PR_FALSE
+   *  the &quot;point&quot; of selection that is extended is considered the &quot;focus&quot; point.
+   *  or the last point adjusted by the selection.
+   *  @param aForward forward or backward if PR_FALSE
+   *  @param aExtend  should it collapse the selection of extend it?
+   */
+</code></pre>
+
+<p><code>void completeMove (in boolean forward, in boolean extend);</code></p>
+</div><h4 id='method.ScrollPage' class="method"><span id='ScrollPage.v' class='invisible'><code>pub unsafe fn <a href='#method.ScrollPage' class='fnname'>ScrollPage</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#686-688' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** ScrollPage will scroll the page without affecting the selection.
+   *  @param aForward scroll forward or backwards in selection
+   */
+</code></pre>
+
+<p><code>void scrollPage (in boolean forward);</code></p>
+</div><h4 id='method.ScrollLine' class="method"><span id='ScrollLine.v' class='invisible'><code>pub unsafe fn <a href='#method.ScrollLine' class='fnname'>ScrollLine</a>(&amp;self, forward: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#700-702' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** ScrollLine will scroll line up or down dependent on the boolean
+   *  @param aForward scroll forward or backwards in selection
+   */
+</code></pre>
+
+<p><code>void scrollLine (in boolean forward);</code></p>
+</div><h4 id='method.ScrollCharacter' class="method"><span id='ScrollCharacter.v' class='invisible'><code>pub unsafe fn <a href='#method.ScrollCharacter' class='fnname'>ScrollCharacter</a>(&amp;self, right: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#714-716' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** ScrollCharacter will scroll right or left dependent on the boolean
+   *  @param aRight if true will scroll right. if not will scroll left.
+   */
+</code></pre>
+
+<p><code>void scrollCharacter (in boolean right);</code></p>
+</div><h4 id='method.SelectAll' class="method"><span id='SelectAll.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectAll' class='fnname'>SelectAll</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#727-729' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** SelectAll will select the whole page
+   */
+</code></pre>
+
+<p><code>void selectAll ();</code></p>
+</div><h4 id='method.CheckVisibility' class="method"><span id='CheckVisibility.v' class='invisible'><code>pub unsafe fn <a href='#method.CheckVisibility' class='fnname'>CheckVisibility</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;node: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;startOffset: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;endOffset: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#745-747' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/** CheckVisibility will return true if textnode and offsets are actually rendered
+   *  in the current precontext.
+   *  @param aNode textNode to test
+   *  @param aStartOffset  offset in dom to first char of textnode to test
+   *  @param aEndOffset    offset in dom to last char of textnode to test
+   *  @param aReturnBool   boolean returned TRUE if visible FALSE if not
+   */
+</code></pre>
+
+<p><code>boolean checkVisibility (in nsIDOMNode node, in short startOffset, in short endOffset);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISelectionDisplay.html" title="struct xpcom::interfaces::nsISelectionDisplay">nsISelectionDisplay</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISelectionDisplayCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionDisplay.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISelectionDisplay</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.DISPLAY_TEXT' class="associatedconstant"><span id='DISPLAY_TEXT.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPLAY_TEXT' class="constant"><b>DISPLAY_TEXT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISPLAY_IMAGES' class="associatedconstant"><span id='DISPLAY_IMAGES.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPLAY_IMAGES' class="constant"><b>DISPLAY_IMAGES</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISPLAY_FRAMES' class="associatedconstant"><span id='DISPLAY_FRAMES.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPLAY_FRAMES' class="constant"><b>DISPLAY_FRAMES</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISPLAY_ALL' class="associatedconstant"><span id='DISPLAY_ALL.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPLAY_ALL' class="constant"><b>DISPLAY_ALL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='method.SetSelectionFlags' class="method"><span id='SetSelectionFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSelectionFlags' class='fnname'>SetSelectionFlags</a>(&amp;self, toggle: <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionDisplay.rs.html#133-135' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void setSelectionFlags (in short toggle);</code></p>
+</div><h4 id='method.GetSelectionFlags' class="method"><span id='GetSelectionFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelectionFlags' class='fnname'>GetSelectionFlags</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionDisplay.rs.html#141-143' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>short getSelectionFlags ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISelectionController.html" title="struct xpcom::interfaces::nsISelectionController">nsISelectionController</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">939641300</span>, <span class="number">36457</span>, <span class="number">19452</span>, [<span class="number">158</span>, <span class="number">219</span>, <span class="number">181</span>, <span class="number">130</span>, <span class="number">120</span>, <span class="number">98</span>, <span class="number">31</span>, <span class="number">143</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISelectionController.html" title="struct xpcom::interfaces::nsISelectionController">nsISelectionController</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISelectionController.html" title="struct xpcom::interfaces::nsISelectionController">nsISelectionController</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISelectionDisplay.html" title="struct xpcom::interfaces::nsISelectionDisplay">nsISelectionDisplay</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISelectionDisplay.html" title="struct xpcom::interfaces::nsISelectionDisplay">nsISelectionDisplay</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISelectionController.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

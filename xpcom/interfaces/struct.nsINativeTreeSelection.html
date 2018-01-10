@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsINativeTreeSelection` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsINativeTreeSelection">
+
+    <title>xpcom::interfaces::nsINativeTreeSelection - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsINativeTreeSelection</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.EnsureNative">EnsureNative</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsITreeSelection&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetTree">GetTree</a><a href="#method.SetTree">SetTree</a><a href="#method.GetSingle">GetSingle</a><a href="#method.GetCount">GetCount</a><a href="#method.IsSelected">IsSelected</a><a href="#method.Select">Select</a><a href="#method.TimedSelect">TimedSelect</a><a href="#method.ToggleSelect">ToggleSelect</a><a href="#method.RangedSelect">RangedSelect</a><a href="#method.ClearRange">ClearRange</a><a href="#method.ClearSelection">ClearSelection</a><a href="#method.InvertSelection">InvertSelection</a><a href="#method.SelectAll">SelectAll</a><a href="#method.GetRangeCount">GetRangeCount</a><a href="#method.GetRangeAt">GetRangeAt</a><a href="#method.InvalidateSelection">InvalidateSelection</a><a href="#method.AdjustSelection">AdjustSelection</a><a href="#method.GetSelectEventsSuppressed">GetSelectEventsSuppressed</a><a href="#method.SetSelectEventsSuppressed">SetSelectEventsSuppressed</a><a href="#method.GetCurrentIndex">GetCurrentIndex</a><a href="#method.SetCurrentIndex">SetCurrentIndex</a><a href="#method.GetCurrentColumn">GetCurrentColumn</a><a href="#method.SetCurrentColumn">SetCurrentColumn</a><a href="#method.GetShiftSelectPivot">GetShiftSelectPivot</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsINativeTreeSelection', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsINativeTreeSelection</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#551-560' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsINativeTreeSelection { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsINativeTreeSelection : nsITreeSelection</code></p>
+
+<pre><code class="language-text">/**
+ * The following interface is not scriptable and MUST NEVER BE MADE scriptable.
+ * Native treeselections implement it, and we use this to check whether a
+ * treeselection is native (and therefore suitable for use by untrusted content).
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINativeTreeSelection.html" title="struct xpcom::interfaces::nsINativeTreeSelection">nsINativeTreeSelection</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#600-606' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsINativeTreeSelectionCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#603-605' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsINativeTreeSelection</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsINativeTreeSelection.html" title="struct xpcom::interfaces::nsINativeTreeSelection">nsINativeTreeSelection</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#650-660' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.EnsureNative' class="method"><span id='EnsureNative.v' class='invisible'><code>pub unsafe fn <a href='#method.EnsureNative' class='fnname'>EnsureNative</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#655-657' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript] void ensureNative ();</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsITreeSelection.html" title="struct xpcom::interfaces::nsITreeSelection">nsITreeSelection</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsITreeSelectionCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsITreeSelection</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.GetTree' class="method"><span id='GetTree.v' class='invisible'><code>pub unsafe fn <a href='#method.GetTree' class='fnname'>GetTree</a>(&amp;self, aTree: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITreeBoxObject.html" title="struct xpcom::interfaces::nsITreeBoxObject">nsITreeBoxObject</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#194-196' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The tree widget for this selection.
+   */
+</code></pre>
+
+<p><code>attribute nsITreeBoxObject tree;</code></p>
+</div><h4 id='method.SetTree' class="method"><span id='SetTree.v' class='invisible'><code>pub unsafe fn <a href='#method.SetTree' class='fnname'>SetTree</a>(&amp;self, aTree: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITreeBoxObject.html" title="struct xpcom::interfaces::nsITreeBoxObject">nsITreeBoxObject</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#208-210' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The tree widget for this selection.
+   */
+</code></pre>
+
+<p><code>attribute nsITreeBoxObject tree;</code></p>
+</div><h4 id='method.GetSingle' class="method"><span id='GetSingle.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSingle' class='fnname'>GetSingle</a>(&amp;self, aSingle: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#222-224' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This attribute is a boolean indicating single selection.
+   */
+</code></pre>
+
+<p><code>readonly attribute boolean single;</code></p>
+</div><h4 id='method.GetCount' class="method"><span id='GetCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCount' class='fnname'>GetCount</a>(&amp;self, aCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#236-238' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The number of rows currently selected in this tree.
+   */
+</code></pre>
+
+<p><code>readonly attribute long count;</code></p>
+</div><h4 id='method.IsSelected' class="method"><span id='IsSelected.v' class='invisible'><code>pub unsafe fn <a href='#method.IsSelected' class='fnname'>IsSelected</a>(&amp;self, index: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#251-253' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Indicates whether or not the row at the specified index is
+   * part of the selection.
+   */
+</code></pre>
+
+<p><code>boolean isSelected (in long index);</code></p>
+</div><h4 id='method.Select' class="method"><span id='Select.v' class='invisible'><code>pub unsafe fn <a href='#method.Select' class='fnname'>Select</a>(&amp;self, index: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#265-267' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Deselect all rows and select the row at the specified index.
+   */
+</code></pre>
+
+<p><code>void select (in long index);</code></p>
+</div><h4 id='method.TimedSelect' class="method"><span id='TimedSelect.v' class='invisible'><code>pub unsafe fn <a href='#method.TimedSelect' class='fnname'>TimedSelect</a>(&amp;self, index: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, delay: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#279-281' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Perform a timed select.
+   */
+</code></pre>
+
+<p><code>void timedSelect (in long index, in long delay);</code></p>
+</div><h4 id='method.ToggleSelect' class="method"><span id='ToggleSelect.v' class='invisible'><code>pub unsafe fn <a href='#method.ToggleSelect' class='fnname'>ToggleSelect</a>(&amp;self, index: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#293-295' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Toggle the selection state of the row at the specified index.
+   */
+</code></pre>
+
+<p><code>void toggleSelect (in long index);</code></p>
+</div><h4 id='method.RangedSelect' class="method"><span id='RangedSelect.v' class='invisible'><code>pub unsafe fn <a href='#method.RangedSelect' class='fnname'>RangedSelect</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;startIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;endIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;augment: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#309-311' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Select the range specified by the indices.  If augment is true,
+   * then we add the range to the selection without clearing out anything
+   * else.  If augment is false, everything is cleared except for the specified range.
+   */
+</code></pre>
+
+<p><code>void rangedSelect (in long startIndex, in long endIndex, in boolean augment);</code></p>
+</div><h4 id='method.ClearRange' class="method"><span id='ClearRange.v' class='invisible'><code>pub unsafe fn <a href='#method.ClearRange' class='fnname'>ClearRange</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;startIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;endIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#323-325' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Clears the range.
+   */
+</code></pre>
+
+<p><code>void clearRange (in long startIndex, in long endIndex);</code></p>
+</div><h4 id='method.ClearSelection' class="method"><span id='ClearSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.ClearSelection' class='fnname'>ClearSelection</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#337-339' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Clears the selection.
+   */
+</code></pre>
+
+<p><code>void clearSelection ();</code></p>
+</div><h4 id='method.InvertSelection' class="method"><span id='InvertSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.InvertSelection' class='fnname'>InvertSelection</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#351-353' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Inverts the selection.
+   */
+</code></pre>
+
+<p><code>void invertSelection ();</code></p>
+</div><h4 id='method.SelectAll' class="method"><span id='SelectAll.v' class='invisible'><code>pub unsafe fn <a href='#method.SelectAll' class='fnname'>SelectAll</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#365-367' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Selects all rows.
+   */
+</code></pre>
+
+<p><code>void selectAll ();</code></p>
+</div><h4 id='method.GetRangeCount' class="method"><span id='GetRangeCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRangeCount' class='fnname'>GetRangeCount</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#379-381' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Iterate the selection using these methods.
+   */
+</code></pre>
+
+<p><code>long getRangeCount ();</code></p>
+</div><h4 id='method.GetRangeAt' class="method"><span id='GetRangeAt.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRangeAt' class='fnname'>GetRangeAt</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;i: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;min: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;max: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#387-389' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void getRangeAt (in long i, out long min, out long max);</code></p>
+</div><h4 id='method.InvalidateSelection' class="method"><span id='InvalidateSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.InvalidateSelection' class='fnname'>InvalidateSelection</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#401-403' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Can be used to invalidate the selection.
+   */
+</code></pre>
+
+<p><code>void invalidateSelection ();</code></p>
+</div><h4 id='method.AdjustSelection' class="method"><span id='AdjustSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.AdjustSelection' class='fnname'>AdjustSelection</a>(&amp;self, index: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, count: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#415-417' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Called when the row count changes to adjust selection indices.
+   */
+</code></pre>
+
+<p><code>void adjustSelection (in long index, in long count);</code></p>
+</div><h4 id='method.GetSelectEventsSuppressed' class="method"><span id='GetSelectEventsSuppressed.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSelectEventsSuppressed' class='fnname'>GetSelectEventsSuppressed</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSelectEventsSuppressed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#434-436' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This attribute is a boolean indicating whether or not the
+   * &quot;select&quot; event should fire when the selection is changed using
+   * one of our methods.  A view can use this to temporarily suppress
+   * the selection while manipulating all of the indices, e.g., on
+   * a sort.
+   * Note: setting this attribute to false will fire a select event.
+   */
+</code></pre>
+
+<p><code>attribute boolean selectEventsSuppressed;</code></p>
+</div><h4 id='method.SetSelectEventsSuppressed' class="method"><span id='SetSelectEventsSuppressed.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSelectEventsSuppressed' class='fnname'>SetSelectEventsSuppressed</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSelectEventsSuppressed: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#453-455' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * This attribute is a boolean indicating whether or not the
+   * &quot;select&quot; event should fire when the selection is changed using
+   * one of our methods.  A view can use this to temporarily suppress
+   * the selection while manipulating all of the indices, e.g., on
+   * a sort.
+   * Note: setting this attribute to false will fire a select event.
+   */
+</code></pre>
+
+<p><code>attribute boolean selectEventsSuppressed;</code></p>
+</div><h4 id='method.GetCurrentIndex' class="method"><span id='GetCurrentIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCurrentIndex' class='fnname'>GetCurrentIndex</a>(&amp;self, aCurrentIndex: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#468-470' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The current item (the one that gets a focus rect in addition to being
+   * selected).
+   */
+</code></pre>
+
+<p><code>attribute long currentIndex;</code></p>
+</div><h4 id='method.SetCurrentIndex' class="method"><span id='SetCurrentIndex.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCurrentIndex' class='fnname'>SetCurrentIndex</a>(&amp;self, aCurrentIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#483-485' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The current item (the one that gets a focus rect in addition to being
+   * selected).
+   */
+</code></pre>
+
+<p><code>attribute long currentIndex;</code></p>
+</div><h4 id='method.GetCurrentColumn' class="method"><span id='GetCurrentColumn.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCurrentColumn' class='fnname'>GetCurrentColumn</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCurrentColumn: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITreeColumn.html" title="struct xpcom::interfaces::nsITreeColumn">nsITreeColumn</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#497-499' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The current column.
+   */
+</code></pre>
+
+<p><code>attribute nsITreeColumn currentColumn;</code></p>
+</div><h4 id='method.SetCurrentColumn' class="method"><span id='SetCurrentColumn.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCurrentColumn' class='fnname'>SetCurrentColumn</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCurrentColumn: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsITreeColumn.html" title="struct xpcom::interfaces::nsITreeColumn">nsITreeColumn</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#511-513' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The current column.
+   */
+</code></pre>
+
+<p><code>attribute nsITreeColumn currentColumn;</code></p>
+</div><h4 id='method.GetShiftSelectPivot' class="method"><span id='GetShiftSelectPivot.v' class='invisible'><code>pub unsafe fn <a href='#method.GetShiftSelectPivot' class='fnname'>GetShiftSelectPivot</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aShiftSelectPivot: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#526-528' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The selection &quot;pivot&quot;.  This is the first item the user selected as
+   * part of a ranged select.
+   */
+</code></pre>
+
+<p><code>readonly attribute long shiftSelectPivot;</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINativeTreeSelection.html" title="struct xpcom::interfaces::nsINativeTreeSelection">nsINativeTreeSelection</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#565-568' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">466982520</span>, <span class="number">23731</span>, <span class="number">17174</span>, [<span class="number">178</span>, <span class="number">70</span>, <span class="number">49</span>, <span class="number">169</span>, <span class="number">27</span>, <span class="number">25</span>, <span class="number">170</span>, <span class="number">190</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINativeTreeSelection.html" title="struct xpcom::interfaces::nsINativeTreeSelection">nsINativeTreeSelection</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#572-581' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#574-576' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#578-580' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsINativeTreeSelection.html" title="struct xpcom::interfaces::nsINativeTreeSelection">nsINativeTreeSelection</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#612-620' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsITreeSelection.html" title="struct xpcom::interfaces::nsITreeSelection">nsITreeSelection</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsITreeSelection.html" title="struct xpcom::interfaces::nsITreeSelection">nsITreeSelection</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsITreeSelection.rs.html#615-619' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

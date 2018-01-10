@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIWyciwygChannel` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIWyciwygChannel">
+
+    <title>xpcom::interfaces::nsIWyciwygChannel - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIWyciwygChannel</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.WriteToCacheEntry">WriteToCacheEntry</a><a href="#method.CloseCacheEntry">CloseCacheEntry</a><a href="#method.SetSecurityInfo">SetSecurityInfo</a><a href="#method.SetCharsetAndSource">SetCharsetAndSource</a><a href="#method.GetCharsetAndSource">GetCharsetAndSource</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIChannel&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetOriginalURI">GetOriginalURI</a><a href="#method.SetOriginalURI">SetOriginalURI</a><a href="#method.GetURI">GetURI</a><a href="#method.GetOwner">GetOwner</a><a href="#method.SetOwner">SetOwner</a><a href="#method.GetNotificationCallbacks">GetNotificationCallbacks</a><a href="#method.SetNotificationCallbacks">SetNotificationCallbacks</a><a href="#method.GetSecurityInfo">GetSecurityInfo</a><a href="#method.GetContentType">GetContentType</a><a href="#method.SetContentType">SetContentType</a><a href="#method.GetContentCharset">GetContentCharset</a><a href="#method.SetContentCharset">SetContentCharset</a><a href="#method.GetContentLength">GetContentLength</a><a href="#method.SetContentLength">SetContentLength</a><a href="#method.Open">Open</a><a href="#method.Open2">Open2</a><a href="#method.AsyncOpen">AsyncOpen</a><a href="#method.AsyncOpen2">AsyncOpen2</a><a href="#method.GetContentDisposition">GetContentDisposition</a><a href="#method.SetContentDisposition">SetContentDisposition</a><a href="#method.GetContentDispositionFilename">GetContentDispositionFilename</a><a href="#method.SetContentDispositionFilename">SetContentDispositionFilename</a><a href="#method.GetContentDispositionHeader">GetContentDispositionHeader</a><a href="#method.GetLoadInfo">GetLoadInfo</a><a href="#method.SetLoadInfo">SetLoadInfo</a><a href="#method.GetIsDocument">GetIsDocument</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIWyciwygChannel', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIWyciwygChannel</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#24-33' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIWyciwygChannel { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIWyciwygChannel : nsIChannel</code></p>
+
+<pre><code class="language-text">/**
+ * A channel to  manage all cache-related interactions for layout
+ * when it is dealing with dynamic pages created through
+ * document.write(). This interface provides methods that will
+ * help layout save dynamic pages in cache for future retrievals.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIWyciwygChannel.html" title="struct xpcom::interfaces::nsIWyciwygChannel">nsIWyciwygChannel</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#73-79' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIWyciwygChannelCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#76-78' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIWyciwygChannel</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIWyciwygChannel.html" title="struct xpcom::interfaces::nsIWyciwygChannel">nsIWyciwygChannel</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#135-211' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.WriteToCacheEntry' class="method"><span id='WriteToCacheEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.WriteToCacheEntry' class='fnname'>WriteToCacheEntry</a>(&amp;self, aData: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#146-148' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Append data to the cache entry; opens the cache entry if necessary.
+   */
+</code></pre>
+
+<p><code>void writeToCacheEntry (in AString aData);</code></p>
+</div><h4 id='method.CloseCacheEntry' class="method"><span id='CloseCacheEntry.v' class='invisible'><code>pub unsafe fn <a href='#method.CloseCacheEntry' class='fnname'>CloseCacheEntry</a>(&amp;self, reason: <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#160-162' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Close the cache entry; subsequent writes have undefined behavior.
+   */
+</code></pre>
+
+<p><code>void closeCacheEntry (in nsresult reason);</code></p>
+</div><h4 id='method.SetSecurityInfo' class="method"><span id='SetSecurityInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSecurityInfo' class='fnname'>SetSecurityInfo</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSecurityInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#174-176' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Set the wyciwyg channels security info
+   */
+</code></pre>
+
+<p><code>void setSecurityInfo (in nsISupports aSecurityInfo);</code></p>
+</div><h4 id='method.SetCharsetAndSource' class="method"><span id='SetCharsetAndSource.v' class='invisible'><code>pub unsafe fn <a href='#method.SetCharsetAndSource' class='fnname'>SetCharsetAndSource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCharset: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#190-192' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Store and read a charset and charset source on the wyciwyg channel.  These
+   * are opaque values to the channel; consumers who set them should know what
+   * they mean.
+   */
+</code></pre>
+
+<p><code>void setCharsetAndSource (in long aSource, in ACString aCharset);</code></p>
+</div><h4 id='method.GetCharsetAndSource' class="method"><span id='GetCharsetAndSource.v' class='invisible'><code>pub unsafe fn <a href='#method.GetCharsetAndSource' class='fnname'>GetCharsetAndSource</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSource: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#206-208' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The return value is the charset.  Throws if either the charset or the
+   * source cannot be retrieved.  This is guaranteed to return a nonzero source
+   * and a nonempty charset if it does not throw.
+   */
+</code></pre>
+
+<p><code>ACString getCharsetAndSource (out long aSource);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIChannelCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIChannel</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.LOAD_DOCUMENT_URI' class="associatedconstant"><span id='LOAD_DOCUMENT_URI.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_DOCUMENT_URI' class="constant"><b>LOAD_DOCUMENT_URI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_RETARGETED_DOCUMENT_URI' class="associatedconstant"><span id='LOAD_RETARGETED_DOCUMENT_URI.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_RETARGETED_DOCUMENT_URI' class="constant"><b>LOAD_RETARGETED_DOCUMENT_URI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_REPLACE' class="associatedconstant"><span id='LOAD_REPLACE.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_REPLACE' class="constant"><b>LOAD_REPLACE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_INITIAL_DOCUMENT_URI' class="associatedconstant"><span id='LOAD_INITIAL_DOCUMENT_URI.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_INITIAL_DOCUMENT_URI' class="constant"><b>LOAD_INITIAL_DOCUMENT_URI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_TARGETED' class="associatedconstant"><span id='LOAD_TARGETED.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_TARGETED' class="constant"><b>LOAD_TARGETED</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_CALL_CONTENT_SNIFFERS' class="associatedconstant"><span id='LOAD_CALL_CONTENT_SNIFFERS.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_CALL_CONTENT_SNIFFERS' class="constant"><b>LOAD_CALL_CONTENT_SNIFFERS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_CLASSIFY_URI' class="associatedconstant"><span id='LOAD_CLASSIFY_URI.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_CLASSIFY_URI' class="constant"><b>LOAD_CLASSIFY_URI</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_MEDIA_SNIFFER_OVERRIDES_CONTENT_TYPE' class="associatedconstant"><span id='LOAD_MEDIA_SNIFFER_OVERRIDES_CONTENT_TYPE.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_MEDIA_SNIFFER_OVERRIDES_CONTENT_TYPE' class="constant"><b>LOAD_MEDIA_SNIFFER_OVERRIDES_CONTENT_TYPE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_EXPLICIT_CREDENTIALS' class="associatedconstant"><span id='LOAD_EXPLICIT_CREDENTIALS.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_EXPLICIT_CREDENTIALS' class="constant"><b>LOAD_EXPLICIT_CREDENTIALS</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.LOAD_BYPASS_SERVICE_WORKER' class="associatedconstant"><span id='LOAD_BYPASS_SERVICE_WORKER.v' class='invisible'><code>pub const <a href='#associatedconstant.LOAD_BYPASS_SERVICE_WORKER' class="constant"><b>LOAD_BYPASS_SERVICE_WORKER</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISPOSITION_INLINE' class="associatedconstant"><span id='DISPOSITION_INLINE.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPOSITION_INLINE' class="constant"><b>DISPOSITION_INLINE</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.DISPOSITION_ATTACHMENT' class="associatedconstant"><span id='DISPOSITION_ATTACHMENT.v' class='invisible'><code>pub const <a href='#associatedconstant.DISPOSITION_ATTACHMENT' class="constant"><b>DISPOSITION_ATTACHMENT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='method.GetOriginalURI' class="method"><span id='GetOriginalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOriginalURI' class='fnname'>GetOriginalURI</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aOriginalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#357-359' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+ * The nsIChannel interface allows clients to construct &quot;GET&quot; requests for
+ * specific protocols, and manage them in a uniform way.  Once a channel is
+ * created (via nsIIOService::newChannel), parameters for that request may
+ * be set by using the channel attributes, or by QI&#39;ing to a subclass of
+ * nsIChannel for protocol-specific parameters.  Then, the URI can be fetched
+ * by calling nsIChannel::open or nsIChannel::asyncOpen.
+ *
+ * After a request has been completed, the channel is still valid for accessing
+ * protocol-specific results.  For example, QI&#39;ing to nsIHttpChannel allows
+ * response headers to be retrieved for the corresponding http transaction.
+ *
+ * This interface must be used only from the XPCOM main thread.
+ */
+/**
+     * The original URI used to construct the channel. This is used in
+     * the case of a redirect or URI &quot;resolution&quot; (e.g. resolving a
+     * resource: URI to a file: URI) so that the original pre-redirect
+     * URI can still be obtained.  This is never null.  Attempts to
+     * set it to null must throw.
+     *
+     * NOTE: this is distinctly different from the http Referer (referring URI),
+     * which is typically the page that contained the original URI (accessible
+     * from nsIHttpChannel).
+     */
+</code></pre>
+
+<p><code>attribute nsIURI originalURI;</code></p>
+</div><h4 id='method.SetOriginalURI' class="method"><span id='SetOriginalURI.v' class='invisible'><code>pub unsafe fn <a href='#method.SetOriginalURI' class='fnname'>SetOriginalURI</a>(&amp;self, aOriginalURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#393-395' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+ * The nsIChannel interface allows clients to construct &quot;GET&quot; requests for
+ * specific protocols, and manage them in a uniform way.  Once a channel is
+ * created (via nsIIOService::newChannel), parameters for that request may
+ * be set by using the channel attributes, or by QI&#39;ing to a subclass of
+ * nsIChannel for protocol-specific parameters.  Then, the URI can be fetched
+ * by calling nsIChannel::open or nsIChannel::asyncOpen.
+ *
+ * After a request has been completed, the channel is still valid for accessing
+ * protocol-specific results.  For example, QI&#39;ing to nsIHttpChannel allows
+ * response headers to be retrieved for the corresponding http transaction.
+ *
+ * This interface must be used only from the XPCOM main thread.
+ */
+/**
+     * The original URI used to construct the channel. This is used in
+     * the case of a redirect or URI &quot;resolution&quot; (e.g. resolving a
+     * resource: URI to a file: URI) so that the original pre-redirect
+     * URI can still be obtained.  This is never null.  Attempts to
+     * set it to null must throw.
+     *
+     * NOTE: this is distinctly different from the http Referer (referring URI),
+     * which is typically the page that contained the original URI (accessible
+     * from nsIHttpChannel).
+     */
+</code></pre>
+
+<p><code>attribute nsIURI originalURI;</code></p>
+</div><h4 id='method.GetURI' class="method"><span id='GetURI.v' class='invisible'><code>pub unsafe fn <a href='#method.GetURI' class='fnname'>GetURI</a>(&amp;self, aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#407-409' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The URI corresponding to the channel.  Its value is immutable.
+     */
+</code></pre>
+
+<p><code>readonly attribute nsIURI URI;</code></p>
+</div><h4 id='method.GetOwner' class="method"><span id='GetOwner.v' class='invisible'><code>pub unsafe fn <a href='#method.GetOwner' class='fnname'>GetOwner</a>(&amp;self, aOwner: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#427-429' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The owner, corresponding to the entity that is responsible for this
+     * channel.  Used by the security manager to grant or deny privileges to
+     * mobile code loaded from this channel.
+     *
+     * NOTE: this is a strong reference to the owner, so if the owner is also
+     * holding a strong reference to the channel, care must be taken to
+     * explicitly drop its reference to the channel.
+     */
+</code></pre>
+
+<p><code>attribute nsISupports owner;</code></p>
+</div><h4 id='method.SetOwner' class="method"><span id='SetOwner.v' class='invisible'><code>pub unsafe fn <a href='#method.SetOwner' class='fnname'>SetOwner</a>(&amp;self, aOwner: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#447-449' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The owner, corresponding to the entity that is responsible for this
+     * channel.  Used by the security manager to grant or deny privileges to
+     * mobile code loaded from this channel.
+     *
+     * NOTE: this is a strong reference to the owner, so if the owner is also
+     * holding a strong reference to the channel, care must be taken to
+     * explicitly drop its reference to the channel.
+     */
+</code></pre>
+
+<p><code>attribute nsISupports owner;</code></p>
+</div><h4 id='method.GetNotificationCallbacks' class="method"><span id='GetNotificationCallbacks.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNotificationCallbacks' class='fnname'>GetNotificationCallbacks</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNotificationCallbacks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#477-479' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The notification callbacks for the channel.  This is set by clients, who
+     * wish to provide a means to receive progress, status and protocol-specific
+     * notifications.  If this value is NULL, the channel implementation may use
+     * the notification callbacks from its load group.  The channel may also
+     * query the notification callbacks from its load group if its notification
+     * callbacks do not supply the requested interface.
+     *
+     * Interfaces commonly requested include: nsIProgressEventSink, nsIPrompt,
+     * and nsIAuthPrompt/nsIAuthPrompt2.
+     *
+     * When the channel is done, it must not continue holding references to
+     * this object.
+     *
+     * NOTE: A channel implementation should take care when &quot;caching&quot; an
+     * interface pointer queried from its notification callbacks.  If the
+     * notification callbacks are changed, then a cached interface pointer may
+     * become invalid and may therefore need to be re-queried.
+     */
+</code></pre>
+
+<p><code>attribute nsIInterfaceRequestor notificationCallbacks;</code></p>
+</div><h4 id='method.SetNotificationCallbacks' class="method"><span id='SetNotificationCallbacks.v' class='invisible'><code>pub unsafe fn <a href='#method.SetNotificationCallbacks' class='fnname'>SetNotificationCallbacks</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNotificationCallbacks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#507-509' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The notification callbacks for the channel.  This is set by clients, who
+     * wish to provide a means to receive progress, status and protocol-specific
+     * notifications.  If this value is NULL, the channel implementation may use
+     * the notification callbacks from its load group.  The channel may also
+     * query the notification callbacks from its load group if its notification
+     * callbacks do not supply the requested interface.
+     *
+     * Interfaces commonly requested include: nsIProgressEventSink, nsIPrompt,
+     * and nsIAuthPrompt/nsIAuthPrompt2.
+     *
+     * When the channel is done, it must not continue holding references to
+     * this object.
+     *
+     * NOTE: A channel implementation should take care when &quot;caching&quot; an
+     * interface pointer queried from its notification callbacks.  If the
+     * notification callbacks are changed, then a cached interface pointer may
+     * become invalid and may therefore need to be re-queried.
+     */
+</code></pre>
+
+<p><code>attribute nsIInterfaceRequestor notificationCallbacks;</code></p>
+</div><h4 id='method.GetSecurityInfo' class="method"><span id='GetSecurityInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSecurityInfo' class='fnname'>GetSecurityInfo</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSecurityInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#530-532' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Transport-level security information (if any) corresponding to the
+     * channel.
+     *
+     * NOTE: In some circumstances TLS information is propagated onto
+     * non-nsIHttpChannel objects to indicate that their contents were likely
+     * delivered over TLS all the same.  For example, document.open() may
+     * create an nsWyciwygChannel to store the data that will be written to the
+     * document.  In that case, if the caller has TLS information, we propagate
+     * that info onto the nsWyciwygChannel given that it is likely that the
+     * caller will be writing data that was delivered over TLS to the document.
+     */
+</code></pre>
+
+<p><code>readonly attribute nsISupports securityInfo;</code></p>
+</div><h4 id='method.GetContentType' class="method"><span id='GetContentType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentType' class='fnname'>GetContentType</a>(&amp;self, aContentType: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#566-568' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The MIME type of the channel&#39;s content if available.
+     *
+     * NOTE: the content type can often be wrongly specified (e.g., wrong file
+     * extension, wrong MIME type, wrong document type stored on a server, etc.),
+     * and the caller most likely wants to verify with the actual data.
+     *
+     * Setting contentType before the channel has been opened provides a hint
+     * to the channel as to what the MIME type is.  The channel may ignore this
+     * hint in deciding on the actual MIME type that it will report.
+     *
+     * Setting contentType after onStartRequest has been fired or after open()
+     * is called will override the type determined by the channel.
+     *
+     * Setting contentType between the time that asyncOpen() is called and the
+     * time when onStartRequest is fired has undefined behavior at this time.
+     *
+     * The value of the contentType attribute is a lowercase string.  A value
+     * assigned to this attribute will be parsed and normalized as follows:
+     *  1- any parameters (delimited with a &#39;;&#39;) will be stripped.
+     *  2- if a charset parameter is given, then its value will replace the
+     *     the contentCharset attribute of the channel.
+     *  3- the stripped contentType will be lowercased.
+     * Any implementation of nsIChannel must follow these rules.
+     */
+</code></pre>
+
+<p><code>attribute ACString contentType;</code></p>
+</div><h4 id='method.SetContentType' class="method"><span id='SetContentType.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentType' class='fnname'>SetContentType</a>(&amp;self, aContentType: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#602-604' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The MIME type of the channel&#39;s content if available.
+     *
+     * NOTE: the content type can often be wrongly specified (e.g., wrong file
+     * extension, wrong MIME type, wrong document type stored on a server, etc.),
+     * and the caller most likely wants to verify with the actual data.
+     *
+     * Setting contentType before the channel has been opened provides a hint
+     * to the channel as to what the MIME type is.  The channel may ignore this
+     * hint in deciding on the actual MIME type that it will report.
+     *
+     * Setting contentType after onStartRequest has been fired or after open()
+     * is called will override the type determined by the channel.
+     *
+     * Setting contentType between the time that asyncOpen() is called and the
+     * time when onStartRequest is fired has undefined behavior at this time.
+     *
+     * The value of the contentType attribute is a lowercase string.  A value
+     * assigned to this attribute will be parsed and normalized as follows:
+     *  1- any parameters (delimited with a &#39;;&#39;) will be stripped.
+     *  2- if a charset parameter is given, then its value will replace the
+     *     the contentCharset attribute of the channel.
+     *  3- the stripped contentType will be lowercased.
+     * Any implementation of nsIChannel must follow these rules.
+     */
+</code></pre>
+
+<p><code>attribute ACString contentType;</code></p>
+</div><h4 id='method.GetContentCharset' class="method"><span id='GetContentCharset.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentCharset' class='fnname'>GetContentCharset</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentCharset: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#619-621' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The character set of the channel&#39;s content if available and if applicable.
+     * This attribute only applies to textual data.
+     *
+     * The value of the contentCharset attribute is a mixedcase string.
+     */
+</code></pre>
+
+<p><code>attribute ACString contentCharset;</code></p>
+</div><h4 id='method.SetContentCharset' class="method"><span id='SetContentCharset.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentCharset' class='fnname'>SetContentCharset</a>(&amp;self, aContentCharset: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#636-638' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The character set of the channel&#39;s content if available and if applicable.
+     * This attribute only applies to textual data.
+     *
+     * The value of the contentCharset attribute is a mixedcase string.
+     */
+</code></pre>
+
+<p><code>attribute ACString contentCharset;</code></p>
+</div><h4 id='method.GetContentLength' class="method"><span id='GetContentLength.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentLength' class='fnname'>GetContentLength</a>(&amp;self, aContentLength: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#653-655' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The length of the data associated with the channel if available.  A value
+     * of -1 indicates that the content length is unknown. Note that this is a
+     * 64-bit value and obsoletes the &quot;content-length&quot; property used on some
+     * channels.
+     */
+</code></pre>
+
+<p><code>attribute int64_t contentLength;</code></p>
+</div><h4 id='method.SetContentLength' class="method"><span id='SetContentLength.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentLength' class='fnname'>SetContentLength</a>(&amp;self, aContentLength: <a class="type" href="../../xpcom/interfaces/type.int64_t.html" title="type xpcom::interfaces::int64_t">int64_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#670-672' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The length of the data associated with the channel if available.  A value
+     * of -1 indicates that the content length is unknown. Note that this is a
+     * 64-bit value and obsoletes the &quot;content-length&quot; property used on some
+     * channels.
+     */
+</code></pre>
+
+<p><code>attribute int64_t contentLength;</code></p>
+</div><h4 id='method.Open' class="method"><span id='Open.v' class='invisible'><code>pub unsafe fn <a href='#method.Open' class='fnname'>Open</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#695-697' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Synchronously open the channel.
+     *
+     * @return blocking input stream to the channel&#39;s data.
+     *
+     * NOTE: nsIChannel implementations are not required to implement this
+     * method.  Moreover, since this method may block the calling thread, it
+     * should not be called on a thread that processes UI events.  Like any
+     * other nsIChannel method it must not be called on any thread other
+     * than the XPCOM main thread.
+     *
+     * NOTE: Implementations should throw NS_ERROR_IN_PROGRESS if the channel
+     * is reopened.
+     */
+</code></pre>
+
+<p><code>nsIInputStream open ();</code></p>
+</div><h4 id='method.Open2' class="method"><span id='Open2.v' class='invisible'><code>pub unsafe fn <a href='#method.Open2' class='fnname'>Open2</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInputStream.html" title="struct xpcom::interfaces::nsIInputStream">nsIInputStream</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#709-711' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Performs content security check and calls open()
+     */
+</code></pre>
+
+<p><code>nsIInputStream open2 ();</code></p>
+</div><h4 id='method.AsyncOpen' class="method"><span id='AsyncOpen.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncOpen' class='fnname'>AsyncOpen</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIStreamListener.html" title="struct xpcom::interfaces::nsIStreamListener">nsIStreamListener</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContext: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#751-753' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Asynchronously open this channel.  Data is fed to the specified stream
+     * listener as it becomes available.  The stream listener&#39;s methods are
+     * called on the thread that calls asyncOpen and are not called until
+     * after asyncOpen returns.  If asyncOpen returns successfully, the
+     * channel promises to call at least onStartRequest and onStopRequest.
+     *
+     * If the nsIRequest object passed to the stream listener&#39;s methods is not
+     * this channel, an appropriate onChannelRedirect notification needs to be
+     * sent to the notification callbacks before onStartRequest is called.
+     * Once onStartRequest is called, all following method calls on aListener
+     * will get the request that was passed to onStartRequest.
+     *
+     * If the channel&#39;s and loadgroup&#39;s notification callbacks do not provide
+     * an nsIChannelEventSink when onChannelRedirect would be called, that&#39;s
+     * equivalent to having called onChannelRedirect.
+     *
+     * If asyncOpen returns successfully, the channel is responsible for
+     * keeping itself alive until it has called onStopRequest on aListener or
+     * called onChannelRedirect.
+     *
+     * Implementations are allowed to synchronously add themselves to the
+     * associated load group (if any).
+     *
+     * NOTE: Implementations should throw NS_ERROR_ALREADY_OPENED if the
+     * channel is reopened.
+     *
+     * @param aListener the nsIStreamListener implementation
+     * @param aContext an opaque parameter forwarded to aListener&#39;s methods
+     * @see nsIChannelEventSink for onChannelRedirect
+     */
+</code></pre>
+
+<p><code>void asyncOpen (in nsIStreamListener aListener, in nsISupports aContext);</code></p>
+</div><h4 id='method.AsyncOpen2' class="method"><span id='AsyncOpen2.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncOpen2' class='fnname'>AsyncOpen2</a>(&amp;self, aListener: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIStreamListener.html" title="struct xpcom::interfaces::nsIStreamListener">nsIStreamListener</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#765-767' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Performs content security check and calls asyncOpen().
+     */
+</code></pre>
+
+<p><code>void asyncOpen2 (in nsIStreamListener aListener);</code></p>
+</div><h4 id='method.GetContentDisposition' class="method"><span id='GetContentDisposition.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentDisposition' class='fnname'>GetContentDisposition</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDisposition: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#790-792' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the type implied or stated by the Content-Disposition header
+     * if available and if applicable. This allows determining inline versus
+     * attachment.
+     *
+     * Setting contentDisposition provides a hint to the channel about the
+     * disposition.  If a normal Content-Disposition header is present its
+     * value will always be used.  If it is missing the hinted value will
+     * be used if set.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header either
+     * doesn&#39;t exist for this type of channel or is empty, and return
+     * DISPOSITION_ATTACHMENT if an invalid/noncompliant value is present.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long contentDisposition;</code></p>
+</div><h4 id='method.SetContentDisposition' class="method"><span id='SetContentDisposition.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentDisposition' class='fnname'>SetContentDisposition</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDisposition: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#815-817' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the type implied or stated by the Content-Disposition header
+     * if available and if applicable. This allows determining inline versus
+     * attachment.
+     *
+     * Setting contentDisposition provides a hint to the channel about the
+     * disposition.  If a normal Content-Disposition header is present its
+     * value will always be used.  If it is missing the hinted value will
+     * be used if set.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header either
+     * doesn&#39;t exist for this type of channel or is empty, and return
+     * DISPOSITION_ATTACHMENT if an invalid/noncompliant value is present.
+     */
+</code></pre>
+
+<p><code>attribute unsigned long contentDisposition;</code></p>
+</div><h4 id='method.GetContentDispositionFilename' class="method"><span id='GetContentDispositionFilename.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentDispositionFilename' class='fnname'>GetContentDispositionFilename</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDispositionFilename: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#841-843' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the filename portion of the Content-Disposition header if
+     * available and if applicable. This allows getting the preferred filename
+     * without having to parse it out yourself.
+     *
+     * Setting contentDispositionFilename provides a hint to the channel about
+     * the disposition.  If a normal Content-Disposition header is present its
+     * value will always be used.  If it is missing the hinted value will be
+     * used if set.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header doesn&#39;t
+     * exist for this type of channel, if the header is empty, if the header
+     * doesn&#39;t contain a filename portion, or the value of the filename
+     * attribute is empty/missing.
+     */
+</code></pre>
+
+<p><code>attribute AString contentDispositionFilename;</code></p>
+</div><h4 id='method.SetContentDispositionFilename' class="method"><span id='SetContentDispositionFilename.v' class='invisible'><code>pub unsafe fn <a href='#method.SetContentDispositionFilename' class='fnname'>SetContentDispositionFilename</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDispositionFilename: &amp;<a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#867-869' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the filename portion of the Content-Disposition header if
+     * available and if applicable. This allows getting the preferred filename
+     * without having to parse it out yourself.
+     *
+     * Setting contentDispositionFilename provides a hint to the channel about
+     * the disposition.  If a normal Content-Disposition header is present its
+     * value will always be used.  If it is missing the hinted value will be
+     * used if set.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header doesn&#39;t
+     * exist for this type of channel, if the header is empty, if the header
+     * doesn&#39;t contain a filename portion, or the value of the filename
+     * attribute is empty/missing.
+     */
+</code></pre>
+
+<p><code>attribute AString contentDispositionFilename;</code></p>
+</div><h4 id='method.GetContentDispositionHeader' class="method"><span id='GetContentDispositionHeader.v' class='invisible'><code>pub unsafe fn <a href='#method.GetContentDispositionHeader' class='fnname'>GetContentDispositionHeader</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aContentDispositionHeader: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#886-888' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Access to the raw Content-Disposition header if available and applicable.
+     *
+     * Implementations should throw NS_ERROR_NOT_AVAILABLE if the header either
+     * doesn&#39;t exist for this type of channel or is empty.
+     *
+     * @deprecated Use contentDisposition/contentDispositionFilename instead.
+     */
+</code></pre>
+
+<p><code>readonly attribute ACString contentDispositionHeader;</code></p>
+</div><h4 id='method.GetLoadInfo' class="method"><span id='GetLoadInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLoadInfo' class='fnname'>GetLoadInfo</a>(&amp;self, aLoadInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadInfo.html" title="struct xpcom::interfaces::nsILoadInfo">nsILoadInfo</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#906-908' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The LoadInfo object contains information about a network load, why it
+     * was started, and how we plan on using the resulting response.
+     * If a network request is redirected, the new channel will receive a new
+     * LoadInfo object. The new object will contain mostly the same
+     * information as the pre-redirect one, but updated as appropriate.
+     * For detailed information about what parts of LoadInfo are updated on
+     * redirect, see documentation on individual properties.
+     */
+</code></pre>
+
+<p><code>attribute nsILoadInfo loadInfo;</code></p>
+</div><h4 id='method.SetLoadInfo' class="method"><span id='SetLoadInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.SetLoadInfo' class='fnname'>SetLoadInfo</a>(&amp;self, aLoadInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsILoadInfo.html" title="struct xpcom::interfaces::nsILoadInfo">nsILoadInfo</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#926-928' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * The LoadInfo object contains information about a network load, why it
+     * was started, and how we plan on using the resulting response.
+     * If a network request is redirected, the new channel will receive a new
+     * LoadInfo object. The new object will contain mostly the same
+     * information as the pre-redirect one, but updated as appropriate.
+     * For detailed information about what parts of LoadInfo are updated on
+     * redirect, see documentation on individual properties.
+     */
+</code></pre>
+
+<p><code>attribute nsILoadInfo loadInfo;</code></p>
+</div><h4 id='method.GetIsDocument' class="method"><span id='GetIsDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIsDocument' class='fnname'>GetIsDocument</a>(&amp;self, aIsDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIChannel.rs.html#945-947' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Returns true if the channel is used to create a document.
+     * It returns true if the loadFlags have LOAD_DOCUMENT_URI set, or if
+     * LOAD_HTML_OBJECT_DATA is set and the channel has the appropriate
+     * MIME type.
+     * Note: May have the wrong value if called before OnStartRequest as we
+     * don&#39;t know the MIME type yet.
+     */
+</code></pre>
+
+<p><code>readonly attribute bool isDocument;</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIWyciwygChannel.html" title="struct xpcom::interfaces::nsIWyciwygChannel">nsIWyciwygChannel</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#38-41' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">2341417793</span>, <span class="number">18138</span>, <span class="number">16629</span>, [<span class="number">161</span>, <span class="number">111</span>, <span class="number">65</span>, <span class="number">169</span>, <span class="number">31</span>, <span class="number">93</span>, <span class="number">37</span>, <span class="number">221</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIWyciwygChannel.html" title="struct xpcom::interfaces::nsIWyciwygChannel">nsIWyciwygChannel</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#45-54' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#47-49' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#51-53' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIWyciwygChannel.html" title="struct xpcom::interfaces::nsIWyciwygChannel">nsIWyciwygChannel</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#85-93' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIWyciwygChannel.rs.html#88-92' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

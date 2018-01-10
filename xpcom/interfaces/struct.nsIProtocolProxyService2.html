@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIProtocolProxyService2` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIProtocolProxyService2">
+
+    <title>xpcom::interfaces::nsIProtocolProxyService2 - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIProtocolProxyService2</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.ReloadPAC">ReloadPAC</a><a href="#method.AsyncResolve2">AsyncResolve2</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsIProtocolProxyService&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.AsyncResolve">AsyncResolve</a><a href="#method.NewProxyInfo">NewProxyInfo</a><a href="#method.NewProxyInfoWithAuth">NewProxyInfoWithAuth</a><a href="#method.GetFailoverForProxy">GetFailoverForProxy</a><a href="#method.RegisterFilter">RegisterFilter</a><a href="#method.RegisterChannelFilter">RegisterChannelFilter</a><a href="#method.UnregisterFilter">UnregisterFilter</a><a href="#method.UnregisterChannelFilter">UnregisterChannelFilter</a><a href="#method.GetProxyConfigType">GetProxyConfigType</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIProtocolProxyService2', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIProtocolProxyService2</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#21-30' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIProtocolProxyService2 { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIProtocolProxyService2 : nsIProtocolProxyService</code></p>
+
+<pre><code class="language-text">/**
+ * An extension of nsIProtocolProxyService
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyService2.html" title="struct xpcom::interfaces::nsIProtocolProxyService2">nsIProtocolProxyService2</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#70-76' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIProtocolProxyService2Coerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#73-75' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIProtocolProxyService2</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyService2.html" title="struct xpcom::interfaces::nsIProtocolProxyService2">nsIProtocolProxyService2</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#123-158' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.ReloadPAC' class="method"><span id='ReloadPAC.v' class='invisible'><code>pub unsafe fn <a href='#method.ReloadPAC' class='fnname'>ReloadPAC</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#135-137' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Call this method to cause the PAC file (if any is configured) to be
+   * reloaded.  The PAC file is loaded asynchronously.
+   */
+</code></pre>
+
+<p><code>void reloadPAC ();</code></p>
+</div><h4 id='method.AsyncResolve2' class="method"><span id='AsyncResolve2.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncResolve2' class='fnname'>AsyncResolve2</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aChannel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIChannel.html" title="struct xpcom::interfaces::nsIChannel">nsIChannel</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyCallback.html" title="struct xpcom::interfaces::nsIProtocolProxyCallback">nsIProtocolProxyCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMainThreadTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsICancelable.html" title="struct xpcom::interfaces::nsICancelable">nsICancelable</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#153-155' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This method is identical to asyncResolve() except:
+     *  - it only accepts an nsIChannel, not an nsIURI;
+     *  - it may execute the callback function immediately (i.e from the stack
+     *    of asyncResolve2()) if it is immediately ready to run.
+     *    The nsICancelable return value will be null in that case.
+     */
+</code></pre>
+
+<p><code>nsICancelable asyncResolve2 (in nsIChannel aChannel, in unsigned long aFlags, in nsIProtocolProxyCallback aCallback, [optional] in nsIEventTarget aMainThreadTarget);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyService.html" title="struct xpcom::interfaces::nsIProtocolProxyService">nsIProtocolProxyService</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsIProtocolProxyServiceCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#74-76' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIProtocolProxyService</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='associatedconstant.RESOLVE_PREFER_SOCKS_PROXY' class="associatedconstant"><span id='RESOLVE_PREFER_SOCKS_PROXY.v' class='invisible'><code>pub const <a href='#associatedconstant.RESOLVE_PREFER_SOCKS_PROXY' class="constant"><b>RESOLVE_PREFER_SOCKS_PROXY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.RESOLVE_IGNORE_URI_SCHEME' class="associatedconstant"><span id='RESOLVE_IGNORE_URI_SCHEME.v' class='invisible'><code>pub const <a href='#associatedconstant.RESOLVE_IGNORE_URI_SCHEME' class="constant"><b>RESOLVE_IGNORE_URI_SCHEME</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.RESOLVE_PREFER_HTTPS_PROXY' class="associatedconstant"><span id='RESOLVE_PREFER_HTTPS_PROXY.v' class='invisible'><code>pub const <a href='#associatedconstant.RESOLVE_PREFER_HTTPS_PROXY' class="constant"><b>RESOLVE_PREFER_HTTPS_PROXY</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.RESOLVE_ALWAYS_TUNNEL' class="associatedconstant"><span id='RESOLVE_ALWAYS_TUNNEL.v' class='invisible'><code>pub const <a href='#associatedconstant.RESOLVE_ALWAYS_TUNNEL' class="constant"><b>RESOLVE_ALWAYS_TUNNEL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.PROXYCONFIG_DIRECT' class="associatedconstant"><span id='PROXYCONFIG_DIRECT.v' class='invisible'><code>pub const <a href='#associatedconstant.PROXYCONFIG_DIRECT' class="constant"><b>PROXYCONFIG_DIRECT</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.PROXYCONFIG_MANUAL' class="associatedconstant"><span id='PROXYCONFIG_MANUAL.v' class='invisible'><code>pub const <a href='#associatedconstant.PROXYCONFIG_MANUAL' class="constant"><b>PROXYCONFIG_MANUAL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.PROXYCONFIG_PAC' class="associatedconstant"><span id='PROXYCONFIG_PAC.v' class='invisible'><code>pub const <a href='#associatedconstant.PROXYCONFIG_PAC' class="constant"><b>PROXYCONFIG_PAC</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.PROXYCONFIG_WPAD' class="associatedconstant"><span id='PROXYCONFIG_WPAD.v' class='invisible'><code>pub const <a href='#associatedconstant.PROXYCONFIG_WPAD' class="constant"><b>PROXYCONFIG_WPAD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='associatedconstant.PROXYCONFIG_SYSTEM' class="associatedconstant"><span id='PROXYCONFIG_SYSTEM.v' class='invisible'><code>pub const <a href='#associatedconstant.PROXYCONFIG_SYSTEM' class="constant"><b>PROXYCONFIG_SYSTEM</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<h4 id='method.AsyncResolve' class="method"><span id='AsyncResolve.v' class='invisible'><code>pub unsafe fn <a href='#method.AsyncResolve' class='fnname'>AsyncResolve</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aChannelOrURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aCallback: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyCallback.html" title="struct xpcom::interfaces::nsIProtocolProxyCallback">nsIProtocolProxyCallback</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aMainThreadTarget: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIEventTarget.html" title="struct xpcom::interfaces::nsIEventTarget">nsIEventTarget</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsICancelable.html" title="struct xpcom::interfaces::nsICancelable">nsICancelable</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#267-269' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This method returns via callback a nsIProxyInfo instance that identifies
+     * a proxy to be used for the given channel.  Otherwise, this method returns
+     * null indicating that a direct connection should be used.
+     *
+     * @param aChannelOrURI
+     *        The channel for which a proxy is to be found, or, if no channel is
+     *        available, a URI indicating the same. This method will return
+     *        NS_ERROR_NOINTERFACE if this argument isn&#39;t either an nsIURI or an
+     *        nsIChannel.
+     * @param aFlags
+     *        A bit-wise combination of the RESOLVE_ flags defined above.  Pass
+     *        0 to specify the default behavior.  Any additional bits that do
+     *        not correspond to a RESOLVE_ flag are reserved for future use.
+     * @param aCallback
+     *        The object to be notified when the result is available.
+     * @param aMainThreadTarget
+     *        A labelled event target for dispatching runnables to main thread.
+     *
+     * @return An object that can be used to cancel the asychronous operation.
+     *         If canceled, the cancelation status (aReason) will be forwarded
+     *         to the callback&#39;s onProxyAvailable method via the aStatus param.
+     *
+     * NOTE: If this proxy is unavailable, getFailoverForProxy may be called
+     * to determine the correct secondary proxy to be used.
+     *
+     * NOTE: If the protocol handler for the given URI supports
+     * nsIProxiedProtocolHandler, then the nsIProxyInfo instance returned from
+     * resolve may be passed to the newProxiedChannel method to create a
+     * nsIChannel to the given URI that uses the specified proxy.
+     *
+     * NOTE: However, if the nsIProxyInfo type is &quot;http&quot;, then it means that
+     * the given URI should be loaded using the HTTP protocol handler, which
+     * also supports nsIProxiedProtocolHandler.
+     *
+     * @see nsIProxiedProtocolHandler::newProxiedChannel
+     */
+</code></pre>
+
+<p><code>nsICancelable asyncResolve (in nsISupports aChannelOrURI, in unsigned long aFlags, in nsIProtocolProxyCallback aCallback, [optional] in nsIEventTarget aMainThreadTarget);</code></p>
+</div><h4 id='method.NewProxyInfo' class="method"><span id='NewProxyInfo.v' class='invisible'><code>pub unsafe fn <a href='#method.NewProxyInfo' class='fnname'>NewProxyInfo</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aType: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHost: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPort: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFailoverTimeout: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFailoverProxy: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProxyInfo.html" title="struct xpcom::interfaces::nsIProxyInfo">nsIProxyInfo</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProxyInfo.html" title="struct xpcom::interfaces::nsIProxyInfo">nsIProxyInfo</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#311-313' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This method may be called to construct a nsIProxyInfo instance from
+     * the given parameters.  This method may be useful in conjunction with
+     * nsISocketTransportService::createTransport for creating, for example,
+     * a SOCKS connection.
+     *
+     * @param aType
+     *        The proxy type.  This is a string value that identifies the proxy
+     *        type.  Standard values include:
+     *          &quot;http&quot;    - specifies a HTTP proxy
+     *          &quot;https&quot;   - specifies HTTP proxying over TLS connection to proxy
+     *          &quot;socks&quot;   - specifies a SOCKS version 5 proxy
+     *          &quot;socks4&quot;  - specifies a SOCKS version 4 proxy
+     *          &quot;direct&quot;  - specifies a direct connection (useful for failover)
+     *        The type name is case-insensitive.  Other string values may be
+     *        possible, and new types may be defined by a future version of
+     *        this interface.
+     * @param aHost
+     *        The proxy hostname or IP address.
+     * @param aPort
+     *        The proxy port.
+     * @param aFlags
+     *        Flags associated with this connection.  See nsIProxyInfo.idl
+     *        for currently defined flags.
+     * @param aFailoverTimeout
+     *        Specifies the length of time (in seconds) to ignore this proxy if
+     *        this proxy fails.  Pass UINT32_MAX to specify the default
+     *        timeout value, causing nsIProxyInfo::failoverTimeout to be
+     *        assigned the default value.
+     * @param aFailoverProxy
+     *        Specifies the next proxy to try if this proxy fails.  This
+     *        parameter may be null.
+     */
+</code></pre>
+
+<p><code>nsIProxyInfo newProxyInfo (in ACString aType, in AUTF8String aHost, in long aPort, in unsigned long aFlags, in unsigned long aFailoverTimeout, in nsIProxyInfo aFailoverProxy);</code></p>
+</div><h4 id='method.NewProxyInfoWithAuth' class="method"><span id='NewProxyInfoWithAuth.v' class='invisible'><code>pub unsafe fn <a href='#method.NewProxyInfoWithAuth' class='fnname'>NewProxyInfoWithAuth</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aType: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aHost: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPort: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aUsername: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPassword: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFlags: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFailoverTimeout: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFailoverProxy: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProxyInfo.html" title="struct xpcom::interfaces::nsIProxyInfo">nsIProxyInfo</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProxyInfo.html" title="struct xpcom::interfaces::nsIProxyInfo">nsIProxyInfo</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#354-356' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This method may be called to construct a nsIProxyInfo instance for
+     * with the specified username and password.
+     * Currently implemented for SOCKS proxies only.
+     * @param aType
+     *        The proxy type.  This is a string value that identifies the proxy
+     *        type.  Standard values include:
+     *          &quot;socks&quot;   - specifies a SOCKS version 5 proxy
+     *          &quot;socks4&quot;  - specifies a SOCKS version 4 proxy
+     *        The type name is case-insensitive.  Other string values may be
+     *        possible, and new types may be defined by a future version of
+     *        this interface.
+     * @param aHost
+     *        The proxy hostname or IP address.
+     * @param aPort
+     *        The proxy port.
+     * @param aUsername
+     *        The proxy username
+     * @param aPassword
+     *        The proxy password
+     * @param aFlags
+     *        Flags associated with this connection.  See nsIProxyInfo.idl
+     *        for currently defined flags.
+     * @param aFailoverTimeout
+     *        Specifies the length of time (in seconds) to ignore this proxy if
+     *        this proxy fails.  Pass UINT32_MAX to specify the default
+     *        timeout value, causing nsIProxyInfo::failoverTimeout to be
+     *        assigned the default value.
+     * @param aFailoverProxy
+     *        Specifies the next proxy to try if this proxy fails.  This
+     *        parameter may be null.
+     */
+</code></pre>
+
+<p><code>nsIProxyInfo newProxyInfoWithAuth (in ACString aType, in AUTF8String aHost, in long aPort, in ACString aUsername, in ACString aPassword, in unsigned long aFlags, in unsigned long aFailoverTimeout, in nsIProxyInfo aFailoverProxy);</code></p>
+</div><h4 id='method.GetFailoverForProxy' class="method"><span id='GetFailoverForProxy.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFailoverForProxy' class='fnname'>GetFailoverForProxy</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProxyInfo: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProxyInfo.html" title="struct xpcom::interfaces::nsIProxyInfo">nsIProxyInfo</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aURI: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIURI.html" title="struct xpcom::interfaces::nsIURI">nsIURI</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aReason: <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProxyInfo.html" title="struct xpcom::interfaces::nsIProxyInfo">nsIProxyInfo</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#381-383' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * If the proxy identified by aProxyInfo is unavailable for some reason,
+     * this method may be called to access an alternate proxy that may be used
+     * instead.  As a side-effect, this method may affect future result values
+     * from resolve/asyncResolve as well as from getFailoverForProxy.
+     *
+     * @param aProxyInfo
+     *        The proxy that was unavailable.
+     * @param aURI
+     *        The URI that was originally passed to resolve/asyncResolve.
+     * @param aReason
+     *        The error code corresponding to the proxy failure.  This value
+     *        may be used to tune the delay before this proxy is used again.
+     *
+     * @throw NS_ERROR_NOT_AVAILABLE if there is no alternate proxy available.
+     */
+</code></pre>
+
+<p><code>nsIProxyInfo getFailoverForProxy (in nsIProxyInfo aProxyInfo, in nsIURI aURI, in nsresult aReason);</code></p>
+</div><h4 id='method.RegisterFilter' class="method"><span id='RegisterFilter.v' class='invisible'><code>pub unsafe fn <a href='#method.RegisterFilter' class='fnname'>RegisterFilter</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFilter: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyFilter.html" title="struct xpcom::interfaces::nsIProtocolProxyFilter">nsIProtocolProxyFilter</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPosition: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#425-427' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This method may be used to register a proxy filter instance.  Each proxy
+     * filter is registered with an associated position that determines the
+     * order in which the filters are applied (starting from position 0).  When
+     * resolve/asyncResolve is called, it generates a list of proxies for the
+     * given URI, and then it applies the proxy filters.  The filters have the
+     * opportunity to modify the list of proxies.
+     *
+     * If two filters register for the same position, then the filters will be
+     * visited in the order in which they were registered.
+     *
+     * If the filter is already registered, then its position will be updated.
+     *
+     * After filters have been run, any disabled or disallowed proxies will be
+     * removed from the list.  A proxy is disabled if it had previously failed-
+     * over to another proxy (see getFailoverForProxy).  A proxy is disallowed,
+     * for example, if it is a HTTP proxy and the nsIProtocolHandler for the
+     * queried URI does not permit proxying via HTTP.
+     *
+     * If a nsIProtocolHandler disallows all proxying, then filters will never
+     * have a chance to intercept proxy requests for such URLs.
+     *
+     * @param aFilter
+     *        The nsIProtocolProxyFilter instance to be registered.
+     * @param aPosition
+     *        The position of the filter.
+     *
+     * NOTE: It is possible to construct filters that compete with one another
+     * in undesirable ways.  This API does not attempt to protect against such
+     * problems.  It is recommended that any extensions that choose to call
+     * this method make their position value configurable at runtime (perhaps
+     * via the preferences service).
+     */
+</code></pre>
+
+<p><code>void registerFilter (in nsIProtocolProxyFilter aFilter, in unsigned long aPosition);</code></p>
+</div><h4 id='method.RegisterChannelFilter' class="method"><span id='RegisterChannelFilter.v' class='invisible'><code>pub unsafe fn <a href='#method.RegisterChannelFilter' class='fnname'>RegisterChannelFilter</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFilter: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyChannelFilter.html" title="struct xpcom::interfaces::nsIProtocolProxyChannelFilter">nsIProtocolProxyChannelFilter</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPosition: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#445-447' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * Similar to registerFilter, but accepts an nsIProtocolProxyChannelFilter,
+     * which selects proxies according to channel rather than URI.
+     *
+     * @param aFilter
+     *        The nsIProtocolProxyChannelFilter instance to be registered.
+     * @param aPosition
+     *        The position of the filter.
+     */
+</code></pre>
+
+<p><code>void registerChannelFilter (in nsIProtocolProxyChannelFilter aFilter, in unsigned long aPosition);</code></p>
+</div><h4 id='method.UnregisterFilter' class="method"><span id='UnregisterFilter.v' class='invisible'><code>pub unsafe fn <a href='#method.UnregisterFilter' class='fnname'>UnregisterFilter</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFilter: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyFilter.html" title="struct xpcom::interfaces::nsIProtocolProxyFilter">nsIProtocolProxyFilter</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#463-465' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This method may be used to unregister a proxy filter instance.  All
+     * filters will be automatically unregistered at XPCOM shutdown.
+     *
+     * @param aFilter
+     *        The nsIProtocolProxyFilter instance to be unregistered.
+     */
+</code></pre>
+
+<p><code>void unregisterFilter (in nsIProtocolProxyFilter aFilter);</code></p>
+</div><h4 id='method.UnregisterChannelFilter' class="method"><span id='UnregisterChannelFilter.v' class='invisible'><code>pub unsafe fn <a href='#method.UnregisterChannelFilter' class='fnname'>UnregisterChannelFilter</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFilter: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyChannelFilter.html" title="struct xpcom::interfaces::nsIProtocolProxyChannelFilter">nsIProtocolProxyChannelFilter</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#481-483' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * This method may be used to unregister a proxy channel filter instance.  All
+     * filters will be automatically unregistered at XPCOM shutdown.
+     *
+     * @param aFilter
+     *        The nsIProtocolProxyChannelFilter instance to be unregistered.
+     */
+</code></pre>
+
+<p><code>void unregisterChannelFilter (in nsIProtocolProxyChannelFilter aFilter);</code></p>
+</div><h4 id='method.GetProxyConfigType' class="method"><span id='GetProxyConfigType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProxyConfigType' class='fnname'>GetProxyConfigType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProxyConfigType: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService.rs.html#495-497' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+      * This attribute specifies the current type of proxy configuration.
+      */
+</code></pre>
+
+<p><code>readonly attribute unsigned long proxyConfigType;</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyService2.html" title="struct xpcom::interfaces::nsIProtocolProxyService2">nsIProtocolProxyService2</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#35-38' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3001397952</span>, <span class="number">57886</span>, <span class="number">18501</span>, [<span class="number">179</span>, <span class="number">54</span>, <span class="number">190</span>, <span class="number">109</span>, <span class="number">96</span>, <span class="number">163</span>, <span class="number">137</span>, <span class="number">81</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyService2.html" title="struct xpcom::interfaces::nsIProtocolProxyService2">nsIProtocolProxyService2</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#42-51' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#44-46' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#48-50' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyService2.html" title="struct xpcom::interfaces::nsIProtocolProxyService2">nsIProtocolProxyService2</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#82-90' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyService.html" title="struct xpcom::interfaces::nsIProtocolProxyService">nsIProtocolProxyService</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsIProtocolProxyService.html" title="struct xpcom::interfaces::nsIProtocolProxyService">nsIProtocolProxyService</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIProtocolProxyService2.rs.html#85-89' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

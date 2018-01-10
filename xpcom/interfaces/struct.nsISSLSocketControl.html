@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsISSLSocketControl` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsISSLSocketControl">
+
+    <title>xpcom::interfaces::nsISSLSocketControl - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsISSLSocketControl</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetNotificationCallbacks">GetNotificationCallbacks</a><a href="#method.SetNotificationCallbacks">SetNotificationCallbacks</a><a href="#method.ProxyStartSSL">ProxyStartSSL</a><a href="#method.StartTLS">StartTLS</a><a href="#method.GetNegotiatedNPN">GetNegotiatedNPN</a><a href="#method.GetAlpnEarlySelection">GetAlpnEarlySelection</a><a href="#method.GetEarlyDataAccepted">GetEarlyDataAccepted</a><a href="#method.DriveHandshake">DriveHandshake</a><a href="#method.JoinConnection">JoinConnection</a><a href="#method.TestJoinConnection">TestJoinConnection</a><a href="#method.IsAcceptableForHost">IsAcceptableForHost</a><a href="#method.GetKEAUsed">GetKEAUsed</a><a href="#method.GetKEAKeyBits">GetKEAKeyBits</a><a href="#method.GetProviderFlags">GetProviderFlags</a><a href="#method.GetProviderTlsFlags">GetProviderTlsFlags</a><a href="#method.GetSSLVersionUsed">GetSSLVersionUsed</a><a href="#method.GetSSLVersionOffered">GetSSLVersionOffered</a><a href="#method.GetMACAlgorithmUsed">GetMACAlgorithmUsed</a><a href="#method.GetClientCert">GetClientCert</a><a href="#method.SetClientCert">SetClientCert</a><a href="#method.GetBypassAuthentication">GetBypassAuthentication</a><a href="#method.GetFailedVerification">GetFailedVerification</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsISSLSocketControl', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsISSLSocketControl</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#15-24' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsISSLSocketControl { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsISSLSocketControl : nsISupports</code></p>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISSLSocketControl.html" title="struct xpcom::interfaces::nsISSLSocketControl">nsISSLSocketControl</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#64-70' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsISSLSocketControlCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISSLSocketControl</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsISSLSocketControl.html" title="struct xpcom::interfaces::nsISSLSocketControl">nsISSLSocketControl</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#181-451' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.KEY_EXCHANGE_UNKNOWN' class="associatedconstant"><span id='KEY_EXCHANGE_UNKNOWN.v' class='invisible'><code>pub const <a href='#associatedconstant.KEY_EXCHANGE_UNKNOWN' class="constant"><b>KEY_EXCHANGE_UNKNOWN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">KEY_EXCHANGE_UNKNOWN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SSL_VERSION_3' class="associatedconstant"><span id='SSL_VERSION_3.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_VERSION_3' class="constant"><b>SSL_VERSION_3</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_VERSION_3</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">768</span></pre>
+</div><h4 id='associatedconstant.TLS_VERSION_1' class="associatedconstant"><span id='TLS_VERSION_1.v' class='invisible'><code>pub const <a href='#associatedconstant.TLS_VERSION_1' class="constant"><b>TLS_VERSION_1</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TLS_VERSION_1</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">769</span></pre>
+</div><h4 id='associatedconstant.TLS_VERSION_1_1' class="associatedconstant"><span id='TLS_VERSION_1_1.v' class='invisible'><code>pub const <a href='#associatedconstant.TLS_VERSION_1_1' class="constant"><b>TLS_VERSION_1_1</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TLS_VERSION_1_1</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">770</span></pre>
+</div><h4 id='associatedconstant.TLS_VERSION_1_2' class="associatedconstant"><span id='TLS_VERSION_1_2.v' class='invisible'><code>pub const <a href='#associatedconstant.TLS_VERSION_1_2' class="constant"><b>TLS_VERSION_1_2</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TLS_VERSION_1_2</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">771</span></pre>
+</div><h4 id='associatedconstant.TLS_VERSION_1_3' class="associatedconstant"><span id='TLS_VERSION_1_3.v' class='invisible'><code>pub const <a href='#associatedconstant.TLS_VERSION_1_3' class="constant"><b>TLS_VERSION_1_3</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">TLS_VERSION_1_3</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">772</span></pre>
+</div><h4 id='associatedconstant.SSL_VERSION_UNKNOWN' class="associatedconstant"><span id='SSL_VERSION_UNKNOWN.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_VERSION_UNKNOWN' class="constant"><b>SSL_VERSION_UNKNOWN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_VERSION_UNKNOWN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SSL_MAC_UNKNOWN' class="associatedconstant"><span id='SSL_MAC_UNKNOWN.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_MAC_UNKNOWN' class="constant"><b>SSL_MAC_UNKNOWN</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_MAC_UNKNOWN</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="op">-</span><span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SSL_MAC_NULL' class="associatedconstant"><span id='SSL_MAC_NULL.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_MAC_NULL' class="constant"><b>SSL_MAC_NULL</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_MAC_NULL</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">0</span></pre>
+</div><h4 id='associatedconstant.SSL_MAC_MD5' class="associatedconstant"><span id='SSL_MAC_MD5.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_MAC_MD5' class="constant"><b>SSL_MAC_MD5</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_MAC_MD5</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">1</span></pre>
+</div><h4 id='associatedconstant.SSL_MAC_SHA' class="associatedconstant"><span id='SSL_MAC_SHA.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_MAC_SHA' class="constant"><b>SSL_MAC_SHA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_MAC_SHA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span></pre>
+</div><h4 id='associatedconstant.SSL_HMAC_MD5' class="associatedconstant"><span id='SSL_HMAC_MD5.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_HMAC_MD5' class="constant"><b>SSL_HMAC_MD5</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_HMAC_MD5</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span></pre>
+</div><h4 id='associatedconstant.SSL_HMAC_SHA' class="associatedconstant"><span id='SSL_HMAC_SHA.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_HMAC_SHA' class="constant"><b>SSL_HMAC_SHA</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_HMAC_SHA</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">4</span></pre>
+</div><h4 id='associatedconstant.SSL_HMAC_SHA256' class="associatedconstant"><span id='SSL_HMAC_SHA256.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_HMAC_SHA256' class="constant"><b>SSL_HMAC_SHA256</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_HMAC_SHA256</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">5</span></pre>
+</div><h4 id='associatedconstant.SSL_MAC_AEAD' class="associatedconstant"><span id='SSL_MAC_AEAD.v' class='invisible'><code>pub const <a href='#associatedconstant.SSL_MAC_AEAD' class="constant"><b>SSL_MAC_AEAD</b></a>: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.i64.html">i64</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">SSL_MAC_AEAD</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">6</span></pre>
+</div><h4 id='method.GetNotificationCallbacks' class="method"><span id='GetNotificationCallbacks.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNotificationCallbacks' class='fnname'>GetNotificationCallbacks</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNotificationCallbacks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#230-232' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIInterfaceRequestor notificationCallbacks;</code></p>
+</div><h4 id='method.SetNotificationCallbacks' class="method"><span id='SetNotificationCallbacks.v' class='invisible'><code>pub unsafe fn <a href='#method.SetNotificationCallbacks' class='fnname'>SetNotificationCallbacks</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNotificationCallbacks: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIInterfaceRequestor.html" title="struct xpcom::interfaces::nsIInterfaceRequestor">nsIInterfaceRequestor</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#238-240' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>attribute nsIInterfaceRequestor notificationCallbacks;</code></p>
+</div><h4 id='method.ProxyStartSSL' class="method"><span id='ProxyStartSSL.v' class='invisible'><code>pub unsafe fn <a href='#method.ProxyStartSSL' class='fnname'>ProxyStartSSL</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#246-248' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void proxyStartSSL ();</code></p>
+</div><h4 id='method.StartTLS' class="method"><span id='StartTLS.v' class='invisible'><code>pub unsafe fn <a href='#method.StartTLS' class='fnname'>StartTLS</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#254-256' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void StartTLS ();</code></p>
+</div><h4 id='method.GetNegotiatedNPN' class="method"><span id='GetNegotiatedNPN.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNegotiatedNPN' class='fnname'>GetNegotiatedNPN</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNegotiatedNPN: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#266-268' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute ACString negotiatedNPN;</code></p>
+</div><h4 id='method.GetAlpnEarlySelection' class="method"><span id='GetAlpnEarlySelection.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAlpnEarlySelection' class='fnname'>GetAlpnEarlySelection</a>(&amp;self, _retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#274-276' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>ACString getAlpnEarlySelection ();</code></p>
+</div><h4 id='method.GetEarlyDataAccepted' class="method"><span id='GetEarlyDataAccepted.v' class='invisible'><code>pub unsafe fn <a href='#method.GetEarlyDataAccepted' class='fnname'>GetEarlyDataAccepted</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aEarlyDataAccepted: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#282-284' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute bool earlyDataAccepted;</code></p>
+</div><h4 id='method.DriveHandshake' class="method"><span id='DriveHandshake.v' class='invisible'><code>pub unsafe fn <a href='#method.DriveHandshake' class='fnname'>DriveHandshake</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#290-292' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void driveHandshake ();</code></p>
+</div><h4 id='method.JoinConnection' class="method"><span id='JoinConnection.v' class='invisible'><code>pub unsafe fn <a href='#method.JoinConnection' class='fnname'>JoinConnection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;npnProtocol: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;hostname: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;port: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#298-300' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>boolean joinConnection (in ACString npnProtocol, in ACString hostname, in long port);</code></p>
+</div><h4 id='method.TestJoinConnection' class="method"><span id='TestJoinConnection.v' class='invisible'><code>pub unsafe fn <a href='#method.TestJoinConnection' class='fnname'>TestJoinConnection</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;npnProtocol: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;hostname: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;port: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#306-308' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>boolean testJoinConnection (in ACString npnProtocol, in ACString hostname, in long port);</code></p>
+</div><h4 id='method.IsAcceptableForHost' class="method"><span id='IsAcceptableForHost.v' class='invisible'><code>pub unsafe fn <a href='#method.IsAcceptableForHost' class='fnname'>IsAcceptableForHost</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;hostname: &amp;<a class="struct" href="../../nsstring/struct.nsACString.html" title="struct nsstring::nsACString">nsACString</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#314-316' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>boolean isAcceptableForHost (in ACString hostname);</code></p>
+</div><h4 id='method.GetKEAUsed' class="method"><span id='GetKEAUsed.v' class='invisible'><code>pub unsafe fn <a href='#method.GetKEAUsed' class='fnname'>GetKEAUsed</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#322-327' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[infallible] readonly attribute short KEAUsed;</code></p>
+</div><h4 id='method.GetKEAKeyBits' class="method"><span id='GetKEAKeyBits.v' class='invisible'><code>pub unsafe fn <a href='#method.GetKEAKeyBits' class='fnname'>GetKEAKeyBits</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#333-338' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[infallible] readonly attribute unsigned long KEAKeyBits;</code></p>
+</div><h4 id='method.GetProviderFlags' class="method"><span id='GetProviderFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProviderFlags' class='fnname'>GetProviderFlags</a>(&amp;self, aProviderFlags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#344-346' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute uint32_t providerFlags;</code></p>
+</div><h4 id='method.GetProviderTlsFlags' class="method"><span id='GetProviderTlsFlags.v' class='invisible'><code>pub unsafe fn <a href='#method.GetProviderTlsFlags' class='fnname'>GetProviderTlsFlags</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aProviderTlsFlags: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint32_t.html" title="type xpcom::interfaces::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#352-354' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>readonly attribute uint32_t providerTlsFlags;</code></p>
+</div><h4 id='method.GetSSLVersionUsed' class="method"><span id='GetSSLVersionUsed.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSSLVersionUsed' class='fnname'>GetSSLVersionUsed</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#360-365' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[infallible] readonly attribute short SSLVersionUsed;</code></p>
+</div><h4 id='method.GetSSLVersionOffered' class="method"><span id='GetSSLVersionOffered.v' class='invisible'><code>pub unsafe fn <a href='#method.GetSSLVersionOffered' class='fnname'>GetSSLVersionOffered</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#371-376' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[infallible] readonly attribute short SSLVersionOffered;</code></p>
+</div><h4 id='method.GetMACAlgorithmUsed' class="method"><span id='GetMACAlgorithmUsed.v' class='invisible'><code>pub unsafe fn <a href='#method.GetMACAlgorithmUsed' class='fnname'>GetMACAlgorithmUsed</a>(&amp;self) -&gt; <a class="type" href="../../libc/type.int16_t.html" title="type libc::int16_t">int16_t</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#382-387' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[infallible] readonly attribute short MACAlgorithmUsed;</code></p>
+</div><h4 id='method.GetClientCert' class="method"><span id='GetClientCert.v' class='invisible'><code>pub unsafe fn <a href='#method.GetClientCert' class='fnname'>GetClientCert</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aClientCert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#401-403' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * If set before the server requests a client cert (assuming it does so at
+     * all), then this cert will be presented to the server, instead of asking
+     * the user or searching the set of rememebered user cert decisions.
+     */
+</code></pre>
+
+<p><code>attribute nsIX509Cert clientCert;</code></p>
+</div><h4 id='method.SetClientCert' class="method"><span id='SetClientCert.v' class='invisible'><code>pub unsafe fn <a href='#method.SetClientCert' class='fnname'>SetClientCert</a>(&amp;self, aClientCert: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIX509Cert.html" title="struct xpcom::interfaces::nsIX509Cert">nsIX509Cert</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#417-419' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * If set before the server requests a client cert (assuming it does so at
+     * all), then this cert will be presented to the server, instead of asking
+     * the user or searching the set of rememebered user cert decisions.
+     */
+</code></pre>
+
+<p><code>attribute nsIX509Cert clientCert;</code></p>
+</div><h4 id='method.GetBypassAuthentication' class="method"><span id='GetBypassAuthentication.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBypassAuthentication' class='fnname'>GetBypassAuthentication</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#432-437' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+     * bypassAuthentication is true if the server certificate checks are
+     * not be enforced. This is to enable non-secure transport over TLS.
+     */
+</code></pre>
+
+<p><code>[infallible] readonly attribute boolean bypassAuthentication;</code></p>
+</div><h4 id='method.GetFailedVerification' class="method"><span id='GetFailedVerification.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFailedVerification' class='fnname'>GetFailedVerification</a>(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#443-448' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[infallible] readonly attribute boolean failedVerification;</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISSLSocketControl.html" title="struct xpcom::interfaces::nsISSLSocketControl">nsISSLSocketControl</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#29-32' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">1099064776</span>, <span class="number">25934</span>, <span class="number">20411</span>, [<span class="number">186</span>, <span class="number">98</span>, <span class="number">78</span>, <span class="number">237</span>, <span class="number">39</span>, <span class="number">222</span>, <span class="number">31</span>, <span class="number">3</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISSLSocketControl.html" title="struct xpcom::interfaces::nsISSLSocketControl">nsISSLSocketControl</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#36-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#38-40' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#42-44' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsISSLSocketControl.html" title="struct xpcom::interfaces::nsISSLSocketControl">nsISSLSocketControl</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#76-84' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISSLSocketControl.rs.html#79-83' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>

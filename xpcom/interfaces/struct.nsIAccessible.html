@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="rustdoc">
+    <meta name="description" content="API documentation for the Rust `nsIAccessible` struct in crate `xpcom`.">
+    <meta name="keywords" content="rust, rustlang, rust-lang, nsIAccessible">
+
+    <title>xpcom::interfaces::nsIAccessible - Rust</title>
+
+    <link rel="stylesheet" type="text/css" href="../../normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../rustdoc.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
+    
+
+    
+    
+</head>
+<body class="rustdoc struct">
+    <!--[if lte IE 8]>
+    <div class="warning">
+        This old browser is unsupported and will most likely display funky
+        things.
+    </div>
+    <![endif]-->
+
+    
+
+    <nav class="sidebar">
+        
+        <p class='location'>Struct nsIAccessible</p><div class="block items"><a class="sidebar-title" href="#methods">Methods</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.GetParent">GetParent</a><a href="#method.GetNextSibling">GetNextSibling</a><a href="#method.GetPreviousSibling">GetPreviousSibling</a><a href="#method.GetFirstChild">GetFirstChild</a><a href="#method.GetLastChild">GetLastChild</a><a href="#method.GetChildren">GetChildren</a><a href="#method.GetChildCount">GetChildCount</a><a href="#method.GetIndexInParent">GetIndexInParent</a><a href="#method.GetDOMNode">GetDOMNode</a><a href="#method.GetId">GetId</a><a href="#method.GetDocument">GetDocument</a><a href="#method.GetRootDocument">GetRootDocument</a><a href="#method.GetLanguage">GetLanguage</a><a href="#method.GetName">GetName</a><a href="#method.GetValue">GetValue</a><a href="#method.GetDescription">GetDescription</a><a href="#method.GetAccessKey">GetAccessKey</a><a href="#method.GetKeyboardShortcut">GetKeyboardShortcut</a><a href="#method.GetRole">GetRole</a><a href="#method.GetState">GetState</a><a href="#method.GetHelp">GetHelp</a><a href="#method.GetFocusedChild">GetFocusedChild</a><a href="#method.GetAttributes">GetAttributes</a><a href="#method.GroupPosition">GroupPosition</a><a href="#method.GetChildAtPoint">GetChildAtPoint</a><a href="#method.GetDeepestChildAtPoint">GetDeepestChildAtPoint</a><a href="#method.GetChildAt">GetChildAt</a><a href="#method.GetRelationByType">GetRelationByType</a><a href="#method.GetRelations">GetRelations</a><a href="#method.GetBounds">GetBounds</a><a href="#method.SetSelected">SetSelected</a><a href="#method.TakeSelection">TakeSelection</a><a href="#method.TakeFocus">TakeFocus</a><a href="#method.GetActionCount">GetActionCount</a><a href="#method.GetActionName">GetActionName</a><a href="#method.GetActionDescription">GetActionDescription</a><a href="#method.DoAction">DoAction</a><a href="#method.ScrollTo">ScrollTo</a><a href="#method.ScrollToPoint">ScrollToPoint</a></div><a class="sidebar-title" href="#deref-methods">Methods from Deref&lt;Target=nsISupports&gt;</a><div class="sidebar-links"><a href="#method.coerce">coerce</a><a href="#method.QueryInterface">QueryInterface</a><a href="#method.AddRef">AddRef</a><a href="#method.Release">Release</a></div><a class="sidebar-title" href="#implementations">Trait Implementations</a><div class="sidebar-links"><a href="#impl-XpCom">XpCom</a><a href="#impl-RefCounted">RefCounted</a><a href="#impl-Deref">Deref</a></div></div><p class='location'><a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a></p><script>window.sidebarCurrent = {name: 'nsIAccessible', ty: 'struct', relpath: ''};</script><script defer src="sidebar-items.js"></script>
+    </nav>
+
+    <nav class="sub">
+        <form class="search-form js-only">
+            <div class="search-container">
+                <input class="search-input" name="search"
+                       autocomplete="off"
+                       placeholder="Click or press ‘S’ to search, ‘?’ for more options…"
+                       type="search">
+            </div>
+        </form>
+    </nav>
+
+    <section id='main' class="content">
+<h1 class='fqn'><span class='in-band'>Struct <a href='../index.html'>xpcom</a>::<wbr><a href='index.html'>interfaces</a>::<wbr><a class="struct" href=''>nsIAccessible</a></span><span class='out-of-band'><span id='render-detail'>
+                   <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
+                       [<span class='inner'>&#x2212;</span>]
+                   </a>
+               </span><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#28-37' title='goto source code'>[src]</a></span></h1>
+<pre class='rust struct'><div class="docblock attributes">#[repr(C)]
+</div>pub struct nsIAccessible { /* fields omitted */ }</pre><div class='docblock'><p><code>interface nsIAccessible : nsISupports</code></p>
+
+<pre><code class="language-text">/**
+ * A cross-platform interface that supports platform-specific
+ * accessibility APIs like MSAA and ATK. Contains the sum of what&#39;s needed
+ * to support IAccessible as well as ATK&#39;s generic accessibility objects.
+ * Can also be used by in-process accessibility clients to get information
+ * about objects in the accessible tree. The accessible tree is a subset of
+ * nodes in the DOM tree -- such as documents, focusable elements and text.
+ * Mozilla creates the implementations of nsIAccessible on demand.
+ * See http://www.mozilla.org/projects/ui/accessibility for more information.
+ */
+</code></pre>
+</div>
+                    <h2 id='methods' class='small-section-header'>
+                      Methods<a href='#methods' class='anchor'></a>
+                    </h2>
+                <h3 id='impl' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a></code><a href='#impl' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#77-83' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.coerce' class="method"><span id='coerce.v' class='invisible'><code>pub fn <a href='#method.coerce' class='fnname'>coerce</a>&lt;T:&nbsp;nsIAccessibleCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#80-82' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsIAccessible</code> to one of its base interfaces.</p>
+</div></div><h3 id='impl-1' class='impl'><span class='in-band'><code>impl <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a></code><a href='#impl-1' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#241-852' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.GetParent' class="method"><span id='GetParent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetParent' class='fnname'>GetParent</a>(&amp;self, aParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#252-254' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Parent node in accessible tree.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIAccessible parent;</code></p>
+</div><h4 id='method.GetNextSibling' class="method"><span id='GetNextSibling.v' class='invisible'><code>pub unsafe fn <a href='#method.GetNextSibling' class='fnname'>GetNextSibling</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aNextSibling: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#266-268' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Next sibling in accessible tree
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIAccessible nextSibling;</code></p>
+</div><h4 id='method.GetPreviousSibling' class="method"><span id='GetPreviousSibling.v' class='invisible'><code>pub unsafe fn <a href='#method.GetPreviousSibling' class='fnname'>GetPreviousSibling</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPreviousSibling: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#280-282' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Previous sibling in accessible tree
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIAccessible previousSibling;</code></p>
+</div><h4 id='method.GetFirstChild' class="method"><span id='GetFirstChild.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFirstChild' class='fnname'>GetFirstChild</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFirstChild: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#294-296' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * First child in accessible tree
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIAccessible firstChild;</code></p>
+</div><h4 id='method.GetLastChild' class="method"><span id='GetLastChild.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLastChild' class='fnname'>GetLastChild</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aLastChild: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#308-310' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Last child in accessible tree
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIAccessible lastChild;</code></p>
+</div><h4 id='method.GetChildren' class="method"><span id='GetChildren.v' class='invisible'><code>pub unsafe fn <a href='#method.GetChildren' class='fnname'>GetChildren</a>(&amp;self, aChildren: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#322-324' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Array of all this element&#39;s children.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIArray children;</code></p>
+</div><h4 id='method.GetChildCount' class="method"><span id='GetChildCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetChildCount' class='fnname'>GetChildCount</a>(&amp;self, aChildCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#336-338' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Number of accessible children
+   */
+</code></pre>
+
+<p><code>readonly attribute long childCount;</code></p>
+</div><h4 id='method.GetIndexInParent' class="method"><span id='GetIndexInParent.v' class='invisible'><code>pub unsafe fn <a href='#method.GetIndexInParent' class='fnname'>GetIndexInParent</a>(&amp;self, aIndexInParent: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#351-353' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The 0-based index of this accessible in its parent&#39;s list of children,
+   * or -1 if this accessible does not have a parent.
+   */
+</code></pre>
+
+<p><code>readonly attribute long indexInParent;</code></p>
+</div><h4 id='method.GetDOMNode' class="method"><span id='GetDOMNode.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDOMNode' class='fnname'>GetDOMNode</a>(&amp;self, aDOMNode: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIDOMNode.html" title="struct xpcom::interfaces::nsIDOMNode">nsIDOMNode</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#365-367' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The DOM node this nsIAccessible is associated with.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIDOMNode DOMNode;</code></p>
+</div><h4 id='method.GetId' class="method"><span id='GetId.v' class='invisible'><code>pub unsafe fn <a href='#method.GetId' class='fnname'>GetId</a>(&amp;self, aId: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#379-381' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+    * For remote accessibles the id of the related DOM node.
+    */
+</code></pre>
+
+<p><code>readonly attribute DOMString id;</code></p>
+</div><h4 id='method.GetDocument' class="method"><span id='GetDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDocument' class='fnname'>GetDocument</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleDocument.html" title="struct xpcom::interfaces::nsIAccessibleDocument">nsIAccessibleDocument</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#393-395' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The document accessible that this access node resides in.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIAccessibleDocument document;</code></p>
+</div><h4 id='method.GetRootDocument' class="method"><span id='GetRootDocument.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRootDocument' class='fnname'>GetRootDocument</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRootDocument: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleDocument.html" title="struct xpcom::interfaces::nsIAccessibleDocument">nsIAccessibleDocument</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#407-409' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The root document accessible that this access node resides in.
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIAccessibleDocument rootDocument;</code></p>
+</div><h4 id='method.GetLanguage' class="method"><span id='GetLanguage.v' class='invisible'><code>pub unsafe fn <a href='#method.GetLanguage' class='fnname'>GetLanguage</a>(&amp;self, aLanguage: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#421-423' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The language for the current DOM node, e.g. en, de, etc.
+   */
+</code></pre>
+
+<p><code>readonly attribute DOMString language;</code></p>
+</div><h4 id='method.GetName' class="method"><span id='GetName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetName' class='fnname'>GetName</a>(&amp;self, aName: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#442-444' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Accessible name -- the main text equivalent for this node. The name is
+   * specified by ARIA or by native markup. Example of ARIA markup is
+   * aria-labelledby attribute placed on element of this accessible. Example
+   * of native markup is HTML label linked with HTML element of this accessible.
+   *
+   * Value can be string or null. A null value indicates that AT may attempt to
+   * compute the name. Any string value, including the empty string, should be
+   * considered author-intentional, and respected.
+   */
+</code></pre>
+
+<p><code>readonly attribute AString name;</code></p>
+</div><h4 id='method.GetValue' class="method"><span id='GetValue.v' class='invisible'><code>pub unsafe fn <a href='#method.GetValue' class='fnname'>GetValue</a>(&amp;self, aValue: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#457-459' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Accessible value -- a number or a secondary text equivalent for this node
+   * Widgets that use role attribute can force a value using the valuenow attribute
+   */
+</code></pre>
+
+<p><code>readonly attribute AString value;</code></p>
+</div><h4 id='method.GetDescription' class="method"><span id='GetDescription.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDescription' class='fnname'>GetDescription</a>(&amp;self, aDescription: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#471-473' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Accessible description -- long text associated with this node
+   */
+</code></pre>
+
+<p><code>readonly attribute AString description;</code></p>
+</div><h4 id='method.GetAccessKey' class="method"><span id='GetAccessKey.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAccessKey' class='fnname'>GetAccessKey</a>(&amp;self, aAccessKey: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#487-489' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Provides localized string of accesskey name, such as Alt+D.
+   * The modifier may be affected by user and platform preferences.
+   * Usually alt+letter, or just the letter alone for menu items.
+   */
+</code></pre>
+
+<p><code>readonly attribute AString accessKey;</code></p>
+</div><h4 id='method.GetKeyboardShortcut' class="method"><span id='GetKeyboardShortcut.v' class='invisible'><code>pub unsafe fn <a href='#method.GetKeyboardShortcut' class='fnname'>GetKeyboardShortcut</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aKeyboardShortcut: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#502-504' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Provides localized string of global keyboard accelerator for default
+   * action, such as Ctrl+O for Open file
+   */
+</code></pre>
+
+<p><code>readonly attribute AString keyboardShortcut;</code></p>
+</div><h4 id='method.GetRole' class="method"><span id='GetRole.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRole' class='fnname'>GetRole</a>(&amp;self, aRole: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#519-521' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Enumerated accessible role (see the constants defined in nsIAccessibleRole).
+   *
+   * @note  The values might depend on platform because of variations. Widgets
+   *        can use ARIA role attribute to force the final role.
+   */
+</code></pre>
+
+<p><code>readonly attribute unsigned long role;</code></p>
+</div><h4 id='method.GetState' class="method"><span id='GetState.v' class='invisible'><code>pub unsafe fn <a href='#method.GetState' class='fnname'>GetState</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aExtraState: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#540-542' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Accessible states -- bit fields which describe boolean properties of node.
+   * Many states are only valid given a certain role attribute that supports
+   * them.
+   *
+   * @param aState - the first bit field (see nsIAccessibleStates::STATE_*
+   *                 constants)
+   * @param aExtraState - the second bit field
+   *                      (see nsIAccessibleStates::EXT_STATE_* constants)
+   */
+</code></pre>
+
+<p><code>void getState (out unsigned long aState, out unsigned long aExtraState);</code></p>
+</div><h4 id='method.GetHelp' class="method"><span id='GetHelp.v' class='invisible'><code>pub unsafe fn <a href='#method.GetHelp' class='fnname'>GetHelp</a>(&amp;self, aHelp: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#556-558' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Help text associated with node
+   *
+   * @note As of now, this just returns empty string.
+   */
+</code></pre>
+
+<p><code>readonly attribute AString help;</code></p>
+</div><h4 id='method.GetFocusedChild' class="method"><span id='GetFocusedChild.v' class='invisible'><code>pub unsafe fn <a href='#method.GetFocusedChild' class='fnname'>GetFocusedChild</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aFocusedChild: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#570-572' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Focused accessible child of node
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIAccessible focusedChild;</code></p>
+</div><h4 id='method.GetAttributes' class="method"><span id='GetAttributes.v' class='invisible'><code>pub unsafe fn <a href='#method.GetAttributes' class='fnname'>GetAttributes</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aAttributes: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIPersistentProperties.html" title="struct xpcom::interfaces::nsIPersistentProperties">nsIPersistentProperties</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#584-586' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Attributes of accessible
+   */
+</code></pre>
+
+<p><code>readonly attribute nsIPersistentProperties attributes;</code></p>
+</div><h4 id='method.GroupPosition' class="method"><span id='GroupPosition.v' class='invisible'><code>pub unsafe fn <a href='#method.GroupPosition' class='fnname'>GroupPosition</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aGroupLevel: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aSimilarItemsInGroup: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;aPositionInGroup: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#604-606' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns grouping information. Used for tree items, list items, tab panel
+   * labels, radio buttons, etc. Also used for collectons of non-text objects.
+   *
+   * @param groupLevel - 1-based, similar to ARIA &#39;level&#39; property
+   * @param similarItemsInGroup - 1-based, similar to ARIA &#39;setsize&#39; property,
+   *                              inclusive of the current item
+   * @param positionInGroup - 1-based, similar to ARIA &#39;posinset&#39; property
+   */
+</code></pre>
+
+<p><code>void groupPosition (out long aGroupLevel, out long aSimilarItemsInGroup, out long aPositionInGroup);</code></p>
+</div><h4 id='method.GetChildAtPoint' class="method"><span id='GetChildAtPoint.v' class='invisible'><code>pub unsafe fn <a href='#method.GetChildAtPoint' class='fnname'>GetChildAtPoint</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;x: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;y: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#626-628' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Accessible child which contains the coordinate at (x, y) in screen pixels.
+   * If the point is in the current accessible but not in a child, the
+   * current accessible will be returned.
+   * If the point is in neither the current accessible or a child, then
+   * null will be returned.
+   *
+   * @param x  screen&#39;s x coordinate
+   * @param y  screen&#39;s y coordinate
+   * @return   the deepest accessible child containing the given point
+   */
+</code></pre>
+
+<p><code>nsIAccessible getChildAtPoint (in long x, in long y);</code></p>
+</div><h4 id='method.GetDeepestChildAtPoint' class="method"><span id='GetDeepestChildAtPoint.v' class='invisible'><code>pub unsafe fn <a href='#method.GetDeepestChildAtPoint' class='fnname'>GetDeepestChildAtPoint</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;x: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;y: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#647-649' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Deepest accessible child which contains the coordinate at (x, y) in screen
+   * pixels. If the point is in the current accessible but not in a child, the
+   * current accessible will be returned. If the point is in neither the current
+   * accessible or a child, then null will be returned.
+   *
+   * @param x  screen&#39;s x coordinate
+   * @param y  screen&#39;s y coordinate
+   * @return   the deepest accessible child containing the given point
+   */
+</code></pre>
+
+<p><code>nsIAccessible getDeepestChildAtPoint (in long x, in long y);</code></p>
+</div><h4 id='method.GetChildAt' class="method"><span id='GetChildAt.v' class='invisible'><code>pub unsafe fn <a href='#method.GetChildAt' class='fnname'>GetChildAt</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aChildIndex: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#661-663' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Nth accessible child using zero-based index or last child if index less than zero
+   */
+</code></pre>
+
+<p><code>nsIAccessible getChildAt (in long aChildIndex);</code></p>
+</div><h4 id='method.GetRelationByType' class="method"><span id='GetRelationByType.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRelationByType' class='fnname'>GetRelationByType</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aRelationType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIAccessibleRelation.html" title="struct xpcom::interfaces::nsIAccessibleRelation">nsIAccessibleRelation</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#676-678' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return accessible relation by the given relation type (see.
+   * constants defined in nsIAccessibleRelation).
+   */
+</code></pre>
+
+<p><code>nsIAccessibleRelation getRelationByType (in unsigned long aRelationType);</code></p>
+</div><h4 id='method.GetRelations' class="method"><span id='GetRelations.v' class='invisible'><code>pub unsafe fn <a href='#method.GetRelations' class='fnname'>GetRelations</a>(&amp;self, _retval: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*const </a><a class="struct" href="../../xpcom/interfaces/struct.nsIArray.html" title="struct xpcom::interfaces::nsIArray">nsIArray</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#690-692' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Returns multiple accessible relations for this object.
+   */
+</code></pre>
+
+<p><code>nsIArray getRelations ();</code></p>
+</div><h4 id='method.GetBounds' class="method"><span id='GetBounds.v' class='invisible'><code>pub unsafe fn <a href='#method.GetBounds' class='fnname'>GetBounds</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;x: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;y: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;width: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;height: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#705-707' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Return accessible&#39;s x and y coordinates relative to the screen and
+   * accessible&#39;s width and height.
+   */
+</code></pre>
+
+<p><code>void getBounds (out long x, out long y, out long width, out long height);</code></p>
+</div><h4 id='method.SetSelected' class="method"><span id='SetSelected.v' class='invisible'><code>pub unsafe fn <a href='#method.SetSelected' class='fnname'>SetSelected</a>(&amp;self, isSelected: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#719-721' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Add or remove this accessible to the current selection
+   */
+</code></pre>
+
+<p><code>void setSelected (in boolean isSelected);</code></p>
+</div><h4 id='method.TakeSelection' class="method"><span id='TakeSelection.v' class='invisible'><code>pub unsafe fn <a href='#method.TakeSelection' class='fnname'>TakeSelection</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#733-735' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Select this accessible node only
+   */
+</code></pre>
+
+<p><code>void takeSelection ();</code></p>
+</div><h4 id='method.TakeFocus' class="method"><span id='TakeFocus.v' class='invisible'><code>pub unsafe fn <a href='#method.TakeFocus' class='fnname'>TakeFocus</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#752-754' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Focus this accessible node,
+   * The state STATE_FOCUSABLE indicates whether this node is normally focusable.
+   * It is the callers responsibility to determine whether this node is focusable.
+   * accTakeFocus on a node that is not normally focusable (such as a table),
+   * will still set focus on that node, although normally that will not be visually
+   * indicated in most style sheets.
+   */
+</code></pre>
+
+<p><code>void takeFocus ();</code></p>
+</div><h4 id='method.GetActionCount' class="method"><span id='GetActionCount.v' class='invisible'><code>pub unsafe fn <a href='#method.GetActionCount' class='fnname'>GetActionCount</a>(&amp;self, aActionCount: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="type" href="../../xpcom/interfaces/type.uint8_t.html" title="type xpcom::interfaces::uint8_t">uint8_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#766-768' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The number of accessible actions associated with this accessible
+   */
+</code></pre>
+
+<p><code>readonly attribute uint8_t actionCount;</code></p>
+</div><h4 id='method.GetActionName' class="method"><span id='GetActionName.v' class='invisible'><code>pub unsafe fn <a href='#method.GetActionName' class='fnname'>GetActionName</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;index: <a class="type" href="../../xpcom/interfaces/type.uint8_t.html" title="type xpcom::interfaces::uint8_t">uint8_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#780-782' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The name of the accessible action at the given zero-based index
+   */
+</code></pre>
+
+<p><code>AString getActionName (in uint8_t index);</code></p>
+</div><h4 id='method.GetActionDescription' class="method"><span id='GetActionDescription.v' class='invisible'><code>pub unsafe fn <a href='#method.GetActionDescription' class='fnname'>GetActionDescription</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;aIndex: <a class="type" href="../../xpcom/interfaces/type.uint8_t.html" title="type xpcom::interfaces::uint8_t">uint8_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;_retval: &amp;mut <a class="struct" href="../../nsstring/struct.nsAString.html" title="struct nsstring::nsAString">nsAString</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#794-796' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * The description of the accessible action at the given zero-based index
+   */
+</code></pre>
+
+<p><code>AString getActionDescription (in uint8_t aIndex);</code></p>
+</div><h4 id='method.DoAction' class="method"><span id='DoAction.v' class='invisible'><code>pub unsafe fn <a href='#method.DoAction' class='fnname'>DoAction</a>(&amp;self, index: <a class="type" href="../../xpcom/interfaces/type.uint8_t.html" title="type xpcom::interfaces::uint8_t">uint8_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#809-811' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Perform the accessible action at the given zero-based index
+   * Action number 0 is the default action
+   */
+</code></pre>
+
+<p><code>void doAction (in uint8_t index);</code></p>
+</div><h4 id='method.ScrollTo' class="method"><span id='ScrollTo.v' class='invisible'><code>pub unsafe fn <a href='#method.ScrollTo' class='fnname'>ScrollTo</a>(&amp;self, aScrollType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#827-829' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Makes an object visible on screen.
+   *
+   * @param scrollType - defines where the object should be placed on
+   *                     the screen (see nsIAccessibleScrollType for
+   *                     available constants).
+   */
+</code></pre>
+
+<p><code>void scrollTo (in unsigned long aScrollType);</code></p>
+</div><h4 id='method.ScrollToPoint' class="method"><span id='ScrollToPoint.v' class='invisible'><code>pub unsafe fn <a href='#method.ScrollToPoint' class='fnname'>ScrollToPoint</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;coordinateType: <a class="type" href="../../libc/type.uint32_t.html" title="type libc::uint32_t">uint32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;x: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;y: <a class="type" href="../../libc/type.int32_t.html" title="type libc::int32_t">int32_t</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#847-849' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><pre><code class="language-text">/**
+   * Moves the top left of an object to a specified location.
+   *
+   * @param coordinateType [in] - specifies whether the coordinates are relative to
+   *                         the screen or the parent object (for available
+   *                         constants refer to nsIAccessibleCoordinateType)
+   * @param x [in] - defines the x coordinate
+   * @param y [in] - defines the y coordinate
+  */
+</code></pre>
+
+<p><code>void scrollToPoint (in unsigned long coordinateType, in long x, in long y);</code></p>
+</div></div>
+                    <h2 id='deref-methods' class='small-section-header'>
+                      Methods from <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a>&lt;Target = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a>&gt;<a href='#deref-methods' class='anchor'></a>
+                    </h2>
+                <div class='impl-items'><h4 id='method.coerce-1' class="method"><span id='coerce.v-1' class='invisible'><code>pub fn <a href='#method.coerce-1' class='fnname'>coerce</a>&lt;T:&nbsp;nsISupportsCoerce&gt;(&amp;self) -&gt; <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.reference.html">&amp;</a>T</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#67-69' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Cast this <code>nsISupports</code> to one of its base interfaces.</p>
+</div></div><div class='impl-items'><h4 id='method.QueryInterface' class="method"><span id='QueryInterface.v' class='invisible'><code>pub unsafe fn <a href='#method.QueryInterface' class='fnname'>QueryInterface</a>(<br>&nbsp;&nbsp;&nbsp;&nbsp;&amp;self, <br>&nbsp;&nbsp;&nbsp;&nbsp;uuid: &amp;<a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a>, <br>&nbsp;&nbsp;&nbsp;&nbsp;result: <a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="primitive" href="https://doc.rust-lang.org/nightly/std/primitive.pointer.html">*mut </a><a class="enum" href="../../libc/enum.c_void.html" title="enum libc::c_void">c_void</a><br>) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsresult.html" title="type xpcom::interfaces::nsresult">nsresult</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#97-99' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>void QueryInterface (in nsIIDRef uuid, [iid_is (uuid), retval] out nsQIResult result);</code></p>
+</div><h4 id='method.AddRef' class="method"><span id='AddRef.v' class='invisible'><code>pub unsafe fn <a href='#method.AddRef' class='fnname'>AddRef</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#105-107' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt AddRef ();</code></p>
+</div><h4 id='method.Release' class="method"><span id='Release.v' class='invisible'><code>pub unsafe fn <a href='#method.Release' class='fnname'>Release</a>(&amp;self) -&gt; <a class="type" href="../../xpcom/interfaces/type.nsrefcnt.html" title="type xpcom::interfaces::nsrefcnt">nsrefcnt</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsISupports.rs.html#113-115' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p><code>[noscript,notxpcom] nsrefcnt Release ();</code></p>
+</div></div>
+            <h2 id='implementations' class='small-section-header'>
+              Trait Implementations<a href='#implementations' class='anchor'></a>
+            </h2>
+        <h3 id='impl-XpCom' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a></code><a href='#impl-XpCom' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#42-45' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedconstant.IID' class="associatedconstant"><span id='IID.v' class='invisible'><code>const <a href='../../xpcom/trait.XpCom.html#associatedconstant.IID' class="constant"><b>IID</b></a>: <a class="type" href="../../xpcom/type.nsIID.html" title="type xpcom::nsIID">nsIID</a></code></span></h4>
+<div class='docblock'><pre class="rust ">
+<span class="ident">IID</span>: <span class="ident">nsIID</span> <span class="op">=</span> <span class="ident">nsID</span>(<span class="number">3727190489</span>, <span class="number">22076</span>, <span class="number">18755</span>, [<span class="number">153</span>, <span class="number">107</span>, <span class="number">49</span>, <span class="number">164</span>, <span class="number">218</span>, <span class="number">164</span>, <span class="number">208</span>, <span class="number">151</span>])</pre>
+</div><h4 id='method.query_interface' class="method"><span id='query_interface.v' class='invisible'><code>fn <a href='../../xpcom/trait.XpCom.html#method.query_interface' class='fnname'>query_interface</a>&lt;T:&nbsp;<a class="trait" href="../../xpcom/trait.XpCom.html" title="trait xpcom::XpCom">XpCom</a>&gt;(&amp;self) -&gt; <a class="enum" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html" title="enum core::option::Option">Option</a>&lt;<a class="struct" href="../../xpcom/struct.RefPtr.html" title="struct xpcom::RefPtr">RefPtr</a>&lt;T&gt;&gt;</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/base.rs.html#35-47' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Perform a QueryInterface call on this object, attempting to dynamically cast it to the requested interface type. Returns Some(RefPtr) if the cast succeeded, and None otherwise. <a href="../../xpcom/trait.XpCom.html#method.query_interface">Read more</a></p>
+</div></div><h3 id='impl-RefCounted' class='impl'><span class='in-band'><code>impl <a class="trait" href="../../xpcom/trait.RefCounted.html" title="trait xpcom::RefCounted">RefCounted</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a></code><a href='#impl-RefCounted' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#49-58' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='method.addref' class="method"><span id='addref.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.addref' class='fnname'>addref</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#51-53' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Increment the reference count.</p>
+</div><h4 id='method.release' class="method"><span id='release.v' class='invisible'><code>unsafe fn <a href='../../xpcom/trait.RefCounted.html#tymethod.release' class='fnname'>release</a>(&amp;self)</code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#55-57' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Decrement the reference count, potentially freeing backing memory.</p>
+</div></div><h3 id='impl-Deref' class='impl'><span class='in-band'><code>impl <a class="trait" href="https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html" title="trait core::ops::deref::Deref">Deref</a> for <a class="struct" href="../../xpcom/interfaces/struct.nsIAccessible.html" title="struct xpcom::interfaces::nsIAccessible">nsIAccessible</a></code><a href='#impl-Deref' class='anchor'></a></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#89-97' title='goto source code'>[src]</a></span></h3>
+<div class='impl-items'><h4 id='associatedtype.Target' class="type"><span id='Target.t' class='invisible'><code>type <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#associatedtype.Target' class="type">Target</a> = <a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span></h4>
+<div class='docblock'><p>The resulting type after dereferencing.</p>
+</div><h4 id='method.deref' class="method"><span id='deref.v' class='invisible'><code>fn <a href='https://doc.rust-lang.org/nightly/core/ops/deref/trait.Deref.html#tymethod.deref' class='fnname'>deref</a>(&amp;self) -&gt; &amp;<a class="struct" href="../../xpcom/interfaces/struct.nsISupports.html" title="struct xpcom::interfaces::nsISupports">nsISupports</a></code></span><span class='out-of-band'><div class='ghost'></div><a class='srclink' href='../../src/xpcom/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/up/up/up/obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIAccessible.rs.html#92-96' title='goto source code'>[src]</a></span></h4>
+<div class='docblock'><p>Dereferences the value.</p>
+</div></div></section>
+    <section id='search' class="content hidden"></section>
+
+    <section class="footer"></section>
+
+    <aside id="help" class="hidden">
+        <div>
+            <h1 class="hidden">Help</h1>
+
+            <div class="shortcuts">
+                <h2>Keyboard Shortcuts</h2>
+
+                <dl>
+                    <dt>?</dt>
+                    <dd>Show this help dialog</dd>
+                    <dt>S</dt>
+                    <dd>Focus the search field</dd>
+                    <dt>↑</dt>
+                    <dd>Move up in search results</dd>
+                    <dt>↓</dt>
+                    <dd>Move down in search results</dd>
+                    <dt>↹</dt>
+                    <dd>Switch tab</dd>
+                    <dt>&#9166;</dt>
+                    <dd>Go to active search result</dd>
+                    <dt style="width:31px;">+ / -</dt>
+                    <dd>Collapse/expand all sections</dd>
+                </dl>
+            </div>
+
+            <div class="infos">
+                <h2>Search Tricks</h2>
+
+                <p>
+                    Prefix searches with a type followed by a colon (e.g.
+                    <code>fn:</code>) to restrict the search to a given type.
+                </p>
+
+                <p>
+                    Accepted types are: <code>fn</code>, <code>mod</code>,
+                    <code>struct</code>, <code>enum</code>,
+                    <code>trait</code>, <code>type</code>, <code>macro</code>,
+                    and <code>const</code>.
+                </p>
+
+                <p>
+                    Search functions by type signature (e.g.
+                    <code>vec -> usize</code> or <code>* -> vec</code>)
+                </p>
+            </div>
+        </div>
+    </aside>
+
+    
+
+    <script>
+        window.rootPath = "../../";
+        window.currentCrate = "xpcom";
+    </script>
+    <script src="../../main.js"></script>
+    <script defer src="../../search-index.js"></script>
+</body>
+</html>
