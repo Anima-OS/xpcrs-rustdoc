@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="rustdoc">
-    <meta name="description" content="Source to the Rust file `/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/../../../obj-opt-x86_64-pc-linux-gnu//dist/xpcrs/rt/nsIPermissionManager.rs`.">
+    <meta name="description" content="Source to the Rust file `/home/mlayzell/Code/moz/rcentral/xpcom/rust/xpcom/../../../obj-opt-x86_64-pc-linux-gnu/dist/xpcrs/rt/nsIPermissionManager.rs`.">
     <meta name="keywords" content="rust, rustlang, rust-lang">
 
     <title>nsIPermissionManager.rs.html -- source</title>
@@ -752,6 +752,12 @@
 <span id="707">707</span>
 <span id="708">708</span>
 <span id="709">709</span>
+<span id="710">710</span>
+<span id="711">711</span>
+<span id="712">712</span>
+<span id="713">713</span>
+<span id="714">714</span>
+<span id="715">715</span>
 </pre><pre class="rust ">
 <span class="comment">//</span>
 <span class="comment">// DO NOT EDIT.  THIS FILE IS GENERATED FROM ../../../dist/idl/nsIPermissionManager.idl</span>
@@ -966,6 +972,9 @@
     <span class="doccomment">///    * (never expire), expire at the end of the session, or expire at a specified</span>
     <span class="doccomment">///    * time. Permissions that expire at the end of a session may also have a</span>
     <span class="doccomment">///    * specified expiration time.</span>
+    <span class="doccomment">///    *</span>
+    <span class="doccomment">///    * EXPIRE_POLICY is a special expiration status. It is set when the permission</span>
+    <span class="doccomment">///    * is set by reading an enterprise policy. These permissions cannot be overridden.</span>
     <span class="doccomment">///    */</span>
     <span class="doccomment">/// ```</span>
     <span class="doccomment">///</span>
@@ -977,6 +986,9 @@
 
 
     <span class="kw">pub</span> <span class="kw">const</span> <span class="ident">EXPIRE_TIME</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">2</span>;
+
+
+    <span class="kw">pub</span> <span class="kw">const</span> <span class="ident">EXPIRE_POLICY</span>: <span class="ident">i64</span> <span class="op">=</span> <span class="number">3</span>;
 
     <span class="doccomment">/// ```text</span>
     <span class="doccomment">/// /**</span>

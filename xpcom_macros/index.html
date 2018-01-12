@@ -48,11 +48,33 @@
                    <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                        [<span class='inner'>&#x2212;</span>]
                    </a>
-               </span><a class='srclink' href='../src/xpcom_macros/lib.rs.html#5-675' title='goto source code'>[src]</a></span></h1>
+               </span><a class='srclink' href='../src/xpcom_macros/lib.rs.html#5-685' title='goto source code'>[src]</a></span></h1>
 <div class='docblock'><p>This crate provides the <code>#[derive(xpcom)]</code> custom derive. This custom derive
-is used in order to implement xpcom interfaces.</p>
+is used in order to implement <a href="../xpcom"><code>xpcom</code></a> interfaces.</p>
 
 <h1 id='usage' class='section-header'><a href='#usage'>Usage</a></h1>
+<p>The easiest way to explain this crate is probably with a usage example. I&#39;ll
+show you the example, and then we&#39;ll destructure it and walk through what
+each component is doing.</p>
+
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="comment">// Declaring an XPCOM Struct</span>
+<span class="attribute">#[<span class="ident">derive</span>(<span class="ident">xpcom</span>)]</span>
+<span class="attribute">#[<span class="ident">xpimplements</span>(<span class="ident">nsIRunnable</span>)]</span>
+<span class="attribute">#[<span class="ident">refcnt</span> <span class="op">=</span> <span class="string">&quot;atomic&quot;</span>]</span>
+<span class="kw">struct</span> <span class="ident">InitImplRunnable</span> {
+    <span class="ident">i</span>: <span class="ident">i32</span>,
+}
+
+<span class="comment">// Implementing methods on an XPCOM Struct</span>
+<span class="kw">impl</span> <span class="ident">ImplRunnable</span> {
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">Run</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">nsresult</span> {
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="self">self</span>.<span class="ident">i</span>);
+        <span class="ident">NS_OK</span>
+    }
+}</pre>
+
+<h2 id='declaring-an-xpcom-struct' class='section-header'><a href='#declaring-an-xpcom-struct'>Declaring an XPCOM Struct</a></h2>
 <div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
 <span class="comment">// This derive should be placed on the initialization struct in order to</span>
 <span class="comment">// trigger the procedural macro.</span>
@@ -62,9 +84,9 @@ is used in order to implement xpcom interfaces.</p>
 <span class="comment">// interfaces which you want to implement. These can be separated by commas</span>
 <span class="comment">// if you want to implement multiple interfaces.</span>
 <span class="comment">//</span>
-<span class="comment">// If any of the methods in the interface listed are not rust-compat,</span>
-<span class="comment">// the interface cannot be implemented, and a compile-time error will</span>
-<span class="comment">// occur.</span>
+<span class="comment">// Some methods use types which we cannot bind to in rust. Interfaces</span>
+<span class="comment">// like those cannot be implemented, and a compile-time error will occur</span>
+<span class="comment">// if they are listed in this attribute.</span>
 <span class="attribute">#[<span class="ident">xpimplements</span>(<span class="ident">nsIRunnable</span>)]</span>
 
 <span class="comment">// The refcnt attribute can have one of the following values:</span>
@@ -77,31 +99,20 @@ is used in order to implement xpcom interfaces.</p>
 <span class="comment">//    (NOTE: This is not implemented yet)</span>
 <span class="attribute">#[<span class="ident">refcnt</span> <span class="op">=</span> <span class="string">&quot;atomic&quot;</span>]</span>
 
-<span class="comment">// The struct with the attribute on it&#39;s name must start with `Init`.</span>
-<span class="comment">// The custom derive will define the actual underlying struct.</span>
+<span class="comment">// The struct with the attribute on its name must start with `Init`.</span>
+<span class="comment">// The custom derive will define the actual underlying struct. For</span>
+<span class="comment">// example, placing the derive on a struct named `InitFoo` will cause</span>
+<span class="comment">// an underlying `Foo` struct to be generated.</span>
 <span class="comment">//</span>
 <span class="comment">// It is a compile time error to put the `#[derive(xpcom)]` derive on</span>
-<span class="comment">// an enum or union.</span>
+<span class="comment">// an enum, union, or tuple struct.</span>
 <span class="kw">struct</span> <span class="ident">InitImplRunnable</span> {
     <span class="comment">// Fields in the `Init` struct will also be in the underlying struct.</span>
     <span class="ident">i</span>: <span class="ident">i32</span>,
-}
-
-<span class="comment">// Methods should be implemented directly on the generated struct. All</span>
-<span class="comment">// methods other than `AddRef`, `Release`, and `QueryInterface` must be</span>
-<span class="comment">// implemented manually.</span>
-<span class="kw">impl</span> <span class="ident">ImplRunnable</span> {
-    <span class="comment">// The method should have the exact same</span>
-    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">Run</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">nsresult</span> {
-        <span class="comment">// Fields defined on the `Init` struct will be directly on the</span>
-        <span class="comment">// generated struct.</span>
-        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="self">self</span>.<span class="ident">i</span>);
-        <span class="ident">NS_OK</span>
-    }
 }</pre>
 
 <p>This will generate an underlying <code>ImplRunnable</code> struct, which will implement
-the <code>nsIRunnable</code> XPCOM interface. The following methods will be
+the <a href="../xpcom/struct.nsIRunnable.html"><code>nsIRunnable</code></a> XPCOM interface. The following methods will be
 automatically implemented on it:</p>
 
 <div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
@@ -121,6 +132,9 @@ automatically implemented on it:</p>
 <span class="comment">// Coerce function for cheaply casting to our base interfaces.</span>
 <span class="kw">fn</span> <span class="ident">coerce</span><span class="op">&lt;</span><span class="ident">T</span>: <span class="ident">ImplRunnableCoerce</span><span class="op">&gt;</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="kw-2">&amp;</span><span class="ident">T</span>;</pre>
 
+<p>The <a href="../xpcom/struct.RefCounted.html"><code>RefCounted</code></a> interface will also be implemented, so that the type can
+be used within the <a href="../xpcom/struct.RefPtr.html"><code>RefPtr</code></a> type.</p>
+
 <p>The <code>coerce</code> and <code>query_interface</code> methods are backed by the generated
 <code>*Coerce</code> trait. This trait is impl-ed for every interface implemented by
 the trait. For example:</p>
@@ -132,7 +146,20 @@ the trait. For example:</p>
 <span class="kw">impl</span> <span class="ident">ImplRunnableCoerce</span> <span class="kw">for</span> <span class="ident">nsIRunnable</span> { .. }
 <span class="kw">impl</span> <span class="ident">ImplRunnableCoerce</span> <span class="kw">for</span> <span class="ident">nsISupports</span> { .. }</pre>
 
-<p>And finally, the <code>RefCounted</code> trait will be implemented.</p>
+<h2 id='implementing-methods-on-an-xpcom-struct' class='section-header'><a href='#implementing-methods-on-an-xpcom-struct'>Implementing methods on an XPCOM Struct</a></h2>
+<div class='information'><div class='tooltip ignore'>ⓘ<span class='tooltiptext'>This example is not tested</span></div></div><pre class="rust rust-example-rendered ignore">
+<span class="comment">// Methods should be implemented directly on the generated struct. All</span>
+<span class="comment">// methods other than `AddRef`, `Release`, and `QueryInterface` must be</span>
+<span class="comment">// implemented manually.</span>
+<span class="kw">impl</span> <span class="ident">ImplRunnable</span> {
+    <span class="comment">// The method should have the same name as the corresponding C++ method.</span>
+    <span class="kw">pub</span> <span class="kw">fn</span> <span class="ident">Run</span>(<span class="kw-2">&amp;</span><span class="self">self</span>) <span class="op">-&gt;</span> <span class="ident">nsresult</span> {
+        <span class="comment">// Fields defined on the `Init` struct will be directly on the</span>
+        <span class="comment">// generated struct.</span>
+        <span class="macro">println</span><span class="macro">!</span>(<span class="string">&quot;{}&quot;</span>, <span class="self">self</span>.<span class="ident">i</span>);
+        <span class="ident">NS_OK</span>
+    }
+}</pre>
 </div><h2 id='functions' class='section-header'><a href="#functions">Functions</a></h2>
 <table>
                        <tr class=' module-item'>
